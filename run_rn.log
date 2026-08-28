@@ -1,0 +1,33 @@
+==============================================================================
+PART 1 - the premises, independently re-verified
+==============================================================================
+  [PASS] RN-1 c seat: du'/du * s(u)^2 = 1 exactly  (n = 2 is the u-Jacobian power)
+  [PASS] RN-2 hbar seat: dphi'/dphi * q(phi) = 1 exactly  (n = 1 is the phi-Jacobian)
+
+==============================================================================
+PART 2 - the lemma lands: blind value = MASS
+==============================================================================
+  [PASS] RN-3a consistency: s(u(u')) * (cosh - sinh*u') = 1  (same family, two charts)
+  [PASS] RN-3b c seat: <D^2> over the seat's uniform sky = 1 for ALL lambda - the mass of the source measure, read through the pivot
+  [PASS] RN-3c hbar seat: <q> over the transported angle = 1 for ALL lambda (A units)
+
+==============================================================================
+PART 3 - uniqueness, now explained: only degree-0 RN calculus is free
+==============================================================================
+  [PASS] RN-4a closed form: <D^p> = sinh((p-1)lam)/((p-1) sinh lam)  [antiderivative] - endpoints cosh -/+ sinh = e^{-/+lam} give the sinh ratio
+  [PASS] RN-4b blind for ALL lam iff k^2 = 1, i.e. p in {0, 2}: p = 2 UNIQUE nontrivial - lambda^2 coefficient (k^2 - 1)/6 kills every exponent but the mass one
+  [PASS] RN-5 the Legendre index shift EXPLAINED: <q^n>_{mu'} = uniform<q^{n-1}> = - P_{n-1}(cosh 2 lam): part 1's n-1 was the Jacobian eating one power of q
+  [PASS] RN-6 numeric spot (Will's run, path one): P_1(cosh .6), P_1(cosh 2.2) - 1.1855 and 4.5679 - both paths agree
+
+RESULT: 9/9 checks passed.
+
+LEDGER: the transport-exponent conjecture is RETIRED as of 2026-08-28 -
+upgraded to the BLIND-MASS THEOREM (W.L.): given f^{-n} = d mu'/d mu, the
+n-th blind moment is the total mass of the source measure; the exponent is
+the Jacobian power by construction; uniqueness holds because only the
+degree-zero object of RN calculus is measure-free (RN-4b).  The two former
+"instances" were the premise verified per seat (RN-1, RN-2), never evidence.
+OPEN, and sharper: Q-RN - derive the premise itself (reading = RN^{-1/n})
+from the pairing/channel law.  Note the coincidence to be tested there:
+n(c) = 2 equals F's quadratic channel exponent.  Filed beside DEBT-2b.
+

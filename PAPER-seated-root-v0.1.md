@@ -2,7 +2,7 @@
 ## How much physics follows from three axes through a point: a derivational-economy study with machine-verified receipts
 
 **W. Lloyd** — draft v0.1, 2026-08-28
-*Computational verification and adversarial review: "Claire" (AI research partner). All results in this paper are backed by exact symbolic computation committed to the project repository; commit hashes appear in §11.*
+*All results in this paper are backed by exact symbolic computation committed to the project repository; commit hashes appear in §11.*
 
 ---
 
@@ -209,12 +209,19 @@ exactly on principal axes **[proved; retrodiction]**; the pivoted moments are
 Legendre polynomials, $\langle q^n\rangle = P_{n-1}(\cosh 2\lambda)$, and the
 quadratic channel reads the squeezed-vacuum occupation $\sinh^2\lambda$
 **[proved; retrodiction]**. Two structural discharges exceed retrodiction:
-(i) the pivot-blind channel exponent differs by seat — linear on the
-$\hbar$ circle, quadratic on the $c$ plane — equal in both cases to the
-measure-transport exponent (**conjecture**, two instances; a genuinely
-independent third carrier has not yet been found and the $G$ seat, sharing
-the sphere carrier, honestly does not supply one); (ii) the cover dictionary
-itself.
+(i) the **blind-mass theorem** (W.L., 2026-08-28): if the reading family
+satisfies $d\mu'/d\mu = f^{-n}$ on the seat's carrier, then
+$\langle f^{n}\rangle_{\mu'} = \int d\mu = 1$ — the pivot-blind moment is
+the *total mass of the source measure*, its exponent is the Jacobian power by
+construction, and its value is $1$ for exactly that reason. The premise is
+verified exactly per seat ($du'/du\,s^2 = 1$; $d\phi'/d\phi\,q = 1$), the
+blind exponent is unique because only the degree-zero object of
+Radon–Nikodym calculus is measure-free, and the Legendre index shift
+$\langle q^{n}\rangle = P_{n-1}$ of this section is the Jacobian eating one
+power of $q$ **[proved]**. This retires the former transport-exponent
+conjecture; the surviving open question is sharper (Q-RN, §10): *why* the
+reading is a power of the Radon–Nikodym derivative at all — the readout as
+geometric rather than instrumental; (ii) the cover dictionary itself.
 
 ### 6. The $G$ seat: the horizon as the pinned wall
 
@@ -368,8 +375,11 @@ internal theorem retiring a live factor-two error); the flat-band derivation
 of the seat bath from the forced measure, and the $\sinh\lambda$ dissipation
 gate; the $\mathbb{Z}_2$ grading of the branch locus by the seat-cycle phase;
 the canonical three-seat partition menu as a sharpening of Page–Wootters
-**[conjecture]**; the transport-exponent conjecture $p_{\text{blind}} =$
-Jacobian power ($n = 2$ instances, open); PREDICTION-1.
+**[conjecture]**; the blind-mass theorem with its uniqueness clause (retiring
+the former transport-exponent conjecture, no third carrier required); its
+successor question Q-RN — derive the reading-as-RN-power premise from the
+channel law, noting $n(c) = 2$ coincides with the quadratic channel exponent;
+PREDICTION-1.
 
 **Declared inputs and named debts.** LBL-1 (thermal circle), KIN-1 (proper
 acceleration), KIN-2 (the pinning law; curvature-tier derivation owed),
@@ -402,6 +412,3 @@ substantive (a dead ladder conjecture; a non-resonance correction to the
 seesaw mechanism; the branch-grading discovery), the remainder were
 simplifier or harness defects, reported, not buried.
 
-*Acknowledgements.* This document was drafted by the AI research partner from
-the session record; all rulings, declared inputs, and the founding intuitions
-are W. Lloyd's. Errors of emphasis are the drafter's.

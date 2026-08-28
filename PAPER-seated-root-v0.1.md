@@ -99,7 +99,19 @@ the cover over the complexified state space is exactly $\mathbb{Z}_2$
 **[proved]**: loops about smooth branch points (coplanar *and*
 collision-type alike) send $V \to -V$; loops about the four nodes, where
 $\Delta$ vanishes to order two, do **not** flip $V$ **[proved + verified to
-30 digits]**. Two distinct facts coexist here and must not be conflated: the
+30 digits]**. This dichotomy is an instance of a general mechanism the author had already
+proved, six weeks earlier and for a different family: the *inertia
+localization theorem* for axial $k$-ellipse norms (2026-07-10) establishes
+that all monodromy is generated at the critical locus while sheet-collision
+components are nodes with trivial inertia. The shared mechanism is the parity
+of the local vanishing order — odd order flips the sheet, even order does not
+— and the quantitative echo is exact at $k=3$: that note's genus law gives
+$g=1$, and a generic line section of the seated-root cover is $w^2 = $ (a
+squarefree cubic), an elliptic curve **[verified]**. The two families are
+different objects (a curve cover over an $M$-line; a surface cover over the
+Gram cell), so the mechanism is shared but no identification is claimed.
+
+Two distinct facts coexist here and must not be conflated: the
 relabeling extension $1 \to \{\pm 1\} \to B_3 \to \Gamma \to 1$ **splits**
 (so $V$'s sign is removable as a group-theoretic convention — $V$ is
 tensorial), while the orientation cover is topologically **nontrivial** (no
@@ -490,7 +502,7 @@ Preregistrations and results carry SHA-256 hashes frozen before computation
 in the AGNOSTIC-1 campaign; the present session's suites are committed
 sequentially to the project repository (thm_g, thm_b_monodromy, cayley,
 thm_d, doors, kahler, debt2, thm_d2_unruh, thm_g2, bargmann, thm_rn,
-bridge_dbp, galois; figures.py; RULING-1; PREDICTION-1), each with its full check output.
+bridge_dbp, galois, correspondence_july; figures.py; RULING-1; PREDICTION-1), each with its full check output.
 Head of the sequence at the time of writing: `7e4e4e1` (Galois/Kummer
 structure and the descent theorem), preceded by `685a89e` (invariant-reduction
 bridge) and `2ba206f` (blind-mass theorem). Every FAIL encountered during

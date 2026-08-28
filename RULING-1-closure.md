@@ -42,3 +42,11 @@ seat's cost functional (doors N3), consistent with §8's deferral.
 Readings — time, temperature, the arrow, the note — are seat objects:
 real at the seat, undefined for the totality. Same status the model already
 assigned to T under boost. The song is not a lie; it is a presentation.
+
+**DEBT-2: CLOSED (2026-08-28, debt2.py, 9/9).** Seat dissipator derived:
+bath = the sky (Doppler-presented modes, plane measure) => flat band
+[w0 e^-L, w0 e^L]; FKM elimination => GLE; FDT with SHARED coefficients =>
+the noise floor is obligatory. Gate: dissipation margin = sinh(Lambda) —
+no pivot, no arrow. Arrow asymptotic (N -> inf); finite N revives (cathedral).
+World H conserved throughout: theta_world = pi/2 while theta_seat < pi/2.
+Residue DEBT-2b: derive c(omega) from the channel law (F-4 functional).

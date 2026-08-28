@@ -1,0 +1,32 @@
+==============================================================================
+PART 1 - THEOREMS (symbolic)
+==============================================================================
+  [PASS] D2-1 plane measure => FLAT BAND: w(u)=w0(chL+shL u), u~U[-1,1] is uniform - linear image of uniform is uniform; band [w0 e^-L, w0 e^L], width 2 w0 shL
+  [PASS] D2-2 THE GATE: lim L->0 of the band kernel = cos(w0 t), UNDAMPED forever - no pivot => pure beat, no memory decay, theta stays pi/2: NO ARROW
+      (L>0: kernel decays ~1/t on time 1/(2 w0 sinh L): the pivot opens the drain)
+  [PASS] D2-3 FDT: <xi(t) xi(t')> = kT * gamma(t-t') with the SAME kappa_k - the hiss and the drain are one object: damping without noise is impossible
+  [PASS] D2-4 exact elimination: x_k(t) formula satisfies x'' + w^2 x = c q identically - GLE assembly then follows by one integration by parts [FKM, argument]
+
+==============================================================================
+PART 2 - THE UNITARY WORLD, PARTITIONED  [numeric evidence, leapfrog]
+==============================================================================
+  [PASS] N-1  the WORLD stays at pi/2: total H drift - rel drift 3.57e-07
+  [PASS] N-2  the SEAT ages: E_seat 0.50 -> floor ~ kT (decay THROUGH the band) - mid-window max 0.0756, late-time mean 0.0407 vs kT = 0.05
+  [PASS] N-3  T = 0 bath: seat decays toward zero - the floor WAS the hiss - late max 0.00000
+  [PASS] N-4  THE GATE, run: lam = 0 => NO relaxation - energy keeps returning - late-window max E_seat 0.541 of 0.5
+  [PASS] N-5  N = 25: the note DIES then REVIVES (recurrence ~ 1/mode spacing) - died at t~23, later revival to 0.294; N=400 shows none in-window
+
+RESULT: 9/9 checks passed.
+
+DEBT-2 CLOSED (with one residue).  The seat dissipator is DERIVED, not posited:
+  bath = the sky (other cells' modes, Doppler-presented, plane measure) =>
+  flat band [w0 e^-L, w0 e^L]; elimination => GLE; FDT => the drain and the
+  hiss carry the same coefficients (D2-3): a damping seat OWES its noise floor.
+  The gate: no pivot => degenerate band => undamped kernel => theta = pi/2
+  (D2-2 exact, N-4 run).  Dissipation margin = sinh(Lambda): fifth appearance.
+  The arrow needs BOTH the pivot (bandwidth) and the crowd (N -> infinity);
+  at finite N the cathedral revives (N-5) - the arrow is asymptotic, exactly
+  as RULING-1 requires: world at pi/2 throughout (N-1), seat below it.
+  RESIDUE (DEBT-2b): the coupling c(w) is declared Ohmic-in-band here, not
+  derived; its derivation belongs to the channel law (F-4's functional).
+

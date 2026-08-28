@@ -1,0 +1,78 @@
+==============================================================================
+PATH 1 - symplectic 2x2 on the seat plane
+==============================================================================
+  [PASS][   0.9s] G-1a  family: q(phi) = A*(cosh 2l + sinh 2l cos 2phi)  [path 1]
+  [PASS][   0.9s] G-1b  PROTECTED PRODUCT: det C' = A^2 exactly, every pivot (det S = 1) - the pivot group preserves the product IDENTICALLY - not on shell, always
+  [PASS][   1.0s] G-1c  ORBIT SEPARATION: min_phi q = A*e^{-2l} > 0 for all finite pivot - the zero stratum is reachable only at lambda = oo: infinite energy, again
+  [PASS][   1.1s] G-2   conjugate product = A^2*(1 + sinh^2(2l) sin^2(2phi))  >= A^2 - REQUIRES-margin sinh(2l)*|sin 2phi|: equality iff principal axes or l=0
+  [PASS][   1.1s] G-3a  angle map: tan phi' = e^{-2 lambda} tan phi  [derived]
+  [PASS][   3.2s] G-3b  d phi'/d phi = A/q  - transport exponent ONE (c seat had 1/s^2) - the measure is the plane, hbar edition; the plane is a CIRCLE here
+  [PASS][   6.0s] G-3c  q * (dphi'/dphi) = A  =>  <q>_pivoted-measure = A EXACTLY: - the LINEAR channel is pivot-blind on the hbar seat (p_blind = 1, not 2)
+
+==============================================================================
+PATH 1 - moments on the pivoted circle measure (A = 1)
+==============================================================================
+  [PASS][   6.1s] G-4.1 <q^1>_piv = P_0(cosh 2l)  [Legendre, exact table]
+  [PASS][   6.1s] G-4.2 <q^2>_piv = P_1(cosh 2l)  [Legendre, exact table]
+  [PASS][   6.1s] G-4.3 <q^3>_piv = P_2(cosh 2l)  [Legendre, exact table]
+  [PASS][   6.1s] G-4.4 <q^4>_piv = P_3(cosh 2l)  [Legendre, exact table]
+  [PASS][   6.1s] G-5   two-pole invariant: sqrt(q(0)*q(pi/2)) = A, every pivot - invariant = the protected product's root = the pairing value
+  [PASS][   6.1s] G-6   pole exchange phi -> pi/2 - phi conjugates lambda -> -lambda - the c-1 analog structure; equal pole weight CONDITIONAL on c-1 root-generic
+  [PASS][   6.2s] G-7a  L1 office identity: (cosh2l - sinh2l cos2phi') = 1/q, exactly
+  [PASS][   6.2s] G-7b  L2 = G-3b (Jacobian 1/q); L3 reflection: cos(2(pi/2-x)) = -cos 2x - chain composed: <q^p>_piv = <q^-p>_unpiv for ALL real p - the mirror
+  [PASS][   6.2s] G-7c  unpivoted circle geometric mean = cosh^2(l)  [30-digit corroboration] - piv = 1/cosh^2(l) then follows from the all-p mirror; product = 1
+
+==============================================================================
+PATH 2 - Cl(3) c-seat family, then the COVER DICTIONARY as a result
+==============================================================================
+  [PASS][   6.3s] G-8a  c-seat family recomputed: s = cosh(L) + sinh(L) cos(Theta)
+  [PASS][   6.3s] G-8b  DICTIONARY: q(phi,l)/A = s(Theta,L) under Theta = 2phi, L = 2l - hbar seat = c seat pulled through the 2:1 cover with DOUBLED rapidity
+  [PASS][   6.6s] G-8c  c-seat angle map recomputed  [path 2]
+  [PASS][   6.6s] G-8d  cover pullback of the c angle map = the squeeze angle map, exactly - one presentation geometry, two seats, related by the double cover
+  [PASS][   7.0s] G-8e  c Jacobian 1/s^2 pulls back consistently to the 1/q circle Jacobian - exponent 2 on the sphere-plane, exponent 1 on the circle: SEAT CHARACTER
+
+  G-9 [ARGUMENT, uncounted] tan phi' = e^{-2l} tan phi is translation by
+      -2l in Y = log tan phi; exactly two fixed directions; the wandering-
+      interval theorem transfers verbatim: finite invariant measures sit
+      on the two poles; equal weight from pole exchange (G-6), conditional
+      on c-1 being root-generic rather than c-seat-specific.  NAMED.
+
+==============================================================================
+COMPARISON STAGE (banned names spoken here only)
+==============================================================================
+  [PASS][   7.0s] G-10  <q^2>_piv - 1 = 2 sinh^2(lambda): the quadratic channel reads - the squeezed-vacuum occupation sinh^2(l) - free receipt
+  - Conjugate-product bound with saturation on principal axes only:
+    the Robertson-Schrodinger structure, margin sinh^2(2l) sin^2(2phi) (G-2).
+  - Minimum-uncertainty states = principal axes: recovered as the equality
+    locus of G-2, not assumed.
+  - <q^2>-1 = 2 sinh^2(l): squeezed-vacuum mean occupation sinh^2(lambda).
+  - Moments = Legendre P_{n-1}(cosh 2l): the Poisson kernel on the circle -
+    harmonic-analysis lineage flag (machinery + failure modes).
+  - Y = log tan phi is the standard squeeze rapidity; the floor value A = the
+    seat's quantum is NAMED here only; every theorem above holds for any A > 0.
+
+RESULT: 22/22 checks passed.
+
+SEC-5 PRE-REGISTRATION VERDICT (hbar leg):
+  The aggregation machinery transfers whole: two fixed poles, two-pole
+  invariant, mirror, measure-is-the-plane (G-3b/c, G-7).  The invariant equals
+  the protected product's root (G-5) and the pivot group preserves that product
+  IDENTICALLY (G-1b) - on the c seat the corresponding form has null states in
+  the state space; here the zero stratum is a separate orbit unreachable at
+  finite pivot (G-1c).  'Cannot vanish' holds as ORBIT SEPARATION: geometry
+  protects the product; the label supplies the floor's value.  FREE vs FLOORED
+  is now a computed distinction, not a slogan.  Outcome class (a):
+  retrodiction-grade, with TWO structural discharges beyond retrodiction:
+    (i)  p_blind differs by seat: 2 on the c plane, 1 on the hbar circle -
+         equal to the measure-transport exponent both times.  CONJECTURE:
+         p_blind = transport exponent as a law; the G seat is the third test.
+    (ii) the cover dictionary Theta = 2phi, Lambda = 2lambda (G-8): the hbar
+         presentation geometry is the c geometry through the 2:1 cover -
+         angle doubling is the orientation double cover surfacing in the
+         readout tier.  Observation; connection to the click-monodromy Z_2
+         NOT established - fixed-locus comparison still owed.
+  HONEST SCOPE: fixed pivot axis (F-4's fence applies verbatim); equal pole
+  weight conditional on c-1 root-genericity (named); primary sec.5 text absent
+  from session (named); the taxonomy's riskiest leg - horizon-vanishing on the
+  G seat - is untreated and is where sec.5 can still fail loudly.
+

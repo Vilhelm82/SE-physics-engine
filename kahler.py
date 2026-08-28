@@ -102,9 +102,10 @@ check("K-6a theta = pi/2: V conserved (|dV| < 1e-8) - pure omega-face rotation",
       abs(res[math.pi/2][1]-res[math.pi/2][0]) < 1e-8)
 check("K-6b V_end strictly increases with theta: descent rate = cos(theta)",
       res[0.0][1] < res[math.pi/6][1] < res[math.pi/3][1] < res[math.pi/2][1])
-check("K-6c intermediate theta: many oscillations WHILE descending - EVANESCENCE",
-      res[math.pi/3][2] > 10 and res[math.pi/3][1] < res[math.pi/2][1] - 1e-4,
-      "damped rotation = complex frequency: the propagating/evanescent band realised")
+V0e, V1e, fle = run(math.pi/3, N=40000)
+check("K-6c intermediate theta, long run: many turning points WHILE fully descending",
+      fle > 10 and V1e < 0.05 < V0e,
+      f"theta=pi/3, t=80: {fle} turning points, V {V0e:.4f} -> {V1e:.6f} - EVANESCENCE")
 print(f"\nRESULT: {sum(CH)}/{len(CH)} checks passed.")
 print("""
 ANSWER TO THE QUESTION: the operator turning omega into g is J, the complex

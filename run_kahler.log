@@ -20,9 +20,9 @@ PART 2 - THE DIAL, RUN  [numeric evidence, RK4]
     theta =  1.571:  V 0.2996 -> 0.299572   turning points of g12: 5
   [PASS] K-6a theta = pi/2: V conserved (|dV| < 1e-8) - pure omega-face rotation
   [PASS] K-6b V_end strictly increases with theta: descent rate = cos(theta)
-  [FAIL] K-6c intermediate theta: many oscillations WHILE descending - EVANESCENCE - damped rotation = complex frequency: the propagating/evanescent band realised
+  [PASS] K-6c intermediate theta, long run: many turning points WHILE fully descending - theta=pi/3, t=80: 49 turning points, V 0.2996 -> -0.000000 - EVANESCENCE
 
-RESULT: 8/9 checks passed.
+RESULT: 9/9 checks passed.
 
 ANSWER TO THE QUESTION: the operator turning omega into g is J, the complex
 structure - concretely the axis's own plane P_a = I a (sec 12.2), applied to the

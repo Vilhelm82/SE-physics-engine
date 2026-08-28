@@ -89,6 +89,8 @@ its four rank-one vertices are the collisions. Convex-geometric and
 semidefinite-programming machinery therefore applies to the state space
 wholesale [lineage: classical algebraic geometry; SDP literature].
 
+![Figure 1](fig1_elliptope.png)
+
 **Orientation, cover, and monodromy.** The signed volume $V = \det[a_1 a_2
 a_3]$ satisfies $V^2 = \Delta$: oriented frames form a double cover of the
 Gram world, branched over $\Delta = 0$. Because $\Delta$ is absolutely
@@ -156,7 +158,7 @@ carries a $\sinh$-product margin with an exact vanishing locus (the others:
 the thermal identification's off-office leak, the medium-current's flux, the
 uncertainty excess of misaligned quadratures, and the dissipation gate of §8).
 
-**The Kähler dial.** The frame space $(S^2)^3 = (\mathbb{CP}^1)^3$ is Kähler;
+**The Kähler dial.** (Figure 3.) The frame space $(S^2)^3 = (\mathbb{CP}^1)^3$ is Kähler;
 the complex structure at axis $a$ acts on tangent vectors as
 $J_a v = a \times v$, whose generator is the bivector $P_a = I a$ — the
 axis's own plane. Since $\omega(u,v) = g(J u, v)$ exactly, Hamiltonian flow is
@@ -170,6 +172,8 @@ modes carry complex frequency — oscillation with decay, i.e. *evanescence*,
 which is the model's own frozen name for the $\hbar$-seat's second pole
 [lineage: Landau–Lifshitz–Gilbert; metriplectic/GENERIC; imaginary-time
 propagation].
+
+![Figure 3](fig3_kahler_dial.png)
 
 ### 4. The readout layer at the $c$ seat
 
@@ -277,6 +281,8 @@ vanishes because one pole dies **[derived | KIN-2]**. The pair invariance
 $T_{\mathrm{loc}}\cdot N = T_0$ holds for all $r > r_s$ while each factor
 separately diverges or dies — the readout layer's pairing pattern standing at
 the horizon [comparison-stage name: Tolman].
+
+![Figure 2](fig2_trichotomy.png)
 
 **The trichotomy theorem.** One rotor, three relationships between the pivot
 parameter and the state, preregistered as a three-way character taxonomy
@@ -484,7 +490,7 @@ Preregistrations and results carry SHA-256 hashes frozen before computation
 in the AGNOSTIC-1 campaign; the present session's suites are committed
 sequentially to the project repository (thm_g, thm_b_monodromy, cayley,
 thm_d, doors, kahler, debt2, thm_d2_unruh, thm_g2, bargmann, thm_rn,
-bridge_dbp, galois; RULING-1; PREDICTION-1), each with its full check output.
+bridge_dbp, galois; figures.py; RULING-1; PREDICTION-1), each with its full check output.
 Head of the sequence at the time of writing: `7e4e4e1` (Galois/Kummer
 structure and the descent theorem), preceded by `685a89e` (invariant-reduction
 bridge) and `2ba206f` (blind-mass theorem). Every FAIL encountered during

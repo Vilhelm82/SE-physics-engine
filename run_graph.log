@@ -1,0 +1,50 @@
+==============================================================================
+PART 1 - the groupoid cocycle, verified clause by clause
+==============================================================================
+  [PASS] C-1  COCYCLE: sigma_{g2}(g1 x) sigma_{g1}(x) = sigma_{g2 g1}(x), exact - the presentation factor is a multiplicative cocycle on the boost groupoid
+  [PASS] C-2  INVERSE: sigma_{g^-1}(g x) = sigma_g(x)^{-1}  (seat reversal law) - reversal sends sigma -> sigma^{-1}, as claimed
+  [PASS] C-3  MIRROR = the k <-> -k-2 symmetry of the spectrum: J(k) = J(-k-2) - with k = p - Qm, (p,m)->(-p,1-m) is EXACTLY this reflection
+       HONEST DOWNGRADE: this is the alpha <-> 1-alpha skew symmetry of
+       the Renyi/Chernoff integral between the two seat measures; the
+       fixed point m = 1/2 is the Bhattacharyya/Hellinger midpoint.
+       The half-seat reflection loses 'unlocated' status: it is the
+       Renyi skew symmetry, instantiated on the Doppler pair. [lineage]
+  [PASS] C-4  det-1 multipliers: the pole pair e^{+-lambda} multiplies to 1 - loxodromic multiplier product = 1: E-8c named in Moebius language
+
+==============================================================================
+PART 2 - THE GRAPH DESCENT THEOREM (constructive, n = 4 and n = 5)
+==============================================================================
+  [PASS] D-1  BINET-CAUCHY: [u1 u2 u3][w1 w2 w3] = det(u_i . w_j), exact polynomial - => ALL triple volumes on shared rays are rationally related through ONE
+       radical: V(1jk) = M_jk / V(123) with M_jk Gram-rational. The rank-3
+       ambient is the mechanism; this is what a general CP^N graph lacks.
+  [PASS] D-2  4-CYCLE DESCENT: B(1234) = [Gram-rational] + [Gram-rational]*V0, to - 1e-25 (worst 2.76e-31) - degree <= 2 over F, constructive
+  [PASS] D-3  5-CYCLE DESCENT: built from Gram data + the SAME single V0, to 1e-25 - worst 2.11e-31 - beta_1 grew; the field did not
+
+==============================================================================
+PART 3 - coboundaries, the Z_2, and where beta_1 actually lives
+==============================================================================
+  [PASS] E-1  vertex rephasings are COBOUNDARIES: 5-cycle holonomy gauge-invariant - open legs are cocycle data; closed cycles are cohomology
+  [PASS] E-2  ONE Z_2 rules every cycle: global reversal conjugates the 5-cycle too - Gal(F(V0)/F) acts by simultaneous conjugation of ALL holonomies
+
+RESULT: 9/9 checks passed.
+
+GRAPH DESCENT THEOREM (candidate, banked tonight):
+  For a connected graph on n rays in CP^1 (unit vectors in R^3), generic Gram:
+  (i)   individual legs need the conjugate Kummer radicals sqrt(1+g_ij) - the
+        leg field grows with the graph;
+  (ii)  vertex rephasings are coboundaries; the U(1) holonomy TORUS has
+        dimension beta_1 = |E| - |V| + 1  [Will's beta_1, placed: it counts
+        holonomy COORDINATES, i.e. cohomology];
+  (iii) yet EVERY closed-cycle Bargmann product lies in F(V0), a SINGLE
+        quadratic extension, with explicit [rational] + [rational]*V0 forms
+        via anchored triangle decomposition + Binet-Cauchy (D-1..D-3):
+        THE FIELD DOES NOT GROW WITH beta_1. Degree <= 2, always.
+  (iv)  Gal(F(V0)/F) = Z_2 = global reversal, conjugating all cycles at once.
+  MECHANISM AND BOUNDARY: the collapse is forced by the rank-3 ambient
+  (Binet-Cauchy relations among triple volumes). For rays in CP^N, N >= 2,
+  those relations weaken - the general-N cycle field is OPEN and likely
+  grows. That is the 'considerably subtler' part, located precisely.
+  STATUS: constructive for cycles through n = 5 + the general mechanism;
+  full arbitrary-graph write-up, genericity conditions (V0 != 0, overlaps
+  != 0), and a novelty search are next-session work.
+

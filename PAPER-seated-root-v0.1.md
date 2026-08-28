@@ -105,6 +105,27 @@ continuous global branch of $V$ exists). A split extension says nothing about
 holonomy in a punctured space. The same involution is realised by two
 mechanisms of different type, one removable and one not **[proved]**.
 
+**The covers, algebraically: a conjugate Kummer module.** The topological
+statement above has an exact field-theoretic counterpart. Over the state field
+$F = \mathbb{Q}(\gamma_{12},\gamma_{13},\gamma_{23})$ the constructions of this
+paper introduce four radicands: the click-invariant $\Delta$ (the orientation
+cover) and the three $1+\gamma_{ij}$ required by the half-angle spinor lift of
+§9, which the click group permutes. All four are irreducible and pairwise
+coprime, so by the odd-valuation criterion their square classes are independent
+in $F^{*}/F^{*2}$ — rank four, multiquadratic group $(C_2)^4$ **[proved]**.
+Because the click group permutes the three conjugate classes while fixing
+$[\Delta]$, the covers assemble into a *conjugate Kummer module* with normal
+closure
+$$\mathrm{Gal}(L/F) \;\cong\; (C_2 \wr S_3) \times C_2, \qquad |{\cdot}| = 96,$$
+**[derived]**. One polynomial relation ties the invariant radicand to the
+conjugate triple:
+$$(1+\gamma_{12}+\gamma_{13}+\gamma_{23})^2 + \Delta \;=\;
+2(1+\gamma_{12})(1+\gamma_{13})(1+\gamma_{23}) \quad\textbf{[proved]},$$
+and it is the mechanism behind the descent theorem of §9. Note that this
+$\mathbb{Z}_2$ — a Kummer square class — is *not* the $\mathbb{Z}_2$ of the
+non-split spin extension: same order, different category, and the two must not
+be conflated.
+
 **The two-axis ground floor.** A parallel, fully preregistered campaign
 (AGNOSTIC-1, tasks T1–T6; SHA-frozen, byte-stable, independently re-run) had
 already established at $(k,d)=(2,2)$: the invariant-ring lattice, the
@@ -189,6 +210,23 @@ $-\tfrac12\log\det G$ of the three axes) **[proved]**. Temperature-side
 (effort, $\beta$) and medium-side (flow, $n$) form a conjugate pair with the
 same $\sinh\lambda$ margin; their contraction is an action whose
 dimensionless part is a Boltzmann exponent.
+
+**The readout tier is an invariant-reduction exact sequence.** In logarithmic
+coordinates the readout account $(\log T_+, \log T_-)$ carries a linear
+reduction $\Sigma$ (the sum) whose value $2\log T_0$ is pivot-independent,
+while the pivot moves the account strictly inside $\ker\Sigma$, the zero-sum
+line spanned by $(1,-1)$ — so *the pivot is exactly the gauge direction*
+**[proved]**. The antipodal identity $T_+T_- = T_0^2$ is this reduction written
+multiplicatively, and the medium's $\log J$ is an additive account of the same
+type. The readout layer thus instantiates the schema
+$$0 \to \ker\Sigma \to \mathrm{Account} \xrightarrow{\ \Sigma\ }
+\mathrm{Invariant} \to 0, \qquad
+\text{account} = \text{invariant} + \text{zero-sum gauge residue},$$
+with one structural difference from the additive case: here $\Sigma$ is linear
+only after taking logarithms, because the reduction is multiplicative. That
+difference is not incidental — it is the pairing theorem again, since the
+geometric mean is the unique power mean that is multiplicative and hence the
+unique one that is a $\Sigma$-reduction in log coordinates.
 
 ### 5. The $\hbar$ seat: the floor
 
@@ -327,11 +365,15 @@ law is the named open debt DEBT-2b.
 Lifting each axis to its minimal spinor (the half-angle map — the same
 $2{:}1$ cover as §5's dictionary), the cycle
 $B = \langle a_1|a_2\rangle\langle a_2|a_3\rangle\langle a_3|a_1\rangle$
-carries $|B|$ as Gram data and a phase equal to half the *signed solid angle*
-of the frame triangle [lineage: Bargmann; Pancharatnam; Mukunda–Simon], with
-the closed form [Van Oosterom–Strackee]
-$$\tan(\Omega/2) \;=\; \frac{V}{\,1 + \gamma_{12} + \gamma_{13} +
-\gamma_{23}\,}\,.$$
+admits the exact closed form
+$$B \;=\; \frac{1 + \gamma_{12} + \gamma_{13} + \gamma_{23} + i\,V}{4}
+\quad\textbf{[proved; verified to } 10^{-31}\textbf{]},$$
+so that the Gram trace is its real part and the trivector its imaginary part:
+the two invariants of the state are the two components of a single complex
+number. Its phase is half the *signed solid angle* of the frame triangle
+[lineage: Bargmann; Pancharatnam; Mukunda–Simon], recovering the classical
+form $\tan(\Omega/2) = V/(1+\sum\gamma_{ij})$ [Van Oosterom–Strackee] as the
+ratio of the two parts.
 The phase generator is $V$ — **the medium is the phase** — with four verified
 structural consequences: the sign of the phase is the orientation-cover
 coordinate (an operational meter for the sheet, which §2 proved no continuous
@@ -341,6 +383,17 @@ untwisted/twisted split realised on a measurable number); and the branch
 locus is $\mathbb{Z}_2$-graded — coplanar frames read $0$ on one side of the
 symmetric ("trine") configuration and exactly $\pi$ on the other, with the
 trine as the wall between phase classes **[proved / verified to 30 digits]**.
+
+**Descent theorem.** Each individual overlap $\langle a_i|a_j\rangle$ requires
+its own radical $\sqrt{1+\gamma_{ij}}$, so a single leg of the cycle lives in
+the degree-eight multiquadratic field of §2. The *closed cycle*, by the closed
+form above, is rational in the Gram data together with $\sqrt{\Delta}$ alone:
+the three conjugate radicals cancel around the loop and only the click-invariant
+one survives, so the seat-cycle holonomy descends to the degree-two orientation
+subfield $F(\sqrt{\Delta})$ **[proved]**. This upgrades the sheet-meter
+property from an observed sign flip to a field-theoretic fact: $\arg B$ carries
+exactly the orientation square class and nothing else, which is why no
+continuous global branch of $V$ can supply what the phase supplies.
 
 **PREDICTION-1 (banked).** $J = (1 + \gamma_{12} + \gamma_{13} +
 \gamma_{23})\tan(\Omega/2)$ with $\Omega = 2\Phi/(2s)$, minimal lift
@@ -366,6 +419,24 @@ FDT; Wheeler–DeWitt; Page–Wootters (+ Giovannetti–Lloyd–Maccone); decohe
 Davies, Fulling; Hawking; Bargmann, Pancharatnam, Mukunda–Simon, Van
 Oosterom–Strackee; Bronstein's $cG\hbar$ cube.
 
+**Inherited from the author's own separate corpus (a distinct category).**
+Three structural frames used above come not from the literature but from an
+unrelated body of work by the same author (the Cella DBP programme on
+role/channel/orbit geometry and its Galois–Kummer companion papers), predating
+this project and frozen with content hashes: the *canonical invariant reduction
+theorem* ("account = invariant + zero-sum gauge residue"), which §4 shows the
+readout tier instantiates; the *conjugate Kummer module* and odd-valuation rank
+criterion, which supply §2's cover group; and the wreath-closure family of which
+§2's $(C_2\wr S_3)\times C_2$ is an instance. This inheritance is genuinely
+useful — it replaced hand-rolled arguments with general theorems — but it must
+be graded differently from external lineage: shared authorship means shared
+assumptions and shared blind spots, so an apparent convergence between the two
+corpora is weaker evidence than an independent confirmation would be. Readers
+consulting both should also note a false friend: "channel" in the DBP corpus
+means a curvature-channel component ($\kappa_c,\kappa_s,\kappa_{int}$), whereas
+"channel law" here means a detector response functional. Same word, unrelated
+referents.
+
 **New or unlocated, honestly sized (the short list).** The half-seat
 reflection $I(p,m) = I(-p,1-m)$ and the all-$p$ circle mirror (elementary,
 unlocated); the trichotomy theorem (one rotor, on-state/free/pinned) as the
@@ -379,6 +450,8 @@ the canonical three-seat partition menu as a sharpening of Page–Wootters
 the former transport-exponent conjecture, no third carrier required); its
 successor question Q-RN — derive the reading-as-RN-power premise from the
 channel law, noting $n(c) = 2$ coincides with the quadratic channel exponent;
+the closed form $B = (1+\sum\gamma_{ij}+iV)/4$ and its
+descent theorem (the cycle needs one radical where its legs need three);
 PREDICTION-1.
 
 **Declared inputs and named debts.** LBL-1 (thermal circle), KIN-1 (proper
@@ -386,11 +459,16 @@ acceleration), KIN-2 (the pinning law; curvature-tier derivation owed),
 Ohmic-in-band coupling (DEBT-2b: derive $c(\omega)$ from the channel law);
 the Stage-3 role dictionary with its stabilizer-compatibility admissibility
 law; adjudication of the irreducibly-signed-observable hypothesis (H-B). Two
-methodological facts deserve record: twice in this programme a theorem frozen
-for one purpose later selected the correct answer to a question it was not
-written for (the tensoriality theorem selecting $2\pi$; the closure rule
+methodological facts deserve record. First, twice in this programme a theorem
+frozen for one purpose later selected the correct answer to a question it was
+not written for (the tensoriality theorem selecting $2\pi$; the closure rule
 resolving the relax/circulate fork) — the freeze-date discipline functioning
-as the intended antidote to retrofit. Conversely, the outcome ledger contains
+as the intended antidote to retrofit. This should be distinguished from the
+cross-corpus inheritance catalogued above, which is a different event type:
+preregistration working is evidence about *this* programme's discipline,
+whereas one of an author's corpora supplying machinery to another is evidence
+only that the two share an architecture — possibly because the architecture is
+real, possibly because the author is. Conversely, the outcome ledger contains
 as yet **no** class-(b) result: every physical output matches known physics.
 A reformulation indistinguishable from the standard theory on all computed
 observables is either correct or unfalsifiable, and cannot tell which from
@@ -405,8 +483,11 @@ digits or symplectic integration with conservation monitors reported inline.
 Preregistrations and results carry SHA-256 hashes frozen before computation
 in the AGNOSTIC-1 campaign; the present session's suites are committed
 sequentially to the project repository (thm_g, thm_b_monodromy, cayley,
-thm_d, doors, kahler, debt2, thm_d2_unruh, thm_g2, bargmann; RULING-1;
-PREDICTION-1), each with its full check output. Every FAIL encountered during
+thm_d, doors, kahler, debt2, thm_d2_unruh, thm_g2, bargmann, thm_rn,
+bridge_dbp, galois; RULING-1; PREDICTION-1), each with its full check output.
+Head of the sequence at the time of writing: `7e4e4e1` (Galois/Kummer
+structure and the descent theorem), preceded by `685a89e` (invariant-reduction
+bridge) and `2ba206f` (blind-mass theorem). Every FAIL encountered during
 development is preserved in the transcript with its diagnosis; three were
 substantive (a dead ladder conjecture; a non-resonance correction to the
 seesaw mechanism; the branch-grading discovery), the remainder were

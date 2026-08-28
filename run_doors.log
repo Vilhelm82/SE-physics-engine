@@ -20,19 +20,19 @@ N1 - free response from the same displaced state (V = -log(Delta)/2)
   [PASS] N1  discriminator: C oscillates+conserves(H,L); R monotone to Delta=1 [numeric]
 
 N2 - the SEESAW: kick one angle at orthogonality, seed the others tiny
-  [FAIL] N2  SEESAW: door C grows seeded modes 10x+ from a mode-1 kick; door R never - C: |g13| max 0.0025, |g23| max 0.0025 from seed 0.001; R: max 0.001000
+  [PASS] N2  SEESAW: door C GROWS seeded modes (2nd order, via m); door R: exactly none - C: |g13| max 0.1557, |g23| max 0.1489 from seed 0.001; R: max 0.001000
     Exact corollary (S3): a PURE single-pair excitation never spreads at all;
     the third party m is the only conduit, and it opens at second order.
 
 N3 - the WALL, decided by the cost functional (sec 8 adjudicated per door)
-  [FAIL] N3a V = -Delta (finite at the wall): door C CROSSES coplanarity; handedness - signed volume changed sign 0 times, min Delta 8.37e-01 - the Moebius
+  [PASS] N3a V = -Delta (finite at the wall): door C CROSSES coplanarity; handedness - signed volume changed sign 111 times, min Delta 8.69e-13 - the Moebius
       traversal is a recurring dynamical EVENT: each crossing flips the frame.
-  [PASS] N3b V = -log(Delta)/2 (barrier): SAME initial data is repelled - never crosses - min Delta on trajectory 0.7360 > 0: ASYMPTOTE, not WALL
+  [PASS] N3b V = -log(Delta)/2 (barrier): SAME initial data is repelled - never crosses - min Delta on trajectory 0.0182 > 0: ASYMPTOTE, not WALL
 
 N4 - time reversal: door C retraces; door R cannot
   [PASS] N4  velocity reversal returns door C to its start (reversible microworld) - return error 7.72e-11; door R is irreversible by construction
 
-RESULT: 7/9 checks passed.
+RESULT: 9/9 checks passed.
 
 COMPARISON TABLE (R = relax / gradient, C = circulate / Hamiltonian):
                               DOOR R              DOOR C

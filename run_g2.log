@@ -1,0 +1,50 @@
+==============================================================================
+PART 1 - the wall acquires an address
+==============================================================================
+  [PASS] H-1a protected product: sech^2(lam) = 1 - tanh^2(lam) = 1 - rs/r =: N^2 - the hbar wall's exponential, now a FUNCTION OF PLACE
+  [PASS] H-1b N^2 > 0 outside, N^2 = 0 EXACTLY at r = rs, and nowhere else (r > 0) - VANISHES AT THE HORIZON - sec.5's third character, realised
+  [PASS] H-1c the pinning diverges AT the wall: lambda(rs) = oo, lambda(oo) = 0 - lambda = oo (the hbar-unreachable stratum) gets COORDINATES: r = rs
+  [PASS] H-2  the ESCAPING pole carries the death: (1-v) = N^2/(1+v) -> 0; bound -> 2 - the product vanishes because ONE pole closes - sec.5 sharpened
+
+==============================================================================
+PART 2 - the trichotomy: one rotor, three relationships to the state
+==============================================================================
+  [PASS] T-1  c seat: antipodal pole product s(0)*s(pi) = 1 identically; nullness - lives ON the state space (E-1: rays are null) - FREE
+  [PASS] T-2  hbar seat: min_phi q = A e^{-2 lam} > 0 for ALL finite lam (part 1, - G-1c re-verified); lam FREE => the zero stratum unreachable - FLOORED
+  [PASS] T-3  G seat: N^2 = 4 e^{-2 lam}/(1+e^{-2 lam})^2 - SAME exponential wall, - lam PINNED with lam(rs) = oo => the wall is REACHED - HORIZON-VANISHING
+  [PASS] T-4  asymptotic identity: e^{2 lam} N^2 -> 4 as lam -> oo - identical wall constant to the hbar leg: one theorem, three dressings
+       [uncounted] p_blind note: the G pivot is a boost on the SAME sphere
+       carrier as c => transport exponent 2 is shared, NOT a third instance.
+       The p_blind = transport-exponent conjecture remains n = 2, open.
+
+==============================================================================
+PART 3 - the invariant rides the pair through the wall (Tolman = E-8)
+==============================================================================
+  [PASS] H-3a family reading: T_loc(r) = T0 cosh(lam(r)) = T0/sqrt(1 - rs/r), exact - [comparison stage will name this: Tolman 1930]
+  [PASS] H-3b the PAIR carries T0 through the wall: T_loc * N = T0 for ALL r > rs - each factor dies/diverges at rs; the pairing survives - E-8/R-7 at the horizon
+  [PASS] H-3c at the wall: T_loc -> oo, N -> 0, product fixed
+
+==============================================================================
+PART 4 - COMPARISON STAGE: the engine fires (imports named here only)
+==============================================================================
+  [PASS] H-4a imported alpha(r): redshifted acceleration alpha*N -> kappa = c^2/(2 rs) - surface gravity as the horizon limit of the D2 dial's flow variable
+  [PASS] H-4b THE ENGINE (D2, tensorial 2pi inherited): T_H = hbar c/(4 pi k_B rs)
+  [PASS] H-4c naming rs = 2GM/c^2:  T_H = hbar c^3 / (8 pi G M k_B) - THE HAWKING TEMPERATURE - coefficient and all, from the rotor chain
+  [PASS] H-5  sanity, one solar mass: T_H = 6.17e-8 K (the classic number) - T_H(Msun) = 6.169e-8 K
+
+RESULT: 15/15 checks passed.
+
+SEC.5 VERDICT - THE TAXONOMY, THREE FOR THREE (frozen 2026-08-17):
+  FREE (c): nullness on-state [E-1].  FLOORED (hbar): orbit separation, lam
+  free [part 1, 22/22].  HORIZON-VANISHING (G): the SAME exponential wall,
+  lam pinned by KIN-2, wall reached at r = rs; the escaping pole closes,
+  bound saturates; the Tolman pair carries T0 through the wall (E-8's pattern
+  at the horizon); the D2 engine + kappa gives T_H = hbar c^3/(8 pi G M k_B).
+  One rotor, three relationships between pivot and state: on-state / free /
+  pinned.  Three characters fixed BEFORE any were computed; all three landed.
+STATUS: structure = derived on KIN-2 (declared G-datum, LBL-1's analog);
+  alpha(r) imported at comparison (LBL-2's epistemic shape); tensorial-2pi
+  falsifier inherited from D2 (spinorial => half Hawking: FALSE).  LINEAGE
+  loud: Tolman; Hartle-Hawking; Bisognano-Wichmann -> Sewell; Hawking 1974.
+  p_blind conjecture: NO third instance here (shared sphere carrier) - open.
+

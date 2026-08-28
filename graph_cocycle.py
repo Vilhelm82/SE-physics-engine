@@ -3,8 +3,15 @@
 # THE SEAT-CHANGE COCYCLE AND THE GRAPH DESCENT THEOREM  (2026-08-28, encore 2)
 # Will's synthesis: presentation factor = multiplicative cocycle on a seat
 # groupoid; complexified legs tau_ij; cycle products = holonomies; descent.
-# DAG checked first: 'cocycle' 0 hits; 'holonomy' = the discrete-transport
-# analogy only. This layer is NOT in the corpus. Deriving.
+# DAG checked first: 'cocycle' 0 hits. STATUS UPDATE (same night, Will's
+# search): the graph descent theorem is SCOOPED — Chien-Waldron 1312.5393
+# (cycle space / recovery) + Li-Wagner-Zhang 2507.14878 Thm V.1 (quadratic
+# over overlap field, unique conjugation Z_2; their property (A) = the
+# Binet-Cauchy engine; their n=3 = our closed form via Zhang-Xie-Li 2025).
+# Checks below remain valid as VERIFICATION; novelty claim withdrawn.
+# PROCESS RULE adopted: nothing banked 'candidate new' without a same-session
+# arXiv search. LWZ C^4 counterexample also shows the qubit mechanism FAILS
+# for d>2 — read their refs 96,100-102 before touching the higher-N question.
 # =============================================================================
 import sympy as sp, mpmath as mp, random
 

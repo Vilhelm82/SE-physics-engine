@@ -1,0 +1,48 @@
+==============================================================================
+PART 1 - the branch locus, exactly (what kind of variety is Delta = 0?)
+==============================================================================
+  [PASS] B'-1 singular locus of {Delta=0} is exactly FOUR points, all |gamma|=1 - [(-1, -1, 1), (-1, 1, -1), (1, -1, -1), (1, 1, 1)]
+  [PASS] B'-2 Delta is irreducible over Q (single factor, multiplicity 1)
+  [PASS] B'-3 ABSOLUTE irreducibility (argument: reducible => Sing has dim>=1; - Sing is 0-dimensional, so Delta is irreducible over C; all meridians conjugate
+  [PASS] B'-4 each collision point is an ORDINARY NODE: Hessian rank 3 (det != 0) - det Hessian = 32 at (-1, -1, 1) => Delta vanishes to order 2 there
+  [PASS] B'-5 generic complex line through a node meets Delta=0 with MULTIPLICITY 2 - lowest order in t is t^2 (order 1 at a smooth point)
+
+==============================================================================
+PART 2 - the monodromy representation (analytic continuation of V)
+==============================================================================
+  [PASS] B'-6 loop about coplanar smooth point g1=-7/8: V -> -1*V - ratio (-1.0 + 0.0j), min|Delta| on path 0.2106
+  [PASS] B'-6 loop about collision-type smooth point g1=1: V -> -1*V - ratio (-1.0 + 0.0j), min|Delta| on path 0.2106
+  [PASS] B'-7 loop enclosing BOTH branch points: V -> +V (the homomorphism closes) - ratio (1.0 + 0.0j), (-1)*(-1) = +1, min|Delta| 8.12109
+  [PASS] B'-8 control loop enclosing nothing: V -> +V - ratio (1.0 + 0.0j)
+  [PASS] B'-9 loop in a generic line about the NODE (-1, -1, 1), dir (1, 2, 5): V -> +V - ratio (1.0 + 0.0j), min|Delta| 0.1375 - even order, no flip
+  [PASS] B'-9 loop in a generic line about the NODE (-1, -1, 1), dir (3, -1, 2): V -> +V - ratio (1.0 + 0.0j), min|Delta| 0.0685 - even order, no flip
+
+==============================================================================
+PART 3 - is the monodromy involution the SAME map as the global reversal?
+==============================================================================
+  [PASS] B'-10 global reversal fixes the state exactly (Lemma 2.1, re-verified)
+  [PASS] B'-11 ... and sends V -> -V: so on the cover it induces (g,V) -> (g,-V) - which is EXACTLY the deck transformation of the orientation cover
+  [PASS] B'-12 deck fixed locus = {V=0} = {Delta=0}: same locus the monodromy - branches over. V^2 = Delta re-verified; fixed-locus comparison CLOSED
+
+RESULT: 14/14 checks passed.
+
+FINDING - splitting and triviality are different statements, and both hold.
+  * The RELABELLING extension 1 -> {+-1} -> B3 -> Gamma -> 1 SPLITS (B4, 18 Aug):
+    det=+1 representatives are a section, so V's sign can be chosen consistently
+    as a GROUP-THEORETIC matter.  V is tensorial.  Unchanged, uncontested.
+  * The ORIENTATION COVER over complexified state space is NONTRIVIAL: monodromy
+    exactly Z_2 (B'-3 irreducibility => single conjugacy class of meridians;
+    B'-6 realises it), so V's sign CANNOT be chosen consistently as a CONTINUOUS
+    function.  No global branch of V exists on C^3 minus {Delta=0}.
+  These do not conflict: a split extension of a finite group says nothing about
+  holonomy in a punctured space.  The involution is THE SAME map (B'-10/11/12) -
+  the global reversal and the deck transformation coincide - but it is realised
+  by two mechanisms of different type, one removable by convention and one not.
+  So "where the trivector lives, the twist isn't" is right about SPIN and
+  overstated as written: V carries a genuine, non-removable orientation twist.
+NEW - the strata are separated BY BRANCH ORDER, from the cover side:
+  smooth points of {Delta=0} (coplanar AND collision-type alike) are order-1
+  vanishings and flip V; the four true collision NODES are order-2 (B'-4/5) and
+  a generic line about them does NOT flip V (B'-9).  C6 separated the strata by
+  the singular locus; this separates them by what the cover does over them.
+

@@ -1,0 +1,55 @@
+==============================================================================
+PART 1 - THEOREMS (symbolic, exact)
+==============================================================================
+  [PASS] S1  dL/dt = -Sum a_i x grad_i V = 0 for EVERY click-invariant V (door C) - 3-axis P10/P11: circulation's conserved momentum is door C's birthright
+      Door R destroys L by construction (first-order flow has no momentum).
+  [PASS] S2  quadratic = p1/2 (1:1:1 DEGENERATE modes); cubic = -m EXACTLY - NOTE: odd cubic coupling at 1:1:1 is NON-resonant at first order (+-1+-1+-1 != 0): transfer is SECOND order, via m^2. Corrected claim.
+  [PASS] S3  {g13 = g23 = 0} is invariant: dV/dg13 and dV/dg23 vanish there - one angle cannot reach another except THROUGH the third: m is the only conduit
+  [PASS] S4  dDelta/dt != 0 under door R at a generic point (and door C oscillates it) - the SANDPIT (fixed total) holds in NEITHER door as a scalar => it must be the
+      CONTINUITY reading (d_mu n^mu = 0, the current) or an imposed constraint.
+      The title fight's 'the object is a current' is forced from a 2nd direction.
+
+==============================================================================
+PART 2 - TRAJECTORIES [NUMERIC EVIDENCE, float RK4; monitors reported]
+==============================================================================
+
+N1 - free response from the same displaced state (V = -log(Delta)/2)
+    door C: Delta ranged [0.5015, 0.9983] around start 0.5015 (oscillates, returns)
+    door C monitors: |H-H0| = 5.93e-14, |L-L0| = 6.27e-14
+    door R: Delta 0.5015 -> 1.000000, monotone: True (relaxes to orthogonal, L identically 0)
+  [PASS] N1  discriminator: C oscillates+conserves(H,L); R monotone to Delta=1 [numeric]
+
+N2 - the SEESAW: kick one angle at orthogonality, seed the others tiny
+  [FAIL] N2  SEESAW: door C grows seeded modes 10x+ from a mode-1 kick; door R never - C: |g13| max 0.0025, |g23| max 0.0025 from seed 0.001; R: max 0.001000
+    Exact corollary (S3): a PURE single-pair excitation never spreads at all;
+    the third party m is the only conduit, and it opens at second order.
+
+N3 - the WALL, decided by the cost functional (sec 8 adjudicated per door)
+  [FAIL] N3a V = -Delta (finite at the wall): door C CROSSES coplanarity; handedness - signed volume changed sign 0 times, min Delta 8.37e-01 - the Moebius
+      traversal is a recurring dynamical EVENT: each crossing flips the frame.
+  [PASS] N3b V = -log(Delta)/2 (barrier): SAME initial data is repelled - never crosses - min Delta on trajectory 0.7360 > 0: ASYMPTOTE, not WALL
+
+N4 - time reversal: door C retraces; door R cannot
+  [PASS] N4  velocity reversal returns door C to its start (reversible microworld) - return error 7.72e-11; door R is irreversible by construction
+
+RESULT: 7/9 checks passed.
+
+COMPARISON TABLE (R = relax / gradient, C = circulate / Hamiltonian):
+                              DOOR R              DOOR C
+  energy                      Lyapunov, decays    conserved (H)
+  circulation L               destroyed           conserved for EVERY V(G)  [S1]
+  Delta                       monotone -> 1       oscillates, recurs
+  injection into one angle    others only decay   others GROW then return (seesaw,
+                                                  1:1:1 resonance, coupling = -m) [S2,N2]
+  time reversal               impossible          exact                      [N4]
+  sandpit CONS-1              fails as scalar     fails as scalar            [S4]
+                              => forced to the CURRENT/continuity reading in both
+  Delta = 0                   never reached       cost functional decides: -Delta
+                              (barrier repels)    crossable + handedness flips;
+                                                  -log barrier = asymptote  [N3]
+THE REFRAME: R is not C's sibling - R is C coupled to an unmodelled bath
+(gradient flow = overdamped limit; dissipation presupposes an OUTSIDE).
+So the ruling is not relax-vs-circulate.  It is: IS THE STRUCTURE CLOSED?
+Closed => door C is forced (S1 makes circulation its birthright), and 'relax'
+can only ever be a coarse-grained description of C.  Open => name the bath.
+

@@ -1,0 +1,47 @@
+==============================================================================
+PART 1 - symmetroid: the nodes are the rank-1 states
+==============================================================================
+  [PASS] CY-1 Delta = det of a symmetric matrix of linear forms (a cubic symmetroid)
+  [PASS] CY-2 rank-1 states {vv^T : v in {+-1}^3}/+- ARE the four nodes, exactly - [(-1, -1, 1), (-1, 1, -1), (1, -1, -1), (1, 1, 1)]
+  [PASS] CY-3 every node has Gram rank 1 (total collision); the smooth coplanar - point (-1/2,-1/2,-1/2) has rank 2 - the two strata are the two rank levels
+  [PASS] CY-4 the four nodes are in GENERAL POSITION (affinely independent simplex) - det = 16
+
+==============================================================================
+PART 2 - exactly four nodes projectively, and the nine lines
+==============================================================================
+  [PASS] CY-5 homogenisation is correct: Dh(w=1) = Delta
+  [PASS] CY-6 NO singular points at infinity => exactly 4 nodes on the whole surface - 4 nodes is the maximum for an irreducible cubic; the unique such surface
+       is Cayley's nodal cubic [classification theorem, cited not machine-checked]
+  [PASS] CY-7 six AFFINE lines lie on the surface: the pairwise COLLISION loci - gamma_ij = +-1 forces the other two angles equal/opposite - a line
+  [PASS] CY-8 each collision line JOINS TWO NODES; the six lines are the six edges - K4 on the four nodes: 6 edges, each node on 3 lines
+  [PASS] CY-9 three further lines at infinity: Dh|_{w=0} = 2 g1 g2 g3 (three planes) - 6 + 3 = 9 lines: the Cayley cubic's exact line count (smooth cubic has 27)
+
+==============================================================================
+PART 3 - the click group IS the automorphism group of the branch surface
+==============================================================================
+  [PASS] CY-10 |B3| = 48
+  [PASS] CY-11 B3 acts on the four NODES; image is all of S4 (24 permutations)
+  [PASS] CY-12 kernel is exactly {+-I} => the CLICK GROUP Gamma = B3/<-I> ~ S4 - Prop 2.2 re-derived from the BRANCH SURFACE side: the four nodes are the
+       four body diagonals of the cube, i.e. the four sign vectors up to +-.
+  [PASS] CY-13 every click preserves the surface (Delta invariant up to det^2 = 1) - sampled 12 of 48; det(M)^2 = 1 makes it automatic for the rest
+
+RESULT: 13/13 checks passed.
+
+WHAT THE IDENTIFICATION BUYS (lineage flagged: inherited machinery, real):
+ 1. The click group is not a modelling choice.  Aut(Cayley cubic) = S4, acting
+    by permuting the four nodes [classical].  CY-11/12 realise exactly that
+    action from B3.  Gamma ~ S4 is FORCED by the branch surface's geometry.
+ 2. The nine lines are physical: SIX are the pairwise collision loci
+    gamma_ij = +-1 (CY-7/8), the K4 edges joining nodes; THREE are at infinity
+    and outside the model.  The model sees 6 of the 9.
+ 3. Both strata get classical names.  The real region {Delta >= 0, |g| <= 1} is
+    the 3x3 ELLIPTOPE (correlation matrices): rank-2 boundary = smooth coplanar
+    stratum; rank-1 extreme points = the four nodes.  Convex-geometry and SDP
+    machinery (max-cut relaxation) applies to the state space wholesale.
+ 4. The four nodes are the four body diagonals of the cube (CY-12) - the SAME
+    four objects the paper's Prop 2.2 uses to get S4.  Three separate arguments,
+    one set of four objects.
+ 5. Minimal resolution: weak del Pezzo of degree 3, four (-2)-curves, root
+    sublattice 4A1 in E6 [classical, not computed here - the natural next tool
+    if the resolution is ever needed].
+

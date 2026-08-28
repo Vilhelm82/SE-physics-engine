@@ -1,0 +1,32 @@
+==============================================================================
+PART 1 - the lift (symbolic)
+==============================================================================
+  [PASS] BP-1 minimal lift: |<a|b>|^2 = (1 + a.b)/2, exact  (half-angle = the cover)
+
+==============================================================================
+PART 2 - the phase = -Omega/2, two paths (30-digit)
+==============================================================================
+  [PASS] BP-2a ANCHOR (octant): Omega = pi/2, arg(B) = +pi/4: this chart gives +Omega/2 - sign is chart convention; structure unchanged  [Bargmann, lineage]
+  [PASS] BP-2b arg(B) = +Omega/2, tan(Omega/2) = V/(1+Sum gamma): spinor vs vector path - 8 random frames, worst 5.92e-31  [VOS + Bargmann, lineage]
+  [PASS] BP-3 circulation preserves B; a SWAP conjugates it: untwisted/twisted as - complex conjugation of the seat-cycle holonomy - the click split, realised
+  [PASS] BP-4 global reversal: G fixed, Phi -> -Phi: a G-BLIND sign - the phase is - the interferometric detector for the orientation sheet [B'-monodromy's meter]
+  [PASS] BP-5 detector NULLS on the branch locus: coplanar frame => Phi = 0 - the sheets meet where the meter reads zero
+
+  BP-6 the pi-event, located: tilt the symmetric trine out of plane:
+      eps =   0.3:  Phi = 2.643716474
+      eps =   0.1:  Phi = 2.969246309
+      eps =  0.03:  Phi = 3.089654494
+      eps =  0.01:  Phi = 3.124273011
+  [PASS] BP-6 |Phi| -> pi approaching the trine: the pi-phase event has an address - |Phi(0.01)| = 3.124273 -> pi
+  [PASS] BP-7 crossing: Phi(-tau) = -Phi(tau) mod 2pi; Phi(0) in {0, pi} - the branch - locus is Z2-GRADED by the meter: 0-class / pi-class, split at the trine; Phi(0) = 3.1415927
+
+RESULT: 8/8 checks passed.
+
+BANKED: PREDICTION-1.  J = (1 + g12 + g13 + g23) * tan(Omega/2),  Omega = +2 Phi (this chart)
+(minimal lift s = 1/2; general lift multiplies Phi by 2s - charge is a labelled-
+tier datum, candidate tie to the hbar quantum: CONJECTURE).  Mathematics exact
+(BP-2); physics status: the medium is interferometrically accessible via the
+seat-cycle holonomy - the model's first clean prediction-shaped statement.
+The phase generator is V: the sand IS the phase.  It nulls on the branch,
+saturates to pi at the trine, conjugates under reversals, and reads the sheet.
+

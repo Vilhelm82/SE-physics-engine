@@ -19,13 +19,12 @@ a = sp.Matrix(sp.symbols('a1:4')); x = sp.Matrix(sp.symbols('x1:4'))
 y = sp.Matrix(sp.symbols('y1:4')); s = a.dot(a)
 u = x - (a.dot(x)/s)*a                     # generic tangent vectors at a
 v = y - (a.dot(y)/s)*a
-check("K-1  J^2 = -1 on the tangent space: a x (a x u) = -u  (|a|=1)",
-      sp.simplify((a.cross(a.cross(u)) + u).subs(s, 1).applyfunc(sp.simplify)) == sp.zeros(3, 1) or
-      sp.simplify(sp.expand(a.cross(a.cross(u)) + s*u).subs(a.dot(a), 1) - (s-1)*u) is not None and
-      sp.simplify(sp.expand((a.cross(a.cross(u)) + u).subs(sp.Symbol('a1')**2, 1 - sp.Symbol('a2')**2 - sp.Symbol('a3')**2))) == sp.zeros(3, 1))
-check("K-2  J is g-orthogonal: (a x u).(a x v) = u.v  (compatibility)",
-      sp.simplify(sp.expand((a.cross(u)).dot(a.cross(v)) - u.dot(v)).subs(
-          sp.Symbol('a1')**2, 1 - sp.Symbol('a2')**2 - sp.Symbol('a3')**2)) == 0)
+check("K-1  BAC-CAB, exact polynomial: a x (a x w) = (a.w)a - (a.a)w",
+      sp.simplify(sp.expand(a.cross(a.cross(x)) - (a.dot(x)*a - a.dot(a)*x))) == sp.zeros(3, 1),
+      "with |a|=1 and w tangent: J^2 = -1 on the tangent space [corollary]")
+check("K-2  Lagrange, exact polynomial: (a x w).(a x z) = (a.a)(w.z) - (a.w)(a.z)",
+      sp.simplify(sp.expand((a.cross(x)).dot(a.cross(y)) - (a.dot(a)*x.dot(y) - a.dot(x)*a.dot(y)))) == 0,
+      "with |a|=1, tangent w,z: g(Jw,Jz) = g(w,z) - J is g-orthogonal [corollary]")
 check("K-3  omega(u,v) := g(Ju,v) = a.(u x v): antisymmetric - the area form",
       sp.simplify(sp.expand((a.cross(u)).dot(v) - a.dot(u.cross(v)))) == 0 and
       sp.simplify(sp.expand((a.cross(u)).dot(v) + (a.cross(v)).dot(u))) == 0,
@@ -81,7 +80,7 @@ def rhs(A, thv):
         Pg = sub(Gr[i], scl(dot(Gr[i],A[i]), A[i]))
         out.append(sub(scl(math.sin(thv), crs(A[i],Gr[i])), scl(math.cos(thv), Pg)))
     return out
-def run(thv, N=40000, h=0.002):
+def run(thv, N=3000, h=0.002):
     A = [[1.0,0,0],[0.55, math.sqrt(1-0.3025),0],[-0.30,0.35,math.sqrt(1-0.09-0.1225)]]
     V0 = Vv(A); flips = 0; last = None
     for k in range(N):

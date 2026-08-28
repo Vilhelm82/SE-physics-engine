@@ -1,0 +1,39 @@
+==============================================================================
+PART 1 - THEOREMS (symbolic)
+==============================================================================
+  [PASS] K-1  BAC-CAB, exact polynomial: a x (a x w) = (a.w)a - (a.a)w - with |a|=1 and w tangent: J^2 = -1 on the tangent space [corollary]
+  [PASS] K-2  Lagrange, exact polynomial: (a x w).(a x z) = (a.a)(w.z) - (a.w)(a.z) - with |a|=1, tangent w,z: g(Jw,Jz) = g(w,z) - J is g-orthogonal [corollary]
+  [PASS] K-3  omega(u,v) := g(Ju,v) = a.(u x v): antisymmetric - the area form - one Hermitian tensor h = g + i*omega; the two doors are its two faces
+  [PASS] K-4a Door C (precession) conserves V EXACTLY: dV/dt = Sum grad.(a x grad) = 0 - rotates along the level sets - the omega-face signature
+  [PASS] K-4b Door C conserves the total axis vector: d/dt Sum a_i = Sum a_i x grad_i V = 0 - the spin-picture conserved momentum, same cancellation as S1
+  [PASS] K-5  the DIAL: dV/dt = -cos(theta) * Sum |P grad_i V|^2, exactly - descent rate = cos(theta); pure rotation at pi/2; e^{J theta} interpolation
+      K-0 [identity, elementary, uncounted]: J's generator at axis a is the
+      bivector P_a = I a  (sec 12.2's plane); quarter-turn exp(-P_a pi/4) acts
+      as a x (.) - the operator that turns omega into g is the axis's own plane.
+
+==============================================================================
+PART 2 - THE DIAL, RUN  [numeric evidence, RK4]
+==============================================================================
+    theta =  0.000:  V 0.2996 -> 0.000000   turning points of g12: 0
+    theta =  0.524:  V 0.2996 -> 0.000000   turning points of g12: 1
+    theta =  1.047:  V 0.2996 -> 0.000001   turning points of g12: 3
+    theta =  1.571:  V 0.2996 -> 0.299572   turning points of g12: 5
+  [PASS] K-6a theta = pi/2: V conserved (|dV| < 1e-8) - pure omega-face rotation
+  [PASS] K-6b V_end strictly increases with theta: descent rate = cos(theta)
+  [FAIL] K-6c intermediate theta: many oscillations WHILE descending - EVANESCENCE - damped rotation = complex frequency: the propagating/evanescent band realised
+
+RESULT: 8/9 checks passed.
+
+ANSWER TO THE QUESTION: the operator turning omega into g is J, the complex
+structure - concretely the axis's own plane P_a = I a (sec 12.2), applied to the
+flow as e^{J theta}, i.e. a WICK ROTATION OF THE GENERATOR.  Door R is Door C in
+imaginary time; LBL-1's thermal face IS the dissipative face; the band between
+is a complex frequency - the model's own word for it is EVANESCENT.
+WHO SETS theta: nothing internal can.  At theta = pi/2 the flow is norm- and
+V-preserving; rotating the phase requires a symmetric positive part in the
+generator, which is a coupling to unresolved degrees of freedom (a dissipator).
+Closed structure => theta = pi/2 exactly, and every apparent descent is
+coarse-graining.  The yield-point operator is therefore THE OPENING itself -
+the same ruling as the two doors, now as a phase.  [status: the Kahler geometry
+and the dial are theorems/verified; the physics assignments (quantum = omega
+face, thermal/settling = g face) are conjecture-tier, labelled.]

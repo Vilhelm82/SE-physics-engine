@@ -1,0 +1,52 @@
+==============================================================================
+PART 1 - the forced coupling (exact)
+==============================================================================
+  [PASS][  0.7s] B-1  d/du'[s^2 F(E/s)] = s'(u') * s * [2F(y) - y F'(y)],  y = E/s: EXACT - s' != 0 for Lambda > 0, so RULE-4 uniformity forces 2F = yF' pointwise
+  [PASS][  0.8s] B-2  the ODE 2F = yF' has general solution F = C*y^2 - UNIQUE up to scale - c(w)^2 g0(w) = C w^2: the coupling's radial law is FORCED, eta the only knob
+  [PASS][  0.8s] B-3  sufficiency: F = C w^2  =>  weight = C E^2, uniform in u', every gap - and the rate envelope is phi(E) = C E^2 * (1/E)-amplitude = C E: fixed too
+  [PASS][  0.9s] B-4a flat c^2 g0: weight = E^0 s^2 - u'-DEPENDENT, violates RULE-4
+  [PASS][  1.0s] B-4b F ~ w (one-office ghost): weight = E^1 s^1 - u'-DEPENDENT, violates RULE-4 - office mixing shifts the exponent by exactly the Jacobian power Q=2
+  [PASS][  1.1s] B-5a eigenvalue(alpha) = <s^(2-alpha)> = <s^alpha> (the k <-> 2-k mirror, C-3) - band route and direction route agree BY the mirror: Renyi skew, third sighting
+  [PASS][  1.6s] B-5b eigenvalue table = the F-12..15 moment table verbatim (alpha = 1,2,3,4) - L/sinhL, 1, gamma, gamma^2(1+beta^2/3): the moments ARE the pivot eigenvalues
+  [PASS][  1.6s] B-6  fixed-point lemma: d/dx[x cosh x - sinh x] = x sinh x > 0, g(0) = 0 - => sinh(kL)/k strictly increasing in |k| => <s^a>=1 iff |a-1|=1 iff a in {0,2}
+  [PASS][  1.9s] B-6b <s^0>=<s^2>=1 exactly; <s^1>,<s^3> != 1: exactly two blind exponents - the invariant's two access routes (F part 1), now as bath fixed points
+  [PASS][  1.9s] B-7  debt2's ck = sqrt(2 eta D/pi) w with flat g0: c^2 g0 = (2 eta/pi) w^2 - DECLARED there, DERIVED here: debt2.py needs zero amendment
+
+==============================================================================
+PART 2 - independent numeric mode-sum (aberration map)
+==============================================================================
+  [PASS][  2.2s] N-1  seat-office uniformity of the derived weight: flat in u' across 20 bins - worst relative deviation 5.09e-04 (grid, 2e5 rays x3)
+  [PASS][  2.2s] N-2  channel content intact: quadrature A = F-4 closed form at 3 (x,L) points - worst 1.29e-26
+
+RESULT: 12/12 checks passed.
+
+VERDICT (fork): (a) with a bonus. DEBT-2b DISCHARGED:
+  RULE-4 (equal weight per SEAT direction, every gap) + M-2 (the office
+  Jacobian du = s^2 du') + the golden rule force the functional equation
+  s^2 F(E/s) = psi(E), whose only solutions are F(w) = c(w)^2 g0(w) = C w^2
+  (B-1/2/3). The coupling's radial law is NOT a knob; eta (overall scale) is
+  the only freedom. debt2.py's 'Ohmic-in-band, declared' becomes DERIVED with
+  zero amendment (B-7).
+  THE FIXED-POINT READING: the pivot acts on power-law bath weights with
+  eigenvalue <s^alpha> - the F-12..15 moment table IS the eigenvalue table
+  (B-5) - and the forced alpha = 2 is the unique nontrivial fixed point,
+  i.e. the Jacobian-blind route of F-13 (B-6). The channel law selects the
+  pivot-invariant bath: the sky every seat derives is the same sky.
+  THE GHOST, recorded (B-4): demanding uniformity on the SOURCE measure
+  instead yields F ~ w - one office error shifts the exponent by exactly the
+  Jacobian power Q = 2. Same genus as addendum 1 and PRED-1's DeltaQ ghost;
+  third specimen, now with the shift quantified.
+PAYMENTS: DEBT-2b closed. Pressure-test 1 half-paid: the coupling exponent
+  is forced (alpha = 2 = the Jacobian power) - a distinguished Mellin
+  exponent exists and the pivot acts as a Mellin multiplier with symbol
+  <s^alpha>; Q-RN adjacency strengthened, not closed.
+HONEST SCOPE: Lambda > 0 required (no pivot, no constraint); eta free by
+  scale; GR amplitude convention imported (named, LBL-2's epistemic shape);
+  isotropic c (omega-only) is RULE-4's own isotropy; two-level probe is F's
+  probe - the oscillator GLE inherits the same weight by D2-3's shared
+  coefficients, not re-verified here.
+COMPARISON STAGE (names spoken here only): F = C w^2 with flat band is
+  J(w) = eta w - OHMIC, Caldeira-Leggett's standard case; the E-envelope
+  phi(E) = C E is the Ohmic spontaneous+stimulated scaling; 'the moments are
+  the eigenvalues' is Mellin diagonalisation of a multiplicative convolution.
+

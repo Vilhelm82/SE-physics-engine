@@ -1,0 +1,46 @@
+==============================================================================
+PART 1 - the modulus layer, exact
+==============================================================================
+  [PASS][  0.1s] P-0  boost is translation in rapidity: boost(L, tanh y) = tanh(y+L) - N-1 re-verified; licenses the substitution used below
+  [PASS][  0.1s] P-1  sigma_c(L;u) = b(g u)/b(u) with b = (1-u^2)^(-1/2), EXACT - N-2 restated: s = cosh(y+L)/cosh y. The c cocycle is a coboundary, always was
+  [PASS][  0.2s] P-2  q(l;phi) = sin(2 phi)/sin(2 phi') : the hbar cocycle is the SAME - coboundary pulled through the 2:1 cover - one certificate, two seats
+  [PASS][  0.3s] P-3  CLOSURE: boost(-(L+2l)) . boost(2l) . boost(L) = id on the point - c-pivot L, descend, squeeze l, ascend, c-pivot -(L+2l): the loop closes
+  [PASS][  4.2s] P-4  presentation holonomy H_P = 1 IDENTICALLY (all L, l, u0) - forced by P-1: a coboundary telescopes around every closed loop
+  [PASS][  4.2s] P-5  ALL-IN modulus holonomy = 2 (the cover degree), CONSTANT in (L,l,u0) - no rapidity or base-point dependence survives the closed loop
+  [PASS][  4.6s] P-6  transitions dropped => H_within = sigma(2l;u1)^(-1): the DeltaQ ghost - exponent deficit Q_c-Q_hbar=1 on the foreign leg; PAID by the cover density
+
+==============================================================================
+PART 2 - independent numerics + the phase layer
+==============================================================================
+  [PASS][  4.6s] N-1  numeric all-in holonomy = 2 on random loops, BOTH cover branches - worst deviation 3.55e-30
+  [PASS][  4.6s] N-2a phase layer: B = (S+iV)/4 on the seat cycle (banked form re-verified)
+  [PASS][  4.6s] N-2b vertex rephasings leave B invariant: positive-gauge CANNOT move it
+  [PASS][  4.6s] N-2c global reversal conjugates B: the one Z_2, click-monodromy shape
+  [PASS][  4.6s] N-2d arg B != 0 generically: the class is NON-TRIVIAL and equals arg(S+iV)
+
+RESULT: 12/12 checks passed.
+
+VERDICT (pre-registered fork):
+  MODULUS LAYER -> (a). The cross-seat cycle's positive layer is a coboundary
+  - explicitly: b = (1-u^2)^(-1/2) per seat, cover density as the transition
+  b, loop value = the cover degree, a constant. The sigma-framing of the
+  cross-seat cycle IS bookkeeping. Kill condition FIRES on this layer.
+  The DeltaQ 'holonomy' sigma^(Q_c-Q_hbar) is real as a DECOMPOSITION term
+  (P-6) but it is paid exactly by the cover measure density (P-5): the
+  exponent census (2,1,2) is a statement about how the books are kept, not
+  about a class.
+  PHASE LAYER -> (b). The same closed cycle carries arg B = arg(S+iV):
+  invariant under every positive/vertex gauge (N-2b), conjugated by the one
+  Z_2 (N-2c), generically nonzero (N-2d), and equal to the banked
+  PREDICTION-1 observable (J = V at s = 1/2). The cross-seat holonomy CLASS
+  exists and it is exactly the object PREDICTION-1 already names.
+  NET: split verdict (a)+(b). What a seat can read alone (positive factors)
+  is gauge; what survives the loop is orientation/phase - V, the sand.
+NAMED SCOPE: transition map = the G-8 cover dictionary (the only seat
+  transition in the frozen record); G-legs enter with Q=2 = c and add no
+  modulus content; the spin-lift branch Z_2 (click paper) is consistent with
+  N-2c but the fixed-locus comparison owed by G-8 remains owed.
+QUEUED NEXT (Will, 2026-08-30): E-8-X, the cross-seat pairing - construct
+  <X'_c, b'_hbar>-type pairings with slots on DIFFERENT seats; question:
+  does a pairing invariant exist cross-seat, and is its phase this class?
+

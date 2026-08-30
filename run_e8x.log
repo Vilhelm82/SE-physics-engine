@@ -1,0 +1,63 @@
+==============================================================================
+PART 1 - existence, necessity, where the phase lives (exact)
+==============================================================================
+  [PASS][  0.0s] X-0  reversion fixes the rotor: rev(A) = A (scalar+vector)
+  [PASS][  0.1s] X-1  the quadratic hbar object intertwines half -> full: F' = A F A - one-sided on psi becomes two-sided on psi psi~: G-8's 2:1 as rep theory
+  [PASS][  0.1s] X-2  NO-GO: <X' psi'> != <X psi> generically - a LINEAR hbar slot fails - the net cannot close on a one-sided slot; the quadratic is REQUIRED
+  [PASS][  0.2s] X-3  CROSS-SEAT INVARIANT exists: <X' F'bar>_S = <X F bar>_S, all w,t,psi - one rotor, two representations, one invariant - the net closes
+  [PASS][  0.2s] X-4  STATE LEMMA: psi psi~ has grades {0,1} only => <X Fbar>_I = 0 - the hbar STATE pairs REAL: a single-seat reading carries no phase (PRED-1 echo)
+  [PASS][  0.3s] X-5  non-tautological: dPS/dt != 0 and dPS/dpsi != 0 at a generic sample - content in BOTH slots; E-8 had both slots on one seat
+  [PASS][  0.3s] X-6a the TRANSITION pairing is invariant too: S-part, all w,t,psi_a,psi_b
+  [PASS][  0.3s] X-6b ... and its I-part: <X' (psi_a psi_b~)'bar>_I = <X (psi_a psi_b~)bar>_I - legs between hbar states pair COMPLEX: the phase lives on TRANSITIONS
+  [PASS][  0.4s] X-6c the I-part is generically NONZERO on a transition - states read real, transitions carry phase: the split is structural
+
+==============================================================================
+PART 2 - the wall (KIN-2 pinning; H-3b pattern cross-seat)
+==============================================================================
+  [PASS][  0.4s] W-1  pinning translation: cosh(Lam(r)) = 1/sqrt(1-rs/r) -> oo at the wall - r -> rs is Lambda -> oo is w -> oo: the c slot's reading diverges
+  [PASS][  0.6s] W-2  the c slot diverges: t'(w) -> oo as w -> oo; the pairing has dPS'/dw = 0 - slots die/diverge at the wall; the cross-seat pair walks through - H-3b
+
+==============================================================================
+PART 3 - numerics: the class, and the polarisation reading
+==============================================================================
+  [PASS][  0.6s] Y-1  2|arg B| = spherical excess (l'Huilier, independent route), 5 triples - the class IS half the area the seat cycle encloses - J's geometric name
+  [PASS][  0.6s] Y-2  |<psi_a|psi_b>|^2 = (1+gamma)/2 exactly: crossed (antipodal) kills the - LEG through the Kummer radicand 1+gamma -> 0; 90deg polarisation = 180deg sphere
+  [PASS][  0.6s] Y-3  turn the hbar reading 90deg: the pivot INVERTS (q -> q at -lambda); - conjugate product = floor: the Malus structure was frozen as G-5/G-6
+  [PASS][  0.6s] Y-4  trine: B = -1/8 real, arg B = pi - PRED-1's 'reads pi on the far class'
+
+RESULT: 15/15 checks passed.
+
+VERDICT (fork): (b). THE NET CLOSES - with a sharper split than designed.
+  EXISTENCE: <X' F'bar>_S is invariant for one rotor acting two-sided on the
+  c slot and one-sided on the hbar slot (X-3), non-tautological (X-5). It
+  exists BECAUSE the hbar slot is quadratic (SEAT-hb): psi psi~ intertwines
+  the half representation into the full one (X-1); a linear hbar slot
+  provably fails (X-2). G-8's 2:1 dictionary is the vector/spinor split of
+  ONE rotor.
+  WHERE THE PHASE LIVES: the hbar STATE pairs real - psi psi~ has grades
+  {0,1} and the I-part vanishes identically (X-4). The phase enters only
+  through TRANSITIONS psi_a psi_b~ between two hbar states, whose pairing is
+  invariant in BOTH parts and generically complex (X-6). States read real;
+  transitions carry phase. This is tonight's PRED-1 verdict (modulus =
+  gauge, phase = class) rederived from the algebra with no cocycle language.
+  THE WALL: on the KIN-2-pinned family the c slot diverges at r = rs while
+  the pairing is w-independent (W-1/2): the pair walks through the wall -
+  H-3b's pattern with the slots on DIFFERENT seats.
+  THE CLASS: cycle values are the banked B with 2|arg B| = the spherical
+  excess (Y-1): J = V is the area-tangent identity; the medium's phase is
+  half the area the seat cycle encloses.
+  POLARISATION READING (Will's instinct, receipts): the hbar seat carries
+  the cos-2phi Malus structure and the 90-degree turn inverts the pivot
+  (Y-3 = frozen G-5/G-6); crossed = antipodal kills the LEG exactly through
+  the Kummer radicand 1+gamma (Y-2) while the class survives off the wall;
+  the wall itself reads pi (Y-4).
+COMPARISON-STAGE NAMES (spoken here only): Pancharatnam 1956 (polarisation-
+  cycle phase = half solid angle); Van Oosterom-Strackee 1983 (the area-
+  tangent formula tan(Omega/2) = V/(1+Sum gamma) - PRED-1's J identity
+  verbatim). MACHINERY INHERITED: polarimetric interferometry as the
+  protocol family for PRED-1; geodesic-triangle area calculus for J.
+HONEST SCOPE: the co-pivot intertwiner (one rotor, two reps) is the design
+  input, licensed by G-8 but NAMED; single axis K = e1 (F-4's fence); the
+  wall uses KIN-2 as declared datum; lineage above is comparison-stage
+  naming from recall, not a database search tonight.
+

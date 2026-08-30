@@ -8,13 +8,18 @@
   generically nonzero, and equal to the banked PREDICTION-1 observable
   (J = V at s = 1/2). Transition map = G-8 cover dictionary (named input).
 
+- **E-8-X cross-seat pairing** — `e8x_cross_pairing.py` (15/15). Fork (b):
+  the net closes. Invariant exists for one rotor acting two-sided on the c
+  slot, one-sided on the hbar slot; the quadratic hbar slot is REQUIRED
+  (linear no-go). State lemma: psi psi~ has grades {0,1}, so the hbar STATE
+  pairs real — the phase lives only on TRANSITIONS psi_a psi_b~. The pair
+  walks through the wall on the KIN-2 family. 2|arg B| = spherical excess:
+  J = V is the area-tangent identity (comparison-stage names in the file;
+  protocol family for PRED-1 = polarimetric interferometry).
+
 ## QUEUED
-- **E-8-X, the cross-seat pairing** (Will's ruling, 2026-08-30). E-8's
-  invariant-rides-the-pair has both slots on one seat. Construct a pairing
-  with slots on DIFFERENT seats (X'_c against b'_hbar via the G-8 dictionary).
-  Questions: (1) does a cross-seat pairing invariant exist; (2) is its phase
-  the PRED-1 class; (3) does it survive the wall (thm_g2 H-3b pattern).
-  Design not yet written; nothing consumed yet.
+- (empty — next target to be chosen; candidates: trichotomy classification,
+  exponent-from-coupling, fixed-locus comparison owed by G-8)
 
 ## STANDING (carried from HANDOFF-2026-08-28, unchanged)
 - Trichotomy classification; aggregation exponent from coupling (Q-RN /

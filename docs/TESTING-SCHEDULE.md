@@ -63,11 +63,15 @@
 
 ## QUEUED
   0. **CURV-1** -- does the model own a rod-free curvature reading? (part 3 of THM-H)
+     Specs in `docs/prereg/CURV-1/` (2026-09-02): Path 1 = presented seat-triangle
+     excess along the family (`PATH1-SPEC.md`, for an independent runner); Path 2 =
+     centre loop holonomy from part 2's relative rotors (spec after Path 1 reports);
+     Path 3 held until 1 and 2 are back. Predictions filed before any run.
 - (next, in order:)
-  1. **D1 two-seat interior** — relative rotor of two nearby pinned free-fall
-     seats along the interior family; does ANY rod-free click-invariant
-     diverge at mu = 0? This is the named falsifier of "no singularity
-     exists" (Will, 2026-09-02). Part 2 of THM-H.
+  1. ~~**D1 two-seat interior**~~ DONE 2026-09-02, `thm_h2_d1.py` 30/30 (`b4ac768`):
+     no rod-free click-invariant diverges at mu = 0; every divergence there has a
+     rod in its denominator. The falsifier did not fire; it left CURV-1 as the
+     remaining fork.
   2. **alpha(r) discharge** — alpha = c |dl/dtau_s| from KIN-1 + KIN-2a +
      RULE-2 rod office (dl = cosh(l) dr); kappa = (c^2/2)|d tanh^2(l)/dr|
      at the horizon. Removes the imported acceleration from paper sec. 7.

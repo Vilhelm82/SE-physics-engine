@@ -1,0 +1,37 @@
+  [PASS] A-0  the pinned field is irrotational: its gradient is symmetric (d_j v_i = d_i v_j)
+  [PASS] A-1  RULE G conserves BOTH pairings to first order, for EVERY radial profile v(r) and every ray direction: d omega_t = d L = 0 -- identically in x, y, psi, omega, and the function v
+  [PASS] A-2  RULE N (naive product of seat rotors) FAILS: d omega_t != 0 at a generic point under KIN-2a -- d omega_t/dt = 0.0416904, d L/dt = 0.392105
+  [PASS] A-3  RULE F (D-14 frame-transported relative rotor) FAILS: d omega_t != 0 at the same point -- d omega_t/dt = 0.0759037, d L/dt = -0.0344405
+  [PASS] A-4  ...while RULE G at that point gives exactly 0 (the identity A-1, instantiated on KIN-2a)
+
+====================================================================================================
+NUMERICS -- each rule as an ODE, against the exact orbit between the same radii
+====================================================================================================
+  rule G: swept angle 2.968338129  exact 2.968337346  |diff| 7.83e-07   drift omega_t -6.46e-16  L 3.41e-15
+  rule N: swept angle 3.002848058  exact 2.968337346  |diff| 3.45e-02   drift omega_t -1.19e-01  L -6.57e-01
+  rule F: swept angle 2.220568555  exact 2.968337346  |diff| 7.48e-01   drift omega_t 1.45e+36  L 1.98e+36
+  [PASS] A-5  RULE G integrates to the exact orbit: swept angle agrees with the quadrature of the orbit identity to 1e-6 (RK4, h = 0.1 r_s, r_0 = 1000 r_s) and both pairings are conserved along the path to 1e-6
+  [PASS] A-6  RULES N and F do NOT: their deflections differ from the exact one at order one (exact -0.173255, N -0.138745, F -0.921024) and their pairings drift
+  READING: propagation is LOCAL, but the local law is the derivative of the pivot field along the ray's own step, not a
+  product of seat rotors.  Seat rotors relate seats to the frame; linking two of them against a background imports the
+  background -- the stopwatch -- and the number comes out wrong.  The gradient rule carries no background.
+
+====================================================================================================
+MASSIVE BODIES -- the pairings with a timelike paravector; the perihelion coefficient
+====================================================================================================
+  [PASS] M-1  pairings for a massive body: E = m (cosh zeta - sinh zeta tanh l cos alpha) [STAT-1],  L = m r sinh zeta sin alpha [ROT-1]
+  [PASS] M-2  TIMELIKE ORBIT IDENTITY: (dr/dphi)^2 = (r^4/L~^2)[E~^2 - (1 - tanh^2 l)(1 + L~^2/r^2)] EXACTLY, any radial profile
+  [PASS] M-3  RULE G with the body's own co-moving step e = u dt conserves E and L identically (general profile, any velocity, any direction)
+  [PASS] M-4  perihelion advance per orbit for r_p = 2e4 r_s, r_a = 3e4 r_s: Delta phi * ell / pi = 3.0002819 (leading coefficient 3; E~^2 = 0.9999800004, bound orbit)
+  ARGUMENT (not counted): with gamma = 1 forced by the boost (rod = 1/lapse^2), the precession coefficient (2 + 2 gamma - beta)/3 x 3
+  reads (4 - beta) and 3 means beta = 1: the profile's second-order term is exactly Schwarzschild's.  Part B runs the alternatives.
+
+RESULT: 11/11 checks passed.
+VERDICT (Part A): the local transport law exists and is unique among the candidates: the momentum paravector is boosted by
+  the gradient of the pinned velocity field along its own co-moving step.  It conserves both symmetry pairings identically,
+  integrates to the exact orbit, and carries massive bodies (timelike identity M-2, perihelion coefficient 3).  Both
+  seat-rotor rules fail.  Conditional on KIN-2a, STAT-1, ROT-1, PROP-1.
+COMPARISON STAGE: rule G is the spin connection of the rain tetrad in Painleve-Gullstrand form (boost part = velocity
+  gradient on the co-moving displacement, rotation part zero for an irrotational flow); M-2 is the Schwarzschild timelike
+  geodesic equation; the coefficient 3 is 6 pi GM/(c^2 a (1 - e^2)) -- Mercury's 43 arcsec per century; rule N's error is
+  the river-model error of boosting neighbouring elements against a background; rule F is the static-observer relation.

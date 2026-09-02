@@ -1,6 +1,21 @@
 # TESTING SCHEDULE (opened 2026-08-30)
 
 ## RUN
+- **THM-H part 1, the presented state along the pinned family** — `thm_h.py`
+  (25/25, `run_h.log`). Fork (b): the hole is a PRESENTED STATE. Theorem:
+  G'(l) = G + sinh^2(l) k k^T with k_i = a_i.K, so det G' = Delta cosh^2(l)
+  (the frame's Delta is a spectator; RULE-1 pairing Gram is l-independent).
+  Exterior: Delta_pres > 0 for all finite l; at the horizon the presented
+  Gram lands on a Cayley NODE (m=+1), double zero in N^2. Interior (CONT-1,
+  l = mu + i pi/2, declared convention): det G'_in = -Delta sinh^2(mu),
+  presented volume imaginary; the CENTRE r = 0 is mu = 0 and lands on the
+  smooth COPLANAR stratum, simple zero in r. New object: inner null radii
+  r_i = r_s (1 - k_i^2) = r_s sin^2(theta_i) where presented axis i cannot be
+  normalised; each axis presents timelike just inside and spacelike again
+  below its own r_i. Conditional on KIN-2a (declared) + CONT-1 (declared).
+  Naming: KIN-2 is now split — KIN-2a = the pinning (still DECLARED);
+  KIN-2b = the curvature tier (CLOSED by docs/GRAM_SUBMERSION_CURVATURE/).
+  The 08-30 handoff's "KIN-2 closed" refers to 2b only.
 - **PRED-1 cross-seat cycle** — `pred1_cross_seat.py` (12/12). Split verdict:
   modulus layer is a coboundary (kill condition fires there; the DeltaQ
   "holonomy" is paid exactly by the cover measure density); the phase layer
@@ -28,9 +43,23 @@
   LBL-2, GR conventions (named).
 
 ## QUEUED
-- (next: P33 double-flip pi-phase test [RULING-1's first seated test, phase
-  tools warm]; triality on the Kummer layer; trichotomy classification;
-  Q-RN proper)
+- (next, in order:)
+  1. **D1 two-seat interior** — relative rotor of two nearby pinned free-fall
+     seats along the interior family; does ANY rod-free click-invariant
+     diverge at mu = 0? This is the named falsifier of "no singularity
+     exists" (Will, 2026-09-02). Part 2 of THM-H.
+  2. **alpha(r) discharge** — alpha = c |dl/dtau_s| from KIN-1 + KIN-2a +
+     RULE-2 rod office (dl = cosh(l) dr); kappa = (c^2/2)|d tanh^2(l)/dr|
+     at the horizon. Removes the imported acceleration from paper sec. 7.
+     Sandbox-verified 09-02, not yet a suite.
+  3. **Which sign** — the three Z2's (deck V->-V, spin -1, arg B conjugation):
+     which one does the full imaginary period 2 pi i actually return? Then
+     statistics-from-sidedness (c slot two-sided periodic, hbar slot
+     one-sided anti-periodic; rerun F-6 with the flipped sign).
+  4. RULING OWED (Will): which axis is K at the G seat (root, or in the
+     visible plane)? thm_h.py runs general K; H-24 is the K = root case.
+  5. P33 double-flip pi-phase test [= the half imaginary period, H-16 line];
+     triality on the Kummer layer; trichotomy classification; Q-RN proper.
 
 ## STANDING (carried from HANDOFF-2026-08-28, unchanged)
 - Trichotomy classification; aggregation exponent from coupling (Q-RN /

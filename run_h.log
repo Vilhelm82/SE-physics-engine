@@ -1,0 +1,66 @@
+==============================================================================
+PART A — presentation map: Path 1 (Cl(3)) vs Path 2 (4x4 boost)
+==============================================================================
+  [PASS] H-1  presented vector part  v_i = a_i + (cosh l - 1)(a_i.K) K   [path 1]
+  [PASS] H-2  presented vector part  v_i = a_i + (cosh l - 1)(a_i.K) K   [path 2]
+  [PASS] H-3  presented scalar (time-office) part = sinh(l) (a_i.K), both paths — the K-component of every axis leaks into the time office by sinh(l): E-7 for axes
+  [PASS] H-4  invariant pairing Gram is lambda-independent (RULE-1): <X_i' X_j'bar> = -a_i.a_j — the FRAME's Gram is a spectator to the pivot; only the rod office moves
+
+==============================================================================
+PART B — THEOREM: G'(l) = G + sinh^2(l) k k^T,  det G' = Delta cosh^2(l)
+==============================================================================
+  [PASS] H-5  G' = G + sinh^2(l) k k^T   (general frame, general unit K) — the pivot adds ONE rank-one term, along the K-components of the axes
+  [PASS] H-6  k^T adj(G) k = Delta |K|^2 = Delta   (matrix-determinant lemma input)
+  [PASS] H-7  det G'(l) = Delta cosh^2(l)  EXACTLY — presented volume V' = V cosh(l) — the frame's Delta factors out; ALL lambda-dependence is the seat factor cosh^2
+
+==============================================================================
+PART C — EXTERIOR: r = r_s / tanh^2(l), lambda in (0, oo)
+==============================================================================
+  frame: rows [3/5, 0, 4/5, 4/5, 3/5, 0, 0, 4/5, 3/5]  K = [2/3, 2/3, 1/3]  k = [14/15, 2/3, 11/15]  Delta = 8281/15625
+  [PASS] H-8  frame is generic: all |k_i| in (0,1), Delta > 0
+  [PASS] H-9  normalisation |v_i|^2 = 1 + sinh^2(l) k_i^2
+  [PASS] H-10 normalised presented Delta_pres(l) = Delta cosh^2 / prod(1 + sinh^2 k_i^2)
+  [PASS] H-11 Delta_pres(0) = Delta: the seat at r = oo reads the frame's own state
+  [PASS] H-12 Delta_pres > 0 for every finite l: NO singular presented state outside the horizon
+  [PASS] H-13 HORIZON (l -> oo): Delta_pres -> 0
+  [PASS] H-14 vanishing order at the horizon: Delta_pres ~ (Delta/prod k_i^2) N^4  — DOUBLE zero in N^2 = 1 - r_s/r — limit Delta_pres/N^4 = 123201/48400
+  [PASS] H-15 presented directions collapse to sign(k_i) K: presented Gram -> a Cayley node with m = +1 — limit Gram rows [1, 1, 1, 1, 1, 1, 1, 1, 1]
+  -> the HORIZON is the NODE stratum (the tear) of the PRESENTED state; the frame is regular.
+
+==============================================================================
+PART D — INTERIOR: lambda = mu + i pi/2  (CONT-1)
+==============================================================================
+  [PASS] H-16 CONT-1 identities: cosh(mu+i pi/2) = i sinh(mu), sinh(mu+i pi/2) = i cosh(mu), tanh = coth
+  [PASS] H-17 interior address: tanh(l) = sqrt(r_s/r) with tanh(l) = coth(mu)  =>  r = r_s tanh^2(mu) in (0, r_s)
+  [PASS] H-18 det G'_in = -Delta sinh^2(mu) <= 0 : presented volume V' = i V sinh(mu) is IMAGINARY inside — the cover coordinate rotates onto the Wick face; the orientation is a phase inside
+  [PASS] H-19 CENTRE (mu = 0, r = 0): det G'_in = 0 and the presented vector parts are the a_i minus their K-components — all three presented axes lie in the plane perpendicular to K: COPLANAR
+  [PASS] H-20 the centre lands on the SMOOTH coplanar stratum, not a node: all |gamma'| < 1 there — presented m at the centre = -368/47125 (a node needs m = +1)
+  [PASS] H-21 vanishing order at the centre: Delta_pres ~ -(Delta/prod(1-k_i^2)) (r/r_s)  — SIMPLE zero in r — limit Delta_pres/(r/r_s) = -464373/29000
+  -> the CENTRE is the COPLANAR stratum (the twist) of the PRESENTED state; the frame is regular.
+
+  [PASS] H-22 INNER NULL RADII: presented axis i is null (cannot be normalised) at r_i = r_s (1 - k_i^2) = r_s sin^2(theta_i) — r_i/r_s = [29/225, 5/9, 104/225]
+  [PASS] H-23 every axis with k_i != 0 presents TIMELIKE just inside the horizon and SPACELIKE again below its r_i — the t<->r swap happens per axis, at that axis's own address
+  [PASS] H-24 the ROOT case K = a_1 (k_1 = 1): the root's null radius is r = 0 — the centre is where the root's rod reading vanishes
+
+==============================================================================
+PART E — 30-digit spot checks
+==============================================================================
+  [PASS] H-25 det G' = Delta cosh^2(l) numerically to 1e-25 at three rapidities — worst 5.69e-26
+
+RESULT: 25/25 checks passed.
+==============================================================================
+VERDICT: OUTCOME (b). The hole is a PRESENTED STATE.
+  The pinned family degenerates the seat's read state TWICE while the frame's
+  Delta never moves (H-4, H-7): at the horizon it lands on a Cayley NODE (H-15,
+  double zero in N^2, H-14); at the centre on the smooth COPLANAR stratum (H-19/20,
+  simple zero in r, H-21). Inside, the presented volume is imaginary (H-18) and
+  each axis has its own null radius r_i = r_s sin^2(theta_i) (H-22).
+  Conditional on: KIN-2a (pinning, declared), CONT-1 (continuation convention, declared).
+==============================================================================
+COMPARISON STAGE (banned names spoken here only):
+  - t<->r swap inside a horizon: reproduced PER AXIS with an address (H-23), not globally.
+  - 'curvature invariants diverge at r = 0': the frame's invariants do NOT move here;
+    what vanishes at r = 0 is the presented volume, and what fails is normalisation of
+    a null presented axis (H-22/24). No tidal (two-seat) quantity is computed in part 1.
+  - inner null surfaces at r_s sin^2(theta_i): NO standard-model analogue is claimed;
+    lineage unsearched, flagged candidate-new until the D1 two-seat computation exists.

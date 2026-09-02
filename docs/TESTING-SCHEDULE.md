@@ -69,6 +69,15 @@
      diverge inside, at presented-collision radii (seat layer: r_s Delta/(1-g12^2)).
      Two rulings owed (CARRY-8 letter vs angular separations; identity semantics).
 - (next, in order:)
+  0a. **THM-TARGET I** DONE 2026-09-03: `thm_i_pre.py` 19/19, `thm_i_transport.py` 11/11, `thm_i_field.py`
+     10/10, report `docs/2026-09-03-thm-target-I.md`. Ray and orbit kinematics of the pinned family = the
+     full Schwarzschild geodesic structure (null and timelike, 2nd order incl.): factor 2, 15 pi/16, perihelion 3;
+     gamma = 1 forced by the boost; local transport = gradient of the pivot field along the co-moving step (both
+     seat-rotor rules fail); field law narrowed to ONE variable: Delta/det G' (reciprocal presented volume) harmonic.
+  0b. **NEXT -- the dynamics-tier question, now sharp:** is int |grad(Delta/det G')|^2 the static energy of the
+     nine-generator functional with the stretch-angle couplings? If yes, KIN-2a is derived and r_s is the flux of
+     the blind-mass measure; if no, the model has a Newton and no Einstein. One variable, one exponent.
+
   1. ~~**D1 two-seat interior**~~ DONE 2026-09-02, `thm_h2_d1.py` 30/30 (`b4ac768`):
      no rod-free click-invariant diverges at mu = 0; every divergence there has a
      rod in its denominator. The falsifier did not fire; it left CURV-1 as the

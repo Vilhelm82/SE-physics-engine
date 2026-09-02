@@ -74,10 +74,15 @@
      full Schwarzschild geodesic structure (null and timelike, 2nd order incl.): factor 2, 15 pi/16, perihelion 3;
      gamma = 1 forced by the boost; local transport = gradient of the pivot field along the co-moving step (both
      seat-rotor rules fail); field law narrowed to ONE variable: Delta/det G' (reciprocal presented volume) harmonic.
-  0b. **NEXT -- the dynamics-tier question, now sharp:** is int |grad(Delta/det G')|^2 the static energy of the
-     nine-generator functional with the stretch-angle couplings? If yes, KIN-2a is derived and r_s is the flux of
-     the blind-mass measure; if no, the model has a Newton and no Einstein. One variable, one exponent.
-
+  0b. ~~dynamics-tier question~~ DONE 2026-09-03 as **THM-TARGET J** (`thm_j_dyn.py` 7/7,
+     `docs/2026-09-03-thm-target-J.md`): NOT DERIVED. Any gradient-quadratic energy makes its own arc
+     length harmonic (theorem); KIN-2a needs that arc length affine in sech^2 l, which no polynomial
+     invariant is (pole at det G' = 0); the frozen elliptope metric's harmonic-map energy gives
+     perihelion coefficients 1.5-1.87 (dead). The field law must be DECLARED as KIN-2a'':
+     E = int |grad(Delta/det G')|^2, sourced by the blind-mass measure. A Newton, not an Einstein.
+  0c. **NEXT:** does the seat dissipator's pivot-invariant bath (DEBT-2b, c(w)^2 g0(w) = C w^2) have a
+     static limit whose energy is the reciprocal presented volume? The one frozen object with the
+     right shape (pole at the volume's zero) is the capacity Delta, inverted.
   1. ~~**D1 two-seat interior**~~ DONE 2026-09-02, `thm_h2_d1.py` 30/30 (`b4ac768`):
      no rod-free click-invariant diverges at mu = 0; every divergence there has a
      rod in its denominator. The falsifier did not fire; it left CURV-1 as the

@@ -1,7 +1,11 @@
 # The Seated Root
 ## How much physics follows from three axes through a point: a derivational-economy study with machine-verified receipts
 
-**W. Lloyd** — draft v0.1, 2026-08-28
+**W. Lloyd** — draft v0.2, 2026-09-03
+*v0.2 (2026-09-03): the pinned family worked through — the hole as a presented state (THM-H), what sits at the
+centre (CURV-1), light and matter in the family (THM-I), and the field law narrowed and shown not to follow from
+the bare tier (THM-J). §6 gains four blocks; §10's ledger is rescoped and records the programme's first falsified
+model-internal candidate. v0.1 (2026-08-28) is retained in git history.*
 *All results in this paper are backed by exact symbolic computation committed to the project repository; commit hashes appear in §11.*
 
 ---

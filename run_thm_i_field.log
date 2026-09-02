@@ -1,0 +1,45 @@
+====================================================================================================
+B-1  what the boost fixes for EVERY profile: rod = 1/lapse^2, so the spatial stretch per unit potential is 1
+====================================================================================================
+  [PASS] B-1a rho_K N^2 = cosh^2 l sech^2 l = 1 identically
+  [PASS] B-1b (rho_K - 1)/(1 - N^2) = 1/(1 - T^2) -> 1 as the field vanishes, for ANY profile: the ratio of the rod's excess to the clock's deficit is one at leading order (this is the quantity the first-order light deflection doubles)
+
+====================================================================================================
+B-2  the fork: candidate harmonic variables, all identical at first order
+====================================================================================================
+  [PASS] B-2a every candidate has beta^2 = r_s/r + O(r_s^2/r^2): same first-order bending (2), redshift (1/2) and horizon
+  second-order term of beta^2, coefficient of (r_s/r)^2:  sech^2 l = 1 - beta^2: 0;  cosh^2 l = rho_K: -1;  ln cosh^2 l: -1/2;  sech l = N: -1/4;  cosh l: -3/4
+  sech^2 l = 1 - beta^2   (KIN-2a)          light 2nd-order coeff    2.9452431   perihelion coeff  3.0002819
+  cosh^2 l = rho_K (presented volume)       light 2nd-order coeff   0.58904862   perihelion coeff 0.99998938
+  ln cosh^2 l                               light 2nd-order coeff    1.7671459   perihelion coeff  2.0000627
+  sech l = N (the lapse)                    light 2nd-order coeff    2.3561945   perihelion coeff  2.5001541
+  cosh l                                    light 2nd-order coeff    1.1780972   perihelion coeff  1.5000078
+  textbook                                  light 2nd-order coeff    2.9452431   perihelion coeff          3
+  [PASS] B-2e the perihelion coefficient is 3 + 2 c_2 across the table, c_2 the (r_s/r)^2 coefficient of beta^2 (found, then checked to 1e-3): the second-order term of the profile is what the perihelion measures
+  [PASS] B-2f the second-order light coefficient is 15 pi/16 + (3 pi/4) c_2 across the table (found, then checked to 1e-4): the same second-order term, read by light
+  [PASS] B-2b the KIN-2a candidate (sech^2 l harmonic) returns 15 pi/16 and 3
+  [PASS] B-2c every other candidate returns a perihelion coefficient that differs from 3 by more than 10^-2 -- excluded by the measured value (relative precision 10^-4): cosh^2 l = rho_K: 0.999989, ln cosh^2 l: 2.00006, sech l = N: 2.50015, cosh l: 1.50001
+  [PASS] B-2d ...and each returns a second-order light coefficient different from 15 pi/16 (an unmeasured number: a prediction each)
+
+====================================================================================================
+B-3  the selected variable in the model's own words
+====================================================================================================
+  [PASS] B-3a H-7: det G' = Delta cosh^2 l, so Delta/det G' = sech^2 l = 1 - tanh^2 l: the harmonic variable is the RECIPROCAL PRESENTED VOLUME in units of the frame's own volume
+  [PASS] B-3b under KIN-2a the reciprocal presented volume is harmonic outside the source, with r^2 dH/dr = r_s (H rises outward; the inward flux of grad H is 4 pi r_s)
+  So the field law the data select, written in the model's variables:
+      nabla^2 ( Delta / det G' ) = 0   outside the source,     (1/4 pi) (flux of -grad(Delta/det G')) = r_s.
+  It is the Euler-Lagrange equation of the gradient energy  E[H] = int |grad (Delta/det G')|^2 d^3x.  The rival
+  'presented volume harmonic' (H = det G'/Delta = rho_K) is the second row of B-2 and is dead at Mercury.
+  ARGUMENT (not counted): a source of the harmonic field is an inhomogeneity in the Laplace equation; the model's
+  candidate for it is the blind-mass measure (pivot-blind moment = total mass of the source measure).  Identifying the
+  flux with that measure is the declaration KIN-2a' would make.  NOT derived here.
+
+RESULT: 10/10 checks passed.
+VERDICT (Part B): gamma = 1 is forced by the boost for every profile (kinematic tier).  The second-order data select ONE
+  harmonic variable among the natural candidates: sech^2 l = Delta/det G', the reciprocal presented volume, i.e. KIN-2a.
+  The field law is therefore narrowed to one variable and one exponent; its derivation from the dynamics tier is the
+  remaining debt.  Conditional on KIN-2a (as the selected candidate), STAT-1, ROT-1, PROP-1.
+COMPARISON STAGE: rho_K N^2 = 1 is PPN gamma = 1 (Cassini: gamma - 1 = (2.1 +- 2.3) x 10^-5); the perihelion coefficient
+  is (2 + 2 gamma - beta)/3 x 3 = 4 - beta, so 3 is beta = 1 (Mercury, LLR); 15 pi/16 is Epstein-Shapiro's second-order
+  deflection; 'sech^2 l harmonic' is 'the lapse squared is harmonic', i.e. Schwarzschild's g_tt = -(1 - 2GM/c^2 r) exactly,
+  and the gradient energy is the Newtonian field energy of the potential 2 Phi/c^2 = -r_s/r.

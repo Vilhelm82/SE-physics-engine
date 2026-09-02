@@ -1,6 +1,25 @@
 # TESTING SCHEDULE (opened 2026-08-30)
 
 ## RUN
+- **THM-H part 2, D1 two-seat interior** -- `thm_h2_d1.py` (30/30, `run_h2_d1.log`).
+  Fork (b): NO rod-free click-invariant diverges at the centre, seat layer (K = root)
+  or world layer (K click-symmetric, run as control). RULING-2 (Will, 2026-09-02):
+  C is the hole, A is the infalling seat projected out of C.
+  Results: ONE rational formula G'(r) = G + [r_s/(r - r_s)] k k^T on both sheets,
+  det G' = Delta r/(r - r_s) (simple zero centre, simple pole horizon, nothing else);
+  the centre is a FOLD of the rod over rapidity, r = r_s tanh^2(mu), whose deck
+  involution is (I -> -I)(K -> -K); two seats along the family are related by
+  (rotation by their angle) x (collinear boost by their rapidity gap), REAL inside,
+  -> pure rotation at the centre -- the D1 non-collinear fence never bites along
+  the pinned family; crossing the horizon costs one fixed quarter turn; the naive
+  cross-seat product is office ghost #4 (divergent at the horizon, finite at the
+  centre). CORRECTION to part 1: for K = root the presented DIRECTIONS are
+  non-degenerate at r = 0 (Delta_pres = 1 - gamma'_12^2 > 0); only the root's rod
+  reading passes through zero. H-19/20's coplanar centre holds for generic K and
+  for option C. Every divergence at the centre is a rod in a denominator.
+  Conditional on KIN-2a, CONT-1, RULING-2. New named debt: CURV-1 (does the model
+  own a rod-free curvature reading? -- the single remaining way (b) could be
+  'too coarse to see it' rather than 'artifact').
 - **THM-H part 1, the presented state along the pinned family** — `thm_h.py`
   (25/25, `run_h.log`). Fork (b): the hole is a PRESENTED STATE. Theorem:
   G'(l) = G + sinh^2(l) k k^T with k_i = a_i.K, so det G' = Delta cosh^2(l)
@@ -43,6 +62,7 @@
   LBL-2, GR conventions (named).
 
 ## QUEUED
+  0. **CURV-1** -- does the model own a rod-free curvature reading? (part 3 of THM-H)
 - (next, in order:)
   1. **D1 two-seat interior** — relative rotor of two nearby pinned free-fall
      seats along the interior family; does ANY rod-free click-invariant

@@ -1,0 +1,73 @@
+==============================================================================
+PART A -- one formula through the horizon
+==============================================================================
+  [PASS] D-1  exterior: sinh^2(l) = r_s/(r - r_s) under tanh^2(l) = r_s/r
+  [PASS] D-2  interior: -cosh^2(mu) = r_s/(r - r_s) under r = r_s tanh^2(mu)  (CONT-1) -- so G'(r) = G + [r_s/(r - r_s)] k k^T on BOTH sheets: one rational formula
+  [PASS] D-3  |K|^2 = k^T G^-1 k = 1   [A (K = root a3)]
+  [PASS] D-4  det G'(r) = Delta r/(r - r_s), both sheets   [A (K = root a3)] -- simple zero at the centre, simple pole at the horizon, nothing else
+  [PASS] D-5  click-invariants tr, e2, det of G'(r) are rational with NO pole at r = 0   [A (K = root a3)] -- values at the centre: tr=-g13**2 - g23**2 + 2, e2=-g12**2 + 2*g12*g13*g23 - g13**2 - g23**2 + 1, det=0
+  [PASS] D-6  dG'/dr(0) = -k k^T/r_s and d2G'/dr2(0) = -2 k k^T/r_s^2: per-rod, yet FINITE (G' is even in mu)   [A (K = root a3)]
+  [PASS] D-3  |K|^2 = k^T G^-1 k = 1   [C (K ~ a1+a2+a3)]
+  [PASS] D-4  det G'(r) = Delta r/(r - r_s), both sheets   [C (K ~ a1+a2+a3)] -- simple zero at the centre, simple pole at the horizon, nothing else
+  [PASS] D-5  click-invariants tr, e2, det of G'(r) are rational with NO pole at r = 0   [C (K ~ a1+a2+a3)] -- values at the centre: tr=(6*g12 + 6*g13 + 6*g23 - (g12 + g13 + 1)**2 - (g12 + g23 + 1)**2 - (g13 + g23 + 1)**2 + 9)/(2*g12 + 2*g13 + 2*g23 + 3), e2=-3*(g12**2 - 2*g12*g13*g23 + g13**2 + g23**2 - 1)/(2*g12 + 2*g13 + 2*g23 + 3), det=0
+  [PASS] D-6  dG'/dr(0) = -k k^T/r_s and d2G'/dr2(0) = -2 k k^T/r_s^2: per-rod, yet FINITE (G' is even in mu)   [C (K ~ a1+a2+a3)]
+
+==============================================================================
+PART B -- the fold at the centre, and its deck involution
+==============================================================================
+  [PASS] D-7  fold: mu(r) = artanh(sqrt(r/r_s)) ~ sqrt(r/r_s); dmu/dr ~ r^(-1/2) at the centre -- sqrt(r) * dmu/dr -> 1/(2 sqrt r_s): the divergence IS the square-root branch of r = r_s tanh^2(mu)
+  [PASS] D-8  deck involution of the fold, mu -> -mu, acts on the rotor as (I -> -I) composed with (K -> -K) -- the centre's cover is the orientation Z2 and the pole-reversal Z2 acting TOGETHER
+  [PASS] D-9  the presented Gram is even in mu (deck-invariant): it lives on the base, the rotor on the cover
+
+==============================================================================
+PART C -- two seats: naive product vs frame-transported relative rotor
+==============================================================================
+  [PASS] C-0  R rotates K1 = e3 to K2 = (sin e, 0, cos e), |K2| = 1, R R~ = 1
+  [PASS] D-10 naive product A2 A1^-1: scalar part = 1 + 2 sinh^2(l/2) sin^2(e/2)   [path 1]
+  [PASS] D-11 tr(L2 L1^-1) = 4 (1 + 2 sinh^2(l/2) sin^2(e/2))^2   [path 2, 4x4; tr L = |tr M|^2]
+  [PASS] D-12 40-digit numerics of D-11 at three (l, e) points -- worst 1.95e-36
+  [PASS] D-13 frame transport: A(l, K2) = R A(l, K1) R~  (a seat whose K is rotated is the rotated seat)
+  [PASS] D-14 relative rotor of two seats = R * A(l2 - l1, K1): rotation by their angle x COLLINEAR boost by their rapidity gap -- no non-collinear composition ever arises along the pinned family: the D1 fence does not bite here
+  [PASS] D-15 INTERIOR: two interior seats are related by R * A(mu2 - mu1, K1): REAL rotation, REAL boost; the i pi/2 cancels
+  [PASS] D-16 at the CENTRE (mu1, mu2 -> 0) the relative rotor -> R: two seats near r = 0 are a pure rotation apart
+  [PASS] D-17 ACROSS the horizon (l1 real, l2 = mu + i pi/2): relative rotor = R * A(mu - l1, K1) * c, c = (1 + I K1)/sqrt2 -- one quarter turn, the same for every depth: the crossing cost is fixed, not a function of where you end up
+  [PASS] D-18 OFFICE GHOST #4: the naive product's scalar on the interior = 1 + (i sinh mu - 1) sin^2(e/2); finite at the centre (= cos^2(e/2)), divergent at the horizon -- composing rotors of two seats WITHOUT the frame transport is 'two offices, one product'; its divergence is the ghost
+
+==============================================================================
+PART D -- what actually happens at the centre on the seat layer (K = root)
+==============================================================================
+  [PASS] D-19 K = root: the root's presented vector is cosh(l) * a3 (pure rescaling); |v_root|^2 = r/(r - r_s) -- zero at the centre, negative (timelike) for 0 < r < r_s, pole at the horizon
+  [PASS] D-20 K = root: normalised Delta_pres = Delta / [(1 + f g13^2)(1 + f g23^2)] -- REGULAR and POSITIVE at the centre -- Delta_pres(centre) = 1 - gamma'_12^2 > 0: the presented DIRECTIONS never degenerate at r = 0; only the root's LENGTH passes through zero
+  [PASS] D-21 CORRECTION to part 1: the coplanar landing at the centre (H-19/20) is a generic-K feature; for K = root the seat's presented frame is non-degenerate there -- part 1's centre verdict stands for option C (control: v_i = a_i - k_i K coplanar) and is REPLACED for option A by D-19/20
+  [PASS] D-22 control, K = click-symmetric: det G' -> 0 at the centre with all three presented lengths finite: the coplanar landing is real for C
+
+==============================================================================
+PART E -- every divergence at the centre is a rod in the denominator
+==============================================================================
+  [PASS] E-1  dmu/dr diverges as r^(-1/2); sqrt(r) * dmu/dr is finite   [the fold]
+  [PASS] E-2  angle per transverse rod separation, e/(r e) = 1/r, diverges; r * (1/r) = 1   [the rod itself] -- trivial, recorded so the list is complete
+  [PASS] E-3  the root's presented length |v_root| = sqrt(r/(r - r_s)) -> 0; anything normalised by it is ~ r^(-1/2) times finite
+  ARGUMENT (prose, not counted): on the interior sheet the rotor family A(mu + i pi/2, K) is ENTIRE in mu,
+  the frame's invariant Gram is constant, R(eps) is entire in eps. Every polynomial click-invariant of relative
+  rotors and presented Grams is therefore entire in mu near 0, hence finite at the centre. A divergence at the
+  centre requires a denominator vanishing there; the only such denominators along the family are rod lengths:
+  r itself (the fold, E-1/E-2) and presented axis lengths (E-3). The horizon is different: it is Re(lambda) -> oo,
+  infinite rapidity FOLDED to finite r by the pinning -- a rod-free quantity can diverge there because the
+  static seat itself ceases to exist (its rotor becomes projectively null), not because any frame quantity blows up.
+
+RESULT: 30/30 checks passed.
+==============================================================================
+VERDICT: OUTCOME (b). No rod-free click-invariant diverges at the centre, on the seat layer OR the world layer.
+  One rational formula G'(r) = G + [r_s/(r - r_s)] k k^T runs through the horizon on both sheets (D-1..D-6).
+  Two seats along the family are related by (rotation by their angle) x (collinear boost by their rapidity gap);
+  inside, both are REAL and the relative rotor -> a pure rotation at the centre (D-14..D-16). Crossing the
+  horizon costs one fixed quarter turn (D-17). On the seat layer the presented directions are non-degenerate at
+  r = 0 (D-20): only the root's rod reading passes through zero (D-19). Every divergence at the centre is a rod
+  in a denominator (E-1..E-3). Conditional on KIN-2a, CONT-1, RULING-2 (all declared).
+==============================================================================
+COMPARISON STAGE (banned names spoken here only):
+  - 'tidal divergence at r = 0' (geodesic deviation ~ 1/r^3): NOT reproduced and NOT computed -- the model has no
+    acceleration; its per-rod divergences at the centre are r^(-1/2) (fold) and 1/r (angular), both Jacobians.
+  - the seat-layer centre is a place where one rod reading is zero and everything else is finite: the shape of
+    a coordinate singularity, not a curvature one. Whether that is (a) artifact or (b) the model being too coarse
+    is now a single question: does the model own a rod-free curvature reading? It does not yet. Named debt: CURV-1.

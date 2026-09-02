@@ -1,0 +1,44 @@
+====================================================================================================
+PT-1  GRAVITATIONAL REDSHIFT -- the static seat's reading of a ray, and what is conserved along it
+====================================================================================================
+  [PASS] PT-1a the ray is null in the frame and stays null under the pivot: <X Xbar> = <X' X'bar> = 0
+  [PASS] PT-1b E-4 re-derived: scalar part of A X A = omega (cosh l + sinh l cos theta)
+  [PASS] PT-1c the pivoted seat's time unit is A 1 A = cosh l + sinh l K: a seat moving at velocity tanh l along K relative to the frame
+  [PASS] PT-1d the seat's reading of the ray by RULE-1 pairing with its own time unit: <X u_s bar> = omega (cosh l - sinh l cos theta) = the sandwich reading with K -> -K.  CONVENTION FIXED: the static seat moves OUTWARD (along +r-hat) at tanh l relative to the rain frame; its sandwich pivot direction is INWARD
+  [PASS] PT-1e radial rays: outgoing (theta = 0) read e^{-l} < 1, REDSHIFTED; ingoing read e^{+l}: the sign comes out of the frozen E-4 convention, not chosen
+  [PASS] PT-1f STAT-1's conserved frequency: omega_t = <X u_s bar>/<u_s>_S = omega_frame (1 - tanh l cos theta) -- the ray's frequency with respect to the frame's common time office
+  [PASS] PT-1g0 identity cosh l = 1/sqrt(1 - tanh^2 l) (so the pinning fixes the static seat's time unit: cosh l = 1/sqrt(1 - r_s/r))
+  [PASS] PT-1g redshift between static seats: omega_2/omega_1 = cosh l_2 / cosh l_1 = sqrt((1 - r_s/r_1)/(1 - r_s/r_2)) under KIN-2a -- compared as squares (both sides positive for r > r_s); r_2 > r_1 gives a ratio below 1: the higher seat reads LOWER
+  [PASS] PT-1h weak field: omega_2/omega_1 = 1 - (r_s/2)(1/r_1 - 1/r_2) + O(r_s^2): the higher seat reads lower by (r_s/2)(1/r_1 - 1/r_2), coefficient ONE HALF, exact series (the designer's first draft had the sign of this correction backwards; the model did not)
+  [PASS] PT-1i FAILURE BRANCH (local Doppler between neighbouring rain frames): d ln omega_rain/dr = v'/(1 - v^2), but STAT-1 gives v'/(1 - v): the local rule is wrong by the factor (1 + v).  Two frames, one boost: office ghost #5
+  [PASS] PT-1j FAILURE BRANCH (D-14's static relative rotor as a propagation rule): e^{-(l_2 - l_1)} = 1 - sqrt(r_s)(1/sqrt r_2 - 1/sqrt r_1) + ..., FIRST order in sqrt(r_s), while the redshift is second order: D-14 relates seats, it does not propagate rays
+
+====================================================================================================
+PT-2  THE HORIZON of the null structure is the horizon of the pinning
+====================================================================================================
+  [PASS] PT-2a PROP-1: outgoing radial ray's coordinate speed dr/dt = c (1 - tanh l) vanishes IFF tanh l = 1 IFF r = r_s; ingoing -c (1 + tanh l) never vanishes
+  [PASS] PT-2b at the horizon the presented radial rod rho_K = cosh^2 l and det G' have their pole (D-4), the static reading e^{-l} -> 0: the three horizons coincide
+
+====================================================================================================
+PT-3  THE ORBIT from two conserved pairings and the null locus -- no equation of motion assumed
+====================================================================================================
+  [PASS] PT-3a the two conserved pairings: omega_t = omega (1 - tanh l cos alpha)  [STAT-1],  L = omega r sin alpha  [ROT-1]
+  [PASS] PT-3b their ratio b = L/omega_t = r sin alpha /(1 - tanh l cos alpha) is the impact parameter (-> r sin alpha where the pinning vanishes)
+  [PASS] PT-3c ORBIT IDENTITY: (dr/dphi)^2 = r^4/b^2 - r^2 (1 - tanh^2 l) EXACTLY, for any radial pinning profile -- the null locus plus the two pairings, nothing else
+  [PASS] PT-3d under KIN-2a: (dr/dphi)^2 = r^4/b^2 - r^2 (1 - r_s/r): the pinning turns 1 - tanh^2 into 1 - r_s/r
+  [PASS] PT-3e THE DEFLECTION, weak field: b * delta(b) -> 2 (not 1): b/r_s=10^3: 2.0029505871, b/r_s=10^4: 2.00029457766, b/r_s=10^5: 2.00002945296, b/r_s=10^6: 2.00000294525
+  [PASS] PT-3f the second-order coefficient (delta - 2 r_s/b) b^2/r_s^2 -> 2.945248446 ; 15 pi/16 = 2.945243113
+  ARGUMENT (not counted): the factor 2 has an address in PT-3c.  With the drift's square dropped (1 - tanh^2 -> 1) the
+  orbit is a straight line; with the rod only (1 - r_s/r from rho_K) but no drift in omega_t the pairing ratio is not
+  conserved.  Both offices are needed and each carries half.
+
+RESULT: 19/19 checks passed.
+VERDICT (pre-tests): the ray kinematics of the pinned family is fixed by the null locus and two symmetry pairings.
+  Redshift ratio cosh l_2/cosh l_1, weak-field coefficient 1/2; both local seat-to-seat transport rules FAIL (PT-1i/j);
+  the null-structure horizon is the pinning's horizon; the orbit closes as an identity and, under KIN-2a, its
+  deflection is 2 r_s/b + (15 pi/16)(r_s/b)^2 + ...  Conditional on KIN-2a, STAT-1, ROT-1, PROP-1.
+COMPARISON STAGE: STAT-1/ROT-1 are the Killing-vector conservation laws of a stationary, spherically symmetric field;
+  PROP-1 is the Painleve-Gullstrand / river picture (flat slice, inflow at the escape speed); PT-3d is Schwarzschild's
+  null-geodesic equation; 2 r_s/b is Einstein 1915 (4GM/c^2 b), 15 pi/16 (r_s/b)^2 = (15 pi/4)(GM/c^2 b)^2 is the
+  second-order light deflection (Epstein-Shapiro 1980); the weak-field 1/2 is Pound-Rebka.  The office ghost of PT-1i
+  is the classical error of treating free-fall frames at different points as boosted copies of each other.

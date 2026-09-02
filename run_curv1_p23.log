@@ -1,0 +1,40 @@
+====================================================================================================
+PATH 2 -- loop holonomy from the relative rotors
+====================================================================================================
+  [PASS] P2-1  TRANSPORT-1 re-derived: R(t) K(0) R(t)~ = K(t) and A(l, K(t)) = R(t) A(l, K(0)) R(t)~, both sheets
+  [PASS] P2-2  a contractible rectangle of seats (rapidity x angle) has holonomy EXACTLY 1 on both sheets, for every size and every base rapidity: the relative-rotor transport is FLAT (the relative rotor is a coboundary A_b R A_a^-1) -- exact: A(-L,K) A(L,K) = 1 and R(-e) R(e) = 1, so the product telescopes; the rectangle itself checked at three rational points, 40 digits
+  [PASS] P2-3  hence the curvature density (H - 1)/(d e) is 0 identically, and its limit at the centre mu0 -> 0 is 0: IDENTITY
+  [PASS] P2-4  a 5-seat closed polygon with five different interior rapidities: H = A_0 (prod R) A_0^-1 exactly -- the boosts cancel around ANY closed loop; only the rotation product survives
+  [PASS] P2-5  a ring of seats around the centre at ANY interior rapidity (N = 3, 4, 6 seats; rapidities 0.5, 0.01, 2.25): holonomy = -1 EXACTLY in SU(2): the rotation part is the identity, the spin sign is -1 -- the deck Z2 -- exact: prod R = R(2 pi/N)^N = R(2 pi) = -1 and the boosts cancel (P2-4); ring evaluated at 40 digits
+  [PASS] P2-5b the same ring on the exterior sheet: -1 as well (r-independent: it is the 2 pi turn of the pivot direction)
+  [PASS] P2-6  SHRINKING the ring to the centre (mu0 -> 0): the limit is -1, FINITE-NONTRIVIAL, and it is the value at every radius -- the centre is where the pivot field's full turn can no longer be contracted away
+  [PASS] P2-6b the frame itself returns to itself around the ring (conjugation by -1 is trivial): a_i -> H a_i H~ = a_i; only a spinorial datum flips sign
+  [PASS] P2-7  FAILURE BRANCH: with a twist of pi/5 about the pivot added to each transport step the ring holonomy is NOT -1 (scalar part = (-0.30901699 + 3.0305671e-42j)): the deck-Z2 result is conditional on TRANSPORT-1 (geodesic transport, D-13)
+  [PASS] P2-8  FOLD: continuing r once around the centre in the complex plane returns mu -> -mu (the square-root branch of r = r_s tanh^2 mu): the centre is a branch point of the seat's address
+  [PASS] P2-8b the deck's action on the rotor, A(-mu + i pi/2, K) A(mu + i pi/2, K)^-1 = A(-2 mu, K): a REAL boost by -2 mu along K, -> 1 at the centre; and it equals (I -> -I)(K -> -K) (D-8 re-verified)
+  [PASS] P2-9  HORIZON: the interior rotor is the exterior rotor times the fixed quarter turn c = (1 + iK)/sqrt2 (D-17 re-verified); a loop that crosses in and back out along the same K sees c c^-1 = 1: the crossing is a cost, not a holonomy
+  PATH 2 READING: the transport built from part 2's relative rotors is flat; every contractible loop returns exactly 1
+  at every radius including the centre (IDENTITY), and every loop around the centre returns exactly -1 in SU(2) at every
+  radius including the shrinking limit (FINITE-NONTRIVIAL, the deck Z2).  No loop holonomy is unbounded anywhere.
+
+====================================================================================================
+PATH 3 -- every frozen candidate reading on the presented Gram at the centre
+====================================================================================================
+  [PASS] S2   Gram-submersion order: layer A Delta_pres(0) = Delta/((1-g13^2)(1-g23^2)) > 0, m = 0 -> ||F|| finite at the centre; layer C Delta_pres ~ c r, m = 1 -> ||F|| ~ r^(-1/2): UNBOUNDED, and the divergent factor is Delta_pres^(-1/2) ~ r^(-1/2), i.e. a ROD (the fold's sqrt r, E-1) in the denominator -- simple zero: lim Delta_pres/r finite and nonzero, lim Delta_pres/r^2 infinite (N1); closed form obtained symbolically
+  [PASS] S3   inertia node detector det I on the presented directions: layer A centre -> 8 - 2 cos^2(phi_3) != 0 (NOT a node); layer C centre != 0 (coplanar, not rank-one); horizon -> 0 (the node, H-15 re-found) -- layer C centre det I = 6.5313066, horizon det I = 2.205E-10
+  [PASS] S4   Kummer radicands: at the layer-A centre {1 + cos phi_3, 1, 1} all finite and positive; at the collision radius r* = r_s Delta/(1 - g12^2) the antipodal member's radicand 1 - g'_12 -> 0 EXACTLY: the 08-30 'crossed = antipodal kills the leg via 1 + g -> 0' is the same event as Path 1's logarithmic singularity
+  AGREEMENT MATRIX at the centre (layer A / layer C):
+    S1 excess (Path 1)        finite phi_3            / finite 2 pi, spin -1
+    S2 Gram submersion ||F||  finite (m = 0)          / UNBOUNDED ~ r^(-1/2) -- rod (sqrt r) in the denominator
+    S3 node detector          finite, not a node      / finite, not a node
+    S4 Kummer radicands       finite, positive        / finite
+    Path 2 loop holonomy      1 (contractible), -1 (encircling): finite on both layers
+  Every rod-free candidate agrees: FINITE at the centre.  The one unbounded candidate is the one that divides by a rod.
+
+RESULT: 15/15 checks passed.
+VERDICT (Paths 2 and 3): OUTCOME (b).  The loop holonomy of the seat transport is flat, so no curvature density exists in
+  the model's own variables; the centre carries a topological reading, -1 in the spin lift for every loop around it, finite
+  and r-independent.  Every frozen candidate reading that is rod-free is finite at the centre; the only divergent one
+  (Gram-submersion ||F|| on the world layer) diverges as Delta_pres^(-1/2) ~ r^(-1/2), a rod in the denominator.
+COMPARISON STAGE: the -1 is the spin-lift sign of parallel transport around a hemisphere (Berry/holonomy of a 2 pi turn);
+  a flat connection with a Z2 monodromy at a point is a topological defect, not a curvature singularity.

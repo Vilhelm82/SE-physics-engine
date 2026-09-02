@@ -1,0 +1,235 @@
+====================================================================================================
+SETUP -- carried objects re-derived, admissibility, classifier self-tests
+====================================================================================================
+  [PASS] P1-1a matrix determinant lemma det(G + f k k^T) = det G + f k^T adj(G) k, general symbolic k
+  [PASS] P1-1b k^T adj(G) k = Delta on both layers  =>  det G'(r) = Delta (1 + f) = Delta r/(r - r_s)
+  [PASS] P1-2a exterior: sinh^2(l) = r_s/(r - r_s) under tanh(l) = sqrt(r_s/r)
+  [PASS] P1-2b interior: -cosh^2(mu) = r_s/(r - r_s) under tanh(mu) = sqrt(r/r_s)  (the two-sheet collapse)
+  [PASS] P1-3  admissibility: Delta(N1..N4) = N1:2711/3600, N2:3/1600, N3:89633/90000, N4:841/4000
+  [PASS] P1-C3 the gate REJECTS the control Gram (9/10, 9/10, 3/5): Delta = -1/125
+  [PASS] P1-C1 classifier on det G'(r) at r -> r_s+: UNBOUNDED, exponent (r - r_s)^-1 -- limit oo, leading order u^-1
+  [PASS] P1-C2 classifier: constant functional -> IDENTITY; W -> 0 -> UNBOUNDED
+
+====================================================================================================
+RUN -- exact endpoint limits, both layers, both functionals, four members, four Grams
+====================================================================================================
+  N1 done
+  N2 done
+  N3 done
+  N4 done
+  [PASS] P1-4  numeric corroboration (40 digits, u = 1e-16, 1e-24) agrees with every exact endpoint limit -- '' only where the limit is UNBOUNDED/NO-LIMIT
+  [PASS] P1-5  no NO-LIMIT anywhere: every endpoint limit exists on both sheets
+  [PASS] P1-6  baseline: r -> oo returns the frame's own orbit (IDENTITY) for every Gram, layer, functional, member
+  [PASS] P1-6b baseline is functional-independent: Omega_A(oo) = Omega_B(oo) member-wise
+
+====================================================================================================
+SYMBOLIC -- the centre, general Gram
+====================================================================================================
+  [PASS] T1a  layer A branches: rho_1,2,3 and det G' reproduce the explicit forms used (identically in t)
+  [PASS] T1b  layer A centre: Gam_13, Gam_23 -> 0 like t (the root's presented direction has no limit; its cosines do)
+  [PASS] T1c  layer A centre: Gam_12 -> (g12 - g13 g23)/sqrt((1-g13^2)(1-g23^2)) = cos(phi_3), the dihedral angle at the root; Vhat -> sqrt(Delta)/sqrt((1-g13^2)(1-g23^2)) = sin(phi_3)
+  [PASS] T1d  identity (g12 - g13 g23)^2 + Delta = (1 - g13^2)(1 - g23^2): the centre value sits ON the unit circle
+  [PASS] T1e  2 arg(1 + cos phi + i sin phi) = phi for 0 < phi < pi, so Omega_B(+++) at the centre IS phi_3 exactly; the orbit is {phi_3, pi - phi_3, pi - phi_3, phi_3}
+  [PASS] T1f  layer A, raw functional at the centre: S_A(0) = 1 + g12 - g13 g23 = 1 + cos(phi_3) sin(th13) sin(th23) > 0 for EVERY admissible Gram, and V' -> 0, so Omega_A(0+) = 0 with no frame content (ARGUMENT: |cos sin sin| < 1)
+  [PASS] T2a  layer C centre: G'(0) (1,1,1)^T = 0 -- the three presented vectors SUM TO ZERO (they are the projections of the axes onto the plane perpendicular to K, and K ~ a1+a2+a3)
+  [PASS] T2b  layer C centre: det G'(0) = 0 exactly (coplanar), all presented lengths 1 - k_i^2 finite
+  [PASS] T2c  layer C, raw functional at the centre: S_A(0) = (|G1|^2/(1^T G 1) - 1)/2, which VANISHES at the orthogonal frame (0/0 there): a sign bit, not a reading
+  ARGUMENT (not counted): three plane vectors p_i with p1+p2+p3 = 0 have S = (1 + cos a)(1 - (|p1|+|p2|)/|p3|) < 0 by the
+  triangle inequality, and V = 0; so the (+++) presented triangle at the layer-C centre is the HEMISPHERE: Omega = 2 pi,
+  B real and negative (half-angle sign -1), the other three members 0.  Checked exactly at N1..N4 below (P1-7c).
+  [PASS] T3a  layer A: the two VISIBLE presented directions collide (G'_12^2 = rho_1 rho_2) at r* = r_s Delta/(1 - g12^2)
+  [PASS] T3b  r*/r_1 = Delta/((1-g12^2)(1-g13^2)) = sin^2(phi_1) < 1: the collision sits BELOW both null radii, where both visible rods are positive -- a real collision inside
+
+====================================================================================================
+RESULTS -- classification of the endpoints and the interior features
+====================================================================================================
+  [PASS] P1-7a CENTRE, layer A, Omega_B: FINITE-NONTRIVIAL, real, orbit = {phi_3, pi-phi_3, pi-phi_3, phi_3} at all four Grams (N4, equal angles: two members coincide with their own baseline and read IDENTITY) -- N1: phi_3 = 1.220898611; N2: phi_3 = 0.1276029536; N3: phi_3 = 1.520069594; N4: phi_3 = 2.529037915
+  [PASS] P1-7b CENTRE, layer A, Omega_A (raw): W -> 1, B -> positive rational: value 0, the same for every Gram
+  [PASS] P1-7c CENTRE, layer C, Omega_B: W -> 1 for all members (0 mod 2 pi) with the (+++) member's B real NEGATIVE (half-angle -1: the hemisphere, Omega = 2 pi) and the other three positive (0): the orbit is {2 pi, 0, 0, 0}
+  [PASS] P1-7d CENTRE, layer C, Omega_A (raw): W -> 1; sign of B varies with the Gram (a sign bit): N1:+1, N2:+1, N3:+1, N4:-1
+  [PASS] P1-7e CENTRE: no member of either functional on either layer is UNBOUNDED or NO-LIMIT at r -> 0+ (the CURV-1 fork (a) test) -- a divergence here would print the member; none does
+  [PASS] P1-8a HORIZON, both sides, both layers, both functionals: every member has a FINITE limit with |W| = 1 (Omega real); the member whose presented poles all agree with sign(k) gives W = 1 (Omega -> 0), the mixed members give finite NONTRIVIAL angles (the lunes of the collapsed triangle); the two sides of the horizon AGREE
+  [PASS] P1-8b NULL RADII: the excess orbit is continuous THROUGH every null radius as a multiset (limits from the left and right agree as sets; individual labels swap)
+        N1/A/B null radius r_1 = 8/9: multiset equal, relabelled members 0; left ['(0.160529 + 0.439911j)', '(0.732036 - 2.00606j)', '(0.160529 - 0.439911j)', '(0.732036 + 2.00606j)']
+        N1/A/B null radius r_2 = 24/25: multiset equal, relabelled members 0; left ['(-0.338185 + 0.94108j)', '(0.864816 - 0.502089j)', '(-0.338185 - 0.94108j)', '(0.864816 + 0.502089j)']
+        N1/C/B null radius r_1 = 1723/2328: multiset equal, relabelled members 0; left ['(0.142109 - 1.30464j)', '(0.0825128 + 0.75751j)', '(0.0825128 - 0.75751j)', '(0.142109 + 1.30464j)']
+        N1/C/B null radius r_2 = 1357/3880: multiset equal, relabelled members 0; left ['(-57.1972 + 0.0j)', '(-1.00549 + 0.0j)', '(-0.0174834 + 0.0j)', '(-0.99454 + 0.0j)']
+        N1/C/B null radius r_3 = 1117/1455: multiset equal, relabelled members 0; left ['(0.387152 - 0.922016j)', '(-0.148536 + 0.988907j)', '(-0.148536 - 0.988907j)', '(0.387152 + 0.922016j)']
+        N2/A/B null radius r_1 = 19/100: multiset equal, relabelled members 0; left ['(1.20299 + 0.154344j)', '(0.817801 - 0.104924j)', '(1.20299 - 0.154344j)', '(0.817801 + 0.104924j)']
+        N2/A/B null radius r_2 = 39/64: multiset equal, relabelled members 0; left ['(0.997941 - 0.064139j)', '(0.949427 - 0.313986j)', '(0.997941 + 0.064139j)', '(0.949427 + 0.313986j)']
+        N2/C/B null radius r_1 = 1/785: multiset equal, relabelled members 0; left ['(-1043.33 + 0.0j)', '(-0.000958467 + 0.0j)', '(-1.0 + 0.0j)', '(-1.0 + 0.0j)']
+        N2/C/B null radius r_2 = 2359/12560: multiset equal, relabelled members 0; left ['(0.973507 - 0.228658j)', '(0.973507 - 0.228658j)', '(0.973507 + 0.228658j)', '(0.973507 + 0.228658j)']
+        N2/C/B null radius r_3 = 2359/12560: multiset equal, relabelled members 0; left ['(0.973507 - 0.228658j)', '(0.973507 - 0.228658j)', '(0.973507 + 0.228658j)', '(0.973507 + 0.228658j)']
+        N3/A/B null radius r_1 = 899/900: multiset equal, relabelled members 0; left ['(0.0180281 + 0.355091j)', '(0.142611 - 2.80894j)', '(0.0180281 - 0.355091j)', '(0.142611 + 2.80894j)']
+        N3/A/B null radius r_2 = 2499/2500: multiset equal, relabelled members 0; left ['(-0.742538 + 0.669804j)', '(0.806557 - 0.591157j)', '(-0.742538 - 0.669804j)', '(0.806557 + 0.591157j)']
+        N3/C/B null radius r_1 = 7343/11064: multiset equal, relabelled members 0; left ['(-1.23644 - 0.634946j)', '(-0.64 + 0.328658j)', '(-0.64 - 0.328658j)', '(-1.23644 + 0.634946j)']
+        N3/C/B null radius r_2 = 57853/92200: multiset equal, relabelled members 0; left ['(-2.8915 + 0.0j)', '(-0.901602 + 0.0j)', '(-0.345841 + 0.0j)', '(-1.10914 + 0.0j)']
+        N3/C/B null radius r_3 = 23623/34575: multiset equal, relabelled members 0; left ['(-0.619168 - 0.785259j)', '(-0.969679 + 0.244383j)', '(-0.969679 - 0.244383j)', '(-0.619168 + 0.785259j)']
+        N4/A/B null radius r_1 = 319/400: multiset equal, relabelled members 0; left ['(0.818182 - 0.57496j)', '(0.818182 + 0.57496j)', '(0.818182 + 0.57496j)', '(0.818182 - 0.57496j)']
+        N4/A/B null radius r_2 = 319/400: multiset equal, relabelled members 0; left ['(0.818182 - 0.57496j)', '(0.818182 + 0.57496j)', '(0.818182 + 0.57496j)', '(0.818182 - 0.57496j)']
+        N4/C/B null radius r_1 = 29/30: multiset equal, relabelled members 1; left ['(-1.0 + 0.0j)', '(-1.0 + 0.0j)', '(-1.0 + 0.0j)', '(-1.0 + 0.0j)']
+        N4/C/B null radius r_2 = 29/30: multiset equal, relabelled members 1; left ['(-1.0 + 0.0j)', '(-1.0 + 0.0j)', '(-1.0 + 0.0j)', '(-1.0 + 0.0j)']
+        N4/C/B null radius r_3 = 29/30: multiset equal, relabelled members 1; left ['(-1.0 + 0.0j)', '(-1.0 + 0.0j)', '(-1.0 + 0.0j)', '(-1.0 + 0.0j)']
+  [PASS] P1-8c COLLISIONS: at every presented-collision radius some member of the orbit is UNBOUNDED (S + iV -> 0: a logarithmic singularity where two presented directions are antipodal), normalised functional (the raw one has its own zeros, P1-13a)
+        N1/A/A collision (1,2) at r = 2711/3375: UNBOUNDED members none
+        N1/A/B collision (1,2) at r = 2711/3375: UNBOUNDED members [(1, -1, -1), (-1, 1, -1)]
+        N1/C/A collision (1,2) at r = 5422/21825: UNBOUNDED members none
+        N1/C/A collision (1,3) at r = 8133/31040: UNBOUNDED members none
+        N1/C/A collision (2,3) at r = 13555/55872: UNBOUNDED members none
+        N1/C/B collision (1,2) at r = 5422/21825: UNBOUNDED members [(1, 1, 1), (-1, -1, 1)]
+        N1/C/B collision (1,3) at r = 8133/31040: UNBOUNDED members [(1, 1, 1), (-1, 1, -1)]
+        N1/C/B collision (2,3) at r = 13555/55872: UNBOUNDED members [(1, 1, 1), (1, -1, -1)]
+        N2/A/A collision (1,2) at r = 3/304: UNBOUNDED members none
+        N2/A/B collision (1,2) at r = 3/304: UNBOUNDED members [(1, -1, -1), (-1, 1, -1)]
+        N2/C/A collision (1,2) at r = 15/11932: UNBOUNDED members none
+        N2/C/A collision (1,3) at r = 15/11932: UNBOUNDED members none
+        N2/C/A collision (2,3) at r = 4/10205: UNBOUNDED members none
+        N2/C/B collision (1,2) at r = 15/11932: UNBOUNDED members [(1, 1, 1), (-1, 1, -1), (-1, -1, 1)]
+        N2/C/B collision (1,3) at r = 15/11932: UNBOUNDED members [(1, 1, 1), (-1, 1, -1), (-1, -1, 1)]
+        N2/C/B collision (2,3) at r = 4/10205: UNBOUNDED members [(1, 1, 1), (1, -1, -1)]
+        N3/A/A collision (1,2) at r = 89633/89775: UNBOUNDED members none
+        N3/A/B collision (1,2) at r = 89633/89775: UNBOUNDED members [(1, -1, -1), (-1, 1, -1)]
+        N3/C/A collision (1,2) at r = 179266/551817: UNBOUNDED members none
+        N3/C/A collision (1,3) at r = 268899/828878: UNBOUNDED members none
+        N3/C/A collision (2,3) at r = 2240825/6912234: UNBOUNDED members none
+        N3/C/B collision (1,2) at r = 179266/551817: UNBOUNDED members [(1, 1, 1), (-1, -1, 1)]
+        N3/C/B collision (1,3) at r = 268899/828878: UNBOUNDED members [(1, 1, 1), (-1, 1, -1)]
+        N3/C/B collision (2,3) at r = 2240825/6912234: UNBOUNDED members [(1, 1, 1), (1, -1, -1)]
+        N4/A/A collision (1,2) at r = 29/110: UNBOUNDED members none
+        N4/A/B collision (1,2) at r = 29/110: UNBOUNDED members [(1, 1, 1), (-1, -1, 1)]
+        N4/C/A collision (1,2) at r = 29/33: UNBOUNDED members none
+        N4/C/A collision (1,3) at r = 29/33: UNBOUNDED members none
+        N4/C/A collision (2,3) at r = 29/33: UNBOUNDED members none
+        N4/C/B collision (1,2) at r = 29/33: UNBOUNDED members [(1, 1, 1), (1, -1, -1), (-1, 1, -1), (-1, -1, 1)]
+        N4/C/B collision (1,3) at r = 29/33: UNBOUNDED members [(1, 1, 1), (1, -1, -1), (-1, 1, -1), (-1, -1, 1)]
+        N4/C/B collision (2,3) at r = 29/33: UNBOUNDED members [(1, 1, 1), (1, -1, -1), (-1, 1, -1), (-1, -1, 1)]
+  [PASS] P1-8d layer A collision radius equals r_s Delta/(1 - g12^2) at N1..N4 (T3a instantiated)
+
+====================================================================================================
+CROSS-CHECKS
+====================================================================================================
+  [PASS] P1-9  ROUTE V (rotor sandwich in the Pauli rep, pinned rapidity, +i sheet) = ROUTE G (presented Gram) for S and V, both functionals, both layers, all members, exterior AND interior points, to 1e-30 -- worst 5.64e-40
+  [PASS] P1-10 l'HUILIER (independent formula) agrees with Omega_B in the exterior, every member, to 1e-25 -- worst 3.67e-40
+  [PASS] P1-11a exact orbit identity: prod_eps (S_eps + iV) = -4 (1-a12^2)(1-a13^2)(1-a23^2) modulo V^2 = det (unit-diagonal Gram)
+  [PASS] P1-11b ...and it holds IDENTICALLY in r on the exterior AND on the interior sheet, both layers (N1, N4): the orbit is one consistent object through the horizon and the null radii
+  [PASS] P1-11c exterior sum rule: the four excesses of the presented triangles sum to 2 pi (40 digits, every Gram, both layers)
+  [PASS] P1-12a Omega_B is unchanged by v_i -> c_i v_i (c_i > 0): the normalised cosines and Vhat are degree 0 in every presented length
+  [PASS] P1-12b Omega_A CHANGES under v_i -> c_i v_i: it obeys the letter of CARRY-8 (no division by a rod) but carries the rods multiplicatively; it is not the excess of any triangle
+  [PASS] P1-13a Omega_A has interior points where S_A = |V'| (B or S-iV vanishes): Im Omega_A -> oo there, at exact rational radii -- N1/A: 4 zeros; N1/C: 2 zeros; N2/A: 2 zeros; N2/C: 2 zeros; N3/A: 8 zeros; N3/C: 2 zeros; N4/A: 2 zeros; N4/C: 8 zeros
+        N1/A member (1, -1, -1): r/r_s = [1805/3456 - sqrt(23355265)/17280, sqrt(23355265)/17280 + 1805/3456]
+        N1/A member (-1, -1, 1): r/r_s = [211/256 - sqrt(431049)/3840, sqrt(431049)/3840 + 211/256]
+        N1/C member (1, 1, 1): r/r_s = [3539/15520 - sqrt(107222761)/46560, sqrt(107222761)/46560 + 3539/15520]
+        N2/A member (1, 1, 1): r/r_s = [7331/18772 - sqrt(3351)/9386, sqrt(3351)/9386 + 7331/18772]
+        N2/C member (1, 1, 1): r/r_s = [174614/736801 - sqrt(250994379)/2947204, sqrt(250994379)/2947204 + 174614/736801]
+        N3/A member (1, 1, 1): r/r_s = [1428437/1863540 - sqrt(188985892153)/1863540, sqrt(188985892153)/1863540 + 1428437/1863540]
+        N3/A member (1, -1, -1): r/r_s = [2**(100/153)*3**(259/918)*5**(199/459)*7**(71/306)/15, sqrt(242206382233)/1802340 + 76789/106020]
+        N3/A member (-1, 1, -1): r/r_s = [404759/539980 - sqrt(160518451353)/1619940, sqrt(160518451353)/1619940 + 404759/539980]
+        N3/A member (-1, -1, 1): r/r_s = [161517/212660 - sqrt(23509749937)/637980, sqrt(23509749937)/637980 + 161517/212660]
+        N3/C member (1, 1, 1): r/r_s = [3535172/14318199 - sqrt(199699431184558)/57272796, sqrt(199699431184558)/57272796 + 3535172/14318199]
+        N4/A member (-1, -1, 1): r/r_s = [84/319 - sqrt(697090)/6380, sqrt(697090)/6380 + 84/319]
+        N4/C member (1, 1, 1): r/r_s = [81/121, 10/11]
+        N4/C member (1, -1, -1): r/r_s = [5605041796875*2**(25/34)*sqrt(3)*5**(15/34)*7**(7/17)/75960984159088, sqrt(449)/1914 + 1867/1914]
+        N4/C member (-1, 1, -1): r/r_s = [5605041796875*2**(25/34)*sqrt(3)*5**(15/34)*7**(7/17)/75960984159088, sqrt(449)/1914 + 1867/1914]
+        N4/C member (-1, -1, 1): r/r_s = [5605041796875*2**(25/34)*sqrt(3)*5**(15/34)*7**(7/17)/75960984159088, sqrt(449)/1914 + 1867/1914]
+
+RESULT: 40/40 checks passed.
+====================================================================================================
+CLASSIFICATION TABLE  (Gram / layer / functional; members in the order (+++), (+--), (-+-), (--+))
+====================================================================================================
+  N1/A/A     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N1/A/A     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N1/A/A     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['+1', '+1', '+1', '+1']
+  N1/A/A     bands: (0,8/9) W real: Omega in iR or pi+iR; (8/9,24/25) W real: Omega in iR or pi+iR; (24/25,1) W real: Omega in iR or pi+iR; (1,oo) real
+  N1/A/A     null radii [8/9, 24/25, 0]  collisions {(0, 1): [2711/3375], (0, 2): [], (1, 2): []}
+  N1/A/B     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(1.5915056 + 2.7767904e-28j)', '(0.0 + 0.0j)', '(-2.4417972 + 1.0349855e-27j)', '(0.85029158 + 2.4233807e-27j)']  half-angle ['0', '+1', '0', '0']
+  N1/A/B     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(1.5915056 + 2.7767904e-28j)', '(0.0 + 0.0j)', '(-2.4417972 + 1.0349855e-27j)', '(0.85029158 + 2.4233807e-27j)']  half-angle ['0', '+1', '0', '0']
+  N1/A/B     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(1.2208986 + 0.0j)', '(1.920694 + 0.0j)', '(1.920694 + 0.0j)', '(1.2208986 + 0.0j)']  half-angle ['complex', 'complex', 'complex', 'complex']
+  N1/A/B     bands: (0,8/9) complex; (8/9,24/25) complex; (24/25,1) real; (1,oo) real
+  N1/A/B     null radii [8/9, 24/25, 0]  collisions {(0, 1): [2711/3375], (0, 2): [], (1, 2): []}
+  N1/C/A     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N1/C/A     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N1/C/A     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['+1', '+1', '+1', '+1']
+  N1/C/A     bands: (0,1357/3880) W real: Omega in iR or pi+iR; (1357/3880,1723/2328) W real: Omega in iR or pi+iR; (1723/2328,1117/1455) W real: Omega in iR or pi+iR; (1117/1455,1) W real: Omega in iR or pi+iR; (1,oo) real
+  N1/C/A     null radii [1723/2328, 1357/3880, 1117/1455]  collisions {(0, 1): [5422/21825], (0, 2): [8133/31040], (1, 2): [13555/55872]}
+  N1/C/B     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(1.4170188 + 1.1107162e-27j)', '(-2.7180986 - 2.0194839e-28j)', '(1.3010798 + 6.4623485e-27j)']  half-angle ['+1', '0', '0', '0']
+  N1/C/B     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(1.4170188 + 1.1107162e-27j)', '(-2.7180986 - 2.0194839e-28j)', '(1.3010798 + 6.4623485e-27j)']  half-angle ['+1', '0', '0', '0']
+  N1/C/B     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['-1', '+1', '+1', '+1']
+  N1/C/B     bands: (0,1357/3880) W real: Omega in iR or pi+iR; (1357/3880,1723/2328) complex; (1723/2328,1117/1455) complex; (1117/1455,1) real; (1,oo) real
+  N1/C/B     null radii [1723/2328, 1357/3880, 1117/1455]  collisions {(0, 1): [5422/21825], (0, 2): [8133/31040], (1, 2): [13555/55872]}
+  N2/A/A     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N2/A/A     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N2/A/A     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['+1', '+1', '+1', '+1']
+  N2/A/A     bands: (0,19/100) W real: Omega in iR or pi+iR; (19/100,39/64) W real: Omega in iR or pi+iR; (39/64,1) W real: Omega in iR or pi+iR; (1,oo) real
+  N2/A/A     null radii [19/100, 39/64, 0]  collisions {(0, 1): [3/304], (0, 2): [], (1, 2): []}
+  N2/A/B     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(-0.41523856 + 2.3224065e-27j)', '(0.16003266 + 2.0194839e-28j)', '(0.25520591 + 1.5903436e-27j)']  half-angle ['+1', '0', '0', '0']
+  N2/A/B     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(-0.41523856 + 2.3224065e-27j)', '(0.16003266 + 2.0194839e-28j)', '(0.25520591 + 1.5903436e-27j)']  half-angle ['+1', '0', '0', '0']
+  N2/A/B     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.12760295 - 3.203333e-145j)', '(3.0139897 - 3.203333e-145j)', '(3.0139897 - 3.203333e-145j)', '(0.12760295 - 3.203333e-145j)']  half-angle ['complex', 'complex', 'complex', 'complex']
+  N2/A/B     bands: (0,19/100) complex; (19/100,39/64) complex; (39/64,1) real; (1,oo) real
+  N2/A/B     null radii [19/100, 39/64, 0]  collisions {(0, 1): [3/304], (0, 2): [], (1, 2): []}
+  N2/C/A     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N2/C/A     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N2/C/A     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['+1', '+1', '+1', '+1']
+  N2/C/A     bands: (0,1/785) W real: Omega in iR or pi+iR; (1/785,2359/12560) W real: Omega in iR or pi+iR; (2359/12560,1) W real: Omega in iR or pi+iR; (1,oo) real
+  N2/C/A     null radii [1/785, 2359/12560, 2359/12560]  collisions {(0, 1): [15/11932], (0, 2): [15/11932], (1, 2): [4/10205]}
+  N2/C/B     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(-0.46013428 + 0.0j)', '(0.23006714 + 1.1107162e-27j)', '(0.23006714 + 1.1107162e-27j)']  half-angle ['+1', '0', '0', '0']
+  N2/C/B     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(-0.46013428 + 0.0j)', '(0.23006714 + 1.1107162e-27j)', '(0.23006714 + 1.1107162e-27j)']  half-angle ['+1', '0', '0', '0']
+  N2/C/B     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['-1', '+1', '+1', '+1']
+  N2/C/B     bands: (0,1/785) W real: Omega in iR or pi+iR; (1/785,2359/12560) complex; (2359/12560,1) real; (1,oo) real
+  N2/C/B     null radii [1/785, 2359/12560, 2359/12560]  collisions {(0, 1): [15/11932], (0, 2): [15/11932], (1, 2): [4/10205]}
+  N3/A/A     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N3/A/A     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N3/A/A     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['+1', '+1', '+1', '+1']
+  N3/A/A     bands: (0,899/900) W real: Omega in iR or pi+iR; (899/900,2499/2500) W real: Omega in iR or pi+iR; (2499/2500,1) W real: Omega in iR or pi+iR; (1,oo) real
+  N3/A/A     null radii [899/900, 2499/2500, 0]  collisions {(0, 1): [89633/89775], (0, 2): [], (1, 2): []}
+  N3/A/B     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(1.9869743 + 2.3728936e-27j)', '(0.0 + 0.0j)', '(-3.0401392 + 2.7767904e-27j)', '(1.0531649 - 7.0681937e-28j)']  half-angle ['0', '+1', '0', '0']
+  N3/A/B     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(1.9869743 + 2.3728936e-27j)', '(0.0 + 0.0j)', '(-3.0401392 + 2.7767904e-27j)', '(1.0531649 - 7.0681937e-28j)']  half-angle ['0', '+1', '0', '0']
+  N3/A/B     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(1.5200696 + 0.0j)', '(1.6215231 + 0.0j)', '(1.6215231 + 0.0j)', '(1.5200696 + 0.0j)']  half-angle ['complex', 'complex', 'complex', 'complex']
+  N3/A/B     bands: (0,899/900) complex; (899/900,2499/2500) complex; (2499/2500,1) real; (1,oo) real
+  N3/A/B     null radii [899/900, 2499/2500, 0]  collisions {(0, 1): [89633/89775], (0, 2): [], (1, 2): []}
+  N3/C/A     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N3/C/A     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N3/C/A     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['+1', '+1', '+1', '+1']
+  N3/C/A     bands: (0,57853/92200) W real: Omega in iR or pi+iR; (57853/92200,7343/11064) W real: Omega in iR or pi+iR; (7343/11064,23623/34575) W real: Omega in iR or pi+iR; (23623/34575,1) W real: Omega in iR or pi+iR; (1,oo) real
+  N3/C/A     null radii [7343/11064, 57853/92200, 23623/34575]  collisions {(0, 1): [179266/551817], (0, 2): [268899/828878], (1, 2): [2240825/6912234]}
+  N3/C/B     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(2.0646381 - 4.7457872e-27j)', '(2.2536383 - 5.0487098e-28j)', '(1.964909 - 4.9477356e-27j)']  half-angle ['+1', '0', '0', '0']
+  N3/C/B     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(2.0646381 - 4.7457872e-27j)', '(2.2536383 - 5.0487098e-28j)', '(1.964909 - 4.9477356e-27j)']  half-angle ['+1', '0', '0', '0']
+  N3/C/B     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['-1', '+1', '+1', '+1']
+  N3/C/B     bands: (0,57853/92200) W real: Omega in iR or pi+iR; (57853/92200,7343/11064) complex; (7343/11064,23623/34575) complex; (23623/34575,1) real; (1,oo) real
+  N3/C/B     null radii [7343/11064, 57853/92200, 23623/34575]  collisions {(0, 1): [179266/551817], (0, 2): [268899/828878], (1, 2): [2240825/6912234]}
+  N4/A/A     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N4/A/A     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N4/A/A     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['+1', '+1', '+1', '+1']
+  N4/A/A     bands: (0,319/400) W real: Omega in iR or pi+iR; (319/400,1) W real: Omega in iR or pi+iR; (1,oo) real
+  N4/A/A     null radii [319/400, 319/400, 0]  collisions {(0, 1): [29/110], (0, 2): [], (1, 2): []}
+  N4/A/B     r->r_s+  ['FINITE-', 'IDENTIT', 'IDENTIT', 'FINITE-']  Omega ['(-1.2251095 + 0.0j)', '(0.61255474 + 0.0j)', '(0.61255474 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['0', '0', '0', '+1']
+  N4/A/B     r->r_s-  ['FINITE-', 'IDENTIT', 'IDENTIT', 'FINITE-']  Omega ['(-1.2251095 + 0.0j)', '(0.61255474 + 0.0j)', '(0.61255474 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['0', '0', '0', '+1']
+  N4/A/B     r->0+    ['FINITE-', 'IDENTIT', 'IDENTIT', 'FINITE-']  Omega ['(2.5290379 + 0.0j)', '(0.61255474 - 2.6505726e-28j)', '(0.61255474 - 2.6505726e-28j)', '(2.5290379 + 0.0j)']  half-angle ['complex', 'complex', 'complex', 'complex']
+  N4/A/B     bands: (0,319/400) complex; (319/400,1) real; (1,oo) real
+  N4/A/B     null radii [319/400, 319/400, 0]  collisions {(0, 1): [29/110], (0, 2): [], (1, 2): []}
+  N4/C/A     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N4/C/A     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['?', '?', '?', '?']
+  N4/C/A     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['-1', '+1', '+1', '+1']
+  N4/C/A     bands: (0,29/30) W real: Omega in iR or pi+iR; (29/30,1) W real: Omega in iR or pi+iR; (1,oo) real
+  N4/C/A     null radii [29/30, 29/30, 29/30]  collisions {(0, 1): [29/33], (0, 2): [29/33], (1, 2): [29/33]}
+  N4/C/B     r->r_s+  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(2.0943951 + 0.0j)', '(2.0943951 + 0.0j)', '(2.0943951 + 0.0j)']  half-angle ['+1', '0', '0', '0']
+  N4/C/B     r->r_s-  ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(2.0943951 + 0.0j)', '(2.0943951 + 0.0j)', '(2.0943951 + 0.0j)']  half-angle ['+1', '0', '0', '0']
+  N4/C/B     r->0+    ['FINITE-', 'FINITE-', 'FINITE-', 'FINITE-']  Omega ['(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)', '(0.0 + 0.0j)']  half-angle ['-1', '+1', '+1', '+1']
+  N4/C/B     bands: (0,29/30) W real: Omega in iR or pi+iR; (29/30,1) real; (1,oo) real
+  N4/C/B     null radii [29/30, 29/30, 29/30]  collisions {(0, 1): [29/33], (0, 2): [29/33], (1, 2): [29/33]}
+====================================================================================================
+VERDICT: OUTCOME (b) at the CENTRE -- every member of both functionals on both layers has a finite limit at r -> 0+.
+  Layer A (the infalling seat): the normalised excess reads the frame's dihedral angle at the root, orbit
+  {phi_3, pi-phi_3, pi-phi_3, phi_3}: FINITE-NONTRIVIAL, real (T1, P1-7a).  The raw CARRY-8 functional reads 0
+  for every admissible frame (T1f, P1-7b): the letter of the frozen definition selects a functional with no content.
+  Layer C (the hole): the presented vectors sum to zero at the centre (T2a); the (+++) triangle is the hemisphere,
+  Omega = 2 pi with half-angle sign -1, the other three 0 (P1-7c).  Horizon: Omega -> 0 both sides (P1-8a).
+  INSIDE: at every presented-collision radius (layer A: r* = r_s Delta/(1 - g12^2), T3) two presented directions
+  are antipodal for half the orbit and S + iV -> 0: Im Omega -> oo, a LOGARITHMIC singularity with NO rod in a
+  denominator (P1-8c, P1-13a).  The rod-free curvature reading is regular at r = 0 and singular at r*.
+  Conditional on: KIN-2a, CONT-1 (+i sheet), RULING-2, the principal-branch convention of section 2.
+====================================================================================================
+COMPARISON STAGE (names spoken here only):
+  - Gauss-Bonnet: the excess of the presented triangle is its enclosed curvature integral; the centre value on the
+    seat layer is a dihedral angle, finite -- no 1/r^3 tidal divergence is reproduced or expected here.
+  - The layer-C hemisphere at the centre (2 pi, half-angle -1) is the spin-lift sign of a full turn: the deck Z2.
+  - Interior antipodal collisions at r* have no standard-model analogue claimed; lineage unsearched.

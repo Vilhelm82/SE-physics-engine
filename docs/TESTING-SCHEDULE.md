@@ -62,11 +62,12 @@
   LBL-2, GR conventions (named).
 
 ## QUEUED
-  0. **CURV-1** -- does the model own a rod-free curvature reading? (part 3 of THM-H)
-     Specs in `docs/prereg/CURV-1/` (2026-09-02): Path 1 = presented seat-triangle
-     excess along the family (`PATH1-SPEC.md`, for an independent runner); Path 2 =
-     centre loop holonomy from part 2's relative rotors (spec after Path 1 reports);
-     Path 3 held until 1 and 2 are back. Predictions filed before any run.
+  0. ~~**CURV-1**~~ DONE 2026-09-02 evening: `curv1_path1.py` 40/40, `curv1_path23.py` 15/15,
+     report `docs/prereg/CURV-1/CURV1-RESULTS.md`. Fork (b) at the centre on every path:
+     seat layer reads the dihedral angle at the root, world layer reads 2 pi with spin -1
+     (the deck Z2), loop holonomy -1 around the centre at every radius. The excess DOES
+     diverge inside, at presented-collision radii (seat layer: r_s Delta/(1-g12^2)).
+     Two rulings owed (CARRY-8 letter vs angular separations; identity semantics).
 - (next, in order:)
   1. ~~**D1 two-seat interior**~~ DONE 2026-09-02, `thm_h2_d1.py` 30/30 (`b4ac768`):
      no rod-free click-invariant diverges at mu = 0; every divergence there has a

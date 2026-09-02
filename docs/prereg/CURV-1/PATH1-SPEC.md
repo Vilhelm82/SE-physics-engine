@@ -57,7 +57,8 @@ classification in this spec is made on that multiset, not on a single member.
 Exact identity (branch-free, both sheets): with the product over the four members
 having e1 e2 e3 = +1,
 
-    prod B_eps = 4 (1 - Gam_12^2)(1 - Gam_13^2)(1 - Gam_23^2)       hence   prod W_eps = 1.
+    prod B_eps = -4 (1 - Gam_12^2)(1 - Gam_13^2)(1 - Gam_23^2)      hence   prod W_eps = 1.
+    (sign corrected 2026-09-02 evening: the original draft had +4; verified exact in curv1_path1.py P1-11a/b)
 
 ## 3. Two implementations, sharing only sympy
 Route G (Gram). Build G'(r) as a rational matrix in r from section 1 and evaluate
@@ -105,7 +106,7 @@ P1-1  G'(r) reproduces D-4 (det), D-19 (rho_3 for option A) and H-22 (null radii
 P1-2  Omega_eps is unchanged by v_i -> c_i v_i for symbolic c_i > 0 (rod-free), and the
       orbit multiset is unchanged by any relabelling of the three axes.
 P1-3  Exterior: all B_eps real; the four e1e2e3 = +1 excesses lie in (0, 2 pi) and sum
-      to 2 pi (30 digits at three rational r); the identity prod B_eps = 4 prod (1 - Gam^2)
+      to 2 pi (30 digits at three rational r); the identity prod B_eps = -4 prod (1 - Gam^2)
       holds as a rational identity in r.
 P1-4  The same product identity holds on the interior sheet, exactly in r.
 P1-5  Routes G and V agree (section 3).

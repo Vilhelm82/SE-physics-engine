@@ -37,3 +37,10 @@ C-3  Centre, option C: G'(0) is the Gram of the projections p_i = a_i - k_i K on
 C-4  Horizon: when all k_i have one sign the (+++) member -> 0 from outside; any
      mixed-sign member is a 0/0 there and its limit is whatever the family gives.
      No value predicted.
+C-5  (added 2026-09-02 afternoon, before any run) Layer A: the two visible presented directions
+     collide, G'_12^2 = rho_1 rho_2, at r* = r_s Delta/(1 - g12^2), below both null radii.
+     Half the orbit sees the pair antipodal there; those members' S + iV vanish.
+
+## Outcome
+See CURV1-RESULTS.md, "Predictions scorecard".  W-2, W-3, C-2, C-3, C-5 held; W-1 held on the world
+layer only; C-1 held; C-4 made no claim.

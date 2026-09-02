@@ -1,0 +1,4186 @@
+{
+ "N1/A/A": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(889/3600 + 67*sqrt(2711)*I/3600)",
+     "W": "889/3600 + 67*sqrt(2711)*I/3600",
+     "B": "67/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(4320) - log(1609 + 77*sqrt(2711)*I))",
+     "W": "1609/4320 + 77*sqrt(2711)*I/4320",
+     "B": "77/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(1440) - log(-1271 + 13*sqrt(2711)*I))",
+     "W": "-1271/1440 + 13*sqrt(2711)*I/1440",
+     "B": "13/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(4800) - log(2089 + 83*sqrt(2711)*I))",
+     "W": "2089/4800 + 83*sqrt(2711)*I/4800",
+     "B": "83/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "79/60",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "41/60",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "41/60",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "79/60",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "collision (1,2) at r = 2711/3375": {
+    "left": {
+     "(1, 1, 1)": "1512880261/292859775 - 115201234*sqrt(166)/292859775",
+     "(1, -1, -1)": "95389246*sqrt(166)/9017055 + 1229037541/9017055",
+     "(-1, 1, -1)": "1939536421/719515935 - 139795426*sqrt(166)/719515935",
+     "(-1, -1, 1)": "-826455061/393565425 + 56405066*sqrt(166)/393565425"
+    },
+    "right": {
+     "(1, 1, 1)": "1512880261/292859775 - 115201234*sqrt(166)/292859775",
+     "(1, -1, -1)": "95389246*sqrt(166)/9017055 + 1229037541/9017055",
+     "(-1, 1, -1)": "1939536421/719515935 - 139795426*sqrt(166)/719515935",
+     "(-1, -1, 1)": "-826455061/393565425 + 56405066*sqrt(166)/393565425"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "8/9",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "8/9",
+    "24/25",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "24/25",
+    "1",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "8/9",
+   "24/25",
+   "0"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "2711/3375"
+   ],
+   "(0, 2)": [],
+   "(1, 2)": []
+  },
+  "W0": {
+   "(1, 1, 1)": "889/3600 + 67*sqrt(2711)*I/3600",
+   "(1, -1, -1)": "1609/4320 + 77*sqrt(2711)*I/4320",
+   "(-1, 1, -1)": "-1271/1440 + 13*sqrt(2711)*I/1440",
+   "(-1, -1, 1)": "2089/4800 + 83*sqrt(2711)*I/4800"
+  }
+ },
+ "N1/A/B": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(889/3600 + 67*sqrt(2711)*I/3600)",
+     "W": "889/3600 + 67*sqrt(2711)*I/3600",
+     "B": "67/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(4320) - log(1609 + 77*sqrt(2711)*I))",
+     "W": "1609/4320 + 77*sqrt(2711)*I/4320",
+     "B": "77/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(1440) - log(-1271 + 13*sqrt(2711)*I))",
+     "W": "-1271/1440 + 13*sqrt(2711)*I/1440",
+     "B": "13/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(4800) - log(2089 + 83*sqrt(2711)*I))",
+     "W": "2089/4800 + 83*sqrt(2711)*I/4800",
+     "B": "83/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(2656) - log(-55 + 51*sqrt(2711)*I))",
+     "W": "-55/2656 + 51*sqrt(2711)*I/2656",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(1536) - log(-1175 - 19*sqrt(2711)*I))",
+     "W": "-1175/1536 - 19*sqrt(2711)*I/1536",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(7968) - log(5257 + 115*sqrt(2711)*I))",
+     "W": "5257/7968 + 115*sqrt(2711)*I/7968",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(2656) - log(-55 + 51*sqrt(2711)*I))",
+     "W": "-55/2656 + 51*sqrt(2711)*I/2656",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(1536) - log(-1175 - 19*sqrt(2711)*I))",
+     "W": "-1175/1536 - 19*sqrt(2711)*I/1536",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(7968) - log(5257 + 115*sqrt(2711)*I))",
+     "W": "5257/7968 + 115*sqrt(2711)*I/7968",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log((19*sqrt(3) + 96 + sqrt(8133)*I)/(19*sqrt(3) + 96 - sqrt(8133)*I))",
+     "W": "(19*sqrt(3) + 96 + sqrt(8133)*I)/(19*sqrt(3) + 96 - sqrt(8133)*I)",
+     "B": "19*sqrt(3)/96 + 1 + sqrt(8133)*I/96",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(-19*sqrt(3) + 96 + sqrt(8133)*I)/(-96 + 19*sqrt(3) + sqrt(8133)*I))",
+     "W": "(-96 + 19*sqrt(3) - sqrt(8133)*I)/(-96 + 19*sqrt(3) + sqrt(8133)*I)",
+     "B": "-19*sqrt(3)/96 + 1 + sqrt(8133)*I/96",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(-19*sqrt(3) + 96 + sqrt(8133)*I)/(-96 + 19*sqrt(3) + sqrt(8133)*I))",
+     "W": "(-96 + 19*sqrt(3) - sqrt(8133)*I)/(-96 + 19*sqrt(3) + sqrt(8133)*I)",
+     "B": "-19*sqrt(3)/96 + 1 + sqrt(8133)*I/96",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log((19*sqrt(3) + 96 + sqrt(8133)*I)/(19*sqrt(3) + 96 - sqrt(8133)*I))",
+     "W": "(19*sqrt(3) + 96 + sqrt(8133)*I)/(19*sqrt(3) + 96 - sqrt(8133)*I)",
+     "B": "19*sqrt(3)/96 + 1 + sqrt(8133)*I/96",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "null radius r_1 = 8/9": {
+    "left": {
+     "(1, 1, 1)": "(51*sqrt(2) - 64*I + sqrt(5422)*I)/(51*sqrt(2) - sqrt(5422)*I - 64*I)",
+     "(1, -1, -1)": "(51*sqrt(2) - sqrt(5422)*I - 64*I)/(51*sqrt(2) - 64*I + sqrt(5422)*I)",
+     "(-1, 1, -1)": "(4649 + I*(-51*sqrt(2711) + 32*sqrt(5422)*I))/(4649 + I*(51*sqrt(2711) - 32*sqrt(5422)*I))",
+     "(-1, -1, 1)": "(51*sqrt(2) + 64*I + sqrt(5422)*I)/(51*sqrt(2) - sqrt(5422)*I + 64*I)"
+    },
+    "right": {
+     "(1, 1, 1)": "(4649 + I*(51*sqrt(2711) + 32*sqrt(5422)*I))/(4649 - I*(51*sqrt(2711) + 32*sqrt(5422)*I))",
+     "(1, -1, -1)": "(4649 - I*(51*sqrt(2711) + 32*sqrt(5422)*I))/(4649 + I*(51*sqrt(2711) + 32*sqrt(5422)*I))",
+     "(-1, 1, -1)": "(4649 + I*(-51*sqrt(2711) + 32*sqrt(5422)*I))/(4649 + I*(51*sqrt(2711) - 32*sqrt(5422)*I))",
+     "(-1, -1, 1)": "(4649 + I*(51*sqrt(2711) - 32*sqrt(5422)*I))/(4649 - I*(51*sqrt(2711) - 32*sqrt(5422)*I))"
+    }
+   },
+   "null radius r_2 = 24/25": {
+    "left": {
+     "(1, 1, 1)": "(7081 + I*(32*sqrt(16266) + 115*sqrt(2711)))/(7081 - I*(32*sqrt(16266) + 115*sqrt(2711)))",
+     "(1, -1, -1)": "(7081 + I*(-115*sqrt(2711) + 32*sqrt(16266)))/(7081 - I*(-115*sqrt(2711) + 32*sqrt(16266)))",
+     "(-1, 1, -1)": "(7081 - I*(32*sqrt(16266) + 115*sqrt(2711)))/(7081 + I*(32*sqrt(16266) + 115*sqrt(2711)))",
+     "(-1, -1, 1)": "(7081 + I*(-32*sqrt(16266) + 115*sqrt(2711)))/(7081 + I*(-115*sqrt(2711) + 32*sqrt(16266)))"
+    },
+    "right": {
+     "(1, 1, 1)": "(7081 + I*(32*sqrt(16266) + 115*sqrt(2711)))/(7081 - I*(32*sqrt(16266) + 115*sqrt(2711)))",
+     "(1, -1, -1)": "(7081 + I*(-115*sqrt(2711) + 32*sqrt(16266)))/(7081 - I*(-115*sqrt(2711) + 32*sqrt(16266)))",
+     "(-1, 1, -1)": "(7081 - I*(32*sqrt(16266) + 115*sqrt(2711)))/(7081 + I*(32*sqrt(16266) + 115*sqrt(2711)))",
+     "(-1, -1, 1)": "(7081 + I*(-32*sqrt(16266) + 115*sqrt(2711)))/(7081 + I*(-115*sqrt(2711) + 32*sqrt(16266)))"
+    }
+   },
+   "collision (1,2) at r = 2711/3375": {
+    "left": {
+     "(1, 1, 1)": "969/3680 + 51*sqrt(2711)*I/3680",
+     "(1, -1, -1)": "oo",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "2185/4896 + 115*sqrt(2711)*I/4896"
+    },
+    "right": {
+     "(1, 1, 1)": "969/3680 + 51*sqrt(2711)*I/3680",
+     "(1, -1, -1)": "oo",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "2185/4896 + 115*sqrt(2711)*I/4896"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "8/9",
+    "complex"
+   ],
+   [
+    "8/9",
+    "24/25",
+    "complex"
+   ],
+   [
+    "24/25",
+    "1",
+    "real"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "8/9",
+   "24/25",
+   "0"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "2711/3375"
+   ],
+   "(0, 2)": [],
+   "(1, 2)": []
+  },
+  "W0": {
+   "(1, 1, 1)": "889/3600 + 67*sqrt(2711)*I/3600",
+   "(1, -1, -1)": "1609/4320 + 77*sqrt(2711)*I/4320",
+   "(-1, 1, -1)": "-1271/1440 + 13*sqrt(2711)*I/1440",
+   "(-1, -1, 1)": "2089/4800 + 83*sqrt(2711)*I/4800"
+  }
+ },
+ "N1/C/A": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(889/3600 + 67*sqrt(2711)*I/3600)",
+     "W": "889/3600 + 67*sqrt(2711)*I/3600",
+     "B": "67/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(4320) - log(1609 + 77*sqrt(2711)*I))",
+     "W": "1609/4320 + 77*sqrt(2711)*I/4320",
+     "B": "77/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(1440) - log(-1271 + 13*sqrt(2711)*I))",
+     "W": "-1271/1440 + 13*sqrt(2711)*I/1440",
+     "B": "13/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(4800) - log(2089 + 83*sqrt(2711)*I))",
+     "W": "2089/4800 + 83*sqrt(2711)*I/4800",
+     "B": "83/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "829/11640",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "18059/11640",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "8971/11640",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "18701/11640",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "collision (1,2) at r = 5422/21825": {
+    "left": {
+     "(1, 1, 1)": "-1256058384233/672808703175 - 5856009412*sqrt(32806)/672808703175",
+     "(1, -1, -1)": "11386270498073/9457403410665 - 35007544228*sqrt(32806)/9457403410665",
+     "(-1, 1, -1)": "4489451058713/2560583971305 - 20359642532*sqrt(32806)/2560583971305",
+     "(-1, -1, 1)": "11905134218633/9976267131225 - 35868406012*sqrt(32806)/9976267131225"
+    },
+    "right": {
+     "(1, 1, 1)": "-1256058384233/672808703175 - 5856009412*sqrt(32806)/672808703175",
+     "(1, -1, -1)": "11386270498073/9457403410665 - 35007544228*sqrt(32806)/9457403410665",
+     "(-1, 1, -1)": "4489451058713/2560583971305 - 20359642532*sqrt(32806)/2560583971305",
+     "(-1, -1, 1)": "11905134218633/9976267131225 - 35868406012*sqrt(32806)/9976267131225"
+    }
+   },
+   "collision (1,3) at r = 8133/31040": {
+    "left": {
+     "(1, 1, 1)": "-337516905041/167549527600 - 1117666681*sqrt(68721)/167549527600",
+     "(1, -1, -1)": "2813568073121/2308501640480 - 6135532489*sqrt(68721)/2308501640480",
+     "(-1, 1, -1)": "1136492514401/631426081760 - 3604629641*sqrt(68721)/631426081760",
+     "(-1, -1, 1)": "2937058080641/2431991648000 - 6281715031*sqrt(68721)/2431991648000"
+    },
+    "right": {
+     "(1, 1, 1)": "-337516905041/167549527600 - 1117666681*sqrt(68721)/167549527600",
+     "(1, -1, -1)": "2813568073121/2308501640480 - 6135532489*sqrt(68721)/2308501640480",
+     "(-1, 1, -1)": "1136492514401/631426081760 - 3604629641*sqrt(68721)/631426081760",
+     "(-1, -1, 1)": "2937058080641/2431991648000 - 6281715031*sqrt(68721)/2431991648000"
+    }
+   },
+   "collision (2,3) at r = 13555/55872": {
+    "left": {
+     "(1, 1, 1)": "-1001594471137/553453929648 - 1814832863*sqrt(211585)/553453929648",
+     "(1, -1, -1)": "9418917082417/7863868681632 - 11270323727*sqrt(211585)/7863868681632",
+     "(-1, 1, -1)": "3675391025137/2120342624352 - 6526550863*sqrt(211585)/2120342624352",
+     "(-1, -1, 1)": "9854830519057/8299782118272 - 11551091153*sqrt(211585)/8299782118272"
+    },
+    "right": {
+     "(1, 1, 1)": "-1001594471137/553453929648 - 1814832863*sqrt(211585)/553453929648",
+     "(1, -1, -1)": "9418917082417/7863868681632 - 11270323727*sqrt(211585)/7863868681632",
+     "(-1, 1, -1)": "3675391025137/2120342624352 - 6526550863*sqrt(211585)/2120342624352",
+     "(-1, -1, 1)": "9854830519057/8299782118272 - 11551091153*sqrt(211585)/8299782118272"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "1357/3880",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1357/3880",
+    "1723/2328",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1723/2328",
+    "1117/1455",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1117/1455",
+    "1",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "1723/2328",
+   "1357/3880",
+   "1117/1455"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "5422/21825"
+   ],
+   "(0, 2)": [
+    "8133/31040"
+   ],
+   "(1, 2)": [
+    "13555/55872"
+   ]
+  },
+  "W0": {
+   "(1, 1, 1)": "889/3600 + 67*sqrt(2711)*I/3600",
+   "(1, -1, -1)": "1609/4320 + 77*sqrt(2711)*I/4320",
+   "(-1, 1, -1)": "-1271/1440 + 13*sqrt(2711)*I/1440",
+   "(-1, -1, 1)": "2089/4800 + 83*sqrt(2711)*I/4800"
+  }
+ },
+ "N1/C/B": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(889/3600 + 67*sqrt(2711)*I/3600)",
+     "W": "889/3600 + 67*sqrt(2711)*I/3600",
+     "B": "67/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(4320) - log(1609 + 77*sqrt(2711)*I))",
+     "W": "1609/4320 + 77*sqrt(2711)*I/4320",
+     "B": "77/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(1440) - log(-1271 + 13*sqrt(2711)*I))",
+     "W": "-1271/1440 + 13*sqrt(2711)*I/1440",
+     "B": "13/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(4800) - log(2089 + 83*sqrt(2711)*I))",
+     "W": "2089/4800 + 83*sqrt(2711)*I/4800",
+     "B": "83/60 + sqrt(2711)*I/60",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(375743521) - log(57553451 + 132198*sqrt(7889010)*I))",
+     "W": "57553451/375743521 + 132198*sqrt(7889010)*I/375743521",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(694125751) - log(-632805731 - 101558*sqrt(7889010)*I))",
+     "W": "-632805731/694125751 - 101558*sqrt(7889010)*I/694125751",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(969355519) - log(258292751 + 332644*sqrt(7889010)*I))",
+     "W": "258292751/969355519 + 332644*sqrt(7889010)*I/969355519",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(375743521) - log(57553451 + 132198*sqrt(7889010)*I))",
+     "W": "57553451/375743521 + 132198*sqrt(7889010)*I/375743521",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(694125751) - log(-632805731 - 101558*sqrt(7889010)*I))",
+     "W": "-632805731/694125751 - 101558*sqrt(7889010)*I/694125751",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(969355519) - log(258292751 + 332644*sqrt(7889010)*I))",
+     "W": "258292751/969355519 + 332644*sqrt(7889010)*I/969355519",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-337*sqrt(19245910)/1924591 - 183*sqrt(9094614)/1515769 - 125*sqrt(35071665)/2338111 + 1",
+     "half": "-1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-183*sqrt(9094614)/1515769 + 125*sqrt(35071665)/2338111 + 337*sqrt(19245910)/1924591 + 1",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-337*sqrt(19245910)/1924591 + 125*sqrt(35071665)/2338111 + 183*sqrt(9094614)/1515769 + 1",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-125*sqrt(35071665)/2338111 + 183*sqrt(9094614)/1515769 + 337*sqrt(19245910)/1924591 + 1",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "null radius r_1 = 1723/2328": {
+    "left": {
+     "(1, 1, 1)": "(879*sqrt(155685) + 55*sqrt(453092141) + 6752*sqrt(34435)*I)/(-55*sqrt(453092141) + 879*sqrt(155685) + 6752*sqrt(34435)*I)",
+     "(1, -1, -1)": "(-55*sqrt(453092141) + 879*sqrt(155685) + 6752*sqrt(34435)*I)/(879*sqrt(155685) + 55*sqrt(453092141) + 6752*sqrt(34435)*I)",
+     "(-1, 1, -1)": "(-55*sqrt(453092141) + 879*sqrt(155685) - 6752*sqrt(34435)*I)/(879*sqrt(155685) + 55*sqrt(453092141) - 6752*sqrt(34435)*I)",
+     "(-1, -1, 1)": "(879*sqrt(155685) + 55*sqrt(453092141) - 6752*sqrt(34435)*I)/(-55*sqrt(453092141) + 879*sqrt(155685) - 6752*sqrt(34435)*I)"
+    },
+    "right": {
+     "(1, 1, 1)": "(879*sqrt(155685) + 55*sqrt(453092141) + 6752*sqrt(34435)*I)/(-55*sqrt(453092141) + 879*sqrt(155685) + 6752*sqrt(34435)*I)",
+     "(1, -1, -1)": "(-55*sqrt(453092141) + 879*sqrt(155685) + 6752*sqrt(34435)*I)/(879*sqrt(155685) + 55*sqrt(453092141) + 6752*sqrt(34435)*I)",
+     "(-1, 1, -1)": "(-55*sqrt(453092141) + 879*sqrt(155685) - 6752*sqrt(34435)*I)/(879*sqrt(155685) + 55*sqrt(453092141) - 6752*sqrt(34435)*I)",
+     "(-1, -1, 1)": "(879*sqrt(155685) + 55*sqrt(453092141) - 6752*sqrt(34435)*I)/(-55*sqrt(453092141) + 879*sqrt(155685) - 6752*sqrt(34435)*I)"
+    }
+   },
+   "null radius r_2 = 1357/3880": {
+    "left": {
+     "(1, 1, 1)": "(665*sqrt(1415715) + 5536*sqrt(20661) + 87*sqrt(356846219))/(-87*sqrt(356846219) + 665*sqrt(1415715) + 5536*sqrt(20661))",
+     "(1, -1, -1)": "(-87*sqrt(356846219) - 5536*sqrt(20661) + 665*sqrt(1415715))/(-5536*sqrt(20661) + 665*sqrt(1415715) + 87*sqrt(356846219))",
+     "(-1, 1, -1)": "(-87*sqrt(356846219) + 665*sqrt(1415715) + 5536*sqrt(20661))/(665*sqrt(1415715) + 5536*sqrt(20661) + 87*sqrt(356846219))",
+     "(-1, -1, 1)": "(-87*sqrt(356846219) - 665*sqrt(1415715) + 5536*sqrt(20661))/(-665*sqrt(1415715) + 5536*sqrt(20661) + 87*sqrt(356846219))"
+    },
+    "right": {
+     "(1, 1, 1)": "(665*sqrt(1415715) + 5536*sqrt(20661) + 87*sqrt(356846219))/(-87*sqrt(356846219) + 665*sqrt(1415715) + 5536*sqrt(20661))",
+     "(1, -1, -1)": "(-87*sqrt(356846219) - 5536*sqrt(20661) + 665*sqrt(1415715))/(-5536*sqrt(20661) + 665*sqrt(1415715) + 87*sqrt(356846219))",
+     "(-1, 1, -1)": "(-87*sqrt(356846219) + 665*sqrt(1415715) + 5536*sqrt(20661))/(665*sqrt(1415715) + 5536*sqrt(20661) + 87*sqrt(356846219))",
+     "(-1, -1, 1)": "(-87*sqrt(356846219) - 665*sqrt(1415715) + 5536*sqrt(20661))/(-665*sqrt(1415715) + 5536*sqrt(20661) + 87*sqrt(356846219))"
+    }
+   },
+   "null radius r_3 = 1117/1455": {
+    "left": {
+     "(1, 1, 1)": "(1149*sqrt(62274) + 1085*sqrt(943810) - 52*sqrt(293734139)*I)/(1149*sqrt(62274) + 1085*sqrt(943810) + 52*sqrt(293734139)*I)",
+     "(1, -1, -1)": "(-1085*sqrt(943810) + 1149*sqrt(62274) - 52*sqrt(293734139)*I)/(-1085*sqrt(943810) + 1149*sqrt(62274) + 52*sqrt(293734139)*I)",
+     "(-1, 1, -1)": "(-1085*sqrt(943810) + 1149*sqrt(62274) + 52*sqrt(293734139)*I)/(-1085*sqrt(943810) + 1149*sqrt(62274) - 52*sqrt(293734139)*I)",
+     "(-1, -1, 1)": "(1149*sqrt(62274) + 1085*sqrt(943810) + 52*sqrt(293734139)*I)/(1149*sqrt(62274) + 1085*sqrt(943810) - 52*sqrt(293734139)*I)"
+    },
+    "right": {
+     "(1, 1, 1)": "(1149*sqrt(62274) + 1085*sqrt(943810) - 52*sqrt(293734139)*I)/(1149*sqrt(62274) + 1085*sqrt(943810) + 52*sqrt(293734139)*I)",
+     "(1, -1, -1)": "(-1085*sqrt(943810) + 1149*sqrt(62274) - 52*sqrt(293734139)*I)/(-1085*sqrt(943810) + 1149*sqrt(62274) + 52*sqrt(293734139)*I)",
+     "(-1, 1, -1)": "(-1085*sqrt(943810) + 1149*sqrt(62274) + 52*sqrt(293734139)*I)/(-1085*sqrt(943810) + 1149*sqrt(62274) - 52*sqrt(293734139)*I)",
+     "(-1, -1, 1)": "(1149*sqrt(62274) + 1085*sqrt(943810) + 52*sqrt(293734139)*I)/(1149*sqrt(62274) + 1085*sqrt(943810) - 52*sqrt(293734139)*I)"
+    }
+   },
+   "collision (1,2) at r = 5422/21825": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "37797/665 - 1758*sqrt(22666)/4655",
+     "(-1, 1, -1)": "-200165/7911 + 1330*sqrt(22666)/7911",
+     "(-1, -1, 1)": "0"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "37797/665 - 1758*sqrt(22666)/4655",
+     "(-1, 1, -1)": "-200165/7911 + 1330*sqrt(22666)/7911",
+     "(-1, -1, 1)": "0"
+    }
+   },
+   "collision (1,3) at r = 8133/31040": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "-10972/1085 + 844*sqrt(8169)/7595",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "-98735/13504 + 1085*sqrt(8169)/13504"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "-10972/1085 + 844*sqrt(8169)/7595",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "-98735/13504 + 1085*sqrt(8169)/13504"
+    }
+   },
+   "collision (2,3) at r = 13555/55872": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "258116/10341 - 13148*sqrt(385)/10341",
+     "(-1, -1, 1)": "428577/11072 - 21831*sqrt(385)/11072"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "258116/10341 - 13148*sqrt(385)/10341",
+     "(-1, -1, 1)": "428577/11072 - 21831*sqrt(385)/11072"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "1357/3880",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1357/3880",
+    "1723/2328",
+    "complex"
+   ],
+   [
+    "1723/2328",
+    "1117/1455",
+    "complex"
+   ],
+   [
+    "1117/1455",
+    "1",
+    "real"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "1723/2328",
+   "1357/3880",
+   "1117/1455"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "5422/21825"
+   ],
+   "(0, 2)": [
+    "8133/31040"
+   ],
+   "(1, 2)": [
+    "13555/55872"
+   ]
+  },
+  "W0": {
+   "(1, 1, 1)": "889/3600 + 67*sqrt(2711)*I/3600",
+   "(1, -1, -1)": "1609/4320 + 77*sqrt(2711)*I/4320",
+   "(-1, 1, -1)": "-1271/1440 + 13*sqrt(2711)*I/1440",
+   "(-1, -1, 1)": "2089/4800 + 83*sqrt(2711)*I/4800"
+  }
+ },
+ "N2/A/A": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(9386) - log(9383 + 137*sqrt(3)*I))",
+     "W": "9383/9386 + 137*sqrt(3)*I/9386",
+     "B": "137/40 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(26) - log(23 - 7*sqrt(3)*I))",
+     "W": "23/26 - 7*sqrt(3)*I/26",
+     "B": "-7/40 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(38) - log(37 + 5*sqrt(3)*I))",
+     "W": "37/38 + 5*sqrt(3)*I/38",
+     "B": "3/8 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(38) - log(37 + 5*sqrt(3)*I))",
+     "W": "37/38 + 5*sqrt(3)*I/38",
+     "B": "3/8 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "107/80",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "53/80",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "53/80",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "107/80",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "collision (1,2) at r = 3/304": {
+    "left": {
+     "(1, 1, 1)": "125660159/125657450 - 47559*sqrt(301)/125657450",
+     "(1, -1, -1)": "32620319/32617610 - 24231*sqrt(301)/32617610",
+     "(-1, 1, -1)": "32089415/32086706 - 24033*sqrt(301)/32086706",
+     "(-1, -1, 1)": "18789905/18789518 - 6951*sqrt(301)/18789518"
+    },
+    "right": {
+     "(1, 1, 1)": "125660159/125657450 - 47559*sqrt(301)/125657450",
+     "(1, -1, -1)": "32620319/32617610 - 24231*sqrt(301)/32617610",
+     "(-1, 1, -1)": "32089415/32086706 - 24033*sqrt(301)/32086706",
+     "(-1, -1, 1)": "18789905/18789518 - 6951*sqrt(301)/18789518"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "19/100",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "19/100",
+    "39/64",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "39/64",
+    "1",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "19/100",
+   "39/64",
+   "0"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "3/304"
+   ],
+   "(0, 2)": [],
+   "(1, 2)": []
+  },
+  "W0": {
+   "(1, 1, 1)": "9383/9386 + 137*sqrt(3)*I/9386",
+   "(1, -1, -1)": "23/26 - 7*sqrt(3)*I/26",
+   "(-1, 1, -1)": "37/38 + 5*sqrt(3)*I/38",
+   "(-1, -1, 1)": "37/38 + 5*sqrt(3)*I/38"
+  }
+ },
+ "N2/A/B": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(9386) - log(9383 + 137*sqrt(3)*I))",
+     "W": "9383/9386 + 137*sqrt(3)*I/9386",
+     "B": "137/40 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(26) - log(23 - 7*sqrt(3)*I))",
+     "W": "23/26 - 7*sqrt(3)*I/26",
+     "B": "-7/40 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(38) - log(37 + 5*sqrt(3)*I))",
+     "W": "37/38 + 5*sqrt(3)*I/38",
+     "B": "3/8 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(38) - log(37 + 5*sqrt(3)*I))",
+     "W": "37/38 + 5*sqrt(3)*I/38",
+     "B": "3/8 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(5719) - log(5233 - 1332*sqrt(3)*I))",
+     "W": "5233/5719 - 1332*sqrt(3)*I/5719",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(3913) - log(3863 + 360*sqrt(3)*I))",
+     "W": "3863/3913 + 360*sqrt(3)*I/3913",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(247) - log(239 + 36*sqrt(3)*I))",
+     "W": "239/247 + 36*sqrt(3)*I/247",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(5719) - log(5233 - 1332*sqrt(3)*I))",
+     "W": "5233/5719 - 1332*sqrt(3)*I/5719",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(3913) - log(3863 + 360*sqrt(3)*I))",
+     "W": "3863/3913 + 360*sqrt(3)*I/3913",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(247) - log(239 + 36*sqrt(3)*I))",
+     "W": "239/247 + 36*sqrt(3)*I/247",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log((9*sqrt(741) + 247 + 2*sqrt(247)*I)/(9*sqrt(741) + 247 - 2*sqrt(247)*I))",
+     "W": "(9*sqrt(741) + 247 + 2*sqrt(247)*I)/(9*sqrt(741) + 247 - 2*sqrt(247)*I)",
+     "B": "9*sqrt(741)/247 + 1 + 2*sqrt(247)*I/247",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(-9*sqrt(741) + 247 + 2*sqrt(247)*I)/(-247 + 9*sqrt(741) + 2*sqrt(247)*I))",
+     "W": "(-247 + 9*sqrt(741) - 2*sqrt(247)*I)/(-247 + 9*sqrt(741) + 2*sqrt(247)*I)",
+     "B": "-9*sqrt(741)/247 + 1 + 2*sqrt(247)*I/247",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(-9*sqrt(741) + 247 + 2*sqrt(247)*I)/(-247 + 9*sqrt(741) + 2*sqrt(247)*I))",
+     "W": "(-247 + 9*sqrt(741) - 2*sqrt(247)*I)/(-247 + 9*sqrt(741) + 2*sqrt(247)*I)",
+     "B": "-9*sqrt(741)/247 + 1 + 2*sqrt(247)*I/247",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log((9*sqrt(741) + 247 + 2*sqrt(247)*I)/(9*sqrt(741) + 247 - 2*sqrt(247)*I))",
+     "W": "(9*sqrt(741) + 247 + 2*sqrt(247)*I)/(9*sqrt(741) + 247 - 2*sqrt(247)*I)",
+     "B": "9*sqrt(741)/247 + 1 + 2*sqrt(247)*I/247",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "null radius r_1 = 19/100": {
+    "left": {
+     "(1, 1, 1)": "(2025 + I*(74*sqrt(3) - sqrt(38247)*I))/(2025 - I*(74*sqrt(3) - sqrt(38247)*I))",
+     "(1, -1, -1)": "(2025 + I*(-74*sqrt(3) + sqrt(38247)*I))/(2025 + I*(74*sqrt(3) - sqrt(38247)*I))",
+     "(-1, 1, -1)": "(2025 - I*(74*sqrt(3) + sqrt(38247)*I))/(2025 + I*(74*sqrt(3) + sqrt(38247)*I))",
+     "(-1, -1, 1)": "(2025 + I*(74*sqrt(3) + sqrt(38247)*I))/(2025 - I*(74*sqrt(3) + sqrt(38247)*I))"
+    },
+    "right": {
+     "(1, 1, 1)": "(2025 + I*(74*sqrt(3) - sqrt(38247)*I))/(2025 - I*(74*sqrt(3) - sqrt(38247)*I))",
+     "(1, -1, -1)": "(2025 + I*(-74*sqrt(3) + sqrt(38247)*I))/(2025 + I*(74*sqrt(3) - sqrt(38247)*I))",
+     "(-1, 1, -1)": "(2025 - I*(74*sqrt(3) + sqrt(38247)*I))/(2025 + I*(74*sqrt(3) + sqrt(38247)*I))",
+     "(-1, -1, 1)": "(2025 + I*(74*sqrt(3) + sqrt(38247)*I))/(2025 - I*(74*sqrt(3) + sqrt(38247)*I))"
+    }
+   },
+   "null radius r_2 = 39/64": {
+    "left": {
+     "(1, 1, 1)": "(967 + I*(-sqrt(8723) + 36*sqrt(3)))/(967 - I*(-sqrt(8723) + 36*sqrt(3)))",
+     "(1, -1, -1)": "(967 - I*(36*sqrt(3) + sqrt(8723)))/(967 + I*(36*sqrt(3) + sqrt(8723)))",
+     "(-1, 1, -1)": "(967 + I*(-36*sqrt(3) + sqrt(8723)))/(967 + I*(-sqrt(8723) + 36*sqrt(3)))",
+     "(-1, -1, 1)": "(967 + I*(36*sqrt(3) + sqrt(8723)))/(967 - I*(36*sqrt(3) + sqrt(8723)))"
+    },
+    "right": {
+     "(1, 1, 1)": "(967 + I*(-sqrt(8723) + 36*sqrt(3)))/(967 - I*(-sqrt(8723) + 36*sqrt(3)))",
+     "(1, -1, -1)": "(967 - I*(36*sqrt(3) + sqrt(8723)))/(967 + I*(36*sqrt(3) + sqrt(8723)))",
+     "(-1, 1, -1)": "(967 + I*(-36*sqrt(3) + sqrt(8723)))/(967 + I*(-sqrt(8723) + 36*sqrt(3)))",
+     "(-1, -1, 1)": "(967 + I*(36*sqrt(3) + sqrt(8723)))/(967 - I*(36*sqrt(3) + sqrt(8723)))"
+    }
+   },
+   "collision (1,2) at r = 3/304": {
+    "left": {
+     "(1, 1, 1)": "486/481 + 36*sqrt(3)*I/481",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "oo",
+     "(-1, -1, 1)": "37/38 + 37*sqrt(3)*I/513"
+    },
+    "right": {
+     "(1, 1, 1)": "486/481 + 36*sqrt(3)*I/481",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "oo",
+     "(-1, -1, 1)": "37/38 + 37*sqrt(3)*I/513"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "19/100",
+    "complex"
+   ],
+   [
+    "19/100",
+    "39/64",
+    "complex"
+   ],
+   [
+    "39/64",
+    "1",
+    "real"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "19/100",
+   "39/64",
+   "0"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "3/304"
+   ],
+   "(0, 2)": [],
+   "(1, 2)": []
+  },
+  "W0": {
+   "(1, 1, 1)": "9383/9386 + 137*sqrt(3)*I/9386",
+   "(1, -1, -1)": "23/26 - 7*sqrt(3)*I/26",
+   "(-1, 1, -1)": "37/38 + 5*sqrt(3)*I/38",
+   "(-1, -1, 1)": "37/38 + 5*sqrt(3)*I/38"
+  }
+ },
+ "N2/C/A": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(9386) - log(9383 + 137*sqrt(3)*I))",
+     "W": "9383/9386 + 137*sqrt(3)*I/9386",
+     "B": "137/40 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(26) - log(23 - 7*sqrt(3)*I))",
+     "W": "23/26 - 7*sqrt(3)*I/26",
+     "B": "-7/40 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(38) - log(37 + 5*sqrt(3)*I))",
+     "W": "37/38 + 5*sqrt(3)*I/38",
+     "B": "3/8 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(38) - log(37 + 5*sqrt(3)*I))",
+     "W": "37/38 + 5*sqrt(3)*I/38",
+     "B": "3/8 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "10193/12560",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "2045/2512",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "14911/12560",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "14911/12560",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "collision (1,2) at r = 15/11932": {
+    "left": {
+     "(1, 1, 1)": "74220222053/74219685788 - 1155837*sqrt(59585)/74219685788",
+     "(1, -1, -1)": "15105324529/15105217276 - 233193*sqrt(59585)/15105217276",
+     "(-1, 1, -1)": "160400783357/160400247092 - 1699179*sqrt(59585)/160400247092",
+     "(-1, -1, 1)": "160400783357/160400247092 - 1699179*sqrt(59585)/160400247092"
+    },
+    "right": {
+     "(1, 1, 1)": "74220222053/74219685788 - 1155837*sqrt(59585)/74219685788",
+     "(1, -1, -1)": "15105324529/15105217276 - 233193*sqrt(59585)/15105217276",
+     "(-1, 1, -1)": "160400783357/160400247092 - 1699179*sqrt(59585)/160400247092",
+     "(-1, -1, 1)": "160400783357/160400247092 - 1699179*sqrt(59585)/160400247092"
+    }
+   },
+   "collision (1,3) at r = 15/11932": {
+    "left": {
+     "(1, 1, 1)": "74220222053/74219685788 - 1155837*sqrt(59585)/74219685788",
+     "(1, -1, -1)": "15105324529/15105217276 - 233193*sqrt(59585)/15105217276",
+     "(-1, 1, -1)": "160400783357/160400247092 - 1699179*sqrt(59585)/160400247092",
+     "(-1, -1, 1)": "160400783357/160400247092 - 1699179*sqrt(59585)/160400247092"
+    },
+    "right": {
+     "(1, 1, 1)": "74220222053/74219685788 - 1155837*sqrt(59585)/74219685788",
+     "(1, -1, -1)": "15105324529/15105217276 - 233193*sqrt(59585)/15105217276",
+     "(-1, 1, -1)": "160400783357/160400247092 - 1699179*sqrt(59585)/160400247092",
+     "(-1, -1, 1)": "160400783357/160400247092 - 1699179*sqrt(59585)/160400247092"
+    }
+   },
+   "collision (2,3) at r = 4/10205": {
+    "left": {
+     "(1, 1, 1)": "14296483/14296451 - 17464*sqrt(3)/14296451",
+     "(1, -1, -1)": "43309609/43309513 - 52648*sqrt(3)/43309513",
+     "(-1, 1, -1)": "92064073/92063977 - 76760*sqrt(3)/92063977",
+     "(-1, -1, 1)": "92064073/92063977 - 76760*sqrt(3)/92063977"
+    },
+    "right": {
+     "(1, 1, 1)": "14296483/14296451 - 17464*sqrt(3)/14296451",
+     "(1, -1, -1)": "43309609/43309513 - 52648*sqrt(3)/43309513",
+     "(-1, 1, -1)": "92064073/92063977 - 76760*sqrt(3)/92063977",
+     "(-1, -1, 1)": "92064073/92063977 - 76760*sqrt(3)/92063977"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "1/785",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1/785",
+    "2359/12560",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "2359/12560",
+    "1",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "1/785",
+   "2359/12560",
+   "2359/12560"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "15/11932"
+   ],
+   "(0, 2)": [
+    "15/11932"
+   ],
+   "(1, 2)": [
+    "4/10205"
+   ]
+  },
+  "W0": {
+   "(1, 1, 1)": "9383/9386 + 137*sqrt(3)*I/9386",
+   "(1, -1, -1)": "23/26 - 7*sqrt(3)*I/26",
+   "(-1, 1, -1)": "37/38 + 5*sqrt(3)*I/38",
+   "(-1, -1, 1)": "37/38 + 5*sqrt(3)*I/38"
+  }
+ },
+ "N2/C/B": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(9386) - log(9383 + 137*sqrt(3)*I))",
+     "W": "9383/9386 + 137*sqrt(3)*I/9386",
+     "B": "137/40 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(26) - log(23 - 7*sqrt(3)*I))",
+     "W": "23/26 - 7*sqrt(3)*I/26",
+     "B": "-7/40 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(38) - log(37 + 5*sqrt(3)*I))",
+     "W": "37/38 + 5*sqrt(3)*I/38",
+     "B": "3/8 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(38) - log(37 + 5*sqrt(3)*I))",
+     "W": "37/38 + 5*sqrt(3)*I/38",
+     "B": "3/8 + sqrt(3)*I/40",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(127244329/142014889 - 1299536*sqrt(2355)*I/142014889)",
+     "W": "127244329/142014889 - 1299536*sqrt(2355)*I/142014889",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(11917) - log(11603 + 56*sqrt(2355)*I))",
+     "W": "11603/11917 + 56*sqrt(2355)*I/11917",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(11917) - log(11603 + 56*sqrt(2355)*I))",
+     "W": "11603/11917 + 56*sqrt(2355)*I/11917",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(127244329/142014889 - 1299536*sqrt(2355)*I/142014889)",
+     "W": "127244329/142014889 - 1299536*sqrt(2355)*I/142014889",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(11917) - log(11603 + 56*sqrt(2355)*I))",
+     "W": "11603/11917 + 56*sqrt(2355)*I/11917",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(11917) - log(11603 + 56*sqrt(2355)*I))",
+     "W": "11603/11917 + 56*sqrt(2355)*I/11917",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "8/2359 - 4*sqrt(2359)/2359",
+     "half": "-1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "8/2359 + 4*sqrt(2359)/2359",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4710/2359",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4710/2359",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "null radius r_1 = 1/785": {
+    "left": {
+     "(1, 1, 1)": "-1565/3 - 56*sqrt(781)/3",
+     "(1, -1, -1)": "-1565/3 + 56*sqrt(781)/3",
+     "(-1, 1, -1)": "-1",
+     "(-1, -1, 1)": "-1"
+    },
+    "right": {
+     "(1, 1, 1)": "-1565/3 - 56*sqrt(781)/3",
+     "(1, -1, -1)": "-1565/3 + 56*sqrt(781)/3",
+     "(-1, 1, -1)": "-1",
+     "(-1, -1, 1)": "-1"
+    }
+   },
+   "null radius r_2 = 2359/12560": {
+    "left": {
+     "(1, 1, 1)": "86683/89042 - 15*sqrt(1842379)*I/89042",
+     "(1, -1, -1)": "86683/89042 - 15*sqrt(1842379)*I/89042",
+     "(-1, 1, -1)": "86683/89042 + 15*sqrt(1842379)*I/89042",
+     "(-1, -1, 1)": "86683/89042 + 15*sqrt(1842379)*I/89042"
+    },
+    "right": {
+     "(1, 1, 1)": "86683/89042 - 15*sqrt(1842379)*I/89042",
+     "(1, -1, -1)": "86683/89042 - 15*sqrt(1842379)*I/89042",
+     "(-1, 1, -1)": "86683/89042 + 15*sqrt(1842379)*I/89042",
+     "(-1, -1, 1)": "86683/89042 + 15*sqrt(1842379)*I/89042"
+    }
+   },
+   "null radius r_3 = 2359/12560": {
+    "left": {
+     "(1, 1, 1)": "86683/89042 - 15*sqrt(1842379)*I/89042",
+     "(1, -1, -1)": "86683/89042 - 15*sqrt(1842379)*I/89042",
+     "(-1, 1, -1)": "86683/89042 + 15*sqrt(1842379)*I/89042",
+     "(-1, -1, 1)": "86683/89042 + 15*sqrt(1842379)*I/89042"
+    },
+    "right": {
+     "(1, 1, 1)": "86683/89042 - 15*sqrt(1842379)*I/89042",
+     "(1, -1, -1)": "86683/89042 - 15*sqrt(1842379)*I/89042",
+     "(-1, 1, -1)": "86683/89042 + 15*sqrt(1842379)*I/89042",
+     "(-1, -1, 1)": "86683/89042 + 15*sqrt(1842379)*I/89042"
+    }
+   },
+   "collision (1,2) at r = 15/11932": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "-671/178084",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "-671/178084",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    }
+   },
+   "collision (1,3) at r = 15/11932": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "-671/178084",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "-671/178084",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    }
+   },
+   "collision (2,3) at r = 4/10205": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "679/671 - 60*sqrt(3)/671",
+     "(-1, -1, 1)": "679/671 - 60*sqrt(3)/671"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "679/671 - 60*sqrt(3)/671",
+     "(-1, -1, 1)": "679/671 - 60*sqrt(3)/671"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "1/785",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1/785",
+    "2359/12560",
+    "complex"
+   ],
+   [
+    "2359/12560",
+    "1",
+    "real"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "1/785",
+   "2359/12560",
+   "2359/12560"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "15/11932"
+   ],
+   "(0, 2)": [
+    "15/11932"
+   ],
+   "(1, 2)": [
+    "4/10205"
+   ]
+  },
+  "W0": {
+   "(1, 1, 1)": "9383/9386 + 137*sqrt(3)*I/9386",
+   "(1, -1, -1)": "23/26 - 7*sqrt(3)*I/26",
+   "(-1, 1, -1)": "37/38 + 5*sqrt(3)*I/38",
+   "(-1, -1, 1)": "37/38 + 5*sqrt(3)*I/38"
+  }
+ },
+ "N3/A/A": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(93177) - log(3544 + 311*sqrt(89633)*I))",
+     "W": "3544/93177 + 311*sqrt(89633)*I/93177",
+     "B": "311/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(90117) - log(484 + 301*sqrt(89633)*I))",
+     "W": "484/90117 + 301*sqrt(89633)*I/90117",
+     "B": "301/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(80997) - log(-8636 + 269*sqrt(89633)*I))",
+     "W": "-8636/80997 + 269*sqrt(89633)*I/80997",
+     "B": "269/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(95697) - log(6064 + 319*sqrt(89633)*I))",
+     "W": "6064/95697 + 319*sqrt(89633)*I/95697",
+     "B": "319/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "394/375",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "356/375",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "356/375",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "394/375",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "collision (1,2) at r = 89633/89775": {
+    "left": {
+     "(1, 1, 1)": "-1318262366927/963414844749 + 75509886722*sqrt(142)/963414844749",
+     "(1, -1, -1)": "253054216058*sqrt(142)/851812655931 + 3133489867607/851812655931",
+     "(-1, 1, -1)": "3262647435287/980970223611 - 261126564038*sqrt(142)/980970223611",
+     "(-1, -1, 1)": "-1228364053247/1053313158429 - 53035308302*sqrt(142)/1053313158429"
+    },
+    "right": {
+     "(1, 1, 1)": "-1318262366927/963414844749 + 75509886722*sqrt(142)/963414844749",
+     "(1, -1, -1)": "253054216058*sqrt(142)/851812655931 + 3133489867607/851812655931",
+     "(-1, 1, -1)": "3262647435287/980970223611 - 261126564038*sqrt(142)/980970223611",
+     "(-1, -1, 1)": "-1228364053247/1053313158429 - 53035308302*sqrt(142)/1053313158429"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "899/900",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "899/900",
+    "2499/2500",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "2499/2500",
+    "1",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "899/900",
+   "2499/2500",
+   "0"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "89633/89775"
+   ],
+   "(0, 2)": [],
+   "(1, 2)": []
+  },
+  "W0": {
+   "(1, 1, 1)": "3544/93177 + 311*sqrt(89633)*I/93177",
+   "(1, -1, -1)": "484/90117 + 301*sqrt(89633)*I/90117",
+   "(-1, 1, -1)": "-8636/80997 + 269*sqrt(89633)*I/80997",
+   "(-1, -1, 1)": "6064/95697 + 319*sqrt(89633)*I/95697"
+  }
+ },
+ "N3/A/B": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(93177) - log(3544 + 311*sqrt(89633)*I))",
+     "W": "3544/93177 + 311*sqrt(89633)*I/93177",
+     "B": "311/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(90117) - log(484 + 301*sqrt(89633)*I))",
+     "W": "484/90117 + 301*sqrt(89633)*I/90117",
+     "B": "301/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(80997) - log(-8636 + 269*sqrt(89633)*I))",
+     "W": "-8636/80997 + 269*sqrt(89633)*I/80997",
+     "B": "269/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(95697) - log(6064 + 319*sqrt(89633)*I))",
+     "W": "6064/95697 + 319*sqrt(89633)*I/95697",
+     "B": "319/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(63829) - log(-25804 + 195*sqrt(89633)*I))",
+     "W": "-25804/63829 + 195*sqrt(89633)*I/63829",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(2246601) - log(-2235049 - 760*sqrt(89633)*I))",
+     "W": "-2235049/2246601 - 760*sqrt(89633)*I/2246601",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(177429) - log(87796 + 515*sqrt(89633)*I))",
+     "W": "87796/177429 + 515*sqrt(89633)*I/177429",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(63829) - log(-25804 + 195*sqrt(89633)*I))",
+     "W": "-25804/63829 + 195*sqrt(89633)*I/63829",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(2246601) - log(-2235049 - 760*sqrt(89633)*I))",
+     "W": "-2235049/2246601 - 760*sqrt(89633)*I/2246601",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(177429) - log(87796 + 515*sqrt(89633)*I))",
+     "W": "87796/177429 + 515*sqrt(89633)*I/177429",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log((76*sqrt(45849) + 320943 + 5*sqrt(4109583417)*I)/(76*sqrt(45849) + 320943 - 5*sqrt(4109583417)*I))",
+     "W": "(76*sqrt(45849) + 320943 + 5*sqrt(4109583417)*I)/(76*sqrt(45849) + 320943 - 5*sqrt(4109583417)*I)",
+     "B": "76*sqrt(45849)/320943 + 1 + 5*sqrt(4109583417)*I/320943",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(-76*sqrt(45849) + 320943 + 5*sqrt(4109583417)*I)/(-320943 + 76*sqrt(45849) + 5*sqrt(4109583417)*I))",
+     "W": "(-320943 + 76*sqrt(45849) - 5*sqrt(4109583417)*I)/(-320943 + 76*sqrt(45849) + 5*sqrt(4109583417)*I)",
+     "B": "-76*sqrt(45849)/320943 + 1 + 5*sqrt(4109583417)*I/320943",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(-76*sqrt(45849) + 320943 + 5*sqrt(4109583417)*I)/(-320943 + 76*sqrt(45849) + 5*sqrt(4109583417)*I))",
+     "W": "(-320943 + 76*sqrt(45849) - 5*sqrt(4109583417)*I)/(-320943 + 76*sqrt(45849) + 5*sqrt(4109583417)*I)",
+     "B": "-76*sqrt(45849)/320943 + 1 + 5*sqrt(4109583417)*I/320943",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log((76*sqrt(45849) + 320943 + 5*sqrt(4109583417)*I)/(76*sqrt(45849) + 320943 - 5*sqrt(4109583417)*I))",
+     "W": "(76*sqrt(45849) + 320943 + 5*sqrt(4109583417)*I)/(76*sqrt(45849) + 320943 - 5*sqrt(4109583417)*I)",
+     "B": "76*sqrt(45849)/320943 + 1 + 5*sqrt(4109583417)*I/320943",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "null radius r_1 = 899/900": {
+    "left": {
+     "(1, 1, 1)": "(-sqrt(80580067) + 7192 + 195*sqrt(899)*I)/(7192 + sqrt(80580067) + 195*sqrt(899)*I)",
+     "(1, -1, -1)": "(-sqrt(80580067) - 7192 - 195*sqrt(899)*I)/(-7192 + sqrt(80580067) - 195*sqrt(899)*I)",
+     "(-1, 1, -1)": "(-8*sqrt(80580067) + 95561 - 195*sqrt(89633)*I)/(8*sqrt(80580067) + 95561 + 195*sqrt(89633)*I)",
+     "(-1, -1, 1)": "(-sqrt(80580067) - 7192 + 195*sqrt(899)*I)/(-7192 + sqrt(80580067) + 195*sqrt(899)*I)"
+    },
+    "right": {
+     "(1, 1, 1)": "(-8*sqrt(80580067) + 95561 + 195*sqrt(89633)*I)/(8*sqrt(80580067) + 95561 - 195*sqrt(89633)*I)",
+     "(1, -1, -1)": "(-95561 - 8*sqrt(80580067) + 195*sqrt(89633)*I)/(-95561 + 8*sqrt(80580067) - 195*sqrt(89633)*I)",
+     "(-1, 1, -1)": "(-8*sqrt(80580067) + 95561 - 195*sqrt(89633)*I)/(8*sqrt(80580067) + 95561 + 195*sqrt(89633)*I)",
+     "(-1, -1, 1)": "(-95561 - 8*sqrt(80580067) - 195*sqrt(89633)*I)/(-95561 + 8*sqrt(80580067) + 195*sqrt(89633)*I)"
+    }
+   },
+   "null radius r_2 = 2499/2500": {
+    "left": {
+     "(1, 1, 1)": "(105289 + I*(56*sqrt(4571283) + 515*sqrt(89633)))/(105289 - I*(56*sqrt(4571283) + 515*sqrt(89633)))",
+     "(1, -1, -1)": "(105289 + I*(-515*sqrt(89633) + 56*sqrt(4571283)))/(105289 - I*(-515*sqrt(89633) + 56*sqrt(4571283)))",
+     "(-1, 1, -1)": "(105289 - I*(56*sqrt(4571283) + 515*sqrt(89633)))/(105289 + I*(56*sqrt(4571283) + 515*sqrt(89633)))",
+     "(-1, -1, 1)": "(105289 + I*(-56*sqrt(4571283) + 515*sqrt(89633)))/(105289 + I*(-515*sqrt(89633) + 56*sqrt(4571283)))"
+    },
+    "right": {
+     "(1, 1, 1)": "(105289 + I*(56*sqrt(4571283) + 515*sqrt(89633)))/(105289 - I*(56*sqrt(4571283) + 515*sqrt(89633)))",
+     "(1, -1, -1)": "(105289 + I*(-515*sqrt(89633) + 56*sqrt(4571283)))/(105289 - I*(-515*sqrt(89633) + 56*sqrt(4571283)))",
+     "(-1, 1, -1)": "(105289 - I*(56*sqrt(4571283) + 515*sqrt(89633)))/(105289 + I*(56*sqrt(4571283) + 515*sqrt(89633)))",
+     "(-1, -1, 1)": "(105289 + I*(-56*sqrt(4571283) + 515*sqrt(89633)))/(105289 + I*(-515*sqrt(89633) + 56*sqrt(4571283)))"
+    }
+   },
+   "collision (1,2) at r = 89633/89775": {
+    "left": {
+     "(1, 1, 1)": "2964/92597 + 195*sqrt(89633)*I/92597",
+     "(1, -1, -1)": "oo",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "7828/97461 + 515*sqrt(89633)*I/97461"
+    },
+    "right": {
+     "(1, 1, 1)": "2964/92597 + 195*sqrt(89633)*I/92597",
+     "(1, -1, -1)": "oo",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "7828/97461 + 515*sqrt(89633)*I/97461"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "899/900",
+    "complex"
+   ],
+   [
+    "899/900",
+    "2499/2500",
+    "complex"
+   ],
+   [
+    "2499/2500",
+    "1",
+    "real"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "899/900",
+   "2499/2500",
+   "0"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "89633/89775"
+   ],
+   "(0, 2)": [],
+   "(1, 2)": []
+  },
+  "W0": {
+   "(1, 1, 1)": "3544/93177 + 311*sqrt(89633)*I/93177",
+   "(1, -1, -1)": "484/90117 + 301*sqrt(89633)*I/90117",
+   "(-1, 1, -1)": "-8636/80997 + 269*sqrt(89633)*I/80997",
+   "(-1, -1, 1)": "6064/95697 + 319*sqrt(89633)*I/95697"
+  }
+ },
+ "N3/C/A": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(93177) - log(3544 + 311*sqrt(89633)*I))",
+     "W": "3544/93177 + 311*sqrt(89633)*I/93177",
+     "B": "311/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(90117) - log(484 + 301*sqrt(89633)*I))",
+     "W": "484/90117 + 301*sqrt(89633)*I/90117",
+     "B": "301/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(80997) - log(-8636 + 269*sqrt(89633)*I))",
+     "W": "-8636/80997 + 269*sqrt(89633)*I/80997",
+     "B": "269/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(95697) - log(6064 + 319*sqrt(89633)*I))",
+     "W": "6064/95697 + 319*sqrt(89633)*I/95697",
+     "B": "319/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "3541/276600",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "370691/276600",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "350659/276600",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "381509/276600",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "collision (1,2) at r = 179266/551817": {
+    "left": {
+     "(1, 1, 1)": "-35450573884458737/12439067066927487 - 38457890163500*sqrt(745102)/12439067066927487",
+     "(1, -1, -1)": "136705785518703137/88816144567316913 - 120394685275340*sqrt(745102)/88816144567316913",
+     "(-1, 1, -1)": "128463646634194337/80574005682808113 - 115911142226380*sqrt(745102)/80574005682808113",
+     "(-1, -1, 1)": "141110389704232337/93220748752846113 - 122723554978580*sqrt(745102)/93220748752846113"
+    },
+    "right": {
+     "(1, 1, 1)": "-35450573884458737/12439067066927487 - 38457890163500*sqrt(745102)/12439067066927487",
+     "(1, -1, -1)": "136705785518703137/88816144567316913 - 120394685275340*sqrt(745102)/88816144567316913",
+     "(-1, 1, -1)": "128463646634194337/80574005682808113 - 115911142226380*sqrt(745102)/80574005682808113",
+     "(-1, -1, 1)": "141110389704232337/93220748752846113 - 122723554978580*sqrt(745102)/93220748752846113"
+    }
+   },
+   "collision (1,3) at r = 268899/828878": {
+    "left": {
+     "(1, 1, 1)": "-19968013471107493/7025465190521693 - 14420915335180*sqrt(1679937)/7025465190521693",
+     "(1, -1, -1)": "77158392495826693/50164913834197507 - 45231072344260*sqrt(1679937)/50164913834197507",
+     "(-1, 1, -1)": "10357333163278099/6501121925902501 - 6220750697180*sqrt(1679937)/6501121925902501",
+     "(-1, -1, 1)": "79647452799610693/52653974137981507 - 46106822607460*sqrt(1679937)/52653974137981507"
+    },
+    "right": {
+     "(1, 1, 1)": "-19968013471107493/7025465190521693 - 14420915335180*sqrt(1679937)/7025465190521693",
+     "(1, -1, -1)": "77158392495826693/50164913834197507 - 45231072344260*sqrt(1679937)/50164913834197507",
+     "(-1, 1, -1)": "10357333163278099/6501121925902501 - 6220750697180*sqrt(1679937)/6501121925902501",
+     "(-1, -1, 1)": "79647452799610693/52653974137981507 - 46106822607460*sqrt(1679937)/52653974137981507"
+    }
+   },
+   "collision (2,3) at r = 2240825/6912234": {
+    "left": {
+     "(1, 1, 1)": "-1387629937830361229/488892502612978821 - 600854544808340*sqrt(4671409)/488892502612978821",
+     "(1, -1, -1)": "5367527044280408429/3491004603837068379 - 1886400075485660*sqrt(4671409)/3491004603837068379",
+     "(-1, 1, -1)": "5043377271111195629/3166854830667855579 - 1816061919645340*sqrt(4671409)/3166854830667855579",
+     "(-1, -1, 1)": "5540786976000310829/3664264535556970779 - 1922941384441340*sqrt(4671409)/3664264535556970779"
+    },
+    "right": {
+     "(1, 1, 1)": "-1387629937830361229/488892502612978821 - 600854544808340*sqrt(4671409)/488892502612978821",
+     "(1, -1, -1)": "5367527044280408429/3491004603837068379 - 1886400075485660*sqrt(4671409)/3491004603837068379",
+     "(-1, 1, -1)": "5043377271111195629/3166854830667855579 - 1816061919645340*sqrt(4671409)/3166854830667855579",
+     "(-1, -1, 1)": "5540786976000310829/3664264535556970779 - 1922941384441340*sqrt(4671409)/3664264535556970779"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "57853/92200",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "57853/92200",
+    "7343/11064",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "7343/11064",
+    "23623/34575",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "23623/34575",
+    "1",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "7343/11064",
+   "57853/92200",
+   "23623/34575"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "179266/551817"
+   ],
+   "(0, 2)": [
+    "268899/828878"
+   ],
+   "(1, 2)": [
+    "2240825/6912234"
+   ]
+  },
+  "W0": {
+   "(1, 1, 1)": "3544/93177 + 311*sqrt(89633)*I/93177",
+   "(1, -1, -1)": "484/90117 + 301*sqrt(89633)*I/90117",
+   "(-1, 1, -1)": "-8636/80997 + 269*sqrt(89633)*I/80997",
+   "(-1, -1, 1)": "6064/95697 + 319*sqrt(89633)*I/95697"
+  }
+ },
+ "N3/C/B": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(93177) - log(3544 + 311*sqrt(89633)*I))",
+     "W": "3544/93177 + 311*sqrt(89633)*I/93177",
+     "B": "311/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(90117) - log(484 + 301*sqrt(89633)*I))",
+     "W": "484/90117 + 301*sqrt(89633)*I/90117",
+     "B": "301/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(80997) - log(-8636 + 269*sqrt(89633)*I))",
+     "W": "-8636/80997 + 269*sqrt(89633)*I/80997",
+     "B": "269/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(95697) - log(6064 + 319*sqrt(89633)*I))",
+     "W": "6064/95697 + 319*sqrt(89633)*I/95697",
+     "B": "319/300 + sqrt(89633)*I/300",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(208620736429) - log(-98888753917 + 11666372*sqrt(247924878)*I))",
+     "W": "-98888753917/208620736429 + 11666372*sqrt(247924878)*I/208620736429",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(1740338094359) - log(-1098153833863 + 85745948*sqrt(247924878)*I))",
+     "W": "-1098153833863/1740338094359 + 85745948*sqrt(247924878)*I/1740338094359",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(2615890940411) - log(-1004473411397 + 153398152*sqrt(247924878)*I))",
+     "W": "-1004473411397/2615890940411 + 153398152*sqrt(247924878)*I/2615890940411",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(208620736429) - log(-98888753917 + 11666372*sqrt(247924878)*I))",
+     "W": "-98888753917/208620736429 + 11666372*sqrt(247924878)*I/208620736429",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(1740338094359) - log(-1098153833863 + 85745948*sqrt(247924878)*I))",
+     "W": "-1098153833863/1740338094359 + 85745948*sqrt(247924878)*I/1740338094359",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "I*(log(2615890940411) - log(-1004473411397 + 153398152*sqrt(247924878)*I))",
+     "W": "-1004473411397/2615890940411 + 153398152*sqrt(247924878)*I/2615890940411",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-4975*sqrt(346927378)/173463689 - 7457*sqrt(8199968514)/1366661419 - 5605*sqrt(1274443737)/424814579 + 1",
+     "half": "-1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-7457*sqrt(8199968514)/1366661419 + 5605*sqrt(1274443737)/424814579 + 4975*sqrt(346927378)/173463689 + 1",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-4975*sqrt(346927378)/173463689 + 5605*sqrt(1274443737)/424814579 + 7457*sqrt(8199968514)/1366661419 + 1",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-5605*sqrt(1274443737)/424814579 + 7457*sqrt(8199968514)/1366661419 + 4975*sqrt(346927378)/173463689 + 1",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "null radius r_1 = 7343/11064": {
+    "left": {
+     "(1, 1, 1)": "(11007*sqrt(601) + 61*sqrt(658175119) + 14696*sqrt(626)*I)/(-61*sqrt(658175119) + 11007*sqrt(601) + 14696*sqrt(626)*I)",
+     "(1, -1, -1)": "(-61*sqrt(658175119) + 11007*sqrt(601) + 14696*sqrt(626)*I)/(11007*sqrt(601) + 61*sqrt(658175119) + 14696*sqrt(626)*I)",
+     "(-1, 1, -1)": "(-61*sqrt(658175119) + 11007*sqrt(601) - 14696*sqrt(626)*I)/(11007*sqrt(601) + 61*sqrt(658175119) - 14696*sqrt(626)*I)",
+     "(-1, -1, 1)": "(11007*sqrt(601) + 61*sqrt(658175119) - 14696*sqrt(626)*I)/(-61*sqrt(658175119) + 11007*sqrt(601) - 14696*sqrt(626)*I)"
+    },
+    "right": {
+     "(1, 1, 1)": "(11007*sqrt(277061) + 61*sqrt(303418729859) + 14696*sqrt(288586)*I)/(-61*sqrt(303418729859) + 11007*sqrt(277061) + 14696*sqrt(288586)*I)",
+     "(1, -1, -1)": "(-61*sqrt(303418729859) + 11007*sqrt(277061) + 14696*sqrt(288586)*I)/(11007*sqrt(277061) + 61*sqrt(303418729859) + 14696*sqrt(288586)*I)",
+     "(-1, 1, -1)": "(-61*sqrt(303418729859) + 11007*sqrt(277061) - 14696*sqrt(288586)*I)/(11007*sqrt(277061) + 61*sqrt(303418729859) - 14696*sqrt(288586)*I)",
+     "(-1, -1, 1)": "(11007*sqrt(277061) + 61*sqrt(303418729859) - 14696*sqrt(288586)*I)/(-61*sqrt(303418729859) + 11007*sqrt(277061) - 14696*sqrt(288586)*I)"
+    }
+   },
+   "null radius r_2 = 57853/92200": {
+    "left": {
+     "(1, 1, 1)": "(115832*sqrt(865758) + 144475*sqrt(853311) + 321*sqrt(2390532994489))/(-321*sqrt(2390532994489) + 115832*sqrt(865758) + 144475*sqrt(853311))",
+     "(1, -1, -1)": "(-321*sqrt(2390532994489) - 115832*sqrt(865758) + 144475*sqrt(853311))/(-115832*sqrt(865758) + 144475*sqrt(853311) + 321*sqrt(2390532994489))",
+     "(-1, 1, -1)": "(-321*sqrt(2390532994489) + 115832*sqrt(865758) + 144475*sqrt(853311))/(115832*sqrt(865758) + 144475*sqrt(853311) + 321*sqrt(2390532994489))",
+     "(-1, -1, 1)": "(-115832*sqrt(865758) + 144475*sqrt(853311) + 321*sqrt(2390532994489))/(-321*sqrt(2390532994489) - 115832*sqrt(865758) + 144475*sqrt(853311))"
+    },
+    "right": {
+     "(1, 1, 1)": "(115832*sqrt(865758) + 144475*sqrt(853311) + 321*sqrt(2390532994489))/(-321*sqrt(2390532994489) + 115832*sqrt(865758) + 144475*sqrt(853311))",
+     "(1, -1, -1)": "(-321*sqrt(2390532994489) - 115832*sqrt(865758) + 144475*sqrt(853311))/(-115832*sqrt(865758) + 144475*sqrt(853311) + 321*sqrt(2390532994489))",
+     "(-1, 1, -1)": "(-321*sqrt(2390532994489) + 115832*sqrt(865758) + 144475*sqrt(853311))/(115832*sqrt(865758) + 144475*sqrt(853311) + 321*sqrt(2390532994489))",
+     "(-1, -1, 1)": "(-115832*sqrt(865758) + 144475*sqrt(853311) + 321*sqrt(2390532994489))/(-321*sqrt(2390532994489) - 115832*sqrt(865758) + 144475*sqrt(853311))"
+    }
+   },
+   "null radius r_3 = 23623/34575": {
+    "left": {
+     "(1, 1, 1)": "(70893*sqrt(554122) + 118075*sqrt(568874) - 296*sqrt(976121565499)*I)/(70893*sqrt(554122) + 118075*sqrt(568874) + 296*sqrt(976121565499)*I)",
+     "(1, -1, -1)": "(-118075*sqrt(568874) + 70893*sqrt(554122) - 296*sqrt(976121565499)*I)/(-118075*sqrt(568874) + 70893*sqrt(554122) + 296*sqrt(976121565499)*I)",
+     "(-1, 1, -1)": "(-118075*sqrt(568874) + 70893*sqrt(554122) + 296*sqrt(976121565499)*I)/(-118075*sqrt(568874) + 70893*sqrt(554122) - 296*sqrt(976121565499)*I)",
+     "(-1, -1, 1)": "(70893*sqrt(554122) + 118075*sqrt(568874) + 296*sqrt(976121565499)*I)/(70893*sqrt(554122) + 118075*sqrt(568874) - 296*sqrt(976121565499)*I)"
+    },
+    "right": {
+     "(1, 1, 1)": "(70893*sqrt(554122) + 118075*sqrt(568874) - 296*sqrt(976121565499)*I)/(70893*sqrt(554122) + 118075*sqrt(568874) + 296*sqrt(976121565499)*I)",
+     "(1, -1, -1)": "(-118075*sqrt(568874) + 70893*sqrt(554122) - 296*sqrt(976121565499)*I)/(-118075*sqrt(568874) + 70893*sqrt(554122) + 296*sqrt(976121565499)*I)",
+     "(-1, 1, -1)": "(-118075*sqrt(568874) + 70893*sqrt(554122) + 296*sqrt(976121565499)*I)/(-118075*sqrt(568874) + 70893*sqrt(554122) - 296*sqrt(976121565499)*I)",
+     "(-1, -1, 1)": "(70893*sqrt(554122) + 118075*sqrt(568874) + 296*sqrt(976121565499)*I)/(70893*sqrt(554122) + 118075*sqrt(568874) - 296*sqrt(976121565499)*I)"
+    }
+   },
+   "collision (1,2) at r = 179266/551817": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "-23074341/28895 + 7338*sqrt(9887854)/28895",
+     "(-1, 1, -1)": "-36344131/77049 + 11558*sqrt(9887854)/77049",
+     "(-1, -1, 1)": "0"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "-23074341/28895 + 7338*sqrt(9887854)/28895",
+     "(-1, 1, -1)": "-36344131/77049 + 11558*sqrt(9887854)/77049",
+     "(-1, -1, 1)": "0"
+    }
+   },
+   "collision (1,3) at r = 268899/828878": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "(-4015257238766879*sqrt(75359841) - 55175583*sqrt(482266810354558569) + 34869804858719816018)/(-55175583*sqrt(482266810354558569) + 4015257238766879*sqrt(75359841) + 34869804858719816018)",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "(-4015257238766879*sqrt(75359841) + 55175583*sqrt(482266810354558569) + 34869804858719816018)/(55175583*sqrt(482266810354558569) + 4015257238766879*sqrt(75359841) + 34869804858719816018)"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "(-4015257238766879*sqrt(75359841) - 55175583*sqrt(482266810354558569) + 34869804858719816018)/(-55175583*sqrt(482266810354558569) + 4015257238766879*sqrt(75359841) + 34869804858719816018)",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "(-4015257238766879*sqrt(75359841) + 55175583*sqrt(482266810354558569) + 34869804858719816018)/(55175583*sqrt(482266810354558569) + 4015257238766879*sqrt(75359841) + 34869804858719816018)"
+    }
+   },
+   "collision (2,3) at r = 2240825/6912234": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "221803801/496251 - 72395*sqrt(9386857)/496251",
+     "(-1, -1, 1)": "362003289/231664 - 118155*sqrt(9386857)/231664"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "221803801/496251 - 72395*sqrt(9386857)/496251",
+     "(-1, -1, 1)": "362003289/231664 - 118155*sqrt(9386857)/231664"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "57853/92200",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "57853/92200",
+    "7343/11064",
+    "complex"
+   ],
+   [
+    "7343/11064",
+    "23623/34575",
+    "complex"
+   ],
+   [
+    "23623/34575",
+    "1",
+    "real"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "7343/11064",
+   "57853/92200",
+   "23623/34575"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "179266/551817"
+   ],
+   "(0, 2)": [
+    "268899/828878"
+   ],
+   "(1, 2)": [
+    "2240825/6912234"
+   ]
+  },
+  "W0": {
+   "(1, 1, 1)": "3544/93177 + 311*sqrt(89633)*I/93177",
+   "(1, -1, -1)": "484/90117 + 301*sqrt(89633)*I/90117",
+   "(-1, 1, -1)": "-8636/80997 + 269*sqrt(89633)*I/80997",
+   "(-1, -1, 1)": "6064/95697 + 319*sqrt(89633)*I/95697"
+  }
+ },
+ "N4/A/A": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(-351/1331 - 406*sqrt(10)*I/1331)",
+     "W": "-351/1331 - 406*sqrt(10)*I/1331",
+     "B": "-7/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "139/400",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "661/400",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "661/400",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "139/400",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "collision (1,2) at r = 29/110": {
+    "left": {
+     "(1, 1, 1)": "279903/182347 - 12470*sqrt(290)/182347",
+     "(1, -1, -1)": "1976983/1879427 - 36018*sqrt(290)/1879427",
+     "(-1, 1, -1)": "1976983/1879427 - 36018*sqrt(290)/1879427",
+     "(-1, -1, 1)": "-50223/47333 - 986*sqrt(290)/47333"
+    },
+    "right": {
+     "(1, 1, 1)": "279903/182347 - 12470*sqrt(290)/182347",
+     "(1, -1, -1)": "1976983/1879427 - 36018*sqrt(290)/1879427",
+     "(-1, 1, -1)": "1976983/1879427 - 36018*sqrt(290)/1879427",
+     "(-1, -1, 1)": "-50223/47333 - 986*sqrt(290)/47333"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "319/400",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "319/400",
+    "1",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "319/400",
+   "319/400",
+   "0"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "29/110"
+   ],
+   "(0, 2)": [],
+   "(1, 2)": []
+  },
+  "W0": {
+   "(1, 1, 1)": "-351/1331 - 406*sqrt(10)*I/1331",
+   "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+   "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+   "(-1, -1, 1)": "9/11 + 2*sqrt(10)*I/11"
+  }
+ },
+ "N4/A/B": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(-351/1331 - 406*sqrt(10)*I/1331)",
+     "W": "-351/1331 - 406*sqrt(10)*I/1331",
+     "B": "-7/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(2*sqrt(10) + 9*I)/(2*sqrt(10) - 9*I))",
+     "W": "(-2*sqrt(10) - 9*I)/(2*sqrt(10) - 9*I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(-(sqrt(10) - 10*I)/(sqrt(10) + 10*I))",
+     "W": "(-sqrt(10) + 10*I)/(sqrt(10) + 10*I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(-(sqrt(10) - 10*I)/(sqrt(10) + 10*I))",
+     "W": "(-sqrt(10) + 10*I)/(sqrt(10) + 10*I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(2*sqrt(10) + 9*I)/(2*sqrt(10) - 9*I))",
+     "W": "(-2*sqrt(10) - 9*I)/(2*sqrt(10) - 9*I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(-(sqrt(10) - 10*I)/(sqrt(10) + 10*I))",
+     "W": "(-sqrt(10) + 10*I)/(sqrt(10) + 10*I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(-(sqrt(10) - 10*I)/(sqrt(10) + 10*I))",
+     "W": "(-sqrt(10) + 10*I)/(sqrt(10) + 10*I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(sqrt(10) - I)/(sqrt(10) + I))",
+     "W": "(-sqrt(10) + I)/(sqrt(10) + I)",
+     "B": "2/11 + 2*sqrt(10)*I/11",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "20/11 + 2*sqrt(10)*I/11",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "20/11 + 2*sqrt(10)*I/11",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(sqrt(10) - I)/(sqrt(10) + I))",
+     "W": "(-sqrt(10) + I)/(sqrt(10) + I)",
+     "B": "2/11 + 2*sqrt(10)*I/11",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "null radius r_1 = 319/400": {
+    "left": {
+     "(1, 1, 1)": "9/11 - 2*sqrt(10)*I/11",
+     "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, -1, 1)": "9/11 - 2*sqrt(10)*I/11"
+    },
+    "right": {
+     "(1, 1, 1)": "9/11 - 2*sqrt(10)*I/11",
+     "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, -1, 1)": "9/11 - 2*sqrt(10)*I/11"
+    }
+   },
+   "null radius r_2 = 319/400": {
+    "left": {
+     "(1, 1, 1)": "9/11 - 2*sqrt(10)*I/11",
+     "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, -1, 1)": "9/11 - 2*sqrt(10)*I/11"
+    },
+    "right": {
+     "(1, 1, 1)": "9/11 - 2*sqrt(10)*I/11",
+     "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, -1, 1)": "9/11 - 2*sqrt(10)*I/11"
+    }
+   },
+   "collision (1,2) at r = 29/110": {
+    "left": {
+     "(1, 1, 1)": "0",
+     "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, -1, 1)": "oo"
+    },
+    "right": {
+     "(1, 1, 1)": "0",
+     "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+     "(-1, -1, 1)": "oo"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "319/400",
+    "complex"
+   ],
+   [
+    "319/400",
+    "1",
+    "real"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "319/400",
+   "319/400",
+   "0"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "29/110"
+   ],
+   "(0, 2)": [],
+   "(1, 2)": []
+  },
+  "W0": {
+   "(1, 1, 1)": "-351/1331 - 406*sqrt(10)*I/1331",
+   "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+   "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+   "(-1, -1, 1)": "9/11 + 2*sqrt(10)*I/11"
+  }
+ },
+ "N4/C/A": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(-351/1331 - 406*sqrt(10)*I/1331)",
+     "W": "-351/1331 - 406*sqrt(10)*I/1331",
+     "B": "-7/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "oo",
+     "half": "?",
+     "zero_mod_2pi": true,
+     "note": "via V/S",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-9/20",
+     "half": "-1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "89/60",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "89/60",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "89/60",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "collision (1,2) at r = 29/33": {
+    "left": {
+     "(1, 1, 1)": "-46479/2299 - 2726*sqrt(290)/2299",
+     "(1, -1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, 1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, -1, 1)": "71999/23221 - 4002*sqrt(290)/23221"
+    },
+    "right": {
+     "(1, 1, 1)": "-46479/2299 - 2726*sqrt(290)/2299",
+     "(1, -1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, 1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, -1, 1)": "71999/23221 - 4002*sqrt(290)/23221"
+    }
+   },
+   "collision (1,3) at r = 29/33": {
+    "left": {
+     "(1, 1, 1)": "-46479/2299 - 2726*sqrt(290)/2299",
+     "(1, -1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, 1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, -1, 1)": "71999/23221 - 4002*sqrt(290)/23221"
+    },
+    "right": {
+     "(1, 1, 1)": "-46479/2299 - 2726*sqrt(290)/2299",
+     "(1, -1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, 1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, -1, 1)": "71999/23221 - 4002*sqrt(290)/23221"
+    }
+   },
+   "collision (2,3) at r = 29/33": {
+    "left": {
+     "(1, 1, 1)": "-46479/2299 - 2726*sqrt(290)/2299",
+     "(1, -1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, 1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, -1, 1)": "71999/23221 - 4002*sqrt(290)/23221"
+    },
+    "right": {
+     "(1, 1, 1)": "-46479/2299 - 2726*sqrt(290)/2299",
+     "(1, -1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, 1, -1)": "71999/23221 - 4002*sqrt(290)/23221",
+     "(-1, -1, 1)": "71999/23221 - 4002*sqrt(290)/23221"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "29/30",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "29/30",
+    "1",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "29/30",
+   "29/30",
+   "29/30"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "29/33"
+   ],
+   "(0, 2)": [
+    "29/33"
+   ],
+   "(1, 2)": [
+    "29/33"
+   ]
+  },
+  "W0": {
+   "(1, 1, 1)": "-351/1331 - 406*sqrt(10)*I/1331",
+   "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+   "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+   "(-1, -1, 1)": "9/11 + 2*sqrt(10)*I/11"
+  }
+ },
+ "N4/C/B": {
+  "points": {
+   "r->oo": {
+    "(1, 1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "-I*log(-351/1331 - 406*sqrt(10)*I/1331)",
+     "W": "-351/1331 - 406*sqrt(10)*I/1331",
+     "B": "-7/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "IDENTITY",
+     "Omega": "I*(log(11) - log(9 + 2*sqrt(10)*I))",
+     "W": "9/11 + 2*sqrt(10)*I/11",
+     "B": "29/20 + 29*sqrt(10)*I/200",
+     "half": "complex",
+     "zero_mod_2pi": "False",
+     "note": "",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(sqrt(3) - I)/(sqrt(3) + I))",
+     "W": "(-sqrt(3) + I)/(sqrt(3) + I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(sqrt(3) - I)/(sqrt(3) + I))",
+     "W": "(-sqrt(3) + I)/(sqrt(3) + I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(sqrt(3) - I)/(sqrt(3) + I))",
+     "W": "(-sqrt(3) + I)/(sqrt(3) + I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->r_s-": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "4",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(sqrt(3) - I)/(sqrt(3) + I))",
+     "W": "(-sqrt(3) + I)/(sqrt(3) + I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(sqrt(3) - I)/(sqrt(3) + I))",
+     "W": "(-sqrt(3) + I)/(sqrt(3) + I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "-I*log(-(sqrt(3) - I)/(sqrt(3) + I))",
+     "W": "(-sqrt(3) + I)/(sqrt(3) + I)",
+     "B": "0",
+     "half": "0",
+     "zero_mod_2pi": "False",
+     "note": "0/0 resolved along the family (exact)",
+     "numeric": "ok"
+    }
+   },
+   "r->0+": {
+    "(1, 1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "-1/2",
+     "half": "-1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(1, -1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "3/2",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, 1, -1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "3/2",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    },
+    "(-1, -1, 1)": {
+     "cls": "FINITE-NONTRIVIAL",
+     "Omega": "0",
+     "W": "1",
+     "B": "3/2",
+     "half": "+1",
+     "zero_mod_2pi": true,
+     "note": "",
+     "numeric": "ok"
+    }
+   }
+  },
+  "features": {
+   "null radius r_1 = 29/30": {
+    "left": {
+     "(1, 1, 1)": "-1.00000000000001929802562708049",
+     "(1, -1, -1)": "-1",
+     "(-1, 1, -1)": "-1",
+     "(-1, -1, 1)": "-1"
+    },
+    "right": {
+     "(1, 1, 1)": "-1",
+     "(1, -1, -1)": "-1",
+     "(-1, 1, -1)": "-1",
+     "(-1, -1, 1)": "-1"
+    }
+   },
+   "null radius r_2 = 29/30": {
+    "left": {
+     "(1, 1, 1)": "-1.00000000000001929802562708049",
+     "(1, -1, -1)": "-1",
+     "(-1, 1, -1)": "-1",
+     "(-1, -1, 1)": "-1"
+    },
+    "right": {
+     "(1, 1, 1)": "-1",
+     "(1, -1, -1)": "-1",
+     "(-1, 1, -1)": "-1",
+     "(-1, -1, 1)": "-1"
+    }
+   },
+   "null radius r_3 = 29/30": {
+    "left": {
+     "(1, 1, 1)": "-1.00000000000001929802562708049",
+     "(1, -1, -1)": "-1",
+     "(-1, 1, -1)": "-1",
+     "(-1, -1, 1)": "-1"
+    },
+    "right": {
+     "(1, 1, 1)": "-1",
+     "(1, -1, -1)": "-1",
+     "(-1, 1, -1)": "-1",
+     "(-1, -1, 1)": "-1"
+    }
+   },
+   "collision (1,2) at r = 29/33": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    }
+   },
+   "collision (1,3) at r = 29/33": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    }
+   },
+   "collision (2,3) at r = 29/33": {
+    "left": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    },
+    "right": {
+     "(1, 1, 1)": "oo",
+     "(1, -1, -1)": "0",
+     "(-1, 1, -1)": "0",
+     "(-1, -1, 1)": "0"
+    }
+   }
+  },
+  "bands": [
+   [
+    "0",
+    "29/30",
+    "W real: Omega in iR or pi+iR"
+   ],
+   [
+    "29/30",
+    "1",
+    "real"
+   ],
+   [
+    "1",
+    "oo",
+    "real"
+   ]
+  ],
+  "null_radii": [
+   "29/30",
+   "29/30",
+   "29/30"
+  ],
+  "collisions": {
+   "(0, 1)": [
+    "29/33"
+   ],
+   "(0, 2)": [
+    "29/33"
+   ],
+   "(1, 2)": [
+    "29/33"
+   ]
+  },
+  "W0": {
+   "(1, 1, 1)": "-351/1331 - 406*sqrt(10)*I/1331",
+   "(1, -1, -1)": "9/11 + 2*sqrt(10)*I/11",
+   "(-1, 1, -1)": "9/11 + 2*sqrt(10)*I/11",
+   "(-1, -1, 1)": "9/11 + 2*sqrt(10)*I/11"
+  }
+ }
+}

@@ -1,0 +1,58 @@
+====================================================================================================
+K-1  the static seat's proper acceleration, any profile -- the exponent is fixed here
+====================================================================================================
+  [PASS] K-1a alpha = c d lambda/d tau_s = (c^2/2) (d beta^2/dr) / N  for ANY profile (sign: inward gradient = outward acceleration)
+  [PASS] K-1b alpha N = (c^2/2) d beta^2/dr = -(c^2/2) d(sech^2 l)/dr: the redshifted acceleration is the gradient of the harmonic variable sech^2 l = 1 - beta^2, and of NO other function of the rapidity
+  READING: whatever sets the seat's (redshifted) temperature sets the gradient of sech^2 l.  A thermal law therefore
+  cannot pick the wrong exponent -- Part B's rival variables are unreachable through this door.
+
+====================================================================================================
+K-2  under KIN-2a: the static acceleration and the surface gravity
+====================================================================================================
+  [PASS] K-2a alpha = -(c^2 r_s)/(2 r^2 N), |alpha| -> oo at the wall [comparison stage: the static observer's acceleration]
+  [PASS] K-2b surface gravity kappa = lim alpha N = c^2/(2 r_s) = (c^2/2)|d tanh^2 l/dr| at the wall  (schedule item 2 closed)
+
+====================================================================================================
+K-3  the seat's temperature (D2: coefficient 2 pi, frozen) and its Tolman redshift
+====================================================================================================
+  [PASS] K-3a T_oo = N T_local = (hbar c/(4 pi k_B)) |d beta^2/dr|, any profile: the temperature seen from infinity is the gradient of sech^2 l
+  [PASS] K-3b at the wall T_oo -> hbar c/(4 pi k_B r_s) = hbar c^3/(8 pi G M k_B) with r_s = 2GM/c^2  [comparison stage: Hawking]
+
+====================================================================================================
+K-4  first law at the wall with the declared area entropy: fixes the 1/4 against the 2 pi
+====================================================================================================
+  [PASS] K-4a dE = T_H dS holds EXACTLY with S = k_B A/(4 l_P^2), E = M c^2, T_H from K-3: the area law's 1/4 and D2's 2 pi are one consistent pair (a wrong 2 pi coefficient would break this by the same factor)
+
+====================================================================================================
+K-5  THE CONSTRUCTION: equipartition on the seat's presented sphere, in equilibrium with the seat's horizon
+====================================================================================================
+  [PASS] K-5a transverse presented rods are 1 for every profile: the presented metric delta + f K K^T has unit transverse block, so the seat's sphere at r has presented area A = 4 pi r^2  [SCREEN-1's area is proved; its ENTROPY is declared]
+  [PASS] K-5b equipartition on the screen: T_screen = hbar G M/(2 pi r^2 c k_B)
+  [PASS] K-5c EQ-1 with T_oo: d beta^2/dr = -2GM/(c^2 r^2) = -r_s/r^2 with r_s = 2GM/c^2 -- the identification of r_s falls out, not put in
+  [PASS] K-5d integrating with beta^2 -> 0 at infinity: beta^2 = 2GM/(c^2 r) = r_s/r.  KIN-2a is DERIVED from the thermal inputs, exactly, and with it every result of THM-H, CURV-1 and THM-I
+  [PASS] K-5e the same equation IS the Gauss law of thm_i_field B-3b: r^2 d(sech^2 l)/dr = r_s, source = the blind mass, G = the bit-count constant
+  [PASS] K-5x FAILURE BRANCH: equilibrium at the LOCAL temperature gives d beta^2/dr = -(r_s/r^2) sqrt(1 - beta^2)
+  [PASS] K-5y ...whose solution is beta^2 = 1 - (1 - r_s/2r)^2: the LAPSE harmonic, Part B's fourth row, c_2 = -1/4, perihelion coefficient 2.5 -- dead at Mercury.  The fork inside the construction is decided by a measured number: the screen equilibrates at the temperature seen from infinity
+  READING: the Tolman equilibrium condition T sqrt(g_tt) = const, i.e. 'equilibrium is judged from infinity', is what a static
+  seat family means by equilibrium; the local-temperature version treats each seat as isolated and gets the wrong second-order law.
+
+====================================================================================================
+K-6  extended source: Poisson for the reciprocal presented volume
+====================================================================================================
+  [PASS] K-6a with the enclosed blind mass M(r), (1/r^2) d/dr (r^2 d beta^2/dr) = -(8 pi G/c^2) rho_blind: Poisson for sech^2 l = Delta/det G' with the blind-mass density as source; vacuum outside: Laplace
+  [PASS] K-6b weak field: alpha -> GM/r^2 as N -> 1 [comparison stage: Newton]; the exact static acceleration keeps the 1/N
+
+RESULT: 16/16 checks passed.
+VERDICT (THM-K): the pinning KIN-2a, and with it the field law r^2 d(sech^2 l)/dr = r_s and Poisson for the reciprocal presented
+  volume, is DERIVED from: the seat's Unruh temperature (D2, frozen coefficient), the seat's kinematics (K-1: alpha N is the
+  gradient of sech^2 l and nothing else), and four declared thermal inputs -- SCREEN-1 (entropy k_B A/(4 l_P^2) on the seat's
+  presented sphere), THERM-1 (equipartition), MASS-1 (the blind mass is the enclosed energy), EQ-1 (equilibrium at the temperature
+  seen from infinity).  The exponent is not chosen: K-1 forbids every rival.  The one fork inside (local vs redshifted
+  temperature) is decided by Mercury.  What remains declared is the entropy-area law and the equipartition rule, i.e. the
+  statement that the seat's presented sphere carries A/l_P^2 thermal degrees of freedom.  A Newton with a thermal reason;
+  whether it is an Einstein is the standing argument about thermodynamic gravity, which the model now inherits with receipts.
+COMPARISON STAGE: K-1 is the static-observer acceleration and the Tolman relation; K-3 is Unruh/Hawking; K-4 is the
+  Bekenstein-Hawking first law; K-5 is Verlinde's equipartition argument (2010) and Padmanabhan's holographic equipartition,
+  descended from Jacobson's Clausius derivation (1995); EQ-1's redshifted temperature is Tolman-Ehrenfest equilibrium; the local-
+  temperature failure branch is a known ambiguity of entropic-gravity derivations, here resolved by the perihelion; the known
+  criticisms of entropic gravity (e.g. neutron interferometry, Kobakhidze 2011) attach to this route and are NOT answered here.

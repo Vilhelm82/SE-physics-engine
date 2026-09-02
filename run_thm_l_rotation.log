@@ -1,0 +1,39 @@
+====================================================================================================
+L-1  the extension is forced, and it conserves the pairings for ANY swirl
+====================================================================================================
+  [PASS] L-1a the swirl is rotational: curl v != 0 with the swirl on, and curl v = 0 with it off (A-0's hypothesis is exactly the no-swirl case)
+  [PASS] L-1b the antisymmetric part of the gradient acts as (1/2) curl v cross: A k = Omega x k for every k
+  symbolic identity attempted with general beta(r), omega(r): closed
+  [PASS] L-1c RULE G' conserves BOTH pairings for the swirling field -- identically in x, k, beta and omega
+  [PASS] L-1d RULE G (no rotation, full-gradient boost) FAILS on the same field: dE/dt, dL_z/dt != 0 -- the rotation term is REQUIRED, not optional -- dE/dt = -0.000680243, dL_z/dt = 0.0226783
+  [PASS] L-1e with omega = 0 the two rules coincide (rule G' reduces to thm_i_transport's rule G): irrotational limit recovered
+  READING: a swirling presentation field is carried by the SAME transport law with its rotation part switched on.  The model
+  can hold rotation.  What it holds is decided by the profile, which is declared below.
+
+====================================================================================================
+L-2  a gyroscope at rest: its spin is carried by the rotation part alone -- the dipole pattern
+====================================================================================================
+  [PASS] L-2a (1/2) curl v for the declared swirl equals (G/c^2 r^3)[3 (J.r-hat) r-hat - J] exactly: twice as strong on the axis as on the equator, opposite sense on the equator
+  [PASS] L-2b the swirl's vorticity is divergence-free and curl-free outside the source (a dipole field): the vacuum law the profile obeys
+  [PASS] L-2c averaged over a polar orbit the precession is G J/(2 c^2 r^3) along J; for Earth at r = 7027.4 km that is 40.8 mas/yr  [comparison stage: Schiff; Gravity Probe B measured 37.2 +- 7.2, predicted 39.2 with their constants]
+
+====================================================================================================
+L-3  an orbit's node: the boost part and the rotation part acting together along a path
+====================================================================================================
+  [PASS] L-3a RULE G': the ascending node advances 7.648e-04 rad per orbit (mean of 2); first-order prediction 2GJ/(c^2 a^3) x T = 7.648e-04: ratio 1.0000 (post-Newtonian corrections at a = 60 r_s are of order r_s/a ~ 2%)
+  [PASS] L-3b FAILURE BRANCH: rule G without the rotation term gives -3.738e-08 rad per orbit, ratio -0.000 to the prediction -- wrong; the node needs both parts of the connection
+  READING: the node drift is not the local river spin (that is L-2); it is strain and rotation acting together along the
+  orbit, and rule G' returns the textbook coefficient 2 to the post-Newtonian accuracy of the setup.
+
+RESULT: 10/10 checks passed.
+VERDICT (THM-L): the presentation field CAN carry swirl.  The torsion-free extension of the transport law is forced -- boost by
+  the symmetric strain along the co-moving step, rotate at (1/2) curl v per unit frame time -- and it conserves both symmetry
+  pairings for any stationary axisymmetric swirl, while rule G without the rotation term fails.  With the swirl profile
+  omega = 2GJ/(c^2 r^3) DECLARED (KIN-3, the zero-angular-momentum free-fall drift, first order in J), a gyroscope at rest
+  precesses at (G/c^2 r^3)[3(J.r)r - J] exactly and an orbit's node advances at 2GJ/(c^2 a^3): both measured numbers land.
+  What is derived: the connection and both effects from it.  What is declared: the swirl profile.  Deriving omega(r) the way
+  THM-K derived beta(r) -- from the seat's temperature on a rotating screen -- is the next target.
+COMPARISON STAGE: rule G' is the spin connection of the rain tetrad for a river with vorticity (Hamilton-Lisle's twisting river;
+  Doran's form of Kerr has flat slices in oblate spheroidal coordinates); L-2a is Schiff's gyroscope formula, Lense-Thirring
+  precession; L-2b is the vacuum gravitomagnetic dipole; L-3a is the Lense-Thirring nodal precession (LAGEOS/LARES);
+  the swirl (1/2) curl v = Omega_LT is the statement that frame dragging is the vorticity of the free-fall flow.

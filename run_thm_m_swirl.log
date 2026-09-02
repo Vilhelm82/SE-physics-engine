@@ -1,0 +1,35 @@
+====================================================================================================
+M-1  the static presented field at first order in r_s: clock, rods, no shift
+====================================================================================================
+  [PASS] M-1a the seat's clock: N^2 = 1 - r_s/r, so h_00 = r_s/r; the seat's rods: delta_ij + (r_s/(r - r_s)) r_i r_j -> h_ij = (r_s/r) r_i r_j; the static seat's shift vanishes -- three numbers, all from THM-K's beta^2 and H-5
+
+====================================================================================================
+M-2  BARE-1 covariance: boost the presented field by a small velocity w
+====================================================================================================
+  [PASS] M-2a the sandwich is a Lorentz map on paravectors: L^T eta L = eta to first order in w, with L_0i = L_i0 = w_i
+  [PASS] M-2b the boosted field acquires a shift h'_0i = w_i h_00 + w_j h_ji = (r_s/r)[w_i + (w.r-hat) r_i]: the river of a moving mass
+  [PASS] M-2c the shift has two halves: w_i h_00 from the CLOCK (a scalar theory would have only this) and w_j h_ji from the RODS
+
+====================================================================================================
+M-3  linear superposition over a rigidly rotating shell: the far field and its coefficient
+====================================================================================================
+  far-field mismatch vs (2G/c^2)(J x X)/r^3 at four points: 5.0e-5 (relative; next term O(R^2/r^2) ~ 1e-5)
+  [PASS] M-3a the superposed river of the rotating shell is (2G/c^2)(J x X)/r^3 at large r: omega(r) = 2GJ/(c^2 r^3) -- KIN-3 DERIVED, coefficient 2, on the axis (where J x X = 0 and the field vanishes) and off it
+  [PASS] M-3b each half alone -- clock only, rods only -- gives exactly HALF: (G/c^2)(J x X)/r^3.  A scalar-potential theory (clock only) predicts half the frame dragging
+  [PASS] M-3c Gravity Probe B, polar-orbit average: rank-2 (clock + rods) 40.8 mas/yr inside 37.2 +- 7.2; clock-only 20.4 mas/yr is outside by 2.3 sigma -- the rods' half of the dragging is measured
+
+====================================================================================================
+M-4  why there is no rotating screen: the thermal candidates fail on dimensions
+====================================================================================================
+  [PASS] M-4a both natural rotating-screen principles give a drift proportional to J/M with no G and no c: the measured drift is independent of M at fixed J and proportional to G.  The swirl is not a new thermal input; it is the boost of the thermal field already derived
+  [PASS] M-4b the one dimensionally correct screen reading, angular momentum per bit in units of hbar, is (J/N)/hbar = G J/(4 pi r^2 c^3), which is (1/8 pi) x (omega r/c) at the equator: a coincidence of the same G/c^3 combination, recorded and NOT promoted to a principle
+
+RESULT: 9/9 checks passed.
+VERDICT (THM-M): KIN-3 is derived.  The frame-dragging profile omega = 2GJ/(c^2 r^3) is the Lorentz boost of the pinning
+  (THM-K's beta^2 = r_s/r, with the seat's clock and rods it fixes), superposed linearly over the source.  Coefficient 2 =
+  1 (clock) + 1 (rods): a theory presenting only the time office predicts half the measured dragging.  Conditional on
+  THM-K's thermal inputs (SCREEN-1, THERM-1, MASS-1, EQ-1), BARE-1 covariance, and linear superposition (first order in
+  r_s and in J; the full rotating solution is not reached here).  No rotating-screen principle is needed or found.
+COMPARISON STAGE: M-2b is the linearised field of a moving mass in Schwarzschild gauge; M-3a is the Lense-Thirring shift
+  g_0i = -(2G/c^2)(J x r)_i/r^3, i.e. Kerr at first order in J; the clock/rods split is the spin-2 versus scalar-gravity
+  distinction (the same one that gives light bending its factor 2); the shell's I = (2/3) M R^2 is classical.

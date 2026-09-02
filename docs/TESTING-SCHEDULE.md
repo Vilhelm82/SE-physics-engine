@@ -80,9 +80,27 @@
      invariant is (pole at det G' = 0); the frozen elliptope metric's harmonic-map energy gives
      perihelion coefficients 1.5-1.87 (dead). The field law must be DECLARED as KIN-2a'':
      E = int |grad(Delta/det G')|^2, sourced by the blind-mass measure. A Newton, not an Einstein.
-  0c. **NEXT:** does the seat dissipator's pivot-invariant bath (DEBT-2b, c(w)^2 g0(w) = C w^2) have a
-     static limit whose energy is the reciprocal presented volume? The one frozen object with the
-     right shape (pole at the volume's zero) is the capacity Delta, inverted.
+  0c. ~~dissipator static limit~~ SUPERSEDED 2026-09-03 by **THM-TARGET K** (`thm_k_clausius.py`
+     16/16): the pinning is DERIVED from the seat's temperature -- Unruh (D2's 2 pi) on the
+     seat's presented sphere with area entropy (SCREEN-1), equipartition (THERM-1), the blind
+     mass enclosed (MASS-1), equilibrium at the temperature seen from infinity (EQ-1); the
+     exponent fixed by K-1 (alpha N = gradient of sech^2 l); the local-temperature fork dead at
+     Mercury. **THM-L** (`thm_l_rotation.py` 10/10): rotation carried by rule G' (symmetric
+     strain boost + rotation at half the curl), gyroscope and node numbers land. **THM-M**
+     (`thm_m_swirl.py` 9/9): the swirl DERIVED as the boost of the pinning, coefficient 2 =
+     clock + rods; scalar theory dead at GP-B. Report `docs/2026-09-03-thm-targets-K-L-M.md`.
+     Paper v0.2 amended (68f3a9f + this commit).
+  0d. **RULINGS OWED (Will):** (i) the letter of the rod-free definition vs normalised cosines
+     (CURV-1); (ii) "identity" baseline-relative or mod 2 pi; (iii) EQ-1 -- is Tolman's
+     condition a principle you own or a fact Mercury owns?  Each changes a label, not a number.
+  0e. **NEXT TESTS WITH KILL NUMBERS:** (a) rotation beyond first order in J -- the full
+     twisting river / Kerr quadrupole: does linear superposition's failure show up as a
+     definite second-order prediction? (b) the Hubble river v = H r (uniform source: Poisson
+     with constant density) -- does the pinned family reproduce flat-FLRW kinematics and the
+     de Sitter horizon as horizon-vanishing? (c) the entropic-gravity objections (neutron
+     interferometry) as an owed comparison against SCREEN-1/THERM-1 -- the model inherits them.
+  0f. Also open from CURV-1: the interior antipodal collisions at r_s Delta/sin^2(theta_12) --
+     candidate-new, lineage unsearched; THM-J's pole obstruction as a general statement.
   1. ~~**D1 two-seat interior**~~ DONE 2026-09-02, `thm_h2_d1.py` 30/30 (`b4ac768`):
      no rod-free click-invariant diverges at mu = 0; every divergence there has a
      rod in its denominator. The falsifier did not fire; it left CURV-1 as the

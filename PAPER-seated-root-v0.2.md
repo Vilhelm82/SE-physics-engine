@@ -1,11 +1,13 @@
 # The Seated Root
 ## How much physics follows from three axes through a point: a derivational-economy study with machine-verified receipts
 
-**W. Lloyd** — draft v0.2, 2026-09-03
+**W. Lloyd** — draft v0.2, 2026-09-03 (amended the same evening)
 *v0.2 (2026-09-03): the pinned family worked through — the hole as a presented state (THM-H), what sits at the
 centre (CURV-1), light and matter in the family (THM-I), and the field law narrowed and shown not to follow from
 the bare tier (THM-J). §6 gains four blocks; §10's ledger is rescoped and records the programme's first falsified
-model-internal candidate. v0.1 (2026-08-28) is retained in git history.*
+model-internal candidate. Amended the same evening: THM-K derives the pinning from the seat's temperature, THM-L carries rotation, THM-M derives
+the swirl as the boost of the pinning; §6's last block flipped from "not derived" to "derived from thermal inputs".
+v0.1 (2026-08-28) is retained in git history.*
 *All results in this paper are backed by exact symbolic computation committed to the project repository; commit hashes appear in §11.*
 
 ---
@@ -34,9 +36,16 @@ finite event on every rod-free curvature reading (an angle for the infalling
 seat, a spin sign for the hole); the family's ray and orbit kinematics is
 Schwarzschild's exactly, second order included, because a seat's rods and
 clocks are one boost; and the field law behind the pinning is narrowed to one
-variable — the reciprocal presented volume must be harmonic — and shown *not*
-to follow from the bare tier's own geometry, which is the first model-internal
-candidate this programme has proposed and had killed by a measured number. The paper's
+variable — the reciprocal presented volume must be harmonic — shown *not* to
+follow from the bare tier's own geometry (the first model-internal candidate
+this programme proposed and had killed by a measured number), and then derived
+from its *temperature*: the seat's presented sphere, given an entropy
+proportional to its area and equilibrated with the seat's own Unruh
+temperature as seen from infinity, returns the pinning exactly, with the
+Schwarzschild radius falling out. Boosting that field gives frame dragging with
+the measured coefficient, half from the seat's clock and half from its rods,
+so the model's gravitational sector now rests on one declared idea — the
+thermal content of a seat's sphere — and no imported profile. The paper's
 claim is **not** new physics: nearly every physical output is a retrodiction
 with named lineage. The claim is *economy*: the input set is small, the
 banned lists are enforced, several freeze-dated internal theorems later
@@ -427,13 +436,79 @@ at the presented volume's zero and is bounded at the horizon, which no
 polynomial invariant of the presented cell is **[proved]**; and the
 harmonic-map energy of the frozen elliptope metric of KIN-2b gives perihelion
 coefficients $1.50$–$1.87$, frame- and layer-dependent **[derived, and
-falsified]**. The field law is therefore **not derived** and must be declared,
-in one variable: KIN-2a$''$, $E_{\mathrm{static}} = \int|\nabla(\Delta/\det G')|^2$
-sourced by the blind-mass measure — a Newton's law in the model's own variable,
-not an Einstein. Nothing in the model yet says why the reciprocal presented
-volume is the thing whose gradient costs energy; the one frozen object with the
-right shape is the capacity $\Delta$, inverted, and the dissipator's static
-limit is the designated place to look.
+falsified]**. The field law is therefore not derivable from the bare tier's
+*geometry*. It is derivable from the tier's *temperature*, which is the next
+block.
+
+**The pinning from the seat's temperature (THM-K, 2026-09-03).** For any
+radial profile the static seat's proper acceleration is
+$\alpha = (c^2/2)\,|d\beta^2/dr|/N$ **[derived | KIN-1, RULE-2, H-5, E-4]**, so
+$\alpha N$, the acceleration seen from infinity, is the gradient of
+$\mathrm{sech}^2\lambda = 1-\beta^2$ and of no other function of the rapidity:
+whatever sets the seat's redshifted temperature sets the gradient of the
+harmonic variable, and Part B's rival exponents are unreachable through this
+door. The seat's Unruh temperature (D2, the $2\pi$ frozen), Tolman-redshifted,
+is $(\hbar c/4\pi k_B)\,|d\beta^2/dr|$, Hawking's at the wall; the first law
+$dE = T_H\,dS$ holds exactly with $S = k_B A/(4\ell_P^2)$, so the area law's
+$\tfrac14$ and D2's $2\pi$ are one consistent pair. The construction: the
+seat's presented sphere at $r$ has area $4\pi r^2$ for every profile (the
+presentation stretches only along $K$) **[proved]**; give it the entropy
+$k_B A/(4\ell_P^2)$ **[declared: SCREEN-1]**, equipartition **[declared:
+THERM-1]**, the blind mass as the enclosed energy **[declared: MASS-1]**, and
+equilibrium with the seat's horizon at the temperature seen from infinity
+**[declared: EQ-1]**. Then $d\beta^2/dr = -2GM/(c^2 r^2)$, and with
+$\beta^2 \to 0$ at infinity, $\beta^2 = r_s/r$ with $r_s = 2GM/c^2$ falling out
+rather than put in: **KIN-2a derived**, together with the Gauss law
+$r^2\,d(\mathrm{sech}^2\lambda)/dr = r_s$ and Poisson for the reciprocal
+presented volume with the blind-mass density as source. The one fork inside —
+equilibrate at the local temperature instead — gives $d\beta^2/dr =
+-(r_s/r^2)\sqrt{1-\beta^2}$, the lapse harmonic, Part B's dead row (perihelion
+$2.5$): Mercury decides it, in favour of Tolman's condition. Every result of
+THM-H, CURV-1 and THM-I is thereby conditional on four thermal declarations
+that say one thing — a seat's presented sphere carries $A/\ell_P^2$ thermal
+degrees of freedom — instead of on an imported profile [comparison-stage:
+Verlinde's equipartition argument and Padmanabhan's holographic equipartition,
+descended from Jacobson's Clausius derivation; Tolman–Ehrenfest equilibrium;
+the standing criticisms of entropic gravity, e.g. neutron interferometry, attach
+to this route and are not answered here]. This is the third time a
+freeze-dated theorem selected the correct answer to a question it was not
+written for: a wrong Unruh coefficient would have broken $dE = T_H dS$ and
+returned $r_s$ wrong by the same factor.
+
+**Rotation (THM-L, 2026-09-03).** The transport law extends to a presentation
+field with vorticity, and the extension is forced: boost by the *symmetric*
+strain along the co-moving step, rotate at the river's local angular velocity
+$\tfrac12\nabla\times\vec v$ per unit frame time (rule G$'$). It conserves both
+symmetry pairings identically for any stationary axisymmetric field
+$\vec v = -\beta(r)\hat r + \omega(r)\,\hat z\times\vec r$ **[proved]**; the
+irrotational rule fails on the same field with explicit drift; with the swirl
+off it reduces to THM-I's rule. With the swirl profile
+$\omega = 2GJ/(c^2 r^3)$ (the drift of the zero-angular-momentum free-fall
+frame, first order in $J$), a gyroscope at rest is carried by the rotation part
+alone and precesses at $(G/c^2 r^3)[3(\vec J\cdot\hat r)\hat r - \vec J]$
+exactly, the vorticity being a vacuum dipole field; averaged over a polar orbit,
+$GJ/(2c^2 r^3)$, $40.8$ mas/yr for Earth at $7027$ km [comparison-stage:
+Schiff, Lense–Thirring; Gravity Probe B measured $37.2\pm7.2$]. An orbit's node
+advances at $2GJ/(c^2 a^3)$ — strain and rotation acting together along a
+path, ratio $1.0000$ to the first-order value, zero without the rotation term
+[LAGEOS/LARES]. Frame dragging is the vorticity of the free-fall flow.
+
+**The swirl is the boost of the pinning (THM-M, 2026-09-03).** At first order
+in $r_s$ the static presented field is the seat's clock, $h_{00} = r_s/r$, and
+rods, $h_{ij} = (r_s/r)\hat r_i\hat r_j$, with no shift. The sandwich of BARE-1
+is a Lorentz map ($L^{\mathsf T}\eta L = \eta$) and the presented metric a
+rank-2 tensor under it, so a mass element moving at $\vec w$ acquires the
+shift $h'_{0i} = w_i h_{00} + w_j h_{ji} = (r_s/r)[\vec w + (\vec w\cdot\hat
+r)\hat r]$: half from the clock, half from the rods **[proved]**. Superposed
+linearly over a rigidly rotating shell (K-6's law is linear), the far field is
+$(2G/c^2)(\vec J\times\vec r)/r^3$, so $\omega = 2GJ/(c^2 r^3)$: **KIN-3
+derived**, coefficient $2 = 1 + 1$ **[derived | THM-K's inputs, BARE-1, linear
+superposition]**. A theory presenting only the time office predicts half the
+dragging — $20.4$ mas/yr for Gravity Probe B, outside by $2.3\sigma$ — so the
+rods' half is measured, the same split that gave light bending its factor two.
+The natural rotating-screen thermal principles fail on dimensions (a drift
+$\propto J/M$, no $G$): the swirl is not a new thermal input. Scope: first
+order in $r_s$ and in $J$; the full rotating solution is not reached.
 
 ### 7. Thermal coefficients from rotor periods
 
@@ -571,7 +646,7 @@ GENERIC/metriplectic; Ford–Kac–Mazur/Zwanzig/Caldeira–Leggett and classica
 FDT; Wheeler–DeWitt; Page–Wootters (+ Giovannetti–Lloyd–Maccone); decoherence
 (Zeh, Zurek); Connes–Rovelli; Barbour; Bisognano–Wichmann, Sewell; Unruh,
 Davies, Fulling; Hawking; Bargmann, Pancharatnam, Mukunda–Simon, Van
-Oosterom–Strackee; Bronstein's $cG\hbar$ cube; Painlevé–Gullstrand and the Hamilton–Lisle river; Killing conservation; the spin connection of a tetrad; Einstein's deflection, Epstein–Shapiro's second-order term, Pound–Rebka, Cassini ($\gamma$), Mercury ($\beta$); Gauss–Bonnet and the polar triangle; the mechanical connection (Littlejohn–Reinsch); harmonic maps and sigma models.
+Oosterom–Strackee; Bronstein's $cG\hbar$ cube; Painlevé–Gullstrand and the Hamilton–Lisle river; Killing conservation; the spin connection of a tetrad; Einstein's deflection, Epstein–Shapiro's second-order term, Pound–Rebka, Cassini ($\gamma$), Mercury ($\beta$); Gauss–Bonnet and the polar triangle; the mechanical connection (Littlejohn–Reinsch); harmonic maps and sigma models; Jacobson's Clausius derivation, Verlinde's equipartition, Padmanabhan's holographic equipartition, Tolman–Ehrenfest; the Bekenstein–Hawking first law; Schiff and Lense–Thirring, Gravity Probe B, LAGEOS/LARES; Doran's form of Kerr and the Hamilton–Lisle twisting river; linearised Kerr and the spin-2/scalar distinction.
 
 **Inherited from the author's own separate corpus (a distinct category).**
 Three structural frames used above come not from the literature but from an
@@ -604,24 +679,21 @@ the canonical three-seat partition menu as a sharpening of Page–Wootters
 the former transport-exponent conjecture, no third carrier required); its
 successor question Q-RN — derive the reading-as-RN-power premise from the
 channel law, noting $n(c) = 2$ coincides with the quadratic channel exponent;
-PREDICTION-1; the hole as a presented state and its one-formula interior; the centre's two readings (dihedral angle at the root; the hemisphere and its deck sign); the interior antipodal collisions with exact addresses $r_s\Delta/\sin^2\theta_{ij}$ **[candidate-new, lineage unsearched]**; the branch-free excess orbit and its product identity (elementary, unlocated); the arc-length theorem and the pole obstruction of THM-J; the finding that no seat-to-seat rotor rule propagates a ray, as a theorem.
+PREDICTION-1; the hole as a presented state and its one-formula interior; the centre's two readings (dihedral angle at the root; the hemisphere and its deck sign); the interior antipodal collisions with exact addresses $r_s\Delta/\sin^2\theta_{ij}$ **[candidate-new, lineage unsearched]**; the branch-free excess orbit and its product identity (elementary, unlocated); the arc-length theorem and the pole obstruction of THM-J; the finding that no seat-to-seat rotor rule propagates a ray, as a theorem; the K-1 identity that the redshifted acceleration is the gradient of the reciprocal presented volume for every profile (elementary, the static-observer relation in the model's variables); the resolution of the local-versus-redshifted fork in the equipartition argument by the perihelion; the clock/rods half-and-half split of frame dragging paired with the same split in light bending (each half known, the pairing unlocated); the dimensional failure of rotating-screen principles.
 
 **Declared inputs and named debts.** LBL-1 (thermal circle), KIN-1 (proper
-acceleration), KIN-2a (the pinning; KIN-2b, the curvature tier, closed 2026-08-30; THM-J shows the pinning does *not* follow from the bare tier's geometry and must be declared as KIN-2a$''$, the gradient energy of the reciprocal presented volume, its source identified with the blind-mass measure), CONT-1 (interior continuation), RULING-2 (layer assignment), TRANSPORT-1 (geodesic frame transport), STAT-1 and ROT-1 (rays respect the pinned field's two symmetries), PROP-1 (drift bookkeeping); two rulings owed from CURV-1 (the letter of the rod-free definition; the semantics of "identity");
-Ohmic-in-band coupling (DEBT-2b: derive $c(\omega)$ from the channel law);
-the Stage-3 role dictionary with its stabilizer-compatibility admissibility
-law; adjudication of the irreducibly-signed-observable hypothesis (H-B). Two
-methodological facts deserve record. First, twice in this programme a theorem
+acceleration); KIN-2a and KIN-3 are now **derived** (THM-K, THM-M) from four thermal declarations that state one idea — a seat's presented sphere carries $A/\ell_P^2$ thermal degrees of freedom: SCREEN-1 (entropy $k_B A/4\ell_P^2$), THERM-1 (equipartition), MASS-1 (the blind mass is the enclosed energy), EQ-1 (equilibrium at the temperature seen from infinity); KIN-2b, the curvature tier, closed 2026-08-30; CONT-1 (interior continuation), RULING-2 (layer assignment), TRANSPORT-1 (geodesic frame transport), STAT-1 and ROT-1 (rays respect the pinned field's two symmetries), PROP-1 (drift bookkeeping); linear superposition (first order in $r_s$ and $J$); three rulings owed — the letter of the rod-free definition, the semantics of "identity", and whether EQ-1's Tolman choice is a principle the author owns or a fact Mercury owns; Ohmic-in-band coupling (DEBT-2b: derive $c(\omega)$ from the channel law); the Stage-3 role dictionary with its stabilizer-compatibility admissibility law; adjudication of the irreducibly-signed-observable hypothesis (H-B). Two
+methodological facts deserve record. First, three times in this programme a theorem
 frozen for one purpose later selected the correct answer to a question it was
 not written for (the tensoriality theorem selecting $2\pi$; the closure rule
-resolving the relax/circulate fork) — the freeze-date discipline functioning
+resolving the relax/circulate fork; the same $2\pi$ returning the correct $r_s$ in THM-K, where a wrong coefficient would have broken the first law) — the freeze-date discipline functioning
 as the intended antidote to retrofit. This should be distinguished from the
 cross-corpus inheritance catalogued above, which is a different event type:
 preregistration working is evidence about *this* programme's discipline,
 whereas one of an author's corpora supplying machinery to another is evidence
 only that the two share an architecture — possibly because the architecture is
 real, possibly because the author is. Conversely, the outcome ledger contains
-as yet **no** class-(b) result against experiment: every physical output matches known physics. That statement now has a precise scope: given KIN-2a, the model's kinematics *is* Schwarzschild's geodesic structure, null and timelike, second order included (§6), so it can differ from the standard theory only in the field law, which it does not derive. The ledger does contain, since 2026-09-03, its first falsified model-internal candidate — the bare tier's own state metric proposed as the dynamics, which predicted perihelion coefficients $1.50$–$1.87$ and is dead at Mercury — and one candidate-new structure (the interior antipodal collisions) with no standard analogue claimed. A reformulation indistinguishable from the standard theory on all computed observables is either correct or unfalsifiable, and cannot tell which from inside; PREDICTION-1's cross-seat protocol and the field law's derivation are the two designated exits.
+as yet **no** class-(b) result against experiment: every physical output matches known physics. That statement now has a precise scope: given the four thermal declarations, the model's gravitational sector *is* Schwarzschild's geodesic structure plus slow-rotation Kerr (§6), so it can differ from the standard theory only beyond first order in $J$ or where the thermal declarations fail. The ledger contains, since 2026-09-03, its first falsified model-internal candidate — the bare tier's own state metric proposed as the dynamics, perihelion coefficients $1.50$–$1.87$, dead at Mercury — and two measured numbers that killed rival readings of the model's own construction (the local-temperature fork; the clock-only half of frame dragging). One candidate-new structure (the interior antipodal collisions) stands with no standard analogue claimed. A reformulation indistinguishable from the standard theory on all computed observables is either correct or unfalsifiable, and cannot tell which from inside; PREDICTION-1's cross-seat protocol and the thermal declarations' own tests (the entropic-gravity objections; rotation beyond first order) are the designated exits.
 
 ### 11. Methods and artifacts
 
@@ -633,8 +705,8 @@ Preregistrations and results carry SHA-256 hashes frozen before computation
 in the AGNOSTIC-1 campaign; the present session's suites are committed
 sequentially to the project repository (thm_g, thm_b_monodromy, cayley,
 thm_d, doors, kahler, debt2, thm_d2_unruh, thm_g2, bargmann, thm_rn,
-bridge_dbp, galois, correspondence_july; figures.py; RULING-1; PREDICTION-1; and, from 2026-09-02/03, thm_h, thm_h2_d1, curv1_path1, curv1_path23, thm_i_pre, thm_i_transport, thm_i_field, thm_j_dyn), each with its full check output. The September suites use the numpy float path only for the ODE corroboration of the transport law; every claim there is also carried by an exact identity.
-Head of the sequence at the time of writing: `2b03478` (THM-J), preceded by `a7a5350` (THM-I) and `90c0281` (CURV-1); at the previous writing `7e4e4e1` (Galois/Kummer
+bridge_dbp, galois, correspondence_july; figures.py; RULING-1; PREDICTION-1; and, from 2026-09-02/03, thm_h, thm_h2_d1, curv1_path1, curv1_path23, thm_i_pre, thm_i_transport, thm_i_field, thm_j_dyn, thm_k_clausius, thm_l_rotation, thm_m_swirl), each with its full check output. The September suites use the numpy float path only for the ODE corroboration of the transport law; every claim there is also carried by an exact identity.
+Head of the sequence at the time of writing: `68f3a9f` (THM-M), preceded by `d863efa` (THM-L), `5c58e8e` (THM-K), `2b03478` (THM-J), `a7a5350` (THM-I) and `90c0281` (CURV-1); at the previous writing `7e4e4e1` (Galois/Kummer
 structure and the descent theorem), preceded by `685a89e` (invariant-reduction
 bridge) and `2ba206f` (blind-mass theorem). Every FAIL encountered during
 development is preserved in the transcript with its diagnosis; three were

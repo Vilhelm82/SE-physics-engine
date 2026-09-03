@@ -1,0 +1,29 @@
+=== T-1  the CLICK protocol (symbolic, general axes) ===
+  [PASS] T-1a Tr(P_1 P_2 P_3) = (1 + sum gamma + i V)/4 identically: the ordered product of three clicks has scalar part (1+sum gamma)/4 and PSEUDOSCALAR part V/4 -- the orientation lives in the pseudoscalar grade, 'the sand is the phase'
+  [PASS] T-1b the REVERSED order P_3 P_2 P_1 (reversion) gives the conjugate: the sign of V is the temporal order of the clicks
+=== T-2  the co-pivot rotor and the PIVOT protocol (numeric, 200 frames; exact at the trine) ===
+  [PASS] T-2a R_{a->b} = (1 + b a)/sqrt(2(1+a.b)) is unitary and carries a to b two-sided (E-8-X's co-pivot)
+  [PASS] T-2b the cycle H = R_{3->1} R_{2->3} R_{1->2} returns the axis a_1 to itself
+  [PASS] T-2c one-sided on the spinor root, H psi_1 = e^{i chi} psi_1 with e^{i chi} = conj(B)/|B| EXACTLY for the temporal order 1->2->3, and the CLICK protocol in the same temporal order, Tr(P_3 P_2 P_1), reads conj(B) -- SAME SEQUENCE, SAME PHASE.  (PRED-1's B = Tr(P_1 P_2 P_3) is the rightmost-first operator product, i.e. temporal order 3->2->1.)  Pivot: unit modulus; click: modulus |B|; E-8-X Y-1 links them
+  [PASS] T-2d the reversed cycle (temporal 1->3->2) returns B/|B|: reversing the sequence conjugates the reading
+  [PASS] T-2e the deck (a_i -> -a_i, Gram fixed) flips the I-part of the returned phase under the same sequence
+  [PASS] T-2f exact at the trine: the returned phase is -pi/4 for temporal 1->2->3 (= -arg B, half the octant with the sequence's sign) -- phase -0.785398
+=== T-3  lift independence, click-equivariance ===
+  [PASS] T-3a the reading is independent of the lift psi_1 -> e^{i phi} psi_1 (the one-sided phase is unobservable; only the cycle's phase is read)
+  [PASS] T-3b relabel the axes and conjugate the sequence with them: the reading is unchanged for all six relabellings (click-equivariance)
+=== T-4  the readout: pair the returned spinor with the kept one against a reference delay (symbolic) ===
+  [PASS] T-4a I(delta) = |1 + e^{i delta} e^{i chi}|^2 = 2 + 2 cos(delta + chi): the fringe is shifted by -chi; its DIRECTION is read against the sense of the delay, which is temporal (later arrival).  The sign of V is therefore read against 'later', never against 'left'
+=== COMPARISON BLOCK (names allowed) ===
+  The click protocol is Pancharatnam's three-projection cycle (1956); the pivot protocol is the holonomy of three geodesic rotations
+  (Berry 1987); both give half the solid angle of the triangle, which is E-8-X Y-1 and CENSUS-C C-1a.  Physical carrier at hand:
+  polarisation.  The spinor root is the Jones vector, the axis is the Stokes vector, SECT-1 D-3's angle doubling IS the Stokes
+  construction, a click is a polariser, a co-pivot is a rotator/waveplate, the pairing is interference.  Everything read is a
+  field intensity: classical optics, no Born rule and no hbar anywhere -- what the hbar SEAT contributes is the one-sided
+  REPRESENTATION, not a quantum of action.  The orientation V of three polarisation states on the Poincare sphere is invisible to
+  any single-seat (Stokes/Gram) reading and visible to the directed cycle.  That is PREDICTION-1 with its protocol assigned.
+=== PROTOCOL-1 (to declare) ===
+  Cross-seat cycles are DIRECTED: a protocol is a temporal sequence of clicks or co-pivots; reversing the sequence conjugates the
+  reading.  The sign of the seat-cycle phase is defined relative to the sequence and read against a delay.  This is the model's
+  ordering of the deck sheets: an order of operations, not of horizons.
+
+11/11 checks passed

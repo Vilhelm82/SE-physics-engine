@@ -53,8 +53,7 @@ The criterion: a *failure* contradicts a model theorem, a number measured in a m
    non-spherical source are already a sum of rank-ones (THM-M), not flat — so this fails the *formulation*, not the model.
 3. **The R⁻⁶ coefficient (7/8 A² vs Kerr's 6J²): neither yet.**  Superseded when rods bend; not comparable.
 4. **The rods bend at O(J²) — rests on O-4e + K-6 + J₂, not on O-6d.**  O-6d adds only: Einstein's tangential law also rejects flat rods.
-5. **The tangential sector: where the model is allowed to disagree.**  Gauss and Codazzi are the whole of what a seat's rods can say
-   about their ambient (O-6c).  The model has no principle for the remaining six components; GR has one.  Silence, not error.
+5. **The tangential sector: where the model is allowed to disagree.**  Gauss and Codazzi are the complete *normal* projections of the presentation (G_nn, G_ni) (O-6c); the tangential G_ij are computable from (h, v) in the stationary case (O-6d) but no model law owns their value.  The presentation restriction h = δ is observer-side, not an ontological claim (see `docs/2026-09-04-axis-planes-rods-clarification.md`).  GR has a law for the six components; the model is silent, not wrong.  Silence, not error.
 6. **Kerr's Q = −J²/M: not yet a legal comparison.**  Flat rods produce no quadrupole at all.  A tangential law will produce some κ_model
    (Q = −κJ²/M); integer-structured and κ ≠ 1 is PREDICTION-2 with kill numbers (LIGO spin-induced-quadrupole bounds, order unity to
    order ten; ringdown no-hair tests ~10–20%).  A hole's Q also needs regularity at the wall (THM-H at O(J²)); a shell's needs source

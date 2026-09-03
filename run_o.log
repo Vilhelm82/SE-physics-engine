@@ -3,14 +3,15 @@ O-1  Gauss and Codazzi on flat rods: e_2(sym grad v) IS the normal-normal Einste
 ==============================================================================================================
   [PASS] O-1a the presentation's 4-geometry has unit lapse and flat rods: n.n = -1, det g = -det h, g^{-1} as stated
   ... Einstein tensor of the general axisymmetric river (three arbitrary functions of r, theta) [   0.1s]
-  ... assembled [   5.8s]
+  ... assembled [   5.9s]
   [PASS] O-1b GAUSS: G_nn = e_2(K) identically, K = sym(grad v) the second fundamental form of the flat rods (three arbitrary functions vr, vth, vph of r and theta; theorema egregium with R(h) = 0) -- residual 0
   [PASS] O-1c CODAZZI: G_{n i} = -(D_j K^j_i - D_i K) identically (three components; the sign is the orientation of n) -- residuals [0, 0, 0]
   [PASS] O-1d on flat rods d_j(S_ij - delta_ij tr S) = -(1/2) curl curl v for ANY v(x,y,z) (with K = -S this is G_{n i} = -(1/2)[curl curl v]_i): Codazzi in vacuum says the vorticity of the river is curl-free
   READING: the closure is not chosen.  Flat rods + one shift is the whole of what one boost per seat can present, and
   Gauss/Codazzi say the ambient Einstein tensor seen THROUGH the seat's normal is (e_2(K); (1/2) curl curl v).  Vacuum
-  through the normal = e_2(sym grad v) = 0 and curl curl v = 0.  The tangential-tangential components G_ij are NOT
-  fixed by the seat's rods -- they are the debt this suite measures at O(eps^2) (O-6).
+  through the normal = e_2(sym grad v) = 0 and curl curl v = 0.  These are the COMPLETE normal projections (G_nn, G_ni) of the
+  presentation.  The tangential components G_ij are computable from (h, v) in the stationary case (O-6d does it) but no model
+  law owns their value -- that is the debt this suite measures at O(eps^2) (O-6).
 
 ==============================================================================================================
 O-2  the invariant menu of the six-number cell, and the pinning
@@ -65,8 +66,8 @@ O-5  the exterior at O(eps^2), and the invariant that reads a quadrupole
 ==============================================================================================================
 O-6  what the seat's rods do NOT fix: the tangential Einstein components at O(eps^2)
 ==============================================================================================================
-  ... Einstein tensor of the explicit O(eps^2) field [  19.1s]
-  ... assembled [  19.6s]
+  ... Einstein tensor of the explicit O(eps^2) field [  19.3s]
+  ... assembled [  19.8s]
   [PASS] O-6a at O(eps^0) the presentation is vacuum: G_mu nu = 0 (the pinning is exact, all ten components)
   [PASS] O-6b at O(eps^1) the presentation is vacuum: G_mu nu = 0 (flat rods + curl-free drag A/r^3 is an exact first-order field, all ten components -- THM-L/M's frame dragging is not just constraint-satisfying, it is vacuum)
   [PASS] O-6c at O(eps^2) the components the rods DO fix vanish: G_nn = e_2 = 0 (Gauss) and G_ni = -Mom = 0 (Codazzi), for every a_0, b_2 -- corollary of the identities O-1b/c and the expansion O-5a
@@ -75,8 +76,8 @@ O-6  what the seat's rods do NOT fix: the tangential Einstein components at O(ep
     (0, 0): 3*A**2*(3*mu**2 - 1)/(4*r**6)
     (1, 1): -3*A**2*(6*mu**2 - 7)/(8*r**4)
     (2, 2): -3*A**2*(mu - 1)*(mu + 1)*(9*mu**2 - 8)/(8*r**4)
-  READING: Gauss and Codazzi are the WHOLE of what a flat slice can say about its ambient.  They are satisfied.  The six
-  tangential components are the ambient's OWN equations -- the ones the seat's rods do not see -- and at O(eps^2) they
+  READING: Gauss and Codazzi are the complete NORMAL projections of the presentation, and they are satisfied.  The six
+  tangential components are determined by (h, v) here but owned by no model law -- and at O(eps^2) they
   fail for every value of the two free constants.  That is fork (b): the rods must bend at second order in J, and the
   bending is a rank-two object, which one boost cannot present.
   Scaffold register: NORMAL-1 (declared; Einstein's constraint renamed -- removal route: the blind-mass theorem, sourced Gauss
@@ -128,4 +129,4 @@ VERDICT (THM-O)
   rank-two debt the TT wave carries (handoff item 4).  Kill condition for THIS suite: any of O-1b/c, O-4d, O-5d, O-6d failing
   on re-run, or a flat-rod field with a nonzero R^{-5} coefficient.
 
-33/33 checks passed [ 114.7s]
+33/33 checks passed [ 117.0s]

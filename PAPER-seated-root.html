@@ -634,15 +634,76 @@ subfield $F(\sqrt{\Delta})$ <strong>[proved]</strong>. This upgrades the sheet-m
 property from an observed sign flip to a field-theoretic fact: $\arg B$ carries
 exactly the orientation square class and nothing else, which is why no
 continuous global branch of $V$ can supply what the phase supplies.</p>
-<p><strong>PREDICTION-1 (banked).</strong> $J = (1 + \gamma_{12} + \gamma_{13} +
+<p><strong>PREDICTION-1 (banked; protocol assigned 2026-09-04).</strong> $J = (1 + \gamma_{12} + \gamma_{13} +
 \gamma_{23})\tan(\Omega/2)$ with $\Omega = 2\Phi/(2s)$, minimal lift
-$s = \tfrac12$: the medium is interferometrically accessible as the
-seat-cycle holonomy. The mathematics is exact; the physics status is
-prediction-<em>shaped</em>: the $c$-seat instance is Pancharatnam's measured
-polarization holonomy (a retrodiction receipt for the machinery), while the
-<strong>cross-seat</strong> cycle — one leg per fundamental seat — is the model's own
-claim, protocol unassigned, lift charge $s$ a labelled-tier datum whose tie
-to the $\hbar$ quantum is conjecture only.</p>
+$s = \tfrac12$. The claim is stated as a separation between a <em>presentation</em>
+and an <em>operation</em>, because that separation is what the model is for.</p>
+<p><em>Presentation.</em> The unrestricted pivoted observation map of one root —
+VIEW-1's circumaxis as the pivot axis, the co-pivot rotor two-sided on the
+axes and one-sided on the spinor roots, the roots geodesic from the
+observer's own axis, and every bilinear bar-pairing among the presented
+objects — was derived with its specification frozen before any output was
+read (<code>pivot_map.py</code>). Its scalar office is deck-even for every pairing of
+axes; two states never yield a pseudoscalar (the state lemma recovered); and
+no reading of definite odd parity exists anywhere in it. What it does contain
+are <em>mixed</em> readings on the transition pairings, with closed forms
+(<code>pivot_map_closed_forms.py</code>): the axis–transition pseudoscalar
+$\langle a_k\,\bar T_{ij}\rangle_I = -(E_{kij} + \epsilon_{kij}V)/(2(1+h))$,
+$h = V/2|A|$, $E_{kij} = \hat n\cdot((a_j - a_i)\times a_k)$, whose deck-odd part
+$(E_{kij}h - \epsilon_{kij}V)/(2(1-h^2))$ is $V$ times a Gram-rational function.
+So the model's <em>presentation</em> already separates a state from its deck image
+— $\Pi(X) = \Pi(\tau X)$ on the Gram, $\mathcal O(X) \neq \mathcal O(\tau X)$
+on the transitions — but reads the orientation only dressed by the observer's
+own circumaxis, never cleanly. The orientation reference the presentation
+carries is the sign of that circumaxis, i.e. the cyclic order in which the
+three alignments are named. <strong>[derived; the only declaration is the naming
+order]</strong></p>
+<p><em>Operation.</em> A definite-parity reading of $\operatorname{sgn} V$ exists only as
+an <em>ordered</em> operation on the presentation: at three ordered pivots the
+observer records the presentation of the aligned axis into an ordered
+register, $\varrho_X(i) = P(\Pi_{s,\theta_i}(X)) = (1 + a_i)/2$, and the
+directed permutation $U_B$ of the three registers reads
+$\operatorname{Im}\operatorname{Tr}[U_B\bigotimes_i \varrho_X(i)] = V/4$
+(<code>pred1_operational_chain.py</code>). Two requirements are checked rather than
+assumed: the pivot selects the presented axis without rotating the frame the
+registers share (storing each presentation in its own pivoted frame breaks the
+reading; identical registers read exactly $0$), and the source is unchanged by
+observation, $X \mapsto X$ absolutely, so three ordered presentations of it can
+be taken. The direction of the test is the temporal order of the
+observations: reversing the order reads $-V/4$, cyclic re-orderings read the
+same. Three physical readouts are exact (<code>pred1_physical_protocol.py</code>): the
+controlled-$U_B$ Hadamard test ($\langle Y\rangle = V/4$), the spin-chirality
+operator $\hat\chi = \sigma_1\!\cdot(\sigma_2\times\sigma_3)/2\sqrt3$ with
+$U_B = e^{+i(2\pi/3)\hat\chi}$ exactly and $\langle\hat\chi\rangle = (2/\sqrt3)\operatorname{Im}B$,
+and the three-photon tritter, $\operatorname{Im}B = \pm\tfrac{3\sqrt3}{2}\,(P_{(210)} - P_{(120)})$
+with the sign fixed by the tritter's chirality. Pairwise SWAP/HOM tests return
+$\Gamma_{ij} = 2\operatorname{Tr}(P_iP_j) - 1 = \gamma_{ij}$ and
+$|\operatorname{Im}B| = \sqrt{\det\Gamma}/4$ only. In every realisation the
+sign needs a directed device — a permutation order, a control line, a handed
+splitter. <strong>PROTOCOL-1</strong>: observations are ordered; presentations are not.
+That sentence is not an added axiom: it is the computed difference between the
+bilinear map above and the ordered operation here.</p>
+<p><em>Algebraic half, certified three ways</em> (<code>thm_galois_deck_descent.py</code>):
+the valuation matrix of $(\Delta, 1+\gamma_{ij})$ along the four boundary
+divisors is the identity (rank-4 square classes); the degree-16 norm
+polynomial at a rational point is irreducible; the minimal polynomial of $B$
+over $F = \mathbb Q(\gamma)$ is $16x^2 - 8(1+\sum\gamma)x + 2\prod(1+\gamma_{ij})$,
+discriminant $-64\Delta$, so $B \in F(\sqrt{-\Delta}) = F(i,\sqrt\Delta)$; the
+four Cayley nodes are the rank-one Grams, $A_1$ points at which $\Delta$ has
+multiplicity two, so a loop around a node does not flip $\sqrt\Delta$ while two
+leg radicals do. The deck is the inertia of the smooth Cayley cubic and of
+nothing else.</p>
+<p><em>Status, honestly.</em> The two "cycle" protocols first written for this
+prediction (<code>pred1_protocol.py</code>: ordered idempotents; geodesic co-pivots
+carrying the spinor root around the triangle) were built with the answer known
+and are recorded as an <strong>existence witness</strong>, not a derivation; the cold map
+does not produce them, because ordered products of idempotents are not among
+the record's admitted operations. The cross-seat <em>content</em> of the prediction
+is unchanged: the $c$-seat account (the even presentation — GR's account) cannot
+read the orientation of three seat axes; the ordered $\hbar$-seat operation
+can; the difference is the model's content. The lift charge $s$ and its tie to
+the $\hbar$ quantum remain conjecture. Remainder: apparatus wiring — repeated
+runs or stored temporal modes feeding three ordered registers.</p>
 <h3>10. Honest accounting</h3>
 <p><strong>Classical, with named lineage (the long list).</strong> The Cayley cubic and its
 automorphisms; the elliptope; double-cover monodromy of nodal hypersurfaces;
@@ -715,5 +776,6 @@ bridge) and <code>2ba206f</code> (blind-mass theorem). Every FAIL encountered du
 development is preserved in the transcript with its diagnosis; three were
 substantive (a dead ladder conjecture; a non-resonance correction to the
 seesaw mechanism; the branch-grading discovery), the remainder were
-simplifier or harness defects, reported, not buried.</p>
+simplifier or harness defects, reported, not buried.
+From 2026-09-04: thm_o_strain_law (33/33), view1_incidence (12/12), census_c (7/7), thm_galois_deck_descent (10/10), pred1_deck_separator (10/10), pred1_protocol (11/11; existence witness), pivot_map (6/6; spec frozen before output), pivot_map_closed_forms (10/10), pred1_physical_protocol (10/10), pred1_operational_chain (7/7); docs/2026-09-04-thm-target-O.md, the axis/planes/rods clarification and its addendum, HANDOFF-2026-09-04.md.</p>
 </main></body></html>

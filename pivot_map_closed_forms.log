@@ -1,0 +1,28 @@
+=== F-1  the transition in closed form ===
+  [PASS] F-1a (1 + a_i n)(1 + n a_j) = s_ij + i m_ij.sigma with s_ij = 1 + n.a_i + n.a_j + a_i.a_j and m_ij = n x (a_j - a_i) + a_i x a_j, for any a_i and UNIT n (n^2 = 1 is used; before VIEW-1's n.a_i = h)
+  With VIEW-1 (n.a_i = h for all i) and the roots normalised: T_ij = [(1 + 2h + gamma_ij) + i m_ij.sigma] / (2(1+h)).
+=== F-2  the axis-transition pseudoscalar reading ===
+  [PASS] F-2a (1/2)Tr[(a_k.sigma)(s_ij - i m_ij.sigma)] = -i a_k.m_ij: the pseudoscalar reading is minus the component of the transition's bivector along the third axis
+  [PASS] F-2b a_k.m_ij = E_kij + V for (k,i,j) = (3,1,2) (even permutation), E_kij := a_k.(n x (a_j - a_i)) = n.((a_j - a_i) x a_k)
+  READING_I(k; i->j) = -(E_kij + eps_kij V) / (2(1+h)),   h = V/(2|A|).
+=== F-3  the even/odd split under the deck (V -> -V, h -> -h, E even) ===
+  [PASS] F-3a odd part = (E h - V)/(2(1 - h^2)) = V (E/(2A) - 1)/(2(1 - h^2)): V times a GRAM function -- the sqrt(Delta) class (G-9)
+  [PASS] F-3b even part = -(E - V h)/(2(1 - h^2)) = -(E - V^2/(2A))/(2(1 - h^2)): Gram and Delta only
+=== F-4  E_kij and h in Gram terms (VIEW-1 closed forms) ===
+  [PASS] F-4a A.(a_2 x a_3) by Lagrange's identity on 6 random rational frames (general lengths); for UNIT axes it is (1/2)(1 - g23)(1 + g23 - g12 - g13)
+  Hence n.(a_2 x a_3) = (1 - g23)(1 + g23 - g12 - g13) / (2|A|),  4|A|^2 = 1^T adj(G) 1,  and cyclically; E_kij is a signed sum of two of these.
+=== F-5  numeric cross-check against the cold map's readings (pivot_map.py construction) ===
+  [PASS] F-5a closed form of the axis-transition pseudoscalar reading matches pivot_map's construction on 150 frames
+  [PASS] F-5b its odd part (E h - V)/(2(1 - h^2)) equals the direct antisymmetrisation over the deck pair on 150 frames
+  [PASS] F-5c transition-transition scalar: (1/2)Tr(T_ij T_kl^dag) = (s_ij s_kl + m_ij.m_kl)/(4(1+h)^2), s = 1 + 2h + gamma (150 frames)
+  [PASS] F-5d the odd part is generically nonzero (150/150) -- the separating content of the mixed reading -- |odd| range 0.000581 .. 0.429
+=== SUMMARY OF CLOSED FORMS ===
+  T_ij = [(1 + 2h + gamma_ij) + i m_ij.sigma] / (2(1+h)),   m_ij = n x (a_j - a_i) + a_i x a_j,   h = V/(2|A|),  4|A|^2 = 1^T adj(G) 1
+  <a_k Tbar_ij>_I  = -(E_kij + eps_kij V) / (2(1+h)),   E_kij = n.((a_j - a_i) x a_k)  [Gram-rational over |A|: n.(a_2 x a_3) = (1-g23)(1+g23-g12-g13)/(2|A|), cyclic]
+     odd part  = (E_kij h - eps_kij V) / (2(1 - h^2))  = V [E_kij/(2|A|) - eps_kij] / (2(1 - h^2))     -- sqrt(Delta) class, deck-odd
+     even part = -(E_kij - eps_kij V h) / (2(1 - h^2))                                              -- Gram and Delta only
+  <T_ij Tbar_kl>_S = [(1+2h+gamma_ij)(1+2h+gamma_kl) + m_ij.m_kl] / (4(1+h)^2);  odd part by the same antisymmetrisation in h.
+  Every odd part is V times a rational function of (gamma, |A|, h^2): the cold map's separating content is the orientation datum
+  dressed by the observer's own circumaxis -- mixed because h sits in the denominator, odd because V sits in the numerator.
+
+10/10 checks passed

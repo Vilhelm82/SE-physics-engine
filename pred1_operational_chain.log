@@ -1,0 +1,19 @@
+=== O-1  the chain: three ordered presentations of one source, common frame, directed test ===
+  [PASS] O-1a registers rho_X(i) = P(a_i) in the observer's frame: Im Tr[U_B x_i rho_X(i)] = V(X)/4 (200 frames)
+  [PASS] O-1b a common rotation of all three registers leaves the reading unchanged: the observer's frame is a gauge, only the RELATIVE frame across the registers is physical (U_B commutes with R x R x R)
+=== O-2  requirement R1: one root, one frame ===
+  [PASS] O-2a if each presentation is stored in ITS OWN pivoted frame the reading is not V/4 (80/80 frames differ): the pivot must select which axis is presented without rotating the frame the registers share
+  [PASS] O-2b extreme case -- each pivot puts the aligned axis on the line of sight, so the three registers are identical -- reads exactly 0: three copies of one presentation carry no relational obstruction
+=== O-3  the deck through the chain ===
+  [PASS] O-3a Gamma(tau X) = Gamma(X) (every pairwise reading of the registers agrees) and O(tau X) = -O(X): the source is fixed, the ordinary presentation is indistinguishable, the operation exposes the transition-level difference
+=== O-4  requirement R2: the temporal order of observation is the direction ===
+  [PASS] O-4a observing the three alignments in the REVERSE temporal order feeds the registers reversed and reads -V/4: the direction of the test is inherited from the order of observation (PROTOCOL-1 as a fact about repeated observation, not an added axiom)
+  [PASS] O-4b a cyclic re-ordering of the observations (starting at a different alignment) reads the same V/4: only the cyclic sense matters
+=== VERDICT ===
+  The chain closes the U_q operational debt at the theoretical level, on two model axioms that are already in the record: one root
+  with one frame (the pivot selects the presented axis, it does not rotate the registers' frame -- O-2), and X -> X absolutely (the
+  source is unchanged by observation, so three ordered presentations of it can be taken -- O-1/O-3).  The direction of the test is
+  the temporal order of the observations (O-4).  What remains is apparatus wiring: repeated runs or stored temporal modes feeding
+  three ordered registers.  Not a preparation principle.
+
+7/7 checks passed

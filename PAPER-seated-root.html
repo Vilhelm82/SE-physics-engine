@@ -58,7 +58,8 @@ mjx-container[display="true"]{margin:1.2rem 0!important}
 </head><body><main>
 <h1>The Seated Root</h1>
 <h2>How much physics follows from three axes through a point: a derivational-economy study with machine-verified receipts</h2>
-<p><strong>W. Lloyd</strong> — draft v0.4, 2026-09-04
+<p><strong>W. Lloyd</strong> — draft v0.5, 2026-09-04
+<em>v0.5 (2026-09-04, late): the owed folds are in — THM-O (the strain law as Gauss and Codazzi on the seat's flat rods; the exponent theorem; fork (b) at second order in the spin) in §6; VIEW-1 (the forced pivot circle, its closed forms, the node theorem in the dual basis) in §2; CENSUS-C (the phase is the geodesic triangle, the circle carries the orientation class) in §9; the failure-versus-disagreement criterion, the band/edge/position/surplus format and the scaffold register in §10. No paper debt remains from 2026-09-04; research debts are in HANDOFF-2026-09-04.md. v0.4 retained in git history.</em>
 <em>v0.4 (2026-09-04, later): PRED-1's Presentation paragraph carries the transition closed form T_ij = R_i R_j~, the pole-triangle dressing with SIGNED holonomy, the corrected parity bookkeeping (the pole triangle does not flip under the deck; the dressing is mixed through h alone), and the exact statement that V is the only primitive deck-odd generator — the seat supplies a deck-even, sign-varying gain and no independent deck bit. v0.3 retained in git history.</em>
 <em>v0.3 (2026-09-04): PREDICTION-1 rewritten around presentation-versus-operation — the pivoted observation map derived cold (bilinear pairings: deck-even scalar office, mixed transition readings with closed forms, the pole-triangle dressing), the ordered-register operation reading sgn V with three exact physical readouts, the algebraic half certified three ways, and the cycle protocols recorded as an existence witness. Owed in this version and not yet folded: THM-O (the strain law as Gauss and Codazzi on flat rods; fork (b) at O(J^2)) into §6, VIEW-1 and CENSUS-C into §2/§9, and the scaffold register into §10 — see HANDOFF-2026-09-04.md. v0.2 (2026-09-03) is retained in git history.</em>
 <em>v0.2 (2026-09-03): the pinned family worked through — the hole as a presented state (THM-H), what sits at the
@@ -215,6 +216,35 @@ orientation cover $\omega^2 = \Delta$, the conserved circulation momentum for
 the unique planar spanning rank with a single angle and <em>protected</em> chirality;
 the three-axis model of this paper is the $(3,3)$ rung of the same ladder,
 where protection is restored with three angles <strong>[proved]</strong>.</p>
+<p><strong>VIEW-1: the forced pivot circle (2026-09-04).</strong> Every circle through the root
+is an admissible pivot motion; the pivot group is the full rotation stabiliser
+of the root, and nothing in the bare tier prefers one orbit. What picks is
+incidence. Requiring one pivot orbit to present all three alignments
+<strong>[declared: VIEW-1, pending a derivation from the presentation duty]</strong> cuts the
+three-parameter family of circles to a point: three distinct points of $S^2$
+are never collinear, so they span a unique affine plane and
+$\mathcal C = S^2\cap\operatorname{Aff}(a_c, a_\hbar, a_G)$ is the unique circle
+through them, automatically a rotation orbit about its own axis
+<strong>[theorem | VIEW-1]</strong>. Its closed forms are exact for any three vectors: with
+the vector area $\mathbf A = \tfrac12(a_1\times a_2 + a_2\times a_3 + a_3\times a_1)$,
+$2\mathbf A\cdot a_i = V$ identically (equidistance is automatic),
+$4|\mathbf A|^2 = \mathbf 1^{\mathsf T}\operatorname{adj}(G)\mathbf 1$, and the
+axis and colatitude are $\hat n = \mathbf A/|\mathbf A|$,
+$h = V/2|\mathbf A|$, $h^2 = \Delta/\mathbf 1^{\mathsf T}\operatorname{adj}(G)\mathbf 1$
+<strong>[proved]</strong>. The circle is great exactly on the branch locus ($h = 0
+\iff V = 0$, with $h\sim\sqrt\Delta$ there), and its spin lift
+$-e^{\,i\pi h\,\sigma\cdot\hat n}$ — the cap transport $2\pi(1-h)$ — reaches
+$+I$ at $h = 1$ and the deck $-I$ exactly at $V = 0$ <strong>[proved]</strong>. Two further
+facts: in the <em>dual</em> basis the circumaxis of the sign class $\varepsilon$ has
+coordinates $(V/2)(\varepsilon_2\varepsilon_3, \varepsilon_3\varepsilon_1, \varepsilon_1\varepsilon_2)$
+— exactly the Cayley node $\gamma_{ij} = \varepsilon_i\varepsilon_j$ — over the
+whole cell, so the four circumaxes are the four nodes written in the dual
+frame <strong>[proved]</strong>; and the geometric twin of $\operatorname{sgn}\arg B$ is the
+cyclic order of $(c,\hbar,G)$ read from <em>outside</em> the sphere, $\operatorname{sgn} h = \operatorname{sgn} V$
+(read from $+\hat n$ the order is always counter-clockwise, $\hat n$ being the
+triangle's own normal, and carries nothing) <strong>[verified, 200 frames, both lifts]</strong>.
+What the circle is <em>for</em> is settled in §9: it carries the orientation square
+class and not the $\hbar$ phase.</p>
 <h3>3. Pivots, composition, and the Kähler structure</h3>
 <p><strong>Pivots.</strong> A change of perspective is a hyperbolic rotor
 $B(\lambda) = \exp(\lambda K/2)$ with $K^2 = +1$ in $\mathrm{Cl}(3)$
@@ -531,6 +561,57 @@ rods' half is measured, the same split that gave light bending its factor two.
 The natural rotating-screen thermal principles fail on dimensions (a drift
 $\propto J/M$, no $G$): the swirl is not a new thermal input. Scope: first
 order in $r_s$ and in $J$; the full rotating solution is not reached.</p>
+<p><strong>The strain law is Gauss and Codazzi on the seat's flat rods (THM-O,
+2026-09-04; <code>thm_o_strain_law.py</code>, 33/33).</strong> One boost per seat means the rain
+seat's rods are flat, and a flat 3-slice carried by a stationary shift $\vec v$
+under a unit lapse has second fundamental form $K = \operatorname{sym}\nabla\vec v$.
+For the presentation $ds^2 = -dt^2 + |d\vec x - \vec v\,dt|^2$ the
+normal–normal Einstein component is $G_{nn} = e_2(K)$ <em>identically</em> — the
+theorema egregium with $R(h) = 0$ — and $G_{ni} = -\tfrac12[\nabla\times\nabla\times\vec v]_i$,
+both proved for three arbitrary functions of $(r,\theta)$ <strong>[proved identity]</strong>.
+So $e_2$ of the strain is not selected from a menu of invariants; it is what
+flat rods present to Gauss, and "no source through the seat's normal" is
+$e_2(\operatorname{sym}\nabla\vec v) = 0$, $\nabla\times\nabla\times\vec v = 0$
+<strong>[declared: NORMAL-1]</strong>. Consequences: $e_2 = 0$ for the inflow gives
+$r\beta^2 = C$ — a second derivation of the pinning's exponent, disjoint from
+THM-K's thermal one; the coefficient $C = r_s$ remains MASS-1's
+<strong>[derived | NORMAL-1 + flat rods]</strong>; $e_1 = 0$ ($\beta\propto r^{-2}$) and
+$e_3 = 0$ ($\beta' = 0$) are dead; $c_2 = 0$ is forced. Codazzi gives
+$rw'' + 4w' = 0$, hence $w = A/r^3$ — THM-M's exponent without linear
+superposition; the amplitude $A = 2GJ/c^2$ is still THM-M's
+<strong>[proved (exponent)]</strong>. New: the flat-rod presentation with the drag is vacuum
+in all ten components at first order in $J$, not merely constraint-satisfying
+<strong>[proved]</strong>.</p>
+<p>At second order in the spin the closure is a determined linear problem, and
+it says something structural. Codazzi makes the correction a gradient; the
+polarised Gauss operator on it is $4\partial_r^2 + (2/r)\partial_r + \Delta_S/r^2$
+— not the Laplacian, the radial direction weighted four to one — with exterior
+exponents $(\ell+1)/2$ and $-\ell/2$, half of Laplace's. A Newtonian clock
+multipole $P_\ell/r^{\ell+1}$ is in that spectrum for $\ell = 0$ and $\ell = 1$
+only. <strong>Flat rods carry a mass and a boost and no other multipole, for any
+source</strong> <strong>[proved]</strong>. Two gates follow. THM-N's ghost — a $P_2/r$ mass aspect —
+cannot arise, because no $P_2 r^{1/2}$ mode exists: Gate 1 passed by structure,
+and the standard it meets is internal (K-6's multipoles, MASS-1's scalar
+monopole), not Kerr's. Gate 2 — Kerr's $Q = -J^2/M$ — is not reachable: the
+orbital invariant $\tfrac12(\Omega_+^2+\Omega_-^2)$ against proper
+circumference is $r_s/2R^3 - \sqrt{r_s}a_0/2R^3 - \tfrac54\sqrt{r_s}\,b_2R^{-9/2} + 0\cdot R^{-5} + \tfrac78 A^2R^{-6}$,
+with no $R^{-5}$ slot where Kerr carries $3J^2/2M$; the $\ell = 2$ freedom is a
+half-integer tail, killed on the ground by the same operator's prediction for
+a static oblate source ($P_2 r^{-5/2}$, nodal regression $\propto a^{-3}$
+against Newton's measured $a^{-7/2}$) and, provisionally, by K-6's linearity.
+The tangential components $G_{ij}$ are computable from $(h,\vec v)$ and are
+non-zero at $O(J^2)$ for every value of the two free constants ($a_0$ drops out
+exactly) <strong>[proved]</strong>. Fork (b), as pre-registered: the rods must bend at
+second order in the spin; the multipoles of any source live in the bending;
+the bending is rank two, which one boost cannot present. This fails
+<em>flat rods</em>, not the model — THM-M's static rods for a non-spherical source are
+a sum of rank-ones — and it locates the missing tier: a law for the
+tangential sector, which the model does not yet own. Gate 2 is re-declared
+accordingly: for a hole, $Q$ by regularity at the wall; for a shell, $Q$ by the
+source, compared with GR's shell and not with Kerr. Band, named loudly:
+Painlevé–Gullstrand's constraints, the Doran river at $O(J)$; edge, in the
+model's words: flat rods carry mass and boost and nothing else; position: one
+boost per seat; surplus: none yet.</p>
 <h3>7. Thermal coefficients from rotor periods</h3>
 <p><strong>Unruh.</strong> With no field theory anywhere in the chain — no Bogoliubov
 transformations, no mode functions, no Rindler quantisation — the boost
@@ -617,6 +698,27 @@ untwisted/twisted split realised on a measurable number); and the branch
 locus is $\mathbb{Z}_2$-graded — coplanar frames read $0$ on one side of the
 symmetric ("trine") configuration and exactly $\pi$ on the other, with the
 trine as the wall between phase classes <strong>[proved / verified to 30 digits]</strong>.</p>
+<p><strong>CENSUS-C (2026-09-04): the phase is the geodesic triangle, not the pivot
+circle.</strong> With VIEW-1's circle in hand the natural proposition — that the
+$\hbar$ seat's compact character is realised by the circle's spin lift with
+angle $2\pi(1-h)$ — was run and killed (<code>census_c.py</code>, 7/7). Twice the
+transition phase, $2\arg B$, equals the solid angle of the <em>geodesic triangle</em>
+through the three alignments, computed independently by Gauss–Bonnet from its
+interior angles (300 frames; exact $\pi/4$ at the trine). The forced circle's
+cap is a different function: $2\pi(1-1/\sqrt3)$ against $\pi/2$ at the trine,
+ratio $0.10$–$1.00$ across the cell. What holds instead is a decomposition,
+$\mathrm{cap}(h) = \text{triangle} + \sum_{ij}\mathrm{seg}(\gamma_{ij}, h)$,
+three non-negative circular segments with $\cos\Delta\varphi_{ij} = (\gamma_{ij}-h^2)/(1-h^2)$
+and azimuths summing to $2\pi$ <strong>[verified]</strong>; every angle in it — cap,
+triangle, segments — lives in the $\sqrt\Delta$ class, while the conjugate
+triple $\sqrt{1+\gamma_{ij}}$ enters only the legs' moduli (the descent theorem
+below). Under the deck, $\arg B$ and $h$ are pure odd, $|B|$ is even, and the
+cap is mixed — the $\Theta$, $\Theta^2$, $\Theta$-over-a-root pattern of the
+author's horizon-pair paper. So the circle and the phase are the <em>same</em>
+sector's objects: the circle carries the orientation class through $h$ alone,
+the triangle carries it through $\sum\gamma$ as well, and the census's $2{:}1$
+is the square class itself, not a locus. "The circle must be $\hbar$ or the
+census is wrong" resolves as neither.</p>
 <p><strong>Descent theorem</strong> <em>(lineage located 2026-08-28, same night: this is
 Li--Wagner--Zhang Thm V.1 — every single-qubit Bargmann invariant satisfies a
 monic quadratic over the overlap field, determined up to one global
@@ -782,8 +884,38 @@ the former transport-exponent conjecture, no third carrier required); its
 successor question Q-RN — derive the reading-as-RN-power premise from the
 channel law, noting $n(c) = 2$ coincides with the quadratic channel exponent;
 PREDICTION-1; the hole as a presented state and its one-formula interior; the centre's two readings (dihedral angle at the root; the hemisphere and its deck sign); the interior antipodal collisions with exact addresses $r_s\Delta/\sin^2\theta_{ij}$ <strong>[candidate-new, lineage unsearched]</strong>; the branch-free excess orbit and its product identity (elementary, unlocated); the arc-length theorem and the pole obstruction of THM-J; the finding that no seat-to-seat rotor rule propagates a ray, as a theorem; the K-1 identity that the redshifted acceleration is the gradient of the reciprocal presented volume for every profile (elementary, the static-observer relation in the model's variables); the resolution of the local-versus-redshifted fork in the equipartition argument by the perihelion; the clock/rods half-and-half split of frame dragging paired with the same split in light bending (each half known, the pairing unlocated); the dimensional failure of rotating-screen principles.</p>
+<p><strong>Failure versus disagreement (2026-09-04).</strong> The model is allowed to disagree
+with known physics; that is where discovery would be found, and it needs a
+criterion that never makes GR the arbiter. A <em>failure</em> contradicts a model
+theorem, a number measured in a model-owned observable, or the model's own
+axioms. A <em>disagreement</em> is a definite, integer-structured prediction where GR
+is unmeasured. The test: assume the model is right and ask what breaks. By that
+standard THM-N's $P_2/r$ was an internal failure (K-6, MASS-1); THM-O's
+exponent theorem fails flat rods, internally and on the ground ($J_2$'s
+$a^{-7/2}$); the tangential sector is where the model is silent, not wrong;
+and Kerr's quadrupole is not yet a legal comparison. Every reproduction of a
+prior theory is recorded as a <em>band</em> of the spectrum with its <em>edge</em>, its
+<em>position</em> (which seat principle puts it there), and its <em>surplus</em>; a
+special-case identification needs all four, and a reproduction without an
+edge is a dictionary entry. A construction steered by a known answer is a
+witness or a band; it is never "falls out for free" — §9's cycle protocols are
+recorded under that rule.</p>
+<p><strong>Scaffold register.</strong> Prior theory is scaffolding to be removed; measured
+numbers are ground and never are. Load-bearing scaffolds at this version, each
+with its removal route: NORMAL-1 (declared; Einstein's constraint renamed;
+removal: sourced Gauss from the blind-mass theorem, MASS-1); K-6 linearity
+(declared; the integer-multipole kill of THM-O's tail rests on it; ground
+beneath it: $J_2$'s scaling; removal: the tangential law, whatever it is); the
+drag amplitude $2 = 1+1$ (THM-M superposition; removal: Codazzi sourced by the
+shell's momentum density, not run); EQ-1 Tolman (Mercury is the ground, Tolman
+the coat; ruling owed); VIEW-1 (declared; removal: derive from the
+presentation duty). PROTOCOL-1 — observations are ordered, presentations are
+not — is not scaffolding: it is the computed difference between the bilinear
+pivot map and the ordered operation of §9, and names a fact about measurement.
+Ground, never removed: Mercury's $3$, Gravity Probe B's $37.2$, $J_2$'s
+$a^{-7/2}$.</p>
 <p><strong>Declared inputs and named debts.</strong> LBL-1 (thermal circle), KIN-1 (proper
-acceleration); KIN-2a and KIN-3 are now <strong>derived</strong> (THM-K, THM-M) from four thermal declarations that state one idea — a seat's presented sphere carries $A/\ell_P^2$ thermal degrees of freedom: SCREEN-1 (entropy $k_B A/4\ell_P^2$), THERM-1 (equipartition), MASS-1 (the blind mass is the enclosed energy), EQ-1 (equilibrium at the temperature seen from infinity); KIN-2b, the curvature tier, closed 2026-08-30; CONT-1 (interior continuation), RULING-2 (layer assignment), TRANSPORT-1 (geodesic frame transport), STAT-1 and ROT-1 (rays respect the pinned field's two symmetries), PROP-1 (drift bookkeeping); linear superposition (first order in $r_s$ and $J$); three rulings owed — the letter of the rod-free definition, the semantics of "identity", and whether EQ-1's Tolman choice is a principle the author owns or a fact Mercury owns; Ohmic-in-band coupling (DEBT-2b: derive $c(\omega)$ from the channel law); the Stage-3 role dictionary with its stabilizer-compatibility admissibility law; adjudication of the irreducibly-signed-observable hypothesis (H-B). Two
+acceleration); KIN-2a and KIN-3 are now <strong>derived</strong> (THM-K, THM-M; KIN-2a's exponent a second time from NORMAL-1 + flat rods in THM-O) from four thermal declarations that state one idea — a seat's presented sphere carries $A/\ell_P^2$ thermal degrees of freedom: SCREEN-1 (entropy $k_B A/4\ell_P^2$), THERM-1 (equipartition), MASS-1 (the blind mass is the enclosed energy), EQ-1 (equilibrium at the temperature seen from infinity); KIN-2b, the curvature tier, closed 2026-08-30; CONT-1 (interior continuation), RULING-2 (layer assignment), TRANSPORT-1 (geodesic frame transport), STAT-1 and ROT-1 (rays respect the pinned field's two symmetries), PROP-1 (drift bookkeeping); linear superposition (first order in $r_s$ and $J$); three rulings owed — the letter of the rod-free definition, the semantics of "identity", and whether EQ-1's Tolman choice is a principle the author owns or a fact Mercury owns; Ohmic-in-band coupling (DEBT-2b: derive $c(\omega)$ from the channel law); the Stage-3 role dictionary with its stabilizer-compatibility admissibility law; adjudication of the irreducibly-signed-observable hypothesis (H-B). Two
 methodological facts deserve record. First, three times in this programme a theorem
 frozen for one purpose later selected the correct answer to a question it was
 not written for (the tensoriality theorem selecting $2\pi$; the closure rule

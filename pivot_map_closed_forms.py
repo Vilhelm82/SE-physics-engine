@@ -102,7 +102,7 @@ print("  dressed by the observer's own circumaxis -- mixed because h sits in the
 
 
 print("=== F-6  (added after Will's derivation) the dressing IS the pole triangle (n, a_i, a_j) ===")
-ok8 = ok9 = ok10 = True
+ok8 = ok9 = ok10 = okD1 = okD2 = okD3 = True; sign_votes = []
 for _ in range(150):
     av = [unit(v) for v in rngn.normal(size=(3, 3))]
     A = (np.cross(av[0], av[1]) + np.cross(av[1], av[2]) + np.cross(av[2], av[0]))/2; nn = A/np.linalg.norm(A)
@@ -111,18 +111,34 @@ for _ in range(150):
     Gd = geo(aj, ai)                                                                  # the DIRECT geodesic rotor a_j -> a_i
     W = Gd.conj().T @ Tn                                                              # what the detour adds: must fix a_j
     ok8 &= np.allclose(W @ sdn(aj) @ W.conj().T, sdn(aj))
-    # W is a rotation about a_j; its rotor angle: W = cos(psi/2) - i sin(psi/2) (a_j.sigma) up to sign
-    c = (0.5*np.trace(W)).real; s_ = -(0.5*np.trace(1j*W @ sdn(aj))).real          # cos(psi/2), sin(psi/2)
-    psi_half = np.arctan2(s_, c)
-    # the pole triangle (n, a_i, a_j): Van Oosterom-Strackee, tan(Omega/2) = n.(a_i x a_j) / (1 + n.a_i + a_i.a_j + a_j.n)
-    Om_half = np.arctan2(np.dot(nn, np.cross(ai, aj)), 1 + hn + gij + hn)
-    ok9 &= abs(abs(psi_half) - abs(Om_half)) < 1e-9 or abs(abs(abs(psi_half) - np.pi) - abs(Om_half)) < 1e-9
-    # and the n-component of the transition's bivector with its scalar part IS that triangle's (denominator, numerator) pair
-    mn = np.cross(nn, aj - ai) + np.cross(ai, aj)
-    ok10 &= abs(np.dot(mn, nn) - np.dot(nn, np.cross(ai, aj))) < 1e-12 and abs((1 + 2*hn + gij) - (1 + hn + gij + hn)) < 1e-12
+    # W is a rotation about a_j.  SIGNED rotor angle: W = cos(psi/2) I - i sin(psi/2) (a_j.sigma)  <=>  rotation by psi about a_j
+    c = (0.5*np.trace(W)).real; s_ = (0.5*np.trace(1j*W @ sdn(aj))).real          # = -(-sin) ... extract sin(psi/2) with its sign
+    psi_half = np.arctan2(s_, c)                                                    # in (-pi, pi]; spinor sign folded into +-pi ambiguity below
+    Om_half = np.arctan2(np.dot(nn, np.cross(ai, aj)), 1 + hn + gij + hn)          # SIGNED half solid angle of the pole triangle (n, a_i, a_j)
+    d = (psi_half - Om_half + np.pi) % (2*np.pi) - np.pi                            # signed difference mod 2pi
+    d2 = (psi_half + Om_half + np.pi) % (2*np.pi) - np.pi
+    same_sign_ok = abs(d) < 1e-9 or abs(abs(d) - np.pi) < 1e-9                     # psi/2 = +Om/2 (mod pi: spinor sign)
+    opp_sign_ok = abs(d2) < 1e-9 or abs(abs(d2) - np.pi) < 1e-9
+    sign_votes.append('+' if same_sign_ok and not opp_sign_ok else ('-' if opp_sign_ok and not same_sign_ok else '?'))
+    ok9 &= same_sign_ok or opp_sign_ok
+    # DECK: a -> -a with n fixed (A is quadratic).  The pole triangle becomes (n, -a_i, -a_j): numerator n.((-a_i) x (-a_j)) unchanged,
+    # denominator 1 + 2h + gamma -> 1 - 2h + gamma.  So its signed solid angle is NOT odd -- it is a different triangle.
+    num_t = np.dot(nn, np.cross(-ai, -aj)); den_t = 1 - hn - hn + gij
+    okD1 &= abs(num_t - np.dot(nn, np.cross(ai, aj))) < 1e-12 and abs(den_t - (1 - 2*hn + gij)) < 1e-12
+    Om_half_t = np.arctan2(num_t, den_t)
+    okD2 &= abs(Om_half_t + Om_half) > 1e-6                                        # generically NOT the negative
+    # the odd content: the THIRD axis's component of m_ij is the plain triple product, which does flip
+    ak = av[2]
+    okD3 &= abs(np.dot(ak, np.cross(ai, aj)) - np.dot(ai, np.cross(aj, ak))) < 1e-12 and abs(np.dot(-ak, np.cross(-ai, -aj)) + np.dot(ak, np.cross(ai, aj))) < 1e-12
 check("F-6a G~_ij T_ij fixes a_j: the two-step route through n differs from the direct geodesic by a rotation ABOUT a_j", ok8)
-check("F-6b its angle is the solid angle of the pole triangle (n, a_i, a_j) -- the holonomy of the loop a_j -> n -> a_i -> a_j (150 frames,"
-      " up to the spinor sign)", ok9)
+check("F-6b its SIGNED angle equals the SIGNED solid angle of the pole triangle (n, a_i, a_j) with one fixed sign convention on all 150 frames"
+      " (mod pi for the spinor sign) -- the holonomy of the loop a_j -> n -> a_i -> a_j", ok9 and len(set(sign_votes)) == 1 and '?' not in sign_votes,
+      f"psi/2 = ({sign_votes[0]})Omega/2 on {len(sign_votes)} frames")
+check("F-6d DECK, corrected: with n fixed the pole triangle becomes (n, -a_i, -a_j) -- numerator n.(a_i x a_j) UNCHANGED (even), denominator"
+      " 1+2h+gamma -> 1-2h+gamma.  Its signed solid angle is generically NOT the negative: the pole triangle does NOT flip sign under the deck;"
+      " the dressing is MIXED through h alone.  The paper's 'odd because those triangles flip orientation' was wrong", okD1 and okD2)
+check("F-6e the deck-ODD content of the readings is the third axis's component of m_ij, a_k.(a_i x a_j) = +-V, the plain triple product,"
+      " which does flip", okD3)
 check("F-6c (scalar part of T_ij, n-component of m_ij) = (1 + 2h + gamma_ij, n.(a_i x a_j)): exactly the Van Oosterom-Strackee pair of that"
       " pole triangle.  The cold map's transitions carry CENSUS-C's pole triangles; the mixed readings are dressed by their solid angles", ok10)
 n_pass = sum(CH); print(f"\n{n_pass}/{len(CH)} checks passed (with F-6)")

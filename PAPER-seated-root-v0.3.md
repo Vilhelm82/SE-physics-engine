@@ -2,7 +2,7 @@
 ## How much physics follows from three axes through a point: a derivational-economy study with machine-verified receipts
 
 **W. Lloyd** — draft v0.3, 2026-09-04
-*v0.3 (2026-09-04): PREDICTION-1 rewritten around presentation-versus-operation — the pivoted observation map derived cold (bilinear pairings: deck-even scalar office, mixed transition readings with closed forms, the pole-triangle dressing), the ordered-register operation reading sgn V with three exact physical readouts, the algebraic half certified three ways, and the cycle protocols recorded as an existence witness. Owed in this version and not yet folded: THM-O (the strain law as Gauss and Codazzi on flat rods; fork (b) at O(J^2)) into §6, VIEW-1 and CENSUS-C into §2/§9, and the scaffold register into §10 — see HANDOFF-2026-09-04.md. v0.2 (2026-09-03) is retained in git history.*
+*v0.3 (2026-09-04; corrected the same evening: pole-triangle parity — the dressing is mixed, not odd; the odd content is the triple product): PREDICTION-1 rewritten around presentation-versus-operation — the pivoted observation map derived cold (bilinear pairings: deck-even scalar office, mixed transition readings with closed forms, the pole-triangle dressing), the ordered-register operation reading sgn V with three exact physical readouts, the algebraic half certified three ways, and the cycle protocols recorded as an existence witness. Owed in this version and not yet folded: THM-O (the strain law as Gauss and Codazzi on flat rods; fork (b) at O(J^2)) into §6, VIEW-1 and CENSUS-C into §2/§9, and the scaffold register into §10 — see HANDOFF-2026-09-04.md. v0.2 (2026-09-03) is retained in git history.*
 *v0.2 (2026-09-03): the pinned family worked through — the hole as a presented state (THM-H), what sits at the
 centre (CURV-1), light and matter in the family (THM-I), and the field law narrowed and shown not to follow from
 the bare tier (THM-J). §6 gains four blocks; §10's ledger is rescoped and records the programme's first falsified
@@ -657,9 +657,14 @@ triangle's Van Oosterom–Strackee pair **[proved on 150 frames, exact
 identities]**. "Dressed by the observer's own axis" therefore has a closed
 form: every transition an observer at one root presents is the direct geodesic
 twisted by the solid angle its axis makes with the two roots, and the mixed
-readings inherit that twist — odd because those triangles flip orientation
-under the deck, mixed because their common colatitude $h$ sits in the
-denominator. The direct geodesic is what a pairwise measurement sees; $T_{ij}$
+readings inherit that twist. The parity bookkeeping is exact and was first
+stated wrongly here: the deck sends both roots to their antipodes, so the pole
+triangle becomes $(\hat n, -a_i, -a_j)$ — its numerator $\hat n\cdot(a_i\times a_j)$
+is deck-*even* and its denominator changes from $1+2h+\gamma_{ij}$ to
+$1-2h+\gamma_{ij}$ — so the pole triangle does *not* flip sign; the dressing is
+mixed through $h$ alone. The deck-odd content of every reading is the third
+axis's component of $m_{ij}$, $a_k\cdot(a_i\times a_j) = \pm V$, the plain
+triple product **[signed checks, 150 frames]**. The direct geodesic is what a pairwise measurement sees; $T_{ij}$
 is what an observer at one root sees; their difference is the observer's
 position on the view sphere, written as a solid angle. That is the seat, as
 geometry.

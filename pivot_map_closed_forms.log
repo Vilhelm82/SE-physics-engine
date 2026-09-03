@@ -26,7 +26,9 @@
   dressed by the observer's own circumaxis -- mixed because h sits in the denominator, odd because V sits in the numerator.
 === F-6  (added after Will's derivation) the dressing IS the pole triangle (n, a_i, a_j) ===
   [PASS] F-6a G~_ij T_ij fixes a_j: the two-step route through n differs from the direct geodesic by a rotation ABOUT a_j
-  [PASS] F-6b its angle is the solid angle of the pole triangle (n, a_i, a_j) -- the holonomy of the loop a_j -> n -> a_i -> a_j (150 frames, up to the spinor sign)
+  [PASS] F-6b its SIGNED angle equals the SIGNED solid angle of the pole triangle (n, a_i, a_j) with one fixed sign convention on all 150 frames (mod pi for the spinor sign) -- the holonomy of the loop a_j -> n -> a_i -> a_j -- psi/2 = (+)Omega/2 on 150 frames
+  [PASS] F-6d DECK, corrected: with n fixed the pole triangle becomes (n, -a_i, -a_j) -- numerator n.(a_i x a_j) UNCHANGED (even), denominator 1+2h+gamma -> 1-2h+gamma.  Its signed solid angle is generically NOT the negative: the pole triangle does NOT flip sign under the deck; the dressing is MIXED through h alone.  The paper's 'odd because those triangles flip orientation' was wrong
+  [PASS] F-6e the deck-ODD content of the readings is the third axis's component of m_ij, a_k.(a_i x a_j) = +-V, the plain triple product, which does flip
   [PASS] F-6c (scalar part of T_ij, n-component of m_ij) = (1 + 2h + gamma_ij, n.(a_i x a_j)): exactly the Van Oosterom-Strackee pair of that pole triangle.  The cold map's transitions carry CENSUS-C's pole triangles; the mixed readings are dressed by their solid angles
 
-13/13 checks passed (with F-6)
+15/15 checks passed (with F-6)

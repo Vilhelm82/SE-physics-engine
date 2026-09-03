@@ -1,0 +1,18 @@
+=== V-1  closed forms (any three vectors) ===
+  [PASS] V-1a 2 A.a_i = V identically for i = 1,2,3 (equidistance automatic)
+  [PASS] V-1b 4|A|^2 = 1^T adj(G) 1 identically
+  [PASS] V-1c hence h^2 = V^2/(4|A|^2) = Delta/(1^T adj(G) 1) with Delta = det G = V^2
+  [PASS] V-1d POLES (theorem, whole cell): the circumaxis of the sign class eps is A_eps = (V/2) (e2e3 a^1 + e3e1 a^2 + e1e2 a^3) in the dual basis -- its dual coordinates ARE the Cayley node gamma_ij = eps_i eps_j.  'Axes ~ sum eps_i a_i' holds only at the trine
+=== V-2  the trine and the four body diagonals ===
+  [PASS] V-2a at the orthonormal frame h = 1/sqrt(3) and n = (1,1,1)/sqrt(3)
+  [PASS] V-2b the four pole-resolved triples give the four body diagonals (up to sign) -- [(-1, -1, 1), (-1, 1, -1), (1, -1, -1), (1, 1, 1)]
+=== V-3  degeneration and spin holonomy ===
+  [PASS] V-3a h -> 0 exactly on the branch locus V = 0 (great circle iff coplanar), with h^2 = Delta/(1^T adj G 1) LINEAR in Delta: h ~ sqrt(Delta), the square class of V itself
+  [PASS] V-3b (sigma.n)^2 = 1 for unit n
+  [PASS] V-3c the cap lift exp(-i pi (1-h) sigma.n) equals Will's R = -exp(i pi h sigma.n) identically
+  [PASS] V-3d h -> 1 gives R -> +I; h -> 0 (the branch locus) gives R -> -I: the deck is reached exactly at V = 0
+=== V-4  cyclic order and the deck (random frames, both lifts) ===
+  [PASS] V-4a read from the +n side the cyclic order of (a1,a2,a3) is ALWAYS counterclockwise -- n is the triangle's own oriented normal, so that reading carries no deck information
+  [PASS] V-4b read from OUTSIDE the sphere (the cap side, sgn(h) n) the cyclic order equals sgn V, flips under tau, and equals sgn arg B with B = (1 + sum gamma + iV)/4: the geometric twin is the OUTSIDE reading, i.e. sgn h
+
+12/12 checks passed

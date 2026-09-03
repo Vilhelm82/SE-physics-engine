@@ -1,0 +1,19 @@
+=== C-1  what arg B is, geometrically ===
+  [PASS] C-1a on 300 random frames 2 arg B = the solid angle of the GEODESIC TRIANGLE (a_c, a_hbar, a_G) computed by Gauss-Bonnet from its interior angles: arg B is the half solid angle of the three great-circle legs
+  [PASS] C-1b exact at the trine: arg B = atan2(1, 1) = pi/4, twice it is pi/2 = the octant
+=== C-2  compare with the forced circle's cap 2 pi (1 - h), h = V/2A ===
+  [PASS] C-2a exact at the trine: cap = 2 pi (1 - 1/sqrt 3) = 2.655587, triangle = pi/2 = 1.570796: NOT EQUAL
+  [PASS] C-2b across the cell the ratio triangle/cap is not constant (min 0.104, max 0.997): the transition phase is NOT the cap holonomy, not even up to a fixed factor.  CENSUS-C as an identification of angles is KILLED
+=== C-3  the relation that does hold: cap = triangle + three leg segments ===
+  [PASS] C-3a cap(h) - triangle = sum of three circular segments, each a function of ONE leg gamma_ij and h (cos dphi_ij = (gamma_ij - h^2)/(1 - h^2)); azimuths sum to 2 pi.  The invariant class sits on the circle, the conjugate triple on the segments -- the Kummer split, geometric
+  [PASS] C-3b every segment is non-negative: the cap strictly contains the triangle; the hbar phase is LESS than the circle's holonomy by the legs
+=== VERDICT ===
+  CENSUS-C as stated -- 'the hbar character is realised by C's spin lift with angle 2 pi (1-h)' -- is KILLED on the cell: the
+  record's hbar transition phase arg B is half the solid angle of the geodesic triangle through the three alignments, and the
+  cap of the forced circle exceeds it by three leg segments that never vanish off the branch locus.  What survives: (i) the
+  doubled-angle structure IS realised on the cell -- arg B is a half-angle of a solid angle (spinor of a vector), no circle needed;
+  (ii) the circle carries exactly the invariant-class part h = V/2A of the phase, the legs carry the conjugate triple -- Will's
+  Kummer reading, now a decomposition; (iii) the circle is therefore the ORIENTATION sector's object (sgn h = sgn V, the deck),
+  not the hbar seat's.  VIEW-1's circle belongs to the deck.  [C-1a numeric on 300 frames; C-1b, C-2a exact; C-3 numeric]
+
+6/6 checks passed

@@ -1,0 +1,131 @@
+==============================================================================================================
+O-1  Gauss and Codazzi on flat rods: e_2(sym grad v) IS the normal-normal Einstein component, curl curl v the rest
+==============================================================================================================
+  [PASS] O-1a the presentation's 4-geometry has unit lapse and flat rods: n.n = -1, det g = -det h, g^{-1} as stated
+  ... Einstein tensor of the general axisymmetric river (three arbitrary functions of r, theta) [   0.1s]
+  ... assembled [   5.8s]
+  [PASS] O-1b GAUSS: G_nn = e_2(K) identically, K = sym(grad v) the second fundamental form of the flat rods (three arbitrary functions vr, vth, vph of r and theta; theorema egregium with R(h) = 0) -- residual 0
+  [PASS] O-1c CODAZZI: G_{n i} = -(D_j K^j_i - D_i K) identically (three components; the sign is the orientation of n) -- residuals [0, 0, 0]
+  [PASS] O-1d on flat rods d_j(S_ij - delta_ij tr S) = -(1/2) curl curl v for ANY v(x,y,z) (with K = -S this is G_{n i} = -(1/2)[curl curl v]_i): Codazzi in vacuum says the vorticity of the river is curl-free
+  READING: the closure is not chosen.  Flat rods + one shift is the whole of what one boost per seat can present, and
+  Gauss/Codazzi say the ambient Einstein tensor seen THROUGH the seat's normal is (e_2(K); (1/2) curl curl v).  Vacuum
+  through the normal = e_2(sym grad v) = 0 and curl curl v = 0.  The tangential-tangential components G_ij are NOT
+  fixed by the seat's rods -- they are the debt this suite measures at O(eps^2) (O-6).
+
+==============================================================================================================
+O-2  the invariant menu of the six-number cell, and the pinning
+==============================================================================================================
+  [PASS] O-2a e_2(sym grad v) for the inflow v = -beta(r) r-hat is (1/r^2) d(r beta^2)/dr exactly
+  [PASS] O-2b e_1 = 0 (divergence-free river) forces beta = C/r^2 -- the WRONG exponent (clock 1/r^4): dead at redshift -- Eq(beta(rho), C1/rho**2)
+  [PASS] O-2c e_3 = 0 (degenerate strain) forces beta' = 0 -- no field at all
+  [PASS] O-2d e_2 = 0 forces r beta^2 = const: the pinning beta^2 = r_s/r, i.e. THM-K's derived law, from the Gauss invariant alone -- Eq(beta(rho), C1/sqrt(rho))
+  [PASS] O-2e a second-order profile f = r_s/r + c_2 (r_s/r)^2 gives e_2 = -c_2 r_s^2/r^4: c_2 = 0 FORCED, Mercury becomes a check
+  READING: of the three elementary symmetric functions of the strain cell, only e_2 = 0 returns the pinning; e_1 = 0 and e_3 = 0
+  are dead on arrival.  O-1 says e_2 is not one of three but THE Gauss invariant of flat rods, so O-2 is a consistency
+  receipt (retrodiction against THM-K), not the derivation; the derivation is O-1b.
+
+==============================================================================================================
+O-3  the swirl at O(eps): Codazzi gives Lense-Thirring's exponent, Gauss is untouched
+==============================================================================================================
+  [PASS] O-3a curl curl v for v = -beta r-hat + eps w(r)(z x r) is -eps (z x r)(r w'' + 4 w')/r exactly, for ANY beta and w (Cartesian)
+  [PASS] O-3a' spherical 3+1 route (independent code): the momentum vector has only a phi-component, -(eps/2) r sin^2(theta)(r w'' + 4 w'), and e_2 = (1/r^2)(r beta^2)' - eps^2 (r w')^2 sin^2(theta)/4 exactly
+  [PASS] O-3b Codazzi in vacuum, r w'' + 4 w' = 0, has the two-dimensional solution space w = C1 + C2/r^3; the constant is a rigid rotation of the frame at infinity (excluded), so w = A/r^3: the 1/r^3 of frame dragging from the closure, no superposition -- Eq(w(rho), C1 + C2/rho**3)
+  [PASS] O-3c e_2(S_0 + eps S_1) = e_2(S_0) + eps^2 e_2(S_1) exactly: the O(eps) cross term tr S_0 tr S_1 - tr(S_0 S_1) vanishes for ANY beta(r), w(r), so the swirl leaves the pinning alone at first order
+  [PASS] O-3d the swirl's own Gauss content is e_2(S_1) = -(r w')^2 sin^2(theta)/4; for w = A/r^3 it is -9 A^2 sin^2(theta)/(4 r^6): the strain-squared of the drag, the SOURCE of the second-order field
+  READING: at first order the closure reproduces THM-M's result without K-6 (linear superposition): the drag profile is the
+  curl-free-vorticity solution of Codazzi.  At second order the drag's strain-squared enters Gauss as a source with a
+  monopole and a P2 part -- this is the nonlinearity THM-N asked for, and it is quadratic in the swirl, i.e. in J.
+
+==============================================================================================================
+O-4  second order: Codazzi makes the correction a gradient; Gauss is an ANISOTROPIC operator with half-integer exponents
+==============================================================================================================
+  [PASS] O-4a curl curl v_2 = 0 for poloidal axisymmetric v_2 forces r*omega_phi = G(theta) and (sin theta G)' = 0, i.e. omega_phi = C/(r sin theta): singular on the axis unless C = 0.  A regular second-order correction is CURL-FREE: v_2 = grad psi -- Eq(G(theta), C1/sin(theta))
+  [PASS] O-4b for ANY inflow beta(r) and ANY psi(x): tr S_0 tr S_2 - tr(S_0 S_2) = -(beta' + beta/r) lap psi + (beta' - beta/r) psi_rr
+  [PASS] O-4c with the pinning, the polarised Gauss operator on psi = f(r) P_l is -(beta/2r)[4 f'' + 2 f'/r - l(l+1) f/r^2] P_l for l = 0,1,2,3: NOT the Laplacian -- the radial direction is weighted four to one (spherical 3+1 route) -- {0: True, 1: True, 2: True, 3: True}
+  [PASS] O-4d the indicial exponents of that operator are p = (l+1)/2 and p = -l/2 -- HALF the Laplace exponents l and -(l+1) -- [-ell/2, ell/2 + 1/2]
+  [PASS] O-4e a Newtonian clock multipole P_l/r^{l+1} needs psi ~ r^{1/2 - l}; that exponent is in the flat-rod spectrum for l = 0 and l = 1 ONLY. Flat rods carry a mass and a boost and NO mass multipole of any higher order -- coincidences at l = [0, 1]
+  [PASS] O-4f in particular NO psi ~ P2 r^{1/2} mode exists, so no P2/r term in the clock can arise at O(eps^2): THM-N's Gate 1 is passed by the STRUCTURE of the closure, with nothing imported
+  READING: the second-order correction obeys an anisotropic second-order equation whose exterior solutions are r^{-l/2} P_l.
+  The pinning's own l = 0 mode is r^{1/2} (the mass), the l = 1 mode is r (a uniform velocity, a boost of the frame).  For
+  l >= 2 the exponent is half-integer and NOT Newton's.  This is a theorem about flat rods, not about e_2: the Gauss
+  invariant is doing exactly what Gauss says, and what it says is that a flat slice cannot be bent into a quadrupole.
+
+==============================================================================================================
+O-5  the exterior at O(eps^2), and the invariant that reads a quadrupole
+==============================================================================================================
+  [PASS] O-5a with c_0 = -A^2/(10 sqrt r_s) and c_2 = A^2/(8 sqrt r_s), Gauss e_2 = 0 and Codazzi = 0 hold through O(eps^2) for EVERY a_0, b_2: the two homogeneous constants (mass renormalisation, l = 2 mode) are exactly the freedom the closure leaves -- e2 by order [0, 0, 0]; momentum [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+  [PASS] O-5b perturbing the particular constants by 10% leaves e_2 = O(eps^2) != 0: c_0 and c_2 are FORCED by the swirl's strain-squared -- residual 9*A**2*sin(theta)**2/(40*r**6)
+  [PASS] O-5c the O(eps^2) clock: -sqrt(r_s) a_0/r (mass), 2 sqrt(r_s) b_2 P2 r^{-5/2} (the free l = 2 mode), [A^2/6 - A^2 P2/24]/r^4 (forced); NO P2/r (THM-N's ghost) and NO P2/r^3 (a Newtonian quadrupole): the P2 content sits at r^{-5/2} and r^{-4} -- {2: -a_0*sqrt(r_s), 5: b_2*sqrt(r_s)*(3*mu**2 - 1), 6: 0, 8: -A**2*(mu**2 - 3)/16}
+  h_00 at O(eps^2) = -A**2*mu**2/(16*r**4) + 3*A**2/(16*r**4) - a_0*sqrt(r_s)/r + b_2*(3*mu**2*sqrt(r_s)/r**(5/2) - sqrt(r_s)/r**(5/2))
+  [PASS] O-5d the invariant (1/2)(Omega_+^2 + Omega_-^2) as a function of R_c: r_s/(2R^3) at zeroth order; at O(eps^2) a mass shift -sqrt(r_s) a_0/(2R^3), a TAIL -(5/4) sqrt(r_s) b_2 R^{-9/2}, ZERO at R^{-5}, and (7/8) A^2 R^{-6} -- {6: -a_0*sqrt(r_s)/2, 9: -5*b_2*sqrt(r_s)/4, 10: 0, 12: 7*A**2/8}
+  READING: a mass quadrupole is read by orbits as an R^{-5} term in this invariant (Kepler's law with a 1/R^2 correction).  The
+  flat-rod exterior has none: its l = 2 freedom shows up as a half-integer tail R^{-9/2}, which no multipole of a source
+  produces.  The strain law on flat rods can be FED any source and will never return a quadrupole.
+
+==============================================================================================================
+O-6  what the seat's rods do NOT fix: the tangential Einstein components at O(eps^2)
+==============================================================================================================
+  ... Einstein tensor of the explicit O(eps^2) field [  19.1s]
+  ... assembled [  19.6s]
+  [PASS] O-6a at O(eps^0) the presentation is vacuum: G_mu nu = 0 (the pinning is exact, all ten components)
+  [PASS] O-6b at O(eps^1) the presentation is vacuum: G_mu nu = 0 (flat rods + curl-free drag A/r^3 is an exact first-order field, all ten components -- THM-L/M's frame dragging is not just constraint-satisfying, it is vacuum)
+  [PASS] O-6c at O(eps^2) the components the rods DO fix vanish: G_nn = e_2 = 0 (Gauss) and G_ni = -Mom = 0 (Codazzi), for every a_0, b_2 -- corollary of the identities O-1b/c and the expansion O-5a
+  [PASS] O-6d at O(eps^2) the tangential components G_ij are NOT zero: a_0 drops out of all of them (a mass shift is still vacuum), and the b_2 that kills G_thth at one point leaves G_rr, G_thth, G_phph nonzero at two others.  Flat rods cannot be vacuum at second order in the spin, for ANY value of the two free constants -- a_0-coefficients {0}; b_2* from G_thth at (7/2, pi/3) = [-44*sqrt(14)*A**2/(833*sqrt(r_s))]; residuals elsewhere [-8.898e-5*A**2, -2.269e-6*A**2, -0.001784*A**2, -0.0009025*A**2, 0.0001083*A**2, 0.0004955*A**2]
+  G_rr, G_thth, G_phph at O(eps^2) (a_0 = b_2 = 0):
+    (0, 0): 3*A**2*(3*mu**2 - 1)/(4*r**6)
+    (1, 1): -3*A**2*(6*mu**2 - 7)/(8*r**4)
+    (2, 2): -3*A**2*(mu - 1)*(mu + 1)*(9*mu**2 - 8)/(8*r**4)
+  READING: Gauss and Codazzi are the WHOLE of what a flat slice can say about its ambient.  They are satisfied.  The six
+  tangential components are the ambient's OWN equations -- the ones the seat's rods do not see -- and at O(eps^2) they
+  fail for every value of the two free constants.  That is fork (b): the rods must bend at second order in J, and the
+  bending is a rank-two object, which one boost cannot present.
+  Scaffold register: NORMAL-1 (declared; Einstein's constraint renamed -- removal route: the blind-mass theorem, sourced Gauss
+  from MASS-1); K-6 linearity (declared; the integer-multipole kill of the tail rests on it, its GROUND is J_2's a^{-7/2});
+  drag amplitude 2 = 1 + 1 (THM-M superposition; removal route: Codazzi sourced by the shell's momentum density, not run here).
+
+==============================================================================================================
+O-7  independent numeric path: the assembled field, finite differences at 40 digits, no symbolic derivative reused
+==============================================================================================================
+  [PASS] O-7a numeric (mpmath, nested central differences, 40 digits): halving eps divides e_2 by 16 at three random exterior points -- the Gauss residual is O(eps^4): the O(eps^2) closure holds with the forced constants -- ratios 16.0, 16.0, 16.0
+  [PASS] O-7b with the particular constants doubled the ratio (eps 0.04 vs 0.02) drops to ~4: e_2 = O(eps^2), the constants are not decorative -- ratios 3.99712, 3.98895, 3.96644
+  [PASS] O-7c curl curl v vanishes to finite-difference precision at every order (Codazzi is linear in v; both the drag and the gradient correction are curl-curl-free exactly) -- max |curl curl v| 2.71e-16, 1.17e-17, 1.04e-15
+
+==============================================================================================================
+COMPARISON BLOCK (names allowed from here on)
+==============================================================================================================
+  [PASS] C-1 Kerr, same invariant, same variable (frequency at infinity vs proper circumference): M/R^3 + (3 J^2/2M) R^{-5} + 6 J^2 R^{-6} + O(a^4). The quadrupole Q = -J^2/M is the R^{-5} coefficient, -3Q/(2M) per R^2 on Kepler -- {3: M, 5: 3*J**2/(2*M), 6: 6*J**2}
+  model (flat rods, r_s = 2M, A = 2J, eps absorbed):  R^-3: -sqrt(2)*sqrt(M)*a_0/2 + M  R^-9/2: -5*sqrt(2)*sqrt(M)*b_2/4  R^-5: 0  R^-6: 7*J**2/2
+  Kerr:                                                R^-3: M  R^-9/2: 0  R^-5: 3*J**2/(2*M)  R^-6: 6*J**2
+  [PASS] C-2 GATE 1 (THM-N): no P2/r mass aspect -- PASSED by the closure (O-4f, O-5c).  GATE 2 (Q = -J^2/M): NOT REACHABLE -- the model's R^{-5} coefficient is identically zero and its l = 2 freedom is a half-integer tail Kerr does not have.  Fork (b).
+  BAND, named loudly: O-1 on flat rods with unit lapse IS the ADM Hamiltonian and momentum constraint pair in Painleve-Gullstrand
+  gauge; O-2 is Schwarzschild in PG form; O-3 and O-6b are the Doran / Hamilton-Lisle river at first order in J.  That is the
+  band this suite reproduces.  BAND EDGE (the model's own statement, no GR name): flat rods carry a mass and a boost and no
+  other multipole, for ANY source -- O-4e.  Garat & Price 2000 (PRD 61, 124011; no conformally flat axisymmetric slice of Kerr,
+  obstruction at O(a^2)) and Valiente Kroon 2004 are the shadow of that edge, narrower and about Kerr only; Natario 2009's
+  PG-like Kerr coordinates have curved slices.  THM-N's Gate 2 as written -- Q = -J^2/M FROM A SHELL -- is Kerr's
+  no-hair number, not a rigidly rotating shell's: de la Cruz & Israel 1968 and Pfister & Braun 1985 need an oblate, stressed
+  shell to source Kerr at O(a^2).  The gate to re-declare is: (i) a hole -- Q fixed by regularity at the wall (THM-H at O(J^2));
+  (ii) a shell -- Q fixed by the source, compared with GR's shell, not with Kerr.  On flat rods neither question arises.
+  COROLLARY (same operator, static source): a static oblate body's l = 2 clock would fall as P2 r^{-5/2} on flat rods, not
+  P2 r^{-3}; the J_2 nodal regression would scale as a^{-3} instead of Newton's a^{-7/2} (LAGEOS/GPS/lunar: a^{-7/2}).  This
+  kills FLAT RODS for any non-spherical source, not the model: THM-M's static rods are a sum of rank-ones and are not flat.
+  It locates the multipoles: they live in the bending of the rods, never in the strain of a flat slice.
+
+==============================================================================================================
+VERDICT (THM-O)
+==============================================================================================================
+  e_2(strain) = 0 is DERIVED: it is Gauss's theorema egregium for the seat's flat rods (G_nn = e_2(K) identically, O-1b), and
+  Codazzi supplies curl curl v = 0 (O-1c/d).  Conditional on: one boost per seat (flat rain rods, unit lapse), the presentation
+  metric = eta-sandwich of the boosted frame (BARE-1/M-2), and 'no source through the seat's normal' in vacuum (declared: NORMAL-1).
+  Retrodictions: the pinning (O-2d, = THM-K), c_2 = 0 (O-2e), Lense-Thirring's 1/r^3 (O-3b, = THM-M without K-6), and -- new --
+  the first-order drag on flat rods is exact vacuum, all ten components (O-6b).
+  Second order (proved): Codazzi makes the correction a gradient; Gauss is the anisotropic operator with exponents (l+1)/2, -l/2.
+  Gate 1 PASSED by structure: no P2/r mode exists (O-4f, O-5c).  Gate 2 NOT REACHABLE: no R^{-5} slot in the orbital invariant
+  (O-5d, C-1/C-2); the l = 2 freedom is a half-integer tail, killed on the GROUND by J_2's scaling and, provisionally, by K-6's
+  linearity (a scaffold).  The tangential Einstein components fail at O(eps^2) for every
+  (a_0, b_2) (O-6d).  FORK (b): flat rods fail at second order in the spin.  The multipoles of any source live in the bending
+  of the rods; the bending is a rank-two object; one boost presents rank one.  Next tier: what bends the rods -- the same
+  rank-two debt the TT wave carries (handoff item 4).  Kill condition for THIS suite: any of O-1b/c, O-4d, O-5d, O-6d failing
+  on re-run, or a flat-rod field with a nonzero R^{-5} coefficient.
+
+33/33 checks passed [ 114.7s]

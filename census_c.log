@@ -5,15 +5,20 @@
   [PASS] C-2a exact at the trine: cap = 2 pi (1 - 1/sqrt 3) = 2.655587, triangle = pi/2 = 1.570796: NOT EQUAL
   [PASS] C-2b across the cell the ratio triangle/cap is not constant (min 0.104, max 0.997): the transition phase is NOT the cap holonomy, not even up to a fixed factor.  CENSUS-C as an identification of angles is KILLED
 === C-3  the relation that does hold: cap = triangle + three leg segments ===
-  [PASS] C-3a cap(h) - triangle = sum of three circular segments, each a function of ONE leg gamma_ij and h (cos dphi_ij = (gamma_ij - h^2)/(1 - h^2)); azimuths sum to 2 pi.  The invariant class sits on the circle, the conjugate triple on the segments -- the Kummer split, geometric
+  [PASS] C-3a cap(h) - triangle = sum of three circular segments, each a function of ONE leg gamma_ij and h (cos dphi_ij = (gamma_ij - h^2)/(1 - h^2)); azimuths sum to 2 pi.  NOTE (galois.py G-8/G-9): every angle here -- cap, triangle, segments -- lives in the sqrt(Delta) class; the conjugate triple sqrt(1+gamma_ij) enters only the legs' MODULI |<a_i|a_j>|, never an angle.  The split is moduli vs phase
   [PASS] C-3b every segment is non-negative: the cap strictly contains the triangle; the hbar phase is LESS than the circle's holonomy by the legs
+=== C-4  parity under the deck (the horizon paper's principle: invariants descend, odd data does not) ===
+  [PASS] C-4a arg B and h are PURE ODD under the deck; |B| is EVEN; the cap 2 pi (1-h) is MIXED (2 pi even part, 2 pi h odd part) -- exactly the Theta / Theta^2 / T = Theta-over-root pattern of the horizon-pair paper.  The Gram quotient forgets sgn V; a model observable built from arg B DESCENDS only if the model supplies an ordering of the two sheets (the horizon analogue is S_+ > S_-) -- {'arg B': {'odd'}, 'h = V/2A': {'odd'}, 'cap 2pi(1-h)': {'mixed'}, '|B|': {'even'}, 'segments (sum)': {'odd'}}
 === VERDICT ===
   CENSUS-C as stated -- 'the hbar character is realised by C's spin lift with angle 2 pi (1-h)' -- is KILLED on the cell: the
   record's hbar transition phase arg B is half the solid angle of the geodesic triangle through the three alignments, and the
   cap of the forced circle exceeds it by three leg segments that never vanish off the branch locus.  What survives: (i) the
   doubled-angle structure IS realised on the cell -- arg B is a half-angle of a solid angle (spinor of a vector), no circle needed;
-  (ii) the circle carries exactly the invariant-class part h = V/2A of the phase, the legs carry the conjugate triple -- Will's
-  Kummer reading, now a decomposition; (iii) the circle is therefore the ORIENTATION sector's object (sgn h = sgn V, the deck),
-  not the hbar seat's.  VIEW-1's circle belongs to the deck.  [C-1a numeric on 300 frames; C-1b, C-2a exact; C-3 numeric]
+  (ii) cap, triangle and segments all live in the sqrt(Delta) class (G-9); the conjugate triple lives in the legs' moduli (G-8);
+  the circle carries the class datum h alone, the triangle carries the same class through Sum gamma as well; (iii) both arg B and
+  h are deck-odd, so VIEW-1's circle and the transition phase are the SAME sector's objects -- the orientation sector -- and the
+  census's 2:1 is the square class itself, not a locus.  The deck test now reads: find the model's ordering of the two sheets,
+  or arg B's sign does not descend (galois_horizon_cover: the sign of Theta is the datum the Galois quotient forgets; extremal
+  chirality = death of the odd sector at the branch point = R -> -I at Delta = 0 here).  [C-1a, C-3, C-4 numeric on 300 frames]
 
-6/6 checks passed
+7/7 checks passed

@@ -64,14 +64,35 @@ for f in frames:
     ok3 &= abs(cap(f)[0] - solid_angle_gb(*f) - ssum) < 1e-9 and abs(dsum - 2*np.pi) < 1e-9
     ok3b &= all(s > -1e-12 for s in segs)
 check("C-3a cap(h) - triangle = sum of three circular segments, each a function of ONE leg gamma_ij and h (cos dphi_ij = (gamma_ij - h^2)/(1 - h^2));"
-      " azimuths sum to 2 pi.  The invariant class sits on the circle, the conjugate triple on the segments -- the Kummer split, geometric", ok3)
+      " azimuths sum to 2 pi.  NOTE (galois.py G-8/G-9): every angle here -- cap, triangle, segments -- lives in the sqrt(Delta) class;"
+      " the conjugate triple sqrt(1+gamma_ij) enters only the legs' MODULI |<a_i|a_j>|, never an angle.  The split is moduli vs phase", ok3)
 check("C-3b every segment is non-negative: the cap strictly contains the triangle; the hbar phase is LESS than the circle's holonomy by the legs", ok3b)
+print("=== C-4  parity under the deck (the horizon paper's principle: invariants descend, odd data does not) ===")
+# tau realised as a_i -> -a_i (V -> -V, Gram fixed).  Classify each cell function by parity.
+def parity(fn):
+    res = set()
+    for f in frames:
+        g = [-v for v in f]; x, y = fn(f), fn(g)
+        res.add('odd' if abs(x + y) < 1e-9 else ('even' if abs(x - y) < 1e-9 else 'mixed'))
+    return res
+tab = {'arg B': parity(lambda f: argB(*f)),
+       'h = V/2A': parity(lambda f: cap(f)[1]),
+       'cap 2pi(1-h)': parity(lambda f: cap(f)[0]),
+       '|B|': parity(lambda f: abs(np.exp(1j*argB(*f)))*np.sqrt(np.prod([1 + np.dot(f[i], f[j]) for i in range(3) for j in range(i+1, 3)])/8)),
+       'segments (sum)': parity(lambda f: decomposition(f)[0])}
+check("C-4a arg B and h are PURE ODD under the deck; |B| is EVEN; the cap 2 pi (1-h) is MIXED (2 pi even part, 2 pi h odd part) -- exactly the"
+      " Theta / Theta^2 / T = Theta-over-root pattern of the horizon-pair paper.  The Gram quotient forgets sgn V; a model observable"
+      " built from arg B DESCENDS only if the model supplies an ordering of the two sheets (the horizon analogue is S_+ > S_-)",
+      tab['arg B'] == {'odd'} and tab['h = V/2A'] == {'odd'} and tab['|B|'] == {'even'} and tab['cap 2pi(1-h)'] == {'mixed'}, f"{tab}")
 print("=== VERDICT ===")
 print("  CENSUS-C as stated -- 'the hbar character is realised by C's spin lift with angle 2 pi (1-h)' -- is KILLED on the cell: the")
 print("  record's hbar transition phase arg B is half the solid angle of the geodesic triangle through the three alignments, and the")
 print("  cap of the forced circle exceeds it by three leg segments that never vanish off the branch locus.  What survives: (i) the")
 print("  doubled-angle structure IS realised on the cell -- arg B is a half-angle of a solid angle (spinor of a vector), no circle needed;")
-print("  (ii) the circle carries exactly the invariant-class part h = V/2A of the phase, the legs carry the conjugate triple -- Will's")
-print("  Kummer reading, now a decomposition; (iii) the circle is therefore the ORIENTATION sector's object (sgn h = sgn V, the deck),")
-print("  not the hbar seat's.  VIEW-1's circle belongs to the deck.  [C-1a numeric on 300 frames; C-1b, C-2a exact; C-3 numeric]")
+print("  (ii) cap, triangle and segments all live in the sqrt(Delta) class (G-9); the conjugate triple lives in the legs' moduli (G-8);")
+print("  the circle carries the class datum h alone, the triangle carries the same class through Sum gamma as well; (iii) both arg B and")
+print("  h are deck-odd, so VIEW-1's circle and the transition phase are the SAME sector's objects -- the orientation sector -- and the")
+print("  census's 2:1 is the square class itself, not a locus.  The deck test now reads: find the model's ordering of the two sheets,")
+print("  or arg B's sign does not descend (galois_horizon_cover: the sign of Theta is the datum the Galois quotient forgets; extremal")
+print("  chirality = death of the odd sector at the branch point = R -> -I at Delta = 0 here).  [C-1a, C-3, C-4 numeric on 300 frames]")
 n_pass = sum(CH); print(f"\n{n_pass}/{len(CH)} checks passed"); sys.exit(0 if all(CH) else 1)

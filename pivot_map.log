@@ -1,0 +1,31 @@
+=== M-1  the map exists and is consistent (E-8-X invariances reproduced mechanically) ===
+  [PASS] M-1a every reading is pivot-invariant: the observer reads the same S and I parts at every theta on the orbit (co-pivot invariance, E-8-X X-3/X-6 recovered for all pairing types)
+  [PASS] M-1b axis-axis pairings: S-part = -gamma_ij (the Gram, sign of the bar), I-part identically zero (STATE LEMMA X-4 recovered: no pseudoscalar from two states)
+=== M-2  the search: deck parity of every pairing type ===
+    axis-axis    {'S_even_neg': True, 'S_even_ref': True, 'I_odd_neg': True, 'I_odd_ref': True, 'I_nonzero': False, 'I_sign_is_sgnV': True}
+    axis-trans   {'S_even_neg': True, 'S_even_ref': True, 'I_odd_neg': False, 'I_odd_ref': False, 'I_nonzero': True, 'I_sign_is_sgnV': False}
+    trans-trans  {'S_even_neg': False, 'S_even_ref': False, 'I_odd_neg': True, 'I_odd_ref': True, 'I_nonzero': False, 'I_sign_is_sgnV': True}
+    REPORT scalar office deck-even for every pairing type: False
+    REPORT pairing types with a definite-parity ODD pseudoscalar reading: []
+    REPORT pairing types with a nonzero pseudoscalar reading of MIXED parity (changes under tau, not by a sign): ['axis-trans']
+    REPORT pairing types whose SCALAR reading changes under tau (mixed parity): ['trans-trans']
+  [PASS] M-2a SEALED KILL TEST: the map's output is deck-even (nothing changes under tau) -> PREDICTION-1 dead.  Result: the output is NOT deck-even; the kill does not fire
+  [PASS] M-2b the pairing types that separate X from tau X are exactly those involving a TRANSITION (E-8-X's relative rotors): axis-axis readings are the Gram and cannot; the record's X-6c object is deck-sensitive
+  [PASS] M-2c no reading of DEFINITE odd parity exists among the record's bilinear pairings: nothing in the map reads sgn V cleanly
+=== M-3  what the odd reading is, in closed form (searched, not designed) ===
+    I-part / V over 240 slots: min -15.2508  max 15.2508  (a Gram-and-h-dependent coefficient; closed form owed)
+    REPORT axis-transition I-part / V over 240 slots (min, max): (np.float64(-15.2508), np.float64(15.2508))
+=== M-4  what the map does NOT contain ===
+  [PASS] M-4a the product of the three relative-rotor transitions around the axes is the IDENTITY: relative rotors telescope; a 'cycle' of the record's transitions carries nothing.  Whatever reads V here is not a cycle of transitions
+=== VERDICT (computed from the table, not written in advance) ===
+  OUTCOME (a'): the record's own map SEPARATES the deck pair -- through mixed-parity readings on the transition pairings
+  (axis-transition pseudoscalar, X-6c; transition-transition scalar) -- but contains NO definite-parity orientation reading.
+  The sealed prediction (pseudoscalar part of an ordered idempotent product) does NOT appear: the record admits bilinear
+  pairings and Gram-function click-invariants (tr, e2, det of G'), not ordered products of idempotents.  The witness
+  pred1_protocol.py therefore uses an operation the record has not declared; it stays a witness.  The orientation reference
+  the map DOES carry is the sign of the circumaxis n = A/|A|, i.e. the CYCLIC ORDER in which the three alignments are named
+  (odd relabellings flip n): the minimal PROTOCOL-1 -- naming (c, hbar, G) in an order is already the declaration.
+  Owed: closed forms of the mixed readings' odd parts; a rule, if the model wants one, admitting products of presented objects.
+  M-4a stands: the relative-rotor 'cycle' is the identity -- 'cycle' is the wrong word for the record's transitions.
+
+6/6 checks passed

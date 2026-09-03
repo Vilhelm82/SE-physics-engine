@@ -65,8 +65,8 @@ check("D-4a 16 (x - B)(x - Bbar) = 16 x^2 - 8 (1 + sum g) x + (1 + sum g)^2 + De
 check("D-4b G-1 identity: the constant term (1 + sum g)^2 + Delta = 2 (1+g12)(1+g13)(1+g23) -- the cycle's |B|^2 is the product of the legs",
       sp.expand(S**2 + Delta - 2*(1 + g12)*(1 + g13)*(1 + g23)) == 0)
 disc = sp.expand((8*S)**2 - 4*16*(S**2 + Delta))
-check("D-4c the discriminant is -64 Delta: irreducible over F iff -Delta is not a square in F.  Delta is an irreducible cubic (D-1), so"
-      " [F(B):F] = 2 and B lies in F(sqrt Delta) -- the phase needs the orientation layer only, none of the leg radicals (G-9)",
+check("D-4c the discriminant is -64 Delta: irreducible over F = Q(gamma) iff -Delta is not a square in F.  Delta is an irreducible cubic (D-1), so"
+      " [F(B):F] = 2 and B lies in F(sqrt(-Delta)) = F(i, sqrt Delta) after complexifying -- the phase needs the orientation layer only (G-9)",
       sp.expand(disc + 64*Delta) == 0 and sp.Poly(Delta, *gam).is_irreducible)
 print("=== D-5  collision stratification: the four nodes of the Cayley cubic ===")
 nodes = [(1, 1, 1), (1, -1, -1), (-1, 1, -1), (-1, -1, 1)]
@@ -90,7 +90,10 @@ print("=== VERDICT ===")
 print("  ALGEBRAIC HALF OF THE DECK TEST, CLOSED: the deck tau is the inertia generator of the smooth part of the Cayley cubic and of nothing")
 print("  else -- it flips sqrt Delta (D-1: order 1 along D0), leaves the three leg radicals alone (order 0 along D0), and is trivial around")
 print("  every node (D-5: order 2).  The cycle phase arg B lives in F(sqrt Delta) (D-4) so it is deck-odd and NOTHING ELSE in the cover")
-print("  moves it.  What remains is the PHYSICAL half: an ordering of the two sheets from a model principle (galois_horizon_cover: the sign")
-print("  of Theta is the datum the quotient forgets; there it is S_+ > S_-).  Without it, arg B's sign does not descend and the candidate")
-print("  factors through the Gram.  [D-1 exact; D-2 exact at a rational point; D-3, D-4, D-5 exact]")
+print("  moves it.  NON-DESCENT IS THE POINT: arg B is not a function of the Gram, so an observable reading it does not factor through the")
+print("  presentation -- exactly what the factorization criterion asks for.  What remained was an observable that reads it with a fixed")
+print("  sense and a realisation of tau that fixes the complete presentation; both are supplied in pred1_deck_separator.py (the directed")
+print("  cycle U_(123), Im<U_q> = V/4; the equatorial reflection).  The earlier closing sentence here -- 'without an ordering of the sheets")
+print("  the candidate factors through the Gram' -- was wrong and is withdrawn: the sense of the cycle is the ordering.")
+print("  [D-1 exact; D-2 exact at a rational point; D-3, D-4, D-5 exact]")
 n_pass = sum(CH); print(f"\n{n_pass}/{len(CH)} checks passed"); sys.exit(0 if all(CH) else 1)

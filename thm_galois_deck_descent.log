@@ -15,7 +15,7 @@
 === D-4  the cycle invariant descends: minimal polynomial of B over F has degree 2, not 16 ===
   [PASS] D-4a 16 (x - B)(x - Bbar) = 16 x^2 - 8 (1 + sum g) x + (1 + sum g)^2 + Delta, coefficients in F (V eliminated by V^2 = Delta)
   [PASS] D-4b G-1 identity: the constant term (1 + sum g)^2 + Delta = 2 (1+g12)(1+g13)(1+g23) -- the cycle's |B|^2 is the product of the legs
-  [PASS] D-4c the discriminant is -64 Delta: irreducible over F iff -Delta is not a square in F.  Delta is an irreducible cubic (D-1), so [F(B):F] = 2 and B lies in F(sqrt Delta) -- the phase needs the orientation layer only, none of the leg radicals (G-9)
+  [PASS] D-4c the discriminant is -64 Delta: irreducible over F = Q(gamma) iff -Delta is not a square in F.  Delta is an irreducible cubic (D-1), so [F(B):F] = 2 and B lies in F(sqrt(-Delta)) = F(i, sqrt Delta) after complexifying -- the phase needs the orientation layer only (G-9)
 === D-5  collision stratification: the four nodes of the Cayley cubic ===
     node (1, 1, 1): grad Delta = 0: True, Hessian rank 3 (A1), rank G = 1, legs vanishing: []
     node (1, -1, -1): grad Delta = 0: True, Hessian rank 3 (A1), rank G = 1, legs vanishing: ['1+g13', '1+g23']
@@ -27,8 +27,11 @@
   ALGEBRAIC HALF OF THE DECK TEST, CLOSED: the deck tau is the inertia generator of the smooth part of the Cayley cubic and of nothing
   else -- it flips sqrt Delta (D-1: order 1 along D0), leaves the three leg radicals alone (order 0 along D0), and is trivial around
   every node (D-5: order 2).  The cycle phase arg B lives in F(sqrt Delta) (D-4) so it is deck-odd and NOTHING ELSE in the cover
-  moves it.  What remains is the PHYSICAL half: an ordering of the two sheets from a model principle (galois_horizon_cover: the sign
-  of Theta is the datum the quotient forgets; there it is S_+ > S_-).  Without it, arg B's sign does not descend and the candidate
-  factors through the Gram.  [D-1 exact; D-2 exact at a rational point; D-3, D-4, D-5 exact]
+  moves it.  NON-DESCENT IS THE POINT: arg B is not a function of the Gram, so an observable reading it does not factor through the
+  presentation -- exactly what the factorization criterion asks for.  What remained was an observable that reads it with a fixed
+  sense and a realisation of tau that fixes the complete presentation; both are supplied in pred1_deck_separator.py (the directed
+  cycle U_(123), Im<U_q> = V/4; the equatorial reflection).  The earlier closing sentence here -- 'without an ordering of the sheets
+  the candidate factors through the Gram' -- was wrong and is withdrawn: the sense of the cycle is the ordering.
+  [D-1 exact; D-2 exact at a rational point; D-3, D-4, D-5 exact]
 
 10/10 checks passed

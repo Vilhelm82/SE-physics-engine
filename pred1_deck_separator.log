@@ -1,0 +1,22 @@
+=== S-1  the directed cycle reads the Bargmann invariant; the deck flips its imaginary part ===
+  [PASS] S-1a <Psi_A|U_(123)|Psi_A> = <a1|a2><a2|a3><a3|a1> = B_A = (S + iV)/4 exactly (200 random frames)
+  [PASS] S-1b O_q(A) := Im<U_q> = V_A/4
+  [PASS] S-1c the REVERSED protocol U_q^{-1} = U_(132) reads the conjugate: the sense of the cycle is the sense of the sign
+  [PASS] S-1d the deck tau (a_i -> -a_i: Gram fixed, V -> -V) gives O_q(tau A) = -O_q(A) under the SAME apparatus
+=== S-2  click-equivariance: relabel the axes and conjugate the protocol ===
+  [PASS] S-2a O_{pi q pi^-1}(pi A) = O_q(A) for every pi in S_3: the experiment is click-equivariant although the coordinate V is odd under odd relabellings
+=== S-3  the relational comparator (symbolic) ===
+  [PASS] S-3a 8[Re(B_A conj(B_R)) - Re(B_A B_R)] = V_A V_R identically
+  [PASS] S-3b det(A^T R) = det A det R = V_A V_R, so chi = det(A^T R)/sqrt(Delta_A Delta_R) = sgn(V_A V_R): even under a joint deck, odd under a deck on one frame -- no sheet is ever named
+=== S-4  the PREMISE: the complete G-seat presentation is deck-invariant while V flips ===
+  [PASS] S-4a the presented shift FIELD v(x) = -beta(r) r-hat + omega(r) (z x r) is invariant as a field under the equatorial reflection: sigma v(sigma x) = v(x) identically (radial part and drag both) -- the seat's clock 1 - |v|^2 and its flat rods are then invariant too
+  [PASS] S-4b the same reflection applied to the state's three axes fixes the Gram and flips V: Gram(sigma a) = Gram(a), V(sigma a) = -V(a)
+  [PASS] S-4c hence tau := equatorial reflection realises the deck ON THE STATE with Pi_G(tau X) = Pi_G(X) for the complete rotating presentation (rods, clock, inflow, drag) and tau X != X whenever V != 0.  The premise of the factorization test holds; O_q separates the pair
+=== VERDICT ===
+  The deck test does not need a global sheet name.  It needs an observable odd under tau on a state whose presentation is even under
+  tau.  Both exist: O_q = Im<U_(123)> = V/4 on the cross-seat cycle, and the equatorial reflection realising tau.  The sense that
+  orders the sheets is the SENSE OF THE PROTOCOL -- U_q versus U_q^{-1}, first-then -- a temporal order, not a spatial convention.
+  That is the model's S_+ > S_-: an ordering of operations rather than of horizons.  Declare it: PROTOCOL-1, cross-seat cycles are
+  directed.  Remaining debt (Will's, unchanged): realise U_q physically on the ħ transitions (E-8-X co-pivot as a protocol).
+
+10/10 checks passed

@@ -1,0 +1,23 @@
+=== H  controlled-U_B Hadamard test ===
+  [PASS] H-1 Tr[U_B (P_1 x P_2 x P_3)] = Tr(P_1 P_2 P_3) = B exactly (200 frames)
+  [PASS] H-2 ancilla |+>, controlled-U_B, measure Y: <Y> = Im B = V/4;  X: <X> = Re B = (1 + sum gamma)/4
+  [PASS] H-3 controlled-U_B^dagger reads <Y> = -V/4: U_B is the transition word 3->2->1 (reads B), U_B^dagger is 1->2->3 (reads conj B) -- matches pred1_protocol T-2c
+=== C  the spin-chirality operator ===
+  [PASS] C-1 chi-hat has spectrum {-1 (x2), 0 (x4), +1 (x2)}: +-1 on the two mixed-symmetry doublets, 0 on the symmetric quadruplet -- [-1. -1.  0.  0.  0.  0.  1.  1.]
+  [PASS] C-2 <chi-hat> = (2/sqrt 3) Im B on the product state: chi-hat = (1/2 sqrt 3) sigma_1.(sigma_2 x sigma_3) reads V/(2 sqrt 3)
+  [PASS] C-3 exp(+i (2pi/3) chi-hat) equals U_B or U_B^dagger (the 3-cycle acts as e^{+-2pi i/3} on the doublets, 1 on the quadruplet) -- exp(+i 2pi/3 chi-hat) = U_B
+=== T  three-photon tritter, internal states = the spinor roots ===
+  [PASS] T-1 the ten output patterns sum to 1 (bosonic symmetrisation and the projectors are consistent)
+  [PASS] T-2 Im B = +-(3 sqrt 3 / 2)(P_(210) - P_(120)) EXACTLY with a frame-independent sign fixed by the tritter's chirality (omega vs conj omega); with U_jk = omega^{(j-1)(k-1)} the pair (2,0,1)-(1,0,2) reads +V/4 with coefficient exactly 1 -- the device's handedness is the directed reference here, as the permutation order is in the Hadamard test -- sign of the (210)-(120) coefficient: {-1}
+  [PASS] T-3 the deck-reflected triple (same Gram, V -> -V) reverses the imbalance and leaves P_(111) unchanged: pairwise HOM content is even, the imbalance is the odd datum
+    other imbalance pairs, coefficient x4/V: {((2, 0, 1), (1, 0, 2)): (np.float64(1.0), np.float64(1.0)), ((0, 2, 1), (0, 1, 2)): (np.float64(-1.0), np.float64(-1.0))}
+=== G  what pairwise tests give ===
+  [PASS] G-1 Gamma_ij = 2 Tr(P_i P_j) - 1 = gamma_ij (pairwise SWAP/HOM), det Gamma = V^2, so pairwise tests give |Im B| = sqrt(det Gamma)/4; only the directed three-body operation supplies the sign
+=== VERDICT ===
+  All three readings are exact.  Each is a physical realisation of the ordered three-body operation Tr(U_B P_1 x P_2 x P_3), which
+  pivot_map.py showed the record's bilinear map does NOT contain.  Their admissibility therefore rests on ONE declaration: that the
+  seat's spinor roots |a_i> are physically preparable hbar-qubit inputs and a directed three-body operation on them is a model
+  operation (Will's boundary).  With it, the protocol debt is closed physically; without it, the debt is the preparation interface
+  and nothing else -- not the map C -> K, not the readout.  Pairwise HOM/SWAP is the Gram; the sign is three-body and directed.
+
+10/10 checks passed

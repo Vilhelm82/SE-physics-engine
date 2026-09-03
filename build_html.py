@@ -11,7 +11,7 @@
 # =============================================================================
 import base64, io, re, pathlib, markdown
 
-SRC = 'PAPER-seated-root-v0.2.md'
+SRC = 'PAPER-seated-root-v0.3.md'
 OUT = 'PAPER-seated-root.html'
 here = pathlib.Path('.')
 text = io.open(SRC, encoding='utf-8').read()

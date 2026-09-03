@@ -1,7 +1,8 @@
 # The Seated Root
 ## How much physics follows from three axes through a point: a derivational-economy study with machine-verified receipts
 
-**W. Lloyd** — draft v0.2, 2026-09-03 (amended the same evening)
+**W. Lloyd** — draft v0.3, 2026-09-04
+*v0.3 (2026-09-04): PREDICTION-1 rewritten around presentation-versus-operation — the pivoted observation map derived cold (bilinear pairings: deck-even scalar office, mixed transition readings with closed forms, the pole-triangle dressing), the ordered-register operation reading sgn V with three exact physical readouts, the algebraic half certified three ways, and the cycle protocols recorded as an existence witness. Owed in this version and not yet folded: THM-O (the strain law as Gauss and Codazzi on flat rods; fork (b) at O(J^2)) into §6, VIEW-1 and CENSUS-C into §2/§9, and the scaffold register into §10 — see HANDOFF-2026-09-04.md. v0.2 (2026-09-03) is retained in git history.*
 *v0.2 (2026-09-03): the pinned family worked through — the hole as a presented state (THM-H), what sits at the
 centre (CURV-1), light and matter in the family (THM-I), and the field law narrowed and shown not to follow from
 the bare tier (THM-J). §6 gains four blocks; §10's ledger is rescoped and records the programme's first falsified

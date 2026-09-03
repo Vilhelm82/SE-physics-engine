@@ -1,0 +1,53 @@
+==============================================================================
+PART 1 - one pairing, its signature, its invariances (Cl(3))
+==============================================================================
+  [PASS][  0.0s] S-1  bar signature (4,4); paravector sector (1,3) = MINKOWSKI; Wick sector its negative - per blade [1, -1, -1, -1, 1, 1, 1, -1]
+  [PASS][  0.0s] S-2  reversion pairing is (8,0) - the contrast: only the BAR pairing carries regimes
+  [PASS][  0.0s] S-3  Abar A = 1 and the one-sided action preserves psibar psi for GENERAL psi
+  [PASS][  0.1s] S-4  paravector norm is the scalar t^2-|v|^2 and is two-sided invariant
+  [PASS][  0.2s] S-5  psi psi~ -> A (psi psi~) A: the spinor square root intertwines half -> full
+
+==============================================================================
+PART 2 - three seats = three regimes of the ONE norm
+==============================================================================
+  [PASS][  0.2s] T-1  c seat, regime NULL: <X Xbar> = 0 on-state and after the pivot (E-1) -> FREE
+  [PASS][  0.2s] T-2a hbar seat, regime TIMELIKE: the vacuum F = A0 boosts to A0(coshL + sinhL e1) - isotropic form acquires SHAPE under the pivot
+  [PASS][  0.2s] T-2b ... and its norm is pinned to A0^2 for every rapidity: FLOORED - the floor is the invariant of a timelike paravector, not a declaration
+  [PASS][  0.2s] T-3  G seat, regime TIMELIKE PINNED: <P Pbar> = 1-tanh^2 = sech^2 = (1+v)(1-v) -> 0 at the wall - section 6's protected product IS the bar norm of the pinned paravector
+
+==============================================================================
+PART 3 - the hbar dictionary, DERIVED (2x2 forms; shares nothing with Cl(3))
+==============================================================================
+  [PASS][  0.2s] D-1  F(C) := ((C11+C22)/2, (C11-C22)/2, C12) has bar-norm f0^2-f1^2-f2^2 = det C EXACTLY - the Robertson-Schroedinger product is the Minkowski norm
+  [PASS][  0.2s] D-2  squeeze by l on the form = BOOST by 2l on F: RAPIDITY DOUBLING is an identity - G-8's Lambda = 2 lambda, derived
+  [PASS][  0.3s] D-3  rotation by phi on the form = rotation by 2phi on (f1,f2): ANGLE DOUBLING is an identity - G-8's Theta = 2 phi, derived
+  [PASS][  0.3s] D-4  det C invariant under the squeeze: the floor survives every pivot
+
+==============================================================================
+PART 4 - the transport census from ONE rotor
+==============================================================================
+  [PASS][  0.4s] Q-1a vector angle (two-sided): du'/du = s^-2  -> Q_c = Q_G = 2
+  [PASS][  0.4s] Q-1b spinor angle (one-sided): dphi'/dphi = q^-1 with q = s(Lambda, cos 2phi) -> Q_hbar = 1 - same rotor, half representation, half exponent: the census (2,1,2)
+
+RESULT: 15/15 checks passed.
+
+THEOREM (SECT-1): under RULE-1's bar pairing Cl(3) splits (4,4); its paravector
+  sector carries the Minkowski norm t^2-|v|^2, invariant under the two-sided
+  rotor. The three seats are three REGIMES of that one norm:
+    c     null           (norm 0 on-state)          -> free
+    hbar  timelike       (norm pinned to A0^2 > 0)  -> floored
+    G     timelike->null (norm sech^2 -> 0 at wall)  -> horizon-vanishing
+  and the character of each seat is FORCED by invariance once its regime is
+  named. The hbar seat is the paravector read through its spinor square root
+  (S-5): the quadratic-form/squeeze picture of thm_g is the boost of a
+  timelike paravector (D-1..4), which DERIVES the 2:1 dictionary in both halves
+  and the census (2,1,2) (Q-1). Only a sign is assigned per seat.
+  Will's criterion: the seat whose behaviour WAS forced beyond its name is G
+  (KIN-2 by import, THM-K by four declarations); the strain law un-forces it.
+COMPARISON-STAGE NAMES: paravector model of Minkowski space in Cl(3); the
+  form -> vector map is the Stokes / Poincare-sphere construction (double
+  angle); Robertson-Schroedinger.
+HONEST SCOPE: 'timelike' for the hbar state = C positive definite = SEAT-hb's
+  content, a regime label; A0^2 = hbar^2/4 remains the label tier. Single axis
+  K = e1 throughout.
+

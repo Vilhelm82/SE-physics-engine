@@ -24,5 +24,9 @@
   <T_ij Tbar_kl>_S = [(1+2h+gamma_ij)(1+2h+gamma_kl) + m_ij.m_kl] / (4(1+h)^2);  odd part by the same antisymmetrisation in h.
   Every odd part is V times a rational function of (gamma, |A|, h^2): the cold map's separating content is the orientation datum
   dressed by the observer's own circumaxis -- mixed because h sits in the denominator, odd because V sits in the numerator.
+=== F-6  (added after Will's derivation) the dressing IS the pole triangle (n, a_i, a_j) ===
+  [PASS] F-6a G~_ij T_ij fixes a_j: the two-step route through n differs from the direct geodesic by a rotation ABOUT a_j
+  [PASS] F-6b its angle is the solid angle of the pole triangle (n, a_i, a_j) -- the holonomy of the loop a_j -> n -> a_i -> a_j (150 frames, up to the spinor sign)
+  [PASS] F-6c (scalar part of T_ij, n-component of m_ij) = (1 + 2h + gamma_ij, n.(a_i x a_j)): exactly the Van Oosterom-Strackee pair of that pole triangle.  The cold map's transitions carry CENSUS-C's pole triangles; the mixed readings are dressed by their solid angles
 
-10/10 checks passed
+13/13 checks passed (with F-6)

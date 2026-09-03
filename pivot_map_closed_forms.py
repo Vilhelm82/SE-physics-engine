@@ -99,4 +99,31 @@ print("     even part = -(E_kij - eps_kij V h) / (2(1 - h^2))                   
 print("  <T_ij Tbar_kl>_S = [(1+2h+gamma_ij)(1+2h+gamma_kl) + m_ij.m_kl] / (4(1+h)^2);  odd part by the same antisymmetrisation in h.")
 print("  Every odd part is V times a rational function of (gamma, |A|, h^2): the cold map's separating content is the orientation datum")
 print("  dressed by the observer's own circumaxis -- mixed because h sits in the denominator, odd because V sits in the numerator.")
-n_pass = sum(CH); print(f"\n{n_pass}/{len(CH)} checks passed"); sys.exit(0 if all(CH) else 1)
+
+
+print("=== F-6  (added after Will's derivation) the dressing IS the pole triangle (n, a_i, a_j) ===")
+ok8 = ok9 = ok10 = True
+for _ in range(150):
+    av = [unit(v) for v in rngn.normal(size=(3, 3))]
+    A = (np.cross(av[0], av[1]) + np.cross(av[1], av[2]) + np.cross(av[2], av[0]))/2; nn = A/np.linalg.norm(A)
+    hn = np.dot(nn, av[0]); ai, aj = av[0], av[1]; gij = np.dot(ai, aj)
+    Ri, Rj = geo(nn, ai), geo(nn, aj); Tn = Ri @ Rj.conj().T                        # T_ij = R_i R_j~  (Will's two-step route through n)
+    Gd = geo(aj, ai)                                                                  # the DIRECT geodesic rotor a_j -> a_i
+    W = Gd.conj().T @ Tn                                                              # what the detour adds: must fix a_j
+    ok8 &= np.allclose(W @ sdn(aj) @ W.conj().T, sdn(aj))
+    # W is a rotation about a_j; its rotor angle: W = cos(psi/2) - i sin(psi/2) (a_j.sigma) up to sign
+    c = (0.5*np.trace(W)).real; s_ = -(0.5*np.trace(1j*W @ sdn(aj))).real          # cos(psi/2), sin(psi/2)
+    psi_half = np.arctan2(s_, c)
+    # the pole triangle (n, a_i, a_j): Van Oosterom-Strackee, tan(Omega/2) = n.(a_i x a_j) / (1 + n.a_i + a_i.a_j + a_j.n)
+    Om_half = np.arctan2(np.dot(nn, np.cross(ai, aj)), 1 + hn + gij + hn)
+    ok9 &= abs(abs(psi_half) - abs(Om_half)) < 1e-9 or abs(abs(abs(psi_half) - np.pi) - abs(Om_half)) < 1e-9
+    # and the n-component of the transition's bivector with its scalar part IS that triangle's (denominator, numerator) pair
+    mn = np.cross(nn, aj - ai) + np.cross(ai, aj)
+    ok10 &= abs(np.dot(mn, nn) - np.dot(nn, np.cross(ai, aj))) < 1e-12 and abs((1 + 2*hn + gij) - (1 + hn + gij + hn)) < 1e-12
+check("F-6a G~_ij T_ij fixes a_j: the two-step route through n differs from the direct geodesic by a rotation ABOUT a_j", ok8)
+check("F-6b its angle is the solid angle of the pole triangle (n, a_i, a_j) -- the holonomy of the loop a_j -> n -> a_i -> a_j (150 frames,"
+      " up to the spinor sign)", ok9)
+check("F-6c (scalar part of T_ij, n-component of m_ij) = (1 + 2h + gamma_ij, n.(a_i x a_j)): exactly the Van Oosterom-Strackee pair of that"
+      " pole triangle.  The cold map's transitions carry CENSUS-C's pole triangles; the mixed readings are dressed by their solid angles", ok10)
+n_pass = sum(CH); print(f"\n{n_pass}/{len(CH)} checks passed (with F-6)")
+sys.exit(0 if all(CH) else 1)

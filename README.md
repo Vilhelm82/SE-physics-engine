@@ -26,7 +26,8 @@ reached from the primitives or declared with its full cargo.
 
 ## The primitives
 
-`docs/2026-09-04-PRIMITIVES-v0.md` is canonical and is still a draft.
+`docs/2026-09-04-PRIMITIVES-v0.md` is canonical and is still a draft. The labelling on top of
+it — every pole, edge and face of the octahedron, with tiers — is `docs/LABELLED-MODEL.md`.
 
 | | |
 |---|---|

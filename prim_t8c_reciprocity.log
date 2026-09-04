@@ -1,0 +1,29 @@
+=== c1: dimension count ===
+  [PASS][  0.0s] c1 star: Lambda^p -> Lambda^{n-p} is internal on 2-forms iff n - 2 = 2 iff n = 4; in 2+1 it lands in Lambda^1 (THM-K(a) k4)
+=== c2: star^2 on 2-forms in the two signatures ===
+  [PASS][  0.0s] c2 (3,1): star^2 = -1 on 2-forms
+  [PASS][  0.0s] c2' (2,2): star^2 = +1 on 2-forms
+  [PASS][  0.0s] c2'' matches the formula star^2 = (-1)^{p(n-p) + n_-} = (-1)^{n_-} for p = 2, n = 4
+=== c3: the one-parameter reciprocity family ===
+  [PASS][  0.1s] c3 (3,1): exp(theta star) = cos(theta) I + sin(theta) star -- a COMPACT rotation of the 2-form space, period 2 pi: Maxwell's continuous electric-magnetic reciprocity
+  [PASS][  0.9s] c3' (2,2): exp(theta star) = cosh(theta) I + sinh(theta) star -- HYPERBOLIC, non-compact: a split structure, not a rotation; contradicts T7a's compact ruler plane if reciprocity is to act on the ruler channels
+=== c4: which Gamma_4 ===
+  [PASS][  0.9s] c4 with Gamma_4^2 = +1 the four generators have n_- = 1 (only Gamma_C): Cl(3,1), star^2 = -1, compact reciprocity AVAILABLE
+  [PASS][  0.9s] c4' with Gamma_4^2 = -1 they have n_- = 2: Cl(2,2), star^2 = +1, reciprocity HYPERBOLIC -- excluded by T7a
+  [PASS][  0.9s] c4'' THEREFORE: compact electric-magnetic reciprocity => n_- odd => Gamma_4^2 = +1 => Cl(3,1). The fourth direction is SPACELIKE.
+=== c5: the clean covector cone ===
+  [PASS][  1.3s] c5 ||k ^ A||^2 = q^{-1}(k,k) q^{-1}(A,A) - q^{-1}(k,A)^2 (the Gram determinant of the covector pair under q^{-1}) -- the clean covector form
+  [PASS][  9.6s] c5' on transverse A (q^{-1}(k,A) = 0 imposed by solving for A0): ||k ^ A||^2 = q^{-1}(k,k) q^{-1}(A,A) exactly, so with q^{-1}(A,A) != 0 it vanishes iff q^{-1}(k,k) = 0 -- a nonzero transverse polarisation with k ^ H = 0 forces the null cone. CLAUSE (b) DERIVED; Z a free conformal scalar
+=== c6: consequence for T8b's adjoint class ===
+  [PASS][  9.6s] c6 with the signature forced to +1, T8b leaves exactly two consistent worlds: (self-adjoint arrival, s = +1: one clock) and (skew-adjoint arrival, s = -1: two clocks)
+  [PASS][  9.6s] c6' under P5 -- one seated line, one clock, s = +1 -- the arrival operation must be SELF-ADJOINT: an observable that resolves the two alternatives, not a generator of motion between them. Derived, conditional on P5 and on reciprocity acting compactly on the ruler channels
+=== c7: terminology ===
+  [PASS][  9.6s] c7 star with star^2 = -1 has ORDER FOUR (star^4 = I, star^2 != I): a complex structure on the 2-form space; its projective action (on lines) has order two. Not an involution. In (2,2) star^2 = +1 IS the involution
+
+RESULT: 14/14 checks passed in 9.6s
+VERDICT [DERIVED, conditional on reciprocity acting compactly on the ruler channels (T7a)]:
+  compact electric-magnetic reciprocity => star^2 = -1 on 2-forms => n_- odd => Gamma_4^2 = +1 => Cl(3,1).
+  The fourth direction is SPACELIKE.  Block coherence (T8a) demanded Gamma_4 exist; EM reciprocity demands it
+  spacelike; the result is the Lorentzian 3+1 extension.  Three independent demands, one generator.
+  Open: the scalar/coupling half -- Z_0 and e^2 Z_0/hbar = 4 pi alpha -- and the derivation that the seat's two
+  ruler responses are precisely the two electromagnetic constitutive channels.

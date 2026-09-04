@@ -1,0 +1,19 @@
+=== z1-z3: the shape of the pair ===
+  [PASS][  0.0s] z1 log c = -(x + y)/2 and log Z_0 = (x - y)/2: the SUM and the DIFFERENCE of the pair
+  [PASS][  0.0s] z1' their gradient directions are ORTHOGONAL in the pair's log-plane: c and Z_0 are two orthogonal readings of one 2-dim object
+  [PASS][  0.0s] z2 under mu_0 <-> eps_0: c is INVARIANT (swap-symmetric reading), Z_0 -> 1/Z_0 (swap-ANTIsymmetric reading)
+  [PASS][  0.0s] z3 the map (log mu_0, log eps_0) -> (log c, log Z_0) is a similitude with det > 0; normalised it is a ROTATION (det +1, orthogonal)
+  [PASS][  0.0s] z3' the rotation angle is 135 degrees = a quarter-turn plus a half-turn: a REAL angle connects the two readings -> by P3 the pair's plane is COMPACT -- theta = 3*pi/4
+=== z4: which plane of the seat (labelling) ===
+  [PASS][  0.0s] z4 the c seat's resolution has exactly ONE compact plane, its space (hbar, G) [T7a]; a pair whose two readings are joined by a real rotation can only be that plane
+  [PASS][  0.0s] z4' LABELLING (conjecture): mu_0, eps_0 = the two rulers' readings of the seat's space; c = product reading = the collapsed axis (P9); Z_0 = ratio reading = the hbar<->G antisymmetric datum (T7b3: the bare tier cannot see it, the readout can)
+=== z5: numerics (comparison stage, CODATA 2018 / SI 2019) ===
+  [PASS][  0.0s] z5 c = (mu_0 eps_0)^{-1/2} = 299 792 458 m/s to the precision of the inputs -- c = 299792458.0
+  [PASS][  0.0s] z5' Z_0 = (mu_0/eps_0)^{1/2} = mu_0 c = 376.730 ohm -- Z_0 = 376.730314
+  [PASS][  0.0s] z5'' Z_0 = 2 alpha h / e^2: the impedance reading of c is hbar in units of e^2 through the fine-structure constant -- the ratio reading is tied to the hbar RULER -- 2 alpha h/e^2 = 376.730314
+
+RESULT: 10/10 checks passed in 0.0s
+VERDICT: the SHAPE holds -- c and Z_0 are the symmetric and antisymmetric orthogonal readings of one pair, joined by a
+  real rotation, so in the model's classification the pair is a COMPACT plane, and the c seat has exactly one: its space.
+  The IDENTIFICATION (mu_0, eps_0 = the rulers' readings of the seat's space; Z_0 = the pole-sensitive datum) is a
+  labelling, conjecture tier.  KILL: the model must derive 377 ohm from the same seat that gives c, or this is a coat.

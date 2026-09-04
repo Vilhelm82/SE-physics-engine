@@ -1,0 +1,32 @@
+=== T1: one plane, one angle, one imaginary rotation ===
+  [PASS][  0.1s] T1a  R(theta)^T Q_E R(theta) = Q_E (rotation preserves the plane's form)
+  [PASS][  0.1s] T1b  S^-1 R(i lam) S is REAL and equals [[ch,sh],[sh,ch]]
+  [PASS][  0.1s] T1c  the real pivot does NOT preserve Q_E (signature change is forced)
+  [PASS][  0.1s] T1d  the real pivot preserves Q_M = diag(1,-1): signature (1,1)
+  [PASS][  0.1s] T1e  S^T Q_E S = Q_M (the Wick coordinate is the timelike one)
+  [PASS][  0.3s] T1f  B(a) B(b) = B(a+b): rapidity is additive, the group is SO(1,1)
+  [PASS][  0.8s] T1g  the only invariant symmetric form of the pivot family is prop. to diag(1,-1) -- [{q11: -q22, q12: 0}]
+=== T2: three lines, three planes -- which planes take the imaginary angle? ===
+  [PASS][  0.8s] T2a  so(3): [L1,L2]=L3, [L2,L3]=L1, [L3,L1]=L2
+  [PASS][  0.8s] T2b  with x3 -> i x3: planes (2,3),(1,3) become SYMMETRIC generators (boosts), (1,2) stays ANTISYMMETRIC (rotation)
+  [PASS][  0.8s] T2c  the three realified generators preserve diag(1,1,-1): the group is SO(2,1)
+  [PASS][  0.8s] T2d  so(2,1) relations: [K1,K2] = -J3, [J3,K1] = K2, [K2,J3] = K1
+  [PASS][  0.8s] T2e  x1 -> i x1 likewise gives SO(2,1) (the timelike line is a CHOICE among the three)
+  [PASS][  0.8s] T2f  over all 8 realifications, the number of boost planes is in {0, 2}: three boosts on the 3-space is impossible -- boost-plane counts seen: [0, 2]
+  [PASS][  0.8s] T2g  abstractly, {L_k, i L_k} satisfy [J,J]=eJ, [J,K]=eK, [K,K]=-eJ: so(3,C)_R = so(1,3)
+=== T3: Wigner rotation inside SO(2,1), no Cl(3) ===
+  [PASS][  0.8s] T3a  boost(v1, x1) preserves diag(1,1,-1)
+  [PASS][  1.0s] T3b  boost(v2, alpha) preserves diag(1,1,-1)
+  [PASS][  5.7s] T3c  the pure boost rebuilt from P e3 preserves diag(1,1,-1) and is symmetric
+  [PASS][  7.4s] T3d  R = B_t^-1 (B1 B2) fixes the timelike axis: pure spatial rotation
+  [PASS][  7.8s] T3e  R is orthogonal on the (x1,x2) block with det +1
+  [PASS][ 10.9s] T3f  tan^2(w/2) = [s1 s2 sin(a) / (c1 c2 + s1 s2 cos(a))]^2  [Wigner magnitude, re-earned in SO(2,1)]
+  [PASS][ 11.0s] T3f' sign under THIS convention (P = B1 B2, R = B_t^-1 P, w from R[1,0]): tan(w/2) = -(formula); orientation, not physics
+  [PASS][ 11.0s] T3g  margin: w = 0 iff collinear (t = 0) or unpivoted (v1 = 1 or v2 = 1)
+  [PASS][ 11.0s] T3h  second path: exp/acosh-free numeric route agrees with the closed form to 1e-35 at three points
+
+RESULT: 23/23 checks passed in 11.0s
+VERDICT (computed from the table, not written in advance):
+  T1 : 1+1 signature and SO(1,1) DERIVED from P6
+  T2 : SO(2,1) on the 3-space for one imaginary plane; Lorentz ALGEBRA reachable, (1,3) SPACE not
+  T3 : Wigner re-earned in SO(2,1) without Cl(3)

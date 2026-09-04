@@ -1,0 +1,31 @@
+=== combinatorics ===
+  [PASS][  0.0s] 6 vertices (poles), 12 edges (pole pairs on different axes), 8 faces (sign triples): an octahedron, V - E + F = 2
+  [PASS][  0.0s] every edge borders exactly TWO faces, and they differ only in the axis the edge does not touch
+  [PASS][  0.0s] every vertex lies on exactly four faces
+  [PASS][  0.0s] the near face (Light, Action, Mass) and the far face (Temperature, Evanescence, Energy) are ANTIPODAL faces of the octahedron
+  [PASS][  0.0s] the near face and the far face share no vertex and no edge
+
+=== the W-loops are edge paths; their odd stations are on edges ===
+  [PASS][  0.0s] loop in the (c,hbar) plane: four vertices, four edges, each odd station between the +G face and the -G face -- odd stations are between Mass-faces and Energy-faces
+  [PASS][  0.0s] loop in the (c,G) plane: four vertices, four edges, each odd station between the +hbar face and the -hbar face -- odd stations are between Action-faces and Evanescence-faces
+  [PASS][  0.0s] loop in the (hbar,G) plane: four vertices, four edges, each odd station between the +c face and the -c face -- odd stations are between Light-faces and Temperature-faces
+
+=== the eight faces, from the table ===
+    face (1, 1, 1): [Light, Action, Mass]  =  GR + Wave + Bound             ->  light waves in bound orbits around mass, in curved spacetime: lensing, orbital mechanics -- OUR FACE  [established]
+    face (1, 1, -1): [Light, Action, Energy]  =  GR + Wave + Escaping          ->  light with phase leaving a well: gravitational redshift, Shapiro delay, gravitational waves escaping  [named]
+    face (1, -1, 1): [Light, Evanescence, Mass]  =  GR + Particle + Bound         ->  light tunnelling in a bound system: near-horizon greybody filtering (G-2), frustrated total internal reflection  [named]
+    face (1, -1, -1): [Light, Evanescence, Energy]  =  GR + Particle + Escaping      ->  light tunnelling out carrying energy: the Parikh-Wilczek tunnelling picture of emission, non-thermal  [named]
+    face (-1, 1, 1): [Temperature, Action, Mass]  =  Quantum + Wave + Bound        ->  thermal waves around bound mass: Tolman-Ehrenfest equilibrium, temperature in a gravitational well (EQ-1)  [named]
+    face (-1, 1, -1): [Temperature, Action, Energy]  =  Quantum + Wave + Escaping     ->  thermal waves carrying energy away, no mass: BLACKBODY radiation, Planck's reading of the light-temperature axis  [named]
+    face (-1, -1, 1): [Temperature, Evanescence, Mass]  =  Quantum + Particle + Bound    ->  thermal tunnelling in a bound system: finite-temperature instantons, stellar fusion through the Coulomb barrier  [named]
+    face (-1, -1, -1): [Temperature, Evanescence, Energy]  =  Quantum + Particle + Escaping  ->  thermal tunnelling carrying energy away: HAWKING RADIATION -- the far face  [established]
+  [PASS][  0.0s] every face has a declared candidate regime; two established (the table's columns), six named tonight
+  [PASS][  0.0s] the six mixed faces split 3 + 3: three one pole-flip from our face (share an edge with it), three one flip from Hawking's
+  [PASS][  0.0s] adjacency: the three one-flip faces each share an edge with our face; the three two-flip faces each share an edge with Hawking's
+
+RESULT: 11/11 checks passed in 0.0s
+VERDICT:
+  Combinatorics [PROVED]: the six poles form an octahedron; edges border two faces differing in the untouched axis;
+    the W-loops are its edge paths and their plane-stations lie on edges labelled by the axis they never touch.
+  Faces [DECLARED candidates]: our face and Hawking's face are the table's two columns and are antipodal;
+    the six between them are named for the first time and each owes a derivation.

@@ -148,7 +148,28 @@ This is the tangential-sector debt with one bit attached.
 13. "which way det G_c passes through zero" -- it doesn't; D does.  14. "Bargmann invariant = 2D" -- the spinor trace is; the projector
 invariant is a different, even object.  15. A single 2x2 Clifford block taken as faithful -- it is one sheet of two.
 
-### Next session, revised order
+### ADDENDUM 2 (~22:30 AEST; HEAD `d508e64`, 26 commits)
+- **T8 ANSWERED** (T8a `8eb6658` 14/14, T8b `5403a38` 15/15, T8c `d508e64` 14/14): the fourth direction is the generator that
+  exchanges the two Cl(2,1) sheets (lifts the superselection; makes the grade involution inner; the blocks are inequivalent
+  irreps). Its signature: (adjoint class) x s with s the relative sign of the sheet bilinears (per-block form forced
+  symplectic = Gamma_C); EM reciprocity (star^2 = -1 on 2-forms needs n_- odd) forces Gamma_4^2 = +1: SPACELIKE, Cl(3,1).
+  Under P5 (one clock, s = +1) the arrival operation is SELF-ADJOINT. Three demands, one generator.
+- **HUNCH-Z0 v2** (`5db1881`, 8/8): c = trivial rep, Z_0 = sign rep of E-M exchange; zeta = e^2 Z_0/hbar = 4 pi alpha is the
+  unit-independent invariant; the 135-degree compactness argument was circular and is dropped (correction 18).
+- **THM-K(a)** (`f3519e8`, 7/7): K = Z^{-1} star_q is ruler-blind (ordering constraint met); its cone is the c-cone (clause b);
+  Z free; clause (a) obstructed in 2+1 -> needs Gamma_4. THM-K and T8 are one theorem. Correction 19 (swap on wrong side).
+- Corrections 18-19 added. Primitives doc: P13 (the fourth direction), THM-K target, IMPEDANCE added; still DRAFT, Will's to freeze.
+
+### Next session, revised order (supersedes the list below where they conflict)
+0. Will freezes the primitives doc (P1-P13).
+1. THM-K, the scalar/coupling half: build the charged load L on the compact plane in the Cl(3,1) algebra Gamma_4 generates;
+   derive the odd response's units (h/e^2 -> weak result, names hbar) and, if the model can, 4 pi alpha (strong result).
+   Also close the argued link: 2-form duality acts on the ruler plane as a real rotation.
+2. The frame path / horizon sheet: (rho, p, Theta, sigma, m, R)(tau) -> X(tau) -> chi[Gamma]; needs fluid -> state (dynamics
+   tier: V = I Z with Z the seat's load) and state -> face sequence. Compare with theta_+ = 0.
+3. LABEL-1 at eighth-turns; the six named faces; paper v0.6.
+
+### Next session, original list (provenance)
 0. Will reads and freezes `docs/2026-09-04-PRIMITIVES-v0.md` (still DRAFT).
 1. **RETRACTED and replaced (Will's catch, label3b_corrections.py 10/10):** "make D(r) cross zero at the horizon" contradicts
    T7e -- horizon != {D = 0} = branch locus; sgn D is CONSTANT along any regular trajectory and D != 0 at both T7g horizons

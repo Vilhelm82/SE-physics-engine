@@ -86,6 +86,38 @@ the two rulers are instead ONE ruler and the frame itself loses rank. Horizon = 
 into light; branch curve = two rulers turning into one. This is the 08-17 labelled model's c-5
 ('v = c is the root lying flat in the presentation, a re-seating') with its mechanism.
 
+P13. [DERIVED 2026-09-04 late; T8a/T8b/T8c] THE FOURTH DIRECTION. Cl(2,1) = M_2(R) (+) M_2(R) with
+    central pseudoscalar I, I^2 = +1; the two blocks are the two sheets (T5c). A fourth generator Gamma_4
+    anticommuting with the seat's three exists, is unique up to two scalars, is off-diagonal, anticommutes
+    with I, and exchanges the sheets (T8a). Without it the sheet is a superselection label (no element of
+    Cl(2,1) connects the blocks); with it the algebra is simple and the sheets can superpose and interfere.
+    The two blocks are INEQUIVALENT irreps; Gamma_4 conjugation is the grade involution made inner. Its
+    SIGNATURE: the seat's per-block spinor bilinear is forced -- symplectic, equal to Gamma_C -- and on the
+    two sheets carries one relative sign s; under the induced adjoint, signature = (adjoint class) x s
+    (T8b). Electromagnetic reciprocity fixes it: star acts on 2-forms only in n = 4; star^2 = (-1)^{n_-};
+    Maxwell's compact reciprocity F -> F cos + star F sin needs star^2 = -1, hence n_- odd, hence
+    Gamma_4^2 = +1, Cl(3,1) (T8c). The fourth direction is SPACELIKE. Then (adjoint class) x s = +1:
+    under P5 (one clock, s = +1) the arrival operation is SELF-ADJOINT. Three independent demands, one
+    generator: block coherence = electromagnetic reciprocity = Lorentzian 3+1. The argued (not computed)
+    link: that 2-form duality acts on the ruler plane as a real rotation -- the missing theorem THM-K.
+    'Time comes as a pair; there is only the rest frame and everything else' (Will) = s = +1 = one clock.
+
+THM-K (the Maxwell theorem; target, Will): construct K_{X,L}: F -> H from the seat and a charged load and
+    prove (a) reciprocity exchanges the two ruler channels, (b) the characteristic cone is the c-cone,
+    (c) the residual scalar is Z_0^{+-1}, (d) e^2 Z_0/hbar = 4 pi alpha. K must be constructed BEFORE
+    either ruler is named. Weak result: the odd response couples in units of h/e^2 (names hbar; then G
+    is the other). Strong result: 4 pi alpha quantitatively. Done: (b) via K = Z^{-1} star_q, ruler-blind
+    (THM-K(a)); (a) needs Gamma_4 (2+1 obstruction). Open: (c), (d), and that the seat's two ruler
+    responses ARE the two electromagnetic constitutive channels.
+
+IMPEDANCE (Will): the lapse squared N^2 = 1/(1 + eta) is a voltage-divider ratio with eta = Z_source/
+    Z_load; sech^2 + tanh^2 = 1; the pinning 1 - r_s/r is the load's share; the horizon eta -> inf is the
+    OPEN CIRCUIT. Time = work done through the seat's impedance: supplies the arrow (a passive load
+    dissipates one way), the unit (hbar of action per tick, tau = S/E), and the shape of the dynamics tier
+    (V = I Z; the load's impedance as a function of state is the one unknown behind the tangential
+    sector, the horizon sheet, the propagator). Z_0 = sqrt(mu_0/eps_0): c and Z_0 are the trivial and
+    sign representations of electric-magnetic exchange on the constitutive pair (HUNCH-Z0 v2).
+
 RENDERING PRIMITIVE (Will's hypercube point, resolved): the incidence structure never changes;
 draw it fixed. The seat's ruler on a plane is a CONIC -- the unit locus of the constructed form:
 ellipse in the compact chart (semi-axes 1/sqrt(1 +- gamma)), a pair of parallel lines at the

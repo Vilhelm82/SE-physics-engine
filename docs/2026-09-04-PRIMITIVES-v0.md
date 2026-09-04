@@ -29,6 +29,29 @@ P9. A constant is what a view collapses to a point. Constancy is a property of t
 P10. [Will's ruling, 2026-09-04 late] c is the timelike line. The two planes through c
     are the hyperbolic ones; the plane not through c is compact. Seated on c you see
     the compact plane face-on (space) and cannot see your own line (time).
+P11. [Will, 2026-09-04, RESOLUTION] A seat resolves the frame into one point, two
+    lines, one plane. The point is the seated axis (its constant, both poles
+    collapsed). The two lines are the other two axes, which are the edge-on traces of
+    the two planes through the seated axis; the seat uses them as RULERS (unit
+    references). They are imaginary lines: the edge of a plane you can enter only by
+    an imaginary angle. The plane is the one not through the seated axis, seen
+    face-on: unbounded, real -- what the seat calls space.
+P12. [Will, 2026-09-04] Laws are seat-derived. The constants and laws a seat reads are
+    derivable from that seat's resolution and no other's. Another seat derives
+    another physics from the same frame.
+
+CORRECTIONS forced by P11/P12:
+ - P3 keeps "planes have intrinsic character (hyperbolic / compact), never deforming"
+   and LOSES the word "metric": metric is a seat's word for its rulers (P11).
+ - P4 is stronger than written: the three angles are ARBITRARY and unconstrained by
+   the model. The elliptope (Delta >= 0, |gamma| <= 1) was the Euclidean seat's
+   construction, not the model's.
+ - There is NO bilinear form among the primitives. A form is what a seat's resolution
+   constructs. T2's SO(2,1) is the c seat's construction (compact plane face-on, two
+   hyperbolic edges). From hbar the same frame resolves with a hyperbolic plane
+   face-on: hbar's space has the cone IN it. Same group, different resolution.
+ - The Cl(3) crack and the "Euclidean then Wick" crack in T2 are the same crack: a
+   form reached for. P11 says where forms come from.
 
 ## Geometry the rulings imply (T2 + P10), in words
 The timelike line c pierces a two-sheeted surface: +c (light) on one sheet, -c
@@ -81,9 +104,15 @@ T6. The divider: the amplitude for a mode of winding w on the waist to cross the
     under a boost of rate a. Claim: e^{-pi w / a} per crossing, nothing put in;
     two crossings = Boltzmann. Kill: not exponential in w/a -> the divider picture
     is dead. (This IS the 09-03 hbar-read protocol; comparator tanh r = e^{-pi w/a}.)
-T7. (was T4) What constrains the three angles? The elliptope came from R^3. In the
-    (2,1) metric the angle spacelike-spacelike is an angle and spacelike-timelike is
-    a rapidity; the state space is not the elliptope. Ask what P8 forces.
+T7. [REFRAMED by P11] The state space is three free angles; there is no constraint.
+    What T7 now asks: (a) DERIVE the form a seat constructs from P11 -- one point,
+    two imaginary rulers, one real plane -- and show it is (2,1) for the c seat
+    without starting from a Euclidean R^3 and Wicking. (b) Do the same for the hbar
+    seat and the G seat: what signature does each construct, which plane is its space,
+    where is the cone in its view. (c) What must hold among the three arbitrary
+    angles for a given seat's resolution to be well-defined (the seat's own branch
+    locus, replacing the elliptope). Only then does SO(2,1) stand as REACHED.
+    This is FOUNDATIONAL and runs BEFORE T5, T6, T8.
 T8. The fourth direction. T2 says 3+1 is not on three lines. Fork: (a) 3+1 is what
     the c seat PRESENTS of a 2+1 frame -- the extra dimension is readout, not state;
     (b) the root needs extent as a primitive. Will's ruling owed.

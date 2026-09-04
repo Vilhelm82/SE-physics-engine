@@ -1,0 +1,43 @@
+  [PASS][  0.0s] K_h is an so(2,1) generator (boost)
+  [PASS][  0.0s] K_G is an so(2,1) generator (boost)
+  [PASS][  0.0s] J is an so(2,1) generator (rotation)
+  [PASS][  0.0s] E_h = exp(i theta K_h): E' = i K_h E, E(0) = I
+  [PASS][  0.0s] R_J = exp(theta J): R' = J R, R(0) = I
+
+=== geometry: every loop, every start, both directions ===
+  [PASS][  0.2s] every loop from every pole in both directions: four quarter-turn stations, two per axis, alternating axes, closing at 2 pi -- 24 walks
+  [PASS][  0.2s] station 2 of every walk is the ANTIPOLE of the start (i^2 = -1): the loop passes through the far pole of the starting axis
+  [PASS][  0.3s] in the two WICK loops the intermediate stations are on the complex plane (factor i); in the REAL loop they are real
+
+=== the physics at every step (declared comparison table) ===
+    A (c,hbar) WICK: Light        -> Action        [wick]  photon phase = S/hbar; e^{iS/hbar}
+    A (c,hbar) WICK: Action       -> Temperature   [wick]  Euclidean action = beta E; e^{iS} -> e^{-S_E}: QM <-> stat mech
+    A (c,hbar) WICK: Temperature  -> Evanescence   [wick]  thermal decay e^{-beta E}; finite-T instantons
+    A (c,hbar) WICK: Evanescence  -> Light         [wick]  tunnelling out as radiation (Parikh-Wilczek Hawking)
+    B (c,G)    WICK: Light        -> Mass          [wick]  E = m c^2 with E the photon energy; lensing
+    B (c,G)    WICK: Mass         -> Temperature   [wick]  T_H = hbar c^3/(8 pi G M k_B)
+    B (c,G)    WICK: Temperature  -> Energy        [wick]  E = k_B T
+    B (c,G)    WICK: Energy       -> Light         [wick]  E = h nu
+    C (hbar,G) REAL: Action       -> Mass          [real]  S = -m c^2 integral d tau
+    C (hbar,G) REAL: Mass         -> Evanescence   [real]  Compton / Yukawa decay length hbar/(m c)
+    C (hbar,G) REAL: Evanescence  -> Energy        [real]  tunnelling rate ~ e^{-2 kappa d}, kappa = sqrt(2m(V-E))/hbar
+    C (hbar,G) REAL: Energy       -> Action        [real]  S = integral E dt
+  [PASS][  0.3s] every adjacent step of every loop has a declared known relation -- []
+  [PASS][  0.3s] every adjacent relation's kind matches its loop (Wick loops: imaginary counterparts; real loop: dimensional conversions)
+    antipode on c    : Light        <-> Temperature   Unruh: the light-seat under acceleration reads a temperature
+    antipode on hbar : Action       <-> Evanescence   S -> i S_E: oscillatory <-> decaying
+    antipode on G    : Mass         <-> Energy        dE = -c^2 dM: what the bound pole loses the escaping pole carries
+  [PASS][  0.3s] every axis's two poles have a declared 'antipode' relation
+
+=== shared stations: the consistency conditions the labelling IMPLIES ===
+    loops A & B share axis c: Temperature reached via hbar (Unruh: action -> Euclidean action -> Boltzmann) must equal Temperature reached via G (Hawking: mass -> horizon).  DERIVED: T4 (same 2 pi, same kappa).
+    loops A & C share axis hbar: Action/Evanescence reached from c (Wick) must equal Action/Evanescence reached from G (real rotation).  OWED.
+    loops B & C share axis G: Mass/Energy reached from c (Wick: E = mc^2 at the light pole) must equal Mass/Energy reached from hbar (real rotation: S = -mc^2 tau).  OWED.
+  [PASS][  0.3s] the three loops pairwise share exactly one axis each (computed from the loop definitions): three consistency conditions, one per axis -- {('A', 'B'): 'c', ('A', 'C'): 'hbar', ('B', 'C'): 'G'}
+  [PASS][  0.3s] condition (A,B), geometric half: from Light both Wick loops land on the same station vector -c at 2 quarter-turns; the numeric half (Unruh T = Hawking T) is T4
+
+RESULT: 13/13 checks passed in 0.3s
+VERDICT:
+  Geometry [PROVED]: three loops, four stations each, two per axis, antipole at i^2, Wick loops on the complex plane, real loop real.
+  Labelling [CONJECTURE, checked against a DECLARED table]: every step and every antipode names a known relation, with the right kind.
+  Consistency [one DERIVED, two OWED]: the shared-station condition on c is T4; on hbar and on G it has not been run.

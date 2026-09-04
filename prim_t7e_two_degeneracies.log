@@ -1,0 +1,30 @@
+=== e1-e2: the identity and the lapse ===
+  [PASS][  0.0s] e1  -det G_c = (1 - gamma^2)(1 + eta) identically
+  [PASS][  0.0s] e2  N^2 = (1 - gamma^2) / (-det G_c)
+=== e3: the two degeneracy sets ===
+  [PASS][  0.0s] e3a D_plane: S is singular iff |gamma| = 1 (det S = 1 - gamma^2)
+  [PASS][  0.0s] e3b on gamma = +1: det G = -(a - b)^2 ; on gamma = -1: det G = -(a + b)^2  ->  B_form = {|gamma| = 1, a = b gamma}
+  [PASS][  0.0s] e3c B_form is a PROPER subset of D_plane: on gamma = 1 with a != b, det G = -(a-b)^2 < 0 (form nondegenerate, normal still unconstructible)
+=== e4: 0/0 on B_form; the limit is path-dependent ===
+  [PASS][  0.0s] e4a along a = b = t: eta = 2 t^2/(1 + gamma), finite as gamma -> 1
+  [PASS][  0.1s] e4b so N -> 1/sqrt(1 + t^2) on B_form along that path: finite, NONZERO
+  [PASS][  0.1s] e4c with a != b fixed and gamma -> 1: eta ~ (a - b)^2/(2(1 - gamma)) -> infinity
+  [PASS][  0.1s] e4d and N -> 0 there; that endpoint (gamma = 1, a != b) is in D_plane but NOT in B_form
+=== e5: bounds on the lapse ===
+  [PASS][  0.1s] e5a numerator of eta is a^2 - 2 a b gamma + b^2 >= (|a| - |b|)^2 >= 0 for |gamma| < 1: eta >= 0 there
+  [PASS][  0.1s] e5b hence 0 < N^2 = 1/(1 + eta) <= 1 on |gamma| < 1: the LAPSE is bounded; cosh lambda = sqrt(1 + eta) is what diverges
+=== e6: the horizon is eta -> infinity, not the branch curve ===
+  [PASS][  0.1s] e6a the pinning eta = r_s/(r - r_s) -> infinity as r -> r_s: the horizon is the divergent-tilt limit, N -> 0
+  [PASS][  0.1s] e6b eta -> infinity requires |gamma| -> 1 with a != b gamma (e4c), i.e. D_plane OFF B_form; on B_form itself N stays finite (e4b)
+  [PASS][  0.2s] e6c the pinning constrains ONE function of (gamma, a, b); the three separately are a further state-path law -- not in T7
+=== e7: EXTENSION -- T7c's locus is bigger than B_form ===
+  [PASS][  0.2s] e7a at t = 0: gamma = cosh(l1 - l2) >= 1, with = 1 iff l1 = l2
+  [PASS][  0.3s] e7b at t = 0 with l1 != l2 (|gamma| > 1): det G = 0 (T7c) while a != b gamma -- NOT on B_form
+  [PASS][  0.4s] e7c there eta = -1 exactly: the second branch of det G = 0 is {|gamma| > 1, eta = -1}
+  [PASS][  0.4s] e7d for |gamma| < 1: numerator = (a - b gamma)^2 + b^2(1 - gamma^2) >= 0, so eta >= 0 and eta = -1 is impossible; the extension lives ONLY in |gamma| > 1 (rulers' span Lorentzian)
+  [PASS][  0.4s] e7e so: det G = 0 iff [|gamma| = 1 and a = b gamma] OR [|gamma| > 1 and eta = -1]; Will's B_form is the first piece, and equals T7c's locus restricted to |gamma| <= 1
+
+RESULT: 19/19 checks passed in 0.4s
+VERDICT: Will's two-set distinction, the 0/0 path-dependence, the bounded lapse and the horizon-as-eta->inf all hold.
+  Extension: T7c's locus has a second piece in |gamma| > 1 (eta = -1) where the lapse is undefined; B_form is the
+  |gamma| <= 1 part.  The horizon (eta -> inf, N -> 0) is in D_plane off B_form; the branch curve has finite N.

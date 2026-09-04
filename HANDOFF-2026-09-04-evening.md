@@ -100,3 +100,59 @@ fibre count -- each by hand, each exact, each correcting something the assistant
 ruling. Parse his compressed phrasing literally: "hbar is c 180 degrees behind you" was NOT "hbar and c share an axis"; it was
 "at the chart boundary a ruler turns into a light direction", and it took five hours to hear it. He does not want to be told
 the model is beautiful. He wants the line that fails.
+
+---
+
+## ADDENDUM (written ~21:00 AEST, same session; HEAD now `749c9a7`, 18 commits since `b854b5b`)
+The session continued after the handoff above. Everything below is STATE and supersedes the "Next session" list where they conflict.
+
+### The labelling, the octahedron, the lattice (LABEL-1/2/3, T5, T5b, T5c)
+- **Will's table (CONJECTURE tier, but now structurally load-bearing):** c: faces GR <-> Quantum, poles Light <-> Temperature.
+  hbar: faces Wave <-> Particle, poles Action <-> Evanescence. G: faces Bound <-> Escaping, poles Mass <-> Energy.
+  Near column = our physics; far column = Hawking radiation in six words.
+- **P9 SHARPENED** (`8715a9c`): two kinds of collapse -- a frame line by seating (c, a constant of nature) vs a degenerate
+  direction by instrument orthogonality (n0 = hbar -+ G at |gamma| = 1, a horizon). Grafting c's constraints onto n0 draws c's
+  page twice. Each constant's constraints follow from its POSITION. T7g (`88a8e58`): two horizons, hbar - G (horizontal
+  pivot) and hbar + G (vertical); the null separation is a chord in the seat's space, end-on to its instruments only.
+- **Wick step is an EIGHTH-turn**, W^8 = 1 on vectors, W^16 on the cover; even powers are axes, odd are planes (parity).
+- **LABEL-2** (`30acb4e`, 11/11): the six poles form an OCTAHEDRON; the 8 faces are octants bordered by one pole per axis;
+  the table's per-axis "faces" are CONTRIBUTIONS. Six faces named for the first time (redshift/Shapiro, greybody, Tolman,
+  Parikh-Wilczek, Planck blackbody, thermal instantons) -- each owes a derivation.
+- **LABEL-3** (`05f9ac6`, 14/14): the faces are the Boolean lattice 2^{C,H,G}; ours is empty, Hawking's is CHG; six shortest
+  paths, one projected endpoint. On the gaze surface dS_2 (face-centres unit spacelike), q(f0,f) = s_hbar + s_G - s_c in
+  {+-1, +-3}: C alone and HG are boost-separated, everything else INCLUDING Hawking's face is null-separated; no face is
+  rotation-separated. CHG = -I, det -1: Hawking's face is the deck, not a pivot.
+- **T5** (`ae7c27a`, 14/14): PART A [DERIVED, two routes] Wigner's rotation IS the hyperbolic area of the boost triangle
+  on H^2 (angle defect at 40 digits; tan^2(A/2) = tan^2(w/2) exactly). PART B: six 4-cycles (adjacent transpositions only;
+  LABEL-3's "nine" corrected), each around one pole; B6-B8's "hbar before G" sign structure is SUPERSEDED by T5b.
+- **T5b** (`38954f9`, 19/19) [DERIVED]: the flips are REFLECTIONS; their lifts in Pin(2,1) are real 2x2 gamma matrices of the
+  seat's own form; they anticommute at the orthogonal state, so EVERY adjacent transposition costs -1: the sign of a path
+  is the permutation PARITY, S_3/A_3, sheet = orientation of the directed cycle C -> H -> G -> C. The spinor trace
+  B+ = 2 sin t cosh l1 cosh l2 flips sign under reversal, is MAXIMAL at orthogonality, ZERO on T7c's branch locus.
+- **T5c** (`749c9a7`, 19/19) [Will's three corrections, verified]: (1) det G_c = -D^2 touches zero; D = det[hbar,G,c] crosses
+  it; the debt is sgn D(r). (2) The observable is the RAW SPINOR TRACE V_spin = tr_2(Gamma_C Gamma_H Gamma_G) = 2D, NOT the
+  projector Bargmann invariant (which is real, even in D, and needs the timelike denominator -1). (3) Cl(2,1) = M_2(R) + M_2(R),
+  I^2 = +1; the two blocks give V_spin = +-2D; THE BLOCK LABEL IS THE SHEET; the faithful 4x4 total trace is sheet-blind;
+  the "one-sided reading" is the choice of block. **EARNED: V_spin = 2D, D^2 = -det G_c, tau: D -> -D.**
+
+### The stellar reading (Will; CONJECTURE, dynamical)
+A neutron star and a black hole are the SAME far face (thermal, degenerate, radiating). They differ by the SHEET -- whether
+quantum support established first or gravitational collapse did -- and the sheet is sgn D read one-sided. Which sign is the
+trapped surface must be DERIVED from collapse dynamics: trapped-surface formation selecting one orientation of the frame path.
+This is the tangential-sector debt with one bit attached.
+
+### Corrections this half (mine; recorded in the files)
+9. "Hawking's face reached by pivot" -- no: CHG = -I, det -1, the deck.  10. LABEL-3 "nine 4-cycles" -- six; the rest are 6-cycles.
+11. T5 B6 "spacelike-pole cycles carry no sign" -- assumption, wrong; parity.  12. T5b "B vanishes at orthogonality" -- maximal there.
+13. "which way det G_c passes through zero" -- it doesn't; D does.  14. "Bargmann invariant = 2D" -- the spinor trace is; the projector
+invariant is a different, even object.  15. A single 2x2 Clifford block taken as faithful -- it is one sheet of two.
+
+### Next session, revised order
+0. Will reads and freezes `docs/2026-09-04-PRIMITIVES-v0.md` (still DRAFT).
+1. **The frame path with its sign**: derive sgn D(r) -- does trapped-surface formation select an orientation? This unifies
+   the tangential-sector debt (T7f: two free functions) with the sheet (T5c: one bit). Runner: pin eta(r), parametrise the
+   2-dim fibre, and ask what constraint makes D(r) cross zero at the horizon and which way.
+2. T8 (the fourth direction), reshaped.  3. The hbar/G distinction at the readout tier (now: it is the block label?).
+4. LABEL-1 rerun at eighth-turns with eight stations per loop.  5. The six named faces, one runner each, starting with Planck's.
+6. Paper v0.6: scaffold entry for Cl(3); the earned theorem V_spin = 2D replaces section 7's tensoriality theorem as the
+   statement of what the one-sided reading recovers.

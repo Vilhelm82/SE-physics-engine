@@ -1,0 +1,28 @@
+=== b1: twisted intertwiner ===
+  [PASS][  0.0s] b1 Gamma_4 rho_+(x) = rho_-(alpha(x)) Gamma_4 on every generator, alpha the grade involution: a TWISTED intertwiner, exact
+=== b2: plain transpose ===
+  [PASS][  0.0s] b2 Gamma_C^T = -Gamma_C; Gamma_4^T = Gamma_4 iff b = -a iff Gamma_4^2 = +a^2;  Gamma_4^T = -Gamma_4 iff b = a iff Gamma_4^2 = -a^2
+=== b3: the seat's per-block spinor bilinear, DERIVED ===
+  [PASS][  0.0s] b3 the spin-invariant bilinear on a block is UNIQUE up to scale
+  [PASS][  0.0s] b3' it is ANTISYMMETRIC -- symplectic -- and proportional to Gamma_C itself: B_2 = k Gamma_C.  The seat's spinor form is not the positive one; it is the timelike generator
+  [PASS][  0.0s] b3'' under the seat's bilinear every generator is SKEW-adjoint (X^dag = -X): the vectors act as anti-isometries of the spinor form, as they must for a Clifford module -- {'C': 'skew', 'H': 'skew', 'G': 'skew'}
+=== b4: the 4-dim bilinear and the signature of Gamma_4 ===
+  [PASS][  0.0s] b4 B_4 = diag(b+ Gamma_C, b- Gamma_C) is Cl(2,1)-invariant (every generator skew-adjoint under it) for ANY b+, b-: two scales, one relative sign, NOT fixed by Cl(2,1)
+  [PASS][  0.1s] b4' Gamma_4^dag = B_4^{-1} Gamma_4^T B_4 = [[0, -(b-/b+) b Gamma_C],[-(b+/b-) a Gamma_C, 0]]
+  [PASS][  0.1s] b4'' Gamma_4 SELF-adjoint under the seat's bilinear  <=>  b = -(b+/b-) a
+  [PASS][  0.1s] b4''' then Gamma_4^2 = (b+/b-) a^2 I_4: THE SIGNATURE OF THE FOURTH DIRECTION IS THE RELATIVE SIGN s = sgn(b+ b-) OF THE SPINOR BILINEAR ACROSS THE TWO SHEETS.  s = +1 -> spacelike, Cl(3,1), 3+1;  s = -1 -> timelike, Cl(2,2)
+  [PASS][  0.1s] b4'''' and Gamma_4 SKEW-adjoint <=> b = +(b+/b-) a, Gamma_4^2 = -(b+/b-) a^2: the skew class gives the OPPOSITE signature for the same s.  Adjoint class and relative sheet-sign together decide; neither alone does
+=== b5: does Gamma_4-invariance of B_4 fix the relative sign? ===
+  [PASS][  0.1s] b5 requiring Gamma_4 to be SKEW-adjoint like the other three (uniform Clifford-module convention) gives Gamma_4^2 = -(b+/b-) a^2: spacelike iff s = -1, timelike iff s = +1.  Still hangs on s
+  [PASS][  0.1s] b5' Gamma_4^T B_4 Gamma_4 = lambda B_4 is solvable (Gamma_4 is a similitude of B_4) with lambda = -a b (b+/b-)... computed: it constrains b/a to +-(b+/b-) but leaves s = sgn(b+ b-) FREE -- [{b: -a*b_plus/b_minus, lambda: a**2*b_plus/b_minus}, {b: a*b_plus/b_minus, lambda: a**2*b_plus/b_minus}]
+  [PASS][  0.1s] b5'' CONCLUSION (computed for s = +1 AND s = -1): each sign satisfies Cl(2,1)-invariance AND the Gamma_4-similitude condition, and yields Gamma_4^2 = s.  Nothing algebraic fixes s; it is the one datum the readout must supply.  Signature = (adjoint class) x s
+=== b6: the measurement boundary ===
+  [PASS][  0.1s] b6 every eigenvector of Gamma_4 has BOTH block components nonzero: measuring Gamma_4 selects a superposition of the I = +-1 sheets, not a sheet
+  [PASS][  0.1s] b6' {I, Gamma_4} = 0: no joint eigenvector; a definite sheet requires an I-measurement after or instead of the Gamma_4 coupling
+
+RESULT: 15/15 checks passed in 0.1s
+VERDICT [DERIVED]: the seat's per-block spinor bilinear is forced -- symplectic, equal to Gamma_C, under which every
+  generator is skew-adjoint.  On the two sheets it carries two scales and one RELATIVE SIGN s that Cl(2,1) does not
+  fix.  Under the induced adjoint, a self-adjoint Gamma_4 has square (b+/b-) a^2: THE SIGNATURE OF THE FOURTH DIRECTION
+  IS s.  Coherence forces Gamma_4; the adjoint class of the arrival operation fixes the signature GIVEN s; and s is
+  the one datum the readout must supply.  Not chosen for 3+1.

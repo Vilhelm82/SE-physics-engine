@@ -1,0 +1,31 @@
+=== T7b1: reading (ii) contradicts P3 (intrinsic plane character) ===
+  [PASS][  0.0s] T7b1a from the c seat the (hbar,G) plane has det 1 - gamma^2: compact for |gamma| < 1
+  [PASS][  0.0s] T7b1b from the hbar seat the SAME plane has det -1 - gamma^2 < 0: hyperbolic for EVERY gamma
+  [PASS][  0.0s] T7b1c so for any state with |gamma| < 1 the two seats assign the one plane opposite characters
+  [PASS][  0.0s] T7b1d likewise the (c,hbar) plane is hyperbolic from c (det -1-a^2) but from the G seat has det 1 - a^2: compact for |a| < 1
+  [PASS][  0.0s] T7b1e VERDICT: reading (ii) gives a plane two characters; P3 forbids it; ONE form for the frame is forced (reading (i))
+=== T7b2: under one (2,1) form, c is the unique negative-norm line ===
+  [PASS][  0.0s] T7b2a in the frame's basis the norms are (-1, +1, +1): exactly one negative line
+  [PASS][  0.0s] T7b2b at the orthogonal state the eigenvalues are {-1, 1, 1}: signature (2,1), one timelike direction
+  [PASS][  0.0s] T7b2c the three placements of the negative norm are pairwise distinct forms: 'the timelike line' selects exactly one line. DEFINITION EARNED: c := that line.
+=== T7b3: hbar and G are interchangeable at the bare tier ===
+  [PASS][  0.3s] T7b3a the c-seat Gram is INVARIANT under hbar <-> G (l1 <-> l2, t -> -t, rows/cols permuted)
+  [PASS][  0.3s] T7b3b det G = -cosh^2 l1 cosh^2 l2 sin^2 t is symmetric in (l1, l2) and even in t: the branch locus is swap-invariant
+  [PASS][  0.3s] T7b3c the seat's visible datum cos(t) is even in t and independent of (l1, l2): nothing the c seat reads distinguishes which ruler is which
+  [PASS][  0.3s] T7b3d VERDICT: the bare tier distinguishes c from the pair {hbar, G} and is SILENT on hbar vs G.  That distinction is the readout tier's or a convention.
+=== T7b4: the hbar seat's constructed space is Lorentzian ===
+  [PASS][  0.3s] T7b4a the plane {c, G} that the hbar seat sees face-on has det -(1 + b^2) < 0 for every state: HYPERBOLIC
+  [PASS][  0.5s] T7b4b there are two null directions in span{c, G} for every (l2): hbar's space HAS THE CONE IN IT (G-4: leaky from hbar, derived)
+  [PASS][  0.5s] T7b4c the hbar seat's ruler c lies in a hyperbolic plane for every state (imaginary ruler); its ruler G lies in a plane whose character depends on gamma_hG
+=== T7b5: two planes called 'space' -- the seat's space vs the rulers' span ===
+  [PASS][  0.5s] T7b5a the rulers' span {hbar, G} has det 1 - gamma_hG^2, and gamma_hG = cosh l1 cosh l2 cos t - sinh l1 sinh l2 can exceed 1 in magnitude
+  [PASS][  0.5s] T7b5b the seat's actual space (orthogonal to c) is (+,+) regardless: P11's 'real plane' is orthogonal-to-c, NOT the rulers' span
+  [PASS][  0.5s] T7b5c at zero depth (l1 = l2 = 0) the two planes coincide and the rulers' span is compact iff |cos t| < 1
+
+RESULT: 18/18 checks passed in 0.5s
+VERDICT (computed from the table):
+  T7b1 : reading (ii) contradicts P3 -> ONE form for the frame (reading (i)) FORCED
+  T7b2 : c = the unique negative-norm line: DERIVED
+  T7b3 : hbar and G interchangeable at the bare tier: the pair is UNORDERED here
+  T7b4 : hbar's space is Lorentzian with the cone in it: G-4 derived
+  T7b5 : the seat's space and the rulers' span are different planes; P11's real plane is the former

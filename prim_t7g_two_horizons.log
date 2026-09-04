@@ -1,0 +1,22 @@
+=== g1-g2: the null separation and its shadow ===
+  [PASS][  0.0s] g1a both rulers stay unit spacelike at gamma = 1: q(hbar,hbar) = q(G,G) = 1
+  [PASS][  0.0s] g1b their difference is null and orthogonal to both rulers: q(n0,n0) = q(n0,hbar) = q(n0,G) = 0
+  [PASS][  0.0s] g1c it pairs with the seat's axis by the depth difference: q(n0,c) = a - b
+  [PASS][  0.1s] g2  the shadow of n0 in the seat's space has norm (a - b)^2: SPACE sees a spacelike line, RULERS see zero
+=== g3-g4: which pivot reaches which horizon ===
+  [PASS][  0.4s] g3a gamma(t, l1, l2) = cos t cosh l1 cosh l2 - sinh l1 sinh l2
+  [PASS][  0.4s] g3b HORIZONTAL: gamma = +1 at cos t* = (1 + sinh l1 sinh l2)/(cosh l1 cosh l2), a real angle whenever l1 != l2
+  [PASS][  0.6s] g3c along it eta -> +infinity (l1=1, l2=0): the horizontal pivot reaches a horizon with null separation hbar - G
+  [PASS][  0.8s] g4a VERTICAL (t = pi/3, depths (L, L/2)): gamma reaches -1 at a finite L* and eta grows without bound approaching it -- L* = 1.8807, eta = [31.122693121753436, 334.0987166460264, 3363.9678277699745]
+  [PASS][  0.9s] g4b at L* the depth sum a + b != 0: the vertical horizon is OFF B_form (the rulers are distinct, only their sum is null)
+  [PASS][  0.9s] g4c at gamma = -1: q(hbar + G, hbar + G) = 0, orthogonal to both rulers, pairs with c by a + b
+  [PASS][  1.0s] g4d vertical path continues past gamma = -1 into |gamma| > 1 (eta finite there): the boundary is crossed, not asymptotic
+=== g5-g6: c stays the point; two horizons, two null lines ===
+  [PASS][  1.0s] g5  under both pivots c is unchanged: q(c,c) = -1 in every state; the seat never leaves its axis
+  [PASS][  1.0s] g6a hbar - G and hbar + G are linearly independent: two DISTINCT null lines, one per pole
+  [PASS][  1.0s] g6b the pole flip hbar -> -hbar carries G(gamma=+1, a, b) to G(gamma=-1, -a, b) and the null line hbar - G to -(hbar + G): the two horizons are pole-exchanged, not relabelled
+
+RESULT: 14/14 checks passed in 1.0s
+VERDICT: the second constant is the null separation between the seat's rulers, visible to its space as a
+  spacelike line of length |a -+ b| and unmeasurable by its rulers.  Horizontal pivot -> gamma = +1, hbar - G.
+  Vertical pivot -> gamma = -1, hbar + G.  Two horizons; eta(r) does not choose.  c stays the point throughout.

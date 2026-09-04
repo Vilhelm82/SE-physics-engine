@@ -1,0 +1,50 @@
+=== the lattice ===
+  [PASS][  0.0s] 8 subsets of {C,H,G} -> 8 faces, bijectively
+  [PASS][  0.0s] the empty set is our face (Light, Action, Mass); the full set is Hawking's (Temperature, Evanescence, Energy)
+  [PASS][  0.0s] lattice adjacency (differ by one flip) = octahedron face adjacency (share an edge): every face has exactly 3 neighbours
+  [PASS][  0.0s] three single-flip faces each isolate one ingredient; three pair-flip faces each hold one pair; nothing else
+    C   -> (Temperature, Action, Mass)
+    H   -> (Light, Evanescence, Mass)
+    G   -> (Light, Action, Energy)
+    CH  -> (Temperature, Evanescence, Mass)
+    CG  -> (Temperature, Action, Energy)
+    GH  -> (Light, Evanescence, Energy)
+
+=== the six shortest paths ===
+    O -> C -> CH -> CGH   :  (Light, Action, Mass) -> (Temperature, Action, Mass) -> (Temperature, Evanescence, Mass) -> (Temperature, Evanescence, Energy)
+    O -> C -> CG -> CGH   :  (Light, Action, Mass) -> (Temperature, Action, Mass) -> (Temperature, Action, Energy) -> (Temperature, Evanescence, Energy)
+    O -> H -> CH -> CGH   :  (Light, Action, Mass) -> (Light, Evanescence, Mass) -> (Temperature, Evanescence, Mass) -> (Temperature, Evanescence, Energy)
+    O -> H -> GH -> CGH   :  (Light, Action, Mass) -> (Light, Evanescence, Mass) -> (Light, Evanescence, Energy) -> (Temperature, Evanescence, Energy)
+    O -> G -> CG -> CGH   :  (Light, Action, Mass) -> (Light, Action, Energy) -> (Temperature, Action, Energy) -> (Temperature, Evanescence, Energy)
+    O -> G -> GH -> CGH   :  (Light, Action, Mass) -> (Light, Action, Energy) -> (Light, Evanescence, Energy) -> (Temperature, Evanescence, Energy)
+  [PASS][  0.0s] 3! = 6 shortest paths from our face to Hawking's, each through one single-flip face and one pair-flip face, all ending at F_{---}
+  [PASS][  0.0s] the PROJECTED endpoint is the same face for all six orderings (the presentation is order-blind)
+
+=== the character of each flip on the gaze surface ===
+  [PASS][  0.0s] every face-centre is unit SPACELIKE, q(f,f) = +1: the gaze surface is the one-sheeted hyperboloid (dS_2), Lorentzian
+    flip C: q(f0, f1) =  3, Gram det = -8  ->  boost (Lorentzian span)
+    flip H: q(f0, f1) = -1, Gram det =  0  ->  null (degenerate span)
+    flip G: q(f0, f1) = -1, Gram det =  0  ->  null (degenerate span)
+  [PASS][  0.0s] flipping hbar and flipping G are NULL-separated on the gaze surface (Gram det 0): light-rays on dS_2
+  [PASS][  0.0s] flipping c is a BOOST on the gaze surface (Gram det < 0, q(f0,f1) = 3 = cosh of the rapidity): the odd flip out is c's -- T7b again
+    pair CH: q(f0, f2) =  1, Gram det =   0  ->  null (degenerate span)
+    pair CG: q(f0, f2) =  1, Gram det =   0  ->  null (degenerate span)
+    pair GH: q(f0, f2) = -3, Gram det =  -8  ->  boost (Lorentzian span)
+  [PASS][  0.0s] q(f0, f) = s_hbar + s_G - s_c for every face; |q| in {1, 3}; no face is Euclidean-rotation-separated from ours (det = 1 - q^2 <= 0 always) -- {'O': 1, 'C': 3, 'H': -1, 'G': -1, 'CH': 1, 'CG': 1, 'GH': -3, 'CGH': -1}
+  [PASS][  0.0s] BOOST-separated faces are exactly C and HG -- the two where the rulers agree with each other and oppose c (my prediction 'CH, CG boosts; HG rotation' was WRONG, recorded)
+  [PASS][  0.0s] NULL-separated faces are the other six including Hawking's: H, G, CH, CG, CHG are all light-separated from our face on dS_2
+  [PASS][  0.0s] the full flip CHG lands at the antipodal centre -f0 (q = -1), and as a FRAME map it is -I, det -1: not in SO(2,1) -- Hawking's face is not a rotation of ours; it is the deck
+
+=== what the six lifts need (stated, queued as T5 on dS_2) ===
+    Transition along an edge of the face-graph = parallel transport of the gaze on dS_2 between null- or boost-separated centres.
+    Two paths i, j from O to CHG bound a closed loop on the cube graph; its holonomy is the Lorentzian Gauss-Bonnet
+    area of the enclosed region; the spinor lift of that holonomy is the deck sign.  If the sign depends on the
+    ordering, PREDICTION-1's ordered operation is the choice of path through this lattice.
+  [PASS][  0.0s] the six paths pair into three closed loops on the face-graph (each pair of orderings differing by a transposition bounds one 4-cycle)
+
+RESULT: 14/14 checks passed in 0.0s
+VERDICT:
+  Lattice [PROVED]: the 8 faces are 2^{C,H,G}; ours is empty, Hawking's is full, antipodal; six shortest paths, one endpoint.
+  Characters [DERIVED]: on the gaze surface dS_2, flipping hbar or G is null, flipping c is a boost (rapidity arccosh 3);
+    the full flip is -I, not a rotation of the frame -- Hawking's face is reached by the deck, not by a pivot.
+  Lifts [QUEUED]: holonomy of the cube-graph loops on dS_2 and its spinor sign -- T5 on the gaze surface.

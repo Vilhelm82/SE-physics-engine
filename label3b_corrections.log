@@ -1,0 +1,20 @@
+=== 2. the corrected causal classification ===
+  [PASS][  0.0s] Hawking's centre is EXACTLY -f0: the deck antipode, not a point at null distance
+    directly null-related to f0 (q = +1, f - f0 null): ['CH', 'CG']
+    antipodally null-related (q = -1, f + f0 null; null to -f0): ['H', 'G']
+    boost-related to f0 (q = +3): ['C'];  boost-related to -f0 (q = -3): ['GH'];  antipode: ['CGH']
+  [PASS][  0.0s] q = +1 faces (CH, CG) have f - f0 NULL: directly null-related; q = -1 faces (H, G) have f + f0 NULL: null-related to Hawking's centre, not to ours
+  [PASS][  0.0s] the seven non-identity faces split 2 + 2 + 1 + 1 + 1: direct-null, antipodal-null, direct-boost (C), antipodal-boost (GH), antipode (CGH)
+  [PASS][  0.0s] the lattice is symmetric under f -> -f: q(f0, f) = -q(f0, complement(f)); every face's relation to our centre mirrors its complement's relation to Hawking's
+  [PASS][  0.0s] LABEL-3's 'six null-separated including Hawking's' was WRONG on two counts (recorded): Hawking's is the antipode, and the null-related faces split into direct (to f0) and antipodal (to -f0)
+=== 1. D is fixed-sign along any regular trajectory; the horizon is where D != 0 ===
+  [PASS][  0.1s] D = 0 iff sin t = 0: the zero set of D IS T7c's branch locus (cosh never vanishes)
+  [PASS][  0.1s] sgn D = sgn(sin t): along any path with sin t != 0 throughout, sgn D is CONSTANT -- it cannot change without crossing the branch locus
+  [PASS][  0.3s] at T7g's HORIZONTAL horizon, sin^2 t* = 1 - cos^2 t* = (sinh l1 - sinh l2)^2 / (cosh^2 l1 cosh^2 l2) != 0 for l1 != l2: D != 0 there
+  [PASS][  0.3s] at T7g's VERTICAL horizon (t = pi/3 fixed) sin t = sqrt(3)/2 != 0: D != 0 there too
+  [PASS][  0.3s] CONSEQUENCE: D evaluated AT both horizons is nonzero (horizontal: D(l1=1,l2=0,t*) ; vertical: D at L*), so the sheet there is NOT sgn D flipping; it is the path/block holonomy chi[Gamma]. The handoff's item 1 is retracted. -- D_horizontal = 1.1752, D_vertical = 4.2880
+
+RESULT: 10/10 checks passed in 0.3s
+VERDICT: Hawking's face is the deck antipode -f0; the null-related faces are direct (CH, CG) and antipodal (H, G);
+  sgn D is constant along every regular trajectory and D != 0 at both horizons.  The horizon sheet is chi[Gamma].
+  Next derivation: (rho, p, Theta, sigma, m, R)(tau) -> X(tau) = (t, l1, l2) -> chi[Gamma]; compare with theta_+ = 0 <=> 2Gm/(c^2 R) = 1.

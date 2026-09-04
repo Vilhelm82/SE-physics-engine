@@ -142,6 +142,7 @@ trapped surface must be DERIVED from collapse dynamics: trapped-surface formatio
 This is the tangential-sector debt with one bit attached.
 
 ### Corrections this half (mine; recorded in the files)
+16. "make D cross zero at the horizon" -- it cannot; the horizon is off the branch locus (T7e).  17. LABEL-3 "Hawking's face is null-separated" -- it is the antipode -f0; q = +-1 are direct vs antipodal null relations.
 9. "Hawking's face reached by pivot" -- no: CHG = -I, det -1, the deck.  10. LABEL-3 "nine 4-cycles" -- six; the rest are 6-cycles.
 11. T5 B6 "spacelike-pole cycles carry no sign" -- assumption, wrong; parity.  12. T5b "B vanishes at orthogonality" -- maximal there.
 13. "which way det G_c passes through zero" -- it doesn't; D does.  14. "Bargmann invariant = 2D" -- the spinor trace is; the projector
@@ -149,9 +150,14 @@ invariant is a different, even object.  15. A single 2x2 Clifford block taken as
 
 ### Next session, revised order
 0. Will reads and freezes `docs/2026-09-04-PRIMITIVES-v0.md` (still DRAFT).
-1. **The frame path with its sign**: derive sgn D(r) -- does trapped-surface formation select an orientation? This unifies
-   the tangential-sector debt (T7f: two free functions) with the sheet (T5c: one bit). Runner: pin eta(r), parametrise the
-   2-dim fibre, and ask what constraint makes D(r) cross zero at the horizon and which way.
+1. **RETRACTED and replaced (Will's catch, label3b_corrections.py 10/10):** "make D(r) cross zero at the horizon" contradicts
+   T7e -- horizon != {D = 0} = branch locus; sgn D is CONSTANT along any regular trajectory and D != 0 at both T7g horizons
+   (1.18, 4.29 on the sample paths). The sheet at the horizon is the PATH/BLOCK HOLONOMY chi[Gamma], read while D != 0.
+   The actual next derivation: (rho, p, Theta, sigma, m, R)(tau) -> X(tau) = (t, l1, l2) -> chi[Gamma_fluid], compared with
+   the apparent-horizon condition theta_+ = 0 <=> 2Gm/(c^2 R) = 1. Two maps are missing: fluid -> state (the dynamics tier,
+   absent since THM-J) and state-path -> face-sequence (the gaze direction as a function of state is not yet defined).
+   Also corrected: LABEL-3's causal classes -- q = +1 is DIRECTLY null-related (CH, CG), q = -1 is ANTIPODALLY null-related
+   (H, G: null to -f0), and Hawking's centre IS -f0, the deck antipode, not a point at null distance. Lattice symmetric under f -> -f.
 2. T8 (the fourth direction), reshaped.  3. The hbar/G distinction at the readout tier (now: it is the block label?).
 4. LABEL-1 rerun at eighth-turns with eight stations per loop.  5. The six named faces, one runner each, starting with Planck's.
 6. Paper v0.6: scaffold entry for Cl(3); the earned theorem V_spin = 2D replaces section 7's tensoriality theorem as the

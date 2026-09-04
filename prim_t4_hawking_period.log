@@ -1,0 +1,43 @@
+=== T4a/b: the Wick face's period on the two-sided and one-sided readings ===
+  [PASS][  0.0s] T4a0 K is an so(2,1) generator (K^T Q + Q K = 0) and K^3 = K
+  [PASS][  0.0s] T4a1 E(theta) solves E' = i K E with E(0) = I (it is exp(i theta K))
+  [PASS][  0.0s] T4a2 E(2 pi) = I: the Wick face closes at 2 pi on the vector reading
+  [PASS][  0.0s] T4a3 E(pi) = diag(-1, 1, -1): at i^2 the boost plane is inverted, the compact direction untouched (the deck)
+  [PASS][  0.0s] T4a4 E(theta) = I only at theta in 2 pi Z (minimal period exactly 2 pi) -- {0, 2*pi}
+  [PASS][  0.0s] T4a5 mpmath expm agrees: |E(2pi) - I| < 1e-25, |E(pi) - diag(-1,1,-1)| < 1e-25
+  [PASS][  0.0s] T4b0 K_s is in sl(2,R): real, traceless
+  [PASS][  0.1s] T4b1 exp(i theta K_s) = diag(e^{i th/2}, e^{-i th/2})
+  [PASS][  0.1s] T4b2 at theta = 2 pi the one-sided reading returns -I (the sign the two-sided reading cannot see)
+  [PASS][  0.1s] T4b3 at theta = 4 pi it returns +I: minimal period 4 pi on the cover
+=== T4b': the vector reading is the symmetric square of the one-sided reading (cover REACHED) ===
+  [PASS][  0.1s] T4b'1 the induced generator on Sym^2 is real with eigenvalues {1, -1, 0} = pairwise sums of {+1/2, -1/2}
+  [PASS][  0.1s] T4b'2 the Sym^2 generator preserves det S = s11 s22 - s12^2 (a signature-(2,1) form): it is an so(2,1) boost
+  [PASS][  0.1s] T4b'3 Sym^2 generator is conjugate to K: same characteristic polynomial
+  [PASS][  0.1s] T4b'4 exp(i theta Gsym) has period 2 pi while exp(i theta Ks) has 4 pi: the two-sided reading of the cover's -1 is +1
+=== T4c/d: the twist is logarithmic; slope universal, scale carries the physics ===
+  [PASS][  0.1s] T4c1 lambda(r) = ln(sqrt r + sqrt r_s) - (1/2) ln(r - r_s) exactly (derivative + one point + 30-digit spot checks)
+  [PASS][  0.1s] T4c2 near the cone: lambda = -(1/2) ln(eps) + ln(2 sqrt r_s) + O(eps): slope -1/2 in r, scale 2 sqrt r_s
+  [PASS][  0.1s] T4c3 N = sech(lambda) = sqrt(1 - r_s/r) (the pinning's lapse)
+  [PASS][  0.7s] T4c4 rho(r) = sqrt(r(r-r_s)) + r_s ln((sqrt r + sqrt(r-r_s))/sqrt r_s) (proper distance to the cone)
+  [PASS][  0.7s] T4c5 near the cone rho / sqrt(eps) -> 2 sqrt(r_s): rho = 2 sqrt(r_s eps) + o(sqrt eps) -- 2*sqrt(r_s)
+  [PASS][  0.7s] T4d1 lambda = ln(4 r_s / rho) + o(1): slope -1 in proper distance (universal), scale 4 r_s
+  [PASS][  0.7s] T4d2 N ~ 2 e^{-lambda} = rho/(2 r_s): the lapse is linear in proper distance with slope 1/(2 r_s)
+=== T4e: kappa two ways ===
+  [PASS][  0.7s] T4e1 kappa from the twist's scale: N/rho -> 1/(2 r_s)  (times c^2)
+  [PASS][  0.7s] T4e2 alpha N = (c^2/2) r_s / r^2 for every r (the K-1 identity from lambda alone)
+  [PASS][  0.7s] T4e3 kappa from the redshifted acceleration: alpha N -> c^2/(2 r_s) at the cone
+  [PASS][  0.7s] T4e4 THE TWO KAPPAS ARE THE SAME NUMBER, no fitting
+=== T4f/g: the temperature, and the Euclidean route to the same 2 pi ===
+  [PASS][  0.8s] T4f1 T = hbar kappa / (2 pi c k_B) = hbar c / (4 pi k_B r_s)  [the two-sided seat's period]
+  [PASS][  0.8s] T4f2 the cover's period would give exactly half (the live factor-2 error, now impossible on the vector reading)
+  [PASS][  0.8s] T4f3 first law dE = T dS with S = A/4 returns T_from_vector exactly (and NOT T_from_cover)
+  [PASS][  0.8s] T4g1 the Wick face of the near-cone plane is flat polar coordinates in u = (kappa/c^2) tau
+  [PASS][  0.8s] T4g2 regularity (no conical deficit) forces tau-period 2 pi c^2/kappa = 4 pi r_s, and hbar c/(k_B period) = T_from_vector
+
+RESULT: 30/30 checks passed in 0.8s
+VERDICT (computed from the table):
+  T4a/b : vector period 2 pi, cover period 4 pi, deck at i^2 -- DERIVED
+  T4b'  : the cover is REACHED: vector = Sym^2(2-dim), the -1 squares to +1
+  T4c/d : twist logarithmic; slope universal (-1/2 in r, -1 in rho); scale 4 r_s
+  T4e   : kappa from the twist = kappa from the acceleration = c^2/(2 r_s)
+  T4f/g : T_H = hbar c/(4 pi k_B r_s) from (2 pi) x (kappa); first law and Euclidean regularity agree

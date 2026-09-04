@@ -1,0 +1,33 @@
+=== b1: the flips are reflections ===
+  [PASS][  0.0s] b1a each flip is a reflection: det = -1, preserves the seat's form (R^T Q R = Q)
+  [PASS][  0.0s] b1b the three flips commute as frame maps and compose to -I (Hawking's face is the full reflection)
+=== b2: the Pin(2,1) lifts -- gamma matrices of the seat's form ===
+  [PASS][  0.0s] b2a gamma_hbar^2 = gamma_G^2 = +I, gamma_c^2 = -I: the (2,1) signature of the seat's derived form, in REAL 2x2 matrices (no Cl(3))
+  [PASS][  0.0s] b2b the three lifts mutually ANTICOMMUTE at the orthogonal state
+  [PASS][  0.0s] b2c the lift acts as the reflection: v -> -gamma_X v gamma_X^{-1} flips exactly the X coordinate
+=== b3: the sign of a path is the permutation parity ===
+  [PASS][  0.0s] b3a every ordering's lift is +-(the CHG lift): the six lifts differ ONLY by a sign -- {'CHG': 1, 'CGH': -1, 'HCG': -1, 'HGC': 1, 'GCH': 1, 'GHC': -1}
+  [PASS][  0.0s] b3b the sign IS the permutation parity: A_3 = {CHG, HGC, GCH} -> +1, the odd coset {CGH, GHC, HCG} -> -1
+  [PASS][  0.0s] b3c EVERY adjacent transposition costs -1 (C<->H and C<->G included), not only H<->G
+  [PASS][  0.0s] b3d cyclic shifts of an ordering have the SAME sign: the sheet is the orientation of the directed cycle C -> H -> G -> C
+=== b4-b5: correction to T5 ===
+  [PASS][  0.0s] b4  T5's 'hbar before G' classes agree with parity on four orderings and DISAGREE on GCH and HCG: T5's B6-B8 are superseded -- agree ['CHG', 'CGH', 'HGC', 'GHC'], disagree ['HCG', 'GCH']
+  [PASS][  0.0s] b5  T5's B5 (H<->G swap = -1, the 2 pi around a timelike pole) is consistent with parity; the correction is that the four spacelike-pole squares carry -1 TOO
+=== b6-b7: the Bargmann invariant reads the sheet; the excess away from orthogonality ===
+  [PASS][  0.0s] b6a on the VECTOR reading Tr(P_C P_H P_G) = q(c,hbar) q(hbar,G) q(G,c) is REAL and equal to its reverse: the c seat's two-sided presentation cannot see the sheet (PREDICTION-1's blindness)
+  [PASS][  0.1s] b6b the realised lifts square to their norms: x_C^2 = -I, x_H^2 = x_G^2 = +I (unit lines of the seat's form)
+  [PASS][  0.3s] b6c the anticommutator of two lifts is 2 q(.,.) I: {x_H, x_G} = 2 gamma I with gamma = cosh l1 cosh l2 cos t - sinh l1 sinh l2 (T7c's visible-angle formula)
+  [PASS][  0.4s] b6d [SPINOR reading] B+ = tr(x_C x_H x_G) and B- = tr(x_C x_G x_H) are NEGATIVES of each other at every state: B- = -B+ (the real-matrix form of B- = conj B+; the sheet-reading observable) -- B+ = 2*sin(t)*cosh(l1)*cosh(l2)
+  [PASS][  0.4s] b6e B+ = 2 sin t cosh l1 cosh l2: MAXIMAL (+-2) at the orthogonal state, ZERO exactly on T7c's branch locus sin t = 0 (my prediction 'vanishes at orthogonality' was WRONG, recorded)
+  [PASS][  0.4s] b6f B+^2 = -4 det G_c: the sheet-reading observable is the SIGNED SQUARE ROOT OF THE FRAME'S VOLUME -- magnitude = volume, sign = orientation, undefined where the frame is planar
+  [PASS][  0.4s] b6g the reversal excess 2 gamma x_C is TRACELESS: B- = -B+ holds at EVERY state, not only the orthogonal one -- the trace reads pure parity everywhere
+  [PASS][  0.4s] b7  the reversal excess: x_C x_G x_H = 2 gamma x_C - x_C x_H x_G exactly; at gamma = 0 this is pure -1 (parity), off it the excess 2 gamma x_C is what the Bargmann phase measures
+
+RESULT: 19/19 checks passed in 0.4s
+VERDICT [DERIVED]: the flips are reflections; their lifts in Pin(2,1) -- real 2x2 gamma matrices of the seat's OWN form --
+  anticommute at the orthogonal state, so every adjacent transposition costs -1 and the sign of a path is the
+  permutation parity S_3/A_3: sheet = orientation of the directed cycle C -> H -> G -> C.  T5's 'hbar before G'
+  is superseded (it assumed the spacelike-pole squares were sign-free).  The vector reading of the Bargmann
+  invariant is real and reversal-blind; the spinor reading B+ = 2 sin t cosh l1 cosh l2 flips sign under reversal,
+  is maximal at orthogonality, and vanishes on the branch locus: B+^2 = -4 det G_c, the signed root of the frame's
+  volume.  Face = unordered content; sheet = orientation of arrival.  PREDICTION-1 reads the sheet.

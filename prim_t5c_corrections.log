@@ -1,0 +1,29 @@
+=== 1. det G_c = -D^2: it touches zero, D crosses it ===
+  [PASS][  0.2s] 1a D = det[hbar, G, c] = cosh l1 cosh l2 sin t (the oriented volume, in seat coordinates)
+  [PASS][  0.2s] 1b det G_c = det(F^T Q F) = det(Q) D^2 = -D^2 exactly
+  [PASS][  0.3s] 1c det G_c <= 0 for every state and is EVEN in D: it cannot cross zero with a sign; it touches zero quadratically at sin t = 0
+  [PASS][  0.3s] 1d D is ODD in t: D(-t) = -D(t); D crosses zero at the branch locus with a sign -- the sign is sgn D, and THAT is the debt
+=== 2. V_spin is the raw spinor trace, not the projector Bargmann invariant ===
+  [PASS][  0.3s] 2a V_spin := tr_2(Gamma_C Gamma_H Gamma_G) = 2D exactly, at every state
+  [PASS][  0.4s] 2b V_spin^2 = -4 det G_c (T5b's identity, now correctly attributed to the spinor trace)
+  [PASS][  0.4s] 2c reversal: tr_2(Gamma_C Gamma_G Gamma_H) = -2D  (tau: D -> -D)
+  [PASS][  0.4s] 2d (1 + Gamma_C)/2 is NOT idempotent (Gamma_C^2 = -1): there is no real projector onto the timelike line in this block -- the projector Bargmann invariant is a DIFFERENT object
+  [PASS][  0.6s] 2e vector reading: Tr(P_C P_H P_G) = q(C,H) q(H,G) q(G,C) / (q(C,C) q(H,H) q(G,G)), with the timelike denominator -1 (T5b omitted the normalisation)
+  [PASS][  0.8s] 2f the vector reading is real and reversal-invariant: Tr(P_C P_G P_H) = Tr(P_C P_H P_G)
+  [PASS][  1.2s] 2g the two objects are different functions of the state: V_spin is linear in D, Tr(P P P) is even in D -- they must carry different names
+=== 3. Cl(2,1) = M_2(R) (+) M_2(R): the two blocks are the two sheets ===
+  [PASS][  1.2s] 3a the pseudoscalar I = Gamma_C Gamma_H Gamma_G is CENTRAL (commutes with every generator)
+  [PASS][  1.2s] 3b I^2 = +1: Cl(2,1) splits into two blocks I = +1 and I = -1; the algebra is M_2(R) (+) M_2(R), not simple
+  [PASS][  1.2s] 3c the real 2x2 rep of T5b is the I = +1 block: Gamma_C Gamma_H Gamma_G = +I_2 there
+  [PASS][  1.2s] 3d the I = -1 block: Gamma_C -> -Gamma_C preserves all relations (squares, anticommutation) and sends I to -I_2
+  [PASS][  1.2s] 3e in the I = -1 block V_spin = -2D: the two blocks read the two sheets; the block label IS the sheet
+  [PASS][  1.2s] 3f the 4x4 direct sum is faithful: I = diag(+1,+1,-1,-1), both sheets present; a single 2x2 block sees only one
+  [PASS][  1.2s] 3g on the faithful rep the TOTAL trace of Gamma_C Gamma_H Gamma_G vanishes: the sheet is invisible to the full trace and visible only to the block-resolved trace -- the 'one-sided' reading is the choice of block
+=== the earned theorem ===
+  [PASS][  1.2s] V_spin = 2D, D^2 = -det G_c, tau: D -> -D; at D = 0 the observable is defined (= 0) and only sgn D is undefined
+
+RESULT: 19/19 checks passed in 1.2s
+VERDICT [DERIVED]: det G_c = -D^2 touches zero; D crosses it; the debt is sgn D(r).  The sheet-reading observable
+  is V_spin = tr_2(Gamma_C Gamma_H Gamma_G) = 2D, NOT the projector Bargmann invariant (real, even in D).
+  Cl(2,1) = M_2(R)+M_2(R), I^2 = +1: the two blocks give +-2D and the block label is the sheet; the full
+  4x4 trace is sheet-blind.  Neutron-star vs black-hole <-> sgn D is a DYNAMICAL proposition, not yet derived.

@@ -1,0 +1,33 @@
+=== f1: the compact-plane chart, |gamma| < 1 ===
+  [PASS][  0.0s] f1a sig S = (+,+): det S = 1 - gamma^2 > 0
+  [PASS][  0.0s] f1b eta >= 0
+  [PASS][  0.1s] f1c c_perp is TIMELIKE: q(c_perp, c_perp) = -(1 + eta) < 0
+=== f2: the hyperbolic face-on sector, |gamma| > 1, det G < 0 ===
+  [PASS][  0.1s] f2a a realised state with |gamma| > 1 has det G < 0 (the (2,1) form is nondegenerate there) -- gamma = 1.091, det G = -1.191
+  [PASS][  0.1s] f2a' the algebraic point (gamma, a, b) = (2, 1, 0) has det G = +2 > 0 and TWO negative eigenvalues: signature (1,2), NOT a state of the model (T7c: realised det G <= 0) -- eigenvalues [-1.7615571818318905, -0.3633282379326837, 3.124885419764574]
+  [PASS][  0.1s] f2a'' in |gamma| > 1: det G < 0 <=> eta < -1 (since -det G = (1 - gamma^2)(1 + eta) with 1 - gamma^2 < 0)
+  [PASS][  0.1s] f2b sig S = (+,-): det S = 1 - gamma^2 < 0
+  [PASS][  0.1s] f2c eta < -1 -- -7.248
+  [PASS][  0.1s] f2d c_perp is SPACELIKE: q(c_perp, c_perp) = -(1 + eta) > 0
+  [PASS][  0.1s] f2e the projection p is super-timelike: q(p, p) = eta < -1 (carries more than all of c's negative norm)
+  [PASS][  0.1s] f2f N = (1 + eta)^{-1/2} is NOT real here: 1 + eta < 0
+  [PASS][  0.1s] f2g still q(c, c) = q(p, p) + q(c_perp, c_perp) = -1 (the decomposition is exact, just with the signs swapped)
+=== f3: the chart boundary, |gamma| = 1, det G != 0 ===
+  [PASS][  0.1s] f3a S is singular (rank 1): the rulers' span is a DEGENERATE plane
+  [PASS][  0.1s] f3b hbar - G is NULL: q(hbar - G, hbar - G) = 0
+  [PASS][  0.1s] f3c hbar - G is orthogonal to BOTH rulers: it lies in the radical of the span (non-transverse)
+  [PASS][  0.1s] f3d with a != b the form is nondegenerate there (det G = -(a-b)^2 < 0): the frame is fine, the RESOLUTION is not
+=== f4: the rank-loss surface beyond the chart, |gamma| > 1, det G = 0 ===
+  [PASS][  0.3s] f4a at t = 0 (any l1 != l2): eta = -1 exactly
+  [PASS][  0.3s] f4b c lies IN the rulers' span (c = x hbar + y G solvable for l1 != l2): c_perp = 0, 'vanishes in the realized span'
+  [PASS][  0.3s] f4c the frame has rank 2 there (planar): genuine loss of frame rank, not a chart artefact
+=== f5: the pinning's fibre is two-dimensional (Will's correction of my count) ===
+  [PASS][  0.3s] f5a d(eta) has rank 1 at a generic point: ONE scalar constraint on THREE state functions
+  [PASS][  0.3s] f5b so the fibre of eta = r_s/(r - r_s) over each r is 2-dimensional (3 - 1), modulo the discrete hbar <-> G swap
+  [PASS][  0.3s] f5c the discrete part: for fixed (gamma, b, r) there are exactly two roots in a (the swap's shadow), not a continuous family
+  [PASS][  0.3s] f5d RECORD: the T7e commit said 'one-parameter family at every r'; that was wrong. Two functions of r are undetermined by the radial law.
+
+RESULT: 23/23 checks passed in 0.3s
+VERDICT: Will's region table holds in every row. The |gamma| > 1 sector is a different resolution type --
+  the seat's rulers span a Lorentzian plane, its normal is spacelike, its lapse is not real -- forced by
+  the same form. The pinning leaves TWO tangential state functions free; that path is the native THM-O debt.

@@ -26,6 +26,18 @@ P8. Axes cannot be manipulated in isolation. Moving one line moves the frame or 
     the compression/stretching of the plane between converging lines.
 P9. A constant is what a view collapses to a point. Constancy is a property of the
     view, not of the quantity.
+    [SHARPENED, end of 2026-09-04 (Will's catch): two different things collapse. A FRAME
+    LINE collapsed by SEATING (c: a constant of the frame, invariant across every seat
+    on it, bounds the frame because no real angle crosses its cone). And a DEGENERATE
+    DIRECTION collapsed by INSTRUMENT ORTHOGONALITY (n0 = hbar -+ G at |gamma| = 1: a
+    constant of one seat's RESOLUTION at one state; nobody can sit on it (P5); its
+    locus is crossed in state space while the seat's lapse -> 0; it has a FREQUENCY
+    a -+ b against the seat rather than a conversion role; it lies ON c's cone rather
+    than generating one; from another seat it is a different object). The first kind
+    is a constant of nature. The second kind is a horizon. Do not graft the first
+    kind's constraints onto the second: c's five properties follow from c's POSITION,
+    and grafting them onto anything else draws c's page twice. Read each constant's
+    constraints off its own position. (prim_t7g_two_horizons.py for n0's position.)]
 P10. [Will's ruling, 2026-09-04 late; WORDING CORRECTED by Will same night] c is the
     NEGATIVE line of the frame's form (T7b2: derived, not declared). "Timelike" is the
     form's word for it; "time" is NOT. A (2,1) form contains a whole negative cone and

@@ -48,6 +48,43 @@ P12. [Will, 2026-09-04] Laws are seat-derived. The constants and laws a seat rea
     derivable from that seat's resolution and no other's. Another seat derives
     another physics from the same frame.
 
+## T7 SUMMARY (a-f, 106 checks, six commits) -- what the seat's resolution does across the state space
+Seat coordinates: visible azimuth t, invisible depths l1, l2. Gram diagonal (-1,+1,+1) fixed by
+the resolution (T7a). c := the negative line, DERIVED (T7b2); {hbar, G} an unordered pair at the
+bare tier (T7b3). The seat constructs one tilt lambda from its three parameters, sinh^2 lambda =
+eta = v^T S^-1 v, and sech lambda is the LAPSE -- time dilation as the seat's blindness to its own
+tilt; 'time' needs a path (T7d, Will). Two degeneracy sets (T7e, Will): D_plane = {|gamma| = 1}
+(rulers' span degenerate, normal unconstructible) and B_form = D_plane cap {a = b gamma} (form
+loses rank); the horizon is eta -> inf, N -> 0, reached in D_plane OFF B_form; on B_form N is
+0/0, path-dependent. The full branch locus {sin t = 0} x R^2 extends into |gamma| > 1 as
+{eta = -1} (T7e ext). Region table (T7f, Will): |gamma| < 1 c_perp timelike; boundary c_perp null
+non-transverse; |gamma| > 1, det G < 0: c_perp SPACELIKE, lapse not real -- a different resolution
+type forced by the same form; |gamma| > 1, eta > -1 is a FORBIDDEN zone (signature (1,2), no
+frame). The pinning eta(r) leaves TWO tangential functions free (T7f, Will's count): that frame
+path is the native THM-O debt and decides whether the horizon trajectory meets the rank-loss
+surface, skirts it, or enters the hyperbolic sector.
+
+THE HORIZON, IN THE SEAT'S TERMS (Will, end of T7): at |gamma| = 1 off B_form the vector
+n0 = hbar - G has q(n0,n0) = 0, q(n0,hbar) = q(n0,G) = 0, q(n0,c) = a - b != 0. A whole line in
+the frame, zero length and zero projection in the seat's space, nonzero pairing with the seat's
+axis only: a light ray from the seat. ONE OF THE SEAT'S RULERS HAS TURNED END-ON AND BECOME A
+CONSTANT (P9) -- a root point seen end-on. The seat that had one constant now has two, and the
+new one reads as c because its only pairing is with the seat's negative line. On B_form (a = b)
+the two rulers are instead ONE ruler and the frame itself loses rank. Horizon = a ruler turning
+into light; branch curve = two rulers turning into one. This is the 08-17 labelled model's c-5
+('v = c is the root lying flat in the presentation, a re-seating') with its mechanism.
+
+RENDERING PRIMITIVE (Will's hypercube point, resolved): the incidence structure never changes;
+draw it fixed. The seat's ruler on a plane is a CONIC -- the unit locus of the constructed form:
+ellipse in the compact chart (semi-axes 1/sqrt(1 +- gamma)), a pair of parallel lines at the
+boundary (the w-axis blows up: infinite coordinates on zero length = the root point end-on), a
+hyperbola in the hyperbolic sector whose points at infinity are the two null directions (the
+cone) and whose Wick completion (w -> i w') closes into the thermal circle of T4. One conic,
+continuous in the projective plane (discriminant against the line at infinity is
+4(gamma-1)(gamma+1)), discontinuous in the affine one. The '3D to 4D blow-up' is the homogeneous
+coordinate: the dimension that lets a conic touch infinity and come back. Draw the metric as
+colour on fixed incidence, never as shape.
+
 CORRECTIONS forced by P11/P12:
  - P3 keeps "planes have intrinsic character (hyperbolic / compact), never deforming"
    and LOSES the word "metric": metric is a seat's word for its rulers (P11).

@@ -1,0 +1,17 @@
+=== k1: the Hodge star of q, and the ordering constraint ===
+  [PASS][  0.3s] k1 K = Z^{-1} star_q is built from q alone: under the hbar <-> G swap, star_{PGP^T}(PFP^T) = -P star_G(F) -- covariant up to the orientation sign; the map is defined BEFORE either ruler is named (ordering constraint met)
+  [PASS][  0.3s] k1' the swap is an ORIENTATION-REVERSING map of the frame (det P = -1): star_q picks up the sign of the orientation -- the same sign as the sheet (T5c); K is ruler-blind up to the deck
+=== k2: the characteristic cone of K is q's cone (clause b) ===
+  [PASS][  0.5s] k2 for F = k ^ A, star_q F is q^{-1}-orthogonal to k identically (the Bianchi side): d(star F) = 0 then forces the dispersion q^{-1}(k,k) = 0 -- the characteristic cone of K is q's cone, the seat's c-cone
+  [PASS][  2.3s] k2' |star F|^2_{q^{-1}} = -det(G) * (q^{-1}(k,k) q^{-1}(A,A) - q^{-1}(k,A)^2) ... up to the overall sign of det: on transverse A the null condition is exactly q^{-1}(k,k) = 0 -- |star F|^2 / (q(k,k)q(A,A) - q(k,A)^2) = -1
+=== k3: the scalar is free (clause c OPEN) ===
+  [PASS][  2.5s] k3 rescaling K -> Z^{-1} K leaves every characteristic (the cone) unchanged: the residual scalar Z is NOT fixed by q. Clause (c) -- Z = Z_0^{+-1} -- is open, and clause (d) with it
+=== k4: the obstruction to clause (a) in 2+1 ===
+  [PASS][  2.5s] k4 in the seat's native 2+1 the electric part of F has 2 components (one per ruler) and the magnetic part 1 (the plane): no involution of Lambda^2 exchanges them
+  [PASS][  2.5s] k4' star_q maps Lambda^2 -> Lambda^1 in three dimensions (dimension count 3 -> 3 but different degree): there is no Lambda^2 -> Lambda^2 involution here. Electric-magnetic reciprocity as star^2 = -1 on 2-forms needs FOUR dimensions -- clause (a) requires T8's Gamma_4. THM-K and T8 are one theorem
+
+RESULT: 7/7 checks passed in 2.5s
+VERDICT: the ruler-blind constitutive map K = Z^{-1} star_q exists, meets the ordering constraint, and has the
+  seat's c-cone as its characteristic cone (clause b).  Its scalar is free (clause c open, clause d with it).
+  Clause (a) is OBSTRUCTED in 2+1 -- electric-magnetic reciprocity is a 4-dimensional involution -- so the
+  Maxwell theorem needs the fourth generator: THM-K and T8 are the same theorem.

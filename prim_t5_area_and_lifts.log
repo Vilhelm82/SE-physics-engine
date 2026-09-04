@@ -1,0 +1,32 @@
+=== PART A: Wigner rotation = hyperbolic area ===
+  [PASS][  0.1s] A0 the three vertices are timelike unit vectors on H^2: q(P,P) = -1
+  [PASS][  0.2s] A1 [40 digits, three points] the angle DEFECT of the boost triangle on H^2 equals |Wigner angle| from T3 to 1e-30 -- [('0.267488789699', '0.267488789699'), ('0.20997888533', '0.20997888533'), ('0.174768894491', '0.174768894491')]
+  [PASS][  0.2s] A2 the closed form tan(A/2) = det[P0,P1,P2] / (1 - sum of pairwise q) agrees with the defect numerically (validated above)
+  [PASS][  0.3s] A3 [EXACT] tan^2(A/2) = tan^2(w/2): Wigner's rotation IS the hyperbolic area of the triangle its two boosts and their composite enclose
+  [PASS][  0.3s] A4 margin: the area vanishes iff collinear (t = 0) or unpivoted (v1 = 1 or v2 = 1) -- the same margin as Wigner
+
+=== PART B: the six lifts and the deck sign ===
+  [PASS][  0.3s] B0 [correction to LABEL-3] six pairs of orderings differ by an ADJACENT transposition and bound 4-cycles; the other three bound 6-cycles
+  [PASS][  0.3s] B1 each 4-cycle fixes exactly ONE axis's sign across its four faces: it is the square of faces around that pole
+    CHG <-> CGH : loop C -> CH -> CGH -> CG  around pole C-
+    CHG <-> HCG : loop O -> C -> CH -> H  around pole G+
+    CGH <-> GCH : loop O -> C -> CG -> G  around pole H+
+    HCG <-> HGC : loop H -> CH -> CGH -> GH  around pole H-
+    HGC <-> GHC : loop O -> H -> GH -> G  around pole C+
+    GCH <-> GHC : loop G -> CG -> CGH -> GH  around pole G-
+  [PASS][  0.3s] B2 exactly TWO of the six 4-cycles circle a timelike pole (+c or -c); the other four circle spacelike poles
+  [PASS][  0.3s] B3 the two timelike-pole cycles are exactly the pairs that swap the hbar-flip and the G-flip (H <-> G adjacent) with c fixed
+  [PASS][  0.3s] B4 around a timelike pole the corners' in-plane projections are SPACELIKE (q = 2 each), lying on a circle: the loop is a closed 2 pi rotation in the compact plane
+  [PASS][  0.3s] B5 the spinor lift of the timelike-pole 4-cycle is -I: paths differing by an adjacent H <-> G swap differ by the DECK SIGN
+  [PASS][  0.3s] B6 around a spacelike pole the corners' in-plane projections are NULL (q = hbar^2 - c^2 = 0): on the cone of a Lorentzian plane, not a closed rotation -- holonomy is a boost, carries no sign
+  [PASS][  0.3s] B7 the sign structure is consistent: adjacent swaps around a spacelike pole preserve the class, around a timelike pole flip it; the class is 'hbar before G' vs 'G before hbar' -- {'CHG': 1, 'CGH': -1, 'HCG': 1, 'HGC': 1, 'GCH': -1, 'GHC': -1}
+  [PASS][  0.3s] B8 c's position in the ordering carries NO sign: the two classes are {C,H,G},{H,C,G},{H,G,C} and {C,G,H},{G,C,H},{G,H,C}
+
+RESULT: 14/14 checks passed in 0.3s
+VERDICT:
+  A [DERIVED, two routes]: Wigner's rotation is the hyperbolic area of the boost triangle on H^2. Holonomy = area, K = -1.
+  B [DERIVED]: of the six 4-cycles on the face-graph, exactly two circle a timelike pole and are closed 2 pi rotations
+    with spinor lift -1; the four around spacelike poles have corners on the cone and carry boosts, not signs.
+    The six lifts split into two classes by the ORDER OF THE TWO RULER-FLIPS: hbar-then-G vs G-then-hbar.
+    c's place in the order is sign-free.  That is the deck arrow: whether action turns to evanescence before
+    or after mass turns to energy.  PREDICTION-1's ordered operation, with an address.

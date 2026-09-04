@@ -26,9 +26,17 @@ P8. Axes cannot be manipulated in isolation. Moving one line moves the frame or 
     the compression/stretching of the plane between converging lines.
 P9. A constant is what a view collapses to a point. Constancy is a property of the
     view, not of the quantity.
-P10. [Will's ruling, 2026-09-04 late] c is the timelike line. The two planes through c
-    are the hyperbolic ones; the plane not through c is compact. Seated on c you see
-    the compact plane face-on (space) and cannot see your own line (time).
+P10. [Will's ruling, 2026-09-04 late; WORDING CORRECTED by Will same night] c is the
+    NEGATIVE line of the frame's form (T7b2: derived, not declared). "Timelike" is the
+    form's word for it; "time" is NOT. A (2,1) form contains a whole negative cone and
+    identifies no vector with time, supplies no arrow, produces no evolution. What the
+    seat constructs is a TILT: decompose c against the rulers' span P_c = span{hbar,G}
+    (Gram S, |gamma| < 1), p = (hbar,G) S^-1 v, c_perp = c - p, eta = v^T S^-1 v;
+    then q(p,p) = sinh^2 lambda, -q(c, n) = cosh lambda with n the unit normal to P_c,
+    and sech(lambda) is the lapse -- the time-dilation factor between the seat's clock
+    and the resolved one. Time is an ordered duration along a path through states;
+    without dynamics T7 gives causal geometry and no time. Calling c "time" erases the
+    tilt that produces dilation. (prim_t7d_tilt.py, 12/12.)
 P11. [Will, 2026-09-04, RESOLUTION] A seat resolves the frame into one point, two
     lines, one plane. The point is the seated axis (its constant, both poles
     collapsed). The two lines are the other two axes, which are the edge-on traces of

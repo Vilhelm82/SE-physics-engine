@@ -1,0 +1,18 @@
+=== T7d: the seat-constructed tilt ===
+  [PASS][  0.1s] d1  q_c(c - p, hbar) = 0 and q_c(c - p, G) = 0: p is the projection of c onto the rulers' span
+  [PASS][  0.1s] d2a q_c(p, p) = eta = v^T S^-1 v
+  [PASS][  0.1s] d2b q_c(c_perp, c_perp) = -(1 + eta)
+  [PASS][  0.2s] d3a q_c(n, n) = -1: n is a unit negative vector normal to the rulers' span
+  [PASS][  0.2s] d3b -q_c(c, n) = sqrt(1 + eta) =: cosh(lambda)
+  [PASS][  0.2s] d4  q_c(p, p) = sinh^2(lambda): the tilt between the seated line and the normal is a rapidity
+  [PASS][  0.2s] d5a sech(lambda) = 1/sqrt(1 + eta): the lapse, the time-dilation factor between seat and resolved clocks
+  [PASS][  0.2s] d5b (comparison stage) sech^2 = 1 - r_s/r  <=>  eta = r_s/(r - r_s): the paper's pinning is a value of the seat's own tilt invariant
+  [PASS][  0.2s] d6  at zero depth (a = b = 0): eta = 0, lambda = 0, n = c -- no tilt, no dilation
+  [PASS][  0.2s] d7a S = [[1,gamma],[gamma,1]] is positive-definite iff |gamma| < 1 (det = 1 - gamma^2)
+  [PASS][  0.2s] d7b eta has the factor 1/(1 - gamma^2): the construction degenerates exactly where the rulers' span stops being spatial
+  [PASS][  0.2s] d7c eta = (a^2 - 2 a b gamma + b^2)/(1 - gamma^2) exactly
+
+RESULT: 12/12 checks passed in 0.2s
+VERDICT: Will's construction holds exactly. The seat builds one hyperbolic angle from its three
+  invisible-to-visible parameters; sech of it is the lapse; 'timelike' is the form's word,
+  'time' needs a path.  c is the negative seated line, not time.

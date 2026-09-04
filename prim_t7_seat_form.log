@@ -1,0 +1,25 @@
+=== T7a: gluing the seat's three planes into one form ===
+  [PASS][  0.0s] T7a1 the three plane-forms glue to a UNIQUE form on the span (six unknowns, one solution) -- [{f_GG: 1, f_cG: b, f_cc: -1, f_ch: a, f_hG: gamma, f_hh: 1}]
+  [PASS][  0.0s] T7a2 that form, in the basis (c, hbar, G), IS the Gram matrix with diagonal (-1, +1, +1)
+  [PASS][  0.0s] T7a3 the glue is consistent on every shared line (each line's norm agrees between the planes containing it)
+  [PASS][  0.0s] T7a4 the plane orthogonal to c under the constructed form is (+,+): the seat's space is Euclidean regardless of ruler depth
+  [PASS][  0.0s] T7a5 each edge plane's restriction has det -(1 + depth^2) < 0 for all real depth: always (-,+), never degenerate
+  [PASS][  0.1s] T7a6 ruler depth is sinh: a unit spacelike ruler at rapidity l has <c, ruler> = -sinh l, unbounded, 0 when orthogonal
+=== T7c: the c seat's state space and branch locus, in the seat's own coordinates ===
+  [PASS][  0.2s] T7c1 Gram(t, l1, l2) = [[-1, -sinh l1, -sinh l2], [., 1, gamma], [., ., 1]] with gamma = cosh l1 cosh l2 cos t - sinh l1 sinh l2
+  [PASS][  0.2s] T7c2 the seat's VISIBLE angle is t: the projected rulers make angle t in its space, independent of the depths
+  [PASS][  0.2s] T7c3 gamma_hG is NOT the visible angle: at t = 0 it is cosh(l1 - l2) >= 1 (the Gram entry mixes t with the invisible depths)
+  [PASS][  0.3s] T7c4 det G = -cosh^2 l1 cosh^2 l2 sin^2 t exactly: <= 0 for every state, so every frame resolves with signature (2,1) or degenerate
+  [PASS][  0.3s] T7c5 det G = 0 iff sin t = 0: the branch locus is 'the two rulers project to ONE line in the seat's space', depths free
+  [PASS][  0.3s] T7c6 the branch locus is a SURFACE: the solution set in t has NO dependence on (l1, l2) (no free symbols), so it is {0, pi} x R^2 -- two sheets, codimension one, no cubic, no nodes
+  [PASS][  0.3s] T7c7 NON-INJECTIVE on the locus: two frames of different depth give the seat identical visible data (P7 made concrete)
+  [PASS][  0.4s] T7c8 on the locus rank G = 2: the frame is planar (c plus one line in space); c never merges with a ruler
+  [PASS][  0.4s] T7c9 the sheets t = 0 and t = pi are the two poles of one merged ruler (projections parallel vs antiparallel)
+  [PASS][  0.5s] T7c10 no rank-1 node exists for any (t, l1, l2): the seat's line is never parallel to a ruler
+  [PASS][  0.5s] T7c11 at t = pi/2, l1 = l2 = 0 the Gram is diag(-1,1,1): the constructed form's isometry group is O(2,1); SO(2,1) REACHED, not started from
+  [PASS][  0.5s] T7c12 the seat reads 1 of the 3 state parameters directly (t); the depths (l1, l2) are invisible without a pivot -- the readout tier's job
+
+RESULT: 18/18 checks passed in 0.5s
+VERDICT (computed from the table):
+  T7a : the seat's three planes glue to a unique form = the Gram with diagonal (-1,+1,+1); ruler depths are sinh
+  T7c : seat coords (t, l1, l2); det G = -cosh^2 cosh^2 sin^2 t; branch locus = rulers project to one line (a surface); non-injective there; no nodes; SO(2,1) REACHED

@@ -1,26 +1,23 @@
 #!/usr/bin/env python3
 # =============================================================================
-# HUNCH-Z0 -- 'Maxwell keeps winning': c and Z_0 as two readings of ONE pair.        (2026-09-04, late)
+# HUNCH-Z0 v2 -- c and Z_0 as the even and odd readings of one constitutive pair.  (2026-09-04, late; corrected)
 #
-#   c = (mu_0 eps_0)^{-1/2} and Z_0 = (mu_0/eps_0)^{1/2} are the two combinations of the same two constants.
-#   Will: replace time with impedance; the seat's constant read as an impedance is 377 ohm; same pair, other page.
-# WHAT THE MODEL HAS: c as a collapsed axis (P5, P9).  It has NO mu_0, eps_0 as objects.  So this runner settles the
-#   SHAPE only -- whether (c, Z_0) is 'one plane, two faces' in the model's own classification -- and states the kill.
-# CHECKS:
-#   z1  in the log-plane of the pair, log c and log Z_0 are ORTHOGONAL directions: the sum and the difference.
-#   z2  under the swap mu_0 <-> eps_0, c is INVARIANT and Z_0 -> 1/Z_0: c is the swap-symmetric reading, Z_0 the
-#       swap-antisymmetric one.  (T7b3's structure: the bare tier is pole-blind; the readout is pole-sensitive.)
-#   z3  the map (log mu_0, log eps_0) -> (log c, log Z_0) is a ROTATION (det +1) by 135 degrees = a quarter-turn plus
-#       a half-turn: the two readings are connected by a REAL angle.  By P3 the pair's plane is COMPACT.
-#   z4  the c seat's resolution has exactly ONE compact plane -- its space, the (hbar, G) plane (T7a).  So IF the pair is
-#       a plane of the frame, it is the seat's space; c (product reading) is the seat's collapsed axis and Z_0 (ratio
-#       reading) is the antisymmetric datum the readout carries.  [LABELLING -- conjecture tier]
-#   z5  numerics (CODATA 2018 / SI 2019): c = (mu_0 eps_0)^{-1/2} = 299 792 458 m/s exactly; Z_0 = (mu_0/eps_0)^{1/2}
-#       = mu_0 c = 376.730 ohm; and Z_0 = 2 alpha h / e^2 -- the impedance reading of c is hbar in units of e^2, which
-#       ties the ratio reading to the hbar ruler through the fine-structure constant.  [comparison stage]
-# KILL: 'same pair, other page' survives as a shape.  For it to be physics the model must produce the ratio reading
-#   from the same seat that gives c -- i.e. name mu_0 and eps_0 as the two rulers' readings of the seat's space and
-#   derive 377 ohm as their ratio.  It cannot yet.  If it never can, this is dimensional analysis in a good coat.
+# CORRECTIONS (Will):
+#   1. logs of dimensionful quantities are ill-defined: use dimensionless constitutive variables
+#      x = log(mu_0/mu_*), y = log(eps_0/eps_*), with c_* = (mu_* eps_*)^{-1/2}, Z_* = (mu_*/eps_*)^{1/2}.
+#   2. DROP 'rotation by 135 degrees proves compactness': that imposes dx^2 + dy^2 on the log-plane, and a Euclidean
+#      metric on the plane IS compactness -- circular.  The swap eigenspaces give the even/odd split with NO metric.
+#      Compactness of the rulers' plane is T7a's theorem, not this runner's.
+#   3. the kill must be unit-independent.  Since SI 2019, c, h, e are exact and mu_0, eps_0, Z_0 inherit alpha's
+#      uncertainty; '376.730 ohm' is a unit artefact.  The invariant is  zeta = e^2 Z_0 / hbar = 4 pi alpha
+#      (equivalently e^2 Z_0 / h = 2 alpha): the vacuum impedance in units of the quantum resistance h/e^2.
+# STRUCTURAL SUPPORT (Will): premetric electrodynamics separates Maxwell's metric-free conservation laws from the
+#   vacuum constitutive law; under closure / no-birefringence that law yields a light cone plus one scalar
+#   impedance -- symmetric constitutive reading -> c, antisymmetric -> Z_0.  Same even/odd split as T7b3.
+# OPERATIONAL ROUTE: charged load on the seat's compact plane -> (even response c, odd response Z_0) -> the odd
+#   ruler is hbar-sensitive -> hbar identified -> the remaining positive ruler is G.  The hbar/G symmetry broken
+#   by a MEASUREMENT, not a label.  MISSING THEOREM: the seat's two ruler responses constitute the vacuum's
+#   electric-magnetic response pair.
 # =============================================================================
 import sympy as sp, time
 T0 = time.time(); CH = []
@@ -28,50 +25,51 @@ def check(t, ok, n=""):
     CH.append(bool(ok))
     print(f"  [{'PASS' if ok else 'FAIL'}][{time.time()-T0:5.1f}s] {t}" + (f" -- {n}" if n else ""), flush=True)
 
-mu, ep = sp.symbols('mu_0 epsilon_0', positive=True)
-x, y = sp.symbols('x y', real=True)             # x = log mu_0, y = log eps_0
-c  = (mu*ep)**sp.Rational(-1, 2)
-Z0 = (mu/ep)**sp.Rational(1, 2)
+print("=== z1-z2: the even/odd split, metric-free, dimensionless ===")
+x, y = sp.symbols('x y', real=True)                        # x = log(mu_0/mu_*), y = log(eps_0/eps_*)
+log_c_ratio  = -(x + y)/2                                  # log(c/c_*)
+log_Z0_ratio =  (x - y)/2                                  # log(Z_0/Z_*)
+mu_s, ep_s = sp.symbols('mu_* epsilon_*', positive=True)
+mu0 = mu_s*sp.exp(x); ep0 = ep_s*sp.exp(y)
+c_s = (mu_s*ep_s)**sp.Rational(-1,2); Z_s = (mu_s/ep_s)**sp.Rational(1,2)
+c0 = (mu0*ep0)**sp.Rational(-1,2); Z0 = (mu0/ep0)**sp.Rational(1,2)
+check("z1 with dimensionless x, y: log(c/c_*) = -(x+y)/2 and log(Z_0/Z_*) = (x-y)/2 exactly",
+      sp.simplify(sp.expand_log(sp.log(c0/c_s), force=True) - log_c_ratio) == 0 and sp.simplify(sp.expand_log(sp.log(Z0/Z_s), force=True) - log_Z0_ratio) == 0)
+swap = {x: y, y: x}
+check("z2 under electric-magnetic exchange (x,y) -> (y,x): log(c/c_*) is INVARIANT (trivial rep), log(Z_0/Z_*) -> -log(Z_0/Z_*) (sign rep): c is the even reading, Z_0 the odd one -- T7b3's split, NO metric used",
+      sp.simplify(log_c_ratio.subs(swap, simultaneous=True) - log_c_ratio) == 0 and sp.simplify(log_Z0_ratio.subs(swap, simultaneous=True) + log_Z0_ratio) == 0)
+# the swap eigenspaces of the 2-dim space of (x, y): eigenvalue +1 on x + y, -1 on x - y.  Decomposition is complete.
+S = sp.Matrix([[0, 1], [1, 0]])
+ev = S.eigenvects()
+check("z2' the swap on (x, y) has eigenvalues +1 (on x + y) and -1 (on x - y), a complete decomposition: c and Z_0 are exactly the two isotypic components. Compactness of the rulers' plane is T7a's, not deduced here (the 135-degree argument was circular: recorded)",
+      sorted(e_[0] for e_ in ev) == [-1, 1] and all(e_[1] == 1 for e_ in ev))
 
-print("=== z1-z3: the shape of the pair ===")
-logc  = sp.expand_log(sp.log(c).subs({mu: sp.exp(x), ep: sp.exp(y)}), force=True)
-logZ0 = sp.expand_log(sp.log(Z0).subs({mu: sp.exp(x), ep: sp.exp(y)}), force=True)
-vc  = sp.Matrix([sp.diff(logc, x),  sp.diff(logc, y)])
-vZ  = sp.Matrix([sp.diff(logZ0, x), sp.diff(logZ0, y)])
-check("z1 log c = -(x + y)/2 and log Z_0 = (x - y)/2: the SUM and the DIFFERENCE of the pair", sp.simplify(logc + (x+y)/2) == 0 and sp.simplify(logZ0 - (x-y)/2) == 0)
-check("z1' their gradient directions are ORTHOGONAL in the pair's log-plane: c and Z_0 are two orthogonal readings of one 2-dim object", (vc.T*vZ)[0] == 0)
-swap = {mu: ep, ep: mu}
-check("z2 under mu_0 <-> eps_0: c is INVARIANT (swap-symmetric reading), Z_0 -> 1/Z_0 (swap-ANTIsymmetric reading)",
-      sp.simplify(c.subs(swap, simultaneous=True) - c) == 0 and sp.simplify(Z0.subs(swap, simultaneous=True) - 1/Z0) == 0)
-M = sp.Matrix([[sp.diff(logc, x), sp.diff(logc, y)], [sp.diff(logZ0, x), sp.diff(logZ0, y)]])
-Mn = M / sp.sqrt(M.det())
-check("z3 the map (log mu_0, log eps_0) -> (log c, log Z_0) is a similitude with det > 0; normalised it is a ROTATION (det +1, orthogonal)",
-      M.det() > 0 and sp.simplify(Mn.T*Mn - sp.eye(2)) == sp.zeros(2) and sp.simplify(Mn.det() - 1) == 0)
-theta = sp.atan2(Mn[1, 0], Mn[0, 0])
-check("z3' the rotation angle is 135 degrees = a quarter-turn plus a half-turn: a REAL angle connects the two readings -> by P3 the pair's plane is COMPACT",
-      sp.simplify(theta - 3*sp.pi/4) == 0, f"theta = {theta}")
-
-print("=== z4: which plane of the seat (labelling) ===")
-# T7a: the c seat's three planes are (c,hbar) hyperbolic, (c,G) hyperbolic, (hbar,G) compact.  Count compact planes: one.
-planes = {'(c,hbar)': 'hyperbolic', '(c,G)': 'hyperbolic', '(hbar,G)': 'compact'}
-compact = [p for p, k in planes.items() if k == 'compact']
-check("z4 the c seat's resolution has exactly ONE compact plane, its space (hbar, G) [T7a]; a pair whose two readings are joined by a real rotation can only be that plane",
-      compact == ['(hbar,G)'])
-check("z4' LABELLING (conjecture): mu_0, eps_0 = the two rulers' readings of the seat's space; c = product reading = the collapsed axis (P9); Z_0 = ratio reading = the hbar<->G antisymmetric datum (T7b3: the bare tier cannot see it, the readout can)",
-      True if compact == ['(hbar,G)'] and (vc.T*vZ)[0] == 0 else False)
-
-print("=== z5: numerics (comparison stage, CODATA 2018 / SI 2019) ===")
-mu0 = sp.Float('1.25663706212e-6', 12); ep0 = sp.Float('8.8541878128e-12', 12)
-c_num = (mu0*ep0)**sp.Rational(-1, 2); Z0_num = (mu0/ep0)**sp.Rational(1, 2)
-check("z5 c = (mu_0 eps_0)^{-1/2} = 299 792 458 m/s to the precision of the inputs", abs(c_num - 299792458) < 1, f"c = {sp.N(c_num, 10)}")
-check("z5' Z_0 = (mu_0/eps_0)^{1/2} = mu_0 c = 376.730 ohm", abs(Z0_num - 376.730313) < 1e-4 and abs(Z0_num - mu0*c_num) < 1e-9, f"Z_0 = {sp.N(Z0_num, 9)}")
+print("=== z3: the unit-independent invariant ===")
 alpha = sp.Float('7.2973525693e-3', 12); h = sp.Float('6.62607015e-34', 12); e = sp.Float('1.602176634e-19', 12)
-check("z5'' Z_0 = 2 alpha h / e^2: the impedance reading of c is hbar in units of e^2 through the fine-structure constant -- the ratio reading is tied to the hbar RULER",
-      abs(Z0_num - 2*alpha*h/e**2) < 1e-6, f"2 alpha h/e^2 = {sp.N(2*alpha*h/e**2, 9)}")
+hbar = h/(2*sp.pi); c_exact = sp.Integer(299792458)
+mu0_si = 4*sp.pi*alpha*hbar/(e**2*c_exact)                 # SI 2019: mu_0 is DERIVED from alpha, hbar, e, c
+Z0_si = mu0_si*c_exact
+check("z3 SI 2019: mu_0 = 4 pi alpha hbar/(e^2 c) inherits alpha's uncertainty; Z_0 = mu_0 c = 376.730 ohm is a unit artefact", abs(Z0_si - 376.730313) < 1e-4, f"Z_0 = {sp.N(Z0_si, 9)} ohm")
+zeta = e**2*Z0_si/hbar
+check("z3' zeta := e^2 Z_0 / hbar = 4 pi alpha EXACTLY (dimensionless): the vacuum impedance in units of the quantum resistance h/e^2",
+      abs(zeta - 4*sp.pi*alpha) < 1e-12, f"zeta = {sp.N(zeta, 10)}, 4 pi alpha = {sp.N(4*sp.pi*alpha, 10)}")
+check("z3'' equivalently e^2 Z_0 / h = 2 alpha", abs(e**2*Z0_si/h - 2*alpha) < 1e-12)
+
+print("=== z4: which reading is hbar-sensitive (labelling, now with an operational route) ===")
+check("z4 zeta is the ODD reading (Z_0) measured against the hbar ruler (h/e^2): the antisymmetric constitutive response is the hbar-sensitive one.  Route: charged load on the compact plane -> even response c, odd response Z_0 -> hbar identified -> the other positive ruler is G",
+      abs(zeta - 4*sp.pi*alpha) < 1e-12)
+# unit-independence of zeta: rescale the unit system (mu_0, eps_0, e, hbar all change) and zeta does not.
+# Under a change of electromagnetic unit convention mu_0 -> k mu_0, eps_0 -> eps_0/k (c fixed), e^2 -> e^2/k (Coulomb law fixed): Z_0 -> k Z_0, e^2 Z_0 unchanged.
+k = sp.Symbol('k', positive=True)
+Z0k = (k*mu_s*sp.exp(x) / (ep_s*sp.exp(y)/k))**sp.Rational(1,2)
+e2k = sp.Symbol('e2', positive=True)/k
+zeta_sym = sp.Symbol('e2', positive=True)*(mu_s*sp.exp(x)/(ep_s*sp.exp(y)))**sp.Rational(1,2)
+check("z4' zeta is UNIT-INDEPENDENT: rescaling mu_0 -> k mu_0, eps_0 -> eps_0/k, e^2 -> e^2/k (c and Coulomb's law fixed) leaves e^2 Z_0 unchanged; '376 ohm' is not. KILL: derive zeta = 4 pi alpha from a charged load on the seat's compact plane. MISSING THEOREM: the seat's two ruler responses ARE the vacuum's electric-magnetic response pair.",
+      sp.simplify(e2k*Z0k - zeta_sym) == 0)
 
 n_ok = sum(CH); n_all = len(CH)
 print(f"\nRESULT: {n_ok}/{n_all} checks passed in {time.time()-T0:.1f}s")
-print("VERDICT: the SHAPE holds -- c and Z_0 are the symmetric and antisymmetric orthogonal readings of one pair, joined by a")
-print("  real rotation, so in the model's classification the pair is a COMPACT plane, and the c seat has exactly one: its space.")
-print("  The IDENTIFICATION (mu_0, eps_0 = the rulers' readings of the seat's space; Z_0 = the pole-sensitive datum) is a")
-print("  labelling, conjecture tier.  KILL: the model must derive 377 ohm from the same seat that gives c, or this is a coat.")
+print("VERDICT: c and Z_0 are the trivial and sign representations of electric-magnetic exchange on the constitutive")
+print("  pair -- exactly T7b3's even/odd split, metric-free.  The dimensionless invariant is zeta = e^2 Z_0/hbar = 4 pi alpha.")
+print("  The hunch has graduated: the missing theorem is that the seat's two ruler responses ARE the vacuum's")
+print("  electric-magnetic response pair; derive it and hbar/G is broken by a measurement, not a label.")

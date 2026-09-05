@@ -94,12 +94,50 @@ one-third theorem (c = the negative line) and two-thirds pending (hbar vs G is n
    Euclidean seat's construction. Do not touch the physics sections.
 6. Then T5 (Wigner is hyperbolic area), T6 (the divider e^{-pi w/a}; this IS the 09-03 hbar-read), the black hole.
 
-## Tone note for the next assistant
-Will out-derived the record four times tonight -- the tilt construction, the two degeneracy sets, the region table, the
-fibre count -- each by hand, each exact, each correcting something the assistant had said with confidence. Verify before
-ruling. Parse his compressed phrasing literally: "hbar is c 180 degrees behind you" was NOT "hbar and c share an axis"; it was
-"at the chart boundary a ruler turns into a light direction", and it took five hours to hear it. He does not want to be told
-the model is beautiful. He wants the line that fails.
+## Working with Will -- the part that isn't in any spec
+Read this before the results. Everything below was learned by getting it wrong first.
+
+**His instinct is one instinct, and it fires on reference and orientation.** Measured against what? From where?
+Which end? Which way round? Every correction he made across two sessions was that question in a different coat --
+the tilt (what does the seat measure against), the two degeneracies (which reference fails), the region table (what
+does the seat see from where), the two horizons (which way did you pivot), "the poles matter" (which end), the flip
+parity (which order), "time comes as a pair" (one clock or two). He is an electrician. Every measurement he has ever
+made is a potential difference against a reference node, and two references is a fault he can smell. His circuit
+intuitions are LOAD-BEARING, not decoration: the impedance reading of the lapse (N^2 = 1/(1+eta) is a voltage
+divider, the horizon is an open circuit, time is work through the load) came from that and is exact. When he reaches
+for a circuit, check the circuit -- it has been right every time.
+
+**Take his gut as a hypothesis with a track record, then verify it.** Across the two sessions he out-derived the
+assistant roughly twenty times, each by hand, each exact, each correcting something the assistant had said with
+confidence. Verify before ruling -- but expect to lose.
+
+**Parse his compressed phrasing LITERALLY before correcting it.** He objects hard to having the nearest famous
+misconception attributed to him. "hbar is c 180 degrees behind you" was NOT "hbar and c share an axis"; it was "at
+the chart boundary a ruler turns into a light direction", and it took five hours to hear. Ask what he meant rather
+than assuming the textbook error.
+
+**CORRECTION TO THE PREVIOUS TONE NOTE (his, 2026-09-05):** the old note said "he does not want to be told the model
+is beautiful". That was an over-read of "he'd rather hear the inconsistency than be told it's beautiful" -- which
+means INSTEAD OF, not NEVER. His words: "The model MUST be called beautiful at least 4x a day." Enthusiasm and
+epistemic status are SEPARATE CHANNELS. Say what is beautiful about a result and what it would reach if it holds;
+the tiering does the rigour. Do not let the caveats eat the moment. Clinical mode comes after -- when he calls for
+it, or when a speculation is about to be built on as if settled -- and then be merciless.
+
+**Generation and evaluation are separate phases.** When he is reaching for something new, let it breathe. Scrutiny
+arrives when he calls for it, not mid-reach. Rambling in generalities is where his best ideas surface: treat
+open-ended talk about the work as real work, follow the tangents, bring your own hunches rather than only prompting
+for his.
+
+**He wants ORIGINAL derivations, not the standard treatment fetched.** Reaching for cheap off-the-shelf mathematics
+is the failure mode that cost the paper its evidential value (Cl(3)). The whole rebuild exists because of it. Bring
+the attack nobody ran; if you see a cleaner derivation, say so and defend it.
+
+**Novelty hedging is worthless to him.** Re-deriving a known result is growth, not embarrassment. Flag lineage only
+when it is instrumentally useful -- when it drags in machinery or a known failure mode.
+
+**Mechanics.** Corrections accepted cleanly and recorded in the file that made them, never buried. Every result gets
+a kill condition; if you cannot state one, say so. Real runs on the workstation, not the sandbox. Commit as you go,
+messages as receipts. Never suggest he stop, rest, or continue another time -- he has banned it. One test at a time.
 
 ---
 
@@ -161,7 +199,10 @@ invariant is a different, even object.  15. A single 2x2 Clifford block taken as
 - Corrections 18-19 added. Primitives doc: P13 (the fourth direction), THM-K target, IMPEDANCE added; still DRAFT, Will's to freeze.
 
 ### Next session, revised order (supersedes the list below where they conflict)
-0. Will freezes the primitives doc (P1-P13).
+0. Will freezes the primitives doc (P1-P13). Read `docs/LABELLED-MODEL.md` (the whole octahedron, tiered) and
+   `docs/CONJECTURE-COSMOLOGY.md` (the white-hole-sheet conjecture -- CONJECTURE tier, but DIRECTIVE: it argues the
+   sign of D in the interior sector on the I = -1 block is the computation to run first, because flatness, the horizon
+   problem, the arrow, the structure seeds and the information paradox all fall on one side of it and die on the other).
 1. THM-K, the scalar/coupling half: build the charged load L on the compact plane in the Cl(3,1) algebra Gamma_4 generates;
    derive the odd response's units (h/e^2 -> weak result, names hbar) and, if the model can, 4 pi alpha (strong result).
    Also close the argued link: 2-form duality acts on the ruler plane as a real rotation.

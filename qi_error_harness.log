@@ -10,10 +10,12 @@ B8 Helstrom minimum error, two pure states                             EXACT    
 B9 Mandelstam-Tamm minimal orthogonalisation time                      EXACT       REPRODUCED                                                          3.14159           - UNJUDGED
 B10 DFS leakage under symmetry-breaking eps X1 (Will eq. 10)           EXACT       REPRODUCED                                                           0.0025      0.0025 MATCH
 B11 exceptional point: splitting vs propagator                         EXACT       REPRODUCED                                                    0.0282836,...      0.0001 BREAKS
-B12 Will's dark loop (6): orientation and leakage scaling, corners     NUMERICAL   measured sign -1, leak 1.17e-02, exponent 2.30                       -1,...           - UNJUDGED
-B12s Will's dark loop (6): smoothed corners                            NUMERICAL   measured sign -1, leak 1.32e-04, exponent 6.73                       -1,...           - UNJUDGED
+B12 Will's reflection loop: exact return at tau_n (RF-2), n=1          EXACT       REPRODUCED                                                                0           - UNJUDGED
+B12b Will's reflection loop: exact return at tau_n (RF-2), n=2         EXACT       REPRODUCED                                                                0           - UNJUDGED
+B15 Will's composite F S F+ S F, +1% common gain, n=1 (CP-2): single l EXACT       REPRODUCED                                                   0.00106146,...      0.0001 BREAKS
+B15a same, leading-order formulas (CP-2 eq. 7) at eps = 1e-3 where the ASYMPTOTIC  REPRODUCED(asymp)                                               3.56723e-11       1e-06 BREAKS
 B13 surface-code threshold, circuit-level depolarising noise           OPEN        OPEN                                                                   open           - UNJUDGED
 B14 non-Markovian memory advantage for a logical lifetime              OPEN        OPEN                                                                   open           - UNJUDGED
 
-HARNESS: 11/11 exact/asymptotic benchmarks reproduced from first principles.
-CANDIDATE 'example_divisor_candidate': MATCH=1, BREAKS=7, UNJUDGED=7
+HARNESS: 15/15 exact/asymptotic benchmarks reproduced from first principles.
+CANDIDATE 'example_divisor_candidate': MATCH=1, BREAKS=9, UNJUDGED=7

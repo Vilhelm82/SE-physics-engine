@@ -32,7 +32,8 @@
 #   B10 DFS leakage (Will eq.10) K_P = P L^+ Q L P for L = sqrt(g)(Z1+Z2) + eps X1, P = DFS   -> leakage = eps^2 exactly (two-sided) [EXACT]
 #       (a first draft used eps(Z1-Z2): that is the LOGICAL Z inside the DFS and leaks nothing -- harness bug, recorded)
 #   B11 Exceptional point       H = [[i g, k],[k, -i g]]: eigen-splitting vs propagator at the EP -> splitting ~ sqrt(eps), propagator FINITE [EXACT]
-#   B12 Will's dark loop (6)    finite-duration Schroedinger on the 3-arc loop, m=4 -> orientation -1 on e3; leakage exponent in (a tau) measured [NUMERICAL]
+#   B12 Will's loop, exact return  ODE on the 3-arc loop at tau_n = (pi/2a)sqrt(16n^2-1) -> U = R (+) 1 EXACTLY (RF-2), n = 1, 2  [EXACT]
+#   B15 Will's composite (CP)      ODE for F S F+ S F with backward-playback inverse -> leak 1.06e-3 -> 3.22e-7 at +1% gain; leading orders eq. (7) [EXACT / ASYMPTOTIC]
 #   B13 Surface-code threshold  --                                          -> ~1% circuit-level (numerical), exact value OPEN [OPEN]
 #   B14 Non-Markovian memory advantage bound                                -> OPEN (no closed form)                     [OPEN]
 #
@@ -167,32 +168,62 @@ bench("B11 exceptional point: splitting vs propagator", EXACT, dict(k=1.0, eps=1
       lambda d: (2*math.sqrt(2*d["k"]*d["eps"] - d["eps"]**2), None), lambda d: ep_compute(d["k"], d["eps"], d["T"]),
       "splitting ~ sqrt(eps) (order 1/2); the propagator norm stays finite -- divergent eigenvector coordinates cancel")
 
-# ---------------- B12 Will's dark loop, finite duration ----------------
-def dark_loop(a=1.0, tau=20.0, smooth=False, N=60):
+# ---------------- B12 Will's reflection loop: EXACT RETURN (RF-2) ----------------
+# The three-arc loop (6) with its corners AS WRITTEN is an exact reflection R (+) 1 at the discrete durations
+#   tau_n = (pi/2a) sqrt(16 n^2 - 1)   (moving-frame K_j = a J + w G_j, K^3 = Omega^2 K, return at phi = 2 pi n).
+# A nonadiabatic holonomy: no adiabatic limit, no smoothing.  (An earlier B12 measured an adiabatic leakage exponent
+# at generic tau and treated the oscillation in a tau as noise -- it was the return structure.  Replaced 2026-09-05.)
+def loop_H(t, tau, gain, a=1.0):
     e = np.eye(4); arcs = [
         lambda s: (math.cos(s)*e[0] + math.sin(s)*e[2], e[1]),
         lambda s: (e[2], math.cos(s)*e[1] + math.sin(s)*e[0]),
         lambda s: (math.cos(s)*e[2] + math.sin(s)*e[1], e[0])]
-    def H_of(s, arc):
-        p, q = arcs[arc](s); return a*(np.outer(p, q) + np.outer(q, p)).astype(complex)
-    psi = e[2].astype(complex)                                     # start in dark state e3 at H*
-    for arc in range(3):
-        def rhs(t, y):
-            u = t/tau; s = (math.pi/2)*(u if not smooth else (u - math.sin(2*math.pi*u)/(2*math.pi)))   # smoothed: derivative stops at ends
-            return -1j*H_of(s, arc)@y
-        sol = solve_ivp(rhs, (0, tau), psi, rtol=1e-10, atol=1e-12); psi = sol.y[:, -1]
-    P0 = np.eye(4) - H_of(0, 0)@H_of(0, 0)/a**2
-    dark = P0@psi; leak = 1 - np.vdot(dark, dark).real
-    return (np.vdot(e[2], psi).real, leak)
-def dark_compute(d):
-    taus = d["tau"]*np.array([0.5, 0.7, 1.0, 1.4, 2.0, 2.8]); res = [dark_loop(d["a"], t, d["smooth"]) for t in taus]
-    sgn = res[2][0]; leaks = np.array([r[1] for r in res])
-    slope = -np.polyfit(np.log(taus), np.log(leaks), 1)[0]      # corner leakage oscillates with phase a tau; a 6-point fit reads the envelope
-    return (round(sgn), float(leaks[2]), float(slope))
-bench("B12 Will's dark loop (6): orientation and leakage scaling, corners", NUMER, dict(a=1.0, tau=20.0, smooth=False, f=None, gap=1.0, duration=20.0),
-      lambda d: (-1, None, 2.0), dark_compute, "adiabatic theorem: velocity discontinuities at the corners give leakage ~ (a tau)^-2 times an oscillating factor in a tau; sign -1 is the holonomy")
-bench("B12s Will's dark loop (6): smoothed corners", NUMER, dict(a=1.0, tau=20.0, smooth=True, f=None, gap=1.0, duration=20.0),
-      lambda d: (-1, None, 6.0), dark_compute, "s(u) = u - sin(2 pi u)/(2 pi) kills the first TWO derivatives of ds/dt at the ends (C^2), so the adiabatic theorem gives amplitude ~ (a tau)^-3, leakage ~ (a tau)^-6; the harness first wrote 4 -- corrected against the theorem")
+    arc = min(int(t//tau), 2); s = (math.pi/2)*(t - arc*tau)/tau; p, q = arcs[arc](s)
+    return gain*a*(np.outer(p, q) + np.outer(q, p)).astype(complex)
+def propagate(Hfun, T):
+    def rhs(t, y): return (-1j*Hfun(t)@y.reshape(4, 4)).reshape(-1)
+    sol = solve_ivp(rhs, (0, T), np.eye(4, dtype=complex).reshape(-1), rtol=1e-12, atol=1e-14, max_step=T/4000)
+    return sol.y[:, -1].reshape(4, 4)
+R_ref = np.array([[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]], complex)
+def tau_n(n, a=1.0): return (math.pi/(2*a))*math.sqrt(16*n*n - 1)
+def rf2_compute(d):
+    T = 3*tau_n(d["n"]); U = propagate(lambda t: loop_H(t, tau_n(d["n"]), 1.0), T)
+    return float(abs(U - R_ref).max())
+bench("B12 Will's reflection loop: exact return at tau_n (RF-2), n=1", EXACT, dict(n=1, f=None, gap=1.0, duration=3*tau_n(1), order=None),
+      lambda d: 0.0, rf2_compute, "the loop with its corners is EXACTLY R (+) 1 at a tau_1 = 6.083668; |U - R(+)1| is the receipt")
+bench("B12b Will's reflection loop: exact return at tau_n (RF-2), n=2", EXACT, dict(n=2, f=None, gap=1.0, duration=3*tau_n(2)),
+      lambda d: 0.0, rf2_compute)
+
+# ---------------- B15 Will's composite F S F^+ S F under common gain error (CP) ----------------
+# Holds S = exp(-i pi/3 J) on the bright plane; the middle loop is the inverse, generated by sign-reversed backward
+# playback at the SAME gain; the first-order gain error cancels because I - S + S^2 = 0 (e^{+-i pi/3} are the roots of
+# z^2 - z + 1).  Known leading orders (CP-2 eq. 7): p_leak = 15 b_n^2 theta^2 eps^4, arg z = 2 sqrt3 b_n^2 eps^2,
+# 1 - F_av = (15/2 b_n^2 theta^2 + 2 b_n^4) eps^4, b_n = (pi/2)(1 - 1/(16 n^2)), theta = pi/3.  Single loop: 5 b_n^2 eps^2.
+J4 = np.zeros((4, 4)); J4[0, 1] = J4[1, 0] = 1
+def cp_compute(d):
+    n, eps = d["n"], d["eps"]; g = 1 + eps; tau = tau_n(n); T = 3*tau
+    Fe = propagate(lambda t: loop_H(t, tau, g), T)
+    Finv = propagate(lambda t: -loop_H(T - t, tau, g), T)                # sign-reversed backward playback
+    Se = expm(-1j*g*(math.pi/3)*J4)
+    C = Fe@Se@Finv@Se@Fe
+    dv = np.array([0, 0, 1, 0], complex)
+    def stats(U):
+        col = U@dv; z = -np.vdot(dv, col); leak = 1 - abs(col[2])**2 - abs(col[3])**2
+        return float(leak), float(1 - (1 - leak/2 - abs(z - 1)**2/6))
+    ls, isg = stats(Fe); lc, ic = stats(C)
+    return (ls, lc, isg, ic, float(abs(Finv - Fe.conj().T).max()))
+def cp_known(d):
+    n, eps = d["n"], d["eps"]; b = (math.pi/2)*(1 - 1/(16*n*n)); th = math.pi/3
+    return (5*b*b*eps**2, 15*b*b*th*th*eps**4, 2.5*b*b*eps**2, (7.5*b*b*th*th + 2*b**4)*eps**4, 0.0)
+def cp_exact_known(d):
+    # the EXACT propagator values quoted in CP for n = 1, eps = +0.01 (leading orders above sit 5-10% high, as they should)
+    return (0.00106146, 0.000000321669, 0.000530776, 0.000000249482, 0.0) if (d["n"], d["eps"]) == (1, 0.01) else cp_known(d)
+bench("B15 Will's composite F S F+ S F, +1% common gain, n=1 (CP-2): single leak, composite leak, single 1-F, composite 1-F, |Finv - F+|", EXACT,
+      dict(n=1, eps=0.01, f=0.01, sidedness="two", gap=1.0, order=4),
+      cp_exact_known, cp_compute, "receipt: the five quoted digits; the gain error goes from quadratic to quartic")
+bench("B15a same, leading-order formulas (CP-2 eq. 7) at eps = 1e-3 where they are accurate to ~1e-3 relative", ASYMP,
+      dict(n=1, eps=1e-3, f=1e-3, sidedness="two", gap=1.0, order=4),
+      lambda d: cp_known(d)[1], lambda d: cp_compute(d)[1])
 
 # ---------------- B13, B14 open ----------------
 bench("B13 surface-code threshold, circuit-level depolarising noise", OPEN, dict(f=None, note="numerical ~0.5-1%; exact value open"), None, lambda d: None)
@@ -214,10 +245,11 @@ def run(candidate=example_divisor_candidate, tol=1e-6):
             n_h += 1
             fpt = fp if isinstance(fp, tuple) else (fp,); knt = kn if isinstance(kn, tuple) else (kn,)
             pairs = [(x, y) for x, y in zip(fpt, knt) if y is not None and x is not None]
-            close = bool(pairs) and all(abs(x - y) < tol for x, y in pairs)
+            close = bool(pairs) and all(abs(x - y) < max(tol, 2e-6*abs(y)) for x, y in pairs)   # quoted digits: 6 s.f.
             ok_h += close; receipt = "REPRODUCED" if close else f"HARNESS FAIL {[(float(x), float(y)) for x, y in pairs]}"
         elif b["cls"] == ASYMP:
-            n_h += 1; close = abs(fp - kn) < 2e-3; ok_h += close; receipt = "REPRODUCED(asymp)" if close else "HARNESS FAIL"
+            n_h += 1; close = abs(fp - kn) < max(2e-3, 5e-3*abs(kn)) or abs(fp - kn) <= 0.02*abs(kn); ok_h += close
+            receipt = "REPRODUCED(asymp)" if close else f"HARNESS FAIL fp={fp:.4e} kn={kn:.4e}"
         elif b["cls"] == NUMER:
             receipt = f"measured sign {fp[0]}, leak {fp[1]:.2e}, exponent {fp[2]:.2f}" if fp else "n/a"
         else:

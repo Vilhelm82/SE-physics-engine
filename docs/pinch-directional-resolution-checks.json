@@ -1,0 +1,142 @@
+{
+  "scope": "Exact finite-direction resolution of the native pinch. State-space extension is proposed; direction selection and area-transport dynamics remain open.",
+  "verified_count": 42,
+  "checks": {
+    "directional_identity": {
+      "verified": true
+    },
+    "resolved_determinant": {
+      "verified": true
+    },
+    "resolved_oriented_volume": {
+      "verified": true
+    },
+    "resolved_ambient_gram": {
+      "verified": true
+    },
+    "normalized_difference_ruler_pairing": {
+      "verified": true
+    },
+    "normalized_difference_clock_pairing": {
+      "verified": true
+    },
+    "normalized_difference_norm": {
+      "verified": true
+    },
+    "resolved_dual_normal_coefficients": {
+      "verified": true
+    },
+    "resolved_dual_normal_vector": {
+      "verified": true
+    },
+    "resolved_dual_normal_pairings": {
+      "verified": true
+    },
+    "resolved_dual_normal_norm": {
+      "verified": true
+    },
+    "tilt_identity": {
+      "verified": true
+    },
+    "branch_1_original_gram": {
+      "verified": true
+    },
+    "branch_1_original_volume": {
+      "verified": true
+    },
+    "branch_1_original_determinant": {
+      "verified": true
+    },
+    "branch_1_original_lapse": {
+      "verified": true
+    },
+    "branch_1_direction_coordinate": {
+      "verified": true
+    },
+    "branch_1_normalized_difference": {
+      "verified": true
+    },
+    "branch_1_pinch_gamma": {
+      "verified": true
+    },
+    "branch_1_pinch_depth": {
+      "verified": true
+    },
+    "branch_1_pinch_merged_rulers": {
+      "verified": true
+    },
+    "branch_-1_original_gram": {
+      "verified": true
+    },
+    "branch_-1_original_volume": {
+      "verified": true
+    },
+    "branch_-1_original_determinant": {
+      "verified": true
+    },
+    "branch_-1_original_lapse": {
+      "verified": true
+    },
+    "branch_-1_direction_coordinate": {
+      "verified": true
+    },
+    "branch_-1_normalized_difference": {
+      "verified": true
+    },
+    "branch_-1_pinch_gamma": {
+      "verified": true
+    },
+    "branch_-1_pinch_depth": {
+      "verified": true
+    },
+    "branch_-1_pinch_merged_rulers": {
+      "verified": true
+    },
+    "pinch1_transverse_limit": {
+      "verified": true
+    },
+    "pinch1_bisector": {
+      "verified": true
+    },
+    "pinch1_center_norm": {
+      "verified": true
+    },
+    "null_direction_1": {
+      "verified": true
+    },
+    "regular_horizon_gradient_1": {
+      "verified": true
+    },
+    "null_direction_-1": {
+      "verified": true
+    },
+    "regular_horizon_gradient_-1": {
+      "verified": true
+    },
+    "compact_center": {
+      "verified": true
+    },
+    "compact_intermediate": {
+      "verified": true
+    },
+    "hyperbolic_example": {
+      "verified": true
+    },
+    "stationary_surface_gravity_1": {
+      "verified": true
+    },
+    "stationary_surface_gravity_-1": {
+      "verified": true
+    }
+  },
+  "results": {
+    "retained_direction": "xi = (b-a gamma)/d, d = oriented det[c,h,g], d^2 = delta",
+    "resolved_lapse": "F = (1-xi^2)/(1+a^2)",
+    "replacement_ruler": "v = (g-gamma h)/d",
+    "resolved_gram": "[[-1,a,xi],[a,1,0],[xi,0,F]], determinant -1",
+    "dual_normal": "nu = -F c + a F h + xi v",
+    "pinch_fiber": "finite xi is retained at d=0",
+    "horizons": "xi=+1 or xi=-1, regular including d=0",
+    "next_native_target": "derive the retained direction and area transport from the native dynamics"
+  }
+}

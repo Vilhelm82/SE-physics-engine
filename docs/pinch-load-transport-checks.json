@@ -1,0 +1,231 @@
+{
+  "scope": "Native rate-selection and transport identities; conditional passive-response classification; an explicit declared load with a regular finite-time trapping/pinch crossing. No unique native load is inferred.",
+  "verified_count": 63,
+  "checks": {
+    "crossing_direction": {
+      "verified": true
+    },
+    "crossing_direction_rate": {
+      "verified": true
+    },
+    "native_lapse_rate": {
+      "verified": true
+    },
+    "native_depth_rate_1": {
+      "verified": true
+    },
+    "native_volume_rate_1": {
+      "verified": true
+    },
+    "native_selected_direction_1": {
+      "verified": true
+    },
+    "native_depth_rate_-1": {
+      "verified": true
+    },
+    "native_volume_rate_-1": {
+      "verified": true
+    },
+    "native_selected_direction_-1": {
+      "verified": true
+    },
+    "pinch_riccati": {
+      "verified": true
+    },
+    "pinch_volume_rate": {
+      "verified": true
+    },
+    "null_direction_drift_1": {
+      "verified": true
+    },
+    "null_direction_drift_-1": {
+      "verified": true
+    },
+    "both_null_directions_invariant": {
+      "verified": true
+    },
+    "passive_selector_x_solution": {
+      "verified": true
+    },
+    "passive_selector_d_solution": {
+      "verified": true
+    },
+    "passive_selector_projective_flow": {
+      "verified": true
+    },
+    "passive_selector_power": {
+      "verified": true
+    },
+    "passive_selector_eigenvalues": {
+      "verified": true
+    },
+    "passive_selector_lapse_rate": {
+      "verified": true
+    },
+    "passive_direction_family_determinant": {
+      "verified": true
+    },
+    "passive_direction_family_power": {
+      "verified": true
+    },
+    "passive_direction_family_fixed_effort": {
+      "verified": true
+    },
+    "passive_direction_family_fixed_input_power": {
+      "verified": true
+    },
+    "clock_area_bridge": {
+      "verified": true
+    },
+    "inward_area_expansion": {
+      "verified": true
+    },
+    "clock_area_matching_law": {
+      "verified": true
+    },
+    "passive_response_power": {
+      "verified": true
+    },
+    "area_response_row": {
+      "verified": true
+    },
+    "quadratic_area_self_response": {
+      "verified": true
+    },
+    "area_boundary_annihilation": {
+      "verified": true
+    },
+    "unrestricted_orientation_row": {
+      "verified": true
+    },
+    "robust_boundary_factor": {
+      "verified": true
+    },
+    "crossing_witness_native_x_rate": {
+      "verified": true
+    },
+    "crossing_witness_native_d_rate": {
+      "verified": true
+    },
+    "crossing_witness_direction": {
+      "verified": true
+    },
+    "crossing_witness_selected_horizon": {
+      "verified": true
+    },
+    "crossing_witness_selected_direction_rate": {
+      "verified": true
+    },
+    "crossing_witness_declared_passive_load": {
+      "verified": true
+    },
+    "crossing_witness_load_nondegenerate": {
+      "verified": true
+    },
+    "crossing_witness_original_determinant": {
+      "verified": true
+    },
+    "crossing_witness_original_lapse": {
+      "verified": true
+    },
+    "crossing_witness_soldering": {
+      "verified": true
+    },
+    "crossing_witness_resolved_determinant": {
+      "verified": true
+    },
+    "crossing_witness_native_normal": {
+      "verified": true
+    },
+    "crossing_witness_outgoing_null": {
+      "verified": true
+    },
+    "crossing_witness_inward_null": {
+      "verified": true
+    },
+    "crossing_witness_null_pairing": {
+      "verified": true
+    },
+    "crossing_witness_native_area_transport": {
+      "verified": true
+    },
+    "crossing_witness_outgoing_expansion": {
+      "verified": true
+    },
+    "crossing_witness_inward_expansion": {
+      "verified": true
+    },
+    "crossing_witness_outer_derivative": {
+      "verified": true
+    },
+    "crossing_witness_regular_transition": {
+      "verified": true
+    },
+    "crossing_witness_full_ricci": {
+      "verified": true
+    },
+    "crossing_witness_null_focusing": {
+      "verified": true
+    },
+    "crossing_witness_pregeodesic_normal": {
+      "verified": true
+    },
+    "crossing_witness_all_null_convergence": {
+      "verified": true
+    },
+    "crossing_witness_raychaudhuri": {
+      "verified": true
+    },
+    "crossing_witness_horizon_rate_balance": {
+      "verified": true
+    },
+    "general_horizon_focusing_balance_1": {
+      "verified": true
+    },
+    "general_horizon_focusing_balance_-1": {
+      "verified": true
+    },
+    "finite_time_compact_side": {
+      "verified": true
+    },
+    "finite_time_trapped_side": {
+      "verified": true
+    }
+  },
+  "results": {
+    "finite_crossing": "xi_0 = dot x_0/dot d_0 when dot d_0 != 0",
+    "native_angle_rates": "xi_0 = (dot l1 - sigma dot l2)/(cosh(l1) dot t_angle)",
+    "invariant_pinch_flow": "dot xi = m12 + (m11-m22) xi - m21 xi^2 on the resolved pinch",
+    "area_clock_law": "theta_C = -sqrt(1-F) theta_R + F Xi",
+    "passive_matching_class": "M = diag(I,F) (R0+J0) diag(I,F), R0 symmetric PSD, J0 skew",
+    "area_self_response": "M_area,area = F^2 r0 under smooth two-sided passivity and all-effort boundary matching",
+    "finite_time_witness": "d=t; x=t+k t^2; xi=1+k t; R=r-t-k t^2/2; theta_L=F/R; theta_N=-2/R",
+    "native_remaining_input": "Derive the actual effort, response, and area coupling from the seat/load construction."
+  },
+  "finite_time_witness_samples": [
+    {
+      "clock": "-1/4",
+      "oriented_volume": "-1/4",
+      "xi": "3/4",
+      "F": "7/16",
+      "theta_L": "14/71",
+      "theta_N": "-64/71"
+    },
+    {
+      "clock": "0",
+      "oriented_volume": "0",
+      "xi": "1",
+      "F": "0",
+      "theta_L": "0",
+      "theta_N": "-1"
+    },
+    {
+      "clock": "1/4",
+      "oriented_volume": "1/4",
+      "xi": "5/4",
+      "F": "-9/16",
+      "theta_L": "-18/55",
+      "theta_N": "-64/55"
+    }
+  ]
+}

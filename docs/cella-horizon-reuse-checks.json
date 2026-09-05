@@ -1,0 +1,58 @@
+{
+  "scope": "Cella algebra and conditional horizon extensions; no native physical closure asserted",
+  "check_count": 17,
+  "checks": {
+    "cella_coupling_determinant": {
+      "verified": true
+    },
+    "cella_edge_form_native_signature": {
+      "verified": true
+    },
+    "edge_gauge_map_determinant": {
+      "verified": true
+    },
+    "signed_curvature_arbitrary_functions_n2": {
+      "verified": true
+    },
+    "signed_curvature_arbitrary_functions_n3": {
+      "verified": true
+    },
+    "signed_curvature_arbitrary_functions_n4": {
+      "verified": true
+    },
+    "load_witness_cella_scalar": {
+      "verified": true
+    },
+    "load_witness_direct_scalar": {
+      "verified": true
+    },
+    "load_witness_horizon_scalar": {
+      "verified": true
+    },
+    "signed_reflection_existing_lead7_coefficient": {
+      "verified": true
+    },
+    "area_log_determinant_trace": {
+      "verified": true
+    },
+    "area_channel_trace_additivity": {
+      "verified": true
+    },
+    "normal_area_covector": {
+      "verified": true
+    },
+    "normal_area_preservation": {
+      "verified": true
+    },
+    "dual_normal_orthogonality": {
+      "verified": true
+    },
+    "dual_normal_causal_norm": {
+      "verified": true
+    },
+    "dual_normal_channel_additivity": {
+      "verified": true
+    }
+  },
+  "witness_scalar": "-4*k/(-T**2*k/2 - T + r) + 2*(T*k + 1)**2/(-T**2*k/2 - T + r)**2"
+}

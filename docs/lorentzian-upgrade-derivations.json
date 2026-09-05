@@ -1,0 +1,212 @@
+{
+  "gram_determinant": {
+    "verified": true,
+    "expression": "-a**2 + 2*a*b*gamma - b**2 + gamma**2 - 1"
+  },
+  "dual_normal_0": {
+    "verified": true,
+    "expression": "0"
+  },
+  "dual_normal_1": {
+    "verified": true,
+    "expression": "0"
+  },
+  "dual_normal_2": {
+    "verified": true,
+    "expression": "0"
+  },
+  "normal_norm": {
+    "verified": true,
+    "expression": "(gamma**2 - 1)/(a**2 - 2*a*b*gamma + b**2 - gamma**2 + 1)"
+  },
+  "regular_null_normal_at_boundary": {
+    "verified": true,
+    "expression": "0"
+  },
+  "ruler_depth_metric": {
+    "verified": true,
+    "expression": "cosh(2*u)"
+  },
+  "ruler_azimuth_metric": {
+    "verified": true,
+    "expression": "cosh(u)**2"
+  },
+  "ruler_mixed_metric": {
+    "verified": true,
+    "expression": "0"
+  },
+  "eliminate_common_azimuth": {
+    "verified": true,
+    "expression": "Cg*Ch*dt**2/(Cg + Ch)"
+  },
+  "kinetic_metric_boundary_fixture": {
+    "verified": true,
+    "coordinates": "u=asinh(1), v=0, t=pi/4",
+    "diagonal": [
+      "3",
+      "1",
+      "2/3"
+    ],
+    "status": "positive and finite; candidate metric, not a derived physical law"
+  },
+  "kinetic_metric_neutral_fixture": {
+    "verified": true,
+    "coordinates": "u=v=0, t=pi/2",
+    "diagonal": [
+      "1",
+      "1",
+      "1/2"
+    ]
+  },
+  "pivot_readout_x": {
+    "verified": true,
+    "expression": "b*(1 - C**2)/sqrt(b**2 + 1)"
+  },
+  "pivot_readout_y": {
+    "verified": true,
+    "expression": "-C*b*sqrt(1 - C**2)/sqrt(b**2 + 1) + a*sqrt(1 - C**2)/sqrt(a**2 + 1)"
+  },
+  "recover_bounded_depth_a": {
+    "verified": true,
+    "expression": "a/sqrt(a**2 + 1)"
+  },
+  "recover_bounded_depth_b": {
+    "verified": true,
+    "expression": "b/sqrt(b**2 + 1)"
+  },
+  "readout_x_fixture": {
+    "verified": true,
+    "expression": "64/125"
+  },
+  "readout_y_fixture": {
+    "verified": true,
+    "expression": "12/125"
+  },
+  "depth_a_fixture": {
+    "verified": true,
+    "expression": "3/4"
+  },
+  "depth_b_fixture": {
+    "verified": true,
+    "expression": "4/3"
+  },
+  "readout_jacobian": {
+    "verified": true,
+    "expression": "-(1 - C**2)**(3/2)/(sqrt(a**2 + 1)*sqrt(b**2 + 1)*(a**2*b**2 + a**2 + b**2 + 1))"
+  },
+  "neutral_response_symmetry": {
+    "verified": true,
+    "general_symmetric_form": "diag(A,A,D)",
+    "free_components": 2,
+    "hypotheses": "neutral response invariant under independent pole reversals and ruler exchange at the orthogonal state"
+  },
+  "native_principal_polynomial": {
+    "verified": true,
+    "expression": "c_d**2*c_t*k**6 - c_d**2*k**4*k_t*omega**2 - 2*c_d*c_t*k**4*k_d*omega**2 + 2*c_d*k**2*k_d*k_t*omega**4 + c_t*k**2*k_d**2*omega**4 - k_d**2*k_t*omega**6"
+  },
+  "single_cone_condition": {
+    "verified": true,
+    "expression": "k_d**2*k_t*(k**6*v0**6 - 3*k**4*omega**2*v0**4 + 3*k**2*omega**4*v0**2 - omega**6)"
+  },
+  "wave_speed_classes": {
+    "depth_squared": "c_d/k_d (multiplicity 2)",
+    "angle_squared": "c_t/k_t",
+    "one_cone_iff": "c_d/k_d = c_t/k_t",
+    "match_seat_cone_requires": "both equal the squared speed defined by the seat clock and rulers"
+  },
+  "load_elimination": {
+    "verified": true,
+    "expression": "f**2*(A0*C1 - B0**2)/(2*C1)"
+  },
+  "observed_response_orders": {
+    "verified": true,
+    "operator": "diag(x,x^2)",
+    "drive": "(1,1)",
+    "readouts": [
+      "(0,1)",
+      "(1,0)",
+      "(1,-x)"
+    ],
+    "responses": [
+      "x**(-2)",
+      "1/x",
+      "0"
+    ]
+  },
+  "normalization_discriminant": {
+    "verified": true,
+    "expression": "4*a**2*b**2 + 4*a**2 + 4*b**2 + 4"
+  },
+  "native_normalization_kummer_module": {
+    "verified": true,
+    "base": "Q(a,b,gamma)",
+    "radicands": [
+      "a**2 - 2*a*b*gamma + b**2 - gamma**2 + 1",
+      "1 - gamma**2",
+      "a**2 + 1",
+      "b**2 + 1"
+    ],
+    "parity_matrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "generic_degree": 16,
+    "generic_group": "(C2)^4",
+    "scope": "algebraic cover of the selected normalizations; not a count of physical states or a click-group identification"
+  },
+  "readout_characters": {
+    "order_of_radicals": [
+      "sqrt(delta)",
+      "sqrt(epsilon)",
+      "sqrt(1+a^2)",
+      "sqrt(1+b^2)"
+    ],
+    "N_squared": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "N": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "visible_cosine": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "oriented_volume": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "dual_normal": "rational: no radical sign is required"
+  }
+}

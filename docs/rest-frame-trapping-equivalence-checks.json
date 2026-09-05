@@ -1,0 +1,136 @@
+{
+  "scope": "Exact bridge identities, general transverse area formula, explicit non-equivalence examples, and a sufficient matching class. Native area-transport dynamics remains a theorem target.",
+  "verified_count": 40,
+  "checks": {
+    "native_normal_norm": {
+      "verified": true
+    },
+    "outgoing_null": {
+      "verified": true
+    },
+    "ingoing_null": {
+      "verified": true
+    },
+    "null_pair_normalization": {
+      "verified": true
+    },
+    "expansion_bridge": {
+      "verified": true
+    },
+    "inward_expansion": {
+      "verified": true
+    },
+    "area_normal_expansion": {
+      "verified": true
+    },
+    "area_normal_pairing": {
+      "verified": true
+    },
+    "area_normal_norm": {
+      "verified": true
+    },
+    "dual_mean_curvature_vector": {
+      "verified": true
+    },
+    "dual_mean_curvature_norm": {
+      "verified": true
+    },
+    "positive_boost_covariance": {
+      "verified": true
+    },
+    "regular_equivalence_factor": {
+      "verified": true
+    },
+    "general_metric_native_normal": {
+      "verified": true
+    },
+    "general_metric_normal_pairing": {
+      "verified": true
+    },
+    "full_metric_area_drift": {
+      "verified": true
+    },
+    "full_metric_inward_contraction": {
+      "verified": true
+    },
+    "full_metric_expansion_bridge": {
+      "verified": true
+    },
+    "arbitrary_area_first_derivative": {
+      "verified": true
+    },
+    "conformal_inward_contraction": {
+      "verified": true
+    },
+    "native_flat_soldering": {
+      "verified": true
+    },
+    "native_flat_soldering_determinant": {
+      "verified": true
+    },
+    "native_flat_soldering_normal": {
+      "verified": true
+    },
+    "flat_native_horizon": {
+      "verified": true
+    },
+    "flat_native_horizon_full_rank": {
+      "verified": true
+    },
+    "flat_outgoing_expansion": {
+      "verified": true
+    },
+    "flat_ingoing_expansion": {
+      "verified": true
+    },
+    "flat_geometric_trapping_invariant": {
+      "verified": true
+    },
+    "flat_area_rest_vector": {
+      "verified": true
+    },
+    "flat_horizon_still_expanding": {
+      "verified": true
+    },
+    "null_aligned_example_area_drift": {
+      "verified": true
+    },
+    "null_aligned_example_inward_contraction": {
+      "verified": true
+    },
+    "null_aligned_example_horizon_expansion": {
+      "verified": true
+    },
+    "null_aligned_example_trapping_shift": {
+      "verified": true
+    },
+    "distorted_screen_area": {
+      "verified": true
+    },
+    "distorted_screen_area_drift": {
+      "verified": true
+    },
+    "distorted_screen_radial_expansion": {
+      "verified": true
+    },
+    "native_gradient_branch_1": {
+      "verified": true
+    },
+    "native_gradient_branch_-1": {
+      "verified": true
+    },
+    "outer_derivative_coefficient": {
+      "verified": true
+    }
+  },
+  "results": {
+    "expansion_bridge": "theta_L = D + rho F/2; rho = -theta_N > 0",
+    "geometric_trapping_invariant": "F_trap = F + 2 D/rho",
+    "area_rest_vector": "K_area = K - (D/rho) J",
+    "regular_equivalence_iff": "D = F Xi and 1 + 2 Xi/rho > 0 on the regular boundary",
+    "strong_matching_condition": "D = theta_K = 0",
+    "null_generator_alignment": "dF proportional to K_flat on F=0",
+    "flat_counterexample": "F crosses zero while F_trap = (1+w)^2 > 0",
+    "null_aligned_counterexample": "R = exp(lambda v) r gives theta_L|F=0 = 2 lambda"
+  }
+}

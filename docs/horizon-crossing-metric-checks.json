@@ -1,0 +1,183 @@
+{
+  "scope": "Exact native frame identities and conditional metric completion; no derived load dynamics or fixed mass profile.",
+  "verified_count": 53,
+  "checks": {
+    "native_determinant": {
+      "verified": true
+    },
+    "dual_normal_norm": {
+      "verified": true
+    },
+    "dual_normal_pairings": {
+      "verified": true
+    },
+    "future_normal_clock_pairing": {
+      "verified": true
+    },
+    "radial_raw_norm": {
+      "verified": true
+    },
+    "radial_raw_seat_orthogonality": {
+      "verified": true
+    },
+    "normal_radial_pairing": {
+      "verified": true
+    },
+    "transverse_raw_norm": {
+      "verified": true
+    },
+    "transverse_seat_orthogonality": {
+      "verified": true
+    },
+    "transverse_normal_orthogonality": {
+      "verified": true
+    },
+    "regular_coframe_factorization": {
+      "verified": true
+    },
+    "river_frame": {
+      "verified": true
+    },
+    "null_frame": {
+      "verified": true
+    },
+    "null_frame_determinant": {
+      "verified": true
+    },
+    "regular_partner_root": {
+      "verified": true
+    },
+    "other_partner_root": {
+      "verified": true
+    },
+    "regular_partner_horizon_limit": {
+      "verified": true
+    },
+    "other_partner_has_horizon_pole": {
+      "verified": true
+    },
+    "branch_1_determinant": {
+      "verified": true
+    },
+    "branch_1_signed_lapse": {
+      "verified": true
+    },
+    "branch_1_drift_squared": {
+      "verified": true
+    },
+    "branch_-1_determinant": {
+      "verified": true
+    },
+    "branch_-1_signed_lapse": {
+      "verified": true
+    },
+    "branch_-1_drift_squared": {
+      "verified": true
+    },
+    "general_metric_determinant": {
+      "verified": true
+    },
+    "general_metric_inverse": {
+      "verified": true
+    },
+    "horizon_metric_determinant": {
+      "verified": true
+    },
+    "moving_boundary_normal": {
+      "verified": true
+    },
+    "spherical_outgoing_null": {
+      "verified": true
+    },
+    "spherical_ingoing_null": {
+      "verified": true
+    },
+    "spherical_null_pairing": {
+      "verified": true
+    },
+    "outgoing_expansion": {
+      "verified": true
+    },
+    "ingoing_expansion": {
+      "verified": true
+    },
+    "ingoing_geodesic_normalization": {
+      "verified": true
+    },
+    "ingoing_geodesic_conserved_energy": {
+      "verified": true
+    },
+    "ingoing_geodesic_horizon_vdot": {
+      "verified": true
+    },
+    "ingoing_geodesic_horizon_rdot": {
+      "verified": true
+    },
+    "outer_horizon_derivative": {
+      "verified": true
+    },
+    "null_generator_inaffinity_at_fixed_boundary": {
+      "verified": true
+    },
+    "geometric_horizon_flux_component": {
+      "verified": true
+    },
+    "spherical_wave_operator": {
+      "verified": true
+    },
+    "branch_1_radial_horizon_slope": {
+      "verified": true
+    },
+    "branch_1_temporal_horizon_slope": {
+      "verified": true
+    },
+    "branch_1_horizon_velocity": {
+      "verified": true
+    },
+    "branch_-1_radial_horizon_slope": {
+      "verified": true
+    },
+    "branch_-1_temporal_horizon_slope": {
+      "verified": true
+    },
+    "branch_-1_horizon_velocity": {
+      "verified": true
+    },
+    "crossing_state_full_rank": {
+      "verified": true
+    },
+    "crossing_state_lapse_slope": {
+      "verified": true
+    },
+    "second_crossing_full_rank": {
+      "verified": true
+    },
+    "second_crossing_signed_lapse": {
+      "verified": true
+    },
+    "second_crossing_lapse_slope": {
+      "verified": true
+    },
+    "crossing_state_both_sides": {
+      "verified": true
+    }
+  },
+  "results": {
+    "F": "(1-gamma^2)/(1-gamma^2+a^2+b^2-2*a*b*gamma)",
+    "metric": "-A^2 F dv^2 + 2 A B dv dr + h_AB(dx^A-U^A dv)(dx^B-U^B dv)",
+    "determinant": "-A^2 B^2 det(h)",
+    "stationary_surface_gravity": "A_H F_r,H/(2 B_H) = -sigma A_H gamma_r,H/[B_H(a_H-sigma b_H)^2]",
+    "spherical_expansions": [
+      "A F/(B r)",
+      "-2/(A B r)"
+    ],
+    "horizon_speed": "dr_H/dv = -gamma_v/gamma_r",
+    "geometric_horizon_flux": "G_vv|H = -A_H F_v,H/(B_H r_H)",
+    "crossing_example": {
+      "a": -1,
+      "b": 0,
+      "gamma": "1-rho",
+      "F": "rho*(rho - 2)/(rho**2 - 2*rho - 1)"
+    }
+  }
+}

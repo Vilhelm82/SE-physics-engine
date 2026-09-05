@@ -1,0 +1,19 @@
+benchmark                                                              class       harness receipt                                                       known   candidate verdict
+B1 Landau-Zener diabatic transition                                    ASYMPTOTIC  REPRODUCED(asymp)                                                  0.568084        0.36 BREAKS
+B2 Rabi maximum transfer with detuning                                 EXACT       REPRODUCED                                                         0.671141        0.49 BREAKS
+B3 amplitude damping: population and coherence                         EXACT       REPRODUCED                                                     0.247418,...         0.8 BREAKS
+B4 pure dephasing coherence                                            EXACT       REPRODUCED                                                         0.185788         0.9 BREAKS
+B5 quantum Zeno survival, n projections                                EXACT       REPRODUCED                                                         0.980197        0.02 BREAKS
+B6 3-qubit repetition code logical error                               EXACT       REPRODUCED                                                            0.028         0.1 BREAKS
+B7 Berry phase of spin-1/2 on a cone of half-angle theta               EXACT       REPRODUCED                                                         -1.18875           - UNJUDGED
+B8 Helstrom minimum error, two pure states                             EXACT       REPRODUCED                                                              0.1           - UNJUDGED
+B9 Mandelstam-Tamm minimal orthogonalisation time                      EXACT       REPRODUCED                                                          3.14159           - UNJUDGED
+B10 DFS leakage under symmetry-breaking eps X1 (Will eq. 10)           EXACT       REPRODUCED                                                           0.0025      0.0025 MATCH
+B11 exceptional point: splitting vs propagator                         EXACT       REPRODUCED                                                    0.0282836,...      0.0001 BREAKS
+B12 Will's dark loop (6): orientation and leakage scaling, corners     NUMERICAL   measured sign -1, leak 1.17e-02, exponent 2.30                       -1,...           - UNJUDGED
+B12s Will's dark loop (6): smoothed corners                            NUMERICAL   measured sign -1, leak 1.32e-04, exponent 6.73                       -1,...           - UNJUDGED
+B13 surface-code threshold, circuit-level depolarising noise           OPEN        OPEN                                                                   open           - UNJUDGED
+B14 non-Markovian memory advantage for a logical lifetime              OPEN        OPEN                                                                   open           - UNJUDGED
+
+HARNESS: 11/11 exact/asymptotic benchmarks reproduced from first principles.
+CANDIDATE 'example_divisor_candidate': MATCH=1, BREAKS=7, UNJUDGED=7

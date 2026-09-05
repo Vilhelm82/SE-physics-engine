@@ -1,0 +1,42 @@
+=== q1: Codex's F = (1 - xi^2)/(1 + a^2) is a global identity ===
+  [PASS][  0.2s] q1a delta - (b - a gamma)^2 = (1 - gamma^2)(1 + a^2) identically
+  [PASS][  0.2s] q1b hence F = (1 - xi^2)/(1 + a^2) at EVERY state, not only near the pinch
+  [PASS][  0.3s] q1c and eta = (a^2 + xi^2)/(1 - xi^2) (Codex's tilt identity), everywhere
+=== q2: xi is a ruler projection over the sheet observable ===
+  [PASS][  0.3s] q2a D^2 = delta in seat coordinates (T5c: D^2 = -det G_c)
+  [PASS][  0.7s] q2b so xi^2 = (b - a gamma)^2/D^2 = 4 (b - a gamma)^2/V_spin^2 with V_spin = 2D
+  [PASS][  0.8s] q2c the numerator b - a gamma is EVEN in t and D is ODD in t: xi is odd in t
+=== q3: the deck acts on xi by sign and fixes the base-field observables ===
+  [PASS][  0.8s] q3a tau: D -> -D (T5c 1d), hence xi -> -xi
+  [PASS][  1.5s] q3b tau fixes F, eta, N^2 (all even in xi, i.e. even in t)
+  [PASS][  1.5s] q3c on the horizon xi = (b - a)/d with d = +-(a - b): the two sheets give xi = -1 and xi = +1, and d -> -d exchanges them
+  [PASS][  1.5s] q3d the tau-fixed value xi = 0 is PINCH-1's nu* exactly (Codex's nu(a, 0) = nu*), and xi = +-1 are PINCH-1's nu_H^-+
+=== q4: PINCH-1's approach classes are xi-values ===
+  [PASS][  1.5s] q4a in-horizon (gamma = sigma): xi = -sigma (a - sigma b)/|a - sigma b| = -+1 exactly; the sign is the sheet (sign of d)
+  [PASS][  1.6s] q4b transverse (gamma' != 0): xi^2 -> 0 for all alpha, beta, gamma1 -- the bisector, xi = 0
+  [PASS][  1.7s] q4c tangent-leaving (b0 = 0, eps ~ s^m, W = s^2): xi^2 -> 0, 1/3, 1 for m = 1, 2, 3 (F -> 1, 2/3, 0 as in PINCH-1 p8a)
+=== q5: only a Kummer coordinate can resolve the pinch ===
+  [PASS][  1.7s] q5a F, eta, N^2 and all three components of nu are rational functions of (a, b, gamma): base field K
+  [PASS][  1.7s] q5b delta is irreducible over Q (one factor, multiplicity 1) and quadratic in gamma: not a square, so sqrt(delta) generates a proper degree-2 extension
+  [PASS][  1.8s] q5c xi^2 in K but xi = sqrt(xi^2) is NOT a rational function of (a,b,gamma): xi in K(sqrt delta) \ K
+  [PASS][  1.8s] q5d every base-field observable is 0/0 or constant along the horizon at the pinch and cannot separate xi = +1 from -1 (they are all even in xi)
+=== q6: the branch locus is TANGENT to the horizon at the pinch ===
+  [PASS][  1.8s] q6a at the pinch grad eps = (0, 0, -2 sigma) and grad delta = (0, 0, -2 sigma (1 + b^2)): parallel
+  [PASS][  1.8s] q6b so {delta = 0} and {gamma = sigma} share a tangent plane along the whole pinch line: tangency, not transverse intersection
+  [PASS][  1.8s] q6c second-order: along gamma = sigma(1 - lam s^2), delta = s^2 (1 + 2 lam (1 + b0^2)) + O(s^3): the branch locus is the parabola lam = -1/(2(1+b0^2))
+=== q7: the weighted (1,2) blow-up and its exceptional divisor ===
+  [PASS][  1.9s] q7a xi^2 -> 1/(1 + 2 lam (1 + b0^2)) along the parabolas: xi is a coordinate on the divisor
+  [PASS][  1.9s] q7b F -> 2 lam/(1 + 2 lam (1 + b0^2)) there: lam > 0 is the compact sector (F > 0), lam = 0 the horizon, lam < 0 the interior (F < 0)
+  [PASS][  1.9s] q7c the divisor is the whole line: xi^2 in (0,1) <-> lam > 0; = 1 <-> lam = 0; > 1 <-> -1/(2(1+b0^2)) < lam < 0; -> oo at the branch parabola
+  [PASS][  1.9s] q7d the weights are (1,2): a - sigma b of weight 1, gamma - sigma of weight 2 -- transverse (weight-1 in gamma) gives xi = 0, the point lam = oo
+=== q8: no realisable loop encircles the pinch; the deck does the gluing ===
+  [PASS][  2.0s] q8a on a small circle about the pinch line (fixed b), delta = -2 sigma (1 + b0^2) r sin(phi) + O(r^2): it changes sign
+  [PASS][  2.0s] q8b so half the circle has delta < 0 (unrealisable, T7c4): NO realisable loop encircles the pinch; xi = +1 and xi = -1 cannot be joined by a path in state space
+  [PASS][  2.0s] q8c they are joined by the deck: tau exchanges the ends (q3c) and no path does (q8b); mod tau the divisor is the segment xi in [0, 1] -- computed as: tau-orbit of xi^2 = 1 has one element, tau-orbit of xi = 1 has two
+
+RESULT: 27/27 checks passed in 2.0s
+VERDICT: Codex's xi = (b - a gamma)/d is 2(b - a gamma)/V_spin -- a ruler projection over the SHEET observable.  The deck
+  sends xi -> -xi and fixes every base-field invariant: PINCH-1's two null limits are deck partners and the live seat nu*
+  is the deck-fixed continuation.  Only a Kummer coordinate can resolve the pinch, because the branch locus is TANGENT to
+  the horizon there (not transverse), so contact order governs the readout and the resolution is a weighted (1,2) blow-up
+  with xi the coordinate on its exceptional divisor.  No realisable loop encircles the pinch; the deck glues the ends.

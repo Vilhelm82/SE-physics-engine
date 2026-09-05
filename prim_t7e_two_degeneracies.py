@@ -13,7 +13,7 @@
 #         a != b fixed, gamma -> 1:      eta -> infinity,  N -> 0   (and that endpoint is NOT on B_form)
 #   e5  0 < N <= 1 on the domain |gamma| < 1: the LAPSE cannot blow up; cosh lambda, lambda, eta can.
 #   e6  the horizon is the divergent-tilt limit eta -> inf (N -> 0), reached in D_plane OFF the branch
-#       curve; identifying it with an approach to B_form needs a further state-path relation.  The
+#       curve [GENERICALLY -- fails on the codim-2 pinch, e6b' and PINCH-1, corrected 2026-09-05]; identifying it with an approach to B_form needs a further state-path relation.  The
 #       pinning fixes eta(r), not gamma(r), a(r), b(r) separately.
 # EXTENSION (mine, to be checked, not assumed):
 #   e7  T7c's branch locus in seat coordinates is {sin t = 0} x R^2 -- two-dimensional.  B_form is
@@ -80,8 +80,14 @@ r, rs = sp.symbols('r r_s', positive=True)
 eta_pinned = rs/(r - rs)
 check("e6a the pinning eta = r_s/(r - r_s) -> infinity as r -> r_s: the horizon is the divergent-tilt limit, N -> 0",
       sp.limit(eta_pinned, r, rs, '+') == sp.oo and sp.limit(1/sp.sqrt(1 + eta_pinned), r, rs, '+') == 0)
-check("e6b eta -> infinity requires |gamma| -> 1 with a != b gamma (e4c), i.e. D_plane OFF B_form; on B_form itself N stays finite (e4b)",
-      True if (CH[6] and CH[8]) else False)
+# e6b as first written (2026-09-04) was `True if (CH[6] and CH[8]) else False` -- a bare True in a coat (rule 12), and it
+# overclaimed: Codex's path a = s, b = 0, gamma = 1 - s^4 has eta -> oo with endpoint (0,0,1) ON B_form.  Corrected 2026-09-05:
+# the claim holds off the codimension-2 PINCH {|gamma| = 1, a = b gamma} and fails on it.  See PINCH-1 (pinch1_horizon_branch_meet.py).
+W_ = sp.expand(a**2 - 2*a*b*gam + b**2)
+check("e6b GENERIC: at a horizon point off B_form (a=2, b=1, gamma -> 1) eta -> oo with -det G = 1 > 0 -- D_plane OFF B_form; on B_form itself N is 0/0 (e4)",
+      sp.limit(eta.subs({a: 2, b: 1}), gam, 1, '-') == sp.oo and z((-G.det()).subs({a: 2, b: 1, gam: 1}) - 1))
+check("e6b' EXCEPTION (codim 2): on the pinch a = b, gamma = 1 both the numerator W and 1 - gamma^2 vanish, eta is 0/0, and eta -> oo IS reachable there (a=s, b=0, gamma=1-s^4): 'requires a != b gamma' is false on the pinch",
+      z(W_.subs({a: b, gam: 1})) and sp.limit(eta.subs({a: sp.Symbol('s', positive=True), b: 0, gam: 1 - sp.Symbol('s', positive=True)**4}), sp.Symbol('s', positive=True), 0, '+') == sp.oo)
 check("e6c the pinning constrains ONE function of (gamma, a, b); the three separately are a further state-path law -- not in T7",
       len(sp.solve(sp.Eq(eta, eta_pinned), a)) == 2)   # for fixed gamma, b, r there is a one-parameter family: underdetermined
 

@@ -15,16 +15,17 @@
   [PASS][  0.1s] e5b hence 0 < N^2 = 1/(1 + eta) <= 1 on |gamma| < 1: the LAPSE is bounded; cosh lambda = sqrt(1 + eta) is what diverges
 === e6: the horizon is eta -> infinity, not the branch curve ===
   [PASS][  0.1s] e6a the pinning eta = r_s/(r - r_s) -> infinity as r -> r_s: the horizon is the divergent-tilt limit, N -> 0
-  [PASS][  0.1s] e6b eta -> infinity requires |gamma| -> 1 with a != b gamma (e4c), i.e. D_plane OFF B_form; on B_form itself N stays finite (e4b)
+  [PASS][  0.1s] e6b GENERIC: at a horizon point off B_form (a=2, b=1, gamma -> 1) eta -> oo with -det G = 1 > 0 -- D_plane OFF B_form; on B_form itself N is 0/0 (e4)
+  [PASS][  0.2s] e6b' EXCEPTION (codim 2): on the pinch a = b, gamma = 1 both the numerator W and 1 - gamma^2 vanish, eta is 0/0, and eta -> oo IS reachable there (a=s, b=0, gamma=1-s^4): 'requires a != b gamma' is false on the pinch
   [PASS][  0.2s] e6c the pinning constrains ONE function of (gamma, a, b); the three separately are a further state-path law -- not in T7
 === e7: EXTENSION -- T7c's locus is bigger than B_form ===
-  [PASS][  0.2s] e7a at t = 0: gamma = cosh(l1 - l2) >= 1, with = 1 iff l1 = l2
+  [PASS][  0.3s] e7a at t = 0: gamma = cosh(l1 - l2) >= 1, with = 1 iff l1 = l2
   [PASS][  0.3s] e7b at t = 0 with l1 != l2 (|gamma| > 1): det G = 0 (T7c) while a != b gamma -- NOT on B_form
-  [PASS][  0.4s] e7c there eta = -1 exactly: the second branch of det G = 0 is {|gamma| > 1, eta = -1}
-  [PASS][  0.4s] e7d for |gamma| < 1: numerator = (a - b gamma)^2 + b^2(1 - gamma^2) >= 0, so eta >= 0 and eta = -1 is impossible; the extension lives ONLY in |gamma| > 1 (rulers' span Lorentzian)
-  [PASS][  0.4s] e7e so: det G = 0 iff [|gamma| = 1 and a = b gamma] OR [|gamma| > 1 and eta = -1]; Will's B_form is the first piece, and equals T7c's locus restricted to |gamma| <= 1
+  [PASS][  0.5s] e7c there eta = -1 exactly: the second branch of det G = 0 is {|gamma| > 1, eta = -1}
+  [PASS][  0.5s] e7d for |gamma| < 1: numerator = (a - b gamma)^2 + b^2(1 - gamma^2) >= 0, so eta >= 0 and eta = -1 is impossible; the extension lives ONLY in |gamma| > 1 (rulers' span Lorentzian)
+  [PASS][  0.5s] e7e so: det G = 0 iff [|gamma| = 1 and a = b gamma] OR [|gamma| > 1 and eta = -1]; Will's B_form is the first piece, and equals T7c's locus restricted to |gamma| <= 1
 
-RESULT: 19/19 checks passed in 0.4s
+RESULT: 20/20 checks passed in 0.5s
 VERDICT: Will's two-set distinction, the 0/0 path-dependence, the bounded lapse and the horizon-as-eta->inf all hold.
   Extension: T7c's locus has a second piece in |gamma| > 1 (eta = -1) where the lapse is undefined; B_form is the
   |gamma| <= 1 part.  The horizon (eta -> inf, N -> 0) is in D_plane off B_form; the branch curve has finite N.

@@ -19,7 +19,9 @@ This initial backfill covers sources cited in the current horizon, comparison an
 - [Minimum predictive state](/home/williaml/seated-root/docs/2026-09-05-cella-predictive-state.md): exact polynomial dynamic-equivalence construction, response/deck descent and material-memory quotients. For the existing constant resolved law, fixed coefficients and both original effort channels, the lapse requires precisely `(xi,d)` at fixed `a`; an explicit finite derivative reconstruction proves necessity through the pinch. The full constant reciprocal passive family includes a rank-one case and a valid folded quotient. Restricted inputs and unknown material constants have separately proved counts.
 - [Response on branched, resolved state spaces](/home/williaml/seated-root/docs/2026-09-05-response-on-branched-resolved-state-spaces.md): complete finite-dimensional passive linear relations and smooth graph classes, including changes of effort-domain rank; exact power transformation, singular lifting, mixed one-sided/two-sided divisor laws, network elimination and predictive descent. HG-1's ruler swap extends smoothly through the retained pinch and gives a new fixed-stratum obstruction under swap-invariant response and drive.
 
-These mathematical extensions are usable now. The remaining prediction target is the material/state law that selects the coframe, cut evolution and response coefficients. EXT-006 is deferred. Standard differential geometry, passivity, smooth division, Taylor theory and local existence/integrability tools below are retained.
+- [Quantum application extension](/home/williaml/seated-root/docs/2026-09-05-quantum-prediction-targets.md): full O(m−2) dark-space holonomy of Cella's real fixed-spectrum rank-two coupling family, an explicit orientation-reversing loop, and an occupation-dependent spin-spectrum continuation. Critical quantum memory and operator-response lifting are the next quantum theorem targets. EXT-010–015 record the retained quantum realization and comparison literature.
+
+These mathematical extensions are usable now. The remaining Seated Root prediction target is the material/state law that selects the coframe, cut evolution and response coefficients. The quantum applications declare their own Hamiltonians and generators. EXT-006 is deferred. Standard differential geometry, passivity, smooth division, Taylor theory and local existence/integrability tools below are retained.
 
 ## EXT-001 — Gaussian null coordinates and horizon-adapted metrics
 
@@ -112,6 +114,54 @@ These mathematical extensions are usable now. The remaining prediction target is
 - **Native extension:** response and state-rate transport obey the selected arrows and their composition, including effort transformation, smooth extension through critical states and exact fixed-input predictive reduction. HG-1 supplies a concrete frame action, independently of any radical presentation. Its resolved extension is BR-9.
 - **Status:** STANDARD ALGEBRAIC BACKGROUND RETAINED WITH CELLA PROVENANCE; RESPONSE COMPATIBILITY AND NATIVE RESOLVED ACTION CONSTRUCTED. No Kummer rederivation ceremony scheduled.
 
+## EXT-010 — Quantum realization and completely positive reduction
+
+- **Sources read:** [Exact Model Reduction for Continuous-Time Open Quantum Dynamics](https://arxiv.org/html/2412.05102v3), reduction sections; [Model Reduction for Controlled Quantum Markov Dynamics](https://arxiv.org/html/2510.25546v1), observable closure and Proposition 1; [Approximate Reduced Lindblad Dynamics via Algebraic and Adiabatic Methods](https://arxiv.org/html/2603.11982v1), Lemma 1, Theorems 1–2 and spin-chain example.
+- **Retained input:** finite-dimensional Hilbert-space quantum mechanics, density operators, Kraus/CPTP maps, GKSL generators and the adiabatic quantum bridge in EXT-012. The cited reduction papers supply observable-dependent operator closure and physical reduced quantum dynamics, including controlled generators. These quantum structures are declared realizations of Cella mathematics; classical passivity alone does not derive them.
+- **Exact use and hypotheses:** [quantum targets](2026-09-05-quantum-prediction-targets.md), equations (1)–(2), (9)–(10). The explicit finite-level examples are verified directly. The broader reduced models require the cited algebra, invariant-subspace, control and spectral-separation hypotheses. All-control closure already appears in the 2025 controlled paper and is not claimed as a new target.
+- **Native connection and next construction:** extend predictive closure and BR-3/7 across parameter-dependent rank changes, retaining CPTP evolution and a uniform finite-time error guarantee. The 2026 reference-centre construction is a baseline to improve, not presumed to fail whenever any gap closes.
+- **Status:** STANDARD QUANTUM REALIZATION AND REDUCTION TOOLS RETAINED; UNIFORM REDUCTION ACROSS CHANGING STRATA OPEN. No ceremonial rederivation scheduled.
+
+## EXT-011 — Operational quantum memory and physical memory dimension
+
+- **Sources read:** [Operational Markov condition](https://arxiv.org/abs/1801.09811), primary paper's causal-break conditions; [Quantum Markov Order](https://arxiv.org/abs/1805.11341), abstract; [What can unitary sequences tell us about multi-time physics?](https://quantum-journal.org/papers/q-2025-04-08-1695/), abstract and opening; [memory bounds for quantum stochastic generation](https://arxiv.org/abs/2412.12812), abstract; [many-body influence functionals and temporal entanglement](https://arxiv.org/abs/2103.13741), abstract.
+- **Retained content and exact use:** process probabilities depend on the declared interventions; quantum Markov order is instrument-dependent; physical quantum memory dimension differs from linear observable dimension. Influence-functional temporal entanglement supplies a tensor-network comparison. Used to formulate the minimum-memory target in quantum targets section 3; no abstract-only bound is used as a proved premise in the probes.
+- **Hypotheses:** specified preparations, instruments, readouts, horizon and approximation error; physical encoding and memory update maps. Results for unrestricted instruments, restricted unitary controls and autonomous stochastic generators are not interchanged.
+- **Native extension target:** minimum or certified bounds on retained quantum memory, uniformly through singular slow-mode limits. Reuse the existing future-equivalence construction while imposing physical quantum realization.
+- **Status:** OPERATIONAL DEFINITIONS AND COMPARISON TOOLS RETAINED; QUANTITATIVE STRATIFIED MEMORY TARGET OPEN.
+
+## EXT-012 — Adiabatic dark-space transport and holonomy
+
+- **Source read:** [High-dimensional non-Abelian holonomy in integrated photonics, Chen et al. (2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC12006547/), full primary paper, especially its dark-space geometry and real coupling construction. The Nature page did not open; the PMC full text did.
+- **Retained quantum bridge:** adiabatic transport in a smooth isolated degenerate band is governed by its projector connection. Real Hamiltonians give real orthogonal geometric transport. Finite duration requires an adiabatic error estimate; an arbitrary perturbation need not preserve reality, degeneracy or the gap. Existing SO(k) dark-space gates and geometric phases are not claimed as inventions.
+- **Native source read first:** [REALFIBER O1–O7](</home/williaml/Cella Framework/Papers_Library/02_theorems_and_lemmas/geometric_fault_localization_and_decomposition/REALFIBER_THEOREM.md>), including its active-partition changes through zero-amplitude strata.
+- **Completed mathematical extension:** quantum targets equations (3)–(6) prove that the full real fixed-spectrum family has dark holonomy O(m−2), for m≥3. Coordinate-plane rotations and an explicit three-arc reflection generate the group. This proof is for the declared full family and allowed paths; historical novelty is not established by the comparison search.
+- **Physical continuation:** a spectator makes the reflection a measurable relative π phase. Derive finite-duration and allowed-perturbation bounds, then characterize constrained coupling graphs. Equations (7)–(8) calculate the independent many-body occupation test directly from a four-spin Hamiltonian.
+- **Status:** FULL NATIVE HOLONOMY GROUP AND IDEAL LOOP CONSTRUCTED; STANDARD ADIABATIC BRIDGE RETAINED; PHYSICAL ERROR BOUNDS AND LITERATURE ORIGINALITY OPEN.
+
+## EXT-013 — Quantum metastability and critical elimination
+
+- **Sources read:** [Towards a theory of metastability in open quantum dynamics](https://arxiv.org/abs/1512.05801), abstract; the 2026 approximate reduction paper in EXT-010, including its spectral-gap estimates.
+- **Retained comparison:** long-lived quantum behavior can be represented by slow Liouvillian modes, including classical and coherent sectors. These results provide the benchmark for critical-state retention.
+- **Exact native use:** BR-7 motivates retaining a mode whose elimination becomes singular. Quantum targets equation (1) derives the exact memory kernel by linear elimination; equation (9) supplies an independently checked CPTP crossover with scaled time r²T. Equation (10) gives an intrinsic positive escape operator to which BR-4's divisor law applies.
+- **Hypotheses and target:** a slow discarded mode affects the selected channel only through its coupling residue. State the preparation, control, time, coupling and system-size limits. Derive a uniform physical reduced dynamics or state-retention lower bound for competing closing gaps; a finite-cluster crossover alone is not a thermodynamic critical exponent.
+- **Status:** METASTABILITY BACKGROUND RETAINED; EXACT CALIBRATION AND QUANTUM DIVISOR BRIDGE CONSTRUCTED; UNIFORM MANY-BODY TARGET OPEN.
+
+## EXT-014 — Quantum operator spreading, locality and code detection
+
+- **Sources read:** [Operator Spreading in Random Unitary Circuits](https://arxiv.org/abs/1705.08975), abstract and primary PDF's operator-response setup; [Dynamics of entanglement and transport in 1D systems with quenched randomness](https://arxiv.org/abs/1705.10364), abstract; [Lieb–Robinson bounds and generation of correlations and topological quantum order](https://arxiv.org/abs/quant-ph/0603121), abstract; [Operator spreading in random circuits with orthogonal or symplectic symmetry](https://arxiv.org/abs/2606.03956), June 2026 preprint abstract.
+- **Retained content:** squared commutators diagnose operator spreading; weak links and symmetry-constrained circuit ensembles already have nontrivial growth laws. Locality bounds have tails. The code-detection condition PEP proportional to P below code distance is retained standard quantum-code background, stated as a hypothesis and used directly.
+- **Native construction:** quantum targets equations (11)–(13) define a positive commutator-response matrix, its actual probe congruence and controlled detection order. The locality/code bound follows term by term from a nested-commutator support estimate. The CNOT probe verifies that operator growth can occur with a nonsingular full-state Jacobian.
+- **Extension target and hypotheses:** derive full response jets, cancellations and finite-time recovery bounds for specified local controls and preparations. Apply BR-3 to the actual singular probe map, not an assumed singular full quantum evolution. The 2026 orthogonal-ensemble velocity result is a comparison, not a theorem transferred to the native holonomy gates without matching its gate-distribution assumptions.
+- **Status:** STANDARD SCRAMBLING/LOCALITY BASELINES RETAINED; RESPONSE BRIDGE CONSTRUCTED; FAMILY-SPECIFIC ONSET AND RECOVERY PREDICTIONS OPEN.
+
+## EXT-015 — Quantum sensing resource comparison
+
+- **Source read:** [Non-Hermitian Quantum Sensing: Fundamental Limits and Non-Reciprocal Approaches, Lau–Clerk](https://arxiv.org/abs/1805.11760), abstract.
+- **Use:** comparison only, in quantum targets section 5. Noise and resources must accompany an operational sensing claim; a singular spectral coordinate alone is not a precision prediction. Regularity of a finite-time matrix exponential is retained elementary linear/analytic background, not attributed to a new theorem here.
+- **Native continuation:** consider exceptional-point sensing if a resolved response calculation yields a new precision bound or protocol under a specified noise model. No such sensing model or bound is claimed in this evaluation.
+- **Status:** COMPARISON RECORDED; EXTERNAL SENSING ROUTE DEFERRED.
+
 ## Search receipts
 
 ### SR-001 — Horizon and comparison work, backfilled on 2026-09-05
@@ -138,6 +188,41 @@ No online search or new external source was used. The live Cella DAG was queried
 ### General response extension receipt — 2026-09-05
 
 No online research or new external source was used. Cella DAG searches covered monotone response, one-sided boundaries, Schur reduction, selected quotients and weighted jets. The backing Kummer, incidence, special-fibre and selected-quotient sources, DIS constitution/storage programme and existing constitutive/predictive proofs supplied the inputs. HG-1 was read from the live project and its resolved action was derived in BR-9. EXT-004/007/008 retain the response, local smooth and predictive tools; EXT-009 makes the inherited Kummer dependency explicit. The [manuscript](/home/williaml/seated-root/docs/2026-09-05-response-on-branched-resolved-state-spaces.md), [runner](/home/williaml/seated-root/branched_resolved_response.py) and [receipt](/home/williaml/seated-root/docs/branched-resolved-response-checks.json) separate general proofs from exact computational certificates and remaining physical choices.
+
+### SR-003 — Quantum opportunity evaluation, 2026-09-05
+
+Native inspection preceded adoption: live Cella DAG queries covered quantum, entanglement, memory, spectral, rank jump and holonomy. Backing material read included REALFIBER O1–O7, the bilinear coupling graph theorem, the Kummer criterion and prior selected-quotient/incidence sources, DIS chapters 5/10/12 and the existing response/predictive extensions. The DIS Hamiltonian remains a programme input; the bilinear graph result was not adopted as an entanglement theorem. Search misses were not treated as corpus-wide absence.
+
+Exact online queries, in search order (batch 2 restricted to arxiv.org):
+
+- `quantum model reduction observable algebra exact reduced dynamics completely positive Grigoletto Ticozzi`
+- `process tensor minimum quantum memory dimension temporal entanglement many body influence matrix`
+- `dissipative dark states metastability closing Liouvillian gap adiabatic elimination degenerate steady states`
+- `quantum error correction code distance local observable nested commutators operator spreading`
+- `process tensor quantum memory dimension instrument specific Markov order`
+- `influence matrix temporal entanglement many body Lerose Sonner Abanin`
+- `Liouvillian exceptional points quantum sensing no advantage Fisher information finite time`
+- `Towards a theory of metastability in open quantum dynamics adiabatic elimination complete positivity`
+- `"Operational Markov condition for quantum processes"`
+- `"Quantum Markov Order" Taranto Pollock`
+- `"exceptional" "sensing" "Lau" "Clerk"`
+- `"Towards a theory of metastability in open quantum dynamics"`
+- `"Non-Hermitian quantum sensing"`
+- `"Lieb-Robinson Bounds and the Generation of Correlations and Topological Quantum Order"`
+- `"quantum" "model reduction" "controlled" "exact" 2026`
+- `"quantum" "model reduction" "rank" "gap closing"`
+- `"quantum memory" "minimal" "dimension" process tensor 2025 2026`
+- `"Model Reduction for Controlled Quantum Markov Dynamics"`
+- `"Quantum generation of stochastic processes" "spectral invariants"`
+- `"What can unitary sequences tell us about multi-time physics"`
+- `"holonomic" "orthogonal" "reflection" quantum real Hamiltonian`
+- `"dark state" "Berry phase" "pi" "three" couplings`
+- `"holonomy" "zero-diagonal" "rank" quantum`
+- `"STIRAP" "closed loop" "geometric phase"`
+- `"operator spreading" "weak links" quantum`
+- `"Operator Spreading in Random Unitary Circuits"`
+
+Sources actually read, read depth, adoption and hypotheses are recorded in EXT-010–015. Abstract-only comparisons are identified there. Other returned candidates were not adopted, and no external code was copied. The [evaluation](2026-09-05-quantum-prediction-targets.md), [exact runner](../quantum_prediction_probes.py) and [receipt](quantum-prediction-probes.json) distinguish derived native extensions, standard quantum realizations and prospective predictions.
 
 ## Maintenance rule
 

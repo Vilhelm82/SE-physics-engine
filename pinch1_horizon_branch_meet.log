@@ -1,0 +1,49 @@
+=== p1: delta = eps + W; the two exclusions are one ===
+  [PASS][  0.0s] p1a delta = eps + W identically
+  [PASS][  0.1s] p1b on gamma = +1: delta = W = (a - sigma b)^2
+  [PASS][  0.1s] p1b on gamma = -1: delta = W = (a - sigma b)^2
+  [PASS][  0.1s] p1c so on the horizon, {delta = 0} = {W = 0} = {a = sigma b}: Codex's 'full rank loss' and 'zero tilt' coincide
+=== p2: the pinch is codimension 2 ===
+  [PASS][  0.1s] p2a {eps = 0} cap {delta = 0} = {gamma = +-1, a = gamma b}: solve returns exactly the two pinch lines
+  [PASS][  0.1s] p2b seat coords: at t = 0, gamma = cosh(l1 - l2) >= 1 with equality iff l1 = l2  -> P_+ = {t = 0, l1 = l2}
+  [PASS][  0.1s] p2c seat coords: at t = pi, gamma = -cosh(l1 + l2) <= -1 with equality iff l1 = -l2 -> P_- = {t = pi, l1 = -l2}
+  [PASS][  0.1s] p2d on P_+ : a = b (l1 = l2) and on P_-: a = -b (l1 = -l2): consistent with a = sigma b
+=== p3: at the pinch the frame collapses to two lines; n0 -> 0 ===
+  [PASS][  0.1s] p3a sigma = +1: rank G = 2 and ker G = span(0, 1, -sigma), i.e. the relation h - sigma g
+  [PASS][  0.1s] p3a sigma = -1: rank G = 2 and ker G = span(0, 1, -sigma), i.e. the relation h - sigma g
+  [PASS][  0.2s] p3b explicit horizon states: q(c,c) = -1, q(h,h) = q(g,g) = 1, q(c,h) = a, q(c,g) = b, q(h,g) = sigma, for both sheets
+  [PASS][  0.2s] p3c n0 = h - sigma g vanishes LINEARLY in s = a - sigma b (both sheets): h = sigma g exactly at the pinch
+  [PASS][  0.2s] p3d and n0 is null all along the horizon (Will's 'a whole line with zero length')
+=== p4: every seat invariant is 0/0 at the pinch ===
+  [PASS][  0.2s] p4a eps, W, delta all vanish at P_+
+  [PASS][  0.2s] p4b so F = eps/delta, eta = W/eps, N^2 are 0/0 there
+  [PASS][  0.2s] p4c and the NUMERATOR of nu, delta*nu = (-eps, a - b gamma, b - a gamma), vanishes too: nu is 0/0 as a vector
+=== p5: TRANSVERSE approach -- the 0/0 is removable, uniquely ===
+  [PASS][  0.4s] p5a F -> 1/(1 + b0^2) = sech^2(depth) along EVERY path with gamma' != 0, for all alpha, beta, gamma1, gamma2
+  [PASS][  0.4s] p5b eta -> b0^2 = sinh^2(depth): the TILT equals the DEPTH at the pinch (T7d: sinh^2 lambda = eta -> lambda = l)
+  [PASS][  0.6s] p5c nu's frame components DO depend on the tangent, but g = sigma h there, and the VECTOR nu* = vec_c c + vec_h h does not
+  [PASS][  0.6s] p5d nu* = (-c + a h)/(1 + a^2) with a = sigma b0
+  [PASS][  0.6s] p5e nu* is TIMELIKE with q(nu*,nu*) = -sech^2 l, and q(nu*,c) = 1, q(nu*,h) = 0: it is a seat's normal
+=== p6: IN-HORIZON approach -- two null limits, one per sheet ===
+  [PASS][  0.6s] p6a on the horizon F == 0 and nu = n0/(a - sigma b) (frame comps (0, 1, -sigma)/(a - sigma b): divergent)
+  [PASS][  0.6s] p6b but the VECTOR nu converges: nu_H^+ = (b, -1, -sqrt(1+b^2))/sqrt(1+b^2), nu_H^- with the middle sign flipped
+  [PASS][  0.6s] p6c both limits are NULL
+  [PASS][  0.6s] p6d they differ by the SHEET: the sign of the y-component is the orientation of the frame (sign of det[c,h,g])
+=== p7: the seat's normal at the pinch bisects the two sheets ===
+  [PASS][  0.6s] p7a nu* = (nu_H^+ + nu_H^-)/2 EXACTLY
+  [PASS][  0.6s] p7b and nu_H^+ - nu_H^- is spacelike, orthogonal to nu*: the two sheets are split along a spacelike direction
+=== p8: TANGENT-LEAVING approach -- the order-pair decides ===
+  [PASS][  0.6s] p8a same tangent (1,0,0) at (0,0,1); eps ~ s^m, W = s^2; F -> 1, 2/3, 0 for m = 1, 2, 3
+  [PASS][  0.6s] p8b at matched order, F -> lam/(lam + 1): every value in (0,1) is attainable by the coefficient ratio
+  [PASS][  0.6s] p8c the transverse value sech^2 l = 1 at b0 = 0 is the m = 1 member: class p5 is the contact-order-1 stratum of class p8
+=== p9: the kill check, both halves ===
+  [PASS][  0.6s] p9a 'the tangent decides' -- TRUE in class p5 (gamma' != 0), FALSE in class p8 (same tangent, three limits)
+  [PASS][  0.6s] p9b 'the order-pair decides' -- TRUE in class p8, VACUOUS in class p5 (order-pair is (1, >=1) for every transverse path)
+  [PASS][  0.6s] p9c the invariant is the CONTACT ORDER with the horizon, then the order-pair within a fixed contact order
+
+RESULT: 33/33 checks passed in 0.6s
+VERDICT: The pinch P_sigma = {gamma = sigma, a = sigma b} is codim 2, the frame collapses to two lines there (h = sigma g,
+  n0 -> 0), and every seat invariant is 0/0.  TRANSVERSALLY the 0/0 is removable: F -> sech^2 l, tilt = depth, and the
+  normal converges to ONE timelike vector nu* -- a seat exists at the pinch.  ALONG the horizon nu converges to one of
+  TWO null vectors, one per sheet, and nu* is their bisector.  Tangentially-leaving approaches are governed by the
+  order-pair and reach every value in [0,1].  The horizon has a hole at the pinch through which the seat survives.

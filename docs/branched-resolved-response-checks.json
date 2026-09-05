@@ -1,0 +1,536 @@
+{
+  "scope": "Finite-dimensional response relations, smooth resolved graphs, boundary divisors and controlled evolution",
+  "proof": "docs/2026-09-05-response-on-branched-resolved-state-spaces.md",
+  "check_count": 163,
+  "checks": {
+    "graph_positive_leading_minor_1": {
+      "verified": true
+    },
+    "graph_positive_leading_minor_2": {
+      "verified": true
+    },
+    "graph_positive_leading_minor_3": {
+      "verified": true
+    },
+    "proper_domain_restriction": {
+      "verified": true
+    },
+    "proper_vertical_annihilator": {
+      "verified": true
+    },
+    "proper_relation_dimension": {
+      "verified": true
+    },
+    "proper_power_matrix": {
+      "verified": true
+    },
+    "open_is_zero_flow": {
+      "verified": true
+    },
+    "short_is_zero_effort": {
+      "verified": true
+    },
+    "scattering_round_trip_graph": {
+      "verified": true
+    },
+    "scattering_power_identity_graph": {
+      "verified": true
+    },
+    "maximal_dimension_graph_rectangular_full": {
+      "verified": true
+    },
+    "maximal_dimension_graph_rectangular_rank_one": {
+      "verified": true
+    },
+    "maximal_dimension_graph_square_singular": {
+      "verified": true
+    },
+    "maximal_dimension_graph_zero": {
+      "verified": true
+    },
+    "composition_graph": {
+      "verified": true
+    },
+    "identity_graph": {
+      "verified": true
+    },
+    "scattering_round_trip_proper": {
+      "verified": true
+    },
+    "scattering_power_identity_proper": {
+      "verified": true
+    },
+    "maximal_dimension_proper_rectangular_full": {
+      "verified": true
+    },
+    "maximal_dimension_proper_rectangular_rank_one": {
+      "verified": true
+    },
+    "maximal_dimension_proper_square_singular": {
+      "verified": true
+    },
+    "maximal_dimension_proper_zero": {
+      "verified": true
+    },
+    "composition_proper": {
+      "verified": true
+    },
+    "identity_proper": {
+      "verified": true
+    },
+    "scattering_round_trip_open": {
+      "verified": true
+    },
+    "scattering_power_identity_open": {
+      "verified": true
+    },
+    "maximal_dimension_open_rectangular_full": {
+      "verified": true
+    },
+    "maximal_dimension_open_rectangular_rank_one": {
+      "verified": true
+    },
+    "maximal_dimension_open_square_singular": {
+      "verified": true
+    },
+    "maximal_dimension_open_zero": {
+      "verified": true
+    },
+    "composition_open": {
+      "verified": true
+    },
+    "identity_open": {
+      "verified": true
+    },
+    "scattering_round_trip_short": {
+      "verified": true
+    },
+    "scattering_power_identity_short": {
+      "verified": true
+    },
+    "maximal_dimension_short_rectangular_full": {
+      "verified": true
+    },
+    "maximal_dimension_short_rectangular_rank_one": {
+      "verified": true
+    },
+    "maximal_dimension_short_square_singular": {
+      "verified": true
+    },
+    "maximal_dimension_short_zero": {
+      "verified": true
+    },
+    "composition_short": {
+      "verified": true
+    },
+    "identity_short": {
+      "verified": true
+    },
+    "graph_push_is_congruence": {
+      "verified": true
+    },
+    "port_inverse_recovers_proper_relation": {
+      "verified": true
+    },
+    "rectangular_transform_preserves_power": {
+      "verified": true
+    },
+    "direct_sum_maximal_dimension": {
+      "verified": true
+    },
+    "direct_sum_power_matrix": {
+      "verified": true
+    },
+    "open_scattering_is_identity": {
+      "verified": true
+    },
+    "short_scattering_is_negative_identity": {
+      "verified": true
+    },
+    "proper_effort_free_flow_changes_state_for_identity_anchor": {
+      "verified": true
+    },
+    "proper_effort_anchor_removes_all_free_flow": {
+      "verified": true
+    },
+    "smooth_constraint_family_contraction_defect": {
+      "verified": true
+    },
+    "smooth_constraint_family_basis": {
+      "verified": true
+    },
+    "smooth_constraint_family_generic_graph": {
+      "verified": true
+    },
+    "smooth_constraint_family_special_short": {
+      "verified": true
+    },
+    "smooth_constraint_family_graph_does_not_extend": {
+      "verified": true
+    },
+    "mixed_minor_lift_determinant": {
+      "verified": true
+    },
+    "mixed_minor_lift_numerator": {
+      "verified": true
+    },
+    "mixed_minor_lift_reconstructs": {
+      "verified": true
+    },
+    "mixed_minor_drift_numerator": {
+      "verified": true
+    },
+    "mixed_minor_drift_reconstructs": {
+      "verified": true
+    },
+    "mixed_minor_polynomial_certificate": {
+      "verified": true
+    },
+    "constant_lower_response_not_polynomial": {
+      "verified": true
+    },
+    "constant_lower_response_has_order_two_pole": {
+      "verified": true
+    },
+    "weighted_general_factor_lift": {
+      "verified": true
+    },
+    "weighted_adapted_divisors": {
+      "verified": true
+    },
+    "iterated_lift_matches_composite": {
+      "verified": true
+    },
+    "root_order_criterion_k2_m1": {
+      "verified": true
+    },
+    "root_order_criterion_k3_m2": {
+      "verified": true
+    },
+    "root_order_criterion_k4_m2": {
+      "verified": true
+    },
+    "root_order_criterion_k3_m1": {
+      "verified": true
+    },
+    "root_order_criterion_k4_m1": {
+      "verified": true
+    },
+    "one_sided_linear_law_square_root_lift": {
+      "verified": true
+    },
+    "root_coefficient_parity_1": {
+      "verified": true
+    },
+    "root_response_even_1": {
+      "verified": true
+    },
+    "root_coefficient_parity_2": {
+      "verified": true
+    },
+    "root_response_even_2": {
+      "verified": true
+    },
+    "root_descent_round_trip": {
+      "verified": true
+    },
+    "two_sided_face_row_0": {
+      "verified": true
+    },
+    "one_sided_shared_face_row_0": {
+      "verified": true
+    },
+    "two_sided_face_row_1": {
+      "verified": true
+    },
+    "one_sided_shared_face_row_1": {
+      "verified": true
+    },
+    "second_boundary_face_row": {
+      "verified": true
+    },
+    "shared_face_diagonal_order": {
+      "verified": true
+    },
+    "shared_face_off_diagonal_order": {
+      "verified": true
+    },
+    "single_row_boundary_off_diagonal_order": {
+      "verified": true
+    },
+    "mixed_boundary_global_sum_of_squares": {
+      "verified": true
+    },
+    "mixed_skew_is_skew": {
+      "verified": true
+    },
+    "mixed_skew_has_zero_power": {
+      "verified": true
+    },
+    "common_face_skew_has_single_power": {
+      "verified": true
+    },
+    "skew_constraint_row_0_f": {
+      "verified": true
+    },
+    "skew_constraint_row_0_r1": {
+      "verified": true
+    },
+    "skew_constraint_row_1_f": {
+      "verified": true
+    },
+    "skew_constraint_row_1_r1": {
+      "verified": true
+    },
+    "skew_constraint_row_2_r2": {
+      "verified": true
+    },
+    "positive_root_coefficient_without_parity_rejects_descent": {
+      "verified": true
+    },
+    "one_sided_first_order_is_not_two_sided_passive": {
+      "verified": true
+    },
+    "nonlinear_radial_integration": {
+      "verified": true
+    },
+    "nonlinear_boundary_output": {
+      "verified": true
+    },
+    "nonlinear_positive_jacobian": {
+      "verified": true
+    },
+    "nonlinear_row_curl": {
+      "verified": true
+    },
+    "nonintegrable_positive_symmetric_part": {
+      "verified": true
+    },
+    "nonintegrable_nonzero_row_curl": {
+      "verified": true
+    },
+    "nonlinear_derivative_congruence": {
+      "verified": true
+    },
+    "network_positive_leading_minor_1": {
+      "verified": true
+    },
+    "network_positive_leading_minor_2": {
+      "verified": true
+    },
+    "network_positive_leading_minor_3": {
+      "verified": true
+    },
+    "invertible_elimination_is_schur": {
+      "verified": true
+    },
+    "zero_flow_elimination_dual_transform_construction": {
+      "verified": true
+    },
+    "schur_passive": {
+      "verified": true
+    },
+    "singular_generalized_inverse_identity": {
+      "verified": true
+    },
+    "singular_effective_independent_of_inverse": {
+      "verified": true
+    },
+    "singular_safe_elimination_graph": {
+      "verified": true
+    },
+    "singular_internal_kernel_invisible": {
+      "verified": true
+    },
+    "singular_constraint_retains_short_relation": {
+      "verified": true
+    },
+    "singular_constraint_passivity": {
+      "verified": true
+    },
+    "singular_constraint_range_condition_fails": {
+      "verified": true
+    },
+    "specialization_family_psd_factor": {
+      "verified": true
+    },
+    "generic_elimination_is_open": {
+      "verified": true
+    },
+    "special_fibre_elimination_is_unit": {
+      "verified": true
+    },
+    "elimination_and_specialization_differ": {
+      "verified": true
+    },
+    "divergent_internal_solution_zero_flow": {
+      "verified": true
+    },
+    "internal_solution_has_a_pole": {
+      "verified": true
+    },
+    "smooth_internal_solver_module_identity": {
+      "verified": true
+    },
+    "smooth_solver_effective_response": {
+      "verified": true
+    },
+    "smooth_solver_specialization_commutes": {
+      "verified": true
+    },
+    "storage_exact_power_balance": {
+      "verified": true
+    },
+    "storage_dissipation_squares": {
+      "verified": true
+    },
+    "zero_output_regular_crossing_solution": {
+      "verified": true
+    },
+    "crossing_face_second_output_zero": {
+      "verified": true
+    },
+    "crossing_normal_speed_nonzero": {
+      "verified": true
+    },
+    "normal_output_constraint_is_tangent": {
+      "verified": true
+    },
+    "barrier_flow_exact": {
+      "verified": true
+    },
+    "barrier_zero_initial_stays_zero": {
+      "verified": true
+    },
+    "invariant_base_drive_root_tangent": {
+      "verified": true
+    },
+    "invariant_base_drive_root_equivariant": {
+      "verified": true
+    },
+    "constant_upper_drive_not_fixed_input_equivariant": {
+      "verified": true
+    },
+    "native_lift_recovered": {
+      "verified": true
+    },
+    "native_exceptional_direction_response": {
+      "verified": true
+    },
+    "native_direction_recovered_from_response": {
+      "verified": true
+    },
+    "two_depth_norms_same_lapse": {
+      "verified": true
+    },
+    "swap_minus_deck_exact": {
+      "verified": true
+    },
+    "swap_deck_equal_direction_equal_depths": {
+      "verified": true
+    },
+    "negative_horizon_swap_deck_same_direction": {
+      "verified": true
+    },
+    "positive_horizon_swap_fixes_direction": {
+      "verified": true
+    },
+    "resolved_swap_lapse_invariance": {
+      "verified": true
+    },
+    "resolved_swap_from_unresolved_formula": {
+      "verified": true
+    },
+    "resolved_swap_involution_a": {
+      "verified": true
+    },
+    "resolved_swap_involution_xi": {
+      "verified": true
+    },
+    "swap_commutes_with_deck": {
+      "verified": true
+    },
+    "resolved_swap_exceptional_sigma_1": {
+      "verified": true
+    },
+    "resolved_swap_horizon_sigma_1": {
+      "verified": true
+    },
+    "resolved_swap_exceptional_sigma_-1": {
+      "verified": true
+    },
+    "resolved_swap_horizon_sigma_-1": {
+      "verified": true
+    },
+    "positive_pinch_swap_derivative_from_full_map": {
+      "verified": true
+    },
+    "positive_pinch_swap_derivative_involution": {
+      "verified": true
+    },
+    "finite_group_average_swap_covariant_at_fixed_stratum": {
+      "verified": true
+    },
+    "positive_pinch_invariant_effort": {
+      "verified": true
+    },
+    "invariant_response_and_drive_have_zero_normal_speed": {
+      "verified": true
+    },
+    "orientation_sensitive_drive_has_normal_speed": {
+      "verified": true
+    },
+    "equal_depth_strict_transform_regular_identity": {
+      "verified": true
+    },
+    "equal_depth_strict_transform_positive_pinch": {
+      "verified": true
+    },
+    "fixed_input_deck_partner_lapse_rate_1": {
+      "verified": true
+    },
+    "fixed_input_deck_partner_lapse_rate_-1": {
+      "verified": true
+    }
+  },
+  "certificates": {
+    "mixed_boundary": {
+      "dissipation": "e0**2*f**2*t1**4 + e0**2*f**2*t1**2 + 2*e0*e1*f**2*t1**4 + 2*e0*e1*f**2*t1**2 + 2*e0*e2*f*t1**2*t2**2 + 2*e0*e3*f*t1**2 + e1**2*f**2*t1**4 + 2*e1**2*f**2*t1**2 + 2*e1*e2*f*t1**2*t2**2 + 2*e1*e3*f*t1**2 + e2**2*t2**4 + e2**2*t2**2 + 2*e2*e3*t2**2 + 2*e3**2",
+      "shared_dissipative_entry": "f**2*r1**2 + f**2*r1",
+      "shared_skew_entry": "2*f*r1",
+      "root_parities": [
+        "diag(-1,-1,1,1)",
+        "diag(1,1,-1,1)"
+      ]
+    },
+    "singular_network": {
+      "full_family": "Matrix([[1, t], [t, t**2]])",
+      "generic_effective": "0",
+      "special_effective": "1",
+      "internal_effort": "-e0/t",
+      "regular_solver_effective": "t**2"
+    },
+    "ruler_swap": {
+      "resolved_action": [
+        "a*gamma + d*xi",
+        "-F*a*d + gamma*xi",
+        "-d"
+      ],
+      "constraints": [
+        "gamma**2 + F*d**2 = 1",
+        "(1+a**2)*F = 1-xi**2"
+      ],
+      "positive_exceptional_action": "(a,xi,0) -> (a,xi,0)",
+      "negative_exceptional_action": "(a,xi,0) -> (-a,-xi,0)",
+      "positive_fixed_stratum_invariant_effort": "Matrix([[ea], [ex], [-a*ex*(1 - xi**2)/(2*(a**2 + 1)) + ea*xi/2]])",
+      "equal_depth_positive_strict_transform": "xi=0 at d=0"
+    }
+  },
+  "boundaries": [
+    "General theorems have manuscript proofs; these exact checks certify implementations and examples.",
+    "Symbolic relation ranks are generic; specialize full data before singular elimination.",
+    "Polynomial cancellation certifies the displayed fixtures, not arbitrary smooth ideal membership.",
+    "Ruler swap moves a as well as xi,d; fixed-a dynamics are not automatically swap covariant.",
+    "No physical constitutive coefficients, cut, coframe or input selection are inferred."
+  ]
+}

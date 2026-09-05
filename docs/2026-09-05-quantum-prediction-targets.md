@@ -103,7 +103,7 @@ This is a full mathematical extension of the inspected Cella family. Its origina
 
 The determinant of real dark-space holonomy is a discrete invariant: it cannot change continuously under deformations preserving a real isolated band and the closed-loop identification. This protects the **orientation parity**. It does not protect every matrix entry of a higher-dimensional gate or cancel arbitrary dynamical phases. Complex couplings, band mixing and uncontrolled splitting of the dark band require their own error analysis.
 
-**Finite-duration continuation:** [RF-1–7](2026-09-05-reflection-loop-finite-duration.md) prove the complete equal-duration exact return set, nonadiabatic holonomy, transient bright exposure and the leading perturbation responses. [Composite control, CP-1–4](2026-09-05-reflection-loop-composite-control.md) cancels common first-order gain errors and derives the remaining phase, gain-drift response, finite sign-ramp costs and a loss/reference-noise decision boundary. Next cancel the residual phase with finite reference-access controls; sparse-graph and equal-resource protocol comparisons remain subsequent targets.
+**Finite-duration continuation:** [RF-1–7](2026-09-05-reflection-loop-finite-duration.md) gives exact returns, nonadiabatic holonomy and perturbation response. [CP-1–4](2026-09-05-reflection-loop-composite-control.md) cancels common first-order gain error. [Reference-access control, RE-1–6](2026-09-05-reflection-loop-reference-echo.md) removes relative gain phase through cubic order and cancels static detuning and mixed gain–detuning response, with a derived erasure law and explicit duration/loss comparisons. Next compress the correction under these resource constraints; sparse-graph and equal-resource protocol comparisons remain subsequent targets.
 
 ### Immediate many-body continuation: occupation changes the protection
 
@@ -220,7 +220,7 @@ A June 2026 preprint already finds different spreading behaviour for certain ran
 
 ## 5. Priority and success criteria
 
-1. **Dark-space orientation gates:** strongest immediate native construction. Equation (5) is proved for the full declared fibre; (6) gives a measurable ideal gate. The linked finite-duration and composite-control extensions supply exact gates, perturbation response and resource costs. Next address the remaining phase and compare hardware-constrained paths. The occupation-dependent spectrum (7) is the first many-body extension test.
+1. **Dark-space orientation gates:** strongest immediate native construction. Equation (5) is proved for the full declared fibre; (6) gives a measurable ideal gate. The linked finite-duration, composite and reference-access extensions supply corrected gates, full response and resource costs. Next shorten the correction while preserving that response and compare hardware-constrained paths. The occupation-dependent spectrum (7) is the first many-body extension test.
 2. **Critical quantum memory:** strongest broad many-body target. Deliver a uniform CPTP response or a state-retention lower bound at competing gap closures, with an observable relaxation/lifetime prediction. Include time, size, error and control access in every minimality statement.
 3. **Scrambling and logical observability:** strongest bridge between the predictive-state and weighted-jet work. Deliver exact response-onset orders and coefficients, then recovery bounds for specified controls. Use the full operator response rather than inferring scrambling from a spectral branch alone.
 

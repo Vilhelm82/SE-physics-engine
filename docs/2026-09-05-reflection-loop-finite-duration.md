@@ -377,6 +377,6 @@ The runner verifies the frame generators, exponential polynomial, return classif
 
 ![Finite-duration and perturbation error curves](/home/williaml/seated-root/docs/reflection-loop-error-curves.png)
 
-**Control continuation:** [CP-1–4](2026-09-05-reflection-loop-composite-control.md) now cancel the common first-order amplitude error with three native loops and two endpoint holds. The full response includes the residual quadratic phase, separate hold calibration, between-loop drift, continuous sign ramps and a loss/reference-noise decision boundary. The next control target is to cancel the remaining phase with finite reference-access controls while retaining the gain cancellation.
+**Control continuation:** [CP-1–4](2026-09-05-reflection-loop-composite-control.md) cancels the common first-order amplitude error and derives its phase, drift and loss costs. [RE-1–6](2026-09-05-reflection-loop-reference-echo.md) adds finite reference access: relative gain phase is removed through cubic order, static detuning and mixed gain–detuning response cancel, and the complete echo has a state-independent first-order erasure law. Duration and loss determine the useful choice among these controls.
 
 Native source: REALFIBER O1–O7 and the previous full-family holonomy proof. Standard quantum evolution, nonadiabatic parallel transport, Duhamel/Dyson estimates, Hermitian spectral stability and transitionless driving are retained with provenance. The results here establish this loop's mathematics; literature originality remains open.

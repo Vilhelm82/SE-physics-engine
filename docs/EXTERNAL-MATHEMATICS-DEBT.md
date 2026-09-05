@@ -178,8 +178,17 @@ These mathematical extensions are usable now. The remaining Seated Root predicti
 - **Use:** comparison baseline. Composite holonomic suppression of systematic control errors and comparison with extra decoherence already exist. Xu's phase-controlled couplings and Lu's qutrit pulse/noise specifications are not transferred to the native real triad. No externally designed pulse sequence or external code was adopted.
 - **Retained standard background:** unitary inversion by negative time-reversed Hamiltonian, matrix Taylor products, elementary unit-circle algebra, averaging logical fidelity over pure qubit inputs, and first-order absorbing-loss expansion. These are directly reproducible from the declared evolution and probability rules; no ceremonial native rederivation is owed.
 - **Native construction and full extension:** [CP-1–4](2026-09-05-reflection-loop-composite-control.md) derives the forward/hold/inverse/hold/forward sequence, cancellation on the entire bright plane, the complete two-hold area condition, full second-order logical column for every return index, separate loop/hold error response, finite-variation gain bound, minimum-duration sign-switching holds, and the phase/loss decision boundary. The continuous sign ramps extend the original fixed-gap control path through zero Hamiltonian while retaining the encoded plane. The runner integrates this physical waveform independently.
-- **Hypotheses and next native work:** the same multiplicative error must apply to corresponding forward/inverse loops for common-mode cancellation. The implemented inverse does not reverse uncontrolled additive drift. Reference detuning cannot be echoed while that reference stays uncoupled. The quantitative loss comparison uses a declared bright susceptibility and orthogonal absorbing sinks. The next extension is finite reference-access control that cancels the residual phase while retaining gain cancellation and an advantageous exposure budget; this is new control work, not a gap in the retained standard mathematics.
+- **Hypotheses and continuation:** the same multiplicative error must apply to corresponding forward/inverse loops for common-mode cancellation. The implemented inverse does not reverse uncontrolled additive drift. Reference detuning cannot be echoed while that reference stays uncoupled. The quantitative loss comparison uses a declared bright susceptibility and orthogonal absorbing sinks. [Reference-access control RE-1–6](2026-09-05-reflection-loop-reference-echo.md) now cancels the relative gain phase, static reference response and mixed gain–detuning term with finite real controls. Its duration and erasure cost define when to use the full echo, the shorter trine, or the previous composite.
 - **Status:** PRIOR COMPOSITE-CONTROL BASELINE RETAINED; NATIVE REAL-LOOP RESPONSE AND FINITE-RAMP CONSTRUCTION DERIVED. NO HISTORICAL NOVELTY OR HARDWARE ADVANTAGE CLAIM.
+
+## EXT-018 — Finite corrected gates and group averaging of response
+
+- **Primary source read:** [Khodjasteh–Viola, Dynamically Error-Corrected Gates for Universal Quantum Computation](https://arxiv.org/pdf/0810.0698), sections “Error Combination and Cancellation,” “Dynamically Corrected Gates,” and “Resource Requirements and Performance,” PDF pages 2–3. The abstract was also read.
+- **Retained standard content:** interaction-frame composition of finite-pulse errors, finite-group averaging, inverse and stretched controls. The source establishes the prior dynamically corrected-gate framework. These tools are independently reproducible from the stated evolution rules and remain retained mathematics. Its pulse schedule and control-access assumptions were not substituted for the native ones.
+- **Native extension:** [RE-1–6](2026-09-05-reflection-loop-reference-echo.md) derives the rotated trine, the full gain column for every return index, occupation balance for arbitrary primitive overlap integrals, and a compiled four-sign echo. Its response formula applies to every static Hermitian perturbation and proves correction for all site detunings and arbitrary bright-mode perturbations. It preserves first-order gain cancellation, removes relative gain phase through cubic order, and cancels the mixed gain–detuning term.
+- **Finite realization and full response:** minimum-time zero-area ramps give continuous zero-to-zero blocks. The runner includes every ramp, inverse, duration change and persistent detuning. It supplies the complete second-order matrix response, quartic joint infidelity, and finite coherent-error comparisons. Four-sign averaging also gives state-independent first-order erasure under the declared absorbing-sink model; it does not eliminate the loss rate.
+- **Scope and remaining work:** correction is for encoded inputs up to common phase, with quasi-static errors and the specified repeatable controls. The full echo's loss exposure is 24 times the previous composite's mean exposure. The shorter trine can be the better choice. The remaining native task is reducing duration/exposure while preserving the full error response, and extending the temporal-noise model when required. Historical originality and hardware advantage remain separate comparisons.
+- **Status:** STANDARD FINITE-GATE CORRECTION RETAINED; NATIVE REFERENCE-ACCESS TARGET CLOSED WITH EXPLICIT RESOURCE COSTS. CONTROL COMPRESSION AND TIME-DEPENDENT NOISE ARE CONTINUATIONS.
 
 ## Search receipts
 
@@ -265,6 +274,18 @@ Exact online queries:
 - "composite nonadiabatic holonomic quantum gates systematic amplitude errors real couplings"
 
 Read Xu's primary PDF and Lu's primary abstract/HTML at the depths recorded in EXT-017. Lu's section IV.4 was inspected for the duration/decoherence comparison. Other returned candidates were not adopted. The native cancellation and response were derived from the existing loop operators; no external pulse or numerical performance figure was imported. Provenance and remaining control targets are recorded in EXT-016/017.
+
+### SR-006 — Finite reference-access echo, 2026-09-05
+
+Read the live REALFIBER proof, RF-6C's reference rotation, and CP-1–4 before external comparison. Cella DAG queries covered “echo” and “holonomy”; a targeted backing-proof search covered echo, dynamical decoupling and reference control. The returned role/curvature material was not used as a quantum echo theorem. Search misses do not establish absence elsewhere in the corpus.
+
+Exact online queries:
+
+- "bounded strength dynamically corrected gates balance pair time stretched inverse gate Eulerian"
+- "real holonomic composite pulse systematic detuning reference dark state finite pulses"
+- '"Dynamically Error-Corrected Gates for Universal Quantum Computation" Khodjasteh Viola arxiv' — restricted to arxiv.org.
+
+The APS full-text endpoint for DOI 10.1103/PhysRevLett.102.080501 was not retrievable through the web tool. The arXiv primary PDF was then located and read at the depth recorded in EXT-018. Other returned candidates were not adopted. No external pulse sequence or code was copied. The native construction was derived from the existing loop and then compared against the retained finite-control framework.
 
 ## Maintenance rule
 

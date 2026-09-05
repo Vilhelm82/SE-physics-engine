@@ -1,0 +1,19 @@
+Claire's independent verification of docs/2026-09-05-rest-frame-trapping-equivalence.md (2026-09-05).
+Derived fresh in sympy on the 7800X3D, not read off her runner (which also ran: 40 checks, exit 0).
+
+Theorem 1, general metric (1) with h = diag(h1,h2)(v,r,theta), U^theta = 0, U^phi = Omega(v,r,theta), A, B, F free:
+  D - (d_v mu + d_A(mu U^A))/(A mu)  = 0
+  rho - d_r mu/(B mu)                 = 0
+  theta_L - (D + rho F/2)             = 0
+  theta_N + rho                       = 0
+  spherical h = r^2 dOmega: D = 0, rho = 2/(rB)          -> D = 0 was the mechanism behind the earlier coincidence
+  h = e^{2 lambda v} r^2 dOmega, A=B=1: D = 2 lambda      -> seat dead at F = 0, sphere NOT marginal (theta_L = 2 lambda)
+Flat-spacetime separation (a=-1, b=0, gamma = 1-(r-r0)/L0):
+  delta = 2 - gamma^2; F(r0) = 0; g = E^T q E = -dt^2 + dr^2 + r^2 dOmega^2 EXACTLY
+  g(K,K) = -F, g(K,J) = 1, g(J,J) = 0; at r0: K = d_t + d_r, NULL -- the seat dies in Minkowski
+  theta_L = (1+w)/r > 0; F_trap = (1+w)^2 > 0: untrapped while F = 0.  The separation is real.
+Conformal rescaling h -> e^{2chi} h: theta_V shifts by 2 V(chi); D and rho shift independently.  Verified.
+
+VERDICT: the theorem stands.  F_trap = F + 2D/rho; coincidence iff D = F Xi with 1 + 2 Xi_H/rho_H > 0.
+Seat-death is a state event; trapping is an area-transport event; the primitives do not tie them.
+Her hypotheses (delta > 0, dF != 0) exclude the pinch; see PINCH-1 (67099dd) for what happens there.

@@ -198,6 +198,22 @@ These mathematical extensions are usable now. The remaining Seated Root predicti
 - **Loss-readout continuation:** FD-7 separates monitored dump absorption and unmonitored terminal background absorption in the full instrument. It derives the paired heralded fraction/unheralded residual, total absorption, per-attempt residual and Bell-pair convention for arbitrary monitoring efficiencies. Stable loss-effect integration and an independent density-matrix evolution verify the accepted ensemble; unobserved loss is not removed by conditioning. The figure and receipt include complete operating points and code maps/effects for a subsequent threshold calculation. This extends the retained absorbing-sink and probability rules locally; no online search or new external result was used.
 - **Status:** STANDARD FINITE-GATE CORRECTION RETAINED; CERTIFIED FULL SECOND-ORDER ENCODED CORRECTION WITHIN THE ECHO BUDGET, GENERAL GAIN-ORDER DOUBLING, ARBITRARY JOINT RESPONSE AND TEMPORAL DIMENSION FORMULAS DERIVED. THE BROADER SD QUADRATIC NOISE-LOG CONSTRUCTION REMAINS AVAILABLE.
 
+## EXT-019 — Circuit QEC, Pauli instruments and erasure-aware decoding
+
+- **Sources read, 6 September 2026:** [Stim's official gate reference](https://github.com/quantumlib/Stim/blob/main/doc/gates.md), especially `HERALDED_ERASE` and its detector-model approximation warning; [PyMatching's official API](https://pymatching.readthedocs.io/en/stable/api.html) and [maintainer repository](https://github.com/oscarhiggott/PyMatching), check-matrix decoding, logical fault matrices and likelihood weights; [LDPC quantum-decoder documentation](https://software.roffe.eu/ldpc/quantum_decoder.html) and [BP+OSD API](https://software.roffe.eu/ldpc/ldpc/bposd_decoder.html), syndrome decoding and per-shot channel updates. Installed API signatures were inspected directly.
+- **Retained standard mathematics:** stabilizer circuits, binary syndrome equations and logical cosets; minimum-weight matching, belief propagation plus ordered-statistics decoding; Pauli orthogonality/randomization; binomial sampling intervals. These are retained with their specified decoder models, not scheduled for ceremonial rederivation.
+- **Native input and new interface:** `reflection_loop_finite_dump.py` and its saved full code maps/loss effects. `qec_distance_stack.py` derives the two-outcome Pauli instrument after an explicit boundary repair: valid code state is preserved, every non-code outcome is replaced by the maximally mixed qubit. The native gate is independently Pauli randomized at each location. Its exact conditional probabilities are derived from the complete matrices, not inferred from average infidelity.
+- **Hypotheses:** independent physical reservoirs and independent ideal Pauli wrappers; immediate ideal boundary repair without revealing unobserved loss; separate declared CNOT, preparation, measurement and idle noise. Persistent lost carriers interacting with later gates and imperfect repair require an extended physical model. The native one-qubit gate does not supply the syndrome CNOTs.
+- **Decoder handling:** actual shots are sampled from Stim circuits. Herald records select zero-cost error columns per shot; hiding the same records supplies the comparison. The heralded channel is not sampled from its approximate independent detector model. Residual-channel Pauli correlations remain in the sampled circuit; the decoding priors make the stated separate-sector/independent-mechanism approximation.
+- **Status:** STANDARD QEC STACK RETAINED; NATIVE INSTRUMENT INTERFACE DERIVED; DISTANCE-DEPENDENT CIRCUIT TESTS RECORDED IN THEIR OWN RECEIPT. Physical repair and control realization remain stated inputs.
+
+## EXT-020 — Bivariate bicycle qLDPC code
+
+- **Source:** [Bravyi et al., High-threshold and low-overhead fault-tolerant quantum memory](https://arxiv.org/pdf/2308.07915), code construction and Table 3; [authors' parameter/circuit source](https://github.com/sbravyi/BivariateBicycleCodes/blob/main/decoder_setup.py). The 72-qubit member uses `ell=m=6`, `A=x^3+y+y^2`, `B=y^3+x+x^2`, `H_X=[A B]`, `H_Z=[B^T A^T]`.
+- **Exact use:** the `[[72,12,6]]` code is an external working qLDPC baseline for the native instrument. Binary ranks, commutation, logical quotient bases and the distance-six statement are independently checked locally. The distance test excludes every logical support of weight at most five by an exhaustive pair/triple meet-in-the-middle calculation and exhibits weight-six logicals.
+- **Circuit boundary:** the local runner uses the source's seven CNOT-layer ordering, independently assembled from the permutation matrices. Both ancilla families are reset at the beginning and read at the end of each cycle; the extra waits have explicit idle noise. Each layer is checked for qubit collisions. The paper's threshold and circuit distance are not imported for this noise/endpoint convention. The noiseless circuit, actual fault syndromes and decoded logical outcomes determine the tested performance.
+- **Status:** STANDARD CODE CONSTRUCTION RETAINED; LOCAL CODE AND CIRCUIT REALIZATION AVAILABLE. No general qLDPC threshold or native entangling-gate construction is inferred.
+
 ## Search receipts
 
 ### SR-001 — Horizon and comparison work, backfilled on 2026-09-05
@@ -294,6 +310,18 @@ Exact online queries:
 - '"Dynamically Error-Corrected Gates for Universal Quantum Computation" Khodjasteh Viola arxiv' — restricted to arxiv.org.
 
 The APS full-text endpoint for DOI 10.1103/PhysRevLett.102.080501 was not retrievable through the web tool. The arXiv primary PDF was then located and read at the depth recorded in EXT-018. Other returned candidates were not adopted. No external pulse sequence or code was copied. The native construction was derived from the existing loop and then compared against the retained finite-control framework.
+
+### SR-007 — Distance-dependent circuit QEC, 2026-09-06
+
+Native inspection preceded adoption: current finite-dump source and complete instrument receipt, quantum target/ledger sections and the existing QI harness. Cella DAG queries for `error correction` and `quantum` returned no correction theorem and one unrelated photonic-coupler item, respectively. Targeted backing-library searches covered surface codes, qLDPC, stabilizers, Pauli twirling, Knill–Laflamme and erasure decoding. No additional native decoder was identified in those inspected sources; this is not a corpus-wide absence assertion. The existing code-detection background is retained in EXT-014.
+
+Exact online search queries:
+
+- `Stim HERALDED_ERASE detector error model pymatching heralded erasure decoding`
+- `PyMatching decode erasure weights surface code matching set_boundary_nodes`
+- `bivariate bicycle codes [[72 12 6]] A x y polynomials Bravyi Cross Gambetta 2024`
+
+Primary sources actually read and their use are listed in EXT-019/020. The requested arXiv HTML endpoint for `2308.07915v3` failed; the primary PDF supplied the code construction. Search-result forum posts and third-party summaries were not adopted. Runtime packages were installed in `/home/williaml/.cache/seated-root-qec-venv`; the repository records their pinned versions in `qec_stack_requirements.txt`.
 
 ## Maintenance rule
 

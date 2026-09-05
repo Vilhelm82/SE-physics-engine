@@ -16,6 +16,7 @@ This initial backfill covers sources cited in the current horizon, comparison an
 - [Regular frame transport](/home/williaml/seated-root/docs/2026-09-05-cella-frame-transport.md): complete defining-function gauge quotient \((P,T)\), canonical edge map \(\bar\nu\mapsto U\bar\nu\), invertible full-shape encoding in XLINK-1's trine, smooth resolved transport, compatible connection/soldering family, torsion and exact integration conditions.
 - [Tensor and finite-jet calculus](/home/williaml/seated-root/docs/2026-09-05-cella-tensor-valuation.md): arbitrary off-diagonal metric, full curvature and finite covariant derivatives, determinant cancellations, certified jet depth and actual tensor pullback. Extends Local Curvature Calculus and LEAD7, including the computational target in DBP:gap:II4.
 - [Constitutive divisors](/home/williaml/seated-root/docs/2026-09-05-cella-constitutive-divisors.md): complete passive classes on intersecting faces, nonlinear integrability, geometric area power, variable-constitution exchange, weighted response lift and its descent obstruction. A constant resolved response generates the existing finite-time native crossing.
+- [Minimum predictive state](/home/williaml/seated-root/docs/2026-09-05-cella-predictive-state.md): exact polynomial dynamic-equivalence construction, response/deck descent and material-memory quotients. For the existing constant resolved law, fixed coefficients and both original effort channels, the lapse requires precisely `(xi,d)` at fixed `a`; an explicit finite derivative reconstruction proves necessity through the pinch. The full constant reciprocal passive family includes a rank-one case and a valid folded quotient. Restricted inputs and unknown material constants have separately proved counts.
 
 These mathematical extensions are usable now. The remaining prediction target is the material/state law that selects the coframe, cut evolution and response coefficients. EXT-006 is deferred. Standard differential geometry, passivity, smooth division, Taylor theory and local existence/integrability tools below are retained.
 
@@ -91,6 +92,14 @@ These mathematical extensions are usable now. The remaining prediction target is
 - **Remaining model target:** choose the admissible material/state regularity. The smooth finite-dimensional laws constructed here satisfy the usual local existence/uniqueness hypotheses; a hereditary or nonsmooth law needs the corresponding state and hypotheses specified.
 - **Status:** JET, DIVISOR, LOCAL INTEGRABILITY AND SMOOTH RESPONSE CONSTRUCTIONS COMPLETE; STANDARD BACKGROUND RETAINED. Different material regularity is a future model choice.
 
+## EXT-008 — Polynomial dynamic closure and linear observability
+
+- **Source:** retained standard mathematical background, without a new online source: Noetherianity of a polynomial ring in finitely many variables over a field, Gröbner ideal-membership reduction, invariant-subspace observability and the finite-rank property of a finite linear realization's Hankel matrix. Local trajectory arguments reuse EXT-007.
+- **Exact use:** [minimum predictive state](/home/williaml/seated-root/docs/2026-09-05-cella-predictive-state.md), sections 1 and 6. Noetherianity ensures termination of the increasing paired-state ideal sequence for polynomial fields and outputs; derivative membership proves invariance and exact future-output equivalence. The material quotient removes precisely the largest common evolution-invariant subspace in the output kernel. The memory example's positive moment matrices rule out a finite linear realization and a finite smooth realization regular at rest.
+- **Native inputs and extension:** Cella's selected-quotient foundation, conjugate-Kummer/normalized-incidence constructions, DIS chapters 10/12, and the existing native response. The extension determines dynamic compatibility of quotient choices and proves the uniform pinch reconstruction and exact state counts; it does not infer a material law from geometry.
+- **Hypotheses:** common specified inputs and outputs, local unique full-state evolution; polynomial coefficients for the terminating ideal construction; regular smooth factorization for coordinate minimality; arbitrary initial preparations for the full linear-state count. Restricted inputs, reachable preparations, singular quotient coordinates and arbitrary smooth memory are handled separately in the manuscript.
+- **Status:** STANDARD TOOLS RETAINED; PREDICTIVE QUOTIENT CONSTRUCTION AND NATIVE COUNTS PROVED. No rederivation ceremony scheduled; actual material/coframe/cut evolution remains model input.
+
 ## Search receipts
 
 ### SR-001 — Horizon and comparison work, backfilled on 2026-09-05
@@ -109,6 +118,10 @@ Read: Bartel et al., abstract and section 1 of version 1 (EXT-004); Hayward's PD
 ### Internal extension receipt — 2026-09-05
 
 No online research or new external source was used for the four extensions above. Their manuscripts identify the Cella proofs read, retained standard tools, exact new propositions and replay files. DAG claims were used to locate sources, including GFL:thm:mean_curvature_decomp, DBP:thm:three_channel_kg_ext, DBP:thm:local_curvature_complete, DBP:thm:weighted_jet and DBP:gap:II4. Existing external provenance in the Cella sources is retained.
+
+### Predictive-state extension receipt — 2026-09-05
+
+No online search or new external source was used. The live Cella DAG was queried for predictive/observable state, memory, constitutive work and selected quotients. `DBP:thm:sqg_foundation` was read through the source tool with its declared hash verified; its proof, the canonical invariant reduction, the cited Kummer/incidence sources, DIS chapters 10/12 and the existing native response were inspected. The [new proof and runner](/home/williaml/seated-root/docs/2026-09-05-cella-predictive-state.md) extend their quotient and state-retention constructions; EXT-008 records the retained standard tools. Search misses were not treated as a proof that the corpus lacks related work.
 
 ## Maintenance rule
 

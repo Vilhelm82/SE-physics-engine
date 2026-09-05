@@ -1,0 +1,481 @@
+{
+  "scope": "Minimum predictive state for declared controls/outputs; polynomial pair closure and native load",
+  "proof": "docs/2026-09-05-cella-predictive-state.md",
+  "check_count": 113,
+  "checks": {
+    "original_ports_generate_fields": {
+      "verified": true
+    },
+    "original_ports_power_pairing": {
+      "verified": true
+    },
+    "positive_response_schur_factor": {
+      "verified": true
+    },
+    "native_lapse_first_x": {
+      "verified": true
+    },
+    "native_lapse_first_d": {
+      "verified": true
+    },
+    "native_input_commutator": {
+      "verified": true
+    },
+    "native_lapse_mixed_difference": {
+      "verified": true
+    },
+    "reconstruct_direction_uniformly": {
+      "verified": true
+    },
+    "reconstruct_volume_uniformly": {
+      "verified": true
+    },
+    "minimal_two_state_jacobian": {
+      "verified": true
+    },
+    "reconstruction_at_bisector_and_pinch": {
+      "verified": true
+    },
+    "zero_coupling_second_word": {
+      "verified": true
+    },
+    "zero_coupling_third_word": {
+      "verified": true
+    },
+    "general_transverse_direction_identity": {
+      "verified": true
+    },
+    "general_incremental_boundary_matrix": {
+      "verified": true
+    },
+    "boundary_increment_reconstructs_xi": {
+      "verified": true
+    },
+    "affine_drift_transverse_direction": {
+      "verified": true
+    },
+    "native_coupled_exact_ideal": {
+      "verified": true
+    },
+    "native_coupled_invariance_0_0": {
+      "verified": true
+    },
+    "native_coupled_invariance_0_1": {
+      "verified": true
+    },
+    "native_coupled_invariance_1_0": {
+      "verified": true
+    },
+    "native_coupled_invariance_1_1": {
+      "verified": true
+    },
+    "native_coupled_initial_horizon_outputs_equal": {
+      "verified": true
+    },
+    "native_coupled_horizon_partners_distinguished": {
+      "verified": true
+    },
+    "native_uncoupled_exact_ideal": {
+      "verified": true
+    },
+    "native_uncoupled_invariance_0_0": {
+      "verified": true
+    },
+    "native_uncoupled_invariance_0_1": {
+      "verified": true
+    },
+    "native_uncoupled_invariance_1_0": {
+      "verified": true
+    },
+    "native_uncoupled_invariance_1_1": {
+      "verified": true
+    },
+    "native_uncoupled_initial_horizon_outputs_equal": {
+      "verified": true
+    },
+    "native_uncoupled_horizon_partners_distinguished": {
+      "verified": true
+    },
+    "native_rank_one_exact_ideal": {
+      "verified": true
+    },
+    "native_rank_one_invariance_0_0": {
+      "verified": true
+    },
+    "native_rank_one_invariance_0_1": {
+      "verified": true
+    },
+    "native_rank_one_invariance_1_0": {
+      "verified": true
+    },
+    "native_rank_one_invariance_1_1": {
+      "verified": true
+    },
+    "native_rank_one_initial_horizon_outputs_equal": {
+      "verified": true
+    },
+    "native_rank_one_horizon_partners_distinguished": {
+      "verified": true
+    },
+    "unfinished_ideal_does_not_self_certify": {
+      "verified": true
+    },
+    "radial_only_exact_ideal": {
+      "verified": true
+    },
+    "radial_only_invariance_0_0": {
+      "verified": true
+    },
+    "radial_zero_coupling_exact_ideal": {
+      "verified": true
+    },
+    "radial_zero_coupling_invariance_0_0": {
+      "verified": true
+    },
+    "zero_radial_mobility_deck_quotient_exact_ideal": {
+      "verified": true
+    },
+    "zero_radial_mobility_deck_quotient_invariance_0_0": {
+      "verified": true
+    },
+    "zero_radial_mobility_deck_quotient_invariance_1_0": {
+      "verified": true
+    },
+    "zero_radial_mobility_deck_quotient_invariance_2_0": {
+      "verified": true
+    },
+    "zero_radial_mobility_deck_quotient_invariance_3_0": {
+      "verified": true
+    },
+    "zero_radial_mobility_deck_quotient_invariance_4_0": {
+      "verified": true
+    },
+    "zero_directional_mobility_frozen_lapse_exact_ideal": {
+      "verified": true
+    },
+    "zero_directional_mobility_frozen_lapse_invariance_0_0": {
+      "verified": true
+    },
+    "zero_directional_mobility_frozen_lapse_invariance_0_1": {
+      "verified": true
+    },
+    "folded_cone_polynomial_dynamics": {
+      "verified": true
+    },
+    "folded_cone_relation_invariant": {
+      "verified": true
+    },
+    "folded_two_coordinate_radius_squared": {
+      "verified": true
+    },
+    "folded_two_coordinate_A_dynamics": {
+      "verified": true
+    },
+    "folded_two_coordinate_B_dynamics": {
+      "verified": true
+    },
+    "resolved_efforts_are_different_experiments_exact_ideal": {
+      "verified": true
+    },
+    "resolved_efforts_are_different_experiments_invariance_0_0": {
+      "verified": true
+    },
+    "resolved_efforts_are_different_experiments_invariance_0_1": {
+      "verified": true
+    },
+    "horizon_plus_after_switch": {
+      "verified": true
+    },
+    "horizon_minus_after_switch": {
+      "verified": true
+    },
+    "horizon_two_step_exact_xi_flow": {
+      "verified": true
+    },
+    "horizon_two_step_exact_d_flow": {
+      "verified": true
+    },
+    "horizon_two_step_lapse_slope": {
+      "verified": true
+    },
+    "horizon_two_step_matches_initial_direction": {
+      "verified": true
+    },
+    "horizon_two_step_matches_initial_volume": {
+      "verified": true
+    },
+    "deck_fixes_lapse": {
+      "verified": true
+    },
+    "deck_preserves_x_control": {
+      "verified": true
+    },
+    "deck_reverses_radial_control": {
+      "verified": true
+    },
+    "deck_covariance_requires_input_transform": {
+      "verified": true
+    },
+    "material_volume_first_probe": {
+      "verified": true
+    },
+    "material_volume_second_probe": {
+      "verified": true
+    },
+    "material_volume_third_probe": {
+      "verified": true
+    },
+    "five_material_state_reconstruction": {
+      "verified": true
+    },
+    "five_material_state_minimum": {
+      "verified": true
+    },
+    "single_material_coordinate_is_recovered": {
+      "verified": true
+    },
+    "single_material_parameter_does_not_add_three_states": {
+      "verified": true
+    },
+    "delayed_state_chain_exact_ideal": {
+      "verified": true
+    },
+    "delayed_state_chain_invariance_0_0": {
+      "verified": true
+    },
+    "delayed_state_chain_invariance_1_0": {
+      "verified": true
+    },
+    "delayed_state_chain_invariance_2_0": {
+      "verified": true
+    },
+    "delayed_states_same_immediate_output": {
+      "verified": true
+    },
+    "delayed_states_same_first_rate": {
+      "verified": true
+    },
+    "delayed_states_second_rate_distinguishes": {
+      "verified": true
+    },
+    "removable_hidden_coordinate_exact_ideal": {
+      "verified": true
+    },
+    "removable_hidden_coordinate_invariance_0_0": {
+      "verified": true
+    },
+    "removable_hidden_coordinate_invariance_1_0": {
+      "verified": true
+    },
+    "constant_output_needs_no_state_exact_ideal": {
+      "verified": true
+    },
+    "cube_projection_immediate_solution": {
+      "verified": true
+    },
+    "cube_projection_waiting_branch_equation": {
+      "verified": true
+    },
+    "cube_projection_waiting_branch_C1_join": {
+      "verified": true
+    },
+    "flat_memory_right_jet_0": {
+      "verified": true
+    },
+    "flat_memory_right_jet_1": {
+      "verified": true
+    },
+    "flat_memory_right_jet_2": {
+      "verified": true
+    },
+    "flat_memory_right_jet_3": {
+      "verified": true
+    },
+    "flat_memory_right_jet_4": {
+      "verified": true
+    },
+    "flat_memory_right_jet_5": {
+      "verified": true
+    },
+    "flat_memory_positive_subinterval_bound": {
+      "verified": true
+    },
+    "linear_removable_material_count": {
+      "verified": true
+    },
+    "linear_hidden_mode_is_output_null": {
+      "verified": true
+    },
+    "linear_hidden_mode_is_invariant": {
+      "verified": true
+    },
+    "switched_material_needs_all_three_modes": {
+      "verified": true
+    },
+    "three_relaxations_exact_material_count": {
+      "verified": true
+    },
+    "relaxation_observability_vandermonde": {
+      "verified": true
+    },
+    "all_three_relaxations_reachable": {
+      "verified": true
+    },
+    "relaxation_passivity_balance": {
+      "verified": true
+    },
+    "equal_decay_rates_merge_to_two_modes": {
+      "verified": true
+    },
+    "continuum_memory_moment_minor_1": {
+      "verified": true
+    },
+    "continuum_memory_moment_minor_2": {
+      "verified": true
+    },
+    "continuum_memory_moment_minor_3": {
+      "verified": true
+    },
+    "continuum_memory_moment_minor_4": {
+      "verified": true
+    },
+    "continuum_memory_moment_minor_5": {
+      "verified": true
+    }
+  },
+  "polynomial_certificates": {
+    "native_coupled": {
+      "rounds": 2,
+      "basis_sizes": [
+        1,
+        2,
+        2
+      ],
+      "basis": [
+        "xi - xi__paired",
+        "d - d__paired"
+      ]
+    },
+    "native_uncoupled": {
+      "rounds": 3,
+      "basis_sizes": [
+        1,
+        4,
+        3,
+        2
+      ],
+      "basis": [
+        "xi - xi__paired",
+        "d - d__paired"
+      ]
+    },
+    "native_rank_one": {
+      "rounds": 2,
+      "basis_sizes": [
+        1,
+        2,
+        2
+      ],
+      "basis": [
+        "xi - xi__paired",
+        "d - d__paired"
+      ]
+    },
+    "radial_only": {
+      "rounds": 1,
+      "basis_sizes": [
+        1,
+        1
+      ],
+      "basis": [
+        "xi - xi__paired"
+      ]
+    },
+    "radial_zero_coupling": {
+      "rounds": 0,
+      "basis_sizes": [
+        1
+      ],
+      "basis": [
+        "xi**2 - xi__paired**2"
+      ]
+    },
+    "zero_radial_mobility_deck_quotient": {
+      "rounds": 2,
+      "basis_sizes": [
+        1,
+        4,
+        5
+      ],
+      "basis": [
+        "xi**2 - xi__paired**2",
+        "d*xi - d__paired*xi__paired",
+        "-d*xi__paired**2 + d__paired*xi*xi__paired",
+        "-d*d__paired*xi__paired + d__paired**2*xi",
+        "d**2 - d__paired**2"
+      ]
+    },
+    "zero_directional_mobility_frozen_lapse": {
+      "rounds": 0,
+      "basis_sizes": [
+        1
+      ],
+      "basis": [
+        "xi**2 - xi__paired**2"
+      ]
+    },
+    "resolved_efforts_are_different_experiments": {
+      "rounds": 1,
+      "basis_sizes": [
+        1,
+        1
+      ],
+      "basis": [
+        "xi - xi__paired"
+      ]
+    },
+    "delayed_state_chain": {
+      "rounds": 2,
+      "basis_sizes": [
+        1,
+        2,
+        3
+      ],
+      "basis": [
+        "y - y__paired",
+        "z - z__paired",
+        "w - w__paired"
+      ]
+    },
+    "removable_hidden_coordinate": {
+      "rounds": 1,
+      "basis_sizes": [
+        1,
+        2
+      ],
+      "basis": [
+        "y - y__paired",
+        "z - z__paired"
+      ]
+    },
+    "constant_output_needs_no_state": {
+      "rounds": 0,
+      "basis_sizes": [
+        0
+      ],
+      "basis": []
+    }
+  },
+  "native_state_counts": {
+    "known_coefficients_fixed_a_original_two_ports_output_F": 2,
+    "known_coefficients_radial_only_beta_nonzero_output_F": 1,
+    "unknown_constant_mu_beta_nu_original_two_ports_output_d": 5,
+    "unknown_constant_k_correlated_family_original_two_ports_output_d": 3
+  },
+  "boundaries": [
+    "Counts refer to the stated law, inputs, outputs and admissible real chart.",
+    "Finite checked flat jets and moment minors accompany all-order manuscript proofs.",
+    "General smooth laws require a closure certificate or actual future-flow comparison.",
+    "No physical coframe, cut or constitutive coefficients are selected by these checks."
+  ]
+}

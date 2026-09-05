@@ -156,7 +156,11 @@ enclosed area). The black hole's horizon is the cone, its interior is the waist
 either crosses (continues the loop) or turns onto the waist (squeezes); the loop is a
 divider; what completes is Hawking. [conjecture tier on top of proved stations]
 
-## Banned as inputs (may appear only if DERIVED from P1-P9)
+## Not among the primitives (admissible only as DERIVED from the primitives, or as a DECLARED input with its cargo)
+Nothing is banned [Will's ruling, 2026-09-05: a prohibition is not a mathematical statement; a hypothesis list is].
+The objects below are not assumed. Any of them that appears in a derivation is either reached from the primitives
+inside that derivation or entered in the ledger as a declared input with its cargo and its removal route. A result
+that uses one without listing it is tiered 'derived | <that input>', never bare 'derived'.
 - Clifford algebras, Pauli matrices, spinors, any double cover
 - Minkowski signature, the light cone, rapidity as a given
 - Hilbert space, the Born rule, hbar-dependent angles or commutators

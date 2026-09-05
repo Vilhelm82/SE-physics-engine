@@ -1,0 +1,36 @@
+=== PART A: bright loss DURING the adiabatic dark loop (trine pi/3, 0, -pi/3) -- expected to fail ===
+ a tau  kappa/a    eps     D/a |    erasure    spread   cond 1-F
+    10     0.00  0.000   0e+00 | -1.968e-16   6.4e-15  6.258e-02   [3s]
+    10     0.10  0.000   0e+00 |  2.944e-01   3.0e-01  1.879e-02   [5s]
+    10     1.00  0.000   0e+00 |  7.065e-01   4.3e-01  1.280e-01   [8s]
+    10    10.00  0.000   0e+00 |  4.334e-01   4.0e-01  2.251e-02   [10s]
+    20     0.00  0.000   0e+00 | -3.770e-15   1.0e-14  1.472e-04   [13s]
+    20     0.10  0.000   0e+00 |  8.534e-02   9.6e-02  4.988e-04   [15s]
+    20     1.00  0.000   0e+00 |  4.598e-01   4.1e-01  2.689e-02   [18s]
+    20    10.00  0.000   0e+00 |  2.598e-01   2.7e-01  5.758e-03   [20s]
+    40     0.00  0.000   0e+00 | -4.228e-15   2.2e-14  8.634e-06   [23s]
+    40     0.10  0.000   0e+00 |  4.094e-02   4.7e-02  1.023e-04   [25s]
+    40     1.00  0.000   0e+00 |  2.709e-01   2.8e-01  6.385e-03   [28s]
+    40    10.00  0.000   0e+00 |  1.433e-01   1.6e-01  1.448e-03   [30s]
+=== PART B: exact-return loops + ENDPOINT dump ===
+nominal logical block of the tight-frame trine: [[-1.0, 0.0], [0.0, 1.0]]
+scheme                                    eps     D/a |   erasure spread/mean   cond 1-F
+single return + dump (18/a)             0.010   0e+00 |  5.36e-04    1.97e+00   4.94e-08
+composite angles + dumps (55/a)         0.010   0e+00 |  1.58e-03    1.16e+00   1.44e-07
+tight-frame trine + dumps (55/a)        0.010   0e+00 |  1.59e-03    1.40e-05   2.39e-15
+single return + dump (18/a)             0.001   0e+00 |  5.46e-06    1.97e+00   5.12e-12
+composite angles + dumps (55/a)         0.001   0e+00 |  1.61e-05    1.16e+00   1.49e-11
+tight-frame trine + dumps (55/a)        0.001   0e+00 |  1.62e-05    1.43e-08  -1.94e-18
+single return + dump (18/a)             0.000   1e-04 |  3.61e-09    1.97e+00   6.47e-08
+composite angles + dumps (55/a)         0.000   1e-04 |  4.84e-09    1.55e+00   1.27e-06
+tight-frame trine + dumps (55/a)        0.000   1e-04 |  1.87e-09    1.35e+00   2.34e-08
+single return + dump (18/a)             0.000   1e-03 |  3.59e-07    1.97e+00   6.46e-06
+composite angles + dumps (55/a)         0.000   1e-03 |  4.82e-07    1.55e+00   1.27e-04
+tight-frame trine + dumps (55/a)        0.000   1e-03 |  1.87e-07    1.34e+00   2.17e-06
+single return + dump (18/a)             0.010   1e-04 |  5.35e-04    1.97e+00   1.20e-07
+composite angles + dumps (55/a)         0.010   1e-04 |  1.58e-03    1.16e+00   1.39e-06
+tight-frame trine + dumps (55/a)        0.010   1e-04 |  1.59e-03    2.50e-03   2.34e-08
+single return + dump (18/a)             0.001   1e-04 |  5.37e-06    1.97e+00   6.47e-08
+composite angles + dumps (55/a)         0.001   1e-04 |  1.60e-05    1.17e+00   1.27e-06
+tight-frame trine + dumps (55/a)        0.001   1e-04 |  1.62e-05    3.01e-02   2.34e-08
+reference (unheralded): single loop 5.31e-4 at eps=1% (18/a); composite 2.49e-7 (57/a); reference echo 4.7e-11 at eps=1e-3, D=1e-4 (1386/a)

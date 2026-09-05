@@ -170,20 +170,68 @@ X_n=3\tau_n\left(\frac{2}{16n^2}-\frac{3}{2(16n^2)^2}\right)
 \tag{12}
 \]
 
-The nominal exposures are $6.08633$, $3.23334$ and $2.17930$ for the five-loop sequence. The slope is checked directly with finite absorbing evolution. With 1% gain and $\gamma/a=10^{-3}$, the full simulated erasures are **0.851286%, 0.594991%, 0.490018%**: higher $n$ helps in this regime. Their conditional infidelities are $1.97\times10^{-13}$, $5.14\times10^{-14}$ and $2.53\times10^{-14}$. Both loss channels and finite errors are included in these latter numbers.
+The nominal exposures are $6.08633$, $3.23334$ and $2.17930$ for the five-loop sequence. The slope is checked directly with finite absorbing evolution. With 1% gain and $\gamma/a=10^{-3}$, the full simulated absorption probabilities are **0.851286%, 0.594991%, 0.490018%**: higher $n$ helps in this regime. If both absorbing ports are monitored, their conditional infidelities are $1.97\times10^{-13}$, $5.14\times10^{-14}$ and $2.53\times10^{-14}$. Unmonitored background outcomes remain in the accepted ensemble; FD-7 gives that readout and its operating-point pairs.
 
 The dump sweep retains duration as a variable. At $\kappa/a=10$, action 24 gives $aT=116.8735$ and mixed-error conditional infidelity $1.99502\times10^{-13}$; its pure-gain floor at 1% is higher than at action 40. These are comparisons within the stated family and test points, not global optima.
 
-![Finite dump, return-index and transport-loss comparisons](reflection-loop-finite-dump-tradeoffs.png)
+![Finite dumps, total absorption and paired heralded/unheralded operating points](reflection-loop-finite-dump-tradeoffs.png)
 
 ## FD-6. Replay and continuation
 
 [Runner](../reflection_loop_finite_dump.py) · [receipt and full joint matrices](reflection-loop-finite-dump-checks.json) · [dependency ledger](EXTERNAL-MATHEMATICS-DEBT.md).
 
-All **117 numerical checks and six symbolic identities pass**. They cover all three returns; the six static logical responses; the complete finite no-click map; gain endpoints; mixed coefficients and detuning scaling; probability conservation and flag positivity; direct chronological dump integration; integration convergence; physical joins; and the nominal background-loss law. The independent laboratory integration includes the negative time-reversed controls and absorbing dumps explicitly.
+All **139 numerical checks and six symbolic identities pass**. They cover all three returns; the six static logical responses; the complete finite no-click map; gain endpoints; mixed coefficients and detuning scaling; probability conservation and flag positivity; direct chronological dump integration; integration convergence; physical joins; and the nominal background-loss law. FD-7 is checked against independent density-matrix evolution with separate absorbing registers, together with the zero-background and fully monitored limits. The independent laboratory integrations include the negative time-reversed controls and absorbing dumps explicitly.
 
 ```bash
 OPENBLAS_NUM_THREADS=1 python3 reflection_loop_finite_dump.py --json docs/reflection-loop-finite-dump-checks.json --plot docs/reflection-loop-finite-dump-tradeoffs.png
 ```
 
 **Next target:** cancel the quadratic full-instrument response: the remaining logical detuning/mixed-gain distortion and state dependence of the flag effect, while retaining the finite dump and its duration. The five-loop construction supplies the baseline and exact response matrices for that extension.
+
+## FD-7. The pair when background absorption is unheralded
+
+The figure now supplies **total absorption** and the paired coordinates $(p_h,q_u)$ at the same operating point. Dump absorption is monitored; background absorption during transport enters unobserved terminal sinks. There is no later flag for those background events in this readout model.
+
+Separate the two positive loss effects as $E_d$ and $E_b$. Direct integration of
+$\gamma\int U(t)^\dagger Q(t)U(t)\,dt$ obtains the latter without subtracting nearly equal unit matrices. They obey
+
+\[
+K^\dagger K+E_d+E_b=I.
+\tag{13}
+\]
+
+More generally, if fractions $\eta_d,\eta_b\in[0,1]$ of these terminal events are recorded, then
+
+\[
+E_h=\eta_dE_d+\eta_bE_b,\qquad
+E_u=(1-\eta_d)E_d+(1-\eta_b)E_b.
+\tag{14}
+\]
+
+The plotted readout uses $\eta_d=1,\eta_b=0$. Define
+$p_h=\operatorname{tr}_P(E_h)/2$ and $p_u=\operatorname{tr}_P(E_u)/2$. The accepted ensemble contains both the surviving state and unobserved absorbed outcomes. With $A,B,A_0$ as in (11), its exact residual is
+
+\[
+\boxed{q_u=
+\frac{p_u+\|B\|_F^2/2+\|A_0\|_F^2/3}{1-p_h}.}
+\tag{15}
+\]
+
+Thus the requested pair is $(p_h,q_u)$; **total absorption is $p_h+p_u$**, and the residual per attempted run is $(1-p_h)q_u$. Unobserved absorption contributes error even when the conditional surviving state is accurate. In particular, $q_u\ge p_u/(1-p_h)$ exactly.
+
+The receipt also supplies the conditional Bell-pair infidelity,
+$[p_u+\|B\|_F^2/2+\|A_0\|_F^2/2]/(1-p_h)$, to keep the reference-entangled convention distinct from the average input-state convention in (15). It retains each code map and both loss effects, including their state dependence, for threshold calculations with a chosen code and noise model.
+
+**Operating points to quote.** All rows below use $n=1$, $\kappa/a=10$, $\kappa t_d=40$, $aT=124.8735$, $\Delta_d/a=10^{-4}$, $\Delta_r=0$, monitored dumps and unmonitored background absorption:
+
+| Gain error $\epsilon$ | Background $\gamma/a$ | Heralded fraction $p_h$ | Unheralded residual $q_u$ |
+|---:|---:|---:|---:|
+| $10^{-3}$ | $0$ | 0.00269845% | $2.24985\times10^{-13}$ |
+| $10^{-3}$ | $10^{-6}$ | 0.00269841% | $6.06981\times10^{-6}$ |
+| $10^{-2}$ | $0$ | 0.265058% | $3.47408\times10^{-12}$ |
+| $10^{-2}$ | $10^{-6}$ | 0.265055% | $5.93456\times10^{-6}$ |
+| $10^{-2}$ | $10^{-4}$ | 0.264728% | $5.93144\times10^{-4}$ |
+
+The starred point on the figure is therefore **$(0.265055\%,\ 5.93456\times10^{-6})$**, with the 1% gain and $\gamma/a=10^{-6}$ conditions above. Its total absorption is 0.265647%. At the lower-gain zero-background point, the unobserved contribution reaches the surviving-state floor around $\gamma/a=3.71\times10^{-14}$. This identifies when further coherent correction affects the total residual and when reducing exposure or improving loss monitoring is the relevant extension.
+
+The paired curves cover both gain values at $n=1,2,3$ and background rates from zero through $10^{-3}a$. A direct density-matrix calculation on six qubit input states, with separate dump and background registers, verifies (15) and its probability partition without conditioning away the unobserved events.

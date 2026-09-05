@@ -104,8 +104,12 @@ def loop_endpoints(cases, n=1, kind='five', background_loss=0., max_step=.06):
     return np.array(result).transpose(1, 0, 2, 3)
 
 
-def compose(endpoints, cases, kappa=10., action=40.):
-    """Full no-click operator and summed flag effect, with no projection."""
+def compose(endpoints, cases, kappa=10., action=40., transport_effects=None, separate=False):
+    """Survival map and loss effects; separate=True preserves the readout split.
+
+    The default sum treats both absorbing ports as monitored, as in FD-1–6.
+    Supply directly integrated transport_effects for very small loss rates.
+    """
     if kappa <= 0 or action < 0:
         raise ValueError('invalid dump parameters')
     td, r = action/kappa, np.exp(-action/2)
@@ -113,16 +117,54 @@ def compose(endpoints, cases, kappa=10., action=40.):
     dump = np.broadcast_to(np.diag([r, r, 1., 1.]), (len(cases), 4, 4)).astype(complex).copy()
     dump[:, 2, 2], dump[:, 3, 3] = np.exp(-1j*errors[:, 1:3]*td).T
     state = np.broadcast_to(I, dump.shape).copy()
-    flag = np.zeros_like(state)
+    background, detected_dump = np.zeros_like(state), np.zeros_like(state)
     for j in range(endpoints.shape[1]):
         u = endpoints[:, j]
-        # This term is zero for lossless transport, and includes all its
-        # absorbing flags when background_loss is nonzero.
-        flag += state.conj().swapaxes(-1, -2)@(I-u.conj().swapaxes(-1, -2)@u)@state
+        # This effect is zero for lossless transport. Its monitoring status
+        # is assigned separately from the physical absorption.
+        local = I-u.conj().swapaxes(-1, -2)@u if transport_effects is None else transport_effects[:, j]
+        background += state.conj().swapaxes(-1, -2)@local@state
         state = u@state
-        flag += (1-r*r)*(state.conj().swapaxes(-1, -2)@Q@state)
+        detected_dump += (1-r*r)*(state.conj().swapaxes(-1, -2)@Q@state)
         state = dump@state
-    return state, flag
+    return (state, detected_dump, background) if separate else (state, detected_dump+background)
+
+
+def loop_endpoints_with_effects(cases, background_rates, n=1, max_step=.06):
+    """Direct chronological loops plus stable integrated background effects.
+
+    Integrate exposure before multiplying by the background rate. This avoids
+    subtracting nearly unit matrices when the unheralded floor is ~1e-13.
+    Both forward and inverse Hamiltonians are integrated explicitly here.
+    """
+    angles, signs, stretches = controls()
+    rotations = np.array([rotation(a) for a in angles])
+    errors, rates = np.asarray(cases), np.asarray(background_rates)
+    eps = errors[:, 0, None, None, None]
+    noise = rotations.transpose(0,2,1)[None]@(
+        errors[:,1,None,None]*DD+errors[:,2,None,None]*DR)[:,None]@rotations[None]
+    noise *= stretches[None,:,None,None]
+    rate_scale = rates[:,None,None,None]*stretches[None,:,None,None]
+    value = np.zeros((2,len(cases),len(angles),4,4),complex)
+    value[0] = I
+    shape = value.shape
+    base = primitive_stages(n)
+    for j, stage in enumerate(base):
+        reverse = base[-1-j]
+        assert abs(reverse.duration-stage.duration)<1e-14
+        def rhs(t, flat):
+            u,exposure=flat.reshape(shape)
+            hs=np.array([stage.h(t) if sign>0 else -reverse.h(reverse.duration-t) for sign in signs])
+            qs=np.array([stage.loss_projector(t) if sign>0 else reverse.loss_projector(reverse.duration-t) for sign in signs])
+            generator=-1j*((1+eps)*hs+noise)-rate_scale*qs/2
+            return np.array([generator@u,u.conj().swapaxes(-1,-2)@qs@u]).ravel()
+        solved=solve_ivp(rhs,(0,stage.duration),value.ravel(),method='DOP853',
+                         rtol=2e-13,atol=2e-15,max_step=max_step)
+        assert solved.success,solved.message
+        value=solved.y[:,-1].reshape(shape)
+    endpoints=rotations[None]@value[0]@rotations.transpose(0,2,1)[None]
+    effects=rotations[None]@(rate_scale*value[1])@rotations.transpose(0,2,1)[None]
+    return endpoints,effects
 
 
 def metrics(k, flag=None):
@@ -138,6 +180,80 @@ def metrics(k, flag=None):
                 conditional_bright_population=float(np.linalg.norm(b)**2/(2*success)),
                 erasure_spread=float(extrema[1]-extrema[0]),
                 equal_input_conditional_bounds=[numerator/float(extrema[1]), numerator/float(extrema[0])])
+
+
+def operating_metrics(k, dump_effect, background_effect, dump_efficiency=1., background_efficiency=0.):
+    """Heralded probability and residual of the accepted ensemble, including sinks.
+
+    Every missed absorption is an orthogonal unobserved sink outcome. It stays
+    in the accepted ensemble. It cannot be removed by normalizing the surviving
+    four-dimensional state. Efficiencies classify terminal absorbing events.
+    """
+    if not (0<=dump_efficiency<=1 and 0<=background_efficiency<=1):
+        raise ValueError('monitoring efficiencies must lie in [0,1]')
+    herald=dump_efficiency*dump_effect+background_efficiency*background_effect
+    unseen=(1-dump_efficiency)*dump_effect+(1-background_efficiency)*background_effect
+    p_h=float(np.trace(herald[2:,2:]).real/2)
+    p_u=float(np.trace(unseen[2:,2:]).real/2)
+    a,b=G@k[2:,2:],k[:2,2:]
+    tf=a-np.trace(a)*np.eye(2)/2
+    p_s=float(np.linalg.norm(k[:,2:])**2/2)
+    accepted=p_s+p_u
+    leakage=float(np.linalg.norm(b)**2/2)
+    coherent=float(np.linalg.norm(tf)**2/3)
+    residual_numerator=p_u+leakage+coherent
+    effect=k[:,2:].conj().T@k[:,2:]+unseen[2:,2:]
+    extrema=np.linalg.eigvalsh(effect)
+    return dict(heralded_fraction=p_h,unheralded_absorption_per_attempt=p_u,
+                total_absorption=p_h+p_u,accepted_fraction=accepted,
+                unheralded_residual=residual_numerator/accepted,
+                unheralded_residual_per_attempt=residual_numerator,
+                conditional_unheralded_absorption=p_u/accepted,
+                conditional_surviving_error=(leakage+coherent)/accepted,
+                conditional_bell_infidelity=(p_u+leakage+float(np.linalg.norm(tf)**2/2))/accepted,
+                heralded_spread=float(np.ptp(np.linalg.eigvalsh(herald[2:,2:]))),
+                equal_input_residual_bounds=[residual_numerator/float(extrema[1]),residual_numerator/float(extrema[0])],
+                dump_efficiency=dump_efficiency,background_efficiency=background_efficiency)
+
+
+def laboratory_instrument(case, background_rate=1e-4, kappa=10., action=40.):
+    """Independent density-matrix evolution for six qubit input states.
+
+    Two explicit absorbing registers accumulate dump and background outcomes.
+    The six states reproduce the first two Haar moments; summing probabilities
+    before conditioning tests the success-weighted instrument calculation.
+    """
+    psis=np.array([[1,0],[0,1],[1,1],[1,-1],[1,1j],[1,-1j]],complex)
+    psis/=np.linalg.norm(psis,axis=1)[:,None]
+    full=np.pad(psis,((0,0),(2,0)))
+    rho=full[:,:,None]*full[:,None,:].conj()
+    state=np.zeros((6,18),complex);state[:,:16]=rho.reshape(6,16)
+    eps,d,r=case;noise=d*DD+r*DR
+    def evolve(duration, h, q, rate, register):
+        nonlocal state
+        def rhs(t,value):
+            v=value.reshape(6,18);density=v[:,:16].reshape(6,4,4)
+            generator=-1j*((1+eps)*h(t)+noise)-rate*q(t)/2
+            out=np.zeros_like(v)
+            out[:,:16]=(generator@density+density@generator.conj().T).reshape(6,16)
+            out[:,register]=rate*np.trace(q(t)@density,axis1=-2,axis2=-1)
+            return out.ravel()
+        solved=solve_ivp(rhs,(0,duration),state.ravel(),method='DOP853',rtol=2e-13,
+                         atol=2e-15,max_step=min(.06,.5/max(rate,1.)))
+        assert solved.success
+        state=solved.y[:,-1].reshape(6,18)
+    for loop in physical_loops():
+        for stage in loop:evolve(stage.duration,stage.h,stage.loss_projector,background_rate,17)
+        evolve(action/kappa,lambda t:np.zeros((4,4)),lambda t:Q,kappa,16)
+    rho=state[:,:16].reshape(6,4,4)
+    target=np.pad((G@psis.T).T,((0,0),(2,0)))
+    overlaps=np.einsum('ni,nij,nj->n',target.conj(),rho,target).real
+    survival=np.trace(rho,axis1=-2,axis2=-1).real
+    detected,undetected=state[:,16].real,state[:,17].real
+    return dict(heralded_fraction=float(detected.mean()),
+                unheralded_absorption_per_attempt=float(undetected.mean()),
+                unheralded_residual=float(1-overlaps.mean()/(survival.mean()+undetected.mean())),
+                probability_sum=survival+detected+undetected)
 
 
 def laboratory_word(case, n=1, kind='five', kappa=10., action=40., background_loss=0., max_step=.05):
@@ -295,7 +411,7 @@ def run_checks():
         err = float(np.max(abs(np.asarray(value)-target)))
         assert err <= tol, (name, err, tol)
         checks[name] = dict(error=err, tolerance=tol)
-    report = dict(symbolic=symbolic_checks(), checks=checks, cases={}, dump_sweep=[], background_sweep=[])
+    report = dict(symbolic=symbolic_checks(), checks=checks, cases={}, dump_sweep=[], background_sweep=[],operating_curves=[])
     errors = [(0.,0.,0.), (.01,0.,0.), (.001,0.,0.), (0.,1e-4,0.), (0.,1e-3,0.),
               (.001,1e-4,0.), (.001,-1e-4,0.), (.01,1e-4,0.), (.001,1e-3,0.),
               (.001,0.,1e-4), (.001,1e-4,-1e-4)]
@@ -364,6 +480,36 @@ def run_checks():
     direct=laboratory_word(sweep_errors[0],background_loss=1e-4)
     matrix=compose(loop_endpoints([sweep_errors[0]],background_loss=1e-4),[sweep_errors[0]])[0][0]
     close('background_loss_inverse_and_direct_dump_ODE',direct,matrix,6e-12)
+    rates=np.r_[0.,np.geomspace(1e-16,1e-3,27)]
+    operating_cases=[(eps,1e-4,0.) for rate in rates for eps in (.001,.01)]
+    operating_rates=np.repeat(rates,2)
+    for n in (1,2,3):
+        endpoints,local_effects=loop_endpoints_with_effects(operating_cases,operating_rates,n)
+        close(f'operating_n{n}_stable_loop_effects',endpoints.conj().swapaxes(-1,-2)@endpoints+local_effects,I,3e-11)
+        maps,dump,bg=compose(endpoints,operating_cases,transport_effects=local_effects,separate=True)
+        close(f'operating_n{n}_instrument_completeness',maps.conj().swapaxes(-1,-2)@maps+dump+bg,I,3e-11)
+        close(f'operating_n{n}_unobserved_effect_positive',max(0.,-float(np.linalg.eigvalsh(bg).min())),tol=3e-13)
+        monitored_errors=[]
+        for idx,(case,rate,k,ed,eb) in enumerate(zip(operating_cases,operating_rates,maps,dump,bg)):
+            row=operating_metrics(k,ed,eb)
+            if rate==0:
+                close(f'operating_n{n}_{idx}_zero_background_recovery',row['unheralded_residual']/metrics(k)['conditional_infidelity'],1.,1e-10)
+            monitored=operating_metrics(k,ed,eb,background_efficiency=1.)
+            monitored_errors.append(monitored['unheralded_residual']-metrics(k)['conditional_infidelity'])
+            report['operating_curves'].append(dict(n=n,gain=case[0],delta_d=case[1],delta_r=case[2],background_rate=float(rate),
+                **{key:value for key,value in resources(n).items() if key!='n'},**row,
+                survival_code_map=packed_matrix(k[:,2:]),dump_effect=packed_matrix(ed[2:,2:]),background_effect=packed_matrix(eb[2:,2:])))
+        close(f'operating_n{n}_monitored_limit',monitored_errors,tol=3e-15)
+        print(f'n={n}: paired heralded/unheralded operating curve checked',flush=True)
+    probe_case=(.001,1e-4,0.);probe_rate=1e-4
+    ep,ef=loop_endpoints_with_effects([probe_case],[probe_rate])
+    km,ed,eb=compose(ep,[probe_case],transport_effects=ef,separate=True)
+    pair=operating_metrics(km[0],ed[0],eb[0])
+    density=laboratory_instrument(probe_case,probe_rate)
+    close('independent_density_total_probability',density['probability_sum'],1.,2e-11)
+    for key in ('heralded_fraction','unheralded_absorption_per_attempt','unheralded_residual'):
+        close('independent_density_'+key,density[key],pair[key],2e-11)
+    report['independent_density_operating_point']={k:v for k,v in density.items() if k!='probability_sum'}
     # Physical continuity and limits include every inverse and zero-area ramp.
     loops=physical_loops()
     for j,loop in enumerate(loops):
@@ -371,7 +517,7 @@ def run_checks():
         for k,(left,right) in enumerate(zip(loop,loop[1:])):
             close(f'loop{j}_join_{k}',left.h(left.duration),right.h(0),2e-14)
     report['check_count']=len(checks)
-    report['scope']='Five finite native return loops. First-order logical correction for six static generators. No endpoint projection; residual bright amplitude is included. Dump-only and additional transport-loss models are reported separately. No global optimum or hardware claim.'
+    report['scope']='Five finite native return loops. First-order logical correction for six static generators. No endpoint projection. Paired operating curves include unmonitored absorbing background outcomes in the accepted ensemble; dump monitoring is perfect. Conditional average and Bell-pair infidelities and per-attempt residuals are distinguished. Full code maps/effects are retained. No decoder threshold, global optimum or hardware claim.'
     return report
 
 
@@ -379,7 +525,7 @@ def plot(path,report):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    fig,axes=plt.subplots(2,2,figsize=(11,8),layout='constrained')
+    fig,axes=plt.subplots(3,2,figsize=(12.5,12),layout='constrained')
     ns=np.array([1,2,3])
     for kind,color in [('trine','#976b3b'),('five','#147d72')]:
         rows=[report['cases'][f'{kind}_n{n}'] for n in ns]
@@ -389,15 +535,37 @@ def plot(path,report):
         rows=[r for r in report['dump_sweep'] if r['dump_rate']==rate]
         axes[1,0].semilogy([r['total_time'] for r in rows],[r['errors'][0]['conditional_infidelity'] for r in rows],'o-',color=color,label=rf'$\kappa/a={rate:g}$')
     for n,color in zip(ns,['#147d72','#546da8','#976b3b']):
-        rows=[r for r in report['background_sweep'] if r['n']==n]
-        axes[1,1].loglog([r['background_rate'] for r in rows],[r['errors'][1]['erasure'] for r in rows],'o-',color=color,label=f'n={n}')
+        rows=[r for r in report['operating_curves'] if r['n']==n and r['gain']==.01 and r['background_rate']>0]
+        axes[1,1].loglog([r['background_rate'] for r in rows],[r['total_absorption'] for r in rows],color=color,label=f'n={n}, total')
+        axes[1,1].loglog([r['background_rate'] for r in rows],[r['heralded_fraction'] for r in rows],'--',color=color,alpha=.55)
+        for eps,style in ((.001,'-'),(.01,'--')):
+            rows=[r for r in report['operating_curves'] if r['n']==n and r['gain']==eps]
+            axes[2,0].loglog([100*r['heralded_fraction'] for r in rows],[r['unheralded_residual'] for r in rows],style,color=color,
+                             label=rf'n={n}, $\epsilon={eps:g}$')
+            axes[2,0].plot(100*rows[0]['heralded_fraction'],rows[0]['unheralded_residual'],'o',color=color,markersize=4)
+    rows=[r for r in report['operating_curves'] if r['n']==1 and r['gain']==.001 and r['background_rate']>0]
+    for field,label,color,style in [('unheralded_residual','Accepted-ensemble residual','#147d72','-'),
+                                   ('conditional_unheralded_absorption','Unobserved absorption','#976b3b','--'),
+                                   ('conditional_surviving_error','Surviving-state error','#546da8',':')]:
+        axes[2,1].loglog([r['background_rate'] for r in rows],[r[field] for r in rows],style,color=color,label=label)
     axes[0,0].set(xlabel='Return index n',ylabel='Flag probability (%)',title=r'Endpoint flags at 1% gain, $\Delta=0$',xticks=ns)
     axes[0,1].set(xlabel=r'Total duration $aT$',ylabel='Conditional infidelity',title=r'$\epsilon=10^{-3},\ \Delta_d/a=10^{-4}$')
     axes[1,0].set(xlabel=r'Total duration $aT$',ylabel='Conditional infidelity',title='Finite dump action: 8 to 40; n=1')
-    axes[1,1].set(xlabel=r'Additional transport loss rate $\gamma/a$',ylabel='Flag probability',title='Where higher n helps: background loss, 1% gain')
+    axes[1,1].set(xlabel=r'Unmonitored background rate $\gamma/a$',ylabel='Total absorption probability',title=r'1% gain, $\Delta_d/a=10^{-4}$; dashed = heralded')
+    axes[2,0].set(xlabel='Heralded fraction (%)',ylabel='Unheralded residual per accepted run',
+                  title=r'Paired operating points: $\Delta_d/a=10^{-4}$'+'\n'+r'Each curve varies $\gamma/a$ from 0 to $10^{-3}$')
+    point=min((r for r in report['operating_curves'] if r['n']==1 and r['gain']==.01),
+              key=lambda r:abs(r['background_rate']-1e-6))
+    axes[2,0].plot(100*point['heralded_fraction'],point['unheralded_residual'],'*',color='#252525',markersize=9)
+    axes[2,0].annotate(r'n=1, $\gamma/a=10^{-6}$'+'\n'+r'$(0.265\%,\ 5.93\times10^{-6})$',
+                       xy=(100*point['heralded_fraction'],point['unheralded_residual']),xytext=(.014,4e-7),
+                       arrowprops=dict(arrowstyle='->',color='#444444'),fontsize=9)
+    axes[2,1].set(xlabel=r'Unmonitored background rate $\gamma/a$',ylabel='Conditional average infidelity',
+                  title=r'Residual decomposition: n=1, $\epsilon=10^{-3}$')
     for ax in axes.flat:
-        ax.grid(alpha=.2);ax.legend(frameon=False)
-    fig.suptitle('Detuning-corrected reflection with five finite dumps')
+        ax.grid(alpha=.2);ax.legend(frameon=False,fontsize=8)
+    axes[2,0].legend(frameon=False,fontsize=8,loc='upper center',ncol=2)
+    fig.suptitle(r'Finite dumps and complete loss readout: $\kappa/a=10$, $\kappa t_d=40$ except dump sweep')
     fig.savefig(path,dpi=170)
     plt.close(fig)
 

@@ -1,0 +1,42 @@
+=== k1: h_c is q on T1's rotated slice; no pivot produces it ===
+  [PASS][  0.0s] k1a h_c = q + 2 q(.,c) q(.,c) is the identity in the seat chart
+  [PASS][  0.0s] k1b h_c(v,v) = q(Sv,Sv) with S = diag(1,1,i): h_c = q o S, the form on the slice t -> i t
+  [PASS][  0.0s] k1c S is not in O(q_C): S^T q S = I != q, det S = i
+  [PASS][  0.1s] k1d a real pivot (boost) preserves q: B^T q B = q -- it cannot produce h_c
+  [PASS][  0.1s] k1e the complexified quarter-turn W = exp(i pi/2 K) also preserves q: W^T q W = q
+  [PASS][  0.1s] k1f W sends c to i x: 'c -> iK' is a group element on the SAME form; the form change is S, not W
+=== k2: the free constant, and what pins it ===
+  [PASS][  0.1s] k2a H(u,phi) is a unit spacelike ruler: q(H,H) = 1
+  [PASS][  0.2s] k2b cost diag(1,1,kappa): depth = kappa cosh^2 u + sinh^2 u, azimuth = cosh^2 u, mixed = 0
+  [PASS][  0.2s] k2c kappa = 1 gives Codex's cosh 2u; kappa enters ONLY the depth coefficient
+  [PASS][  0.3s] k2d Codex's boundary fixture 3 is 2 kappa + 1 -- a declared kappa would move it
+  [PASS][  0.3s] k2e the S-reading pins kappa = 1: q(Sv,Sv) has coefficient exactly (i)^2 * (-1) = +1 on t^2
+=== k3: equal weights are T7b3, not a declaration ===
+  [PASS][  0.3s] k3a weighted elimination gives w1 w2 C1 C2/(w1 C1 + w2 C2)
+  [PASS][  0.3s] k3b it is invariant under C1 <-> C2 iff w1 = w2 (difference has factor (w1 - w2))
+  [PASS][  0.3s] k3c hence T7b3 (hbar <-> G symmetry of the bare tier) FORCES equal weights
+  [PASS][  0.3s] k3d with w1 = w2 = w the coefficient is w C1 C2/(C1 + C2): T7b3 fixes the RATIO of weights, not the overall scale; Codex's w = 1 is a unit convention
+=== k4: the azimuth elimination is P4's quotient ===
+  [PASS][  0.3s] k4a the minimiser Omega* = -C2 tdot/(C1 + C2) is the horizontal lift (common rotation = fibre)
+  [PASS][  0.3s] k4b the eliminated cost is the harmonic combination -- the mechanical-connection quotient metric of the fibre
+=== k5: THE FORK -- three positivisations of the ruler's own state space ===
+  [PASS][  0.4s] k5a the q-induced metric on {q = 1} is -du^2 + cosh^2 u dphi^2: depth is TIMELIKE on the ruler's own state space
+  [PASS][  0.4s] k5b that is dS_2: K = +1
+  [PASS][  0.4s] k5c (i) Codex/ambient-Wick: K = -sech^2 2u ; -1 at the orthogonal state, 0 as depth -> oo
+  [PASS][  0.4s] k5d (ii) sign-flip of dS_2: du^2 + cosh^2 u dphi^2 has K = -1 : H^2
+  [PASS][  0.5s] k5e (iii) Wick dS_2 itself, u -> i u: du^2 + cos^2 u dphi^2
+  [PASS][  0.5s] k5f     and that is the ROUND S^2: K = +1.  The Euclidean cell is the compact real form of the ruler manifold
+  [PASS][  0.6s] k5g the three depth coefficients cosh 2u, 1, 1(on S^2) are DISTINCT FUNCTIONS: a genuine fork, not a chart
+=== k6: what survives the fork and what does not ===
+  [PASS][  0.6s] k6a the fixture (u = asinh 1, v = 0, t = pi/4) is ON the ruler-plane boundary: gamma = 1
+  [PASS][  0.6s] k6b (i) gives diag(3, 1, 2/3) there: positive, finite
+  [PASS][  0.6s] k6c (ii) gives diag(1, 1, 2/3) there: positive, finite
+  [PASS][  0.7s] k6d ROBUST: both are positive-definite everywhere (all diagonal entries > 0 for real u, v)
+  [PASS][  0.7s] k6e NOT ROBUST: the depth/azimuth ratio differs -- (i) 9/2 vs (ii) 3/2 at the fixture; the approach direction to the boundary is not fixed by geometry
+
+RESULT: 29/29 checks passed in 0.7s
+VERDICT: h_c is q o S (T1's conjugator), which pins kappa = 1 -- a surplus over Codex's hand-flip.  Equal weights
+  are T7b3; the azimuth quotient is P4.  ONE declaration remains: which object the cost is quadratic ON.
+  Three positivisations of the ruler manifold dS_2 -- ambient-Wick (K = -sech^2 2u), sign-flip (H^2), Wick (S^2) --
+  are distinct, all positive and finite at gamma = 1, and disagree on the depth/azimuth weighting that decides the
+  approach direction.  The fork is OPEN; the load (Codex item 1) is its only closure.  Tier: diag(3,1,2/3) is DECLARED.

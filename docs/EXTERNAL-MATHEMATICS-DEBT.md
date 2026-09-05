@@ -136,8 +136,8 @@ These mathematical extensions are usable now. The remaining Seated Root predicti
 - **Retained quantum bridge:** adiabatic transport in a smooth isolated degenerate band is governed by its projector connection. Real Hamiltonians give real orthogonal geometric transport. Finite duration requires an adiabatic error estimate; an arbitrary perturbation need not preserve reality, degeneracy or the gap. Existing SO(k) dark-space gates and geometric phases are not claimed as inventions.
 - **Native source read first:** [REALFIBER O1–O7](</home/williaml/Cella Framework/Papers_Library/02_theorems_and_lemmas/geometric_fault_localization_and_decomposition/REALFIBER_THEOREM.md>), including its active-partition changes through zero-amplitude strata.
 - **Completed mathematical extension:** quantum targets equations (3)–(6) prove that the full real fixed-spectrum family has dark holonomy O(m−2), for m≥3. Coordinate-plane rotations and an explicit three-arc reflection generate the group. This proof is for the declared full family and allowed paths; historical novelty is not established by the comparison search.
-- **Physical continuation:** a spectator makes the reflection a measurable relative π phase. Derive finite-duration and allowed-perturbation bounds, then characterize constrained coupling graphs. Equations (7)–(8) calculate the independent many-body occupation test directly from a four-spin Hamiltonian.
-- **Status:** FULL NATIVE HOLONOMY GROUP AND IDEAL LOOP CONSTRUCTED; STANDARD ADIABATIC BRIDGE RETAINED; PHYSICAL ERROR BOUNDS AND LITERATURE ORIGINALITY OPEN.
+- **Finite-duration continuation completed:** [RF-1–7](2026-09-05-reflection-loop-finite-duration.md) prove the original loop's complete equal-duration exact return set, nonadiabatic holonomy, transient bright exposure, general Hamiltonian perturbation bounds and exact leading error coefficients. The phase, reference-axis and orientation effects are separated quantitatively. EXT-016 records the additional quantum-control background. Equations (7)–(8) of the original evaluation calculate the independent occupation test from a four-spin Hamiltonian.
+- **Status:** FULL NATIVE HOLONOMY GROUP, EXACT FINITE-TIME LOOP AND DECLARED ERROR RESPONSE CONSTRUCTED; STANDARD QUANTUM BRIDGES RETAINED. Constrained robust control design, further occupation sectors and literature originality remain open.
 
 ## EXT-013 — Quantum metastability and critical elimination
 
@@ -161,6 +161,15 @@ These mathematical extensions are usable now. The remaining Seated Root predicti
 - **Use:** comparison only, in quantum targets section 5. Noise and resources must accompany an operational sensing claim; a singular spectral coordinate alone is not a precision prediction. Regularity of a finite-time matrix exponential is retained elementary linear/analytic background, not attributed to a new theorem here.
 - **Native continuation:** consider exceptional-point sensing if a resolved response calculation yields a new precision bound or protocol under a specified noise model. No such sensing model or bound is claimed in this evaluation.
 - **Status:** COMPARISON RECORDED; EXTERNAL SENSING ROUTE DEFERRED.
+
+## EXT-016 — Finite-time holonomic control and perturbation estimates
+
+- **Sources read:** [Berry, Transitionless quantum driving (2009)](https://michaelberryphysics.wordpress.com/wp-content/uploads/2013/07/berry415.pdf), section 2; [Pinske–Scheel, Geometrically robust linear optics from non-Abelian geometric phases (2022)](https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.4.023086), section II and the abstract.
+- **Retained content:** the zero projected mean-energy criterion for nonadiabatic holonomy and the transitionless-driving construction. Additional retained standard background, without a new online source: finite-dimensional Hermitian matrix exponentials, Duhamel/Dyson interaction-picture estimates, the Hermitian eigenvalue perturbation bound, and RK4 numerical integration as an independent verification method. The bright-loss calculation reuses the declared GKSL realization in EXT-010.
+- **Exact native use:** [finite-duration reflection analysis](2026-09-05-reflection-loop-finite-duration.md), RF-1–7. The three native frames give exact constant moving-frame generators and propagators. Their product proves the complete equal-duration return set, zero projected mean energy, finite-time error/exposure bounds, independent gain-error quadratic form and its quartic cancellation direction. Exact phase filters and a conjugated reference-mixing loop quantify distinct perturbation effects.
+- **Hypotheses:** finite-level angular-frequency Hamiltonian, prescribed real triad path and reference, positive gaps and fixed arc endpoints; equal constant-speed arcs for the complete return classification. Arbitrary integrable Hermitian perturbations have the Duhamel bound and first-order functional; the explicit Taylor coefficients are at fixed return index. Isolated real eigenline topology protects its sign under the stated loop deformations. Reference coupling, shifted dark energy and finite-speed errors have separately calculated effects.
+- **Full control-class extension:** RF-7 gives every Hermitian correction for exact parallel transport of the prescribed projector, its free bright block and minimum correction norm. It identifies the required imaginary coupling and proves the obstruction to exactly transporting any nonconstant real projector with real symmetric controls. This optional control class is additional to the original real loop; transitionless driving itself is retained prior work.
+- **Status:** ORIGINAL LOOP FINITE-TIME RETURNS AND DECLARED PERTURBATION RESPONSE PROVED; STANDARD QUANTUM CONTROL RETAINED. Robust control design under specified hardware and noise constraints is the next target; no general optimal-time or historical-originality claim.
 
 ## Search receipts
 
@@ -223,6 +232,18 @@ Exact online queries, in search order (batch 2 restricted to arxiv.org):
 - `"Operator Spreading in Random Unitary Circuits"`
 
 Sources actually read, read depth, adoption and hypotheses are recorded in EXT-010–015. Abstract-only comparisons are identified there. Other returned candidates were not adopted, and no external code was copied. The [evaluation](2026-09-05-quantum-prediction-targets.md), [exact runner](../quantum_prediction_probes.py) and [receipt](quantum-prediction-probes.json) distinguish derived native extensions, standard quantum realizations and prospective predictions.
+
+### SR-004 — Reflection-loop finite-duration continuation, 2026-09-05
+
+Read REALFIBER O1–O7 and the live native holonomy proof before adopting control background. Cella DAG queries covered adiabatic work and perturbation; the returned diagnostic/curvature claims were not used as quantum-control theorems. A targeted search of the backing theorem library did not supply a finite-time propagator for this loop; it was derived from its actual frames. No corpus-wide absence claim follows from these searches.
+
+Exact online queries:
+
+- `STIRAP exact solution sine cosine pulses finite time complete population transfer`
+- `transitionless quantum driving dark state counterdiabatic imaginary coupling Berry 2009`
+- `adiabatic geometric phase real Hamiltonian sign topological perturbation dark state holonomy`
+
+Read Berry's author-hosted primary PDF, section 2, and Pinske–Scheel's primary PDF, section II; their precise use is in EXT-016. The Berry university abstract and Pinske–Scheel journal abstract were also inspected. The [STIRAP candidate PDF](https://quantum-bg.org/rangelov18.pdf) returned metadata, but subsequent text retrieval timed out; no result from it was adopted. Other returned candidates were not adopted. No external code was copied. Exact proofs, symbolic checks and numerical integration evidence are separated in the [continuation](2026-09-05-reflection-loop-finite-duration.md) and its [receipt](reflection-loop-dynamics-checks.json).
 
 ## Maintenance rule
 

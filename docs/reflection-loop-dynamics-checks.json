@@ -1,0 +1,186 @@
+{
+  "symbolic_check_count": 34,
+  "symbolic_checks": {
+    "frame_1_generator": true,
+    "frame_1_hermiticity": true,
+    "frame_1_minimal_polynomial": true,
+    "frame_1_counterdiabatic_tracking": true,
+    "frame_1_counterdiabatic_frame_cancellation": true,
+    "frame_1_cd_square": true,
+    "frame_2_generator": true,
+    "frame_2_hermiticity": true,
+    "frame_2_minimal_polynomial": true,
+    "frame_2_counterdiabatic_tracking": true,
+    "frame_2_counterdiabatic_frame_cancellation": true,
+    "frame_2_cd_square": true,
+    "frame_3_generator": true,
+    "frame_3_hermiticity": true,
+    "frame_3_minimal_polynomial": true,
+    "frame_3_counterdiabatic_tracking": true,
+    "frame_3_counterdiabatic_frame_cancellation": true,
+    "frame_3_cd_square": true,
+    "equal_family_imaginary_return_amplitude": true,
+    "odd_half_cycle_exclusion": true,
+    "even_full_cycle_return": true,
+    "single_arc_distance_squared": true,
+    "single_arc_one_zero_mean_energy": true,
+    "single_arc_two_zero_mean_energy": true,
+    "cycle_average_bright_population": true,
+    "first_resonance_uniform_edge_offset_integral": true,
+    "resonant_exponential_first_derivative": true,
+    "resonant_exponential_second_derivative": true,
+    "opposite_outer_second_order_amplitude": true,
+    "independent_gain_error_vector": true,
+    "gain_error_quadratic_form": true,
+    "rotated_gate_retains_parity": true,
+    "rotated_gate_error_norm_squared": true,
+    "spectator_phase_interference": true
+  },
+  "numerical_check_count": 28,
+  "numerical_checks": {
+    "exact_resonance_n1": {
+      "error": 7.114554987125878e-16,
+      "tolerance": 1e-10
+    },
+    "exact_resonance_n2": {
+      "error": 3.829223347861162e-15,
+      "tolerance": 1e-10
+    },
+    "exact_resonance_n4": {
+      "error": 2.933406169118489e-15,
+      "tolerance": 1e-10
+    },
+    "unequal_resonance_family": {
+      "error": 3.070236625957627e-16,
+      "tolerance": 1e-10
+    },
+    "laboratory_ode_step_doubling": {
+      "value": 0.06250008668745372,
+      "upper_bound": 0.07
+    },
+    "laboratory_ode_exact_gate": {
+      "error": 4.924650531118457e-10,
+      "tolerance": 1e-09
+    },
+    "laboratory_ode_unitarity": {
+      "error": 6.622036252679209e-12,
+      "tolerance": 1e-10
+    },
+    "laboratory_ode_unequal_off_resonance": {
+      "error": 4.4059133900931995e-10,
+      "tolerance": 2e-09
+    },
+    "common_gain_quadratic_coefficient": {
+      "error": 0.0019685686991266493,
+      "tolerance": 0.01
+    },
+    "opposite_outer_quartic_coefficient": {
+      "error": 4.8170195832142326e-08,
+      "tolerance": 0.01
+    },
+    "independent_gain_linear_response": {
+      "error": 8.42435467671669e-10,
+      "tolerance": 2e-08
+    },
+    "finite_time_bound_0.2": {
+      "value": 1.9679475170307066,
+      "upper_bound": 2.000000000001
+    },
+    "finite_time_bound_1.3": {
+      "value": 1.3136040197918528,
+      "upper_bound": 2.000000000001
+    },
+    "finite_time_bound_4.7": {
+      "value": 0.44725892549400753,
+      "upper_bound": 1.1717991279787445
+    },
+    "finite_time_bound_10.2": {
+      "value": 0.4313101713383765,
+      "upper_bound": 0.8232160443995425
+    },
+    "finite_time_bound_23.0": {
+      "value": 0.1634105404114589,
+      "upper_bound": 0.3524821585655904
+    },
+    "transient_bright_exposure": {
+      "error": 7.993605777301127e-15,
+      "tolerance": 1e-10
+    },
+    "equal_integrated_site_occupations": {
+      "error": 4.440892098500626e-15,
+      "tolerance": 1e-10
+    },
+    "interaction_integral_hermiticity": {
+      "error": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    "traceless_active_detuning_phase_cancellation": {
+      "error": 1.4289784633358948e-16,
+      "tolerance": 1e-10
+    },
+    "spectator_detuning_filter": {
+      "error": 8.881784197001252e-16,
+      "tolerance": 1e-10
+    },
+    "uniform_edge_offset_finite_time_phase": {
+      "error": 1.1657349900673675e-15,
+      "tolerance": 1e-10
+    },
+    "uniform_edge_offset_phase_n2": {
+      "error": 1.8873791418639317e-15,
+      "tolerance": 1e-10
+    },
+    "uniform_edge_offset_phase_n3": {
+      "error": 2.1094237540117663e-15,
+      "tolerance": 1e-10
+    },
+    "duhamel_perturbation_bound": {
+      "value": 0.005475294373248799,
+      "upper_bound": 0.012775703829316877
+    },
+    "interaction_expansion_remainder": {
+      "value": 1.4989449203127777e-05,
+      "upper_bound": 8.161029139150763e-05
+    },
+    "laboratory_ode_rotated_reflection": {
+      "error": 4.924648093831974e-10,
+      "tolerance": 1e-09
+    },
+    "rotated_reflection_axis_error": {
+      "error": 9.137135492665038e-14,
+      "tolerance": 1e-09
+    }
+  },
+  "return_family": [
+    {
+      "n": 1,
+      "gap_times_total_duration": 18.251004041881252,
+      "peak_bright_population": 0.234375,
+      "gap_times_integrated_bright_population": 2.1744360284272584,
+      "endpoint_leakage_at_one_percent_common_gain_error": 0.0010614581601277272
+    },
+    {
+      "n": 2,
+      "gap_times_total_duration": 37.40342796929737,
+      "peak_bright_population": 0.0615234375,
+      "gap_times_integrated_bright_population": 1.1551595796181926,
+      "endpoint_leakage_at_one_percent_common_gain_error": 0.0011564491816512899
+    },
+    {
+      "n": 3,
+      "gap_times_total_duration": 56.351976150357864,
+      "peak_bright_population": 0.027584876543209874,
+      "gap_times_integrated_bright_population": 0.7785899482579826,
+      "endpoint_leakage_at_one_percent_common_gain_error": 0.0011562326077288775
+    },
+    {
+      "n": 4,
+      "gap_times_total_duration": 75.25081743825125,
+      "peak_bright_population": 0.01556396484375,
+      "gap_times_integrated_bright_population": 0.5861746567112314,
+      "endpoint_leakage_at_one_percent_common_gain_error": 0.001135000332288324
+    }
+  ],
+  "scope": "Exact closed-system equal-speed loop and declared perturbations; numerical ODE probes separately identified.",
+  "novelty": "Mathematical continuation of the native family; historical originality not established."
+}

@@ -103,7 +103,7 @@ This is a full mathematical extension of the inspected Cella family. Its origina
 
 The determinant of real dark-space holonomy is a discrete invariant: it cannot change continuously under deformations preserving a real isolated band and the closed-loop identification. This protects the **orientation parity**. It does not protect every matrix entry of a higher-dimensional gate or cancel arbitrary dynamical phases. Complex couplings, band mixing and uncontrolled splitting of the dark band require their own error analysis.
 
-**Next work:** classify the physically allowed perturbations and derive finite-duration error bounds for (6); compare with a fixed-star protocol at equal gap, duration and control resources. Then determine which sparse coupling graphs still generate the reflection and rotations. This is the fastest route to a concrete quantum-information contribution.
+**Finite-duration continuation:** [RF-1–7](2026-09-05-reflection-loop-finite-duration.md) now prove the complete equal-duration exact return set, nonadiabatic holonomy, transient bright exposure and the leading responses to gain, detuning, unwanted-edge and reference-axis errors. General perturbations have a norm bound and an exact first-order error functional. The next control target is cancellation of common amplitude errors while controlling reference phase and transient loss; sparse-graph and equal-resource protocol comparisons remain subsequent targets.
 
 ### Immediate many-body continuation: occupation changes the protection
 

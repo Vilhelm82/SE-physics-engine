@@ -31,6 +31,13 @@
 #       by a path in state space.  Mod the deck the pinch resolves to a SEGMENT xi in [0, 1]:
 #       seat-alive (0) to seat-null (1).
 # [First run: q3c/q3d were placeholders, not computations (rule 12); replaced with the horizon xi-values and nu(a,0) = nu*.]
+# DYNAMICAL COMPLEMENT (Codex, docs/2026-09-05-cella-predictive-state.md sec. 3-4, 63d951e, recorded 2026-09-05 evening):
+#   q5's 'base-field observables are sheet-blind' is the STATIC statement.  Under the constant passive load
+#   M = [[mu,beta],[beta,nu]] the deck is tau(xi,d) = (-xi,-d) and it acts on the INPUTS too (X_d flips, e_d -> -e_d),
+#   so equal F under tau does not identify two fixed-input experiments: at d = 0 the two null limits xi = +-1 give
+#   OPPOSITE signs of dF/dt under the same two-step input (dF/dt = -2 mu nu t xi/p, verified independently).  The
+#   response distinguishes the sheets; (xi, d) is the exact minimum predictive state at the pinch; 'a finite sheet label
+#   cannot replace an interval of distinguishable directions' (hers).  q3/q8 stand as algebra; this is what they mean.
 # TIER: [DERIVED | T7a's declared signature].  Kill: tau failing to send xi -> -xi; or grad delta not
 #   parallel to grad eps at the pinch; or a realisable loop about the pinch line.
 # =============================================================================

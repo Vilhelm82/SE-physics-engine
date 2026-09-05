@@ -31,6 +31,10 @@
 #       block should be.  Different object, no tension.  The conflation was mine.
 #   o8  AT THE PINCH the f^2 law is SILENT: its hypothesis is a smooth defining function of a two-sided face; F has no
 #       limit there (PINCH-1) and {F = 0} is not smooth.  Codex's clarified condition cannot even be stated at the pinch.
+# FIRST CONCRETE LOAD (Codex, docs/2026-09-05-cella-predictive-state.md sec. 4, 63d951e): the constant passive family
+#   M = [[mu,beta],[beta,nu]] on the resolved chart is state-independent, so under it the horizon is NOT a constrained-
+#   output face -- neither open nor short; o3's 'the load decides' is answered for this member with 'constant'.  The
+#   horizon then appears only in F's dynamics.  Declared (she says so); recorded here so o3 is not read as open-ended.
 # TIER: o1-o2, o6 (the sign), o7 [DERIVED]; o3-o5, o8 [DERIVED | Codex's Thm 1 as stated]; the fork in o6 is OPEN.
 # KILL: an identity in the seat's algebra fixing Z_s and Z_l separately (not just their ratio) closes o3 and kills
 #   'undetermined'; a passive response ~ F on both sides would refute o6's dichotomy (it cannot exist -- Thm 1).

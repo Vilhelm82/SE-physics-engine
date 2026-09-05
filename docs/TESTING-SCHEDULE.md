@@ -93,14 +93,30 @@
   0d. **RULINGS OWED (Will):** (i) the letter of the rod-free definition vs normalised cosines
      (CURV-1); (ii) "identity" baseline-relative or mod 2 pi; (iii) EQ-1 -- is Tolman's
      condition a principle you own or a fact Mercury owns?  Each changes a label, not a number.
-  0e. **NEXT TESTS WITH KILL NUMBERS:** (a) rotation beyond first order in J -- the full
-     twisting river / Kerr quadrupole: does linear superposition's failure show up as a
-     definite second-order prediction? (b) the Hubble river v = H r (uniform source: Poisson
+  0e. **NEXT TESTS WITH KILL NUMBERS:** (a) **DONE as THM-N** -- rotation beyond first order
+     in J, `thm_n_kerr_quadrupole.py` (8/8 exact checks) and
+     `test_thm_n_kerr_quadrupole.py` (4/4): the minimal THM-M continuation is KILLED before
+     the Kerr quadrupole gate.  It produces a forbidden direction-dependent P2/r term
+     (-2/9 component-only; -1/9 with the field argument also transformed); ignoring that,
+     its formal quadrupole is only 3/10 of Kerr.  THM-M remains valid at its declared first-
+     order scope; a nonlinear source/field closure is now a named derivation debt.  Report:
+     `docs/2026-09-03-thm-target-N.md`. (b) the Hubble river v = H r (uniform source: Poisson
      with constant density) -- does the pinned family reproduce flat-FLRW kinematics and the
      de Sitter horizon as horizon-vanishing? (c) the entropic-gravity objections (neutron
      interferometry) as an owed comparison against SCREEN-1/THERM-1 -- the model inherits them.
   0f. Also open from CURV-1: the interior antipodal collisions at r_s Delta/sin^2(theta_12) --
      candidate-new, lineage unsearched; THM-J's pole obstruction as a general statement.
+  0g. **THM-TARGET O** DONE 2026-09-04 (`thm_o_strain_law.py` 33/33, 114.7 s, `714bf5c`; report
+     `docs/2026-09-04-thm-target-O.md`): the strain law is Gauss + Codazzi on the seat's flat rods --
+     G_nn = e_2(sym grad v) IDENTICALLY, G_ni = -(1/2) curl curl v; e_2 presented, not selected.
+     NORMAL-1 declared (vacuum through the normal). Pinning derived a second time (exponent),
+     c_2 = 0, A/r^3 exponent from Codazzi; first-order drag on flat rods is exact vacuum (10/10).
+     Second order: exponents (l+1)/2, -l/2 -- flat rods carry mass and boost and NO other multipole.
+     THM-N Gate 1 PASSED by structure; Gate 2 NOT REACHABLE (no R^-5 slot; half-integer tail).
+     FORK (b): rods bend at O(J^2); rests on O-4e + K-6 + J_2, not on the tangential components.
+     Gate 2 re-declared (hole vs shell). Scaffold register opened. NEXT: sourced Gauss from MASS-1;
+     sourced Codazzi for the drag amplitude; tangential-law candidates on a STATIC OBLATE source
+     before any spin; BEND-1.
   1. ~~**D1 two-seat interior**~~ DONE 2026-09-02, `thm_h2_d1.py` 30/30 (`b4ac768`):
      no rod-free click-invariant diverges at mu = 0; every divergence there has a
      rod in its denominator. The falsifier did not fire; it left CURV-1 as the

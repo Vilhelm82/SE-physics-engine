@@ -132,16 +132,16 @@ def compressed_gain(error=0., n=1):
     return out
 
 
-def compressed_jets(steps=100, n=1):
-    """Integrate eleven laboratory perturbations together on one base waveform.
+def compressed_jets(steps=100, n=1, parameter_tuple=None):
+    """Integrate rotated laboratory perturbations together on one base waveform.
 
     Each physical reference projector is pulled back by its compiled rotation.
     Time stretching and the detuning sign inside inverse adjoints are explicit.
     """
-    _, angles, stretches, signs = parameters()
+    _, angles, stretches, signs = parameters() if parameter_tuple is None else parameter_tuple
     rotations = np.array([rotation(a) for a in angles])
     noises = rotations.transpose(0, 2, 1) @ REFERENCE @ rotations
-    state = np.zeros((11, len(POWERS), 4, 4), complex)
+    state = np.zeros((len(angles), len(POWERS), 4, 4), complex)
     state[:, 0] = EYE
     position = {power: j for j, power in enumerate(POWERS)}
     for stage in ended_composite(n):

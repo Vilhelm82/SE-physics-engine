@@ -1,0 +1,33 @@
+=== h1: S realises a <-> b with gamma fixed (T7b3) ===
+  [PASS][  0.0s] h1a S: a -> b, b -> a, gamma -> gamma
+=== h2: at the frame level the swap reverses orientation ===
+  [PASS][  0.0s] h2a S sends D = cosh l1 cosh l2 sin t to -D
+  [PASS][  0.0s] h2b T5c's generators: Gamma_C^2 = -1, Gamma_H^2 = Gamma_G^2 = 1, pairwise anticommuting
+  [PASS][  0.0s] h2c swapping the ruler generators flips the spinor trace: tr(C G H) = -tr(C H G)  (T5c 2c) -- swap = sheet flip
+=== h3: two lifts of a <-> b; they differ by the deck ===
+  [PASS][  0.0s] h3a S' = (l2, l1, +t) ALSO realises a <-> b with gamma fixed
+  [PASS][  0.0s] h3b S' preserves D; S = tau o S'
+  [PASS][  0.0s] h3c the Gram is invariant under both lifts (T7b3a): 'swap hbar and G' is defined on the Gram only up to the deck
+=== h4: the base-field observables are hbar/G-blind and sheet-blind for the same reason ===
+  [PASS][  0.0s] h4a F, eta, delta are symmetric in (a, b)
+  [PASS][  0.0s] h4b and in seat coordinates they are even in t (deck-blind): the two blindnesses coincide
+=== h5: the two resolved charts, exchanged by the swap ===
+  [PASS][  0.1s] h5a Codex's F = (1 - xi^2)/(1 + a^2) identically (d^2 = delta)
+  [PASS][  0.1s] h5b the companion F = (1 - xi'^2)/(1 + b^2) identically: G's depth normalises it
+  [PASS][  0.1s] h5c under S (a <-> b, d -> -d): xi -> -xi'.  'Which ruler is hbar' = 'which depth normalises the chart'; the sign is the sheet
+=== h6: where the swap IS the deck ===
+  [PASS][  0.1s] h6a xi_S - tau(xi) = (b - a)(1 + gamma)/d exactly
+  [PASS][  0.1s] h6b so S = tau on xi precisely on {a = b} u {gamma = -1}: the l1 = l2 plane (containing P_+) and the ENTIRE sigma = -1 horizon
+  [PASS][  0.1s] h6c on the sigma = +1 horizon S FIXES xi and flips d: not the deck
+=== h7: why the two horizons differ (T7g) ===
+  [PASS][  0.1s] h7a sigma = +1: n0 = h - g is null (rulers ALIGNED); sigma = -1: n0 = h + g is null (rulers ANTI-ALIGNED)
+  [PASS][  0.1s] h7b reversing the order of an anti-aligned pair is the deck; of an aligned pair it is orientation-only: LABEL-3's sign split between the two horizons
+=== h8: how the distinction is observed ===
+  [PASS][  0.1s] h8a the hbar/G distinction is the sheet (h2); the sheet is observed by the sign of dF/dt under fixed input (Codex 63d951e, verified 86f3ebc): the distinction is DYNAMICAL, never static
+
+RESULT: 18/18 checks passed in 0.1s
+VERDICT: 'Which ruler is hbar' is the orientation of the frame.  Swapping the rulers reverses D (both in the seat's
+  coordinates and as the Clifford trace); the Gram cannot see it for the same reason it cannot see the deck, so
+  T7b3's silence and T7c's non-injectivity are one blindness.  On the l1 = l2 plane and on the whole sigma = -1
+  horizon the swap IS the deck; on the sigma = +1 horizon it fixes the resolved direction and flips only d.  The
+  distinction enters at the frame level and is read dynamically, by the sign of dF/dt under a fixed input.

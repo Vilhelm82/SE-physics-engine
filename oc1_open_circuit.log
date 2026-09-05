@@ -1,0 +1,37 @@
+=== o1: the divider identity ===
+  [PASS][  0.1s] o1a V_out/V_in = Z_l/(Z_s+Z_l) = 1/(1 + Z_s/Z_l): N^2 = 1/(1+eta) reads eta = Z_s/Z_l
+  [PASS][  0.1s] o1b and N^2 = eps/delta = (1-gamma^2)/(-det G) (T7e e2), consistent with eta = W/eps
+=== o2: the seat's eta diverges through the denominator ===
+  [PASS][  0.1s] o2a at (a,b) = (2,1), gamma -> 1: eps -> 0, W -> (a-b)^2 = 1 finite, eta -> oo
+=== o3: open or short is not decided by the ratio ===
+  [PASS][  0.1s] o3a (Z_s, Z_l) = (W, eps) gives eta and has Z_l -> 0: a SHORT
+  [PASS][  0.1s] o3b (Z_s, Z_l) = (1/eps, 1/W) gives the SAME eta and has Z_s -> oo: an OPEN circuit
+  [PASS][  0.1s] o3c (Z_s, Z_l) = k (W, eps) for ANY k(a,b,gamma) > 0 gives eta: the ratio fixes one function, the divider has two
+  [PASS][  0.1s] o3d so 'horizon = open circuit' is a hypothesis the seat's algebra cannot confirm or refute: one absolute impedance is missing (THM-K(a): Z free)
+=== o4: what the two readings agree and disagree on ===
+  [PASS][  0.1s] o4a OPEN (Z_s -> oo): I -> 0, P_l -> 0, P_s -> 0 -- everything stops
+  [PASS][  0.1s] o4b SHORT (Z_l -> 0): I -> V/Z_s, P_l -> 0, P_s -> V^2/Z_s -- the source keeps dissipating, nothing delivered
+  [PASS][  0.1s] o4c 'time = work through the load': P_l -> 0 under BOTH readings; the readings differ only in the source's fate
+=== o5: Codex's f^2 law, both ways round ===
+  [PASS][  0.1s] o5a OPEN: the current is the constrained output; a nonnegative smooth Y_R with a two-sided zero at f = 0 is O(f^2) (Codex Thm 1) -- Y_R = f^2 y realises it, Y_R = |f| or f do not (not smooth / not nonneg)
+  [PASS][  0.1s] o5b SHORT: the load voltage is the constrained output (vanishes for every flow); the same law applies to the load's Z_R: O(f^2)
+  [PASS][  0.1s] o5c under either reading SOMETHING dissipative is ~ f^2 at the face; the readings disagree about WHICH port
+=== o6: passivity against the sign of eps -- the fork ===
+  [PASS][  0.1s] o6a eps = 1 - gamma^2 is POSITIVE at gamma = 1 - s and NEGATIVE at gamma = 1 + s: a first-order, sign-changing zero
+  [PASS][  0.1s] o6b F = eps/delta changes sign with it (delta > 0 both sides near the point): F < 0 in the interior sector (T7f)
+  [PASS][  0.1s] o6c a response proportional to eps (or F) is NOT nonnegative on both sides: it cannot be a passive R (Thm 1's hypothesis fails); F^2 can
+  [PASS][  0.1s] o6d FORK recorded: (i) R ~ F^2 -- passive on both sides, the interior is passive; (ii) R ~ F -- passive outside, ACTIVE inside (negative resistance): the interior PUMPS. The seat's algebra does not choose.
+=== o7: KIN-1 is not in tension with the divisor law -- my conflation, corrected ===
+  [PASS][  0.1s] o7a KIN-1's kinetic forms at the horizon fixture are diag(3,1,2/3) and diag(1,1,2/3): finite, nonzero
+  [PASS][  0.1s] o7b a KINETIC block is conservative and is not the dissipative R of any constrained output; Thm 1 does not apply to it. No tension. (Correction to Claire's overlap note.)
+=== o8: at the pinch the law is silent ===
+  [PASS][  0.2s] o8a F has no limit at the pinch (0,0,1): two approaches give 2/3 and 1 (PINCH-1 p8a)
+  [PASS][  0.2s] o8b so {F = 0} has no smooth defining function through the pinch and Thm 1's hypothesis (a two-sided coordinate hypersurface) cannot be stated there: the f^2 law is SILENT at the pinch
+
+RESULT: 21/21 checks passed in 0.2s
+VERDICT: The seat's algebra fixes eta = Z_s/Z_l = W/eps and nothing else: open (Z_s -> oo) and short (Z_l -> 0) are
+  indistinguishable to it -- 'horizon = open circuit' is a hypothesis needing one absolute impedance (THM-K(a)'s Z).
+  Both readings stop the work through the load; they differ in whether the source keeps burning.  Codex's f^2 law
+  applies under either reading to a DIFFERENT port.  Passivity plus the sign change of eps across the horizon forces
+  a fork: response ~ F^2 (passive interior) or ~ F (ACTIVE interior, the white-hole sheet in circuit language).
+  KIN-1's kinetic forms are a different block; the tension I claimed was a conflation.  The law is silent at the pinch.

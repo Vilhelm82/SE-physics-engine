@@ -33,6 +33,7 @@
 #       (a first draft used eps(Z1-Z2): that is the LOGICAL Z inside the DFS and leaks nothing -- harness bug, recorded)
 #   B11 Exceptional point       H = [[i g, k],[k, -i g]]: eigen-splitting vs propagator at the EP -> splitting ~ sqrt(eps), propagator FINITE [EXACT]
 #   B12 Will's loop, exact return  ODE on the 3-arc loop at tau_n = (pi/2a)sqrt(16n^2-1) -> U = R (+) 1 EXACTLY (RF-2), n = 1, 2  [EXACT]
+#   B16 Will's eleven-block compression (CM): the eight moment/phase conditions and coefficient (11) exactly from the centres; witnesses NUMERICAL [EXACT / NUMERICAL]
 #   B15 Will's composite (CP)      ODE for F S F+ S F with backward-playback inverse -> leak 1.06e-3 -> 3.22e-7 at +1% gain; leading orders eq. (7) [EXACT / ASYMPTOTIC]
 #   B13 Surface-code threshold  --                                          -> ~1% circuit-level (numerical), exact value OPEN [OPEN]
 #   B14 Non-Markovian memory advantage bound                                -> OPEN (no closed form)                     [OPEN]
@@ -224,6 +225,30 @@ bench("B15 Will's composite F S F+ S F, +1% common gain, n=1 (CP-2): single leak
 bench("B15a same, leading-order formulas (CP-2 eq. 7) at eps = 1e-3 where they are accurate to ~1e-3 relative", ASYMP,
       dict(n=1, eps=1e-3, f=1e-3, sidedness="two", gap=1.0, order=4),
       lambda d: cp_known(d)[1], lambda d: cp_compute(d)[1])
+
+# ---------------- B16 Will's eleven-block compression (CM-2/3/4): the algebraic half ----------------
+# Centres from docs/2026-09-05-reflection-loop-compression.md eq. (9); the eight conditions (4), (5), (8) and the
+# coefficient (11) are checked here EXACTLY from those centres (independent of the runner).  The finite witnesses
+# (joint infidelities 1.53140e-10 at n=1, 2.44377e-9 at n=2) require integrating the 187-stage waveform; that is
+# recorded as NUMERICAL with Will's reflection_loop_compression.py as the source until an independent stage
+# integrator exists here.  Labelled as such, not dressed as a receipt.
+def cm_compute(d):
+    b = np.array([-0.3815850024, -1.3390135686, -2.5280157828, 2.6041829583, 1.4660588421]); w = np.array([1.2644794881, 1.0639750241, 1.1096018909])
+    beta = np.concatenate([b, [0.0], -b[::-1]]); s = np.array([1, w[0], w[1], w[2], 1, 1, 1, w[2], w[1], w[0], 1.])
+    sig = np.array([(-1)**j for j in range(11)]); phi = 0.; alpha = np.zeros(11)
+    for j in range(11): alpha[j] = phi + sig[j]*beta[j]; phi += 2*sig[j]*beta[j]
+    m4 = max(abs((s*np.exp(1j*(k*beta + l*alpha))).sum()) for k, l in [(1, 0), (2, 0), (1, 2), (1, -2), (2, 2), (2, -2)])
+    m5 = abs((s*np.sin(2*alpha)).sum()); m8 = abs((sig*np.exp(2j*beta)).sum())
+    v = (sig*np.cos(beta)).sum(); r1 = 1 - 1/16; b1 = math.pi*r1/2
+    coef = 15*b1**2*(math.pi/3)**2/2*v**2
+    return (m4, m5, m8, v, coef, s.sum(), 78.280/20.578)
+bench("B16 Will's eleven-block compression: moment conditions (4),(5),(8), v, gain coefficient (11), W, exposure ratio", EXACT,
+      dict(f=None, order=4, sidedness="two"),
+      lambda d: (0.0, 0.0, 0.0, 0.68870509679, 8.45994228, 11.876112806, 78.280/20.578), cm_compute,
+      "residuals at the printed 10-digit centres are ~1e-9; the certified root is at 1e-40 (interval Newton, his runner)")
+bench("B16n Will's eleven-block compression: finite joint witnesses (eps=1e-3, D/a=1e-4) at n=1,2 -- NOT independently integrated here", NUMER,
+      dict(f=None, source="reflection_loop_compression.py (Will); moments and drift cancellation verified there at 1e-23"),
+      lambda d: (1.53140e-10, 2.44377e-9), lambda d: (1.53140e-10, 2.44377e-9, float("nan")), "recorded from Will's runner; independent stage integration owed")
 
 # ---------------- B13, B14 open ----------------
 bench("B13 surface-code threshold, circuit-level depolarising noise", OPEN, dict(f=None, note="numerical ~0.5-1%; exact value open"), None, lambda d: None)

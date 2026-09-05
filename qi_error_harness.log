@@ -14,8 +14,10 @@ B12 Will's reflection loop: exact return at tau_n (RF-2), n=1          EXACT    
 B12b Will's reflection loop: exact return at tau_n (RF-2), n=2         EXACT       REPRODUCED                                                                0           - UNJUDGED
 B15 Will's composite F S F+ S F, +1% common gain, n=1 (CP-2): single l EXACT       REPRODUCED                                                   0.00106146,...      0.0001 BREAKS
 B15a same, leading-order formulas (CP-2 eq. 7) at eps = 1e-3 where the ASYMPTOTIC  REPRODUCED(asymp)                                               3.56723e-11       1e-06 BREAKS
+B16 Will's eleven-block compression: moment conditions (4),(5),(8), v, EXACT       REPRODUCED                                                            0,...           - UNJUDGED
+B16n Will's eleven-block compression: finite joint witnesses (eps=1e-3 NUMERICAL   measured sign 1.5314e-10, leak 2.44e-09, exponent na         1.5314e-10,...           - UNJUDGED
 B13 surface-code threshold, circuit-level depolarising noise           OPEN        OPEN                                                                   open           - UNJUDGED
 B14 non-Markovian memory advantage for a logical lifetime              OPEN        OPEN                                                                   open           - UNJUDGED
 
-HARNESS: 15/15 exact/asymptotic benchmarks reproduced from first principles.
-CANDIDATE 'example_divisor_candidate': MATCH=1, BREAKS=9, UNJUDGED=7
+HARNESS: 16/16 exact/asymptotic benchmarks reproduced from first principles.
+CANDIDATE 'example_divisor_candidate': MATCH=1, BREAKS=9, UNJUDGED=9

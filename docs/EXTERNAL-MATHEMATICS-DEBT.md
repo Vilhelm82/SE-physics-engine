@@ -214,6 +214,17 @@ These mathematical extensions are usable now. The remaining Seated Root predicti
 - **Circuit boundary:** the local runner uses the source's seven CNOT-layer ordering, independently assembled from the permutation matrices. Both ancilla families are reset at the beginning and read at the end of each cycle; the extra waits have explicit idle noise. Each layer is checked for qubit collisions. The paper's threshold and circuit distance are not imported for this noise/endpoint convention. The noiseless circuit, actual fault syndromes and decoded logical outcomes determine the tested performance.
 - **Status:** STANDARD CODE CONSTRUCTION RETAINED; LOCAL CODE AND CIRCUIT REALIZATION AVAILABLE. No general qLDPC threshold or native entangling-gate construction is inferred.
 
+## EXT-021 — Erasure-QEC field comparison and implementation targets
+
+- **Use, 6 September 2026:** comparison of the native five-loop/QEC results against published gates, circuits and decoders. Native inputs inspected: the quantum-work report, distance-code report, full QEC receipt and EXT-016–020. No external pulse, channel, decoder or theorem was added to the runner in this comparison.
+- **Physical one-qubit benchmark:** [Levine et al., PRX 14, 011051 (2024)](https://arxiv.org/abs/2307.08737), abstract: measured dual-rail gate erasure `2.19(2) × 10⁻³`, residual errors about forty times smaller, and mid-circuit erasure checks with less than 0.1% added dephasing. The native repaired/randomized point has `h=0.00265055`, conditional nonidentity Pauli probability `4.45092 × 10⁻⁶`, and per-attempt unheralded Pauli probability `(1−h)p=4.43912 × 10⁻⁶`. Its ratio `h/[(1−h)p]=597.09` is a model result; the experimental residual metric, controls and costs are not identical.
+- **Current entangling-gate benchmark:** [D-Wave Quantum Inc., Nature, 5 August 2026](https://www.nature.com/articles/s41586-026-10822-y), abstract, gate benchmarking, discussion and QEC Methods: a measured approximately 500 ns cavity dual-rail CZ with approximately 0.5% erasure and residual Pauli errors below 0.1%. Its preliminary code comparison models CZ errors; the authors explicitly leave other operation errors for more complete simulations. This is a physical two-qubit construction. The native QEC runner currently supplies syndrome CNOT noise independently of its one-qubit instrument.
+- **Surface-code hardware benchmark:** [Google Quantum AI, Nature 638 (2025)](https://www.nature.com/articles/s41586-024-08449-y), abstract and performance/decoding sections: distance-7 memory, `0.143%` logical error per cycle, suppression factor `2.14`, and real-time distance-5 decoding. Native numbers are simulated per-`d`-round block under a different noise/interface model; numerical rate ratios between these experiments are not a hardware comparison.
+- **Repair and timing targets:** [Chang et al., Surface Code with Imperfect Erasure Checks](https://arxiv.org/abs/2408.00842), abstract, identifies check accuracy and leaked-qubit interactions as determinants of threshold and effective distance. [Pavlovich et al., 20 August 2026 version](https://arxiv.org/html/2607.29443v3), abstract and fault-distance discussion, proposes a circuit using terminal three-state measurement, skip-gate leakage behavior and an adapted decoder. Neither leakage-interaction rule is established for the native controls; finite repair, delayed detection and propagation must come from their actual instrument.
+- **qLDPC comparison:** [BiBiEQ, February 2026](https://arxiv.org/html/2602.07578v1), abstract, noise model and construction sections, already studies BB erasure circuits at distances 6, 10 and 12 with noisy checks/resets and exact-versus-approximate erasure handling. [Blue et al., June 2026 revision](https://arxiv.org/html/2504.13043v2), sections 1.3 and 2.7, reports roughly 4.5-fold lower logical error than its BP-OSD-3 baseline for `[[72,12,6]]` at 0.1% circuit noise. It uses both syndrome sectors for the learned decoder and one for that BP-OSD baseline. This establishes a stronger decoder comparison target, not an improvement factor transferable to our erasure channel.
+- **Native continuation:** compare five-loop, bare and coherent-corrected controls for the same useful operation, code, decoder, physical storage time and control resources, including finite detection/repair and idle errors. Determine the operating region where the native construction reduces logical error or qubit-time cost. Derive an entangling instrument next; enlarge the qLDPC distance series after the interface is specified. The present flags-used/hidden comparison measures information value, not superiority to another physical gate.
+- **Status:** COMPARISON SOURCES RETAINED; NO NEW MATHEMATICAL DEPENDENCY ADOPTED. Source scope was inspected as listed, not independently certified. Standard methods remain retained without ceremonial rederivation.
+
 ## Search receipts
 
 ### SR-001 — Horizon and comparison work, backfilled on 2026-09-05
@@ -322,6 +333,23 @@ Exact online search queries:
 - `bivariate bicycle codes [[72 12 6]] A x y polynomials Bravyi Cross Gambetta 2024`
 
 Primary sources actually read and their use are listed in EXT-019/020. The requested arXiv HTML endpoint for `2308.07915v3` failed; the primary PDF supplied the code construction. Search-result forum posts and third-party summaries were not adopted. Runtime packages were installed in `/home/williaml/.cache/seated-root-qec-venv`; the repository records their pinned versions in `qec_stack_requirements.txt`.
+
+### SR-008 — Current-field comparison, 2026-09-06
+
+Exact online queries:
+
+- `erasure qubit quantum error correction logical qubit surface code 2026`
+- `dual rail erasure qubit two qubit gate 2025 2026`
+- `quantum error correction below surface code threshold Nature 2025 0.143% 2.14`
+- `bivariate bicycle codes erasure decoding 2025 2026 circuit`
+- `site:nature.com "Quantum error correction below the surface code threshold"`
+- `site:arxiv.org erasure conversion surface code 2025 2026 finite detection reset`
+- `site:arxiv.org qLDPC bivariate bicycle circuit level 2026 error correction`
+- `"An entangling gate for dual-rail erasure qubits"`
+- `site:nature.com/articles/s41586-026-10822-y "0.5"`
+- `site:arxiv.org "An entangling gate" "dual-rail"`
+
+Sources and read depth are recorded in EXT-021. Nature's direct entangling-gate fetch was intermittently blocked; the primary article text was available through the search tool. Its PubMed abstract was also returned; PMC presented a browser check. Google's April 2026 correction page returned metadata but its body could not be opened; comparison numbers were taken from the current main article. Forum, marketing and unrelated search results were not adopted. This was a field comparison, with no new corpus-wide absence claim or implementation change.
 
 ## Maintenance rule
 

@@ -97,12 +97,3 @@ Read: Bartel et al., abstract and section 1 of version 1 (EXT-004); Hayward's PD
 Check Cella's relevant source proofs and derivation notes before adopting external mathematics. Record what already solves the problem, what can be extended, and the exact remaining target. A search with no matching keywords is not a proof of absence.
 
 Append a dated receipt whenever online research informs this project. Before using an external result, assign or update an EXT entry stating its exact content, local use, hypotheses, first-principles replacement target and current status. Reuse keeps the same ID and adds the new location. Conditional rederivation and native closure must be recorded separately; neither is inferred from passing checks alone. Internal reuse retains any external dependencies declared by the Cella source.
-
-## Cella source fingerprints
-
-DAG source hashes verified on 2026-09-05; source paths are linked in the [Cella derivations](/home/williaml/seated-root/docs/2026-09-05-cella-dependency-reconciliation.md).
-
-- Gauge Channel Transport Law: d7e31cb5b9041214a739f3491bb73b4f7ce92ca39cabb2abfc9d9a00f8b4fb0b.
-- Mean Curvature Decomposition: ace98fbfd85a92cca4da4f348c410c81fe38a0409d57840915d98fa3359f9033.
-- Completed local curvature calculus: 13aa19de2cc57f1bcd5cd87afadddf2ac66e9473d02eb65ddb24f75f3b368afb.
-- Variable-transverse weighted-jet theorem: 35d29dc1cf1dfea9a074bd3d7e7d6f17b2504f23a059afe7b90cbc856fc15a18.

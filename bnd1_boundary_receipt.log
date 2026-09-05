@@ -1,0 +1,16 @@
+=== b1: the Poisson kernel is the reading family's inverse power ===
+  [PASS][  0.4s] b1a (1-|x|^2)/|x - xi|^2 = 1/(cosh lam - sinh lam cos theta) exactly
+  [PASS][  1.1s] b1b n = 3 (boundary S^2): P = s^-2 with s = cosh lam + sinh lam u, u = -cos theta -- RN-1's Jacobian, Q_c = 2
+  [PASS][  1.4s] b1c n = 2 (boundary S^1): P = s^-1 -- RN-2's Jacobian, Q_hbar = 1
+=== b2: harmonic measure -- the blind-mass theorem ===
+  [PASS][  1.5s] b2a on S^2: (1/4pi) integral of s^-2 dOmega = 1 for every lam  (x = cos theta: integral of (c - s x)^-2 dx over [-1,1] = 2)
+  [PASS][  2.0s] b2b on S^1: (1/2pi) integral of s^-1 dtheta = 1 for every lam  (half-angle: 2pi/sqrt(c^2 - s^2) = 2pi; numeric at lam = 1/2, 2, 5)
+=== b3-b4: the tilt is hyperbolic distance; the horizon is the boundary ===
+  [PASS][  2.1s] b3a q(nu,nu) = -eps/delta = -1/(1 + eta) = -sech^2 lam: the dual normal's norm reads the hyperbolic distance
+  [PASS][  2.1s] b4a eta -> oo as gamma -> 1 (off the pinch) hence lam -> oo: the state goes to the boundary of the seat's H^2, and nu goes null
+=== b5: the pinch is where interior and boundary coincide ===
+  [PASS][  2.2s] b5a transverse approach: eta -> b0^2 = sinh^2 l, so lam -> l = asinh(b0): FINITE hyperbolic distance, an interior point
+  [PASS][  2.2s] b5b in-horizon approach (gamma = 1, a != b): eps = 0 exactly and W = (a-b)^2 > 0, so eta = +oo and lam = oo: the boundary
+  [PASS][  2.2s] b5c so the tilt map state -> H^2 is DISCONTINUOUS at the pinch, sending different approach classes to an interior point and to the boundary
+
+RESULT: 10/10 checks passed in 2.2s

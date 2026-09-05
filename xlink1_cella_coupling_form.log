@@ -1,0 +1,38 @@
+=== x1: signature and the two distinguished subspaces ===
+  [PASS][  0.0s] x1a 2I - 11^T has eigenvalues 2 (mult 2) and -1 (mult 1): signature (2,1)
+  [PASS][  0.0s] x1b the timelike eigenvector is 1 = (1,1,1)
+  [PASS][  0.0s] x1c the sum-zero plane ker Sigma is the eigenvalue-2 eigenspace: positive definite
+=== x2: the null cone is Heron ===
+  [PASS][  0.0s] x2a Q(nu) = 2|nu|^2 - (Sum nu)^2 = Sum nu_i^2 - 2 Sum_{i<j} nu_i nu_j
+  [PASS][  0.0s] x2b with nu_i = s_i^2: Q = -16 Area^2 (Heron); null <=> a degenerate triangle with sides s_i
+=== x3: Q is a Gram matrix in the model's R^{2,1} ===
+  [PASS][  0.0s] x3a h1 = (1,0,0), h2 = (-1,1,1), h3 = (-1,-1,1): three UNIT SPACELIKE lines, q(h_i,h_i) = 1
+  [PASS][  0.0s] x3b pairwise q(h_i,h_j) = -1: the Gram matrix IS 2I - 11^T
+  [PASS][  0.0s] x3c det G = -4 = det q . (det M)^2: the three lines span R^{2,1} (det M = 2)
+=== x4: every pair sits at the seated root's horizon, and the null cone is the three light rays ===
+  [PASS][  0.0s] x4a every 2x2 principal minor of G vanishes: |gamma_ij| = 1 for all three pairs -- the ruler-plane horizon condition, three times over
+  [PASS][  0.0s] x4b sigma = -1 for every pair: h_i + h_j is NULL (the model's n0 = h + g at the gamma = -1 horizon)
+  [PASS][  0.0s] x4c in Q's own coordinates the pairwise sums (1,1,0), (0,1,1), (1,0,1) are Q-null: Cella's null directions are the three horizon light rays
+  [PASS][  0.0s] x4d and the differences (1,-1,0) etc. are SPACELIKE (Q = 4): Cella's kappa_c-null ray (0,1,-1) is a spatial direction, not a light ray
+=== x5-x6: the trace channel is a seat; the gauge plane is its space ===
+  [PASS][  0.0s] x5a 1 = h1 + h2 + h3 is TIMELIKE: q(S,S) = -3
+  [PASS][  0.0s] x5b c := S/sqrt3 is a unit negative line: a SEAT, and the unique S3-invariant one
+  [PASS][  0.0s] x5c the seat's space c_perp is spanned by ruler DIFFERENCES = Cella's sum-zero plane ker Sigma
+  [PASS][  0.0s] x6  the form on c_perp is positive definite (the seat's COMPACT plane): Cella's gauge-transport plane is the seat's rest space
+=== x7: what the symmetric seat reads -- the trine at horizon depth ===
+  [PASS][  0.0s] x7a from the seat c: a = b = -1/sqrt3 (equal depths), gamma = -1 for the pair (h2,h3)
+  [PASS][  0.1s] x7b on the horizon (|gamma| = 1) but OFF the pinch: a != sigma b, delta = (a - sigma b)^2 = 4/3 > 0 -- a regular horizon point, nu defined
+  [PASS][  0.1s] x7c seat coordinates: l1 = l2 = asinh(1/sqrt3), and gamma = -1 forces cos t = -1/2, t = 2pi/3: the rulers present as the 120-degree TRINE
+  [PASS][  0.1s] x7d the trine's presented angles are 120 degrees for all three pairs (S3-symmetric), and every pair is at |gamma| = 1: the Cella form is the coplanar trine lifted to horizon depth
+=== x8: general n -- Cella's open lead L6 ===
+  [PASS][  0.1s] x8a n = 2: eigenvalues {2, 0}: DEGENERATE (no Lorentzian form on two channels)
+  [PASS][  0.1s] x8b n = 3, 4, 5: eigenvalues 2 (mult n-1) and 2-n < 0: signature (n-1, 1) -- Lorentzian for every n >= 3, timelike = the trace
+  [PASS][  0.1s] x8c n = 4 realised in R^{3,1}: four unit spacelike lines pairwise at q = -1, Gram = 2I - 11^T -- the model's Cl(3,1) sector after T8
+
+RESULT: 23/23 checks passed in 0.1s
+VERDICT: Cella's coupling-edge form 2I - 11^T is the Gram matrix of three unit spacelike lines in R^{2,1} pairwise at the
+  seated root's horizon condition (|gamma| = 1, sigma = -1): every pairwise sum is null, and those three null vectors
+  ARE Cella's null cone.  The trace direction is a seat -- the unique S3-symmetric one -- and Cella's gauge-transport
+  plane is that seat's compact rest space.  From it the rulers present as the 120-degree trine at depth asinh(1/sqrt3),
+  every pair on the horizon, off the pinch.  For general n the form has signature (n-1,1) and is realised in R^{n-1,1}.
+  NOT shown: the map from Cella's nu = (g_i H_jk) to frame data.  Same form, realised; identification of components open.

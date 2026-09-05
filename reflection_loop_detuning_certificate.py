@@ -87,7 +87,7 @@ def primitive(ctx, n):
     return result, 9*tau+2*theta+ctx.mpf(2)/5+2*eta
 
 
-def equations(x, data, ctx, gain_target=None):
+def equations(x, data, ctx, gain_target=None, full_response=False):
     h = (len(x)-1)//2
     beta = list(x[:h])+[ctx.mpf(0)]+[-v for v in x[:h][::-1]]
     w = list(x[h:2*h])+[x[-1]]+list(x[h:2*h][::-1])
@@ -118,12 +118,19 @@ def equations(x, data, ctx, gain_target=None):
         result = [sum((raw[k]*result[q-k] for k in range(q+1)), ctx.zeros(4)) for q in range(3)]
     ff.extend((-result[2][2, 3].real/duration**2,
                (-result[2][2, 2]-result[2][3, 3]).imag/(2*duration**2)))
+    if full_response:
+        # X = exp(-i theta J) R diag(1,i); R is real once first order vanishes.
+        phase = ctx.matrix([[ctx.mpf(1)/2, ctx.mpc(0, 1)*ctx.sqrt(3)/2],
+                            [ctx.mpc(0, 1)*ctx.sqrt(3)/2, ctx.mpf(1)/2]])
+        raw = ctx.matrix([[result[2][r, c+2] for c in range(2)] for r in range(2)])
+        real_form = phase*raw*ctx.matrix([[1, 0], [0, ctx.mpc(0, -1)]])
+        ff.extend(real_form[r, c].real/duration**2 for r in range(2) for c in range(2))
     if gain_target is not None:
         ff.append((sum(s*c for s, c in zip(signs, c1))-gain_target)/len(beta))
     return ff
 
 
-def refine(seed, n, fixed, gain_target=None, digits=65):
+def refine(seed, n, fixed, gain_target=None, digits=65, full_response=False):
     mp.mp.dps = digits+15
     data = primitive(mp.mp, n)
     indices = [j for j in range(len(seed)) if j not in fixed]
@@ -135,13 +142,16 @@ def refine(seed, n, fixed, gain_target=None, digits=65):
         full = all_x.copy()
         for j, value in zip(indices, values):
             full[j] = value
-        return equations(full, data, mp.mp, gain_target)
+        return equations(full, data, mp.mp, gain_target, full_response)
 
     root = mp.findroot(f, [all_x[j] for j in indices], tol=mp.mpf(10)**(-digits), maxsteps=50)
     for j, value in zip(indices, root):
         all_x[j] = value
-    return dict(n=n, center=[mp.nstr(v, digits) for v in all_x],
-                fixed={str(j): str(v) for j, v in fixed.items()}, gain_target=gain_target)
+    record = dict(n=n, center=[mp.nstr(v, digits) for v in all_x],
+                  fixed={str(j): str(v) for j, v in fixed.items()}, gain_target=gain_target)
+    if full_response:
+        record['full_response'] = True
+    return record
 
 
 def certify(record):
@@ -149,7 +159,9 @@ def certify(record):
     mp.mp.dps = 90
     mp.iv.dps = 80
     n, gain = record['n'], record['gain_target']
+    full_response = record.get('full_response', False)
     xs = record['center']
+    half = (len(xs)-1)//2
     free = [j for j in range(len(xs)) if str(j) not in record['fixed']]
     dim = len(free)
     data = primitive(mp.mp, n)
@@ -160,16 +172,16 @@ def certify(record):
         x = center.copy()
         for j, v in zip(free, y):
             x[j] = v
-        return mp.matrix(equations(x, data, mp.mp, gain))
+        return mp.matrix(equations(x, data, mp.mp, gain, full_response))
 
     jac = mp.calculus.optimization.jacobian(mp.mp, f, mp.matrix([center[j] for j in free]))
     inverse = mp.inverse(jac)
     aa = [[mp.iv.mpf(mp.nstr(inverse[i, j], 85)) for j in range(dim)] for i in range(dim)]
     point = [mp.iv.mpf(v) for v in xs]
-    residual = equations(point, ivdata, mp.iv, gain)
-    # For N<=13, 1<=s<3, normalized equations have every second derivative <1e18.
-    # Matrix-product bound: at most 30 rotation factors, rates <=4, and total
-    # duration <=39 times the primitive; the explicit bound is documented.
+    residual = equations(point, ivdata, mp.iv, gain, full_response)
+    # For N<=23, 1<=s<3: at most 2N+4 rotation factors, rates <=4, and
+    # total duration <=3N times the primitive. This gives second partials
+    # <1e8 for the normalized response; the conservative bound remains 1e18.
     hessian = mp.iv.mpf('1e18')
     step, radius = mp.iv.mpf('1e-35'), mp.iv.mpf('1e-35')
     enclosure = []
@@ -177,8 +189,8 @@ def certify(record):
         plus, minus = point.copy(), point.copy()
         plus[j] += step
         minus[j] -= step
-        fp = equations(plus, ivdata, mp.iv, gain)
-        fm = equations(minus, ivdata, mp.iv, gain)
+        fp = equations(plus, ivdata, mp.iv, gain, full_response)
+        fm = equations(minus, ivdata, mp.iv, gain, full_response)
         enclosure.append([(p-m)/(2*step)+mp.iv.mpf([-1, 1])*hessian*step
                           for p, m in zip(fp, fm)])
 
@@ -188,14 +200,16 @@ def certify(record):
     defect = max(upper(sum(abs(int(i == j)-sum(aa[i][k]*enclosure[j][k] for k in range(dim)))
                               for j in range(dim))) for i in range(dim))
     norm_a = max(upper(sum(abs(v) for v in row)) for row in aa)
-    q = defect+norm_a*dim*dim*mp.mpf('1e18')*mp.mpf('1e-35')
+    q = upper(mp.iv.mpf(defect)+mp.iv.mpf(norm_a)*dim*dim*hessian*radius)
     displacement = max(upper(sum(aa[i][j]*residual[j] for j in range(dim))) for i in range(dim))
     assert q < 1
-    assert displacement < (1-q)*mp.mpf('1e-35')
-    assert len(xs) == 13 and all(1 <= v < 3 for v in center[6:])
+    assert upper(mp.iv.mpf(displacement)+mp.iv.mpf(q)*radius) < mp.mpf(radius.a)
+    assert 3 <= len(xs) <= 23 and len(xs) % 2 == 1
+    assert all(1 <= v < 3 for v in center[half:])
     for j in free:
-        if j >= 6:
+        if j >= half:
             assert center[j]-mp.mpf('1e-35') >= 1
+            assert center[j]+mp.mpf('1e-35') < 3
     return dict(radius='1e-35', contraction_bound=mp.nstr(q, 15),
                 displacement_bound=mp.nstr(displacement, 15),
                 maximum_second_partial_bound='1e18',

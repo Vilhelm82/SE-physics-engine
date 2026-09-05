@@ -377,6 +377,6 @@ The runner verifies the frame generators, exponential polynomial, return classif
 
 ![Finite-duration and perturbation error curves](/home/williaml/seated-root/docs/reflection-loop-error-curves.png)
 
-The next control-design target is to make the **common** amplitude-error mode satisfy (13), while retaining a specified reference axis and bounded transient loss. Equation (15) supplies the error directions to cancel; equations (10), (18) and (19) supply the competing costs. This is a defined optimization problem over admissible pulses and controls, rather than an unspecified robustness claim.
+**Control continuation:** [CP-1–4](2026-09-05-reflection-loop-composite-control.md) now cancel the common first-order amplitude error with three native loops and two endpoint holds. The full response includes the residual quadratic phase, separate hold calibration, between-loop drift, continuous sign ramps and a loss/reference-noise decision boundary. The next control target is to cancel the remaining phase with finite reference-access controls while retaining the gain cancellation.
 
 Native source: REALFIBER O1–O7 and the previous full-family holonomy proof. Standard quantum evolution, nonadiabatic parallel transport, Duhamel/Dyson estimates, Hermitian spectral stability and transitionless driving are retained with provenance. The results here establish this loop's mathematics; literature originality remains open.

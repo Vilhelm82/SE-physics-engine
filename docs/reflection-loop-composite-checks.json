@@ -1,0 +1,204 @@
+{
+  "symbolic_checks": {
+    "hold_polynomial_on_full_bright_plane": true,
+    "hold_unitary": true,
+    "hold_commutes_with_reflection": true,
+    "composite_nominal_full_operator": true,
+    "common_gain_first_order_on_code": true,
+    "full_second_order_code_column_all_return_indices": true,
+    "quartic_leakage_coefficient": true,
+    "quadratic_relative_phase": true,
+    "primitive_has_no_quadratic_phase": true,
+    "n1_leakage_coefficient": true,
+    "separate_hold_gain_second_order_bright_response": true,
+    "separate_hold_gain_phase_response": true,
+    "separate_hold_gain_leakage_form": true,
+    "independent_loop_gain_quadratic_form": true,
+    "linear_sign_ramp_zero_area": true,
+    "sign_ramp_area_deficit": true
+  },
+  "numerical_checks": {
+    "nominal_code_n1": {
+      "error": 2.17852680877443e-32,
+      "tolerance": 1e-10
+    },
+    "quartic_leakage_n1": {
+      "error": 2.5447688933866175e-07,
+      "tolerance": 4e-05
+    },
+    "quadratic_phase_n1": {
+      "error": 9.22172477269001e-07,
+      "tolerance": 4e-05
+    },
+    "quartic_average_infidelity_n1": {
+      "error": 3.704680993088516e-07,
+      "tolerance": 4e-05
+    },
+    "nominal_code_n2": {
+      "error": 8.958369275666292e-32,
+      "tolerance": 1e-10
+    },
+    "quartic_leakage_n2": {
+      "error": 8.872692690564676e-07,
+      "tolerance": 4e-05
+    },
+    "quadratic_phase_n2": {
+      "error": 8.473621763149808e-07,
+      "tolerance": 4e-05
+    },
+    "quartic_average_infidelity_n2": {
+      "error": 1.0229820578411264e-06,
+      "tolerance": 4e-05
+    },
+    "nominal_code_n4": {
+      "error": 2.9896513135825194e-32,
+      "tolerance": 1e-10
+    },
+    "quartic_leakage_n4": {
+      "error": 1.2614948710076845e-06,
+      "tolerance": 4e-05
+    },
+    "quadratic_phase_n4": {
+      "error": 8.657840258052829e-07,
+      "tolerance": 4e-05
+    },
+    "quartic_average_infidelity_n4": {
+      "error": 1.2541804335075568e-06,
+      "tolerance": 4e-05
+    },
+    "between_loop_drift_1": {
+      "error": 3.011156879395571e-09,
+      "tolerance": 3e-06
+    },
+    "between_loop_drift_2": {
+      "error": 3.011155658150244e-09,
+      "tolerance": 3e-06
+    },
+    "between_loop_drift_3": {
+      "error": 1.6566902072412404e-08,
+      "tolerance": 3e-06
+    },
+    "hold_errors_alone_leave_code_exact": {
+      "error": 2.274199450680366e-17,
+      "tolerance": 1e-10
+    },
+    "separate_hold_gain_bright_response_1": {
+      "error": 2.2390510526497037e-06,
+      "tolerance": 3e-05
+    },
+    "separate_hold_gain_bright_response_2": {
+      "error": 1.9167084631352437e-06,
+      "tolerance": 3e-05
+    },
+    "duration_includes_both_finite_ramps": {
+      "error": 1.4210854715202004e-14,
+      "tolerance": 1e-10
+    },
+    "physical_hamiltonian_continuous_at_all_joins": {
+      "value": 8.659560562354933e-17,
+      "upper_bound": 2e-14
+    },
+    "sign_ramp_4_passes_through_zero": {
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    "sign_ramp_4_preserves_attached_code": {
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    "sign_ramp_8_passes_through_zero": {
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    "sign_ramp_8_preserves_attached_code": {
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    "physical_stage_product_matches_composite": {
+      "error": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    "common_gain_response_integral_on_code": {
+      "error": 1.8416624904579996e-15,
+      "tolerance": 1e-10
+    },
+    "exposure_is_exactly_three_primitive_loops": {
+      "error": 1.5987211554602254e-14,
+      "tolerance": 1e-10
+    },
+    "zero_projected_energy_throughout_nominal_composite": {
+      "value": 4.163336342344337e-17,
+      "upper_bound": 2e-13
+    },
+    "independent_physical_ode_error": {
+      "value": 1.2408564694485613e-09,
+      "upper_bound": 5e-09
+    },
+    "rk4_step_doubling_ratio": {
+      "value": 0.06273828049422771,
+      "upper_bound": 0.08
+    },
+    "independent_ode_unitarity": {
+      "value": 6.936384812827713e-11,
+      "upper_bound": 2e-10
+    },
+    "reference_phase_factorization_with_finite_ramps": {
+      "error": 7.063415007743051e-10,
+      "tolerance": 5e-09
+    },
+    "linear_drift_response_remainder": {
+      "value": 6.17152089574502e-08,
+      "upper_bound": 2e-06
+    },
+    "linear_drift_leakage_coefficient": {
+      "error": 2.8901511583967476e-07,
+      "tolerance": 0.0003
+    },
+    "absorbing_loss_average_infidelity_slope": {
+      "error": 1.3323797392494896e-05,
+      "tolerance": 0.0004
+    },
+    "absorbing_loss_first_order_convergence": {
+      "value": 0.5001950553727725,
+      "upper_bound": 0.6
+    }
+  },
+  "symbolic_count": 16,
+  "numerical_count": 36,
+  "coefficients_n1": {
+    "b": 1.4726215563702154,
+    "primitive_leakage": 10.84307124143118,
+    "composite_leakage": 35.67227454858486,
+    "composite_phase": 7.512300120099096,
+    "composite_infidelity": 27.24191279003258,
+    "exposure": 2.1744360284272584,
+    "peak_bright": 0.234375,
+    "primitive_time": 18.251004041881252
+  },
+  "example": {
+    "common_gain_error": 0.01,
+    "return_index": 1,
+    "dimensionless_ramp_time": 0.2,
+    "primitive": {
+      "leakage": 0.0010614581601277272,
+      "relative_phase": -2.4306351380013428e-05,
+      "average_infidelity": 0.0005307761489693628
+    },
+    "composite": {
+      "leakage": 3.2166894411207683e-07,
+      "relative_phase": 0.0007293063580654839,
+      "average_infidelity": 2.4948241883290477e-07
+    },
+    "leakage_reduction_factor": 3299.8465644786984,
+    "average_infidelity_reduction_factor": 2127.509230720019,
+    "dimensionless_primitive_time": 18.251004041881252,
+    "dimensionless_composite_time": 57.24740722803696,
+    "dimensionless_primitive_exposure": 2.1744360284272584,
+    "dimensionless_composite_exposure": 6.523308085281791,
+    "nominal_peak_bright": 0.234375,
+    "gain_drift_leakage_coefficient": 4.233739143819366,
+    "leading_loss_only_crossover": 0.00024398357073500713,
+    "leading_reference_noise_only_crossover": 0.0010397957835035882
+  },
+  "scope": "Exact symbolic identities and independent finite-waveform probes; noise crossovers are leading weak-noise estimates, not hardware data."
+}

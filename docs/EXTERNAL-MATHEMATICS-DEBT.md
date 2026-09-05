@@ -169,7 +169,17 @@ These mathematical extensions are usable now. The remaining Seated Root predicti
 - **Exact native use:** [finite-duration reflection analysis](2026-09-05-reflection-loop-finite-duration.md), RF-1–7. The three native frames give exact constant moving-frame generators and propagators. Their product proves the complete equal-duration return set, zero projected mean energy, finite-time error/exposure bounds, independent gain-error quadratic form and its quartic cancellation direction. Exact phase filters and a conjugated reference-mixing loop quantify distinct perturbation effects.
 - **Hypotheses:** finite-level angular-frequency Hamiltonian, prescribed real triad path and reference, positive gaps and fixed arc endpoints; equal constant-speed arcs for the complete return classification. Arbitrary integrable Hermitian perturbations have the Duhamel bound and first-order functional; the explicit Taylor coefficients are at fixed return index. Isolated real eigenline topology protects its sign under the stated loop deformations. Reference coupling, shifted dark energy and finite-speed errors have separately calculated effects.
 - **Full control-class extension:** RF-7 gives every Hermitian correction for exact parallel transport of the prescribed projector, its free bright block and minimum correction norm. It identifies the required imaginary coupling and proves the obstruction to exactly transporting any nonconstant real projector with real symmetric controls. This optional control class is additional to the original real loop; transitionless driving itself is retained prior work.
-- **Status:** ORIGINAL LOOP FINITE-TIME RETURNS AND DECLARED PERTURBATION RESPONSE PROVED; STANDARD QUANTUM CONTROL RETAINED. Robust control design under specified hardware and noise constraints is the next target; no general optimal-time or historical-originality claim.
+- **Reuse:** [composite control CP-1–4](2026-09-05-reflection-loop-composite-control.md) uses the same native propagators, parallel-transport condition, interaction-picture response and declared absorbing-loss realization. Its endpoint sign ramps retain the encoded plane through zero gap; they do not require the optional imaginary tracking correction.
+- **Status:** ORIGINAL LOOP FINITE-TIME RETURNS AND DECLARED PERTURBATION RESPONSE PROVED; COMMON-GAIN COMPOSITE AND RESOURCE BOUNDARY DERIVED; STANDARD QUANTUM CONTROL RETAINED. Remaining phase correction and comparisons under matched controls are the next targets; no general optimal-time or historical-originality claim.
+
+## EXT-017 — Composite holonomic control and error/resource comparison
+
+- **Sources actually read:** [Xu et al., Composite nonadiabatic holonomic quantum computation](https://arxiv.org/pdf/1706.01053), abstract and section II, equations (3)–(29); [Lu et al., Robust Non-Adiabatic Holonomic Gating in Qutrits via Inverse-Engineered Pulse Shaping and Error Compensation](https://arxiv.org/html/2510.05905v2), abstract, sections I/II and IV.4. Read depth does not imply verification of all claims in those papers.
+- **Use:** comparison baseline. Composite holonomic suppression of systematic control errors and comparison with extra decoherence already exist. Xu's phase-controlled couplings and Lu's qutrit pulse/noise specifications are not transferred to the native real triad. No externally designed pulse sequence or external code was adopted.
+- **Retained standard background:** unitary inversion by negative time-reversed Hamiltonian, matrix Taylor products, elementary unit-circle algebra, averaging logical fidelity over pure qubit inputs, and first-order absorbing-loss expansion. These are directly reproducible from the declared evolution and probability rules; no ceremonial native rederivation is owed.
+- **Native construction and full extension:** [CP-1–4](2026-09-05-reflection-loop-composite-control.md) derives the forward/hold/inverse/hold/forward sequence, cancellation on the entire bright plane, the complete two-hold area condition, full second-order logical column for every return index, separate loop/hold error response, finite-variation gain bound, minimum-duration sign-switching holds, and the phase/loss decision boundary. The continuous sign ramps extend the original fixed-gap control path through zero Hamiltonian while retaining the encoded plane. The runner integrates this physical waveform independently.
+- **Hypotheses and next native work:** the same multiplicative error must apply to corresponding forward/inverse loops for common-mode cancellation. The implemented inverse does not reverse uncontrolled additive drift. Reference detuning cannot be echoed while that reference stays uncoupled. The quantitative loss comparison uses a declared bright susceptibility and orthogonal absorbing sinks. The next extension is finite reference-access control that cancels the residual phase while retaining gain cancellation and an advantageous exposure budget; this is new control work, not a gap in the retained standard mathematics.
+- **Status:** PRIOR COMPOSITE-CONTROL BASELINE RETAINED; NATIVE REAL-LOOP RESPONSE AND FINITE-RAMP CONSTRUCTION DERIVED. NO HISTORICAL NOVELTY OR HARDWARE ADVANTAGE CLAIM.
 
 ## Search receipts
 
@@ -244,6 +254,17 @@ Exact online queries:
 - `adiabatic geometric phase real Hamiltonian sign topological perturbation dark state holonomy`
 
 Read Berry's author-hosted primary PDF, section 2, and Pinske–Scheel's primary PDF, section II; their precise use is in EXT-016. The Berry university abstract and Pinske–Scheel journal abstract were also inspected. The [STIRAP candidate PDF](https://quantum-bg.org/rangelov18.pdf) returned metadata, but subsequent text retrieval timed out; no result from it was adopted. Other returned candidates were not adopted. No external code was copied. Exact proofs, symbolic checks and numerical integration evidence are separated in the [continuation](2026-09-05-reflection-loop-finite-duration.md) and its [receipt](reflection-loop-dynamics-checks.json).
+
+### SR-005 — Reflection-loop composite control, 2026-09-05
+
+Native inspection preceded comparison: reused the REALFIBER backing proof and the exact RF-1–7 derivation. Cella DAG queries covered "composite pulse" and "control"; a targeted search of the backing mathematics library covered composite pulses, pulse sequences, dynamical decoupling, spin echo and amplitude errors. Returned curvature/diagnostic material was not adopted as a quantum-control theorem. These searches do not establish corpus-wide absence.
+
+Exact online queries:
+
+- "composite STIRAP forward backward pulse sequence phase amplitude error"
+- "composite nonadiabatic holonomic quantum gates systematic amplitude errors real couplings"
+
+Read Xu's primary PDF and Lu's primary abstract/HTML at the depths recorded in EXT-017. Lu's section IV.4 was inspected for the duration/decoherence comparison. Other returned candidates were not adopted. The native cancellation and response were derived from the existing loop operators; no external pulse or numerical performance figure was imported. Provenance and remaining control targets are recorded in EXT-016/017.
 
 ## Maintenance rule
 

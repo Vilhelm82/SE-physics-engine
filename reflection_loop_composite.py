@@ -118,10 +118,11 @@ def schedule(n=1, gap=1.0, ramp=None):
 
 
 def ode(stages, error=0.0, detuning=0.0, loss=0.0, gain_shape=None,
-        steps_per_time=100):
+        steps_per_time=100, detuning_shape=None):
     """Laboratory RK4, including the signed ramps and optional absorbing loss.
 
     gain_shape(global_time) specifies an additional dimensionless gain error.
+    detuning_shape(global_time) specifies an additional reference frequency.
     No moving-frame or matrix-product solution is used in the integration.
     """
     k = np.eye(4, dtype=complex)
@@ -132,7 +133,8 @@ def ode(stages, error=0.0, detuning=0.0, loss=0.0, gain_shape=None,
 
         def rhs(t, state):
             gain = error + (0 if gain_shape is None else gain_shape(offset+t))
-            h = (1+gain)*stage.h(t) + detuning*REFERENCE
+            reference = detuning + (0 if detuning_shape is None else detuning_shape(offset+t))
+            h = (1+gain)*stage.h(t) + reference*REFERENCE
             generator = -1j*h
             if loss:
                 generator = generator - loss*stage.loss_projector(t)/2

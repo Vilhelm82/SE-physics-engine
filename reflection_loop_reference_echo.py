@@ -126,12 +126,12 @@ def integrate_block(error=0.0, delta=0.0, loss=0.0, steps=100, n=1):
     return ode(stages, error=error, detuning=delta, loss=loss, steps_per_time=steps)
 
 
-def finite_gate(error=0.0, delta=0.0, loss=0.0, kind='echo', steps=100):
-    t1 = trine_product(integrate_block(error, delta, loss, steps))
+def finite_gate(error=0.0, delta=0.0, loss=0.0, kind='echo', steps=100, n=1):
+    t1 = trine_product(integrate_block(error, delta, loss, steps, n))
     if kind == 'trine':
         return t1
-    t2 = trine_product(integrate_block(error, 2*delta, 2*loss, steps))
-    tm2 = trine_product(integrate_block(error, -2*delta, 2*loss, steps))
+    t2 = trine_product(integrate_block(error, 2*delta, 2*loss, steps, n))
+    tm2 = trine_product(integrate_block(error, -2*delta, 2*loss, steps, n))
     return echo_product(t1, t2, tm2)
 
 
@@ -159,7 +159,7 @@ def response_integrals(stages, perturbations, nodes=64):
                 parallel_error=parallel)
 
 
-def block_jets(steps=100):
+def block_jets(steps=100, n=1):
     """Independent ODE coefficients in gain epsilon and reference frequency delta.
 
     Taylor coefficients include factorials, i.e. U20 multiplies epsilon**2.
@@ -169,7 +169,7 @@ def block_jets(steps=100):
     state = np.zeros((len(POWERS), 4, 4), complex)
     state[0] = EYE
     position = {power: j for j, power in enumerate(POWERS)}
-    for stage in [FramedStage(s, O) for s in ended_composite()]:
+    for stage in [FramedStage(s, O) for s in ended_composite(n)]:
         count = max(8, int(np.ceil(stage.duration*steps)))
         dt = stage.duration/count
 
@@ -223,10 +223,10 @@ def combined_jets(a):
     return t, e
 
 
-def quartic_response(jet):
+def quartic_response(jet, target=TARGET):
     leak, logical = {}, {}
     for power in ((2, 0), (1, 1), (0, 2)):
-        w = TARGET.conj().T @ jet[power]
+        w = target.conj().T @ jet[power]
         leak[power] = w[:2, 2:]
         block = w[2:, 2:]
         logical[power] = block-np.trace(block)*np.eye(2)/2

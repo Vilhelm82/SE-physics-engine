@@ -1,0 +1,21 @@
+{
+  "categorical_law_results": {
+    "reduction_0_equals_2": false,
+    "left_identity": false,
+    "reduction_preserves_composition": false,
+    "associativity": false
+  },
+  "cce5_empty_word_rejected": true,
+  "rounding_midpoint_preimage_without_failure": {
+    "x": "3/4",
+    "fine": 1,
+    "coarse_after_fine": 0,
+    "coarse_direct": 0
+  },
+  "interpretation": "Four categorical failures reproduced; CCE5 identity encoding absent; rounding containment is strict in this example.",
+  "source_sha256": {
+    "/home/williaml/Cella Framework/engine/src/cella/continuation/selected_skeleton.py": "b0ed0a79c9cd890545d7168ab4d2f330142f3458f402d93847ea5c89f1746bbe",
+    "/home/williaml/Cella Framework/engine/src/cella/continuation/r3_ac_fold.py": "14fe91d7713e3b10d9e2fd12cd445c5ab27ae035478868d8c6094d45a777f02b",
+    "/home/williaml/Cella Framework/engine/src/cella/continuation/cce5.py": "18d97331250a49095eba5ee62096b0dfeb07ab4ab5a763ab6205d33650f7d8e1"
+  }
+}

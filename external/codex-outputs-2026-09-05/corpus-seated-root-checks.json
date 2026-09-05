@@ -1,0 +1,55 @@
+{
+  "lapse_valuation_bridge": {
+    "identity": "-det G=(1+b^2)(1-gamma^2)+(a-b gamma)^2",
+    "sample_limits_b2_d3": {
+      "p=4,q=1": "0",
+      "p=2,q=1": "1/14",
+      "p=2,q=2": "1/5"
+    }
+  },
+  "coupling_form": {
+    "eigenvalues": [
+      2,
+      2,
+      -1
+    ]
+  },
+  "lifted_graph_cancellation": {
+    "constraints": [
+      "x+y",
+      "x-y"
+    ],
+    "spatial_Hessian": "Matrix([[4, 0], [0, 4]])",
+    "mixed_entry": 0
+  },
+  "squared_carrier": {
+    "distinct_jets": [
+      [
+        2,
+        1,
+        3
+      ],
+      [
+        -2,
+        -1,
+        -3
+      ]
+    ],
+    "same_carrier": "Matrix([[-1/9], [-1/9], [-4/9]])",
+    "zero_anisotropy_full_rank_det": "8/729"
+  },
+  "corner_unit_after_cancellation": {
+    "metric": "diag(x^2,1+x,1)",
+    "scalar_curvature": "(3*x + 2)/(2*x**3*(x + 1)**2)",
+    "limit_x3_R": 1,
+    "unit_removed_metric": "diag(x^2,1,1), flat for x>0"
+  },
+  "transfer_slope_step_condition": {
+    "observable": "g(f)=f^2",
+    "relative_step": "f*(sin(f**(-2)) + 2)",
+    "transfer": "f*(f*(sin(f**(-2)) + 2) + 2)",
+    "slope_on_f_equals_inverse_sqrt_2pi_n": "2 - 1/f",
+    "slope_subsequence_limit": "-infinity",
+    "amplitude_ratio_T_over_2f_limit": "1"
+  }
+}

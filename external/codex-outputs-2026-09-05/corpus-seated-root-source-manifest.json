@@ -1,0 +1,144 @@
+{
+  "date": "2026-09-05",
+  "graph_revision": "sha256:575f1e672b44c5303a308fa04fef07fa46d61f1f186a65fad1396507d850871b",
+  "nodes_screened": 2300,
+  "scope": "Index-wide discovery; targeted source inspection, not proof verification of every node or every theorem in each source.",
+  "sources": [
+    {
+      "key": "DBP:paper:I",
+      "pointer": "cella:Papers_Library/01_completed_papers/dbp_role_channel_and_orbit_geometry/dbp_orbit_calculus.tex",
+      "bytes": 36409,
+      "sha256": "863eb65ea8019de0522bb6351d86cc0b6cadad7d0ee0a80844c75e279801c7fc",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "DBP:paper:II-general",
+      "pointer": "cella:Papers_Library/01_completed_papers/local_curvature_and_black_hole_metrics/pfc_normal_forms.tex",
+      "bytes": 10501,
+      "sha256": "d2970682094a56bbc26849376c728fff26796ff8356125865c4cf9e35a789c27",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "GR:thm:lifted_compat",
+      "pointer": "cella:Papers_Library/04_drafts_and_incomplete_papers/general_relativity_and_gravity/GR_PAPER_BRIEF.md",
+      "bytes": 17254,
+      "sha256": "8ab1468db1dbac34593109f05e341ef209858fed789d5d9a809303a7548c2451",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "U-1650",
+      "pointer": "cella:Papers_Library/04_drafts_and_incomplete_papers/dbp_role_channel_and_orbit_geometry/DBP_UNIFIED_THEOREM_SPINE_DRAFT_v0_1.tex",
+      "bytes": 38274,
+      "sha256": "d64b1d68bfb69172799428a336ec4d42286d1b14aee80ba3439b65e68f1eaf7d",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "GFL:thm:triangle_shadow",
+      "pointer": "cella:Papers_Library/04_drafts_and_incomplete_papers/geometric_fault_localization_and_decomposition/ARM_CLOSE_DRAFT.md",
+      "bytes": 5895,
+      "sha256": "67f2b0f4c93c251ff283d0872438b884953ba1128c8f15f1ba13b7b60ac418b0",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "PFT:paper:tfef_v6",
+      "pointer": "cella:Papers_Library/01_completed_papers/precision_flow_and_transfer_functions/transfer_function_exponent_family_v6.tex",
+      "bytes": 37594,
+      "sha256": "0bd01364444c0e8b8fdcc95672461b3bb8c7862a2da4248615fcf8afc082be4e",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "DBP:thm:sqg_foundation",
+      "pointer": "cella:Papers_Library/05_expository_companions_and_research_maps/dbp_role_channel_and_orbit_geometry/SELECTED_QUOTIENT_GROUPOIDS_FOUNDATION_v1.0.md",
+      "bytes": 11358,
+      "sha256": "7a0bb32bf1642c3cd772ae150bffb5297bb92773c5e50743018a748e792f9043",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "DBP:campaign:tssc",
+      "pointer": "cella:Campaign_Library/02_residue_role_channel_and_coupling/CMP-0040__threeway_selected_skeleton_coherence/CMP-0040__threeway_selected_skeleton_coherence.artifact.json",
+      "bytes": 6776,
+      "sha256": "cb83f57828af6b02e5c2a36c5010299baf3465ac4593653382d80bf5dbfd3021",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "DBP:paper:weighted_multiquadratic_monodromy",
+      "pointer": "cella:Papers_Library/01_completed_papers/galois_horizon_and_kummer_covers/GENERIC_SYMMETRIC_MONODROMY_OF_WEIGHTED_MULTIQUADRATIC_SUMS_v1.0.md",
+      "bytes": 46909,
+      "sha256": "3cefa244a61d701a9f0184ae5756e62c71efbbb7f30274ca12f951ae351df6fd",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "DBP:paper:all_k_two_radical_kummer_closure",
+      "pointer": "cella:Papers_Library/01_completed_papers/galois_horizon_and_kummer_covers/ALL_K_TWO_RADICAL_KUMMER_CLOSURE_v1.0.tex",
+      "bytes": 25002,
+      "sha256": "2bb83f1246b02491dae3f8ec6b94c90f568c99ff576d12707a4fc04a208c4fac",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "U-0409",
+      "pointer": "cella:Papers_Library/02_theorems_and_lemmas/dbp_role_channel_and_orbit_geometry/Canonical_Invariant_Reduction_Theorem.md",
+      "bytes": 5451,
+      "sha256": "9175da628839fc129bf722710238bda83beb6570e4b0b288d4e02091319d022e",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "GFL:thm:decomposition_123",
+      "pointer": "cella:Papers_Library/02_theorems_and_lemmas/geometric_fault_localization_and_decomposition/README.md",
+      "bytes": 2271,
+      "sha256": "f1286bdd6487b87e0da0a6dbd62d852c1a121c8f3a55d0d5bd95853ecbcc72bb",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "wallisotropy",
+      "pointer": "cella:Campaign_Library/02_residue_role_channel_and_coupling/CMP-0040__threeway_selected_skeleton_coherence/WALL_ISOTROPY_COMPARISON_THEOREM_2026-07-16.md",
+      "bytes": 4896,
+      "sha256": "8d080e07fc1feda079fcd0bcd9f01adfb1596368e690d4874b89163b24fdfae7",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "DBP:paper:III",
+      "pointer": "cella:Papers_Library/05_expository_companions_and_research_maps/dbp_periods_landen_and_elliptic_structure/DBP_CURVATURE_PERIODS_OF_THE_DBP_QUADRIC_v1.0.md",
+      "bytes": 45078,
+      "sha256": "69365626e738b900c85c2f03ac65c89287b4d193f439449bd3867686b9b1d805",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "DBP:paper:IV",
+      "pointer": "cella:Papers_Library/01_completed_papers/galois_horizon_and_kummer_covers/galois_horizon_cover_v1_0.tex",
+      "bytes": 48624,
+      "sha256": "777daf7b60d337709587606f0974f8d4c8ff9c79473b609aadd54827223613ce",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "coupling_field",
+      "pointer": "cella:Papers_Library/01_completed_papers/cella_residue_and_coupling_theory/coupling_field_theory_paper.md",
+      "bytes": 29824,
+      "sha256": "e715cd0a752d6972796d340da01147f2f6e96e4317b22e4bdb7f84ab79995faa",
+      "sha256_matches_declared": true,
+      "truncated": false
+    },
+    {
+      "key": "F4",
+      "pointer": "cella:Papers_Library/02_theorems_and_lemmas/geometric_fault_localization_and_decomposition/F4_THEOREM.md",
+      "bytes": 2574,
+      "sha256": "3ddd9629630da1a72c9416cb64ada719e30ab5d4db1c0c8bd86afa0ba2c9207e",
+      "sha256_matches_declared": true,
+      "truncated": false
+    }
+  ]
+}

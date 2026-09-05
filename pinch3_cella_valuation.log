@@ -25,9 +25,9 @@
   [PASS][  0.2s] c6d the pinch is where the branch divisor is TANGENT to the chart boundary (PINCH-2 q6): the only place the two kinds of divisor meet
 === c7: U-0951 / U-0830 -- descent and the signed-contact generator ===
   [PASS][  0.6s] c7a F is tau-even (t -> -t) and rational in (a,b,gamma): descends to K (U-0951)
-  [PASS][  3.3s] c7b xi is tau-odd and its square is in K: xi generates K(sqrt delta), the signed-contact radical (U-0830's Kummer kernel generator)
+  [PASS][  3.2s] c7b xi is tau-odd and its square is in K: xi generates K(sqrt delta), the signed-contact radical (U-0830's Kummer kernel generator)
 
-RESULT: 21/21 checks passed in 3.3s
+RESULT: 21/21 checks passed in 3.2s
 VERDICT: The pinch is an instance of Will's valuation calculus.  In Cella coordinates z1 = a - sigma b, z2 = 1 - sigma gamma,
   delta has Newton vertices (2,0) and (0,1) whose balanced face is weight (1,2): PINCH-2's blow-up is Thm 7.2.  On that face
   F's limit is a front-form coefficient depending on the approach ratio (7.8); off it, exponents suffice and the limit is

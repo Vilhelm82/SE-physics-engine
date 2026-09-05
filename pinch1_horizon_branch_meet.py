@@ -30,6 +30,14 @@
 #       the invariant' TRIGGERED there); the order-pair decides in class p8 (kill of 'the tangent
 #       decides' TRIGGERED there).  The invariant is the approach CLASS, stratified by contact
 #       order with the horizon.  Neither half alone is the theorem.
+# PRIORITY (recorded 2026-09-05 evening): the three-regime classification in p5/p6/p8 -- transverse, matched-order, in-horizon,
+#   with limits sech^2 l, a coefficient ratio, and 0 -- was stated first by Codex in her corpus overlap audit, sec. 3
+#   'Finite-endpoint valuation proposition' (outputs/corpus-seated-root-overlap-and-upgrade-audit.md, 14:09; receipt
+#   corpus-seated-root-checks.py, 13:40), in (eps, d) coordinates with eps ~ E s^p, d ~ D s^q.  PINCH-1 was committed at 16:21.
+#   Claire had declined to open that file under a 'corpus enters only at comparison' rule that Will never made; the
+#   duplication is the cost of that rule.  What is NOT in her sec. 3: the vector nu* and its bisector identity (p5-p7), the
+#   frame collapse h = sigma g (p3), and the kill check recorded both ways (p9).  Her sec. 12 asked for exactly this
+#   continuation ('add signed volume'); PINCH-1/2 are it.
 # TIER: [DERIVED | T7a's declared signature].  Nothing else declared.
 # [First run: p3a and p3c FAILED on runner bugs (kernel normalisation; unsimplified 0/0 on subs). Fixed; claims unchanged.]
 # KILL for p5: any transverse path with F -> anything but sech^2 l, or nu -> anything but nu*.

@@ -32,6 +32,11 @@
 #   gauge H -> H + g a^T + a g^T the edge vector shifts by delta nu with det(a -> delta nu) = 2 (g1 g2 g3)^2 != 0, so an
 #   arbitrary gauge moves nu ANYWHERE.  'Cella's null cone = the horizon light rays' is therefore true of the FORM and
 #   gauge-dependent for any actual nu until a presentation rule is fixed.  The nu-map is Codex's (agreed split).
+# OBSTRUCTION (Codex overlap audit sec. 5, citing Cella's Wall-Isotropy Comparison Theorem sec. 1, recorded 2026-09-05 evening):
+#   the additive gauge group ker Sigma over Q is DIVISIBLE, so every homomorphism ker Sigma -> C_2 is trivial
+#   (phi(a) = 2 phi(a/2) = 0).  Cella's gauge action on the plane x6 identifies with c_perp CANNOT generate the sheet
+#   parity.  So: the plane is the seat's rest space (x6 stands), but the deck must come from the branched cover
+#   K(sqrt delta)/K (PINCH-2), never from motion in that plane.  Consistent with PINCH-2 q8 (no realisable loop).
 # TIER: [DERIVED].  The FORM is identical and the seated root REALISES it; the identification of Cella's
 #   nu-components (g_i H_jk) with frame data is NOT made here and stays open.  That is the honest boundary.
 # [First run: x8c failed on the n = 4 realisation's scale (pairwise -3/2, needed -2); fixed by r = 2/sqrt3. Claim unchanged.]

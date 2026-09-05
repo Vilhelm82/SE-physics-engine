@@ -11,7 +11,7 @@
 === p3: at the pinch the frame collapses to two lines; n0 -> 0 ===
   [PASS][  0.1s] p3a sigma = +1: rank G = 2 and ker G = span(0, 1, -sigma), i.e. the relation h - sigma g
   [PASS][  0.1s] p3a sigma = -1: rank G = 2 and ker G = span(0, 1, -sigma), i.e. the relation h - sigma g
-  [PASS][  0.2s] p3b explicit horizon states: q(c,c) = -1, q(h,h) = q(g,g) = 1, q(c,h) = a, q(c,g) = b, q(h,g) = sigma, for both sheets
+  [PASS][  0.1s] p3b explicit horizon states: q(c,c) = -1, q(h,h) = q(g,g) = 1, q(c,h) = a, q(c,g) = b, q(h,g) = sigma, for both sheets
   [PASS][  0.2s] p3c n0 = h - sigma g vanishes LINEARLY in s = a - sigma b (both sheets): h = sigma g exactly at the pinch
   [PASS][  0.2s] p3d and n0 is null all along the horizon (Will's 'a whole line with zero length')
 === p4: every seat invariant is 0/0 at the pinch ===
@@ -19,11 +19,11 @@
   [PASS][  0.2s] p4b so F = eps/delta, eta = W/eps, N^2 are 0/0 there
   [PASS][  0.2s] p4c and the NUMERATOR of nu, delta*nu = (-eps, a - b gamma, b - a gamma), vanishes too: nu is 0/0 as a vector
 === p5: TRANSVERSE approach -- the 0/0 is removable, uniquely ===
-  [PASS][  0.4s] p5a F -> 1/(1 + b0^2) = sech^2(depth) along EVERY path with gamma' != 0, for all alpha, beta, gamma1, gamma2
+  [PASS][  0.3s] p5a F -> 1/(1 + b0^2) = sech^2(depth) along EVERY path with gamma' != 0, for all alpha, beta, gamma1, gamma2
   [PASS][  0.4s] p5b eta -> b0^2 = sinh^2(depth): the TILT equals the DEPTH at the pinch (T7d: sinh^2 lambda = eta -> lambda = l)
-  [PASS][  0.6s] p5c nu's frame components DO depend on the tangent, but g = sigma h there, and the VECTOR nu* = vec_c c + vec_h h does not
-  [PASS][  0.6s] p5d nu* = (-c + a h)/(1 + a^2) with a = sigma b0
-  [PASS][  0.6s] p5e nu* is TIMELIKE with q(nu*,nu*) = -sech^2 l, and q(nu*,c) = 1, q(nu*,h) = 0: it is a seat's normal
+  [PASS][  0.5s] p5c nu's frame components DO depend on the tangent, but g = sigma h there, and the VECTOR nu* = vec_c c + vec_h h does not
+  [PASS][  0.5s] p5d nu* = (-c + a h)/(1 + a^2) with a = sigma b0
+  [PASS][  0.5s] p5e nu* is TIMELIKE with q(nu*,nu*) = -sech^2 l, and q(nu*,c) = 1, q(nu*,h) = 0: it is a seat's normal
 === p6: IN-HORIZON approach -- two null limits, one per sheet ===
   [PASS][  0.6s] p6a on the horizon F == 0 and nu = n0/(a - sigma b) (frame comps (0, 1, -sigma)/(a - sigma b): divergent)
   [PASS][  0.6s] p6b but the VECTOR nu converges: nu_H^+ = (b, -1, -sqrt(1+b^2))/sqrt(1+b^2), nu_H^- with the middle sign flipped

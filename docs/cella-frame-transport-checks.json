@@ -1,0 +1,499 @@
+{
+  "scope": "Complete local metric-compatible transport and soldering classification for finite resolved native state fields; Cella channel/edge encodings and integrability obstructions. Physical response and metric selection remain explicit inputs.",
+  "verified_count": 160,
+  "checks": {
+    "resolved_gram_realization": {
+      "verified": true
+    },
+    "resolved_lift_volume": {
+      "verified": true
+    },
+    "resolved_gram_volume": {
+      "verified": true
+    },
+    "explicit_connection_a": {
+      "verified": true
+    },
+    "explicit_connection_xi": {
+      "verified": true
+    },
+    "presentation_compatibility_a": {
+      "verified": true
+    },
+    "presentation_volume_preservation_a": {
+      "verified": true
+    },
+    "regular_horizon_transport_a_-1": {
+      "verified": true
+    },
+    "regular_horizon_transport_a_1": {
+      "verified": true
+    },
+    "presentation_compatibility_xi": {
+      "verified": true
+    },
+    "presentation_volume_preservation_xi": {
+      "verified": true
+    },
+    "regular_horizon_transport_xi_-1": {
+      "verified": true
+    },
+    "regular_horizon_transport_xi_1": {
+      "verified": true
+    },
+    "presentation_curvature": {
+      "verified": true
+    },
+    "xlink_trine_normalization": {
+      "verified": true
+    },
+    "native_cella_embedding": {
+      "verified": true
+    },
+    "cella_trace_seat": {
+      "verified": true
+    },
+    "channel_clock_projection": {
+      "verified": true
+    },
+    "channel_full_decomposition": {
+      "verified": true
+    },
+    "channel_rest_residue": {
+      "verified": true
+    },
+    "channel_rest_positive_form": {
+      "verified": true
+    },
+    "cella_embedding_parallel_a": {
+      "verified": true
+    },
+    "cella_embedding_parallel_xi": {
+      "verified": true
+    },
+    "cella_tangent_jet_gauge_invariance": {
+      "verified": true
+    },
+    "cella_canonical_point_jet": {
+      "verified": true
+    },
+    "cella_canonical_normal_annihilation": {
+      "verified": true
+    },
+    "cella_full_edge_translation": {
+      "verified": true
+    },
+    "cella_edge_translation_rank": {
+      "verified": true
+    },
+    "cella_gauge_is_not_lorentz_transport": {
+      "verified": true
+    },
+    "canonical_point_gauges_do_not_fix_a_whole_surface": {
+      "verified": true
+    },
+    "full_defining_gauge_projector": {
+      "verified": true
+    },
+    "full_defining_gauge_gradient_norm": {
+      "verified": true
+    },
+    "full_defining_gauge_tangent_hessian": {
+      "verified": true
+    },
+    "full_defining_gauge_remainder": {
+      "verified": true
+    },
+    "full_defining_gauge_tensor_0": {
+      "verified": true
+    },
+    "invariant_tensor_symmetric_0": {
+      "verified": true
+    },
+    "invariant_tensor_tangent_inputs_0": {
+      "verified": true
+    },
+    "invariant_tensor_normal_output_0": {
+      "verified": true
+    },
+    "full_defining_gauge_tensor_1": {
+      "verified": true
+    },
+    "invariant_tensor_symmetric_1": {
+      "verified": true
+    },
+    "invariant_tensor_tangent_inputs_1": {
+      "verified": true
+    },
+    "invariant_tensor_normal_output_1": {
+      "verified": true
+    },
+    "full_defining_gauge_tensor_2": {
+      "verified": true
+    },
+    "invariant_tensor_symmetric_2": {
+      "verified": true
+    },
+    "invariant_tensor_tangent_inputs_2": {
+      "verified": true
+    },
+    "invariant_tensor_normal_output_2": {
+      "verified": true
+    },
+    "full_jet_reconstruction_from_quotient_and_gauge": {
+      "verified": true
+    },
+    "canonical_edges_full_gauge_invariance": {
+      "verified": true
+    },
+    "raw_edges_exact_geometric_plus_gauge_split": {
+      "verified": true
+    },
+    "raw_edges_full_gauge_action": {
+      "verified": true
+    },
+    "native_canonical_edge_gauge_invariance": {
+      "verified": true
+    },
+    "complete_tensor_euclidean_norm": {
+      "verified": true
+    },
+    "general_dimension_tensor_is_minus_embedded_II_0_0": {
+      "verified": true
+    },
+    "general_dimension_tensor_is_minus_embedded_II_0_1": {
+      "verified": true
+    },
+    "general_dimension_tensor_is_minus_embedded_II_0_2": {
+      "verified": true
+    },
+    "general_dimension_tensor_is_minus_embedded_II_1_1": {
+      "verified": true
+    },
+    "general_dimension_tensor_is_minus_embedded_II_1_2": {
+      "verified": true
+    },
+    "general_dimension_tensor_is_minus_embedded_II_2_2": {
+      "verified": true
+    },
+    "negative_nonconstant_gauge_projector": {
+      "verified": true
+    },
+    "negative_nonconstant_gauge_full_tensor_0": {
+      "verified": true
+    },
+    "negative_nonconstant_gauge_full_tensor_1": {
+      "verified": true
+    },
+    "negative_nonconstant_gauge_full_tensor_2": {
+      "verified": true
+    },
+    "negative_nonconstant_gauge_full_tensor_3": {
+      "verified": true
+    },
+    "full_tensor_rotation_is_orthogonal": {
+      "verified": true
+    },
+    "full_tensor_projector_covariance": {
+      "verified": true
+    },
+    "full_tensor_orthogonal_covariance_0": {
+      "verified": true
+    },
+    "full_tensor_orthogonal_covariance_1": {
+      "verified": true
+    },
+    "full_tensor_orthogonal_covariance_2": {
+      "verified": true
+    },
+    "full_tensor_orthogonal_covariance_3": {
+      "verified": true
+    },
+    "edge_extraction_omits_nonzero_shape": {
+      "verified": true
+    },
+    "same_shape_rotated_edges_nonzero": {
+      "verified": true
+    },
+    "edge_B_norm_is_not_full_axis_invariant": {
+      "verified": true
+    },
+    "complete_tensor_retains_saddle_curvature": {
+      "verified": true
+    },
+    "complete_tensor_saddle_norm_axis_invariant": {
+      "verified": true
+    },
+    "zero_tensor_retains_no_tangent_plane": {
+      "verified": true
+    },
+    "flat_jet_projector_distinguishes_gauge_orbits": {
+      "verified": true
+    },
+    "canonical_native_edge_norm": {
+      "verified": true
+    },
+    "shape_trine_is_directional_curvature": {
+      "verified": true
+    },
+    "shape_trine_full_inverse": {
+      "verified": true
+    },
+    "shape_trine_full_surjection": {
+      "verified": true
+    },
+    "shape_trine_trace": {
+      "verified": true
+    },
+    "shape_trine_determinant_form": {
+      "verified": true
+    },
+    "shape_trine_polarized_determinant": {
+      "verified": true
+    },
+    "shape_trine_native_components": {
+      "verified": true
+    },
+    "shape_trine_native_mean_clock": {
+      "verified": true
+    },
+    "shape_trine_full_tangent_rotation": {
+      "verified": true
+    },
+    "shape_trine_rotation_preserves_B": {
+      "verified": true
+    },
+    "shape_trine_rotation_preserves_trace": {
+      "verified": true
+    },
+    "shape_trine_rotation_preserves_mean_section": {
+      "verified": true
+    },
+    "shape_trine_reflection_preserves_B": {
+      "verified": true
+    },
+    "shape_trine_complete_normal_pencil": {
+      "verified": true
+    },
+    "shape_trine_retains_saddle": {
+      "verified": true
+    },
+    "all_metric_compatible_connections_a": {
+      "verified": true
+    },
+    "all_metric_compatible_connections_xi": {
+      "verified": true
+    },
+    "orthonormal_free_connection_a": {
+      "verified": true
+    },
+    "curved_native_metric_compatibility_a": {
+      "verified": true
+    },
+    "orthonormal_free_connection_xi": {
+      "verified": true
+    },
+    "curved_native_metric_compatibility_xi": {
+      "verified": true
+    },
+    "curvature_full_conjugacy": {
+      "verified": true
+    },
+    "half_metric_connection_curvature": {
+      "verified": true
+    },
+    "half_metric_nonflat_witness": {
+      "verified": true
+    },
+    "basis_covariance_metric_a": {
+      "verified": true
+    },
+    "basis_covariance_skew_parameter_a": {
+      "verified": true
+    },
+    "basis_covariance_metric_xi": {
+      "verified": true
+    },
+    "basis_covariance_skew_parameter_xi": {
+      "verified": true
+    },
+    "basis_covariance_metric_v": {
+      "verified": true
+    },
+    "basis_covariance_skew_parameter_v": {
+      "verified": true
+    },
+    "basis_covariance_curvature": {
+      "verified": true
+    },
+    "basis_covariance_mixed_pure_gauge": {
+      "verified": true
+    },
+    "raw_native_volume": {
+      "verified": true
+    },
+    "raw_frame_rank_loss": {
+      "verified": true
+    },
+    "raw_transport_volume_pole": {
+      "verified": true
+    },
+    "raw_gram_recovery": {
+      "verified": true
+    },
+    "general_levi_civita_formula_metric_compatibility": {
+      "verified": true
+    },
+    "general_levi_civita_formula_zero_torsion": {
+      "verified": true
+    },
+    "curved_soldering_metric": {
+      "verified": true
+    },
+    "curved_soldering_volume": {
+      "verified": true
+    },
+    "curved_soldering_pinch_regular": {
+      "verified": true
+    },
+    "same_state_null_pinch": {
+      "verified": true
+    },
+    "same_native_state_flat_soldering": {
+      "verified": true
+    },
+    "physical_compatibility_0": {
+      "verified": true
+    },
+    "physical_torsion_0_1": {
+      "verified": true
+    },
+    "flat_soldering_integrability_0_1": {
+      "verified": true
+    },
+    "physical_curvature_conjugacy_0_1": {
+      "verified": true
+    },
+    "physical_torsion_0_2": {
+      "verified": true
+    },
+    "flat_soldering_integrability_0_2": {
+      "verified": true
+    },
+    "physical_curvature_conjugacy_0_2": {
+      "verified": true
+    },
+    "physical_torsion_0_3": {
+      "verified": true
+    },
+    "flat_soldering_integrability_0_3": {
+      "verified": true
+    },
+    "physical_curvature_conjugacy_0_3": {
+      "verified": true
+    },
+    "physical_compatibility_1": {
+      "verified": true
+    },
+    "physical_torsion_1_2": {
+      "verified": true
+    },
+    "flat_soldering_integrability_1_2": {
+      "verified": true
+    },
+    "physical_curvature_conjugacy_1_2": {
+      "verified": true
+    },
+    "physical_torsion_1_3": {
+      "verified": true
+    },
+    "flat_soldering_integrability_1_3": {
+      "verified": true
+    },
+    "physical_curvature_conjugacy_1_3": {
+      "verified": true
+    },
+    "physical_compatibility_2": {
+      "verified": true
+    },
+    "physical_torsion_2_3": {
+      "verified": true
+    },
+    "flat_soldering_integrability_2_3": {
+      "verified": true
+    },
+    "physical_curvature_conjugacy_2_3": {
+      "verified": true
+    },
+    "physical_compatibility_3": {
+      "verified": true
+    },
+    "native_connection_equals_metric_levi_civita_0": {
+      "verified": true
+    },
+    "native_connection_equals_metric_levi_civita_1": {
+      "verified": true
+    },
+    "native_connection_equals_metric_levi_civita_2": {
+      "verified": true
+    },
+    "native_connection_equals_metric_levi_civita_3": {
+      "verified": true
+    },
+    "curved_example_full_ricci": {
+      "verified": true
+    },
+    "curved_example_scalar": {
+      "verified": true
+    },
+    "example_null_normalization": {
+      "verified": true
+    },
+    "example_outgoing_null": {
+      "verified": true
+    },
+    "example_incoming_null": {
+      "verified": true
+    },
+    "example_native_normal_norm": {
+      "verified": true
+    },
+    "native_area_not_selected_by_transport": {
+      "verified": true
+    },
+    "null_native_locus_not_automatically_marginal": {
+      "verified": true
+    },
+    "incoming_expansion_at_native_locus": {
+      "verified": true
+    },
+    "screen_first_normal_independence": {
+      "verified": true
+    },
+    "screen_second_normal_X": {
+      "verified": true
+    },
+    "screen_second_normal_Y": {
+      "verified": true
+    },
+    "screen_bracket_obstruction": {
+      "verified": true
+    },
+    "screen_frobenius_obstruction": {
+      "verified": true
+    }
+  },
+  "results": {
+    "regular_lift": "R=[[1,-a,-xi],[0,sqrt(p),a*xi/sqrt(p)],[0,0,1/sqrt(p)]], p=1+a^2, det R=1",
+    "presentation_transport": "Omega0=R^-1 dR; curvature zero; regular at d=0 and xi=+/-1",
+    "complete_connection_family": "Omega=R^-1(omega R+dR), omega^T eta+eta omega=0",
+    "complete_soldering_family": "E=R^-1 theta for every invertible orthonormal coframe theta; g=theta^T eta theta",
+    "cella_account_embedding": "U=R^-1 J, U^T G U=2I-11^T, U1=sqrt(3)c; V_C=(sum C/sqrt(3))c+U(C-mean(C)1)",
+    "cella_edge_gauge": "nu'=nu+M(g)u; det M=2(g1g2g3)^2; generally not Lorentz transport",
+    "torsion": "R T_E=dtheta+omega wedge theta; zero torsion uniquely fixes omega for a chosen theta",
+    "coordinate_integration": "A fixed flat-frame coordinate integration exists locally exactly when connection curvature and coframe torsion vanish",
+    "screen_integration": "For independent normal forms alpha,beta: alpha wedge beta wedge dalpha=alpha wedge beta wedge dbeta=0",
+    "nonflat_metric_only_connection": "(1/2)G^-1 dG has curvature -[G^-1 partial_a G,G^-1 partial_xi G]/4, nonzero already at a=xi=0",
+    "curved_crossing_example": "Same a=0,xi=1+kt,d=t with ds^2=-dt^2+exp(2 lambda t)(dx^2+dz^2)+dr^2; scalar curvature 6 lambda^2; outgoing expansion at t=0 is 2 lambda, not zero"
+  }
+}

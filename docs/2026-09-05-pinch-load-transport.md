@@ -253,6 +253,8 @@ Its power for arbitrary efforts is \(e_x^2+(ue_x+e_d)^2+m_Ae_A^2\), and its dete
 \tag{13}
 \]
 
+**Resolved constitutive continuation.** [The Cella weighted-response extension](/home/williaml/seated-root/docs/2026-09-05-cella-constitutive-divisors.md), Theorem 3, now generates this same path from the constant resolved matrix \(\widehat M=\left(\begin{smallmatrix}1+k^2&k\\k&1\end{smallmatrix}\right)\) on \((\xi,d)\). Its pushforward differs from (12) for other efforts and stays smooth as a full response on the resolved state. [The implicit-cut calculation](/home/williaml/seated-root/docs/2026-09-05-cella-normal-geometry.md) then computes both expansions and the full Ricci tensor below directly from the selected metric and cut jets.
+
 Equation (1) gives a real smooth native frame near \(T=0\), with original Gram determinant \(-T^2\). The signed volume changes sheet there. The resolved frame remains nondegenerate.
 
 Take the clock and radial fields \(C=\partial_T\), \(R_n=\partial_r\). Locally \(\xi>0\), so \(w=\xi\). In spherical surface geometry, equation (7) with \(D=0\) becomes

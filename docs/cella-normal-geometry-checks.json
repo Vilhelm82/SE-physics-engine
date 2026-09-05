@@ -1,0 +1,328 @@
+{
+  "date": "2026-09-05",
+  "scope": "Conditional nondegenerate implicit submanifold geometry; native cut and transport selection remain inputs.",
+  "checks_passed": 98,
+  "checks": {
+    "cross_graph_tangent_kernel": {
+      "verified": true
+    },
+    "cross_graph_projector_idempotent": {
+      "verified": true
+    },
+    "cross_graph_projector_metric_self_adjoint": {
+      "verified": true
+    },
+    "cross_graph_projector_tangent": {
+      "verified": true
+    },
+    "cross_graph_normal_right_inverse": {
+      "verified": true
+    },
+    "cross_graph_normal_metric": {
+      "verified": true
+    },
+    "cross_graph_spacelike": {
+      "verified": true
+    },
+    "cross_graph_lorentzian_normal": {
+      "verified": true
+    },
+    "implicit_vs_embedded_B_00": {
+      "verified": true
+    },
+    "implicit_vs_embedded_B_01": {
+      "verified": true
+    },
+    "implicit_vs_embedded_B_02": {
+      "verified": true
+    },
+    "implicit_vs_embedded_B_11": {
+      "verified": true
+    },
+    "implicit_vs_embedded_B_12": {
+      "verified": true
+    },
+    "implicit_vs_embedded_B_22": {
+      "verified": true
+    },
+    "cross_graph_noncommuting_shapes": {
+      "verified": true
+    },
+    "shape_ambient_restriction": {
+      "verified": true
+    },
+    "shape_ambient_normal_kernel": {
+      "verified": true
+    },
+    "shape_metric_self_adjoint": {
+      "verified": true
+    },
+    "ambient_shape_power_trace_1": {
+      "verified": true
+    },
+    "ambient_shape_power_trace_2": {
+      "verified": true
+    },
+    "ambient_shape_power_trace_3": {
+      "verified": true
+    },
+    "shape_sigma1": {
+      "verified": true
+    },
+    "shape_sigma2": {
+      "verified": true
+    },
+    "shape_sigma3": {
+      "verified": true
+    },
+    "all_cubic_normal_monomials_present": {
+      "verified": true
+    },
+    "codimension_two_bordered_fingerprint": {
+      "verified": true
+    },
+    "gauge_derivative": {
+      "verified": true
+    },
+    "gauge_gram": {
+      "verified": true
+    },
+    "gauge_normal_frame": {
+      "verified": true
+    },
+    "gauge_projector": {
+      "verified": true
+    },
+    "gauge_hessian_0": {
+      "verified": true
+    },
+    "gauge_hessian_tangent_cancellation_0": {
+      "verified": true
+    },
+    "gauge_hessian_1": {
+      "verified": true
+    },
+    "gauge_hessian_tangent_cancellation_1": {
+      "verified": true
+    },
+    "gauge_full_shape": {
+      "verified": true
+    },
+    "channel_self_gauge_shift": {
+      "verified": true
+    },
+    "channel_coupling_gauge_shift": {
+      "verified": true
+    },
+    "channel_gauge_shift_nonzero": {
+      "verified": true
+    },
+    "channel_fingerprint_gauge_matrix": {
+      "verified": true
+    },
+    "channel_trace_shift_cancellation": {
+      "verified": true
+    },
+    "normal_connection_gauge_0": {
+      "verified": true
+    },
+    "normal_connection_gauge_1": {
+      "verified": true
+    },
+    "normal_connection_gauge_2": {
+      "verified": true
+    },
+    "general_second_polarization": {
+      "verified": true
+    },
+    "curved_normal_connection_vanishes_at_point_0": {
+      "verified": true
+    },
+    "curved_normal_connection_vanishes_at_point_1": {
+      "verified": true
+    },
+    "normal_curvature_nonzero": {
+      "verified": true
+    },
+    "normal_curvature_metric_skew": {
+      "verified": true
+    },
+    "normal_curvature_Ricci_identity": {
+      "verified": true
+    },
+    "normal_connection_metric_compatibility_0": {
+      "verified": true
+    },
+    "normal_connection_metric_compatibility_1": {
+      "verified": true
+    },
+    "varying_metric_embedded_B_00": {
+      "verified": true
+    },
+    "varying_metric_embedded_B_01": {
+      "verified": true
+    },
+    "varying_metric_embedded_B_11": {
+      "verified": true
+    },
+    "varying_metric_covariant_hessian_required": {
+      "verified": true
+    },
+    "area_dual_covector": {
+      "verified": true
+    },
+    "area_dual_norm": {
+      "verified": true
+    },
+    "area_preserving_kernel": {
+      "verified": true
+    },
+    "area_preserving_norm": {
+      "verified": true
+    },
+    "causal_stratum_future_trapped": {
+      "verified": true
+    },
+    "causal_stratum_past_trapped": {
+      "verified": true
+    },
+    "causal_stratum_opposite_expansions": {
+      "verified": true
+    },
+    "causal_stratum_future_marginal": {
+      "verified": true
+    },
+    "causal_stratum_past_marginal": {
+      "verified": true
+    },
+    "zero_mean_dual_zero": {
+      "verified": true
+    },
+    "zero_mean_every_normal_area_preserving": {
+      "verified": true
+    },
+    "implicit_cut_normal_gram": {
+      "verified": true
+    },
+    "implicit_cut_normal_frame": {
+      "verified": true
+    },
+    "implicit_cut_hessian_time": {
+      "verified": true
+    },
+    "implicit_cut_hessian_radial": {
+      "verified": true
+    },
+    "implicit_cut_traced_hessian": {
+      "verified": true
+    },
+    "implicit_cut_rest_normal_norm": {
+      "verified": true
+    },
+    "implicit_cut_rest_null_partner": {
+      "verified": true
+    },
+    "implicit_cut_outgoing_null": {
+      "verified": true
+    },
+    "implicit_cut_inward_null": {
+      "verified": true
+    },
+    "implicit_cut_null_pair": {
+      "verified": true
+    },
+    "implicit_cut_outgoing_normal_bridge": {
+      "verified": true
+    },
+    "implicit_cut_forward_area_K": {
+      "verified": true
+    },
+    "implicit_cut_forward_area_J": {
+      "verified": true
+    },
+    "implicit_cut_forward_outgoing": {
+      "verified": true
+    },
+    "implicit_cut_forward_inward": {
+      "verified": true
+    },
+    "implicit_cut_area_bridge": {
+      "verified": true
+    },
+    "implicit_cut_full_rest_shape": {
+      "verified": true
+    },
+    "implicit_cut_resolved_response_positive_determinant": {
+      "verified": true
+    },
+    "implicit_cut_resolved_load_generates_clock_path": {
+      "verified": true
+    },
+    "implicit_cut_witness_area_K": {
+      "verified": true
+    },
+    "implicit_cut_witness_area_J": {
+      "verified": true
+    },
+    "implicit_cut_witness_inward": {
+      "verified": true
+    },
+    "implicit_cut_witness_outgoing": {
+      "verified": true
+    },
+    "implicit_cut_witness_initial_marginality": {
+      "verified": true
+    },
+    "implicit_cut_witness_outer_derivative": {
+      "verified": true
+    },
+    "implicit_cut_witness_regular_crossing": {
+      "verified": true
+    },
+    "implicit_cut_tensor_full_Ricci": {
+      "verified": true
+    },
+    "implicit_cut_tensor_null_focusing": {
+      "verified": true
+    },
+    "implicit_cut_tensor_scalar_curvature": {
+      "verified": true
+    },
+    "zero_mean_nontrivial_B_time_trace": {
+      "verified": true
+    },
+    "zero_mean_nontrivial_B_space_trace": {
+      "verified": true
+    },
+    "zero_mean_does_not_force_totally_geodesic": {
+      "verified": true
+    }
+  },
+  "witnesses": {
+    "normal_curvature_at_origin": "Matrix([[0, -4], [-4, 0]])",
+    "noncommuting_shapes_at_origin": [
+      "Matrix([[-2, -1], [-1, -3]])",
+      "Matrix([[1, 2], [2, -1]])"
+    ],
+    "native_implicit_cut": {
+      "cut": "phi=(T-T0,r-r0)",
+      "area_K_general": "2*(xi(T_native, r_native)*Derivative(R(T_native, r_native), r_native) + Derivative(R(T_native, r_native), T_native))/R(T_native, r_native)",
+      "area_profile_chosen": "-T_native**2*k_native/2 - T_native + r_native",
+      "xi_from_constant_resolved_response": "T_native*k_native + 1",
+      "area_K_witness": "0",
+      "rho_witness": "-4/(T_native**2*k_native + 2*T_native - 2*r_native)",
+      "theta_L_witness": "2*T_native*k_native*(T_native*k_native + 2)/(T_native**2*k_native + 2*T_native - 2*r_native)",
+      "outer_derivative_at_T0": "-k_native/r_native",
+      "Ricci_diagonal": [
+        "-4*k_native/(T_native**2*k_native + 2*T_native - 2*r_native)",
+        "0",
+        "(3*T_native**2*k_native**2 + 6*T_native*k_native - 2*k_native*r_native + 2)/2",
+        "(3*T_native**2*k_native**2 + 6*T_native*k_native - 2*k_native*r_native + 2)*sin(theta_native)**2/2"
+      ]
+    }
+  },
+  "source_provenance": {
+    "GFL:thm:mean_curvature_decomp": "ace98fbfd85a92cca4da4f348c410c81fe38a0409d57840915d98fa3359f9033",
+    "DBP:thm:three_channel_kg_ext": "dcb8e175e3c43f9b708afda98e8cbf02c55f910e2d67e28b300edf676ab7c2fd"
+  }
+}

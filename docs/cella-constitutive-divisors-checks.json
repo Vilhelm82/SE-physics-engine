@@ -1,0 +1,162 @@
+{
+  "scope": "Smooth passive divisor responses, nonlinear integrability and geometric power ports",
+  "check_count": 52,
+  "checks": {
+    "multi_face_dissipative_symmetry": {
+      "verified": true
+    },
+    "multi_face_neutral_skew": {
+      "verified": true
+    },
+    "multi_face_power_positive_factor": {
+      "verified": true
+    },
+    "row_0_vanishes_on_face_0": {
+      "verified": true
+    },
+    "row_1_vanishes_on_face_0": {
+      "verified": true
+    },
+    "row_1_vanishes_on_face_1": {
+      "verified": true
+    },
+    "row_2_vanishes_on_face_1": {
+      "verified": true
+    },
+    "shared_face_dissipative_factor": {
+      "verified": true
+    },
+    "shared_face_neutral_factor": {
+      "verified": true
+    },
+    "separate_faces_neutral_factor": {
+      "verified": true
+    },
+    "unconstrained_channel_dissipation": {
+      "verified": true
+    },
+    "shared_face_power": {
+      "verified": true
+    },
+    "shared_face_rows_vanish": {
+      "verified": true
+    },
+    "shared_face_first_derivative_survives": {
+      "verified": true
+    },
+    "insufficient_dissipative_order_negative_minor": {
+      "verified": true
+    },
+    "weighted_dissipative_order_four": {
+      "verified": true
+    },
+    "weighted_neutral_order_three": {
+      "verified": true
+    },
+    "nonlinear_positive_hessian_factor": {
+      "verified": true
+    },
+    "nonlinear_barred_hessian": {
+      "verified": true
+    },
+    "nonlinear_row_0_integrable": {
+      "verified": true
+    },
+    "nonlinear_row_1_integrable": {
+      "verified": true
+    },
+    "nonlinear_radial_reconstruction": {
+      "verified": true
+    },
+    "nonlinear_horizon_output": {
+      "verified": true
+    },
+    "positive_symmetric_part_without_integrability": {
+      "verified": true
+    },
+    "row_curl_obstruction": {
+      "verified": true
+    },
+    "derived_observable_power": {
+      "verified": true
+    },
+    "observable_symmetric_part": {
+      "verified": true
+    },
+    "observable_neutral_part": {
+      "verified": true
+    },
+    "spherical_area_work_with_drift": {
+      "verified": true
+    },
+    "affine_horizon_orientation": {
+      "verified": true
+    },
+    "orientation_without_unbounded_effort_dependence": {
+      "verified": true
+    },
+    "DIS_variable_constitution_energy": {
+      "verified": true
+    },
+    "DIS_material_momentum_exchange": {
+      "verified": true
+    },
+    "native_weighted_response": {
+      "verified": true
+    },
+    "native_weighted_response_determinant": {
+      "verified": true
+    },
+    "native_contrast_coframe": {
+      "verified": true
+    },
+    "native_contrast_response": {
+      "verified": true
+    },
+    "native_power_pullback": {
+      "verified": true
+    },
+    "resolved_constant_load_x_trajectory": {
+      "verified": true
+    },
+    "resolved_constant_load_d_trajectory": {
+      "verified": true
+    },
+    "resolved_constant_load_direction": {
+      "verified": true
+    },
+    "resolved_constant_load_direction_rate": {
+      "verified": true
+    },
+    "previous_native_crossing_recovered": {
+      "verified": true
+    },
+    "original_full_rank_response_lift_obstruction": {
+      "verified": true
+    },
+    "weighted_1_2_mixed_response_order": {
+      "verified": true
+    },
+    "weighted_1_2_second_response_order": {
+      "verified": true
+    },
+    "weighted_1_2_lift_recovery": {
+      "verified": true
+    },
+    "collapsed_fibre_general_response": {
+      "verified": true
+    },
+    "descent_constant_22_forces_n_constant": {
+      "verified": true
+    },
+    "descent_constant_12_forces_n_zero": {
+      "verified": true
+    },
+    "finite_effort_radial_boundary_rate": {
+      "verified": true
+    },
+    "continuous_descent_blocks_transverse_rate": {
+      "verified": true
+    }
+  }
+}

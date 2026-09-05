@@ -1,0 +1,258 @@
+{
+  "scope": "Exact coordinate tensor and finite-jet extension for a supplied metric; native connection and load selection remain explicit model data.",
+  "standard_tools": [
+    "coordinate Levi-Civita and curvature definitions",
+    "adjugate identity",
+    "finite Taylor jets",
+    "SymPy exact algebra"
+  ],
+  "external_sources_used": [],
+  "verified_count": 75,
+  "checks": {
+    "full_tensor_n2_negative0_sample0": {
+      "verified": true
+    },
+    "full_tensor_n2_negative0_sample1": {
+      "verified": true
+    },
+    "full_tensor_n2_negative1_sample0": {
+      "verified": true
+    },
+    "full_tensor_n2_negative1_sample1": {
+      "verified": true
+    },
+    "full_tensor_n2_negative2_sample0": {
+      "verified": true
+    },
+    "full_tensor_n2_negative2_sample1": {
+      "verified": true
+    },
+    "full_tensor_n3_negative0_sample0": {
+      "verified": true
+    },
+    "full_tensor_n3_negative0_sample1": {
+      "verified": true
+    },
+    "full_tensor_n3_negative1_sample0": {
+      "verified": true
+    },
+    "full_tensor_n3_negative1_sample1": {
+      "verified": true
+    },
+    "full_tensor_n3_negative2_sample0": {
+      "verified": true
+    },
+    "full_tensor_n3_negative2_sample1": {
+      "verified": true
+    },
+    "full_tensor_n3_negative3_sample0": {
+      "verified": true
+    },
+    "full_tensor_n3_negative3_sample1": {
+      "verified": true
+    },
+    "full_tensor_n4_negative0_sample0": {
+      "verified": true
+    },
+    "full_tensor_n4_negative0_sample1": {
+      "verified": true
+    },
+    "full_tensor_n4_negative1_sample0": {
+      "verified": true
+    },
+    "full_tensor_n4_negative1_sample1": {
+      "verified": true
+    },
+    "full_tensor_n4_negative2_sample0": {
+      "verified": true
+    },
+    "full_tensor_n4_negative2_sample1": {
+      "verified": true
+    },
+    "full_tensor_n4_negative3_sample0": {
+      "verified": true
+    },
+    "full_tensor_n4_negative3_sample1": {
+      "verified": true
+    },
+    "full_tensor_n4_negative4_sample0": {
+      "verified": true
+    },
+    "full_tensor_n4_negative4_sample1": {
+      "verified": true
+    },
+    "sphere_positive_convention": {
+      "verified": true
+    },
+    "generic_signed_order_1": {
+      "verified": true
+    },
+    "generic_signed_coefficient_1": {
+      "verified": true
+    },
+    "parity_signed_law_1": {
+      "verified": true
+    },
+    "generic_signed_order_-1": {
+      "verified": true
+    },
+    "generic_signed_coefficient_-1": {
+      "verified": true
+    },
+    "parity_signed_law_-1": {
+      "verified": true
+    },
+    "non_diagonal_pullback_scalar": {
+      "verified": true
+    },
+    "non_diagonal_pullback_all_81_components": {
+      "verified": true
+    },
+    "pullback_divisor_order": {
+      "verified": true
+    },
+    "pullback_divisor_coefficient": {
+      "verified": true
+    },
+    "off_diagonal_changes_parity_residue": {
+      "verified": true
+    },
+    "off_diagonal_generic_order": {
+      "verified": true
+    },
+    "off_diagonal_changes_generic_residue": {
+      "verified": true
+    },
+    "signed_corner_exact": {
+      "verified": true
+    },
+    "balanced_front_cancels": {
+      "verified": true
+    },
+    "curved_path_next_layer_order": {
+      "verified": true
+    },
+    "curved_path_next_layer_coefficient": {
+      "verified": true
+    },
+    "determinant_multimonomial": {
+      "verified": true
+    },
+    "determinant_face_cancellation_order": {
+      "verified": true
+    },
+    "determinant_face_cancellation_curvature_order": {
+      "verified": true
+    },
+    "determinant_face_cancellation_curvature_coefficient": {
+      "verified": true
+    },
+    "finite_jet_early_answer_is_only_bounded": {
+      "verified": true
+    },
+    "finite_jet_late_numerator_order": {
+      "verified": true
+    },
+    "finite_jet_late_numerator_coefficient": {
+      "verified": true
+    },
+    "finite_jet_matches_exact_curvature": {
+      "verified": true
+    },
+    "finite_jet_quotient_order": {
+      "verified": true
+    },
+    "finite_jet_quotient_coefficient": {
+      "verified": true
+    },
+    "covariant_derivative_metric_compatibility_x": {
+      "verified": true
+    },
+    "covariant_derivative_metric_compatibility_y": {
+      "verified": true
+    },
+    "second_covariant_derivative_includes_derivative_slot": {
+      "verified": true
+    },
+    "differential_scalar_invariant": {
+      "verified": true
+    },
+    "general_differential_contraction": {
+      "verified": true
+    },
+    "covariant_derivative_finite_jet_order": {
+      "verified": true
+    },
+    "covariant_derivative_finite_jet_coefficient": {
+      "verified": true
+    },
+    "arbitrary_transverse_generic_order": {
+      "verified": true
+    },
+    "arbitrary_transverse_generic_coefficient": {
+      "verified": true
+    },
+    "arbitrary_transverse_parity_order": {
+      "verified": true
+    },
+    "arbitrary_transverse_parity_coefficient": {
+      "verified": true
+    },
+    "null_wave_nonzero_RuXuX": {
+      "verified": true
+    },
+    "null_wave_nonzero_RuYuY": {
+      "verified": true
+    },
+    "null_wave_scalar_zero": {
+      "verified": true
+    },
+    "null_wave_ricci_zero": {
+      "verified": true
+    },
+    "null_wave_kretschmann_zero": {
+      "verified": true
+    },
+    "off_diagonal_horizon_determinant": {
+      "verified": true
+    },
+    "off_diagonal_horizon_scalar": {
+      "verified": true
+    },
+    "off_diagonal_horizon_kretschmann": {
+      "verified": true
+    },
+    "off_diagonal_horizon_radial_tensor": {
+      "verified": true
+    },
+    "off_diagonal_horizon_time_dependent_tidal": {
+      "verified": true
+    },
+    "native_horizon_finite_scalar": {
+      "verified": true
+    },
+    "native_horizon_finite_kretschmann": {
+      "verified": true
+    }
+  },
+  "results": {
+    "independent_rational_two_jet_components": 3304,
+    "independent_off_diagonal_residue": "12/(x**4*(c**2 - 6))",
+    "determinant_cancellation_curvature": {
+      "status": "finite leading coefficient",
+      "order": "-4",
+      "coefficient": "1/2"
+    },
+    "automatic_jet_depths": {
+      "early_cutoff": 4,
+      "early_unit_degree": 8,
+      "later_cutoff": 7,
+      "later_unit_degree": 11
+    },
+    "horizon_scalar": "-Derivative(F(v, r), (r, 2)) - 4*Derivative(F(v, r), r)/r + (2 - 2*F(v, r))/r**2",
+    "horizon_kretschmann": "Derivative(F(v, r), (r, 2))**2 + 4*Derivative(F(v, r), r)**2/r**2 + 4*(1 - F(v, r))**2/r**4",
+    "native_horizon_scalar": "2*(L**2 - 4*L*r0 + 5*r0**2)/(L**2*r0**2)",
+    "native_horizon_kretschmann": "4*(L**4 + 4*L**2*r0**2 + 25*r0**4)/(L**4*r0**4)"
+  },
+  "elapsed_seconds": 39.85
+}

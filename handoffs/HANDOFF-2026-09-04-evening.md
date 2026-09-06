@@ -1,6 +1,6 @@
 # HANDOFF 2026-09-04 (evening session) -- the rebuild begins: Cl(3) exposed, the primitives written, the seat's form DERIVED
 Written 2026-09-04 19:10 AEST. Covers the evening session of 2026-09-04.
-Supersedes `HANDOFF-2026-09-04.md` (the morning/afternoon session) for STATE; that file remains provenance for THM-O, VIEW-1, CENSUS-C, PRED-1.
+Supersedes `handoffs/HANDOFF-2026-09-04.md` (the morning/afternoon session) for STATE; that file remains provenance for THM-O, VIEW-1, CENSUS-C, PRED-1.
 **Newest handoff is state; every older one is provenance** (rule 7). Read this, then `git status`, before deriving anything.
 
 ## Repo state at handoff

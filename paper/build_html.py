@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # =============================================================================
-# build_html.py - render the canonical markdown paper to a SELF-CONTAINED html
+# paper/build_html.py - render the canonical markdown paper to a SELF-CONTAINED html
 #
 # WHY THIS SHAPE: the .md stays canonical (git-diffable, toolchain-free,
 # readable in eighty years). This script is a one-way RENDERER: never edit the
@@ -13,7 +13,7 @@ import base64, io, re, pathlib, markdown
 
 SRC = 'PAPER-seated-root-v0.5.md'
 OUT = 'PAPER-seated-root.html'
-here = pathlib.Path('.')
+here = pathlib.Path(__file__).resolve().parent; import os; os.chdir(here)  # self-relative since the move to paper/ (2026-09-06)
 text = io.open(SRC, encoding='utf-8').read()
 
 # --- 1. protect math from the markdown parser (underscores become <em> etc.)

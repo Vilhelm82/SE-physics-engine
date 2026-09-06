@@ -9,6 +9,24 @@ The point is not to predict something general relativity does not. It is to find
 little has to be assumed before the usual structures become forced, and to keep an honest
 ledger of what was assumed anyway.
 
+## Layout (since 2026-09-06)
+
+```
+handoffs/      session state; the NEWEST handoff is state, every older one is provenance (rule 7)
+paper/         PAPER-seated-root-v0.5.md, build_html.py -> PAPER-seated-root.html, figures.py -> fig*.png
+docs/          standing documents at the top (LABELLED-MODEL, CONJECTURE-COSMOLOGY, TESTING-SCHEDULE, EXTERNAL-MATHEMATICS-DEBT,
+               PREDICTION-1, RULING-1-closure, foundation audit/programme); results/<date>/ receipts/ figures/ prereg/ archive/;
+               docs/README.md is the map, docs/MOVED.md the from->to record of the reorganisation
+rlq/           the quantum-control library and harness (reflection loops, finite dumps, QEC stack, receipts); rlq/README.md
+experiments/   dated drivers built on rlq; every run writes runs/<date>/<experiment>/ (receipt.json, run.log, *.png)
+runs/          those artifact folders and runs/INDEX.md
+tests/         unit tests (unittest / pytest)
+suites/        the theorem suites: one-off SymPy runners that produced results already recorded in docs/; their logs in suites/logs/
+tools/         the scripts that performed the reorganisation
+external/      Codex outputs brought into the repo
+```
+Run everything from the repository root; the paper builds from `paper/`.
+
 ## The rule that shapes the repo
 
 **No representation that already contains the target.**
@@ -125,7 +143,7 @@ Requires `sympy` and `mpmath`. Each file is self-contained and states its inputs
 checks, and what it does *not* establish in a header block. The `.log` beside it is the
 committed output.
 
-`build_html.py` renders `PAPER-seated-root-v0.5.md` to self-contained HTML.
+`paper/build_html.py` renders `paper/PAPER-seated-root-v0.5.md` to self-contained HTML.
 
 ## State
 

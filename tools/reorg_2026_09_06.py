@@ -1,4 +1,4 @@
-"""Reorganise the seated-root root. Run from the repo root. Uses git mv; rewrites imports and replay lines; writes MOVED.md."""
+"""Reorganise the seated-root root. Run from the repo root. Uses git mv; rewrites imports and replay lines; writes docs/MOVED.md."""
 import re, glob, os, subprocess, sys
 from pathlib import Path
 ROOT = Path('.').resolve()
@@ -101,5 +101,5 @@ lines = ['# Root reorganisation, 2026-09-06\n', 'Every file that moved, and wher
          'Run everything from the repository root.\n', '| from | to |\n|---|---|\n'] + [f'| {m}.py | {dst} |\n' for m, dst in moved.items()] + \
         ['| *.log, curv1_path1_results.json | suites/logs/ (qi_error_harness.log, claire_v0_thirteen.log -> experiments/2026-09-05/) |\n',
          '| qec_stack_requirements.txt | rlq/requirements-qec.txt |\n']
-Path('MOVED.md').write_text(''.join(lines)); sh('git', 'add', 'MOVED.md')
+Path('docs/MOVED.md').write_text(''.join(lines)); sh('git', 'add', 'docs/MOVED.md')
 print(f'moved {len(moved)} modules; root .py now:', sorted(p for p in glob.glob("*.py")))

@@ -6,6 +6,7 @@
 # Fig 3  the Kahler dial: theta interpolating Door C and Door R
 # All three regenerate from the SAME mathematics the suites verify.
 # =============================================================================
+import pathlib; HERE = pathlib.Path(__file__).resolve().parent  # self-relative since the move to paper/ (2026-09-06)
 import numpy as np, matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -60,7 +61,7 @@ def fig1():
         'collision loci $\\gamma_{ij}=\\pm1$ (six of the surface\'s nine lines; the other three lie at infinity).\n'
         'In (b) the admissible region contracts as $\\gamma_{23}\\to1$, closing onto a node.',
         ha='center', va='bottom', fontsize=8)
-    fig.savefig('fig1_elliptope.png'); plt.close(fig); print("fig1 ok")
+    fig.savefig(HERE/'fig1_elliptope.png'); plt.close(fig); print("fig1 ok")
 fig1()
 
 # ---------------------------------------------------------------- FIG 2 -----
@@ -105,7 +106,7 @@ def fig2():
         'acquires the address $r=r_s$). The three characters were frozen 2026-08-17, before any was computed.',
         ha='center', va='bottom', fontsize=8)
     fig.subplots_adjust(bottom=0.34, wspace=0.34)
-    fig.savefig('fig2_trichotomy.png'); plt.close(fig); print("fig2 ok")
+    fig.savefig(HERE/'fig2_trichotomy.png'); plt.close(fig); print("fig2 ok")
 fig2()
 
 # ---------------------------------------------------------------- FIG 3 -----
@@ -173,6 +174,6 @@ def fig3():
         'By RULING-1 the totality is not on this dial at all; $\\theta$ is a seat predicate.',
         ha='center', va='bottom', fontsize=8)
     fig.subplots_adjust(bottom=0.33, wspace=0.28)
-    fig.savefig('fig3_kahler_dial.png'); plt.close(fig); print("fig3 ok")
+    fig.savefig(HERE/'fig3_kahler_dial.png'); plt.close(fig); print("fig3 ok")
 fig3()
 print("all figures written")

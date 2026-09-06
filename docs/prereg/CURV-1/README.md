@@ -1,6 +1,6 @@
 # CURV-1 — does the model own a rod-free curvature reading, and what does it do at the centre?
 Opened 2026-09-02 by `thm_h2_d1.py` (commit `b4ac768`). Specs written 2026-09-02, same day.
-Read `PROJECT-BRIEF.md` and `HANDOFF-2026-08-30.md` first.
+Read `PROJECT-BRIEF.md` and `handoffs/HANDOFF-2026-08-30.md` first.
 
 ## The question
 THM-H parts 1 and 2 (`thm_h.py` 25/25 at `0ba60a4`, `thm_h2_d1.py` 30/30 at `b4ac768`) showed:

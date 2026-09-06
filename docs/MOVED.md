@@ -124,3 +124,6 @@ Run everything from the repository root.
 `docs/README.md`. Every `docs/...` reference in code, handoffs and the moved documents was rewritten from that map; relative links inside
 moved documents were re-based. Verified after the move: the harness acceptance run, `rh_figures`, `rh4_readings`, `rh2p_five`, and
 `operating_point()` all find their receipts.
+
+## root, second pass
+Handoffs -> `handoffs/`; the paper, its build scripts and figures -> `paper/` (scripts made self-relative); PREDICTION-1 and RULING-1 -> `docs/`; this file -> `docs/MOVED.md`.

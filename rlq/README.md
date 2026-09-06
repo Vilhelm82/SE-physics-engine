@@ -10,7 +10,7 @@ rlq/                 the library (this package)
   instruments.py     word x hold policy, propagated as 14-dim density matrices; Model(capture=False) IS FD
   channels.py        Pauli twirl from a PTM, stacked-leak metrics (DB, polar isometry), Codex's native_channel
   precision.py       numpy/mpmath backends, Theorem-2 (Cella U-0784) paths, Richardson
-  figures.py         Codex's plot grammar: 3x2 constrained grid, palette, finish()
+  paper/figures.py         Codex's plot grammar: 3x2 constrained grid, palette, finish()
   words.py           Codex's reflection_loop_* re-exported at their current paths (phase 2 moves them here)
   decoder.py         Codex's qec_distance_stack re-exported
 experiments/<date>/  drivers; one file per experiment, ~30-70 lines

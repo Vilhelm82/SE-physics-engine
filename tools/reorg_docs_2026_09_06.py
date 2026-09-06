@@ -49,7 +49,7 @@ def rewrite_docs_md(text, new_rel):
     text = re.sub(r'(\]\()(?:\./)?([A-Za-z0-9_.\-]+\.(?:md|json|log|png|py))(\))', sib, text)
     text = re.sub(r'(\]\()\.\./([A-Za-z0-9_.\-/]+)(\))', lambda m: m.group(1) + up + '../' + m.group(2) + m.group(3), text)
     return text
-for f in glob.glob('rlq/*.py') + glob.glob('experiments/*/*.py') + glob.glob('tests/*.py') + glob.glob('*.md') + ['MOVED.md']:
+for f in glob.glob('rlq/*.py') + glob.glob('experiments/*/*.py') + glob.glob('tests/*.py') + glob.glob('*.md') + ['docs/MOVED.md']:
     p = Path(f); s = p.read_text(errors='replace'); t = rewrite_code_and_root(s)
     if t != s: p.write_text(t)
 for f in glob.glob('docs/**/*.md', recursive=True):

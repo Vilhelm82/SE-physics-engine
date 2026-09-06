@@ -2,9 +2,9 @@
 ## How much physics follows from three axes through a point: a derivational-economy study with machine-verified receipts
 
 **W. Lloyd** — draft v0.5, 2026-09-04
-*v0.5 (2026-09-04, late): the owed folds are in — THM-O (the strain law as Gauss and Codazzi on the seat's flat rods; the exponent theorem; fork (b) at second order in the spin) in §6; VIEW-1 (the forced pivot circle, its closed forms, the node theorem in the dual basis) in §2; CENSUS-C (the phase is the geodesic triangle, the circle carries the orientation class) in §9; the failure-versus-disagreement criterion, the band/edge/position/surplus format and the scaffold register in §10. No paper debt remains from 2026-09-04; research debts are in HANDOFF-2026-09-04.md. v0.4 retained in git history.*
+*v0.5 (2026-09-04, late): the owed folds are in — THM-O (the strain law as Gauss and Codazzi on the seat's flat rods; the exponent theorem; fork (b) at second order in the spin) in §6; VIEW-1 (the forced pivot circle, its closed forms, the node theorem in the dual basis) in §2; CENSUS-C (the phase is the geodesic triangle, the circle carries the orientation class) in §9; the failure-versus-disagreement criterion, the band/edge/position/surplus format and the scaffold register in §10. No paper debt remains from 2026-09-04; research debts are in handoffs/HANDOFF-2026-09-04.md. v0.4 retained in git history.*
 *v0.4 (2026-09-04, later): PRED-1's Presentation paragraph carries the transition closed form T_ij = R_i R_j~, the pole-triangle dressing with SIGNED holonomy, the corrected parity bookkeeping (the pole triangle does not flip under the deck; the dressing is mixed through h alone), and the exact statement that V is the only primitive deck-odd generator — the seat supplies a deck-even, sign-varying gain and no independent deck bit. v0.3 retained in git history.*
-*v0.3 (2026-09-04): PREDICTION-1 rewritten around presentation-versus-operation — the pivoted observation map derived cold (bilinear pairings: deck-even scalar office, mixed transition readings with closed forms, the pole-triangle dressing), the ordered-register operation reading sgn V with three exact physical readouts, the algebraic half certified three ways, and the cycle protocols recorded as an existence witness. Owed in this version and not yet folded: THM-O (the strain law as Gauss and Codazzi on flat rods; fork (b) at O(J^2)) into §6, VIEW-1 and CENSUS-C into §2/§9, and the scaffold register into §10 — see HANDOFF-2026-09-04.md. v0.2 (2026-09-03) is retained in git history.*
+*v0.3 (2026-09-04): PREDICTION-1 rewritten around presentation-versus-operation — the pivoted observation map derived cold (bilinear pairings: deck-even scalar office, mixed transition readings with closed forms, the pole-triangle dressing), the ordered-register operation reading sgn V with three exact physical readouts, the algebraic half certified three ways, and the cycle protocols recorded as an existence witness. Owed in this version and not yet folded: THM-O (the strain law as Gauss and Codazzi on flat rods; fork (b) at O(J^2)) into §6, VIEW-1 and CENSUS-C into §2/§9, and the scaffold register into §10 — see handoffs/HANDOFF-2026-09-04.md. v0.2 (2026-09-03) is retained in git history.*
 *v0.2 (2026-09-03): the pinned family worked through — the hole as a presented state (THM-H), what sits at the
 centre (CURV-1), light and matter in the family (THM-I), and the field law narrowed and shown not to follow from
 the bare tier (THM-J). §6 gains four blocks; §10's ledger is rescoped and records the programme's first falsified
@@ -115,7 +115,7 @@ its four rank-one vertices are the collisions. Convex-geometric and
 semidefinite-programming machinery therefore applies to the state space
 wholesale [lineage: classical algebraic geometry; SDP literature].
 
-![Figure 1](fig1_elliptope.png)
+![Figure 1](paper/fig1_elliptope.png)
 
 **Orientation, cover, and monodromy.** The signed volume $V = \det[a_1 a_2
 a_3]$ satisfies $V^2 = \Delta$: oriented frames form a double cover of the
@@ -241,7 +241,7 @@ which is the model's own frozen name for the $\hbar$-seat's second pole
 [lineage: Landau–Lifshitz–Gilbert; metriplectic/GENERIC; imaginary-time
 propagation].
 
-![Figure 3](fig3_kahler_dial.png)
+![Figure 3](paper/fig3_kahler_dial.png)
 
 ### 4. The readout layer at the $c$ seat
 
@@ -350,7 +350,7 @@ $T_{\mathrm{loc}}\cdot N = T_0$ holds for all $r > r_s$ while each factor
 separately diverges or dies — the readout layer's pairing pattern standing at
 the horizon [comparison-stage name: Tolman].
 
-![Figure 2](fig2_trichotomy.png)
+![Figure 2](paper/fig2_trichotomy.png)
 
 **The trichotomy theorem.** One rotor, three relationships between the pivot
 parameter and the state, preregistered as a three-way character taxonomy
@@ -943,7 +943,7 @@ Preregistrations and results carry SHA-256 hashes frozen before computation
 in the AGNOSTIC-1 campaign; the present session's suites are committed
 sequentially to the project repository (thm_g, thm_b_monodromy, cayley,
 thm_d, doors, kahler, debt2, thm_d2_unruh, thm_g2, bargmann, thm_rn,
-bridge_dbp, galois, correspondence_july; figures.py; RULING-1; PREDICTION-1; and, from 2026-09-02/03, thm_h, thm_h2_d1, curv1_path1, curv1_path23, thm_i_pre, thm_i_transport, thm_i_field, thm_j_dyn, thm_k_clausius, thm_l_rotation, thm_m_swirl), each with its full check output. The September suites use the numpy float path only for the ODE corroboration of the transport law; every claim there is also carried by an exact identity.
+bridge_dbp, galois, correspondence_july; paper/figures.py; RULING-1; PREDICTION-1; and, from 2026-09-02/03, thm_h, thm_h2_d1, curv1_path1, curv1_path23, thm_i_pre, thm_i_transport, thm_i_field, thm_j_dyn, thm_k_clausius, thm_l_rotation, thm_m_swirl), each with its full check output. The September suites use the numpy float path only for the ODE corroboration of the transport law; every claim there is also carried by an exact identity.
 Head of the sequence at the time of writing: `68f3a9f` (THM-M), preceded by `d863efa` (THM-L), `5c58e8e` (THM-K), `2b03478` (THM-J), `a7a5350` (THM-I) and `90c0281` (CURV-1); at the previous writing `7e4e4e1` (Galois/Kummer
 structure and the descent theorem), preceded by `685a89e` (invariant-reduction
 bridge) and `2ba206f` (blind-mass theorem). Every FAIL encountered during
@@ -951,6 +951,6 @@ development is preserved in the transcript with its diagnosis; three were
 substantive (a dead ladder conjecture; a non-resonance correction to the
 seesaw mechanism; the branch-grading discovery), the remainder were
 simplifier or harness defects, reported, not buried.
-From 2026-09-04: thm_o_strain_law (33/33), view1_incidence (12/12), census_c (7/7), thm_galois_deck_descent (10/10), pred1_deck_separator (10/10), pred1_protocol (11/11; existence witness), pivot_map (6/6; spec frozen before output), pivot_map_closed_forms (10/10), pred1_physical_protocol (10/10), pred1_operational_chain (7/7); docs/results/2026-09-04/2026-09-04-thm-target-O.md, the axis/planes/rods clarification and its addendum, HANDOFF-2026-09-04.md.
+From 2026-09-04: thm_o_strain_law (33/33), view1_incidence (12/12), census_c (7/7), thm_galois_deck_descent (10/10), pred1_deck_separator (10/10), pred1_protocol (11/11; existence witness), pivot_map (6/6; spec frozen before output), pivot_map_closed_forms (10/10), pred1_physical_protocol (10/10), pred1_operational_chain (7/7); docs/results/2026-09-04/2026-09-04-thm-target-O.md, the axis/planes/rods clarification and its addendum, handoffs/HANDOFF-2026-09-04.md.
 
 

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """RH-1c: signed timing response, local-fit stability and Bernoulli resources."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 from functools import lru_cache
 import numpy as np
 from scipy.optimize import minimize_scalar
-from rh1_common import (TAU,TRINE,I2,trine_loop,db,receipt,check)
+from rlq.rh1_common import (TAU,TRINE,I2,trine_loop,db,receipt,check)
 
 DELTAS=np.array([-1e-3,-3e-4,-1e-4,0.,1e-4,3e-4,1e-3])
 

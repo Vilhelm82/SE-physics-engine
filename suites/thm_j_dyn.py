@@ -10,7 +10,7 @@
 #   of lambda(r), is F(lambda) lambda'^2, and its Euler-Lagrange equation makes the ARC LENGTH s = int sqrt(F) d lambda
 #   harmonic.  So "produces KIN-2a" means "s is affine in sech^2 l": to fourth order, s4/s2 = -2/3.
 # THE MODEL'S OWN CANDIDATE (D-3): the harmonic-map (Dirichlet) energy of x -> presented state in the FROZEN state
-#   metric of docs/GRAM_SUBMERSION_CURVATURE: product round metric on (S^2)^3, mechanical connection, horizontal lift
+#   metric of docs/archive/GRAM_SUBMERSION_CURVATURE: product round metric on (S^2)^3, mechanical connection, horizontal lift
 #   by the 9x9 system  v_i . a_i = 0,  sum a_i x v_i = 0,  a_i . v_j + a_j . v_i = dG_ij,  quotient metric |v|^2.
 #   No free choice.  Kill condition: s4/s2 != -2/3  ->  c_2 = -(s4/s2 + 2/3) != 0  ->  perihelion 3 + 2 c_2 != 3.
 # CARRIED: H-5/H-7 presented Gram; KIN-2a as the target profile; thm_i_field B-2e (perihelion = 3 + 2 c_2).

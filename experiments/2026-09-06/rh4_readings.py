@@ -2,12 +2,13 @@
 FD curves come from FD's receipt; the accumulator is computed by rh4_capture at the same (n, gain, delta, gamma) points,
 in two register variants: ideal (gamma_r = gamma_phi = 0) and realistic (gamma_r = gamma_phi = 1e-3, monitored).
 Written 2026-09-06 by Claire."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import json, time, hashlib, subprocess
 from pathlib import Path
 import numpy as np
-import reflection_loop_finite_dump as FD
-import rh4_capture as C
-ROOT = Path(__file__).resolve().parent
+import rlq.reflection_loop_finite_dump as FD
+import rlq.rh4_capture as C
+ROOT = Path(__file__).resolve().parents[2]
 REG = {'ideal': dict(gamma_r=0., gamma_phi=0., register_heralded=True), 'realistic': dict(gamma_r=1e-3, gamma_phi=1e-3, register_heralded=True)}
 GAMMAS = [0., 1e-15, 1e-12, 1e-9, 1e-7, 1e-6, 1e-5, 1e-4, 1e-3]
 T_C = 1.0
@@ -29,7 +30,7 @@ def grid_point(n, case, gammas):
 
 
 def main():
-    t0 = time.time(); fd = json.load(open(ROOT/'docs/reflection-loop-finite-dump-checks.json'))
+    t0 = time.time(); fd = json.load(open(ROOT/'docs/receipts/reflection-loop-finite-dump-checks.json'))
     rows = []
     for n in (1, 2, 3):
         for case in ((1e-3, 1e-4, 0.), (1e-2, 1e-4, 0.), (1e-2, 0., 0.)):
@@ -45,9 +46,9 @@ def main():
     res = dict(scope='FD readings with the accumulator overlaid; FD from its receipt, accumulator from rh4_capture at the same points', t_c=T_C, register_variants=REG,
                gammas=GAMMAS, rows=rows, register_sweep=sweep,
                provenance=dict(date='2026-09-06', runtime_s=round(time.time()-t0, 1), head=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
-                               sha256={p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ('rh4_readings.py', 'rh4_capture.py', 'reflection_loop_finite_dump.py')}))
-    (ROOT/'docs/rh4_readings-checks.json').write_text(json.dumps(res, indent=2) + '\n')
-    plot(res, fd, ROOT/'docs/rh4-readings-vs-fd.png'); print(f"done {time.time()-t0:.0f}s", flush=True)
+                               sha256={p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ('experiments/2026-09-06/rh4_readings.py', 'rlq/rh4_capture.py', 'rlq/reflection_loop_finite_dump.py')}))
+    (ROOT/'docs/receipts/rh4_readings-checks.json').write_text(json.dumps(res, indent=2) + '\n')
+    plot(res, fd, ROOT/'docs/figures/rh4-readings-vs-fd.png'); print(f"done {time.time()-t0:.0f}s", flush=True)
 
 
 def plot(res, fd, path):

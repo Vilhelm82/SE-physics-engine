@@ -4,9 +4,10 @@
 The literal positive-phase specification is run as written. The corrected
 negative phase and common-mode rate are run separately and labelled.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import numpy as np
 from scipy.linalg import polar
-from rh1_common import (I2,G,Z,TAU,TRINE,word_loops,trine_loop,compose_discard,
+from rlq.rh1_common import (I2,G,Z,TAU,TRINE,word_loops,trine_loop,compose_discard,
                         conditional_metrics,receipt,check)
 
 

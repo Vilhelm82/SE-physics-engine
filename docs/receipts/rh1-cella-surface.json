@@ -1,0 +1,434 @@
+{
+  "date": "2026-09-06",
+  "interpretation": "Ordered loop angles (alpha_1,alpha_2,alpha_3) instantiate (D,S,P); other role realizations are not inferred.",
+  "defining_function": "F=0.5*atan(real(i*trace(Y*polar(K)*G)/trace(polar(K)*G))) on the local trace-nonzero branch",
+  "exact_nominal": {
+    "F": "D + P - S",
+    "gradient": [
+      "1",
+      "-1",
+      "1"
+    ],
+    "hessian": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "channels": {
+      "K_G": "0",
+      "kappa_c": "0",
+      "kappa_s": "0",
+      "kappa_int": "0"
+    },
+    "common_angle_derivative": "1"
+  },
+  "scope": "Signed Y-component closure only under noise; not zero erasure or complete logical correction.",
+  "arithmetic": "Nominal jet exact. Noisy jets use convergent finite differences; exact rational referee arithmetic does not make those jets exact.",
+  "response": "Declared E=k*F^2/2, M=m*a*a^T, x_dot=-M*grad(E), a=(1,1,1). A physical force/bath implementation is not supplied.",
+  "cases": [
+    {
+      "eps": 0.01,
+      "dd": 0.0001,
+      "root_shift": -9.544968831084253e-05,
+      "point": [
+        1.0471021015082869,
+        2.0942996527048843,
+        1.0471021015082869
+      ],
+      "metrics": {
+        "conditional": 7.389997120811954e-13,
+        "success_weighted": 7.389997120806933e-13,
+        "success": 0.9984089949034539,
+        "error_numerator": 7.378239597724268e-13,
+        "success_extrema": [
+          0.9984070000766362,
+          0.9984109897302718
+        ],
+        "erasure": 0.0015910050965449196,
+        "erasure_spread": 3.9896536350651594e-06,
+        "unconditional": 0.0007955025490102838,
+        "completeness_defect": 2.287507364664081e-15
+      },
+      "levels": [
+        {
+          "step": 0.002,
+          "F": 7.198333413020084e-16,
+          "gradient": [
+            0.9999628304685241,
+            -0.9999619776076117,
+            0.9999628304685321
+          ],
+          "hessian": [
+            [
+              -0.00012830754579466752,
+              2.231265989421519e-06,
+              -6.394710065291132e-07
+            ],
+            [
+              2.231265989421519e-06,
+              -0.00012863492768796364,
+              2.231265370331528e-06
+            ],
+            [
+              -6.394710065291132e-07,
+              2.231265370331528e-06,
+              -0.00012830755078199751
+            ]
+          ],
+          "channels": {
+            "K_G": 5.3524143163788795e-09,
+            "kappa_c": 5.887546030378878e-13,
+            "kappa_s": 5.497355273659041e-09,
+            "kappa_int": -1.4552971188319905e-10
+          },
+          "common_angle_derivative": 0.9999636833294444,
+          "exact_partition_for_supplied_decimal_jet": true
+        },
+        {
+          "step": 0.001,
+          "F": 7.198333413020084e-16,
+          "gradient": [
+            0.9999628303925456,
+            -0.9999619775249265,
+            0.9999628303925391
+          ],
+          "hessian": [
+            [
+              -0.00012830741070307683,
+              2.2313214710561284e-06,
+              -6.394809811891e-07
+            ],
+            [
+              2.2313214710561284e-06,
+              -0.00012863511926648752,
+              2.2312911695454564e-06
+            ],
+            [
+              -6.394809811891e-07,
+              2.2312911695454564e-06,
+              -0.00012830737123811775
+            ]
+          ],
+          "channels": {
+            "K_G": 5.3524083427654635e-09,
+            "kappa_c": 5.887746292413086e-13,
+            "kappa_s": 5.497351754115357e-09,
+            "kappa_int": -1.455321859791338e-10
+          },
+          "common_angle_derivative": 0.9999636832601582,
+          "exact_partition_for_supplied_decimal_jet": true
+        },
+        {
+          "step": 0.0005,
+          "F": 7.198333413020084e-16,
+          "gradient": [
+            0.9999628303735092,
+            -0.9999619775049773,
+            0.9999628303735152
+          ],
+          "hessian": [
+            [
+              -0.00012830741981037508,
+              2.2313539758163356e-06,
+              -6.394659107789025e-07
+            ],
+            [
+              2.2313539758163356e-06,
+              -0.00012863450018704703,
+              2.2313235101674907e-06
+            ],
+            [
+              -6.394659107789025e-07,
+              2.2313235101674907e-06,
+              -0.00012830709975389376
+            ]
+          ],
+          "channels": {
+            "K_G": 5.3523819950684144e-09,
+            "kappa_c": 5.887710401344015e-13,
+            "kappa_s": 5.497326610151357e-09,
+            "kappa_int": -1.4553338612307627e-10
+          },
+          "common_angle_derivative": 0.9999636832420471,
+          "exact_partition_for_supplied_decimal_jet": true
+        }
+      ]
+    },
+    {
+      "eps": 0.01,
+      "dd": -0.0001,
+      "root_shift": 9.614622728885315e-05,
+      "point": [
+        1.0472936974238864,
+        2.0944912486204843,
+        1.0472936974238864
+      ],
+      "metrics": {
+        "conditional": 7.275933811943699e-13,
+        "success_weighted": 7.275933811938925e-13,
+        "success": 0.9984074719566499,
+        "error_numerator": 7.264346683301854e-13,
+        "success_extrema": [
+          0.998405500074863,
+          0.998409443838437
+        ],
+        "erasure": 0.0015925280433469317,
+        "erasure_spread": 3.9437635748302766e-06,
+        "unconditional": 0.0007962640223999005,
+        "completeness_defect": 4.681082886770105e-15
+      },
+      "levels": [
+        {
+          "step": 0.002,
+          "F": -1.1004834582043824e-15,
+          "gradient": [
+            1.0000365417828865,
+            -1.0000356360716742,
+            1.0000365417828916
+          ],
+          "hessian": [
+            [
+              0.00012708440484850148,
+              2.3351357662217615e-06,
+              -7.164378682325556e-07
+            ],
+            [
+              2.3351357662217615e-06,
+              0.00012667703485572807,
+              2.3351326805257515e-06
+            ],
+            [
+              -7.164378682325556e-07,
+              2.3351326805257515e-06,
+              0.00012708440083695344
+            ]
+          ],
+          "channels": {
+            "K_G": 5.524324415972078e-09,
+            "kappa_c": 6.864646577123737e-13,
+            "kappa_s": 5.371587999370212e-09,
+            "kappa_int": 1.5204995194415322e-10
+          },
+          "common_angle_derivative": 1.0000374474941038,
+          "exact_partition_for_supplied_decimal_jet": true
+        },
+        {
+          "step": 0.001,
+          "F": -1.1004834582043824e-15,
+          "gradient": [
+            1.0000365418543766,
+            -1.000035636135986,
+            1.0000365418543518
+          ],
+          "hessian": [
+            [
+              0.00012708456574410387,
+              2.335154769927277e-06,
+              -7.164448071264595e-07
+            ],
+            [
+              2.335154769927277e-06,
+              0.0001266771444685677,
+              2.3351702759036172e-06
+            ],
+            [
+              -7.164448071264595e-07,
+              2.3351702759036172e-06,
+              0.00012708461670160598
+            ]
+          ],
+          "channels": {
+            "K_G": 5.524340154489118e-09,
+            "kappa_c": 6.864797643379459e-13,
+            "kappa_s": 5.371601716239526e-09,
+            "kappa_int": 1.520519584852539e-10
+          },
+          "common_angle_derivative": 1.0000374475727425,
+          "exact_partition_for_supplied_decimal_jet": true
+        },
+        {
+          "step": 0.0005,
+          "F": -1.1004834582043824e-15,
+          "gradient": [
+            1.0000365418724069,
+            -1.0000356361525307,
+            1.0000365418723567
+          ],
+          "hessian": [
+            [
+              0.0001270851939308426,
+              2.335274334135538e-06,
+              -7.164724542818579e-07
+            ],
+            [
+              2.335274334135538e-06,
+              0.0001266783262489357,
+              2.335201911984646e-06
+            ],
+            [
+              -7.164724542818579e-07,
+              2.335201911984646e-06,
+              0.00012708513581760617
+            ]
+          ],
+          "channels": {
+            "K_G": 5.52441175328243e-09,
+            "kappa_c": 6.865281255753515e-13,
+            "kappa_s": 5.37166743522806e-09,
+            "kappa_int": 1.520577899287947e-10
+          },
+          "common_angle_derivative": 1.000037447592233,
+          "exact_partition_for_supplied_decimal_jet": true
+        }
+      ]
+    },
+    {
+      "eps": 0.01,
+      "dd": 0.001,
+      "root_shift": -0.0009200315162676132,
+      "point": [
+        1.04627751968033,
+        2.0934750708769276,
+        1.04627751968033
+      ],
+      "metrics": {
+        "conditional": 7.606008682094294e-10,
+        "success_weighted": 7.60600868231383e-10,
+        "success": 0.9984156577658143,
+        "error_numerator": 7.593958161524857e-10,
+        "success_extrema": [
+          0.9983957797018396,
+          0.9984355358297891
+        ],
+        "erasure": 0.001584342234186562,
+        "erasure_spread": 3.9756127948750285e-05,
+        "unconditional": 0.0007921718764890972,
+        "completeness_defect": 1.3125691050677512e-15
+      },
+      "levels": [
+        {
+          "step": 0.002,
+          "F": -6.137175578744811e-16,
+          "gradient": [
+            0.9995928649904205,
+            -0.99949872981769,
+            0.9995928649904268
+          ],
+          "hessian": [
+            [
+              -0.0013378715298150226,
+              0.00023924598328562495,
+              -7.937823293634183e-05
+            ],
+            [
+              0.00023924598328562495,
+              -0.0013963473484033748,
+              0.00023924598346997206
+            ],
+            [
+              -7.937823293634183e-05,
+              0.00023924598346997206,
+              -0.0013378715253697937
+            ]
+          ],
+          "channels": {
+            "K_G": 4.552729221175232e-07,
+            "kappa_c": 7.746925639391154e-09,
+            "kappa_s": 6.145585057755299e-07,
+            "kappa_int": -1.6703250929739782e-07
+          },
+          "common_angle_derivative": 0.9996870001631574,
+          "exact_partition_for_supplied_decimal_jet": true
+        },
+        {
+          "step": 0.001,
+          "F": -6.137175578744811e-16,
+          "gradient": [
+            0.9995928640193383,
+            -0.9994987281077968,
+            0.999592864019341
+          ],
+          "hessian": [
+            [
+              -0.0013378734830052363,
+              0.00023924961732311735,
+              -7.937893766775395e-05
+            ],
+            [
+              0.00023924961732311735,
+              -0.0013963492250489151,
+              0.00023924961320624937
+            ],
+            [
+              -7.937893766775395e-05,
+              0.00023924961320624937,
+              -0.0013378734986177476
+            ]
+          ],
+          "channels": {
+            "K_G": 4.5527224405573245e-07,
+            "kappa_c": 7.747116454548673e-09,
+            "kappa_s": 6.145602596146e-07,
+            "kappa_int": -1.6703513201341614e-07
+          },
+          "common_angle_derivative": 0.9996869999308825,
+          "exact_partition_for_supplied_decimal_jet": true
+        },
+        {
+          "step": 0.0005,
+          "F": -6.137175578744811e-16,
+          "gradient": [
+            0.9995928637770674,
+            -0.999498727680783,
+            0.9995928637770551
+          ],
+          "hessian": [
+            [
+              -0.0013378750607362377,
+              0.00023925051638828276,
+              -7.937908273400462e-05
+            ],
+            [
+              0.00023925051638828276,
+              -0.0013963492627791507,
+              0.00023925052880106092
+            ],
+            [
+              -7.937908273400462e-05,
+              0.00023925052880106092,
+              -0.001337874970530617
+            ]
+          ],
+          "channels": {
+            "K_G": 4.5527247979459024e-07,
+            "kappa_c": 7.747161373774224e-09,
+            "kappa_s": 6.145611984939514e-07,
+            "kappa_int": -1.6703588007313532e-07
+          },
+          "common_angle_derivative": 0.9996869998733395,
+          "exact_partition_for_supplied_decimal_jet": true
+        }
+      ]
+    }
+  ],
+  "verification": "Nominal exact channel zeros, keystone signs, actuator transversality, all determinant partitions and 0.1 percent fine/medium channel consistency passed.",
+  "sha256": {
+    "/home/williaml/seated-root/rh1_cella_surface.py": "f9524b1d93b237f3da5ddf781aa80568976f9be087ffb4be9c7777c321e05440",
+    "/home/williaml/seated-root/rh1_common.py": "93765a137867c4d6329466402d45c647aef5b712544b8d4505c49c2d4c7238b2",
+    "/home/williaml/Cella Framework/engine/src/cella/reference_lift.py": "caca79c7f903b9e9ea4018da650e09737b0f53947a91482a46d1a2432752f15f",
+    "/home/williaml/Cella Framework/Papers_Library/05_expository_companions_and_research_maps/dbp_role_channel_and_orbit_geometry/Three_Channel_KG_Strong_Spec.md": "c4cc5090541b0b39a27ad2aa957394ace50d6ab79c8d3ba1e1789350bd889786",
+    "/home/williaml/Cella Framework/Papers_Library/02_theorems_and_lemmas/dbp_role_channel_and_orbit_geometry/Canonical_Invariant_Reduction_Theorem.md": "9175da628839fc129bf722710238bda83beb6570e4b0b288d4e02091319d022e"
+  }
+}

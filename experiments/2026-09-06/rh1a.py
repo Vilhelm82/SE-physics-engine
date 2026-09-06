@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """RH-1a: prescribed per-dump and cumulative flag tests; no fitted controls."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import numpy as np
 from scipy.linalg import polar
-from rh1_common import (I2, word_loops, compose_discard, db, haar_quadrature,
+from rlq.rh1_common import (I2, word_loops, compose_discard, db, haar_quadrature,
                         receipt, check)
 
 CASES = [(1e-2,0.,0.), (1e-3,0.,0.), (0.,1e-4,0.), (0.,0.,1e-4),

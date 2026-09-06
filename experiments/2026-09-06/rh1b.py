@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """RH-1b: fixed calibration, complete click enumeration, explicit replay loss."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import numpy as np
 from scipy.linalg import polar
-from rh1_common import (G,I2,word_loops,foldback,pattern_kraus,channel_metrics,
+from rlq.rh1_common import (G,I2,word_loops,foldback,pattern_kraus,channel_metrics,
     replay_branches,compose_discard,receipt,check)
 
 

@@ -6,8 +6,8 @@ these names.  Conventions: P = indices 2,3 (d, r); Q = 0,1 (p, q); register slot
 """
 import numpy as np
 from scipy.linalg import expm, polar
-import reflection_loop_finite_dump as FD
-import qec_distance_stack as Q
+import rlq.reflection_loop_finite_dump as FD
+import rlq.qec_distance_stack as Q
 
 N = 5; DIM = 4 + 2*N
 CASE = (0.01, 1e-4, 0.0); GAMMA = 1e-6; KAPPA, ACTION = 10., 40.

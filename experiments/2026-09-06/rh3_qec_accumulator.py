@@ -15,11 +15,12 @@ Everything else in the stack (codes, decoders, stack noise p = 1e-3, seeds) is C
 DECLARED: ideal self-calibrated capture; register error = depolarising replacement of the recovered branch; no
 register duration; background loss unchanged (the accumulator never sees it).  Written 2026-09-06 by Claire.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse, hashlib, json, subprocess, sys, time
 from pathlib import Path
 import numpy as np
 from scipy.linalg import sqrtm
-import qec_distance_stack as Q
+import rlq.qec_distance_stack as Q
 
 
 def accumulator_channel(row, r):
@@ -49,7 +50,7 @@ def main():
     ap.add_argument('--shots', type=int, default=50000); ap.add_argument('--bb-shots', type=int, default=0)
     ap.add_argument('--distances', type=int, nargs='+', default=[3, 5, 7]); ap.add_argument('--basis', nargs='+', default=['X', 'Z'])
     ap.add_argument('--r', type=float, nargs='+', default=[0.0, 0.1, 0.3, 1.0]); ap.add_argument('--noise', type=float, default=1e-3)
-    ap.add_argument('--seed', type=int, default=20260906); ap.add_argument('--json', type=Path, default=Q.ROOT/'docs/rh3_qec-checks.json')
+    ap.add_argument('--seed', type=int, default=20260906); ap.add_argument('--json', type=Path, default=Q.ROOT/'docs/receipts/rh3_qec-checks.json')
     ap.add_argument('--skip-fd', action='store_true')
     args = ap.parse_args(); t0 = time.time()
     row = Q.operating_point(background=1e-6)
@@ -66,7 +67,7 @@ def main():
                         'background loss and stack noise unchanged; codes/decoders/seeds are qec_distance_stack.py',
                   stack_noise=args.noise, shots=args.shots, channels={n: c for n, c in chans}, runs=[],
                   provenance=dict(date='2026-09-06', head=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
-                                  sha256={p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in ('rh3_qec_accumulator.py', 'qec_distance_stack.py', 'docs/reflection-loop-finite-dump-checks.json')}))
+                                  sha256={p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in ('experiments/2026-09-06/rh3_qec_accumulator.py', 'rlq/qec_distance_stack.py', 'docs/receipts/reflection-loop-finite-dump-checks.json')}))
     codes = [Q.surface_circuit(d, b, args.noise) for d in args.distances for b in args.basis]
     if args.bb_shots: codes += [Q.bicycle_circuit(b, args.noise) for b in args.basis]
     for name, ch in chans:

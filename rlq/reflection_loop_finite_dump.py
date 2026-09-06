@@ -5,6 +5,7 @@ The absorber is off during transport unless background_loss is requested.
 No endpoint projection is made. No-click fidelity includes surviving bright
 amplitude. All loops have the existing continuous zero-area entry/exit ramps.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 from functools import lru_cache
 import json
@@ -13,9 +14,9 @@ from pathlib import Path
 import numpy as np
 from scipy.integrate import solve_ivp
 
-from reflection_loop_composite import Stage, return_time, coefficients, primitive
-from reflection_loop_reference_echo import FramedStage, rotation, response_integrals
-from reflection_loop_compression import noise_generators, packed_matrix
+from rlq.reflection_loop_composite import Stage, return_time, coefficients, primitive
+from rlq.reflection_loop_reference_echo import FramedStage, rotation, response_integrals
+from rlq.reflection_loop_compression import noise_generators, packed_matrix
 
 I = np.eye(4, dtype=complex)
 P = np.diag([0., 0., 1., 1.])
@@ -314,8 +315,8 @@ def static_response(n=1, kappa=10., action=40.):
 @lru_cache(maxsize=None)
 def joint_loop_jets(n=1, kind='five', order=4):
     """Reuse the native finite Fourier algebra for all joint gain/d-site orders."""
-    from reflection_loop_short_correction import arc_mixed_jet, powers_through, multiply_jets
-    from reflection_loop_composite import J4
+    from rlq.reflection_loop_short_correction import arc_mixed_jet, powers_through, multiply_jets
+    from rlq.reflection_loop_composite import J4
     from math import factorial
     angles, signs, stretches = controls(kind)
     rotations = np.array([rotation(a) for a in angles])
@@ -346,7 +347,7 @@ def joint_loop_jets(n=1, kind='five', order=4):
 
 
 def joint_jet(n=1, kappa=10., action=40., order=4):
-    from reflection_loop_short_correction import powers_through, multiply_jets
+    from rlq.reflection_loop_short_correction import powers_through, multiply_jets
     from math import factorial
     powers = powers_through(order)
     td, r = action/kappa, np.exp(-action/2)

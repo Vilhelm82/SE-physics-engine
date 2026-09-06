@@ -4,6 +4,7 @@
 Run with Python, NumPy and SymPy. JSON is printed; --plot PATH optionally writes
 an error-curve figure using Matplotlib. Hamiltonians use angular-frequency units.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 import json
 import numpy as np

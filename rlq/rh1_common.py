@@ -3,6 +3,7 @@
 Trine: bare RF arcs. FD: existing finite ramps and stretched physical inverses.
 No absorbing hold, extra bath, fitted recovery, or Pauli twirl is inserted.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 from functools import lru_cache
 import hashlib
@@ -15,10 +16,10 @@ import numpy as np
 from scipy.integrate import solve_ivp
 from scipy.linalg import polar
 
-from reflection_loop_composite import primitive, return_time
-from reflection_loop_dynamics import embed, frame, segment, hamiltonian
-from reflection_loop_finite_dump import controls, loop_endpoints
-from reflection_loop_reference_echo import rotation
+from rlq.reflection_loop_composite import primitive, return_time
+from rlq.reflection_loop_dynamics import embed, frame, segment, hamiltonian
+from rlq.reflection_loop_finite_dump import controls, loop_endpoints
+from rlq.reflection_loop_reference_echo import rotation
 
 I2 = np.eye(2, dtype=complex)
 I4 = np.eye(4, dtype=complex)
@@ -167,9 +168,9 @@ def norm_json(value):
 
 
 def receipt(test, result):
-    files = [f'{test}.py','rh1_common.py','split1_split_loop.py',
-             'reflection_loop_finite_dump.py','reflection_loop_dynamics.py',
-             'docs/2026-09-06-RH-1-spec.md','docs/prereg/RH-1/DESIGNER-PREDICTIONS.md']
+    files = [f'experiments/2026-09-06/{test}.py','rlq/rh1_common.py','experiments/2026-09-05/split1_split_loop.py',
+             'rlq/reflection_loop_finite_dump.py','rlq/reflection_loop_dynamics.py',
+             'docs/results/2026-09-06/2026-09-06-RH-1-spec.md','docs/prereg/RH-1/DESIGNER-PREDICTIONS.md']
     result['provenance'] = dict(test=test, date='2026-09-06',
         head=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
         unblinded=True, reason='User supplied the predictions path; read during context refresh before runs.',

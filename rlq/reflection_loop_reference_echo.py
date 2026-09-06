@@ -4,6 +4,7 @@
 Extends the committed real composite. All sign conjugations compile Hamiltonians;
 they are not instantaneous gates. The full physical waveform starts/ends at zero.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 from dataclasses import dataclass
 import json
@@ -11,8 +12,8 @@ import json
 import numpy as np
 import sympy as sp
 
-from reflection_loop_dynamics import R, embed
-from reflection_loop_composite import (
+from rlq.reflection_loop_dynamics import R, embed
+from rlq.reflection_loop_composite import (
     Stage, P, Q, REFERENCE, composite, schedule, coefficients, ode,
 )
 

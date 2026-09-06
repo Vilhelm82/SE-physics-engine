@@ -10,10 +10,10 @@ Supersedes `HANDOFF-2026-09-04.md` (the morning/afternoon session) for STATE; th
 - New runners: `prim_t1_t3_pivot_group.py`, `prim_t4_hawking_period.py`, `prim_t7_seat_form.py`, `prim_t7b_labelling.py`,
   `prim_t7d_tilt.py`, `prim_t7e_two_degeneracies.py`, `prim_t7f_regions.py` -- each with its `.log`. All green on the 7800X3D.
   Re-running is the verification; every one runs in under 12 s.
-- New doc: `docs/2026-09-04-PRIMITIVES-v0.md` -- **DRAFT, Will's to read through and freeze.** It has had a night of edits
+- New doc: `docs/results/2026-09-04/2026-09-04-PRIMITIVES-v0.md` -- **DRAFT, Will's to read through and freeze.** It has had a night of edits
   (P1-P12, corrections, the T7 summary, the horizon in the seat's terms, the rendering primitive). Nothing in it is frozen.
-- Unchanged and still untracked (Will's): `docs/GRAM_SUBMERSION_CURVATURE/`, `docs/INERTIA_NODE_DETECTOR/`, `docs/chat snippets/`,
-  `docs/seated_root_figures/`, `__pycache__/`. `docs/TESTING-SCHEDULE.md` modified, uncommitted -- do not overwrite.
+- Unchanged and still untracked (Will's): `docs/archive/GRAM_SUBMERSION_CURVATURE/`, `docs/archive/INERTIA_NODE_DETECTOR/`, `docs/archive/chat snippets/`,
+  `docs/figures/seated_root_figures/`, `__pycache__/`. `docs/TESTING-SCHEDULE.md` modified, uncommitted -- do not overwrite.
 - **Paper v0.5 is now known to carry a load-bearing import it does not declare** (below). No paper edit was made this session.
 
 ## The one-paragraph state
@@ -80,7 +80,7 @@ one-third theorem (c = the negative line) and two-thirds pending (hbar vs G is n
 13. **Sample points must be realised states.** Check det G <= 0 (or the seat-coordinate realisation) before using a point.
 
 ## Next session, in order (foundations first -- "or we build a house of cards")
-0. **Will reads and freezes `docs/2026-09-04-PRIMITIVES-v0.md`.** Nothing above it runs until it is his.
+0. **Will reads and freezes `docs/results/2026-09-04/2026-09-04-PRIMITIVES-v0.md`.** Nothing above it runs until it is his.
 1. **T8, the fourth direction**, reshaped by T7: the c seat's constructed space is a 2D compact plane plus one invisible tilt.
    Fork: (a) 3+1 is what the seat PRESENTS under a pivot; (b) the root needs extent; (c) NEW -- the fourth direction is one of the
    two tangential functions the pinning leaves free. Runner: pivot the seat and count what it presents.
@@ -211,7 +211,7 @@ invariant is a different, even object.  15. A single 2x2 Clifford block taken as
 3. LABEL-1 at eighth-turns; the six named faces; paper v0.6.
 
 ### Next session, original list (provenance)
-0. Will reads and freezes `docs/2026-09-04-PRIMITIVES-v0.md` (still DRAFT).
+0. Will reads and freezes `docs/results/2026-09-04/2026-09-04-PRIMITIVES-v0.md` (still DRAFT).
 1. **RETRACTED and replaced (Will's catch, label3b_corrections.py 10/10):** "make D(r) cross zero at the horizon" contradicts
    T7e -- horizon != {D = 0} = branch locus; sgn D is CONSTANT along any regular trajectory and D != 0 at both T7g horizons
    (1.18, 4.29 on the sample paths). The sheet at the horizon is the PATH/BLOCK HOLONOMY chi[Gamma], read while D != 0.

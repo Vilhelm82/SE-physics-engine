@@ -2,7 +2,7 @@
 """Exact Cella/native presentation transport and soldering classification.
 
 The runner checks the constructive identities in
-docs/2026-09-05-cella-frame-transport.md.  Standard connection, torsion,
+docs/results/2026-09-05/2026-09-05-cella-frame-transport.md.  Standard connection, torsion,
 curvature, and local integrability mathematics is retained explicitly.
 No state response, physical connection, or spacetime metric is selected by
 these checks.  The curved example deliberately has no trapping coincidence.

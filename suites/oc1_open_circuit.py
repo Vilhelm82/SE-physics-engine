@@ -3,7 +3,7 @@
 # OC-1 -- 'horizon = open circuit': what the seat's algebra decides, and what it doesn't.  (Claire, 2026-09-05.)
 #   Joins three things: Will's divider reading (N^2 = 1/(1+eta), horizon = open circuit, time = work through the load),
 #   KIN-1 (kin1_cost_fork.py: every kinetic cost finite at gamma = 1), and Codex's constitutive divisor law
-#   (docs/2026-09-05-cella-constitutive-divisors.md Thm 1, with her clarification: the f^2 law applies when that
+#   (docs/results/2026-09-05/2026-09-05-cella-constitutive-divisors.md Thm 1, with her clarification: the f^2 law applies when that
 #   output must vanish FOR EVERY EFFORT on a two-sided face).
 # INPUTS: T7d/T7e (eta = W/eps, N^2 = 1/(1+eta) = eps/delta); a two-element divider; Codex's Thm 1 as a PROVED input.
 # CLAIMS, checked:
@@ -31,7 +31,7 @@
 #       block should be.  Different object, no tension.  The conflation was mine.
 #   o8  AT THE PINCH the f^2 law is SILENT: its hypothesis is a smooth defining function of a two-sided face; F has no
 #       limit there (PINCH-1) and {F = 0} is not smooth.  Codex's clarified condition cannot even be stated at the pinch.
-# FIRST CONCRETE LOAD (Codex, docs/2026-09-05-cella-predictive-state.md sec. 4, 63d951e): the constant passive family
+# FIRST CONCRETE LOAD (Codex, docs/results/2026-09-05/2026-09-05-cella-predictive-state.md sec. 4, 63d951e): the constant passive family
 #   M = [[mu,beta],[beta,nu]] on the resolved chart is state-independent, so under it the horizon is NOT a constrained-
 #   output face -- neither open nor short; o3's 'the load decides' is answered for this member with 'constant'.  The
 #   horizon then appears only in F's dynamics.  Declared (she says so); recorded here so o3 is not read as open-ended.

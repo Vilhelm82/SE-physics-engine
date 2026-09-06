@@ -5,6 +5,7 @@ Controller receives only paired known-probe X counts (or exact expectations
 in the explicitly ideal run). It does not receive plant parameters or fidelity.
 One epoch is a whole calibration batch; drift is static within that batch.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 import hashlib
 import json
@@ -14,7 +15,7 @@ import subprocess
 import numpy as np
 from scipy.optimize import minimize_scalar
 
-from rh1_common import TRINE, TAU, compose_discard, trine_loop
+from rlq.rh1_common import TRINE, TAU, compose_discard, trine_loop
 
 X = np.array([[0., 1.], [1., 0.]])
 GAIN = 0.5
@@ -129,9 +130,9 @@ def main():
         provenance=dict(date='2026-09-06',
             head=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
             sha256={p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
-                    for p in ('rh1_gimbal_probe.py', 'rh1_common.py',
-                              'reflection_loop_reference_echo.py',
-                              'reflection_loop_dynamics.py')}))
+                    for p in ('experiments/2026-09-06/rh1_gimbal_probe.py', 'rlq/rh1_common.py',
+                              'rlq/reflection_loop_reference_echo.py',
+                              'rlq/reflection_loop_dynamics.py')}))
     if args.json:
         args.json.write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')
     print(json.dumps(dict(slopes=slopes, checks=checks,

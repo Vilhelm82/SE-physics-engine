@@ -4,6 +4,7 @@ The reference feels delta_ref through its physical Hamiltonian. An offline nativ
 calibration fixes one constant; F and gate fidelity never enter its evolution.
 Thermal gate averages assume an initially independent, nearly frozen angle.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 from dataclasses import dataclass, replace
 from functools import lru_cache
@@ -16,10 +17,10 @@ from scipy.integrate import solve_ivp
 from scipy.optimize import brentq
 
 from rh1_cella_surface import signed_constraint
-from rh1_common import (G, I2, I4, TAU, TRINE, compose_discard,
+from rlq.rh1_common import (G, I2, I4, TAU, TRINE, compose_discard,
                         haar_quadrature, trine_loop)
-from reflection_loop_dynamics import hamiltonian
-from reflection_loop_reference_echo import rotation
+from rlq.reflection_loop_dynamics import hamiltonian
+from rlq.reflection_loop_reference_echo import rotation
 
 WORD_TIME = 9*TAU
 
@@ -243,10 +244,10 @@ def main():
     fixed_shift = -c*float(np.mean(plateau_deltas))
     paired = [dict(delta=d, reference=thermal_channel(ref.rest(d), ref.temperature/(1e8*ref.stiffness(ref.rest(d),d)),d),
                    future_mean_constant=native_word(fixed_shift,d)[2]) for d in plateau_deltas]
-    paths = [Path(__file__), Path('test_rh1_passive_reference.py'), Path('rh1_cella_surface.py'),
-        Path('rh1_common.py'), Path('reflection_loop_dynamics.py'),
-        Path('reflection_loop_reference_echo.py'), Path('reflection_loop_composite.py'),
-        Path('docs/superpowers/plans/2026-09-06-rh1-passive-reference.md')]
+    paths = [Path(__file__), Path('tests/test_rh1_passive_reference.py'), Path('experiments/2026-09-06/rh1_cella_surface.py'),
+        Path('rlq/rh1_common.py'), Path('rlq/reflection_loop_dynamics.py'),
+        Path('rlq/reflection_loop_reference_echo.py'), Path('rlq/reflection_loop_composite.py'),
+        Path('docs/archive/superpowers/plans/2026-09-06-rh1-passive-reference.md')]
     output = dict(date='2026-09-06', model='Equilibrium independent two-level reference plus torsional spring; proposed coupling, no hardware realization.',
         calibration=dict(gain=0., delta=0., slope=c, steps=slopes, frozen_k0=ref.k0),
         parameters=dict(gap=ref.gap, coupling=ref.coupling, temperature=ref.temperature,

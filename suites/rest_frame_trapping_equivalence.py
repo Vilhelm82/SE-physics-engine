@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact checks supporting the rest-frame / trapping equivalence theorem.
 
-The proof and hypotheses are in docs/2026-09-05-rest-frame-trapping-equivalence.md.
+The proof and hypotheses are in docs/results/2026-09-05/2026-09-05-rest-frame-trapping-equivalence.md.
 The native scalar F is preserved. No area-transport law is imposed silently.
 """
 import json

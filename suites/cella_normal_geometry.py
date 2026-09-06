@@ -2,10 +2,12 @@
 """Exact checks for the implicit normal-geometry extension.
 
 The proof and geometric hypotheses are in
-docs/2026-09-05-cella-normal-geometry.md.  These finite examples check the
+docs/results/2026-09-05/2026-09-05-cella-normal-geometry.md.  These finite examples check the
 construction, gauge law, mixed elementary invariants and normal curvature;
 they do not select the native physical cut or transport law.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
+_sys.path.insert(0, str(_pl.Path(__file__).resolve().parent))
 import json
 from pathlib import Path
 
@@ -414,6 +416,6 @@ report = {
         "DBP:thm:three_channel_kg_ext": "dcb8e175e3c43f9b708afda98e8cbf02c55f910e2d67e28b300edf676ab7c2fd",
     },
 }
-target = Path(__file__).resolve().parent / "docs" / "cella-normal-geometry-checks.json"
+target = Path(__file__).resolve().parents[1] / "docs" / "cella-normal-geometry-checks.json"
 target.write_text(json.dumps(report, indent=2)+"\n")
 print(json.dumps({"checks_passed": len(checks), "report": str(target), "witnesses": witnesses}, indent=2))

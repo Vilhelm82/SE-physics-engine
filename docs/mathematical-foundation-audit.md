@@ -75,7 +75,7 @@ For a general core, allow a declared collection of reference objects and admissi
 
 **Verdict: keep the linear algebra; qualify the foundational derivation.**
 
-T7 starts with a symmetric bilinear form and supplies its three plane restrictions, including the diagonal normalizations \((-1,+1,+1)\). These restrictions uniquely determine its six coefficients. The proved result is a gluing theorem **inside the category of bilinear forms**. The words “compact”, “hyperbolic”, “reference” and “collapse” have not independently selected that category. [T7 gluing](/home/williaml/seated-root/prim_t7_seat_form.py:44); [primitives corrections](/home/williaml/seated-root/docs/2026-09-04-PRIMITIVES-v0.md:132).
+T7 starts with a symmetric bilinear form and supplies its three plane restrictions, including the diagonal normalizations \((-1,+1,+1)\). These restrictions uniquely determine its six coefficients. The proved result is a gluing theorem **inside the category of bilinear forms**. The words “compact”, “hyperbolic”, “reference” and “collapse” have not independently selected that category. [T7 gluing](/home/williaml/seated-root/prim_t7_seat_form.py:44); [primitives corrections](/home/williaml/seated-root/docs/results/2026-09-04/2026-09-04-PRIMITIVES-v0.md:132).
 
 This is a substantive gap rather than a demand for assumption-free mathematics. For example,
 
@@ -293,7 +293,7 @@ For the Euclidean product-round configuration \(E=(S^2)^3\), the repo derives
 F(X,Y)=2\mathbb I^{-1}\sum_iX_i\times Y_i
 \]
 
-for horizontal vectors. The locked-inertia theorem \(\det\mathbb I=0\iff\operatorname{rank}A=1\) is sound. These are established geometric-mechanics objects and well suited to the problem. [Connection proof](/home/williaml/seated-root/docs/GRAM_SUBMERSION_CURVATURE/GRAM_SUBMERSION_CURVATURE.md:27); [rank detector](/home/williaml/seated-root/docs/INERTIA_NODE_DETECTOR/INERTIA_NODE_DETECTOR.md:23).
+for horizontal vectors. The locked-inertia theorem \(\det\mathbb I=0\iff\operatorname{rank}A=1\) is sound. These are established geometric-mechanics objects and well suited to the problem. [Connection proof](/home/williaml/seated-root/docs/archive/GRAM_SUBMERSION_CURVATURE/GRAM_SUBMERSION_CURVATURE.md:27); [rank detector](/home/williaml/seated-root/docs/archive/INERTIA_NODE_DETECTOR/INERTIA_NODE_DETECTOR.md:23).
 
 At a rank-two coplanar frame the \(SO(3)\) action is still free and \(\mathbb I^{-1}\) is smooth. For horizontal unit vectors,
 
@@ -302,7 +302,7 @@ At a rank-two coplanar frame the \(SO(3)\) action is still free and \(\mathbb I^
 \qquad\|F(X,Y)\|\le2\|\mathbb I^{-1}\|.
 \]
 
-Thus the invariant connection curvature is locally bounded there. The code instead uses the lifts of coordinate-unit changes in the three Gram entries. Those lifts diverge at the orientation-forgetting fold. Summing their coefficients without the inverse quotient-metric contractions produces a coordinate-response norm, not an intrinsic tensor norm. Dividing a loop angle by coordinate area validates that same response. [Norm implementation](/home/williaml/seated-root/docs/GRAM_SUBMERSION_CURVATURE/GRAM_SUBMERSION_CURVATURE.md:186).
+Thus the invariant connection curvature is locally bounded there. The code instead uses the lifts of coordinate-unit changes in the three Gram entries. Those lifts diverge at the orientation-forgetting fold. Summing their coefficients without the inverse quotient-metric contractions produces a coordinate-response norm, not an intrinsic tensor norm. Dividing a loop angle by coordinate area validates that same response. [Norm implementation](/home/williaml/seated-root/docs/archive/GRAM_SUBMERSION_CURVATURE/GRAM_SUBMERSION_CURVATURE.md:186).
 
 An exact witness makes the distinction concrete. At the coplanar trine with angles \(0,120^\circ,240^\circ\), \(\mathbb I=\operatorname{diag}(3/2,3/2,3)\). Choosing the horizontal orthonormal pair specified in the verification receipt gives
 

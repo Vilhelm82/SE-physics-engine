@@ -1,5 +1,5 @@
 """RH-4 on the harness: the capture model at the absorbing interface, as a one-page driver.
-Acceptance test for rlq phase 1: every grid row must reproduce docs/rh4_capture-checks.json (the pre-harness run) to 1e-15.
+Acceptance test for rlq phase 1: every grid row must reproduce docs/receipts/rh4_capture-checks.json (the pre-harness run) to 1e-15.
 Run from the repository root:  ~/.cache/seated-root-qec-venv/bin/python experiments/2026-09-06/rh4_capture.py [--qec]
 """
 import sys, json, argparse
@@ -14,7 +14,7 @@ from rlq import figures as F, ROOT
 ap = argparse.ArgumentParser(); ap.add_argument('--t-c', type=float, default=1.0); ap.add_argument('--qec', action='store_true'); ap.add_argument('--shots', type=int, default=200000)
 args = ap.parse_args()
 r = Receipt('rh4_capture', 'capture model at the absorbing interface (harness port; acceptance against the pre-harness receipt)', driver=__file__,
-            modules=[ROOT/'reflection_loop_finite_dump.py', ROOT/'qec_distance_stack.py'])
+            modules=[ROOT/'rlq/reflection_loop_finite_dump.py', ROOT/'rlq/qec_distance_stack.py'])
 r.held_out('occupancy readout and 10->2 recombination as physical operations (folded into gamma_phi)', 'register modes with their own detuning',
            'finite-bandwidth capture pulses', 'd >= 7 and the bicycle code at this interface', 'single seeds', 'hardware')
 
@@ -37,7 +37,7 @@ for e_c in (0., 0.01, 0.05):
                 ch.update(e_c=e_c, gamma_r=gr, gamma_phi=gphi, register_heralded=rh, r_eff=r_eff(ch['unheralded_pauli_rate'])); grid.append(ch)
 r.record('grid', grid)
 # acceptance: bit-for-bit against the pre-harness receipt
-old = json.load(open(ROOT/'docs/rh4_capture-checks.json'))['grid']
+old = json.load(open(ROOT/'docs/receipts/rh4_capture-checks.json'))['grid']
 key = lambda g: (g['e_c'], g['gamma_r'], g['gamma_phi'], g['register_heralded'])
 olds = {key(g): g for g in old}; worst = 0.
 for g in grid:

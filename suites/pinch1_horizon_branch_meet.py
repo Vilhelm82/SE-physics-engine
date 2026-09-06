@@ -5,7 +5,7 @@
 # INPUTS: T7a's form q = diag(1,1,-1), seat c = (0,0,1); the Gram G(a,b,gamma) with
 #   eps = 1 - gamma^2, W = a^2 + b^2 - 2ab gamma, delta = -det G, F = eps/delta = N^2,
 #   eta = W/eps, nu = G^-1 l (Codex, verified 09-05).  NO soldering map, NO r, NO pinning.
-# CONTEXT: Codex's horizon-crossing chart (docs/2026-09-05-horizon-crossing-metric.md) requires
+# CONTEXT: Codex's horizon-crossing chart (docs/results/2026-09-05/2026-09-05-horizon-crossing-metric.md) requires
 #   delta > 0 and a != sigma b, and says e_r is undefined at zero tilt.  This runner is about the
 #   set that excludes.
 # CLAIMS, checked:

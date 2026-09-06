@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # =============================================================================
-# BND-1 -- receipt for docs/2026-09-05-BOUNDARY-NOTE.md.  (Claire, 2026-09-05.)
+# BND-1 -- receipt for docs/results/2026-09-05/2026-09-05-BOUNDARY-NOTE.md.  (Claire, 2026-09-05.)
 #   The readout tier is boundary representation theory of the seat's symmetric space; the horizon is the state going to
 #   that boundary; the pinch is where an interior point and a boundary point coincide in state space.
 # CLAIMS, checked:

@@ -1,3 +1,5 @@
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
+_sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]/'suites'))
 import sympy as sp
 
 from thm_n_kerr_quadrupole import (

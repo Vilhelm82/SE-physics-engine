@@ -5,7 +5,7 @@
 #   the repo (T5c: V_spin = 2D, D^2 = -det G_c, tau: D -> -D).  No load, no soldering, no r.
 # INPUTS: T7a's form; G(a,b,gamma); eps = 1 - gamma^2, W = a^2 + b^2 - 2ab gamma, delta = eps + W;
 #   F = eps/delta; D = det[hbar, G, c] = cosh l1 cosh l2 sin t in seat coords (T5c), D^2 = delta;
-#   Codex's xi = (b - a gamma)/d with d^2 = delta (docs/2026-09-05-pinch-directional-resolution.md).
+#   Codex's xi = (b - a gamma)/d with d^2 = delta (docs/results/2026-09-05/2026-09-05-pinch-directional-resolution.md).
 # CLAIMS, checked:
 #   q1  delta - (b - a gamma)^2 = (1 - gamma^2)(1 + a^2) IDENTICALLY, hence F = (1 - xi^2)/(1 + a^2)
 #       everywhere (Codex's formula is a global identity, not a pinch expansion).
@@ -31,7 +31,7 @@
 #       by a path in state space.  Mod the deck the pinch resolves to a SEGMENT xi in [0, 1]:
 #       seat-alive (0) to seat-null (1).
 # [First run: q3c/q3d were placeholders, not computations (rule 12); replaced with the horizon xi-values and nu(a,0) = nu*.]
-# DYNAMICAL COMPLEMENT (Codex, docs/2026-09-05-cella-predictive-state.md sec. 3-4, 63d951e, recorded 2026-09-05 evening):
+# DYNAMICAL COMPLEMENT (Codex, docs/results/2026-09-05/2026-09-05-cella-predictive-state.md sec. 3-4, 63d951e, recorded 2026-09-05 evening):
 #   q5's 'base-field observables are sheet-blind' is the STATIC statement.  Under the constant passive load
 #   M = [[mu,beta],[beta,nu]] the deck is tau(xi,d) = (-xi,-d) and it acts on the INPUTS too (X_d flips, e_d -> -e_d),
 #   so equal F under tau does not identify two fixed-input experiments: at d = 0 the two null limits xi = +-1 give

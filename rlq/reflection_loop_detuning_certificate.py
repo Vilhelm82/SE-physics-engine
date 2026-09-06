@@ -1,8 +1,9 @@
 """High-precision and interval certificates for finite detuning cancellation."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import mpmath as mp
 
-from reflection_loop_detuning_order import frame_coefficients
-from reflection_loop_dynamics import GS
+from rlq.reflection_loop_detuning_order import frame_coefficients
+from rlq.reflection_loop_dynamics import GS
 
 
 def adjoint(a, ctx):

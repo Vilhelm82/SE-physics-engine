@@ -27,7 +27,7 @@
 #   h8  Therefore the distinction is observed exactly as the sheet is (Codex 63d951e): by the sign of dF/dt under a
 #       fixed input, never by a static readout.  [Cited; her formula verified in 86f3ebc.]
 # [First run: h6a failed on a double negation in the runner (tau(xi) written as -(-xi)); h7b chained to it. Fixed; claims unchanged.]
-# RESOLVED (Codex BR-9, docs/2026-09-05-response-on-branched-resolved-state-spaces.md sec. 9, be1ae74; verified by Claire
+# RESOLVED (Codex BR-9, docs/results/2026-09-05/2026-09-05-response-on-branched-resolved-state-spaces.md sec. 9, be1ae74; verified by Claire
 #   in sandbox): the swap extends smoothly to the resolved chart as S(a,xi,d) = (a gamma + xi d, gamma xi - a F d, -d),
 #   preserving F and gamma, S^2 = id, [S, tau] = 0, S_xi = -xi_g.  On the horizons S = (sigma a + xi d, sigma xi, -d):
 #   h6's split exact.  Over the collapsed pinch S(a,xi,0) = (sigma a, sigma xi, 0): on sigma = +1 the WHOLE exceptional set

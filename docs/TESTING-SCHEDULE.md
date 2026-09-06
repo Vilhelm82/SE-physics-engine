@@ -33,7 +33,7 @@
   normalised; each axis presents timelike just inside and spacelike again
   below its own r_i. Conditional on KIN-2a (declared) + CONT-1 (declared).
   Naming: KIN-2 is now split — KIN-2a = the pinning (still DECLARED);
-  KIN-2b = the curvature tier (CLOSED by docs/GRAM_SUBMERSION_CURVATURE/).
+  KIN-2b = the curvature tier (CLOSED by docs/archive/GRAM_SUBMERSION_CURVATURE/).
   The 08-30 handoff's "KIN-2 closed" refers to 2b only.
 - **PRED-1 cross-seat cycle** — `suites/pred1_cross_seat.py` (12/12). Split verdict:
   modulus layer is a coboundary (kill condition fires there; the DeltaQ
@@ -70,12 +70,12 @@
      Two rulings owed (CARRY-8 letter vs angular separations; identity semantics).
 - (next, in order:)
   0a. **THM-TARGET I** DONE 2026-09-03: `suites/thm_i_pre.py` 19/19, `suites/thm_i_transport.py` 11/11, `suites/thm_i_field.py`
-     10/10, report `docs/2026-09-03-thm-target-I.md`. Ray and orbit kinematics of the pinned family = the
+     10/10, report `docs/results/2026-09-03/2026-09-03-thm-target-I.md`. Ray and orbit kinematics of the pinned family = the
      full Schwarzschild geodesic structure (null and timelike, 2nd order incl.): factor 2, 15 pi/16, perihelion 3;
      gamma = 1 forced by the boost; local transport = gradient of the pivot field along the co-moving step (both
      seat-rotor rules fail); field law narrowed to ONE variable: Delta/det G' (reciprocal presented volume) harmonic.
   0b. ~~dynamics-tier question~~ DONE 2026-09-03 as **THM-TARGET J** (`suites/thm_j_dyn.py` 7/7,
-     `docs/2026-09-03-thm-target-J.md`): NOT DERIVED. Any gradient-quadratic energy makes its own arc
+     `docs/results/2026-09-03/2026-09-03-thm-target-J.md`): NOT DERIVED. Any gradient-quadratic energy makes its own arc
      length harmonic (theorem); KIN-2a needs that arc length affine in sech^2 l, which no polynomial
      invariant is (pole at det G' = 0); the frozen elliptope metric's harmonic-map energy gives
      perihelion coefficients 1.5-1.87 (dead). The field law must be DECLARED as KIN-2a'':
@@ -88,7 +88,7 @@
      Mercury. **THM-L** (`suites/thm_l_rotation.py` 10/10): rotation carried by rule G' (symmetric
      strain boost + rotation at half the curl), gyroscope and node numbers land. **THM-M**
      (`suites/thm_m_swirl.py` 9/9): the swirl DERIVED as the boost of the pinning, coefficient 2 =
-     clock + rods; scalar theory dead at GP-B. Report `docs/2026-09-03-thm-targets-K-L-M.md`.
+     clock + rods; scalar theory dead at GP-B. Report `docs/results/2026-09-03/2026-09-03-thm-targets-K-L-M.md`.
      Paper v0.2 amended (68f3a9f + this commit).
   0d. **RULINGS OWED (Will):** (i) the letter of the rod-free definition vs normalised cosines
      (CURV-1); (ii) "identity" baseline-relative or mod 2 pi; (iii) EQ-1 -- is Tolman's
@@ -100,14 +100,14 @@
      (-2/9 component-only; -1/9 with the field argument also transformed); ignoring that,
      its formal quadrupole is only 3/10 of Kerr.  THM-M remains valid at its declared first-
      order scope; a nonlinear source/field closure is now a named derivation debt.  Report:
-     `docs/2026-09-03-thm-target-N.md`. (b) the Hubble river v = H r (uniform source: Poisson
+     `docs/results/2026-09-03/2026-09-03-thm-target-N.md`. (b) the Hubble river v = H r (uniform source: Poisson
      with constant density) -- does the pinned family reproduce flat-FLRW kinematics and the
      de Sitter horizon as horizon-vanishing? (c) the entropic-gravity objections (neutron
      interferometry) as an owed comparison against SCREEN-1/THERM-1 -- the model inherits them.
   0f. Also open from CURV-1: the interior antipodal collisions at r_s Delta/sin^2(theta_12) --
      candidate-new, lineage unsearched; THM-J's pole obstruction as a general statement.
   0g. **THM-TARGET O** DONE 2026-09-04 (`suites/thm_o_strain_law.py` 33/33, 114.7 s, `714bf5c`; report
-     `docs/2026-09-04-thm-target-O.md`): the strain law is Gauss + Codazzi on the seat's flat rods --
+     `docs/results/2026-09-04/2026-09-04-thm-target-O.md`): the strain law is Gauss + Codazzi on the seat's flat rods --
      G_nn = e_2(sym grad v) IDENTICALLY, G_ni = -(1/2) curl curl v; e_2 presented, not selected.
      NORMAL-1 declared (vacuum through the normal). Pinning derived a second time (exponent),
      c_2 = 0, A/r^3 exponent from Codazzi; first-order drag on flat rods is exact vacuum (10/10).

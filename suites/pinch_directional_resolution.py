@@ -2,7 +2,7 @@
 """Exact directional continuation of PINCH-1's finite normal limits.
 
 This is a proposed extension of the state space, not a selected dynamical law.
-See docs/2026-09-05-pinch-directional-resolution.md for the proof and scope.
+See docs/results/2026-09-05/2026-09-05-pinch-directional-resolution.md for the proof and scope.
 """
 import json
 import sympy as s

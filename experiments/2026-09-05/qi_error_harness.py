@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 # =============================================================================
 # QI-HARNESS -- known quantum-information error results and open problems, reproduced from first principles,
 #   with a hook for a candidate general error formula.  (Claire, 2026-09-05, for Will's quantum targets.)
@@ -227,7 +228,7 @@ bench("B15a same, leading-order formulas (CP-2 eq. 7) at eps = 1e-3 where they a
       lambda d: cp_known(d)[1], lambda d: cp_compute(d)[1])
 
 # ---------------- B16 Will's eleven-block compression (CM-2/3/4): the algebraic half ----------------
-# Centres from docs/2026-09-05-reflection-loop-compression.md eq. (9); the eight conditions (4), (5), (8) and the
+# Centres from docs/results/2026-09-05/2026-09-05-reflection-loop-compression.md eq. (9); the eight conditions (4), (5), (8) and the
 # coefficient (11) are checked here EXACTLY from those centres (independent of the runner).  The finite witnesses
 # (joint infidelities 1.53140e-10 at n=1, 2.44377e-9 at n=2) require integrating the 187-stage waveform; that is
 # recorded as NUMERICAL with Will's reflection_loop_compression.py as the source until an independent stage

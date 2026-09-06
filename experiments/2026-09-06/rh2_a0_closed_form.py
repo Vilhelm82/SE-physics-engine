@@ -18,6 +18,7 @@ is REAL -- a real shift of sigma is a partial reflection and leaves the tight fr
 (the phase of sigma) is at eps^3, and only the phase breaks the frame.  sqrt(5) is |(2,-1)|: the bright direction
 from arcs (G1, G2, G1) couples D to p twice and to q once.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import sympy as sp, time, json, hashlib, subprocess, sys
 from pathlib import Path
 from mpmath import mp, mpf
@@ -130,7 +131,7 @@ print(f"  floor  = c0 a0^2/6 = {sp.simplify(c0*a0**2/6)} = {sp.N(c0*a0**2/6, 12)
 for k, v in claims.items(): print(f"  [{'ok' if v else 'FAIL'}] {k}")
 
 # ---- route B: 70-digit Richardson on the closed-form propagator (rh2_precision), and the RH-2P receipt
-import rh2_precision as RP
+import rlq.rh2_precision as RP
 mp.dps = 70
 eg = [mpf(2)**(-k) for k in range(8, 17)]; a = []
 for e in eg:
@@ -139,7 +140,7 @@ R1 = [2*a[i+1]-a[i] for i in range(len(a)-1)]; R2 = [(4*R1[i+1]-R1[i])/3 for i i
 a0_num = R3[-1]; a0_sym = mpf(sp.N(a0, 40).__str__())
 rel = abs(a0_num - a0_sym)/a0_sym
 k1_num = (a[-1]/a0_sym - 1)/eg[-1]
-rec = json.load(open('docs/rh2_precision-checks.json'))
+rec = json.load(open('docs/receipts/rh2_precision-checks.json'))
 a0_rh2p = float(rec['theorem2']['0.0003125']['a'])           # smallest-eps a(eps) from RH-2P, not the limit
 print(f"\n  route B (Richardson, 70 dps): {mp.nstr(a0_num, 18)}   rel diff to route A: {mp.nstr(rel, 4)}")
 print(f"  kappa1 numerical at eps=2^-16: {mp.nstr(k1_num, 8)}   (series: {float(kappa1):.6f})")
@@ -147,7 +148,7 @@ print(f"  RH-2P a(3.1e-4) = {a0_rh2p:.7f}; series prediction a0 (1 + kappa1 eps)
 claims['route A == route B to 1e-12'] = bool(rel < mpf('1e-12'))
 claims['kappa1 numerical within 0.1% of -55/32'] = bool(abs(k1_num/mpf(-55)*32 - 1) < mpf('1e-3'))
 claims['RH-2P a(3.1e-4) reproduced to 1e-5 by a0(1+kappa1 eps)'] = abs(a0_rh2p - float(a0*(1 + kappa1*sp.Rational(1, 3200)))) < 1e-5
-files = ['rh2_a0_closed_form.py', 'rh2_precision.py', 'rh1_common.py', 'reflection_loop_dynamics.py']
+files = ['experiments/2026-09-06/rh2_a0_closed_form.py', 'rlq/rh2_precision.py', 'rlq/rh1_common.py', 'rlq/reflection_loop_dynamics.py']
 out = dict(a0=str(a0), a0_decimal=str(sp.N(a0, 30)), c0=str(c0), kappa1=str(kappa1), floor=str(sp.simplify(c0*a0**2/6)),
            x_over_eps='15*pi/32', sigma={k: str(sp.simplify(v)) for k, v in sigma.items()},
            D2={k: str(sp.simplify(v)) for k, v in D2.items() if k >= 10}, c={k: str(sp.simplify(v)) for k, v in c.items()},
@@ -156,6 +157,6 @@ out = dict(a0=str(a0), a0_decimal=str(sp.N(a0, 30)), c0=str(c0), kappa1=str(kapp
            checks={k: bool(v) for k, v in claims.items()}, check_count=len(claims), checks_passed=int(sum(claims.values())),
            provenance=dict(date='2026-09-06', head=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
                            runtime_s=round(time.time()-t0, 1), sha256={f: hashlib.sha256(Path(f).read_bytes()).hexdigest() for f in files}))
-Path('docs/rh2_a0-checks.json').write_text(json.dumps(out, indent=2) + '\n')
+Path('docs/receipts/rh2_a0-checks.json').write_text(json.dumps(out, indent=2) + '\n')
 print(f"\nRESULT: {out['checks_passed']}/{out['check_count']} checks passed.  runtime {out['provenance']['runtime_s']}s")
 if out['checks_passed'] != out['check_count']: sys.exit(1)

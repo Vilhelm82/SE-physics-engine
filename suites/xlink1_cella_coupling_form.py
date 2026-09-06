@@ -28,7 +28,7 @@
 #   x8  GENERAL n (Cella's L6): 2I - 11^T has eigenvalues 2 (mult n-1) and 2-n: signature (n-1,1) for every
 #       n >= 3, degenerate at n = 2.  It is the Gram of n unit spacelike lines in R^{n-1,1} pairwise at q = -1,
 #       realised explicitly; n = 4 is the model's Cl(3,1) after T8.
-# CAVEAT (Codex, docs/2026-09-05-cella-dependency-reconciliation.md sec. 1, recorded 2026-09-05): under a defining-function
+# CAVEAT (Codex, docs/results/2026-09-05/2026-09-05-cella-dependency-reconciliation.md sec. 1, recorded 2026-09-05): under a defining-function
 #   gauge H -> H + g a^T + a g^T the edge vector shifts by delta nu with det(a -> delta nu) = 2 (g1 g2 g3)^2 != 0, so an
 #   arbitrary gauge moves nu ANYWHERE.  'Cella's null cone = the horizon light rays' is therefore true of the FORM and
 #   gauge-dependent for any actual nu until a presentation rule is fixed.  The nu-map is Codex's (agreed split).

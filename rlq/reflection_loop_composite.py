@@ -4,6 +4,7 @@
 Uses the native frames from reflection_loop_dynamics.py. No external pulse
 sequence or numerical code is imported. Hamiltonians have frequency units.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 from dataclasses import dataclass
 import json
@@ -11,7 +12,7 @@ import json
 import numpy as np
 import sympy as sp
 
-from reflection_loop_dynamics import (
+from rlq.reflection_loop_dynamics import (
     ANGLE, J, P, Q, R, embed, exact_loop, frame, hamiltonian, segment,
 )
 

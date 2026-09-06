@@ -7,6 +7,7 @@ Syndrome CNOTs, preparation and measurement have separately declared noise.
 Heralds are sampled in the circuit, then used to reweight the decoder per shot.
 No detector-error-model sampling of heralded channels is used.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 from collections import OrderedDict, defaultdict
 from dataclasses import dataclass
@@ -23,7 +24,7 @@ import stim
 import pymatching
 from ldpc import BpOsdDecoder
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 PAULIS = np.array([np.eye(2), [[0, 1], [1, 0]], [[0, -1j], [1j, 0]],
                    [[1, 0], [0, -1]]], dtype=complex)
 G = np.diag([-1., 1.])
@@ -34,7 +35,7 @@ def unpack(value):
 
 
 def operating_point(n=1, gain=.01, background=1e-6):
-    path = ROOT/'docs/reflection-loop-finite-dump-checks.json'
+    path = ROOT/'docs/receipts/reflection-loop-finite-dump-checks.json'
     rows = json.loads(path.read_text())['operating_curves']
     return next(r for r in rows if r['n'] == n and r['gain'] == gain
                 and np.isclose(r['background_rate'], background, rtol=1e-9, atol=1e-20))
@@ -575,7 +576,7 @@ def main():
     parser.add_argument('--scenarios', nargs='+', default=['baseline','five'])
     parser.add_argument('--basis', nargs='+', default=['X','Z'])
     parser.add_argument('--seed', type=int, default=20260906)
-    parser.add_argument('--json', type=Path, default=ROOT/'docs/qec-distance-stack-checks.json')
+    parser.add_argument('--json', type=Path, default=ROOT/'docs/receipts/qec-distance-stack-checks.json')
     parser.add_argument('--plot', type=Path)
     parser.add_argument('--circuits', type=Path)
     args=parser.parse_args()
@@ -585,7 +586,7 @@ def main():
                 'Other circuit operations have the separately declared stack noise. No persistent-leakage or hardware-threshold claim.',
                 stack_noise=args.noise,versions={n:importlib.metadata.version(n) for n in ('numpy','scipy','stim','pymatching','ldpc')},
                 runner_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-                source_sha256=hashlib.sha256((ROOT/'docs/reflection-loop-finite-dump-checks.json').read_bytes()).hexdigest(),runs=[])
+                source_sha256=hashlib.sha256((ROOT/'docs/receipts/reflection-loop-finite-dump-checks.json').read_bytes()).hexdigest(),runs=[])
     if args.check:
         report['checks']=checks()
         print(json.dumps(report['checks'],indent=2),flush=True)

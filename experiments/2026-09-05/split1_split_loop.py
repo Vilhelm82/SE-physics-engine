@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 # =============================================================================
 # SPLIT-1 -- the loop that returns only the data and splits the error.  Part A (FAILS): bright loss DURING an adiabatic dark
 #   loop.  Part B (WORKS): exact-return loops with an ENDPOINT bright dump, tight-frame trine (pi/3, 2pi/3, pi/3).
@@ -93,5 +94,5 @@ if __name__ == "__main__":
         for angles, name in (((0.0,), "single return + dump (18/a)"), ((math.pi/3, 0.0, -math.pi/3), "composite angles + dumps (55/a)"), ((math.pi/3, 2*math.pi/3, math.pi/3), "tight-frame trine + dumps (55/a)")):
             r = analyse(dump_word(angles, eps, delta), states); r.update(part="B", scheme=name, angles=list(angles), eps=eps, delta=delta); rows.append(r)
             print(f"{name:38s} {eps:6.3f} {delta:7.0e} | {r['erasure_mean']:9.2e} {r['erasure_spread']/max(r['erasure_mean'], 1e-300):11.2e} {r['cond_infidelity']:10.2e}", flush=True)
-    json.dump(rows, open("docs/split1-checks.json" if not quick else "/tmp/split1-quick.json", "w"), indent=1)
+    json.dump(rows, open("docs/receipts/split1-checks.json" if not quick else "/tmp/split1-quick.json", "w"), indent=1)
     print("reference (unheralded): single loop 5.31e-4 at eps=1% (18/a); composite 2.49e-7 (57/a); reference echo 4.7e-11 at eps=1e-3, D=1e-4 (1386/a)", flush=True)

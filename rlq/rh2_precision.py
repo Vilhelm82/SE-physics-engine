@@ -20,11 +20,12 @@ PREDICTIONS (Claire, written before the run, commit precedes log):
   (P4) float32 is predicted by a + u_32 b_k to within a factor 2 only where the linear regime holds (eps >= 1e-2).
 Written 2026-09-06 by Claire.  Runs in seconds.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse, hashlib, json, subprocess, sys, time
 from pathlib import Path
 import numpy as np
 from mpmath import mp, mpf, mpc, matrix as mpm
-from rh1_common import trine_loop, TRINE, compose_discard
+from rlq.rh1_common import trine_loop, TRINE, compose_discard
 
 EPS_GRID = [2e-2, 1e-2, 5e-3, 2.5e-3, 1.25e-3, 6.25e-4, 3.125e-4]
 U32, U64 = 2.0**-24, 2.0**-53
@@ -210,13 +211,13 @@ def run():
         P2_k4_rel_err_64={str(e): fit[e]['paths']['k4']['rel_err_64'] for e in EPS_GRID},
         P3_slope_limit=slopes[-1]['slope_DB'], P3_rho=rho,
         P4_f32_pred_over_meas={str(e): {k: fit[e]['paths'][k]['f32_pred_over_meas'] for k in PATHS} for e in EPS_GRID})
-    files = ['rh2_precision.py', 'rh1_common.py', 'reflection_loop_dynamics.py', 'reflection_loop_composite.py', 'reflection_loop_reference_echo.py']
+    files = ['rlq/rh2_precision.py', 'rlq/rh1_common.py', 'rlq/reflection_loop_dynamics.py', 'rlq/reflection_loop_composite.py', 'rlq/reflection_loop_reference_echo.py']
     res['provenance'] = dict(test='rh2_precision', date='2026-09-06', runtime_s=round(time.time()-t0, 1),
         head=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
         blinding='designer-run; predictions P1-P4 in the module docstring, committed before the log',
         sha256={p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in files})
     res['check_count'] = len(ch); res['checks_passed'] = int(sum(c['passed'] for c in ch))
-    ap = argparse.ArgumentParser(); ap.add_argument('--json', nargs='?', const='docs/rh2_precision-checks.json', default=None); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument('--json', nargs='?', const='docs/receipts/rh2_precision-checks.json', default=None); a = ap.parse_args()
     if a.json: Path(a.json).write_text(json.dumps(res, indent=2, allow_nan=True)+'\n')
     print(f"\nRESULT: {res['checks_passed']}/{res['check_count']} checks passed.  runtime {res['provenance']['runtime_s']}s", flush=True)
     if res['checks_passed'] != res['check_count']: sys.exit(1)

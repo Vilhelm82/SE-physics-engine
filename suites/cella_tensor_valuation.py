@@ -9,7 +9,7 @@ and all polynomial numerator terms are assembled before output filtering.
 
 Standard tools retained explicitly: coordinate Levi-Civita/Riemann definitions,
 matrix adjugates, finite Taylor jets and exact SymPy arithmetic.  The manuscript
-docs/2026-09-05-cella-tensor-valuation.md supplies the proofs and scope.
+docs/results/2026-09-05/2026-09-05-cella-tensor-valuation.md supplies the proofs and scope.
 """
 from __future__ import annotations
 
@@ -606,7 +606,7 @@ def main():
         "external_sources_used":[],
         "verified_count":len(checks),"checks":checks,"results":results,
         "elapsed_seconds":round(time.monotonic()-start,3)}
-    destination = Path(__file__).resolve().parent / "docs/cella-tensor-valuation-checks.json"
+    destination = Path(__file__).resolve().parents[1] / "docs/receipts/cella-tensor-valuation-checks.json"
     destination.write_text(json.dumps(report,indent=2)+"\n")
     print(json.dumps(report,indent=2))
 

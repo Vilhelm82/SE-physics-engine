@@ -18,12 +18,13 @@ channel format.  Regression: capture off must reproduce native_channel(row) exac
 Space: single-excitation P + Q + R_1..R_5 = 14 dims; density matrices propagated stage by stage.
 Written 2026-09-06 by Claire.  Not a hardware claim: t_c, gamma_r, gamma_phi, e_c are declared model parameters.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse, hashlib, json, subprocess, sys, time
 from pathlib import Path
 import numpy as np
 from scipy.linalg import expm, polar
-import reflection_loop_finite_dump as FD
-import qec_distance_stack as Q
+import rlq.reflection_loop_finite_dump as FD
+import rlq.qec_distance_stack as Q
 
 from rlq.instruments import *  # noqa: F401,F403  -- moved into the harness 2026-09-06; numerics unchanged
 from rlq.instruments import N, DIM, CASE, GAMMA, KAPPA, ACTION, PAULI2, CHAR, IP, IQ, IR, ALLR, embed4, embed4z, Model, channel, calibrate
@@ -34,7 +35,7 @@ def main():
     ap.add_argument('--t-c', type=float, default=1.0)
     ap.add_argument('--qec', action='store_true', help='run d=3,5 surface codes on selected points')
     ap.add_argument('--shots', type=int, default=200000)
-    ap.add_argument('--json', type=Path, default=Q.ROOT/'docs/rh4_capture-checks.json')
+    ap.add_argument('--json', type=Path, default=Q.ROOT/'docs/receipts/rh4_capture-checks.json')
     args = ap.parse_args(); t0 = time.time(); checks = []
     def check(name, value, tol):
         ok = bool(np.isfinite(value) and abs(value) <= tol); checks.append(dict(name=name, value=float(value), tolerance=tol, passed=ok))
@@ -87,7 +88,7 @@ def main():
             args.json.write_text(json.dumps(res, indent=2) + '\n')
     res['check_count'] = len(checks); res['checks_passed'] = int(sum(c['passed'] for c in checks))
     res['provenance'] = dict(date='2026-09-06', runtime_s=round(time.time() - t0, 1), head=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
-                             sha256={p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in ('rh4_capture.py', 'reflection_loop_finite_dump.py', 'qec_distance_stack.py')})
+                             sha256={p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in ('rlq/rh4_capture.py', 'rlq/reflection_loop_finite_dump.py', 'rlq/qec_distance_stack.py')})
     args.json.write_text(json.dumps(res, indent=2) + '\n')
     print(f"\nRESULT: {res['checks_passed']}/{res['check_count']} checks passed.  runtime {res['provenance']['runtime_s']}s", flush=True)
     if res['checks_passed'] != res['check_count']: sys.exit(1)

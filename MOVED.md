@@ -118,3 +118,9 @@ Run everything from the repository root.
 | xlink1_cella_coupling_form.py | suites/xlink1_cella_coupling_form.py |
 | *.log, curv1_path1_results.json | suites/logs/ (qi_error_harness.log, claire_v0_thirteen.log -> experiments/2026-09-05/) |
 | qec_stack_requirements.txt | rlq/requirements-qec.txt |
+
+## docs/ (same day, `tools/reorg_docs_2026_09_06.py`)
+`docs/` now holds the standing documents plus `results/<date>/`, `receipts/`, `figures/`, `prereg/`, `archive/`; the full map is in
+`docs/README.md`. Every `docs/...` reference in code, handoffs and the moved documents was rewritten from that map; relative links inside
+moved documents were re-based. Verified after the move: the harness acceptance run, `rh_figures`, `rh4_readings`, `rh2p_five`, and
+`operating_point()` all find their receipts.

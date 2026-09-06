@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """Symmetry-reduced complete response for finite reflection words."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 from pathlib import Path
 import json
 import numpy as np
 
-from reflection_loop_detuning_order import (
+from rlq.reflection_loop_detuning_order import (
     I4, primitive_noise_jet, expand_palindrome, reference_jet,
     arc_fourier, frame_coefficients, integrate_exponential_polynomial,
 )
-from reflection_loop_reference_echo import ended_composite, rotation
-from reflection_loop_dynamics import J, GS
+from rlq.reflection_loop_reference_echo import ended_composite, rotation
+from rlq.reflection_loop_dynamics import J, GS
 from math import factorial
 
-CONTROL_PATH = Path(__file__).parent/'docs/reflection-loop-short-controls.json'
+CONTROL_PATH = Path(__file__).parent/'docs/receipts/reflection-loop-short-controls.json'
 
 
 def parameters_batch(points):
@@ -226,8 +227,8 @@ def word_from_endpoint(u, parameter_tuple):
 
 def generic_gain_probe(parameter_tuple, seed):
     """Arbitrary bright dynamics and active-column error, independent of arcs."""
-    from reflection_loop_compression import bad_response
-    from reflection_loop_reference_echo import metrics
+    from rlq.reflection_loop_compression import bad_response
+    from rlq.reflection_loop_reference_echo import metrics
     rng = np.random.default_rng(seed)
 
     def exp_anti(a):
@@ -261,14 +262,14 @@ def generic_gain_probe(parameter_tuple, seed):
 
 
 def run_checks():
-    from reflection_loop_detuning_certificate import certify
-    from reflection_loop_detuning_order import (
+    from rlq.reflection_loop_detuning_certificate import certify
+    from rlq.reflection_loop_detuning_order import (
         higher_reference_jet, gain_word, finite_words, stages_from_parameters,
         time_moments,
     )
-    from reflection_loop_compression import bad_response, packed_matrix, noise_generators, temporal_response
-    from reflection_loop_reference_echo import metrics, response_integrals
-    from reflection_loop_composite import coefficients
+    from rlq.reflection_loop_compression import bad_response, packed_matrix, noise_generators, temporal_response
+    from rlq.reflection_loop_reference_echo import metrics, response_integrals
+    from rlq.reflection_loop_composite import coefficients
     records = json.loads(CONTROL_PATH.read_text())
     report = dict(checks={}, certificates={}, cases={})
     checks = report['checks']

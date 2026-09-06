@@ -1,9 +1,10 @@
 """Figure for RH-2/2P/2A/3/4 from their receipts (no recomputation). Style follows reflection_loop_finite_dump.plot."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import json, numpy as np, matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from pathlib import Path
-ROOT = Path(__file__).resolve().parent/'docs'
+ROOT = Path(__file__).resolve().parents[2]/'docs'/'receipts'; FIG = ROOT.parent/'figures'
 BR, TE, BL, GY = '#976b3b', '#147d72', '#546da8', '#252525'
 x_of = lambda e: 15*np.pi/32*e
 
@@ -67,4 +68,4 @@ ax[2, 1].set(xlabel=r'Register rate $\gamma_r$ or $\gamma_\phi$', ylabel='Herald
 for a in ax.flat: a.grid(alpha=.2); a.legend(frameon=False, fontsize=7)
 ax[0, 0].legend(frameon=False, fontsize=7, loc='upper left'); ax[1, 0].legend(frameon=False, fontsize=6.5, loc='lower right', ncol=2)
 fig.suptitle('Accumulator recovery, 2026-09-06: closed forms (RH-2A), precision separation (RH-2P), decoder (RH-3), register (RH-4)')
-out = ROOT/'rh-accumulator-tradeoffs.png'; fig.savefig(out, dpi=170); plt.close(fig); print('wrote', out)
+out = FIG/'rh-accumulator-tradeoffs.png'; fig.savefig(out, dpi=170); plt.close(fig); print('wrote', out)

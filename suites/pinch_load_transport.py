@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Native pinch-rate selection, area transport, and passive-load conditions.
 
-Dependencies and proofs: docs/2026-09-05-pinch-load-transport.md.
+Dependencies and proofs: docs/results/2026-09-05/2026-09-05-pinch-load-transport.md.
 The illustrative loads are declared candidates, not deductions of a unique load.
 Run this file to emit the exact-check record as JSON; failures raise exceptions.
 """

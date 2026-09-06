@@ -1,7 +1,7 @@
 """Channels: Pauli twirl from a Pauli transfer matrix, stacked-leak metrics, and Codex's native_channel for compatibility."""
 import numpy as np
 from scipy.linalg import polar
-import qec_distance_stack as _Q
+import rlq.qec_distance_stack as _Q
 
 PAULIS = _Q.PAULIS; G = _Q.G
 CHAR = np.array([[1, 1, 1, 1], [1, 1, -1, -1], [1, -1, 1, -1], [1, -1, -1, 1]])   # chi(P, a): commute +1, anticommute -1

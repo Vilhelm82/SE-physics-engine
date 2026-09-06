@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 # =============================================================================
 # CLAIRE-V0-13 -- a thirteen-block reflection word with the eps^2 leakage column removed (v = 0), Will's eight
 #   first-order conditions, and his second-order logical detuning conditions, in his own parameterisation.
@@ -24,9 +25,9 @@
 # =============================================================================
 import numpy as np, math, json, time, sys
 from scipy.optimize import least_squares
-import reflection_loop_detuning_order as D
-from reflection_loop_reference_echo import metrics, response_integrals
-from reflection_loop_compression import noise_generators, bad_response
+import rlq.reflection_loop_detuning_order as D
+from rlq.reflection_loop_reference_echo import metrics, response_integrals
+from rlq.reflection_loop_compression import noise_generators, bad_response
 
 par_of = lambda x: tuple(D.expand_palindrome(x))
 def full_resid(x):
@@ -72,5 +73,5 @@ if __name__ == "__main__":
     if not sols: sys.exit(1)
     W, x, r = sols[0]; print(f"BEST W = {W:.6f}"); out = evaluate(x)
     out['all_admissible_W'] = [s[0] for s in sols]
-    json.dump(out, open('docs/claire-v0-thirteen-checks.json', 'w'), indent=1)
+    json.dump(out, open('docs/receipts/claire-v0-thirteen-checks.json', 'w'), indent=1)
     print("reference: his thirteen joint 3.739e-10 (A_Delta 4391, 948/a, 53.6/a); eleven 1.531e-10 (686/a, 38.7/a); nested echo 4.735e-11 (1386/a, 78.3/a); raised 8.41e-12 (2341/a, 132/a)")

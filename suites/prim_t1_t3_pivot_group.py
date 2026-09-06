@@ -2,7 +2,7 @@
 # =============================================================================
 # PRIMITIVES T1-T3 -- what group do the pivots form?  (2026-09-04)
 #
-# INPUTS (docs/2026-09-04-PRIMITIVES-v0.md): P2 lines through a root, P3 planes,
+# INPUTS (docs/results/2026-09-04/2026-09-04-PRIMITIVES-v0.md): P2 lines through a root, P3 planes,
 #   P4 angles as state, P6 pivot = rotation by an IMAGINARY angle.  Nothing else.
 # BANNED: Cl(3), Pauli matrices, spinors, any 4-vector, any signature as a given.
 # TOOLS: real matrices and their Lie algebras only.  Sympy exact.

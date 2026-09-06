@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Native finite Fourier response and second-order detuning correction."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 import json
 from functools import lru_cache
@@ -8,23 +9,23 @@ from pathlib import Path
 
 import numpy as np
 
-from reflection_loop_dynamics import J, GS, frame, embed
-from reflection_loop_composite import composite, ode, coefficients
-from reflection_loop_reference_echo import ended_composite, FramedStage, rotation, metrics
-from reflection_loop_compression import (
+from rlq.reflection_loop_dynamics import J, GS, frame, embed
+from rlq.reflection_loop_composite import composite, ode, coefficients
+from rlq.reflection_loop_reference_echo import ended_composite, FramedStage, rotation, metrics
+from rlq.reflection_loop_compression import (
     parameters, compressed_stages, bad_response, compressed_jets,
     temporal_response, packed_matrix, packed_response,
 )
-from reflection_loop_reference_echo import (
+from rlq.reflection_loop_reference_echo import (
     response_integrals, quartic_response, echo_stages, finite_gate,
 )
-from reflection_loop_compression import noise_generators
+from rlq.reflection_loop_compression import noise_generators
 
 I4 = np.eye(4, dtype=complex)
 NOISE = np.zeros((3, 4, 4), complex)
 NOISE[0, 2, 2] = NOISE[1, 3, 3] = 1
 NOISE[2, 2, 3] = NOISE[2, 3, 2] = 1
-CONTROL_PATH = Path(__file__).parent/'docs/reflection-loop-detuning-controls.json'
+CONTROL_PATH = Path(__file__).parent/'docs/receipts/reflection-loop-detuning-controls.json'
 
 
 def integral_frequency(k):
@@ -402,7 +403,7 @@ def symbolic_order_map():
 
 
 def run_checks():
-    from reflection_loop_detuning_certificate import certify, primitive as precise_primitive
+    from rlq.reflection_loop_detuning_certificate import certify, primitive as precise_primitive
     import mpmath as mp
     report = dict(order_map=symbolic_order_map(), checks={}, cases={}, certificates={})
     controls = json.loads(CONTROL_PATH.read_text())

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact predictive-state closure and native constitutive receipts.
 
-Proof: docs/2026-09-05-cella-predictive-state.md.
+Proof: docs/results/2026-09-05/2026-09-05-cella-predictive-state.md.
 Running this file prints JSON; it does not modify project or corpus files.
 """
 
@@ -375,7 +375,7 @@ def run_checks():
         require(f"continuum_memory_moment_minor_{size}", moment.det() > 0)
     return {
         "scope": "Minimum predictive state for declared controls/outputs; polynomial pair closure and native load",
-        "proof": "docs/2026-09-05-cella-predictive-state.md",
+        "proof": "docs/results/2026-09-05/2026-09-05-cella-predictive-state.md",
         "check_count": len(checks),
         "checks": checks,
         "polynomial_certificates": certificates,

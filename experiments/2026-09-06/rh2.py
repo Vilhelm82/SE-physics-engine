@@ -1,4 +1,4 @@
-"""RH-2 -- coherent accumulator recovery on the STACKED leak.  Spec: docs/2026-09-06-RH-2-spec.md.
+"""RH-2 -- coherent accumulator recovery on the STACKED leak.  Spec: docs/results/2026-09-06/2026-09-06-RH-2-spec.md.
 Builds on rh1_common.py (unmodified; Codex's loop matrices and metrics).
 Interface (declared model): instantaneous coherent P/Q separation at every dump; the Q amplitude is SENT
 to a fresh, frozen 2-mode register slot with no measurement; ONE 'register occupied' readout after the
@@ -6,11 +6,12 @@ last loop; ONE fixed isometry U_cal^dag (2N -> 2) back to P, then G.  Register a
 range(U_cal) is heralded leftover and replaced by I/2 (RH-1b's convention).  Nothing else is inserted.
 Written 2026-09-06 by Claire after the spec and predictions were committed (ffa01f3).
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse, hashlib, json, subprocess, sys, time
 from pathlib import Path
 import numpy as np
 from scipy.linalg import polar
-from rh1_common import (word_loops, compose_discard, channel_metrics, replacement_kraus, foldback,
+from rlq.rh1_common import (word_loops, compose_discard, channel_metrics, replacement_kraus, foldback,
                         pattern_kraus, db, check, norm_json, G, I2)
 
 EPS0 = 1e-2
@@ -49,7 +50,7 @@ def per_dump(loops, cal_loops):
 
 def run():
     t0 = time.time()
-    res = dict(spec='docs/2026-09-06-RH-2-spec.md', predictions_sealed='docs/prereg/RH-2/DESIGNER-PREDICTIONS.md',
+    res = dict(spec='docs/results/2026-09-06/2026-09-06-RH-2-spec.md', predictions_sealed='docs/prereg/RH-2/DESIGNER-PREDICTIONS.md',
                interface='coherent send into frozen register at every dump; one readout; one isometry back', words={}, checks=[])
     ch = res['checks']
     cases = CASES_GAIN + CASES_DET
@@ -105,9 +106,9 @@ def run():
                                   detuning_case_acc_fixed_over_discard=det_change)
         print(f"forks: {json.dumps(forks, indent=1)}\nper-dump/discard at eps0: {ratio_pd:.6f}   fixed-cal excess: {ex5:.3e}, {ex20:.3e}, exponent {expo}", flush=True)
 
-    files = ['rh2.py', 'rh1_common.py', 'reflection_loop_composite.py', 'reflection_loop_dynamics.py',
-             'reflection_loop_finite_dump.py', 'reflection_loop_reference_echo.py',
-             'docs/2026-09-06-RH-2-spec.md', 'docs/prereg/RH-2/DESIGNER-PREDICTIONS.md']
+    files = ['experiments/2026-09-06/rh2.py', 'rlq/rh1_common.py', 'rlq/reflection_loop_composite.py', 'rlq/reflection_loop_dynamics.py',
+             'rlq/reflection_loop_finite_dump.py', 'rlq/reflection_loop_reference_echo.py',
+             'docs/results/2026-09-06/2026-09-06-RH-2-spec.md', 'docs/prereg/RH-2/DESIGNER-PREDICTIONS.md']
     res['provenance'] = dict(test='rh2', date='2026-09-06', runtime_s=round(time.time()-t0, 1),
         head=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
         blinding='designer-run: spec and predictions written and sealed by the same agent (Claire) that wrote and ran this runner; '
@@ -115,7 +116,7 @@ def run():
         sha256={p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in files})
     res['check_count'] = len(ch); res['checks_passed'] = int(sum(c['passed'] for c in ch))
     res['summary'] = {k: dict(forks=v['forks'], fixed_cal_excess=v['fixed_cal_excess']) for k, v in res['words'].items()}
-    ap = argparse.ArgumentParser(); ap.add_argument('--json', nargs='?', const='docs/rh2-checks.json', default=None)
+    ap = argparse.ArgumentParser(); ap.add_argument('--json', nargs='?', const='docs/receipts/rh2-checks.json', default=None)
     a = ap.parse_args()
     if a.json:
         Path(a.json).write_text(json.dumps(res, default=norm_json, indent=2, allow_nan=False)+'\n')

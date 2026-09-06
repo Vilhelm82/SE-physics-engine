@@ -951,6 +951,6 @@ development is preserved in the transcript with its diagnosis; three were
 substantive (a dead ladder conjecture; a non-resonance correction to the
 seesaw mechanism; the branch-grading discovery), the remainder were
 simplifier or harness defects, reported, not buried.
-From 2026-09-04: thm_o_strain_law (33/33), view1_incidence (12/12), census_c (7/7), thm_galois_deck_descent (10/10), pred1_deck_separator (10/10), pred1_protocol (11/11; existence witness), pivot_map (6/6; spec frozen before output), pivot_map_closed_forms (10/10), pred1_physical_protocol (10/10), pred1_operational_chain (7/7); docs/2026-09-04-thm-target-O.md, the axis/planes/rods clarification and its addendum, HANDOFF-2026-09-04.md.
+From 2026-09-04: thm_o_strain_law (33/33), view1_incidence (12/12), census_c (7/7), thm_galois_deck_descent (10/10), pred1_deck_separator (10/10), pred1_protocol (11/11; existence witness), pivot_map (6/6; spec frozen before output), pivot_map_closed_forms (10/10), pred1_physical_protocol (10/10), pred1_operational_chain (7/7); docs/results/2026-09-04/2026-09-04-thm-target-O.md, the axis/planes/rods clarification and its addendum, HANDOFF-2026-09-04.md.
 
 

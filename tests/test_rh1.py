@@ -1,4 +1,6 @@
 """Mechanical controls for RH-1; scientific forks are reported, not asserted."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
+_sys.path.insert(0, str(_pl.Path(__file__).resolve().parent)); _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]/'experiments'/'2026-09-05'))  # split1_split_loop lives there
 import importlib.util
 import unittest
 
@@ -7,9 +9,9 @@ import numpy as np
 
 class InstrumentControls(unittest.TestCase):
     def setUp(self):
-        self.assertIsNotNone(importlib.util.find_spec('rh1_common'),
+        self.assertIsNotNone(importlib.util.find_spec('rlq.rh1_common'),
                              'RH-1 instrument implementation is missing')
-        import rh1_common
+        import rlq.rh1_common as rh1_common
         self.m = rh1_common
 
     def test_isotropic_click_preserves_a_qubit(self):
@@ -54,14 +56,14 @@ class InstrumentControls(unittest.TestCase):
         self.assertLess(np.linalg.norm(old-new),3e-12)
 
     def test_five_gain_formula_matches_chronological_inverse_integration(self):
-        from reflection_loop_finite_dump import loop_endpoints_with_effects
+        from rlq.reflection_loop_finite_dump import loop_endpoints_with_effects
         m=self.m
         exact=m.word_loops('five',[(.01,0.,0.)])[0]
         direct,_=loop_endpoints_with_effects([(.01,0.,0.)],[0.])
         self.assertLess(np.linalg.norm(exact-direct[0]),3e-12)
 
     def test_per_dump_column_resolves_rank_and_zero_leakage(self):
-        from reflection_loop_finite_dump import loop_data_blindness
+        from rlq.reflection_loop_finite_dump import loop_data_blindness
         m=self.m
         self.assertEqual(loop_data_blindness([m.I4]),[None])
         ls=m.word_loops('five',[(.01,0.,0.)])[0]

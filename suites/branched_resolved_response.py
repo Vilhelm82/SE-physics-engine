@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact constructions for response on branched, resolved state spaces.
 
-Proof: docs/2026-09-05-response-on-branched-resolved-state-spaces.md.
+Proof: docs/results/2026-09-05/2026-09-05-response-on-branched-resolved-state-spaces.md.
 Prints a JSON receipt; does not write files. Symbolic matrix ranks are generic
 over the coefficient field: specialize the full relation before a rank jump.
 Smooth divisibility is decided here only for explicitly polynomial quotients.
@@ -519,7 +519,7 @@ def run_checks():
     }
     return {
         "scope": "Finite-dimensional response relations, smooth resolved graphs, boundary divisors and controlled evolution",
-        "proof": "docs/2026-09-05-response-on-branched-resolved-state-spaces.md",
+        "proof": "docs/results/2026-09-05/2026-09-05-response-on-branched-resolved-state-spaces.md",
         "check_count": len(checks), "checks": checks, "certificates": certificates,
         "boundaries": [
             "General theorems have manuscript proofs; these exact checks certify implementations and examples.",

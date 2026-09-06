@@ -4,6 +4,7 @@ Offline geometry/constitutive analysis, not an autonomous physical controller.
 The native Cella exact referee evaluates nominal exact jets and rationalized
 finite-difference jets. The latter retain numerical, not exact-jet, status.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 import hashlib
 import importlib.util
@@ -15,7 +16,7 @@ import sympy as sp
 from scipy.linalg import polar
 from scipy.optimize import brentq
 
-from rh1_common import G, TRINE, compose_discard, trine_loop
+from rlq.rh1_common import G, TRINE, compose_discard, trine_loop
 
 CELLA = Path('/home/williaml/Cella Framework')
 REFEREE = CELLA / 'engine/src/cella/reference_lift.py'
@@ -92,7 +93,7 @@ def main():
             assert abs(fine['channels'][key] - medium['channels'][key]) < 1e-3 * max(abs(fine['channels'][key]), 1e-14)
         cases.append(dict(eps=eps, dd=dd, root_shift=shift, point=point.tolist(),
             metrics=signed_constraint(point, eps, dd)[1], levels=levels))
-    paths = [Path(__file__), Path('rh1_common.py'), REFEREE,
+    paths = [Path(__file__), Path('rlq/rh1_common.py'), REFEREE,
         CELLA / 'Papers_Library/05_expository_companions_and_research_maps/dbp_role_channel_and_orbit_geometry/Three_Channel_KG_Strong_Spec.md',
         CELLA / 'Papers_Library/02_theorems_and_lemmas/dbp_role_channel_and_orbit_geometry/Canonical_Invariant_Reduction_Theorem.md']
     result = dict(date='2026-09-06',

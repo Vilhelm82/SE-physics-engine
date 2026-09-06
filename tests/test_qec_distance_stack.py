@@ -1,11 +1,13 @@
 """Independent forced-event checks of the circuit/decoder herald interface."""
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
+_sys.path.insert(0, str(_pl.Path(__file__).resolve().parent))
 import itertools
 import unittest
 
 import numpy as np
 import stim
 
-from qec_distance_stack import (bicycle, bicycle_circuit, decoder_model, insert_instrument,
+from rlq.qec_distance_stack import (bicycle, bicycle_circuit, decoder_model, insert_instrument,
                                 native_channel, operating_point, surface_circuit)
 
 

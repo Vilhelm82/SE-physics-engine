@@ -5,6 +5,7 @@ Native inputs: REALFIBER, CP-1--4 and RE-1--6. Eleven alternating forward/invers
 composites replace the nested echo. All rotations compile real Hamiltonians;
 every finite ramp is retained. No instantaneous control is applied.
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root on sys.path (reorg 2026-09-06)
 import argparse
 import json
 
@@ -12,8 +13,8 @@ import mpmath as mp
 import numpy as np
 import sympy as sp
 
-from reflection_loop_composite import P, Q, REFERENCE, composite, coefficients, ode
-from reflection_loop_reference_echo import (
+from rlq.reflection_loop_composite import P, Q, REFERENCE, composite, coefficients, ode
+from rlq.reflection_loop_reference_echo import (
     EYE, POWERS, FramedStage, rotation, ended_composite, echo_stages,
     response_integrals, jet_constant, jet_multiply, quartic_response, metrics,
     block_jets, combined_jets, finite_gate, exact_gain, predict,

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact replay for the constitutive divisor classification and native ports.
 
-Proofs: docs/2026-09-05-cella-constitutive-divisors.md.
+Proofs: docs/results/2026-09-05/2026-09-05-cella-constitutive-divisors.md.
 JSON goes to stdout; no corpus files or input data are modified.
 """
 

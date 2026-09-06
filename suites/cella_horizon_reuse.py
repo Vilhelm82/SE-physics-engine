@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact checks for docs/2026-09-05-cella-dependency-reconciliation.md.
+"""Exact checks for docs/results/2026-09-05/2026-09-05-cella-dependency-reconciliation.md.
 
 Cella source proofs are identified in that document. This checks the reused
 coupling form, the signed diagonal-curvature extension against Christoffel

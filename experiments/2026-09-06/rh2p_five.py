@@ -6,14 +6,15 @@ Backends and paths reused from rh2_precision.py.  Precisions complex64, complex1
 CLOSED FORM (RH-2A machinery, same sigma series, five angles, sigma -> conj(sigma) on inverse loops):
     c0 = 5625 pi^2/2048 = (25/2) x^2,   a0 = 2025 sqrt(5) pi^3/32768 = (3 sqrt5/5) x^3 = (3/5) a0_trine,
     kappa1 = -55/32 (same as trine),   floor = (15/4) x^8 = 82.9393 eps^8,   x = (15 pi/32) eps.
-Written 2026-09-06 by Claire after the closed form was derived (see docs/2026-09-06-RH-2A-a0-closed-form.md addendum).
+Written 2026-09-06 by Claire after the closed form was derived (see docs/results/2026-09-06/2026-09-06-RH-2A-a0-closed-form.md addendum).
 """
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2]))  # repo root on sys.path (reorg 2026-09-06)
 import json, hashlib, subprocess, sys, time
 from pathlib import Path
 import numpy as np
 from mpmath import mp, mpf, matrix as mpm
-import rh2_precision as RP
-from rh1_common import word_loops
+import rlq.rh2_precision as RP
+from rlq.rh1_common import word_loops
 
 ANG = [1/6, 5/6, 7/6, 3/4, 1/4]; ANG_FRAC = [(1, 6), (5, 6), (7, 6), (3, 4), (1, 4)]; SGN = [1, 1, 1, -1, -1]
 EPS_GRID = RP.EPS_GRID; U32, U64 = RP.U32, RP.U64
@@ -110,10 +111,10 @@ def run():
     check("kappa1 numerical within 0.1% of -55/32", float(abs(k1_num/mpf(-55)*32 - 1)), 1e-3)
     check("a0_five / a0_trine == 3/5 (RH-2P value 7.1409906174871697658)", float(a0s/mpf('7.1409906174871697658') - mpf(3)/5), 1e-15)
     # RH-2 regression: measured DB_stack at 1e-2 was 4.204e-6
-    rec = json.load(open('docs/rh2-checks.json'))
+    rec = json.load(open('docs/receipts/rh2-checks.json'))
     db_rh2 = rec['words']['five']['rows'][1]['DB_stack']
     check("RH-2 five DB_stack(1e-2) == float64 k2 here", float(abs(db_rh2 - table[1e-2]['f64']['k2'])/db_rh2), 1e-9)
-    files = ['rh2p_five.py', 'rh2_precision.py', 'rh1_common.py', 'reflection_loop_dynamics.py', 'reflection_loop_composite.py']
+    files = ['experiments/2026-09-06/rh2p_five.py', 'rlq/rh2_precision.py', 'rlq/rh1_common.py', 'rlq/reflection_loop_dynamics.py', 'rlq/reflection_loop_composite.py']
     res = dict(word='five', angles_over_pi=ANG, signs=SGN, eps=EPS_GRID, closed_form=dict(a0='2025*sqrt(5)*pi^3/32768', c0='5625*pi^2/2048', kappa1='-55/32', floor='(15/4)(15 pi/32)^8 = 38443359375 pi^8/4398046511104'),
                table={str(e): {p: {k: (mp.nstr(v, 40) if not isinstance(v, (float, type(None), str)) else v) for k, v in r.items()} for p, r in row.items()} for e, row in table.items()},
                theorem2={str(e): f for e, f in fit.items()}, slopes=slopes,
@@ -122,7 +123,7 @@ def run():
                provenance=dict(test='rh2p_five', date='2026-09-06', runtime_s=round(time.time()-t0, 1),
                                head=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
                                sha256={p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in files}))
-    Path('docs/rh2p_five-checks.json').write_text(json.dumps(res, indent=2, allow_nan=True) + '\n')
+    Path('docs/receipts/rh2p_five-checks.json').write_text(json.dumps(res, indent=2, allow_nan=True) + '\n')
     print(f"\nRESULT: {res['checks_passed']}/{res['check_count']} checks passed.  runtime {res['provenance']['runtime_s']}s", flush=True)
     if res['checks_passed'] != res['check_count']: sys.exit(1)
 

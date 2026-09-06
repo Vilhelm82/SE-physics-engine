@@ -1,0 +1,193 @@
+== regression: capture off must be FD ==
+  [ok] capture off: herald == FD herald: -1.266e-16 (tol 1e-09)
+  [ok] capture off: unheralded Pauli == FD (4.45092e-6): -6.327e-17 (tol 1e-11)
+  [ok] capture off: conditional Pauli vector == FD: 1.110e-16 (tol 1e-09)
+
+== calibration (ideal register, e_c = 0) ==
+  captured fraction of the input = 2.650547e-03 (FD herald 2.650548e-03);  DB_stack of the register map = 1.606e-03
+  [ok] calibration: captured fraction == FD herald (capture takes what FD absorbed): -1.324e-09 (tol 2e-06)
+
+== sweep (all at n=1, gain 1%, delta_d/a=1e-4, gamma/a=1e-6, t_c = 1.00; T = 129.87) ==
+     e_c  gamma_r gamma_phi reg.her |      herald  unher. Pauli    r_eff   note
+   0.000    0e+00     0e+00    True |  2.2161e-16    4.4418e-06   0.0000   ideal
+   0.000    0e+00     1e-04    True |  2.2814e-05    8.6413e-06   0.0021   
+   0.000    0e+00     1e-03    True |  2.1462e-04    4.3894e-05   0.0198   
+   0.000    0e+00     1e-02    True |  1.2726e-03    2.3637e-04   0.1167   
+   0.000    1e-04     0e+00    True |  1.5658e-05    4.5425e-06   0.0001   
+   0.000    1e-04     0e+00   False |  8.0025e-09    1.6280e-05   0.0060   
+   0.000    1e-04     1e-04    True |  3.8314e-05    8.7123e-06   0.0021   
+   0.000    1e-04     1e-04   False |  2.2664e-05    2.0449e-05   0.0081   
+   0.000    1e-04     1e-03    True |  2.2880e-04    4.3717e-05   0.0198   
+   0.000    1e-04     1e-03   False |  2.1315e-04    5.5454e-05   0.0257   
+   0.000    1e-04     1e-02    True |  1.2799e-03    2.3492e-04   0.1159   
+   0.000    1e-04     1e-02   False |  1.2642e-03    2.4666e-04   0.1218   
+   0.000    1e-03     0e+00    True |  1.5150e-04    5.5594e-06   0.0006   
+   0.000    1e-03     0e+00   False |  7.6038e-07    1.1862e-04   0.0574   
+   0.000    1e-03     1e-04    True |  1.7279e-04    9.4716e-06   0.0025   
+   0.000    1e-03     1e-04   False |  2.2047e-05    1.2253e-04   0.0594   
+   0.000    1e-03     1e-03    True |  3.5183e-04    4.2328e-05   0.0191   
+   0.000    1e-03     1e-03   False |  2.0109e-04    1.5539e-04   0.0759   
+   0.000    1e-03     1e-02    True |  1.3433e-03    2.2253e-04   0.1097   
+   0.000    1e-03     1e-02   False |  1.1926e-03    3.3559e-04   0.1666   
+   0.000    1e-02     0e+00    True |  1.1194e-03    2.1897e-05   0.0088   
+   0.000    1e-02     0e+00   False |  4.6635e-05    8.2651e-04   0.4135   
+   0.000    1e-02     1e-04    True |  1.1311e-03    2.4013e-05   0.0098   
+   0.000    1e-02     1e-04   False |  5.8291e-05    8.2862e-04   0.4146   
+   0.000    1e-02     1e-03    True |  1.2296e-03    4.1867e-05   0.0188   
+   0.000    1e-02     1e-03   False |  1.5674e-04    8.4648e-04   0.4236   
+   0.000    1e-02     1e-02    True |  1.7945e-03    1.4431e-04   0.0704   
+   0.000    1e-02     1e-02   False |  7.2172e-04    9.4892e-04   0.4751   
+   0.010    0e+00     0e+00    True |  6.5396e-07    4.4418e-06   0.0000   
+   0.010    0e+00     1e-03    True |  2.1522e-04    4.3884e-05   0.0198   
+   0.010    1e-03     0e+00    True |  1.5211e-04    5.5692e-06   0.0006   
+   0.010    1e-03     0e+00   False |  1.4007e-06    1.1860e-04   0.0574   
+   0.010    1e-03     1e-03    True |  3.5238e-04    4.2329e-05   0.0191   
+   0.010    1e-03     1e-03   False |  2.0168e-04    1.5536e-04   0.0759   
+   0.050    0e+00     0e+00    True |  1.6316e-05    4.4418e-06   0.0000   
+   0.050    0e+00     1e-03    True |  2.2961e-04    4.3651e-05   0.0197   
+   0.050    1e-03     0e+00    True |  1.6682e-04    5.6057e-06   0.0006   
+   0.050    1e-03     0e+00   False |  1.7001e-05    1.1797e-04   0.0571   
+   0.050    1e-03     1e-03    True |  3.6591e-04    4.2148e-05   0.0190   
+   0.050    1e-03     1e-03   False |  2.1610e-04    1.5451e-04   0.0755   
+  [ok] ideal capture: herald < 1e-2 x FD herald: 8.361e-14 (tol 1e-02)
+  [ok] ideal capture: unheralded Pauli within 10% of FD's background floor: 6.089e-04 (tol 1e-01)
+
+== decoder: d=3,5 surface, both bases, selected points ==
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [59, 93]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [111, 177]; 0.4s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [162, 260]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [218, 358]; 0.7s
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [60, 94]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [105, 167]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [165, 251]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [227, 335]; 0.7s
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [3, 23]; 0.6s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [12, 40]; 1.3s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [23, 63]; 1.9s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [36, 83]; 2.5s
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [8, 16]; 0.6s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [16, 32]; 1.2s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [24, 52]; 1.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [35, 69]; 2.4s
+  fd                                               d3X=218  d3Z=227  d5X=36  d5Z=35
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [50, 50]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [104, 104]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [158, 158]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [203, 203]; 0.6s
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [38, 38]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [69, 69]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [103, 103]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [138, 138]; 0.6s
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [8, 8]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [12, 12]; 0.5s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [17, 17]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [25, 25]; 1.0s
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [4, 4]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [11, 11]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [15, 15]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [25, 25]; 1.0s
+  cap e_c=0 gr=0 gphi=0 her=True                   d3X=203  d3Z=138  d5X=25  d5Z=25
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [66, 70]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [137, 157]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [183, 213]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [234, 282]; 0.7s
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [49, 62]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [91, 121]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [136, 178]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [178, 231]; 0.7s
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [8, 9]; 0.4s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [22, 28]; 0.7s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [32, 39]; 1.1s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [42, 53]; 1.5s
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [10, 14]; 0.4s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [15, 23]; 0.7s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [26, 33]; 1.1s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [33, 43]; 1.4s
+  cap e_c=0 gr=0 gphi=0.01 her=True                d3X=234  d3Z=178  d5X=42  d5Z=33
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [49, 49]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [89, 89]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [130, 130]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [184, 184]; 0.6s
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [39, 39]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [83, 83]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [128, 128]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [161, 161]; 0.6s
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [10, 10]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [17, 17]; 0.5s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [25, 25]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [33, 33]; 1.0s
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [11, 11]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [17, 17]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [25, 25]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [31, 31]; 1.0s
+  cap e_c=0 gr=0.001 gphi=0 her=False              d3X=184  d3Z=161  d5X=33  d5Z=31
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [56, 56]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [110, 112]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [185, 190]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [255, 261]; 0.6s
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [49, 50]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [107, 109]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [159, 161]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [220, 222]; 0.6s
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [12, 12]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [27, 27]; 0.6s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [38, 38]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [54, 54]; 1.1s
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [12, 12]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [29, 29]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [41, 41]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [47, 47]; 1.1s
+  cap e_c=0 gr=0.01 gphi=0 her=False               d3X=255  d3Z=220  d5X=54  d5Z=47
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [54, 72]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [106, 145]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [158, 221]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [219, 299]; 0.7s
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [49, 63]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [95, 131]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [156, 207]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [216, 287]; 0.7s
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [3, 16]; 0.4s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [9, 30]; 0.9s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [20, 51]; 1.3s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [33, 72]; 1.8s
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [7, 12]; 0.4s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [15, 27]; 0.9s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [21, 36]; 1.3s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [30, 51]; 1.7s
+  cap e_c=0 gr=0.01 gphi=0.01 her=True             d3X=219  d3Z=216  d5X=33  d5Z=30
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [65, 64]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [140, 149]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [216, 234]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [279, 303]; 0.7s
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [56, 65]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [119, 138]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [169, 189]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [221, 245]; 0.7s
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [10, 10]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [23, 29]; 0.6s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [44, 54]; 0.9s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [57, 68]; 1.3s
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [8, 9]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [21, 24]; 0.6s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [36, 45]; 0.9s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [47, 56]; 1.2s
+  cap e_c=0 gr=0.01 gphi=0.01 her=False            d3X=279  d3Z=221  d5X=57  d5Z=47
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [47, 48]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [88, 89]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [148, 151]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [194, 196]; 0.6s
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [39, 42]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [80, 85]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [116, 123]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [173, 182]; 0.6s
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [3, 3]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [8, 8]; 0.6s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [15, 17]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [23, 27]; 1.1s
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [8, 7]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [13, 12]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [22, 22]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [30, 30]; 1.1s
+  cap e_c=0.05 gr=0.001 gphi=0.001 her=False       d3X=194  d3Z=173  d5X=23  d5Z=30
+
+RESULT: 6/6 checks passed.  runtime 45.6s

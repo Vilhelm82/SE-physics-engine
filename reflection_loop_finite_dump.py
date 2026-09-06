@@ -34,6 +34,21 @@ def controls(kind='five'):
     raise ValueError(kind)
 
 
+def loop_data_blindness(endpoints):
+    """Per-loop KL-diagonal contrast on P, before the absorbing hold.
+
+    A total flag effect can be nearly scalar while every resolved dump is
+    rank one. At zero leakage the normalized contrast is undefined (None).
+    This diagnostic does not turn an absorbing sink into coherent capture.
+    """
+    result = []
+    for u in endpoints:
+        powers = np.linalg.svd(u[:2, 2:], compute_uv=False)**2
+        result.append(float((powers[0]-powers[1])/sum(powers))
+                      if sum(powers)>1e-28 else None)
+    return result
+
+
 def primitive_stages(n=1, slew=10.):
     if slew <= 0:
         raise ValueError('positive slew required')
@@ -441,14 +456,18 @@ def run_checks():
             close(f'n{n}_{name}_joint_prediction',metrics(predicted)['conditional_infidelity']/metrics(full[index])['conditional_infidelity'],1.,.015)
         close(f'n{n}_detuning_quartic_ratio',metrics(full[4])['conditional_infidelity']/metrics(full[3])['conditional_infidelity'],1e4,30.)
         row=resources(n)
-        row['errors']=[dict(gain=e,delta_d=d,delta_r=r,**metrics(k,f)) for (e,d,r),k,f in zip(errors,full,flags)]
+        row['errors']=[dict(gain=e,delta_d=d,delta_r=r,DB_k=loop_data_blindness(u),**metrics(k,f))
+                       for (e,d,r),k,f,u in zip(errors,full,flags,endpoints)]
         row['joint_coefficients']={f'{p},{q}':packed_matrix(v) for (p,q),v in jet.items()}
         row['first_order_bright_gain_coefficient']=float(np.linalg.norm(jet[1,0][:2,2:])**2/2)
         row['first_order_bright_detuning_coefficient']=float(np.linalg.norm(jet[0,1][:2,2:])**2/2)
         report['cases'][f'five_n{n}']=row
         trine_errors=[(.01,0.,0.),(.001,1e-4,0.)]
-        tr,fl=compose(loop_endpoints(trine_errors,n,'trine'),trine_errors)
-        report['cases'][f'trine_n{n}']=dict(**resources(n,'trine'),errors=[dict(gain=e,delta_d=d,delta_r=r,**metrics(k,f)) for (e,d,r),k,f in zip(trine_errors,tr,fl)])
+        trine_endpoints=loop_endpoints(trine_errors,n,'trine')
+        tr,fl=compose(trine_endpoints,trine_errors)
+        report['cases'][f'trine_n{n}']=dict(**resources(n,'trine'),errors=[
+            dict(gain=e,delta_d=d,delta_r=r,DB_k=loop_data_blindness(u),**metrics(k,f))
+            for (e,d,r),k,f,u in zip(trine_errors,tr,fl,trine_endpoints)])
         # Gain-only ideal projections expose the endpoint-erasure n law.
         tiny=1e-5;b=coefficients(n)['b']
         ideal=exact_gain_word(tiny,n,ideal=True)

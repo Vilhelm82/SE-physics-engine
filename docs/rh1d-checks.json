@@ -1,0 +1,1736 @@
+{
+  "summary": {
+    "differential": {
+      "residual_power": 1.999999958463278,
+      "literal_spec_returns_to_nominal": false,
+      "matched_negative_phase_restores_profile": true,
+      "required_phase": "exp(-i delta_hat t (D_d +/- D_r)/2)",
+      "required_delta_hat": 0.0001
+    },
+    "common": {
+      "residual_power": 3.9999990631625693,
+      "literal_spec_returns_to_nominal": false,
+      "matched_negative_phase_restores_profile": true,
+      "required_phase": "exp(-i delta_hat t (D_d +/- D_r)/2)",
+      "required_delta_hat": 0.0002
+    },
+    "virtual": [
+      {
+        "word": "trine",
+        "case": [
+          0.0,
+          0.0001,
+          0.0
+        ],
+        "unitary_fraction": 0.9999999999896031,
+        "raw_Zc": 0.1664570688747674,
+        "phase_removed_Zc": 1.9999994973769122,
+        "fork_using_spec_metric": "b"
+      },
+      {
+        "word": "five",
+        "case": [
+          0.0,
+          0.0001,
+          0.0
+        ],
+        "unitary_fraction": 0.9999996092717706,
+        "raw_Zc": 0.00026001733037149343,
+        "phase_removed_Zc": 1.962859515499788,
+        "fork_using_spec_metric": "a"
+      },
+      {
+        "word": "five",
+        "case": [
+          0.0,
+          0.0,
+          0.0001
+        ],
+        "unitary_fraction": 0.9999992391421311,
+        "raw_Zc": 0.0005810374874002847,
+        "phase_removed_Zc": 1.9972680667035863,
+        "fork_using_spec_metric": "a"
+      },
+      {
+        "word": "five",
+        "case": [
+          0.0,
+          0.0001,
+          0.0001
+        ],
+        "unitary_fraction": 0.999999999841137,
+        "raw_Zc": 9.052430833314384e-05,
+        "phase_removed_Zc": 1.9999995065101335,
+        "fork_using_spec_metric": "a"
+      },
+      {
+        "word": "five",
+        "case": [
+          0.0,
+          0.0001,
+          -0.0001
+        ],
+        "unitary_fraction": 0.9999957494246008,
+        "raw_Zc": 0.0026291494676622803,
+        "phase_removed_Zc": 1.947584277786573,
+        "fork_using_spec_metric": "a"
+      }
+    ]
+  },
+  "virtual": [
+    {
+      "word": "trine",
+      "case": [
+        0.0,
+        0.0001,
+        0.0
+      ],
+      "delta_com": 5e-05,
+      "delta_diff": 0.0001,
+      "conditional": 2.4202777160984144e-08,
+      "unitary_infidelity": 2.420277716073251e-08,
+      "unitary_fraction": 0.9999999999896031,
+      "positive_polar_infidelity": 2.6728635839678196e-19,
+      "residual_after_full_unitary_readout": 2.6728635839678196e-19,
+      "raw_Zc": 0.1664570688747674,
+      "phase_removed_Zc": 1.9999994973769122,
+      "global_phase": -0.002281374396033245,
+      "fork_using_spec_metric": "b",
+      "V": {
+        "real": [
+          [
+            -0.9999973798199043,
+            -0.0001905359778953478
+          ],
+          [
+            -0.00019053597789535235,
+            0.9999973792091469
+          ]
+        ],
+        "imag": [
+          [
+            0.0022812385185736815,
+            4.3468465561646785e-07
+          ],
+          [
+            4.3468465554530586e-07,
+            -0.0022815062327375475
+          ]
+        ]
+      },
+      "J": {
+        "real": [
+          [
+            0.9999999990659993,
+            1.3122241566837645e-16
+          ],
+          [
+            1.3122242391727504e-16,
+            0.9999999990650719
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            -6.331898037460773e-10
+          ],
+          [
+            6.331897946223001e-10,
+            3.0175040009101868e-25
+          ]
+        ]
+      },
+      "W": {
+        "real": [
+          [
+            0.9999973798199043,
+            -0.0001905359778953478
+          ],
+          [
+            0.00019053597789535235,
+            0.9999973792091469
+          ]
+        ],
+        "imag": [
+          [
+            -0.0022812385185736815,
+            4.3468465561646785e-07
+          ],
+          [
+            -4.3468465554530586e-07,
+            -0.0022815062327375475
+          ]
+        ]
+      }
+    },
+    {
+      "word": "five",
+      "case": [
+        0.0,
+        0.0001,
+        0.0
+      ],
+      "delta_com": 5e-05,
+      "delta_diff": 0.0001,
+      "conditional": 1.1130617204670666e-13,
+      "unitary_infidelity": 1.1130612855624314e-13,
+      "unitary_fraction": 0.9999996092717706,
+      "positive_polar_infidelity": 4.34902043581436e-20,
+      "residual_after_full_unitary_readout": 4.34902043581436e-20,
+      "raw_Zc": 0.00026001733037149343,
+      "phase_removed_Zc": 1.962859515499788,
+      "global_phase": -0.0030845531589188797,
+      "fork_using_spec_metric": "a",
+      "V": {
+        "real": [
+          [
+            -0.9999952425278276,
+            4.0101662164360623e-07
+          ],
+          [
+            4.010165291734065e-07,
+            0.9999952430113592
+          ]
+        ],
+        "imag": [
+          [
+            0.0030846266468794836,
+            -1.2219699066553974e-09
+          ],
+          [
+            -1.2519516735299496e-09,
+            -0.003084469888334778
+          ]
+        ]
+      },
+      "J": {
+        "real": [
+          [
+            0.9999999939732658,
+            -1.2920030080244574e-16
+          ],
+          [
+            -1.2920032579934006e-16,
+            0.9999999939748592
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            -2.5541079063320707e-10
+          ],
+          [
+            2.5541078693143275e-10,
+            -4.363340130856103e-24
+          ]
+        ]
+      },
+      "W": {
+        "real": [
+          [
+            0.9999952425278276,
+            4.0101662164360623e-07
+          ],
+          [
+            -4.010165291734065e-07,
+            0.9999952430113592
+          ]
+        ],
+        "imag": [
+          [
+            -0.0030846266468794836,
+            -1.2219699066553974e-09
+          ],
+          [
+            1.2519516735299496e-09,
+            -0.003084469888334778
+          ]
+        ]
+      }
+    },
+    {
+      "word": "five",
+      "case": [
+        0.0,
+        0.0,
+        0.0001
+      ],
+      "delta_com": 5e-05,
+      "delta_diff": -0.0001,
+      "conditional": 9.014399381387939e-13,
+      "unitary_infidelity": 9.014392522711235e-13,
+      "unitary_fraction": 0.9999992391421311,
+      "positive_polar_infidelity": 6.858719477575932e-19,
+      "residual_after_full_unitary_readout": 6.858719477575932e-19,
+      "raw_Zc": 0.0005810374874002847,
+      "phase_removed_Zc": 1.9972680667035863,
+      "global_phase": -0.0039971121892192684,
+      "fork_using_spec_metric": "a",
+      "V": {
+        "real": [
+          [
+            -0.9999920113141789,
+            -1.1612260581397194e-06
+          ],
+          [
+            -1.1612259642975493e-06,
+            0.9999920117998875
+          ]
+        ],
+        "imag": [
+          [
+            0.003997162302750279,
+            4.6298437351732985e-09
+          ],
+          [
+            4.6533071421632204e-09,
+            -0.0039970407885381466
+          ]
+        ]
+      },
+      "J": {
+        "real": [
+          [
+            0.9999999966574068,
+            1.8070807556251342e-16
+          ],
+          [
+            1.807080826545143e-16,
+            0.9999999966571681
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            -1.0143016706751608e-09
+          ],
+          [
+            1.0143016917534442e-09,
+            3.9575742264664566e-24
+          ]
+        ]
+      },
+      "W": {
+        "real": [
+          [
+            0.9999920113141789,
+            -1.1612260581397194e-06
+          ],
+          [
+            1.1612259642975493e-06,
+            0.9999920117998875
+          ]
+        ],
+        "imag": [
+          [
+            -0.003997162302750279,
+            4.6298437351732985e-09
+          ],
+          [
+            -4.6533071421632204e-09,
+            -0.0039970407885381466
+          ]
+        ]
+      }
+    },
+    {
+      "word": "five",
+      "case": [
+        0.0,
+        0.0001,
+        0.0001
+      ],
+      "delta_com": 0.0001,
+      "delta_diff": 0.0,
+      "conditional": 6.849341013386733e-14,
+      "unitary_infidelity": 6.849341012298627e-14,
+      "unitary_fraction": 0.999999999841137,
+      "positive_polar_infidelity": 2.367531064202395e-24,
+      "residual_after_full_unitary_readout": 2.367531064202395e-24,
+      "raw_Zc": 9.052430833314384e-05,
+      "phase_removed_Zc": 1.9999995065101335,
+      "global_phase": -0.007081668685262983,
+      "fork_using_spec_metric": "a",
+      "V": {
+        "real": [
+          [
+            -0.9999749250906521,
+            -3.2052287307575975e-07
+          ],
+          [
+            -3.205228730348849e-07,
+            0.9999749250874628
+          ]
+        ],
+        "imag": [
+          [
+            0.007081609269262976,
+            2.269874806737279e-09
+          ],
+          [
+            2.269874809351936e-09,
+            -0.007081609719590208
+          ]
+        ]
+      },
+      "J": {
+        "real": [
+          [
+            0.9999999885902139,
+            9.973705066433148e-18
+          ],
+          [
+            9.973487702081023e-18,
+            0.9999999885902178
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            1.8845076327437832e-12
+          ],
+          [
+            -1.884467156204949e-12,
+            -5.874491513539641e-23
+          ]
+        ]
+      },
+      "W": {
+        "real": [
+          [
+            0.9999749250906521,
+            -3.2052287307575975e-07
+          ],
+          [
+            3.205228730348849e-07,
+            0.9999749250874628
+          ]
+        ],
+        "imag": [
+          [
+            -0.007081609269262976,
+            2.269874806737279e-09
+          ],
+          [
+            -2.269874809351936e-09,
+            -0.007081609719590208
+          ]
+        ]
+      }
+    },
+    {
+      "word": "five",
+      "case": [
+        0.0,
+        0.0001,
+        -0.0001
+      ],
+      "delta_com": 0.0,
+      "delta_diff": 0.0002,
+      "conditional": 1.0117357619097227e-12,
+      "unitary_infidelity": 1.0117314614505827e-12,
+      "unitary_fraction": 0.9999957494246008,
+      "positive_polar_infidelity": 4.3004514245869614e-18,
+      "residual_after_full_unitary_readout": 4.3004514245869614e-18,
+      "raw_Zc": 0.0026291494676622803,
+      "phase_removed_Zc": 1.947584277786573,
+      "global_phase": 0.0009125546027974127,
+      "fork_using_spec_metric": "a",
+      "V": {
+        "real": [
+          [
+            -0.9999995838770024,
+            -1.1996218690297215e-06
+          ],
+          [
+            -1.19962167347005e-06,
+            0.9999995833656344
+          ]
+        ],
+        "imag": [
+          [
+            -0.0009122742913396238,
+            -9.87522677123173e-10
+          ],
+          [
+            -1.2019186784954594e-09,
+            0.000912834660942083
+          ]
+        ]
+      },
+      "J": {
+        "real": [
+          [
+            0.9999999926663702,
+            -2.155712582048181e-16
+          ],
+          [
+            -2.155712571389028e-16,
+            0.9999999926711417
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            -2.539817242532335e-09
+          ],
+          [
+            2.5398171342530458e-09,
+            -4.667476706489578e-25
+          ]
+        ]
+      },
+      "W": {
+        "real": [
+          [
+            0.9999995838770024,
+            -1.1996218690297215e-06
+          ],
+          [
+            1.19962167347005e-06,
+            0.9999995833656344
+          ]
+        ],
+        "imag": [
+          [
+            0.0009122742913396238,
+            -9.87522677123173e-10
+          ],
+          [
+            1.2019186784954594e-09,
+            0.000912834660942083
+          ]
+        ]
+      }
+    }
+  ],
+  "physical": [
+    {
+      "mode": "differential",
+      "eps": 0.0,
+      "protocol": "literal_spec",
+      "phase_sign": 1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        0.0001,
+        -0.0001
+      ],
+      "gauge_defect": 5.2913232931450255e-15,
+      "laboratory_error_from_nominal": 0.004116909928112528,
+      "rotating_error_from_nominal": 0.0013987734288849545,
+      "laboratory": {
+        "conditional": 5.094481711816136e-06,
+        "success_weighted": 5.094481711816141e-06,
+        "success": 0.9999999925263154,
+        "error_numerator": 5.094481673741592e-06,
+        "success_extrema": [
+          0.9999999874626709,
+          0.99999999758996
+        ],
+        "erasure": 7.473681749156203e-09,
+        "erasure_spread": 1.0127288614227468e-08,
+        "unconditional": 5.09821851461617e-06,
+        "completeness_defect": 4.1514863768093446e-15
+      },
+      "rotating": {
+        "conditional": 9.702925790253033e-08,
+        "success_weighted": 9.702925790253032e-08,
+        "success": 0.9999999925263151,
+        "error_numerator": 9.702925717736422e-08,
+        "success_extrema": [
+          0.9999999874626707,
+          0.9999999975899598
+        ],
+        "erasure": 7.473681749156201e-09,
+        "erasure_spread": 1.0127288614227465e-08,
+        "unconditional": 1.0076609805194233e-07,
+        "completeness_defect": 4.37220821543334e-15
+      },
+      "nominal": {
+        "conditional": 4.2205946853682634e-33,
+        "success_weighted": 4.220594685368263e-33,
+        "success": 1.0000000000000002,
+        "error_numerator": 4.2205946853682634e-33,
+        "success_extrema": [
+          1.0,
+          1.0
+        ],
+        "erasure": 1.1248198369963932e-32,
+        "erasure_spread": 1.3684555315672042e-48,
+        "unconditional": 9.84469387035023e-33,
+        "completeness_defect": 4.881246823548964e-18
+      },
+      "erasure_relative_change": null
+    },
+    {
+      "mode": "differential",
+      "eps": 0.0,
+      "protocol": "negative_phase_same_rate",
+      "phase_sign": -1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        0.0,
+        0.0
+      ],
+      "gauge_defect": 2.1980252664812392e-13,
+      "laboratory_error_from_nominal": 0.0038716214074110415,
+      "rotating_error_from_nominal": 6.663294672033385e-16,
+      "laboratory": {
+        "conditional": 4.99647474562111e-06,
+        "success_weighted": 4.996474745621114e-06,
+        "success": 0.9999999999999996,
+        "error_numerator": 4.996474745621111e-06,
+        "success_extrema": [
+          0.9999999999999986,
+          1.0000000000000002
+        ],
+        "erasure": 5.423925005141356e-28,
+        "erasure_spread": 2.7168200387639886e-29,
+        "unconditional": 4.996474745621111e-06,
+        "completeness_defect": 1.4847867886387686e-15
+      },
+      "rotating": {
+        "conditional": 1.3621210325630025e-31,
+        "success_weighted": 1.382664285303134e-31,
+        "success": 0.9999999999999998,
+        "error_numerator": 1.3826642853031338e-31,
+        "success_extrema": [
+          0.9999999999999989,
+          1.0000000000000004
+        ],
+        "erasure": 5.423925005141356e-28,
+        "erasure_spread": 2.7168200387639527e-29,
+        "unconditional": 2.713345166855981e-28,
+        "completeness_defect": 1.2344777958516867e-15
+      },
+      "nominal": {
+        "conditional": 4.2205946853682634e-33,
+        "success_weighted": 4.220594685368263e-33,
+        "success": 1.0000000000000002,
+        "error_numerator": 4.2205946853682634e-33,
+        "success_extrema": [
+          1.0,
+          1.0
+        ],
+        "erasure": 1.1248198369963932e-32,
+        "erasure_spread": 1.3684555315672042e-48,
+        "unconditional": 9.84469387035023e-33,
+        "completeness_defect": 4.881246823548964e-18
+      },
+      "erasure_relative_change": null
+    },
+    {
+      "mode": "differential",
+      "eps": 0.0,
+      "protocol": "matched_negative_phase",
+      "phase_sign": -1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        0.0,
+        0.0
+      ],
+      "gauge_defect": 2.1980252664812392e-13,
+      "laboratory_error_from_nominal": 0.0038716214074110415,
+      "rotating_error_from_nominal": 6.663294672033385e-16,
+      "laboratory": {
+        "conditional": 4.99647474562111e-06,
+        "success_weighted": 4.996474745621114e-06,
+        "success": 0.9999999999999996,
+        "error_numerator": 4.996474745621111e-06,
+        "success_extrema": [
+          0.9999999999999986,
+          1.0000000000000002
+        ],
+        "erasure": 5.423925005141356e-28,
+        "erasure_spread": 2.7168200387639886e-29,
+        "unconditional": 4.996474745621111e-06,
+        "completeness_defect": 1.4847867886387686e-15
+      },
+      "rotating": {
+        "conditional": 1.3621210325630025e-31,
+        "success_weighted": 1.382664285303134e-31,
+        "success": 0.9999999999999998,
+        "error_numerator": 1.3826642853031338e-31,
+        "success_extrema": [
+          0.9999999999999989,
+          1.0000000000000004
+        ],
+        "erasure": 5.423925005141356e-28,
+        "erasure_spread": 2.7168200387639527e-29,
+        "unconditional": 2.713345166855981e-28,
+        "completeness_defect": 1.2344777958516867e-15
+      },
+      "nominal": {
+        "conditional": 4.2205946853682634e-33,
+        "success_weighted": 4.220594685368263e-33,
+        "success": 1.0000000000000002,
+        "error_numerator": 4.2205946853682634e-33,
+        "success_extrema": [
+          1.0,
+          1.0
+        ],
+        "erasure": 1.1248198369963932e-32,
+        "erasure_spread": 1.3684555315672042e-48,
+        "unconditional": 9.84469387035023e-33,
+        "completeness_defect": 4.881246823548964e-18
+      },
+      "erasure_relative_change": null,
+      "dither_profile": [
+        {
+          "dt": -0.3041834006980209,
+          "locked_rate": 7.090322217705815e-05,
+          "nominal_rate": 7.090322217698899e-05
+        },
+        {
+          "dt": -0.12167336027920836,
+          "locked_rate": 1.8246170249661823e-06,
+          "nominal_rate": 1.8246170249584788e-06
+        },
+        {
+          "dt": 0.0,
+          "locked_rate": 1.8601650616770102e-28,
+          "nominal_rate": 3.749399456654644e-33
+        },
+        {
+          "dt": 0.12167336027920836,
+          "locked_rate": 1.8246170249600553e-06,
+          "nominal_rate": 1.824617024958434e-06
+        },
+        {
+          "dt": 0.3041834006980209,
+          "locked_rate": 7.090322217697335e-05,
+          "nominal_rate": 7.090322217698773e-05
+        }
+      ]
+    },
+    {
+      "mode": "differential",
+      "eps": 0.01,
+      "protocol": "literal_spec",
+      "phase_sign": 1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        0.0001,
+        -0.0001
+      ],
+      "gauge_defect": 5.24087654487705e-15,
+      "laboratory_error_from_nominal": 0.004112782150396728,
+      "rotating_error_from_nominal": 0.0013951806989535036,
+      "laboratory": {
+        "conditional": 5.094791118025958e-06,
+        "success_weighted": 5.0947911180353646e-06,
+        "success": 0.9984067044047704,
+        "error_numerator": 5.086673609788384e-06,
+        "success_extrema": [
+          0.9984021627364561,
+          0.9984112460730846
+        ],
+        "erasure": 0.0015932955952281387,
+        "erasure_spread": 9.083336628168057e-06,
+        "unconditional": 0.0008017344712238577,
+        "completeness_defect": 2.137716476965311e-15
+      },
+      "rotating": {
+        "conditional": 9.735799489671137e-08,
+        "success_weighted": 9.735799489631002e-08,
+        "success": 0.9984067044047701,
+        "error_numerator": 9.720287483188132e-08,
+        "success_extrema": [
+          0.9984021627364559,
+          0.9984112460730844
+        ],
+        "erasure": 0.0015932955952281385,
+        "erasure_spread": 9.08333662816849e-06,
+        "unconditional": 0.0007967450004889011,
+        "completeness_defect": 2.471321156798182e-15
+      },
+      "nominal": {
+        "conditional": 2.495065916222185e-15,
+        "success_weighted": 2.4950659162221843e-15,
+        "success": 0.9984082353446185,
+        "error_numerator": 2.491094358483895e-15,
+        "success_extrema": [
+          0.9984082241846108,
+          0.9984082465046261
+        ],
+        "erasure": 0.0015917646553810063,
+        "erasure_spread": 2.2320015337275873e-08,
+        "unconditional": 0.0007958823276929942,
+        "completeness_defect": 9.833575088693246e-16
+      },
+      "erasure_relative_change": 0.0009617878132655032
+    },
+    {
+      "mode": "differential",
+      "eps": 0.01,
+      "protocol": "negative_phase_same_rate",
+      "phase_sign": -1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        0.0,
+        0.0
+      ],
+      "gauge_defect": 2.375014849045883e-13,
+      "laboratory_error_from_nominal": 0.003868538825178651,
+      "rotating_error_from_nominal": 1.7660985549514479e-15,
+      "laboratory": {
+        "conditional": 4.996474757491559e-06,
+        "success_weighted": 4.996474757491563e-06,
+        "success": 0.9984082353446211,
+        "error_numerator": 4.988521545571095e-06,
+        "success_extrema": [
+          0.9984082241846134,
+          0.9984082465046291
+        ],
+        "erasure": 0.0015917646553790339,
+        "erasure_spread": 2.2320015295208828e-08,
+        "unconditional": 0.000800870849235088,
+        "completeness_defect": 7.890010904133765e-16
+      },
+      "rotating": {
+        "conditional": 2.4950659119279178e-15,
+        "success_weighted": 2.4950659119279166e-15,
+        "success": 0.9984082353446208,
+        "error_numerator": 2.4910943541964683e-15,
+        "success_extrema": [
+          0.998408224184613,
+          0.9984082465046287
+        ],
+        "erasure": 0.0015917646553790334,
+        "erasure_spread": 2.2320015294775147e-08,
+        "unconditional": 0.0007958823276920078,
+        "completeness_defect": 1.0827331445397539e-15
+      },
+      "nominal": {
+        "conditional": 2.495065916222185e-15,
+        "success_weighted": 2.4950659162221843e-15,
+        "success": 0.9984082353446185,
+        "error_numerator": 2.491094358483895e-15,
+        "success_extrema": [
+          0.9984082241846108,
+          0.9984082465046261
+        ],
+        "erasure": 0.0015917646553810063,
+        "erasure_spread": 2.2320015337275873e-08,
+        "unconditional": 0.0007958823276929942,
+        "completeness_defect": 9.833575088693246e-16
+      },
+      "erasure_relative_change": -1.2393881635614086e-12
+    },
+    {
+      "mode": "differential",
+      "eps": 0.01,
+      "protocol": "matched_negative_phase",
+      "phase_sign": -1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        0.0,
+        0.0
+      ],
+      "gauge_defect": 2.375014849045883e-13,
+      "laboratory_error_from_nominal": 0.003868538825178651,
+      "rotating_error_from_nominal": 1.7660985549514479e-15,
+      "laboratory": {
+        "conditional": 4.996474757491559e-06,
+        "success_weighted": 4.996474757491563e-06,
+        "success": 0.9984082353446211,
+        "error_numerator": 4.988521545571095e-06,
+        "success_extrema": [
+          0.9984082241846134,
+          0.9984082465046291
+        ],
+        "erasure": 0.0015917646553790339,
+        "erasure_spread": 2.2320015295208828e-08,
+        "unconditional": 0.000800870849235088,
+        "completeness_defect": 7.890010904133765e-16
+      },
+      "rotating": {
+        "conditional": 2.4950659119279178e-15,
+        "success_weighted": 2.4950659119279166e-15,
+        "success": 0.9984082353446208,
+        "error_numerator": 2.4910943541964683e-15,
+        "success_extrema": [
+          0.998408224184613,
+          0.9984082465046287
+        ],
+        "erasure": 0.0015917646553790334,
+        "erasure_spread": 2.2320015294775147e-08,
+        "unconditional": 0.0007958823276920078,
+        "completeness_defect": 1.0827331445397539e-15
+      },
+      "nominal": {
+        "conditional": 2.495065916222185e-15,
+        "success_weighted": 2.4950659162221843e-15,
+        "success": 0.9984082353446185,
+        "error_numerator": 2.491094358483895e-15,
+        "success_extrema": [
+          0.9984082241846108,
+          0.9984082465046261
+        ],
+        "erasure": 0.0015917646553810063,
+        "erasure_spread": 2.2320015337275873e-08,
+        "unconditional": 0.0007958823276929942,
+        "completeness_defect": 9.833575088693246e-16
+      },
+      "erasure_relative_change": -1.2393881635614086e-12,
+      "dither_profile": [
+        {
+          "dt": -0.3041834006980209,
+          "locked_rate": 0.0005610718242847523,
+          "nominal_rate": 0.0005610718242853634
+        },
+        {
+          "dt": -0.12167336027920836,
+          "locked_rate": 0.0005325147067725671,
+          "nominal_rate": 0.0005325147067732113
+        },
+        {
+          "dt": 0.0,
+          "locked_rate": 0.0005304473319308391,
+          "nominal_rate": 0.0005304473319314885
+        },
+        {
+          "dt": 0.12167336027920836,
+          "locked_rate": 0.0005416693661845519,
+          "nominal_rate": 0.0005416693661852095
+        },
+        {
+          "dt": 0.3041834006980209,
+          "locked_rate": 0.0007028223202286204,
+          "nominal_rate": 0.0007028223202293309
+        }
+      ]
+    },
+    {
+      "mode": "common",
+      "eps": 0.0,
+      "protocol": "literal_spec",
+      "phase_sign": 1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        0.00015000000000000001,
+        0.00015000000000000001
+      ],
+      "gauge_defect": 5.337893934650893e-15,
+      "laboratory_error_from_nominal": 0.003871565319453088,
+      "rotating_error_from_nominal": 0.007743179382278631,
+      "laboratory": {
+        "conditional": 3.467545454240915e-13,
+        "success_weighted": 3.4675454542409134e-13,
+        "success": 0.999999975863673,
+        "error_numerator": 3.467545370547102e-13,
+        "success_extrema": [
+          0.999999975850956,
+          0.9999999758763901
+        ],
+        "erasure": 2.4136325994734704e-08,
+        "erasure_spread": 2.5433348222574376e-11,
+        "unconditional": 1.2068509751904407e-08,
+        "completeness_defect": 2.7972206729340967e-15
+      },
+      "rotating": {
+        "conditional": 3.4675454539981457e-13,
+        "success_weighted": 3.4675454539981457e-13,
+        "success": 0.9999999758636726,
+        "error_numerator": 3.4675453703043334e-13,
+        "success_extrema": [
+          0.9999999758509557,
+          0.9999999758763898
+        ],
+        "erasure": 2.4136325994734707e-08,
+        "erasure_spread": 2.5433348222574376e-11,
+        "unconditional": 1.2068509751904384e-08,
+        "completeness_defect": 3.0498559574512986e-15
+      },
+      "nominal": {
+        "conditional": 4.2205946853682634e-33,
+        "success_weighted": 4.220594685368263e-33,
+        "success": 1.0000000000000002,
+        "error_numerator": 4.2205946853682634e-33,
+        "success_extrema": [
+          1.0,
+          1.0
+        ],
+        "erasure": 1.1248198369963932e-32,
+        "erasure_spread": 1.3684555315672042e-48,
+        "unconditional": 9.84469387035023e-33,
+        "completeness_defect": 4.881246823548964e-18
+      },
+      "erasure_relative_change": null
+    },
+    {
+      "mode": "common",
+      "eps": 0.0,
+      "protocol": "negative_phase_same_rate",
+      "phase_sign": -1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        5e-05,
+        5e-05
+      ],
+      "gauge_defect": 5.288688549730537e-15,
+      "laboratory_error_from_nominal": 0.006452692514385535,
+      "rotating_error_from_nominal": 0.002581075141156602,
+      "laboratory": {
+        "conditional": 4.2807556749277046e-15,
+        "success_weighted": 4.280755674927704e-15,
+        "success": 0.9999999973165303,
+        "error_numerator": 4.280755663440426e-15,
+        "success_extrema": [
+          0.9999999973160592,
+          0.9999999973170018
+        ],
+        "erasure": 2.68346823304968e-09,
+        "erasure_spread": 9.425479498094684e-13,
+        "unconditional": 1.3417383972805034e-09,
+        "completeness_defect": 2.824578206852024e-15
+      },
+      "rotating": {
+        "conditional": 4.280755681774721e-15,
+        "success_weighted": 4.28075568177472e-15,
+        "success": 0.9999999973165307,
+        "error_numerator": 4.280755670287443e-15,
+        "success_extrema": [
+          0.9999999973160594,
+          0.999999997317002
+        ],
+        "erasure": 2.68346823304968e-09,
+        "erasure_spread": 9.42547949809882e-13,
+        "unconditional": 1.3417383972805102e-09,
+        "completeness_defect": 2.618558193531984e-15
+      },
+      "nominal": {
+        "conditional": 4.2205946853682634e-33,
+        "success_weighted": 4.220594685368263e-33,
+        "success": 1.0000000000000002,
+        "error_numerator": 4.2205946853682634e-33,
+        "success_extrema": [
+          1.0,
+          1.0
+        ],
+        "erasure": 1.1248198369963932e-32,
+        "erasure_spread": 1.3684555315672042e-48,
+        "unconditional": 9.84469387035023e-33,
+        "completeness_defect": 4.881246823548964e-18
+      },
+      "erasure_relative_change": null
+    },
+    {
+      "mode": "common",
+      "eps": 0.0,
+      "protocol": "matched_negative_phase",
+      "phase_sign": -1,
+      "delta_hat": 0.0002,
+      "site_residual": [
+        0.0,
+        0.0
+      ],
+      "gauge_defect": 2.1768152576497979e-13,
+      "laboratory_error_from_nominal": 0.007743235560633483,
+      "rotating_error_from_nominal": 1.9338195259079415e-15,
+      "laboratory": {
+        "conditional": 5.629370493023761e-31,
+        "success_weighted": 5.629370493023765e-31,
+        "success": 1.0000000000000018,
+        "error_numerator": 5.629370493023774e-31,
+        "success_extrema": [
+          1.0000000000000002,
+          1.0000000000000029
+        ],
+        "erasure": 5.428702392475414e-28,
+        "erasure_spread": 2.747451145500987e-29,
+        "unconditional": 2.719980566730731e-28,
+        "completeness_defect": 2.9914080912284984e-15
+      },
+      "rotating": {
+        "conditional": 6.425275088298616e-31,
+        "success_weighted": 6.507448099259139e-31,
+        "success": 1.000000000000002,
+        "error_numerator": 6.507448099259152e-31,
+        "success_extrema": [
+          0.9999999999999998,
+          1.0000000000000033
+        ],
+        "erasure": 5.428702392475415e-28,
+        "erasure_spread": 2.7474511455009513e-29,
+        "unconditional": 2.7208586443369667e-28,
+        "completeness_defect": 3.5046214273940756e-15
+      },
+      "nominal": {
+        "conditional": 4.2205946853682634e-33,
+        "success_weighted": 4.220594685368263e-33,
+        "success": 1.0000000000000002,
+        "error_numerator": 4.2205946853682634e-33,
+        "success_extrema": [
+          1.0,
+          1.0
+        ],
+        "erasure": 1.1248198369963932e-32,
+        "erasure_spread": 1.3684555315672042e-48,
+        "unconditional": 9.84469387035023e-33,
+        "completeness_defect": 4.881246823548964e-18
+      },
+      "erasure_relative_change": null,
+      "dither_profile": [
+        {
+          "dt": -0.3041834006980209,
+          "locked_rate": 7.09032221770569e-05,
+          "nominal_rate": 7.090322217698899e-05
+        },
+        {
+          "dt": -0.12167336027920836,
+          "locked_rate": 1.8246170249664493e-06,
+          "nominal_rate": 1.8246170249584788e-06
+        },
+        {
+          "dt": 0.0,
+          "locked_rate": 1.834622469111881e-28,
+          "nominal_rate": 3.749399456654644e-33
+        },
+        {
+          "dt": 0.12167336027920836,
+          "locked_rate": 1.824617024960956e-06,
+          "nominal_rate": 1.824617024958434e-06
+        },
+        {
+          "dt": 0.3041834006980209,
+          "locked_rate": 7.090322217697812e-05,
+          "nominal_rate": 7.090322217698773e-05
+        }
+      ]
+    },
+    {
+      "mode": "common",
+      "eps": 0.01,
+      "protocol": "literal_spec",
+      "phase_sign": 1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        0.00015000000000000001,
+        0.00015000000000000001
+      ],
+      "gauge_defect": 7.026893278876689e-15,
+      "laboratory_error_from_nominal": 0.0038775934208343642,
+      "rotating_error_from_nominal": 0.007746128622007402,
+      "laboratory": {
+        "conditional": 3.845351859291053e-13,
+        "success_weighted": 3.845351859290529e-13,
+        "success": 0.9984127783794432,
+        "error_numerator": 3.839248433680815e-13,
+        "success_extrema": [
+          0.9984119558807629,
+          0.9984136008781236
+        ],
+        "erasure": 0.0015872216205541569,
+        "erasure_spread": 1.6449973598404131e-06,
+        "unconditional": 0.0007936108106610033,
+        "completeness_defect": 3.815312475576615e-15
+      },
+      "rotating": {
+        "conditional": 3.8453518592136295e-13,
+        "success_weighted": 3.8453518592131055e-13,
+        "success": 0.9984127783794435,
+        "error_numerator": 3.8392484336035155e-13,
+        "success_extrema": [
+          0.9984119558807631,
+          0.998413600878124
+        ],
+        "erasure": 0.0015872216205541569,
+        "erasure_spread": 1.6449973598399795e-06,
+        "unconditional": 0.0007936108106610033,
+        "completeness_defect": 3.400114260365042e-15
+      },
+      "nominal": {
+        "conditional": 2.495065916222185e-15,
+        "success_weighted": 2.4950659162221843e-15,
+        "success": 0.9984082353446185,
+        "error_numerator": 2.491094358483895e-15,
+        "success_extrema": [
+          0.9984082241846108,
+          0.9984082465046261
+        ],
+        "erasure": 0.0015917646553810063,
+        "erasure_spread": 2.2320015337275873e-08,
+        "unconditional": 0.0007958823276929942,
+        "completeness_defect": 9.833575088693246e-16
+      },
+      "erasure_relative_change": -0.0028540870105964004
+    },
+    {
+      "mode": "common",
+      "eps": 0.01,
+      "protocol": "negative_phase_same_rate",
+      "phase_sign": -1,
+      "delta_hat": 0.0001,
+      "site_residual": [
+        5e-05,
+        5e-05
+      ],
+      "gauge_defect": 6.300813829223303e-15,
+      "laboratory_error_from_nominal": 0.006450592222641546,
+      "rotating_error_from_nominal": 0.002582056098663153,
+      "laboratory": {
+        "conditional": 1.2047151853175925e-14,
+        "success_weighted": 1.2047151853175747e-14,
+        "success": 0.998409755423589,
+        "error_numerator": 1.2027993935280035e-14,
+        "success_extrema": [
+          0.9984094881711076,
+          0.99841002267607
+        ],
+        "erasure": 0.001590244576410209,
+        "erasure_spread": 5.345049615976608e-07,
+        "unconditional": 0.0007951222882171326,
+        "completeness_defect": 1.97206208576102e-15
+      },
+      "rotating": {
+        "conditional": 1.2047151855057654e-14,
+        "success_weighted": 1.2047151855057479e-14,
+        "success": 0.9984097554235887,
+        "error_numerator": 1.202799393715877e-14,
+        "success_extrema": [
+          0.9984094881711076,
+          0.9984100226760699
+        ],
+        "erasure": 0.001590244576410209,
+        "erasure_spread": 5.345049615976608e-07,
+        "unconditional": 0.0007951222882171326,
+        "completeness_defect": 2.153902164572027e-15
+      },
+      "nominal": {
+        "conditional": 2.495065916222185e-15,
+        "success_weighted": 2.4950659162221843e-15,
+        "success": 0.9984082353446185,
+        "error_numerator": 2.491094358483895e-15,
+        "success_extrema": [
+          0.9984082241846108,
+          0.9984082465046261
+        ],
+        "erasure": 0.0015917646553810063,
+        "erasure_spread": 2.2320015337275873e-08,
+        "unconditional": 0.0007958823276929942,
+        "completeness_defect": 9.833575088693246e-16
+      },
+      "erasure_relative_change": -0.0009549646460979907
+    },
+    {
+      "mode": "common",
+      "eps": 0.01,
+      "protocol": "matched_negative_phase",
+      "phase_sign": -1,
+      "delta_hat": 0.0002,
+      "site_residual": [
+        0.0,
+        0.0
+      ],
+      "gauge_defect": 2.380727970461182e-13,
+      "laboratory_error_from_nominal": 0.007737070401944293,
+      "rotating_error_from_nominal": 1.2781552144283248e-15,
+      "laboratory": {
+        "conditional": 2.4950658771822043e-15,
+        "success_weighted": 2.4950658771822035e-15,
+        "success": 0.9984082353446176,
+        "error_numerator": 2.4910943195060544e-15,
+        "success_extrema": [
+          0.9984082241846101,
+          0.9984082465046256
+        ],
+        "erasure": 0.0015917646553790768,
+        "erasure_spread": 2.2320015347684213e-08,
+        "unconditional": 0.0007958823276920295,
+        "completeness_defect": 5.0870770900218234e-15
+      },
+      "rotating": {
+        "conditional": 2.4950658889107626e-15,
+        "success_weighted": 2.495065888910762e-15,
+        "success": 0.9984082353446176,
+        "error_numerator": 2.4910943312159435e-15,
+        "success_extrema": [
+          0.99840822418461,
+          0.9984082465046253
+        ],
+        "erasure": 0.0015917646553790768,
+        "erasure_spread": 2.2320015347901054e-08,
+        "unconditional": 0.0007958823276920295,
+        "completeness_defect": 5.030554806091183e-15
+      },
+      "nominal": {
+        "conditional": 2.495065916222185e-15,
+        "success_weighted": 2.4950659162221843e-15,
+        "success": 0.9984082353446185,
+        "error_numerator": 2.491094358483895e-15,
+        "success_extrema": [
+          0.9984082241846108,
+          0.9984082465046261
+        ],
+        "erasure": 0.0015917646553810063,
+        "erasure_spread": 2.2320015337275873e-08,
+        "unconditional": 0.0007958823276929942,
+        "completeness_defect": 9.833575088693246e-16
+      },
+      "erasure_relative_change": -1.212142875287911e-12,
+      "dither_profile": [
+        {
+          "dt": -0.3041834006980209,
+          "locked_rate": 0.0005610718242847468,
+          "nominal_rate": 0.0005610718242853634
+        },
+        {
+          "dt": -0.12167336027920836,
+          "locked_rate": 0.0005325147067725592,
+          "nominal_rate": 0.0005325147067732113
+        },
+        {
+          "dt": 0.0,
+          "locked_rate": 0.0005304473319308303,
+          "nominal_rate": 0.0005304473319314885
+        },
+        {
+          "dt": 0.12167336027920836,
+          "locked_rate": 0.0005416693661845446,
+          "nominal_rate": 0.0005416693661852095
+        },
+        {
+          "dt": 0.3041834006980209,
+          "locked_rate": 0.0007028223202286124,
+          "nominal_rate": 0.0007028223202293309
+        }
+      ]
+    }
+  ],
+  "residual_sweep": [
+    {
+      "mode": "differential",
+      "delta": 0.0001,
+      "delta_hat": 8e-05,
+      "fraction": -0.2,
+      "residual_rate": 1.9999999999999998e-05,
+      "conditional": 9.753173916779181e-10
+    },
+    {
+      "mode": "differential",
+      "delta": 0.0001,
+      "delta_hat": 9e-05,
+      "fraction": -0.1,
+      "residual_rate": 9.999999999999999e-06,
+      "conditional": 2.43899221012503e-10
+    },
+    {
+      "mode": "differential",
+      "delta": 0.0001,
+      "delta_hat": 9.5e-05,
+      "fraction": -0.05,
+      "residual_rate": 4.9999999999999996e-06,
+      "conditional": 6.098354021482185e-11
+    },
+    {
+      "mode": "differential",
+      "delta": 0.0001,
+      "delta_hat": 9.75e-05,
+      "fraction": -0.025,
+      "residual_rate": 2.5000000000000066e-06,
+      "conditional": 1.52469769794747e-11
+    },
+    {
+      "mode": "differential",
+      "delta": 0.0001,
+      "delta_hat": 0.0001025,
+      "fraction": 0.025,
+      "residual_rate": -2.499999999999993e-06,
+      "conditional": 1.5249160922759347e-11
+    },
+    {
+      "mode": "differential",
+      "delta": 0.0001,
+      "delta_hat": 0.000105,
+      "fraction": 0.05,
+      "residual_rate": -4.9999999999999996e-06,
+      "conditional": 6.100101179812586e-11
+    },
+    {
+      "mode": "differential",
+      "delta": 0.0001,
+      "delta_hat": 0.00011000000000000002,
+      "fraction": 0.1,
+      "residual_rate": -1.0000000000000013e-05,
+      "conditional": 2.4403899368918455e-10
+    },
+    {
+      "mode": "differential",
+      "delta": 0.0001,
+      "delta_hat": 0.00012,
+      "fraction": 0.2,
+      "residual_rate": -1.9999999999999998e-05,
+      "conditional": 9.764355732124482e-10
+    },
+    {
+      "mode": "common",
+      "delta": 0.0001,
+      "delta_hat": 0.00016,
+      "fraction": -0.2,
+      "residual_rate": 3.9999999999999996e-05,
+      "conditional": 1.0958606674393934e-16
+    },
+    {
+      "mode": "common",
+      "delta": 0.0001,
+      "delta_hat": 0.00018,
+      "fraction": -0.1,
+      "residual_rate": 1.9999999999999998e-05,
+      "conditional": 6.8491050574068016e-18
+    },
+    {
+      "mode": "common",
+      "delta": 0.0001,
+      "delta_hat": 0.00019,
+      "fraction": -0.05,
+      "residual_rate": 9.999999999999999e-06,
+      "conditional": 4.2806791042266366e-19
+    },
+    {
+      "mode": "common",
+      "delta": 0.0001,
+      "delta_hat": 0.000195,
+      "fraction": -0.025,
+      "residual_rate": 5.000000000000013e-06,
+      "conditional": 2.675427147870616e-20
+    },
+    {
+      "mode": "common",
+      "delta": 0.0001,
+      "delta_hat": 0.000205,
+      "fraction": 0.025,
+      "residual_rate": -4.999999999999986e-06,
+      "conditional": 2.675426353290066e-20
+    },
+    {
+      "mode": "common",
+      "delta": 0.0001,
+      "delta_hat": 0.00021,
+      "fraction": 0.05,
+      "residual_rate": -9.999999999999999e-06,
+      "conditional": 4.2806640991511873e-19
+    },
+    {
+      "mode": "common",
+      "delta": 0.0001,
+      "delta_hat": 0.00022000000000000003,
+      "fraction": 0.1,
+      "residual_rate": -2.0000000000000025e-05,
+      "conditional": 6.849051681622933e-18
+    },
+    {
+      "mode": "common",
+      "delta": 0.0001,
+      "delta_hat": 0.00024,
+      "fraction": 0.2,
+      "residual_rate": -3.9999999999999996e-05,
+      "conditional": 1.0958437765766505e-16
+    }
+  ],
+  "checks": [
+    {
+      "name": "trine (0.0, 0.0001, 0.0): polar reconstruction",
+      "value": 4.82818803512958e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "trine (0.0, 0.0001, 0.0): virtual unitary",
+      "value": 5.111687955649014e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "five (0.0, 0.0001, 0.0): polar reconstruction",
+      "value": 3.2101017623521224e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "five (0.0, 0.0001, 0.0): virtual unitary",
+      "value": 3.830384182791206e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "five (0.0, 0.0, 0.0001): polar reconstruction",
+      "value": 2.734201190891293e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "five (0.0, 0.0, 0.0001): virtual unitary",
+      "value": 2.531061181651742e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "five (0.0, 0.0001, 0.0001): polar reconstruction",
+      "value": 7.639463669985227e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "five (0.0, 0.0001, 0.0001): virtual unitary",
+      "value": 7.319277985343949e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "five (0.0, 0.0001, -0.0001): polar reconstruction",
+      "value": 3.2104214240881034e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "five (0.0, 0.0001, -0.0001): virtual unitary",
+      "value": 4.1961620601693415e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.0 literal_spec: laboratory gauge identity",
+      "value": 5.2913232931450255e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.0 negative_phase_same_rate: laboratory gauge identity",
+      "value": 2.1980252664812392e-13,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.0 matched_negative_phase: laboratory gauge identity",
+      "value": 2.1980252664812392e-13,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.0: exact-lock erasure",
+      "value": 5.423812523157656e-28,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.0 dt=-0.3041834006980209: window profile restoration",
+      "value": 6.915854607741911e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.0 dt=-0.12167336027920836: window profile restoration",
+      "value": 7.703552897041048e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.0 dt=0.0: window profile restoration",
+      "value": 1.8601275676824436e-28,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.0 dt=0.12167336027920836: window profile restoration",
+      "value": 1.6212210610447308e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.0 dt=0.3041834006980209: window profile restoration",
+      "value": -1.4379231312589003e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.01 literal_spec: laboratory gauge identity",
+      "value": 5.24087654487705e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.01 negative_phase_same_rate: laboratory gauge identity",
+      "value": 2.375014849045883e-13,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.01 matched_negative_phase: laboratory gauge identity",
+      "value": 2.375014849045883e-13,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.01: exact-lock erasure",
+      "value": -1.972814273054624e-15,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.01 dt=-0.3041834006980209: window profile restoration",
+      "value": -6.110563444128303e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.01 dt=-0.12167336027920836: window profile restoration",
+      "value": -6.442329308908867e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.01 dt=0.0: window profile restoration",
+      "value": -6.493286811015686e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.01 dt=0.12167336027920836: window profile restoration",
+      "value": -6.575686176124584e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "differential eps=0.01 dt=0.3041834006980209: window profile restoration",
+      "value": -7.104776836297511e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.0 literal_spec: laboratory gauge identity",
+      "value": 5.337893934650893e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.0 negative_phase_same_rate: laboratory gauge identity",
+      "value": 5.288688549730537e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.0 matched_negative_phase: laboratory gauge identity",
+      "value": 2.1768152576497979e-13,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.0: exact-lock erasure",
+      "value": 5.428589910491715e-28,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.0 dt=-0.3041834006980209: window profile restoration",
+      "value": 6.791171357906078e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.0 dt=-0.12167336027920836: window profile restoration",
+      "value": 7.970580033662966e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.0 dt=0.0: window profile restoration",
+      "value": 1.8345849751173143e-28,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.0 dt=0.12167336027920836: window profile restoration",
+      "value": 2.5218288422128657e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.0 dt=0.3041834006980209: window profile restoration",
+      "value": -9.608741753652783e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.01 literal_spec: laboratory gauge identity",
+      "value": 7.026893278876689e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.01 negative_phase_same_rate: laboratory gauge identity",
+      "value": 6.300813829223303e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.01 matched_negative_phase: laboratory gauge identity",
+      "value": 2.380727970461182e-13,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.01: exact-lock erasure",
+      "value": -1.9294461861552037e-15,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.01 dt=-0.3041834006980209: window profile restoration",
+      "value": -6.165857754925064e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.01 dt=-0.12167336027920836: window profile restoration",
+      "value": -6.521476067500309e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.01 dt=0.0: window profile restoration",
+      "value": -6.581107186987012e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.01 dt=0.12167336027920836: window profile restoration",
+      "value": -6.648327721681113e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "common eps=0.01 dt=0.3041834006980209: window profile restoration",
+      "value": -7.185007797061438e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    }
+  ],
+  "model_extension": "Complex Hermitian couplings R H0 R\u2020 replace the original real-symmetric control family. No hardware realization or stochastic tracking tested.",
+  "corrections": [
+    "Literal plus phase adds detuning in the rotating frame.",
+    "Equality to nominal is in R\u2020 U, not in the fixed laboratory frame.",
+    "For delta_d=delta_r=delta and generator (D_d+D_r)/2, exact cancellation needs delta_hat=2 delta.",
+    "Raw Zc is global-phase dependent; phase-removed Zc is reported separately.",
+    "Window restoration means the full epsilon-only rate profile, whose broad quadratic-fit vertex need not be zero."
+  ],
+  "provenance": {
+    "test": "rh1d",
+    "date": "2026-09-06",
+    "head": "dbd02889e648670dea4dadb2198750246e7c71b0",
+    "unblinded": true,
+    "reason": "User supplied the predictions path; read during context refresh before runs.",
+    "interface": "Instantaneous coherent P/Q projection; FD finite ramps retained, dump duration zero.",
+    "sha256": {
+      "rh1d.py": "6838c5bf4e08efd6b0f16d0fbe9c0e238d69c3c321d0255ab4b621c0dd217137",
+      "rh1_common.py": "93765a137867c4d6329466402d45c647aef5b712544b8d4505c49c2d4c7238b2",
+      "split1_split_loop.py": "c448e5875c16103282f5495ca776acf5aa198f28f0557d93c9d90cb5e1d0831d",
+      "reflection_loop_finite_dump.py": "0336ce9e9da80520fd58d7168976df1bb4b5afe32e4a9126e128b9af88627ab6",
+      "reflection_loop_dynamics.py": "b4ceffe201de66994a3e6557a285fa1368ce05a6b780009be35283787f08deb1",
+      "docs/2026-09-06-RH-1-spec.md": "d215c738c277e32ccb4df961be808adc4af6bb64d3ed31c0c67ede252dc2128b",
+      "docs/prereg/RH-1/DESIGNER-PREDICTIONS.md": "1a7bc60068e6e1e4a8307a98d71f00ef80d497ded7011c01fe84a81bc87ea7ed"
+    }
+  },
+  "check_count": 46,
+  "checks_passed": 46
+}

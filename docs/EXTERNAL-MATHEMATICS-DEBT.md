@@ -225,6 +225,15 @@ These mathematical extensions are usable now. The remaining Seated Root predicti
 - **Native continuation:** compare five-loop, bare and coherent-corrected controls for the same useful operation, code, decoder, physical storage time and control resources, including finite detection/repair and idle errors. Determine the operating region where the native construction reduces logical error or qubit-time cost. Derive an entangling instrument next; enlarge the qLDPC distance series after the interface is specified. The present flags-used/hidden comparison measures information value, not superiority to another physical gate.
 - **Status:** COMPARISON SOURCES RETAINED; NO NEW MATHEMATICAL DEPENDENCY ADOPTED. Source scope was inspected as listed, not independently certified. Standard methods remain retained without ceremonial rederivation.
 
+## EXT-022 — RH-1 recovery and fidelity bookkeeping
+
+- **Native sources inspected first:** live DAG revision `575f1e672b44c5303a308fa04fef07fa46d61f1f186a65fad1396507d850871b`; `GFL:thm:realfiber` and canonical REALFIBER O1–O7; RF exact-frame propagators; FD-1–4 and SPLIT-1; the existing distance-code repair map. The DIS chapter 5 observation/measurement discussion and chapters 10/12 history/storage discussion were read as programme provenance. None supplies an additional coherent recovery theorem. The DAG query for `error correction` returned no node; this is not a corpus-wide absence claim.
+- **Retained standard mathematics:** [Knill–Laflamme, Theorem 3.2, equations (19)–(20)](https://arxiv.org/pdf/quant-ph/9604034): scalar restrictions of error-pair products characterize exact correction. RH-1 uses its single resolved-error diagonal condition, on a fixed two-dimensional code. Off-diagonal family overlap is reported, not required. This extends EXT-014's existing detection bookkeeping; no quantum postulates are derived from Cella here.
+- **Fidelity source:** [Nielsen, equation (3) and its proof](https://arxiv.org/pdf/quant-ph/0205035): average fidelity and entanglement fidelity for finite-dimensional trace-preserving channels. Used for the complete click-pattern channel, with trace preservation separately checked. Subnormalized replay branches cannot be inserted as a complete channel. Equal-input conditional Haar averages and success-weighted averages are distinguished.
+- **Other retained tools:** finite-dimensional polar decomposition/SVD, unitary frame changes, Gauss–Legendre integration, polynomial fits and Bernoulli Fisher information. The last follows directly from the two scores p'/p and -p'/(1-p), giving I=(p')²/[p(1-p)]; the nuisance-gain estimate uses the two-parameter Fisher matrix. No general sensing advantage or estimator attainability is inferred from this local bound.
+- **Native extension actually completed:** [RH-1 results](2026-09-06-RH-1-results.md) derive the rank-one obstruction, stable recovered-channel error, endpoint timing stationarity, and exact lock convention for the existing native controls. Numerical receipts test all four specified stages. Coherent capture is an ideal model interface; complex drive phases are an explicit extension of the real control family.
+- **Status:** STANDARD TOOLS RETAINED; PER-DUMP EXACT FOLD-BACK KILLED FOR THESE WORDS; STATISTICAL DITHER AND CORRECTED FRAME LOCK QUANTIFIED. Physical hold, arbitrary-data sensing, noisy repair and stochastic tracking remain open. No foundational debt closed by a passing numerical check.
+
 ## Search receipts
 
 ### SR-001 — Horizon and comparison work, backfilled on 2026-09-05
@@ -350,6 +359,13 @@ Exact online queries:
 - `site:arxiv.org "An entangling gate" "dual-rail"`
 
 Sources and read depth are recorded in EXT-021. Nature's direct entangling-gate fetch was intermittently blocked; the primary article text was available through the search tool. Its PubMed abstract was also returned; PMC presented a browser check. Google's April 2026 correction page returned metadata but its body could not be opened; comparison numbers were taken from the current main article. Forum, marketing and unrelated search results were not adopted. This was a field comparison, with no new corpus-wide absence claim or implementation change.
+
+### SR-009 — RH-1 mathematical bookkeeping, 2026-09-06
+
+- Queries: `Knill Laflamme theory quantum error correcting codes quant-ph 9604034`; `Nielsen simple formula average gate fidelity 0205035`.
+- Sources actually opened/read: primary PDFs `https://arxiv.org/pdf/quant-ph/9604034` (channel setup, Theorem 3.2 and recovery construction context) and `https://arxiv.org/pdf/quant-ph/0205035` (equation (3), proof and fidelity conventions). Other search hits were not adopted.
+- Adoption: only the standard correction/fidelity bookkeeping in EXT-022. The native loops, test thresholds and control parameters were not taken from external papers. No hardware or priority search was performed. The Bernoulli resource calculation is derived from its stated likelihood, with known-input and gain-calibration assumptions explicit.
+- Local context search: episodic-memory text query `["RH-1", "split"]` returned no records; current handoff, spec, native proofs and live code supplied project state. Designer predictions were exposed by the user-provided path before runs; all RH-1 receipts label that fact.
 
 ## Maintenance rule
 

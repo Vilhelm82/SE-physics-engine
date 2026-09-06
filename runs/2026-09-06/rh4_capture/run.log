@@ -1,0 +1,12 @@
+== rh4_capture: capture model at the absorbing interface (harness port; acceptance against the pre-harness receipt)
+   run dir runs/2026-09-06/rh4_capture
+  [ok] capture off: herald == FD: -1.266e-16 (tol 1e-09)
+  [ok] capture off: conditional Pauli vector == FD: 5.381e-17 (tol 1e-09)
+  [ok] capture takes what FD absorbed: -1.324e-09 (tol 2e-06)
+  [ok] acceptance: 40 grid rows reproduce the pre-harness receipt (herald, unheralded): 1.269e-16 (tol 1e-15)
+  fork ideal register: (a) herald 2.2e-16, unheralded 4.442e-06 = FD background
+  fork loss 1e-2, monitored: (ties FD) r_eff 0.009
+  fork loss 1e-2, unmonitored: (loses to FD) r_eff 0.414
+  figure runs/2026-09-06/rh4_capture/register_requirement.png
+
+RESULT: 4/4 checks passed; 3 forks recorded; 6 held out; 1 figures.  runtime 11.3s

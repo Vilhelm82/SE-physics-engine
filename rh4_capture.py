@@ -45,14 +45,17 @@ def embed4z(m):
 
 class Model:
     """Steps are no-jump matrices M (rho -> M rho M^dag); dephasing is a separate elementwise factor."""
-    def __init__(self, e_c=0., t_c=1., gamma_r=0., gamma_phi=0., register_heralded=True, capture=True):
+    def __init__(self, e_c=0., t_c=1., gamma_r=0., gamma_phi=0., register_heralded=True, capture=True,
+                 case=CASE, gamma=GAMMA, n=1, loops=None, effects=None):
         self.th = (np.pi/2)*(1 + e_c); self.t_c = t_c if capture else 0.; self.capture = capture
         self.gr, self.gphi, self.rh = gamma_r, gamma_phi, register_heralded
-        loops, effects = FD.loop_endpoints_with_effects([CASE], [GAMMA])
-        self.loops, self.effects = loops[0], effects[0]
-        stages = FD.primitive_stages(1); T0 = sum(s.duration for s in stages)
+        self.case, self.gamma, self.n = tuple(case), gamma, n
+        if loops is None:
+            loops, effects = FD.loop_endpoints_with_effects([case], [gamma], n=n); loops, effects = loops[0], effects[0]
+        self.loops, self.effects = loops, effects
+        stages = FD.primitive_stages(n); T0 = sum(s.duration for s in stages)
         _, _, stretches = FD.controls('five'); self.loop_T = [T0*float(s) for s in stretches]
-        self.td = ACTION/KAPPA; self.chi = np.exp(-ACTION/2); self.delta = np.array([CASE[1], CASE[2]])
+        self.td = ACTION/KAPPA; self.chi = np.exp(-ACTION/2); self.delta = np.array([case[1], case[2]])
         self.T_total = sum(self.loop_T) + N*(self.td + self.t_c)
 
     # ---- matrices
@@ -64,7 +67,7 @@ class Model:
     def M_capture(self, k):
         M = np.eye(DIM, dtype=complex)
         if not self.capture or self.t_c == 0: return M
-        gen = np.array([[-GAMMA/2, -1j*self.th/self.t_c], [-1j*self.th/self.t_c, -self.gr/2]])
+        gen = np.array([[-self.gamma/2, -1j*self.th/self.t_c], [-1j*self.th/self.t_c, -self.gr/2]])
         blk = expm(gen*self.t_c)
         for m, r in zip(IQ, IR(k)): M[np.ix_([m, r], [m, r])] = blk
         return M@self.M_phases_P(self.t_c)
@@ -107,26 +110,32 @@ class Model:
 
 
 def channel(model, U_cal):
-    """Herald and exact Pauli twirl of the accepted map, qec_distance_stack format."""
-    Gm = Q.G; ptm = np.zeros(4); heralds = []
+    """Herald and exact Pauli twirl of the accepted map, qec_distance_stack format, plus FD's decomposition."""
+    Gm = Q.G; parts = {'survivor': np.zeros(4), 'recovered': np.zeros(4), 'replaced': np.zeros(4)}; heralds = []; unhs = []
+    base = {}
     for a, sig in enumerate(PAULI2):
-        rho_in = sig/2 if a == 0 else sig/2 + np.eye(2)/2          # trace-1 inputs: (I + sig)/2, and I/2 for a = 0
+        rho_in = sig/2 if a == 0 else sig/2 + np.eye(2)/2
         rho, her, unh = model.run(rho_in)
         rP = rho[np.ix_(IP, IP)]; rR = rho[np.ix_(ALLR, ALLR)]; rQ = float(np.trace(rho[np.ix_(IQ, IQ)]).real)
         rec = U_cal.conj().T@rR@U_cal; leftover = float(np.trace(rR).real - np.trace(rec).real)
-        out = rP + Gm@rec@Gm.conj().T + (unh + rQ)*np.eye(2)/2      # accepted map: survivor + recovered + unheralded replaced
-        her_tot = her + leftover; heralds.append(her_tot)
-        # PTM diagonal relative to the target G: R_aa = tr(sig_a G^dag out G)/tr(sig_a rho_in) ... use linearity on (I+sig)/2 - I/2
-        if a == 0: base = Gm.conj().T@out@Gm; ptm[0] = float(np.trace(base).real)
-        else: ptm[a] = float(np.trace(sig@(Gm.conj().T@out@Gm - base)).real)
-    h = float(heralds[0]); spread = float(np.ptp(heralds))                  # twirl folds state-dependence of the flag into its average
-    w = CHAR@ptm/4; assert abs(w.sum() + h - 1) < 1e-9, (w.sum(), h)
-    cond = w/(1 - h); cond[0] = 1 - cond[1:].sum()
-    return dict(herald=h, herald_state_spread=spread, pauli=cond.tolist(), unheralded_pauli_rate=float(w[1:].sum()), total_time=model.T_total)
+        outs = {'survivor': Gm.conj().T@rP@Gm, 'recovered': rec, 'replaced': (unh + rQ)*np.eye(2)/2}
+        heralds.append(her + leftover); unhs.append(unh + rQ)
+        for name, out in outs.items():
+            if a == 0: base[name] = out; parts[name][0] = float(np.trace(out).real)
+            else: parts[name][a] = float(np.trace(sig@(out - base[name])).real)
+    h = float(heralds[0]); spread = float(np.ptp(heralds)); unh0 = float(unhs[0])
+    w = {name: CHAR@ptm/4 for name, ptm in parts.items()}; wt = sum(w.values())
+    assert abs(wt.sum() + h - 1) < 1e-9, (wt.sum(), h)
+    cond = wt/(1 - h); cond[0] = 1 - cond[1:].sum()
+    coh = {name: float(2*w[name][1:].sum()/3/(1 - h)) for name in ('survivor', 'recovered')}   # average infidelity contributions
+    return dict(herald=h, herald_state_spread=spread, pauli=cond.tolist(), unheralded_pauli_rate=float(wt[1:].sum()), total_time=model.T_total,
+                unobserved_absorption=unh0/(1 - h), surviving_error=coh['survivor'], recovered_error=coh['recovered'],
+                unheralded_residual=unh0/(1 - h) + coh['survivor'] + coh['recovered'],          # FD's raw q_u: loss counts as a full error
+                repaired_residual=float(2*wt[1:].sum()/3/(1 - h)), recovered_fraction=float(np.trace(base['recovered']).real))
 
 
-def calibrate(t_c):
-    ideal = Model(e_c=0., t_c=t_c, gamma_r=0., gamma_phi=0.)
+def calibrate(t_c, **kw):
+    ideal = Model(e_c=0., t_c=t_c, gamma_r=0., gamma_phi=0., **kw)
     F = ideal.total_matrix()[np.ix_(ALLR, IP)]; U, H = polar(F)
     s = np.linalg.svd(F, compute_uv=False)
     return U, dict(captured_fraction=float((s**2).sum()/2), DB_stack=float((s[0]**2 - s[1]**2)/(s**2).sum()))

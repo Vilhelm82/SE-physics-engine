@@ -7,7 +7,7 @@
     DB_stack = a0 eps^3 (1 - (55/32) eps + O(eps^2))
     floor    = c0 a0^2 / 6 = 64072265625 pi^8 / 4398046511104 = 138.232207895 eps^8
 
-**[provenance]** `rh2_a0_closed_form.py`, 12/12, receipt `rh2_a0-checks.json`, log `rh2_a0.log`. Route A: exact series
+**[provenance]** `experiments/2026-09-06/rh2_a0_closed_form.py`, 12/12, receipt `rh2_a0-checks.json`, log `rh2_a0.log`. Route A: exact series
 of the closed-form loop (same algebra as `rh1_common.trine_loop`) through the 2x2 frame reduction. Route B: 70-digit
 third-order Richardson on `rh2_precision`'s closed form. Agreement 3.1e-16 (14 decimal digits certified by
 `cella_two_route_compare`; constant pinned by `cella_arith_constant_pin`, digest `566bbaea565eabb4`). RH-2P's
@@ -65,12 +65,12 @@ One rerun of this script with the n = 2 primitives decides it.
 - Nothing here touches the absorbing chi > 0 interface, detuning, or the five-loop word (whose own a0 is unknown
   and, by RH-2, of the same order: DB = 4.2e-6 at 1% against the trine's 7.0e-6).
 
-Replay: `python3 rh2_a0_closed_form.py | tee docs/rh2_a0.log`
+Replay: `python3 experiments/2026-09-06/rh2_a0_closed_form.py | tee docs/rh2_a0.log`
 
 
 ---
 
-## Addendum 2026-09-06: the five-loop word (RH-2P/5), `rh2p_five.py`, 21/21
+## Addendum 2026-09-06: the five-loop word (RH-2P/5), `experiments/2026-09-06/rh2p_five.py`, 21/21
 
 **[proved | same reduction, five angles, sigma -> conj(sigma) on the two inverse loops]**
 
@@ -112,4 +112,4 @@ capture more. That is not intuitive and it is exact at leading order.
 
 **[not checked]** Equality of the full D2 series beyond the leading coefficient; general n; the absorbing interface.
 
-Replay: `OPENBLAS_NUM_THREADS=1 python3 rh2p_five.py | tee docs/rh2p_five.log`
+Replay: `OPENBLAS_NUM_THREADS=1 python3 experiments/2026-09-06/rh2p_five.py | tee docs/rh2p_five.log`

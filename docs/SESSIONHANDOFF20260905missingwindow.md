@@ -133,7 +133,7 @@ MEMORY.md:37-41|note=[Used conditional theorem preferences and live project loca
 
 # Files mentioned by the user:
 
-## pinch1_horizon_branch_meet.py: /home/williaml/seated-root/pinch1_horizon_branch_meet.py
+## suites/pinch1_horizon_branch_meet.py: /home/williaml/seated-root/pinch1_horizon_branch_meet.py
 
 ## My request for Codex:
 i got this done as you worked
@@ -390,7 +390,7 @@ There’s a stronger overlap: Cella derives the indefinite form \(2I-\mathbf1\ma
 
 The constitutive target should now start from your Cella work: derive the load response with material state, environmental input and relevant history retained, then use the completed pinch equations to calculate its outcome. I’m also applying the verification-before-completion skill to check the Cella-based curvature and area identities before recording them as usable extensions.
 
-`$ const r=await tools.exec_command({cmd:"python3 cella_horizon_reuse.py > docs/cella-horizon-reuse-checks.json",workdir:"/home/williaml/seated-root",max_output_tokens:2000,yield_time`
+`$ const r=await tools.exec_command({cmd:"python3 suites/cella_horizon_reuse.py > docs/cella-horizon-reuse-checks.json",workdir:"/home/williaml/seated-root",max_output_tokens:2000,yield_time`
 
 `patch · add /home/williaml/seated-root/docs/2026-09-05-cella-dependency-reconciliation.md`
 
@@ -678,11 +678,11 @@ I’m committing my session work now, leaving your separate changes untouched.
 
 I’m saving the research and the last prose edit as separate commits, so that edit can be inspected or undone on its own.
 
-`$ text(await tools.exec_command({cmd:"python3 - <<'PY'\nimport subprocess,sys\nfrom concurrent.futures import ThreadPoolExecutor\nrunners=['horizon_crossing_metric.py','rest_frame_tr`
+`$ text(await tools.exec_command({cmd:"python3 - <<'PY'\nimport subprocess,sys\nfrom concurrent.futures import ThreadPoolExecutor\nrunners=['suites/horizon_crossing_metric.py','rest_frame_tr`
 
 `$ text(await tools.write_stdin({session_id:39693,chars:"",yield_time_ms:1000,max_output_tokens:1200}));`
 
-`$ text(await tools.exec_command({cmd:"python3 - <<'PY'\nimport json,subprocess\nfrom pathlib import Path\nroot=Path.cwd()\nfiles=['AGENTS.md','cella_horizon_reuse.py','horizon_crossi`
+`$ text(await tools.exec_command({cmd:"python3 - <<'PY'\nimport json,subprocess\nfrom pathlib import Path\nroot=Path.cwd()\nfiles=['AGENTS.md','suites/cella_horizon_reuse.py','horizon_crossi`
 
 ## ASSISTANT · 17:21
 
@@ -980,7 +980,7 @@ Payload:
 
 A useful distinction has emerged: a response can be smooth on the resolved pinch state while depending on the retained direction \(\xi\). That matters for transverse crossing. I’m checking when such a response can also descend to the collapsed state, and tightening the area calculation to use local expansion, which trapping actually requires.
 
-`$ text(await tools.exec_command({cmd:"sed -n '135,240p' cella_constitutive_divisors.py","workdir":"/home/williaml/seated-root","max_output_tokens":5000}));`
+`$ text(await tools.exec_command({cmd:"sed -n '135,240p' suites/cella_constitutive_divisors.py","workdir":"/home/williaml/seated-root","max_output_tokens":5000}));`
 
 `$ {"target":"cella_normal_geometry","message":"gAAAAABqm8j2TDXA2GMHzyDQe7qH3FDa8U3IHMFXCXc0T9TexUWRTFg2xAmGeF-OzjrCdhQ5oX6OHAWHeXKgqopSGnzYruBySLC0UuYcqVUtWGTdtlE3WqxN8p7r3uJiXiKAiXv`
 
@@ -1121,7 +1121,7 @@ Task name: /root
 Sender: /root/cella_normal_geometry
 Payload:
 
-`$ text(await tools.exec_command({cmd:"sed -n '1,225p' kin1_cost_fork.py","workdir":"/home/williaml/seated-root","max_output_tokens":8000}));`
+`$ text(await tools.exec_command({cmd:"sed -n '1,225p' suites/kin1_cost_fork.py","workdir":"/home/williaml/seated-root","max_output_tokens":8000}));`
 
 *· Deriving metric response*
 
@@ -1176,7 +1176,7 @@ The runner also connects the constant resolved response to \(\xi=1+kT\), then co
 
 `patch · update /home/williaml/seated-root/docs/EXTERNAL-MATHEMATICS-DEBT.md`
 
-`$ text(await tools.exec_command({cmd:"tail -n 28 cella_tensor_valuation.py","workdir":"/home/williaml/seated-root","max_output_tokens":1600}));`
+`$ text(await tools.exec_command({cmd:"tail -n 28 suites/cella_tensor_valuation.py","workdir":"/home/williaml/seated-root","max_output_tokens":1600}));`
 
 `$ const rs = await Promise.allSettled([`
 
@@ -1216,7 +1216,7 @@ I’m still working. One parallel worker hit a usage limit; I’m finishing the 
 
 The extensions now work together on the existing crossing: a constant resolved load generates the trajectory, the implicit-cut calculation derives its null expansions, and the tensor calculator reproduces its full Ricci tensor. I’m committing that verified checkpoint while finishing the gauge-invariant \(\nu\)-map.
 
-`$ text(await tools.exec_command({cmd:"git add -- cella_constitutive_divisors.py cella_normal_geometry.py cella_tensor_valuation.py docs/2026-09-05-cella-constitutive-divisors.md docs`
+`$ text(await tools.exec_command({cmd:"git add -- suites/cella_constitutive_divisors.py suites/cella_normal_geometry.py suites/cella_tensor_valuation.py docs/2026-09-05-cella-constitutive-divisors.md docs`
 
 `$ text(await tools.exec_command({cmd:"git commit -m 'Extend Cella constitutive response, normal geometry and tensor curvature'","workdir":"/home/williaml/seated-root","max_output_tok`
 
@@ -1678,7 +1678,7 @@ On the positive branch it fixes the retained states at \(d=0\). That gives a new
 
 `patch · add /home/williaml/seated-root/branched_resolved_response.py`
 
-`$ text(await tools.exec_command({cmd:"python3 branched_resolved_response.py > /tmp/branched-resolved-response-checks.json",workdir:"/home/williaml/seated-root",yield_time_ms:1000,max`
+`$ text(await tools.exec_command({cmd:"python3 suites/branched_resolved_response.py > /tmp/branched-resolved-response-checks.json",workdir:"/home/williaml/seated-root",yield_time_ms:1000,max`
 
 *· Reviewing BR4 after tests*
 
@@ -1714,7 +1714,7 @@ The theory now includes nine proved results and incorporates HG-1. The ruler exc
 
 *· Auditing symmetrization*
 
-`$ text(await tools.exec_command({cmd:"git add -- branched_resolved_response.py docs/2026-09-05-response-on-branched-resolved-state-spaces.md docs/branched-resolved-response-checks.js`
+`$ text(await tools.exec_command({cmd:"git add -- suites/branched_resolved_response.py docs/2026-09-05-response-on-branched-resolved-state-spaces.md docs/branched-resolved-response-checks.js`
 
 *· Validating theorem proof*
 
@@ -1853,7 +1853,7 @@ For your three correspondences, the strongest shared target is a quantum respons
 
 *· Verifying implementation state*
 
-`$ text(await tools.exec_command({cmd:"python3 quantum_prediction_probes.py > docs/quantum-prediction-probes.json","workdir":"/home/williaml/seated-root","max_output_tokens":2000,"yie`
+`$ text(await tools.exec_command({cmd:"python3 suites/quantum_prediction_probes.py > docs/quantum-prediction-probes.json","workdir":"/home/williaml/seated-root","max_output_tokens":2000,"yie`
 
 *· Checking new files*
 
@@ -1861,7 +1861,7 @@ For your three correspondences, the strongest shared target is a quantum respons
 
 `$ text(await tools.exec_command({cmd:"python3 - <<'PY'\nimport json, re\nfrom pathlib import Path\nroot = Path('/home/williaml/seated-root')\nfiles = [root/'docs/2026-09-05-quantum-p`
 
-`$ text(await tools.exec_command({cmd:"git add -- quantum_prediction_probes.py docs/2026-09-05-quantum-prediction-targets.md docs/quantum-prediction-probes.json docs/EXTERNAL-MATHEMAT`
+`$ text(await tools.exec_command({cmd:"git add -- suites/quantum_prediction_probes.py docs/2026-09-05-quantum-prediction-targets.md docs/quantum-prediction-probes.json docs/EXTERNAL-MATHEMAT`
 
 *· Checking fresh proof counts*
 
@@ -2101,7 +2101,7 @@ The cancellation now holds for every exact return time in the original loop fami
 
 `patch · add /home/williaml/seated-root/reflection_loop_composite.py`
 
-`$ text(await tools.exec_command({cmd:"python3 reflection_loop_composite.py --json docs/reflection-loop-composite-checks.json --plot docs/reflection-loop-composite-performance.png",wo`
+`$ text(await tools.exec_command({cmd:"python3 rlq/reflection_loop_composite.py --json docs/reflection-loop-composite-checks.json --plot docs/reflection-loop-composite-performance.png",wo`
 
 ## ASSISTANT · 20:24
 
@@ -2171,7 +2171,7 @@ The derivation, runner and performance figure are written, and the external-sour
 
 *· Reviewing staged diff*
 
-`$ text(await tools.exec_command({cmd:"git add -- reflection_loop_composite.py docs/2026-09-05-reflection-loop-composite-control.md docs/reflection-loop-composite-checks.json docs/ref`
+`$ text(await tools.exec_command({cmd:"git add -- rlq/reflection_loop_composite.py docs/2026-09-05-reflection-loop-composite-control.md docs/reflection-loop-composite-checks.json docs/ref`
 
 `$ text(await tools.exec_command({cmd:"git commit -m \"Cancel reflection-loop gain errors with finite composite controls\" -m \"Derive the forward-hold-inverse-hold-forward sequence a`
 
@@ -2322,7 +2322,7 @@ The full echo takes about 24 times longer. Including loss gives three useful reg
 
 *· Checking memory citations*
 
-`$ text(await tools.exec_command({cmd:"git add -- reflection_loop_reference_echo.py docs/2026-09-05-reflection-loop-reference-echo.md docs/reflection-loop-reference-echo-checks.json d`
+`$ text(await tools.exec_command({cmd:"git add -- rlq/reflection_loop_reference_echo.py docs/2026-09-05-reflection-loop-reference-echo.md docs/reflection-loop-reference-echo-checks.json d`
 
 `$ text(await tools.exec_command({cmd:"git commit -m \"Cancel reflection reference and gain-phase errors with finite echo\" -m \"Derive the reference-access trine and a continuous fou`
 
@@ -2365,11 +2365,11 @@ I’ll look for a shorter sequence that preserves the proved cancellations, then
 
 `$ const results = await Promise.allSettled([`
 
-`$ const r = await tools.exec_command({cmd:"git status --short && sed -n '1,160p' AGENTS.md && sed -n '1,220p' reflection_loop_reference_echo.py",workdir:"/home/williaml/seated-root",`
+`$ const r = await tools.exec_command({cmd:"git status --short && sed -n '1,160p' AGENTS.md && sed -n '1,220p' rlq/reflection_loop_reference_echo.py",workdir:"/home/williaml/seated-root",`
 
 *· Inspecting target structure*
 
-`$ text(await tools.exec_command({cmd:"sed -n '1,200p' docs/2026-09-05-reflection-loop-reference-echo.md && sed -n '270,560p' reflection_loop_reference_echo.py && tail -65 docs/2026-0`
+`$ text(await tools.exec_command({cmd:"sed -n '1,200p' docs/2026-09-05-reflection-loop-reference-echo.md && sed -n '270,560p' rlq/reflection_loop_reference_echo.py && tail -65 docs/2026-0`
 
 *· Exploring echo-stage pruning*
 
@@ -2377,7 +2377,7 @@ I’ll look for a shorter sequence that preserves the proved cancellations, then
 
 The current duration bound applies only to its four-pattern echo construction. I’m checking whether the trine’s own symmetries can cancel more of the response before that outer echo, reducing the number of blocks while retaining the full code response.
 
-`$ text(await tools.exec_command({cmd:"sed -n '1,165p' reflection_loop_composite.py && sed -n '1,100p' reflection_loop_dynamics.py && rg -n 'compression|Next|next target|SR-006|EXT-01`
+`$ text(await tools.exec_command({cmd:"sed -n '1,165p' rlq/reflection_loop_composite.py && sed -n '1,100p' rlq/reflection_loop_dynamics.py && rg -n 'compression|Next|next target|SR-006|EXT-01`
 
 `$ text(await tools.exec_command({cmd:"python3 - <<'PY'\nimport numpy as np\nfrom reflection_loop_reference_echo import *\nnp.set_printoptions(precision=5,suppress=True)\nvs=[np.diag(`
 
@@ -2437,7 +2437,7 @@ The exposure reduction checks out: \(78.28/a \to 41.59/a \to 28.03/a\). There is
 
 The shorter construction now uses \(11.876\) composite-duration units instead of \(24\). I’m combining both improvements in the comparison.
 
-`$ text(await tools.exec_command({cmd:"sed -n '216,265p' reflection_loop_reference_echo.py && sed -n '150,202p' reflection_loop_composite.py",workdir:"/home/williaml/seated-root",max_`
+`$ text(await tools.exec_command({cmd:"sed -n '216,265p' rlq/reflection_loop_reference_echo.py && sed -n '150,202p' rlq/reflection_loop_composite.py",workdir:"/home/williaml/seated-root",max_`
 
 `patch · update /home/williaml/seated-root/reflection_loop_reference_echo.py`
 
@@ -2568,7 +2568,7 @@ I’ll work on cancelling the remaining second-order logical detuning response, 
 
 I found a general construction that cancels the entire second-order detuning response: forward, stretched inverse, forward, with stretches \(1,\sqrt2,1\). It also cancels linear drift in that noise. I’m using it as a guaranteed solution while looking for a shorter sequence inside the existing circular-moment conditions.
 
-`$ text(await tools.exec_command({cmd:"sed -n '1,270p' reflection_loop_compression.py && sed -n '1,105p' reflection_loop_dynamics.py && sed -n '65,127p' reflection_loop_composite.py &`
+`$ text(await tools.exec_command({cmd:"sed -n '1,270p' rlq/reflection_loop_compression.py && sed -n '1,105p' rlq/reflection_loop_dynamics.py && sed -n '65,127p' rlq/reflection_loop_composite.py &`
 
 *· Creating Fourier test file*
 
@@ -2692,7 +2692,7 @@ Both constructions passed their checks. Under a duration budget of \(aT\le3000\)
 
 *· Checking rotation-factor count*
 
-`$ text(await tools.exec_command({cmd:"sed -n '1,122p' docs/2026-09-05-reflection-loop-compression.md; sed -n '1,110p' reflection_loop_reference_echo.py; git diff -- reflection_loop_c`
+`$ text(await tools.exec_command({cmd:"sed -n '1,122p' docs/2026-09-05-reflection-loop-compression.md; sed -n '1,110p' rlq/reflection_loop_reference_echo.py; git diff -- reflection_loop_c`
 
 *· Checking A0P scalar conditions*
 
@@ -2935,7 +2935,7 @@ The gain result is general: two signed angular-moment conditions double the prim
 
 *· Finishing runner functions*
 
-`$ text(await tools.exec_command({cmd:"rg -n -A 57 '^def temporal_response' reflection_loop_compression.py; rg -n -A 50 '^def bad_response' reflection_loop_compression.py; rg -n '^def`
+`$ text(await tools.exec_command({cmd:"rg -n -A 57 '^def temporal_response' rlq/reflection_loop_compression.py; rg -n -A 50 '^def bad_response' rlq/reflection_loop_compression.py; rg -n '^def`
 
 `patch · update /home/williaml/seated-root/reflection_loop_short_correction.py`
 
@@ -3024,7 +3024,7 @@ The independent check agrees with the runner. At 1% gain error, the ideal-dump c
 
 *· Verifying proof constants*
 
-`$ text(await tools.exec_command({cmd:"git add reflection_loop_detuning_certificate.py reflection_loop_short_correction.py docs/2026-09-05-reflection-loop-complete-code-correction.md `
+`$ text(await tools.exec_command({cmd:"git add rlq/reflection_loop_detuning_certificate.py rlq/reflection_loop_short_correction.py docs/2026-09-05-reflection-loop-complete-code-correction.md `
 
 `$ text(await tools.exec_command({cmd:"tail -n 14 docs/2026-09-05-reflection-loop-complete-code-correction.md && git diff --cached --numstat && python3 - <<'PY'\nimport json\nfrom pat`
 
@@ -3130,7 +3130,7 @@ The \(1/n\) improvement still applies to background loss during transport. I’m
 
 *· Implementing finite solver*
 
-`$ text(await tools.exec_command({cmd:"rg -n '^def noise_generators|^def bad_response|def packed_matrix' reflection_loop_compression.py && sed -n '68,100p' reflection_loop_compression`
+`$ text(await tools.exec_command({cmd:"rg -n '^def noise_generators|^def bad_response|def packed_matrix' rlq/reflection_loop_compression.py && sed -n '68,100p' reflection_loop_compression`
 
 *· Writing finite-model code*
 
@@ -3194,7 +3194,7 @@ The thing I'd want on that figure before it's a paper: a curve for total erasure
 
 I’ll add the paired operating-point curve, separating detected dump losses from undetected background losses. The unflagged background contribution must enter the residual-error coordinate; the roughly \(2\times10^{-13}\) value currently describes only the surviving trajectories.
 
-`$ text(await tools.exec_command({cmd:"sed -n '95,151p' reflection_loop_finite_dump.py && sed -n '333,415p' reflection_loop_finite_dump.py && git status --short","workdir":"/home/will`
+`$ text(await tools.exec_command({cmd:"sed -n '95,151p' rlq/reflection_loop_finite_dump.py && sed -n '333,415p' rlq/reflection_loop_finite_dump.py && git status --short","workdir":"/home/will`
 
 *· Updating the threshold figure*
 
@@ -3246,7 +3246,7 @@ I’m labeling the figure with complete operating points so the heralded fractio
 
 The figure now includes total absorption, the paired operating-point curves, and the unheralded residual split into missed loss and surviving-state error. The independent density-matrix check agrees with the instrument calculation; I’m committing the update.
 
-`$ text(await tools.exec_command({cmd:"git add reflection_loop_finite_dump.py docs/2026-09-05-reflection-loop-finite-dumps.md docs/reflection-loop-finite-dump-checks.json docs/reflect`
+`$ text(await tools.exec_command({cmd:"git add rlq/reflection_loop_finite_dump.py docs/2026-09-05-reflection-loop-finite-dumps.md docs/reflection-loop-finite-dump-checks.json docs/reflect`
 
 ## ASSISTANT · 23:03
 
@@ -3448,13 +3448,13 @@ The key interface is now clear: the stack needs a rule for replacing a lost carr
 
 *· Writing import tracking*
 
-`$ text(await tools.exec_command({cmd:"OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /home/williaml/.cache/seated-root-qec-venv/bin/python qec_distance_stack.py --check --shots 0 --bb-shot`
+`$ text(await tools.exec_command({cmd:"OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /home/williaml/.cache/seated-root-qec-venv/bin/python rlq/qec_distance_stack.py --check --shots 0 --bb-shot`
 
 `patch · update /home/williaml/seated-root/docs/EXTERNAL-MATHEMATICS-DEBT.md`
 
 `patch · update /home/williaml/seated-root/qec_distance_stack.py`
 
-`$ text(await tools.exec_command({cmd:"OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /home/williaml/.cache/seated-root-qec-venv/bin/python qec_distance_stack.py --shots 2000 --bb-shots 200`
+`$ text(await tools.exec_command({cmd:"OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /home/williaml/.cache/seated-root-qec-venv/bin/python rlq/qec_distance_stack.py --shots 2000 --bb-shots 200`
 
 *· Checking flag-column semantics*
 
@@ -3464,7 +3464,7 @@ The key interface is now clear: the stack needs a rule for replacing a lost carr
 
 The first surface-code runs are working end to end. I’ve also independently verified the qLDPC example’s `[[72,12,6]]` parameters, including an exhaustive check excluding logical operators below weight six. I’m checking its seven-layer syndrome schedule before the larger runs; the small pilot samples are not yet enough to quote error rates.
 
-`$ text(await tools.exec_command({cmd:"python3 - <<'PY'\nfrom pathlib import Path\np=Path('qec_distance_stack.py')\ns=p.read_text()\na=s.index('def bicycle_circuit(')\nb=s.index('\\n\`
+`$ text(await tools.exec_command({cmd:"python3 - <<'PY'\nfrom pathlib import Path\np=Path('rlq/qec_distance_stack.py')\ns=p.read_text()\na=s.index('def bicycle_circuit(')\nb=s.index('\\n\`
 
 *· Running full parameter surface*
 
@@ -3484,7 +3484,7 @@ The first surface-code runs are working end to end. I’ve also independently ve
 
 `$ text(await tools.write_stdin({session_id:76799,chars:"","yield_time_ms":1000,"max_output_tokens":3000}));`
 
-`$ text(await tools.exec_command({cmd:"OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /home/williaml/.cache/seated-root-qec-venv/bin/python qec_distance_stack.py --check --shots 200000 --bb`
+`$ text(await tools.exec_command({cmd:"OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /home/williaml/.cache/seated-root-qec-venv/bin/python rlq/qec_distance_stack.py --check --shots 200000 --bb`
 
 *· Preparing experiment document*
 
@@ -3546,7 +3546,7 @@ A useful result: at distance 9, 85.5% of the main-point trials contained at leas
 
 *· Preparing core commit*
 
-`$ text(await tools.exec_command({cmd:"git diff --check\n python3 -m py_compile qec_distance_stack.py test_qec_distance_stack.py\n wc -l qec_distance_stack.py test_qec_distance_stack.`
+`$ text(await tools.exec_command({cmd:"git diff --check\n python3 -m py_compile rlq/qec_distance_stack.py tests/test_qec_distance_stack.py\n wc -l rlq/qec_distance_stack.py test_qec_distance_stack.`
 
 *· Updating tables and schema*
 
@@ -3576,7 +3576,7 @@ The final checks pass, including forced erasures at all 918 tested gate location
 
 `$ const results=await Promise.allSettled([`
 
-`$ text(await tools.exec_command({cmd:"git add qec_distance_stack.py test_qec_distance_stack.py qec_stack_requirements.txt docs/2026-09-06-distance-code-test.md docs/qec-distance-stac`
+`$ text(await tools.exec_command({cmd:"git add rlq/qec_distance_stack.py tests/test_qec_distance_stack.py qec_stack_requirements.txt docs/2026-09-06-distance-code-test.md docs/qec-distance-stac`
 
 `$ text(await tools.exec_command({cmd:"git commit -m \"Test finite-dump instrument in surface and qLDPC QEC circuits\"",workdir:"/home/williaml/seated-root",yield_time_ms:1000,max_out`
 

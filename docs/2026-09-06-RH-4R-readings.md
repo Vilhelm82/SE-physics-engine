@@ -1,7 +1,7 @@
 # RH-4R -- FD's six readings with the accumulator on the same axes
 
 **[numerical | FD curves from FD's receipt; accumulator from rh4_capture at the same (n, gain, delta, gamma) points]**
-Figure `docs/rh4-readings-vs-fd.png`, runner `rh4_readings.py`, receipt `rh4_readings-checks.json`. Two register variants:
+Figure `docs/rh4-readings-vs-fd.png`, runner `experiments/2026-09-06/rh4_readings.py`, receipt `rh4_readings-checks.json`. Two register variants:
 ideal (no decoherence) and realistic (gamma_r = gamma_phi = 1e-3, monitored). Capture t_c = 1/a per hold. n = 1, 2, 3.
 
 ## What the panels say
@@ -46,4 +46,4 @@ branch is as clean as the survivor), or a per-slot correction inside the registe
 or accept it and note that at any background above ~1e-9 it is invisible. Kill for the first: if no five-or-more-loop word
 with tight aggregate frame AND detuning-cancelled partial products exists, the floor is structural.
 
-Replay: `~/.cache/seated-root-qec-venv/bin/python rh4_readings.py`
+Replay: `~/.cache/seated-root-qec-venv/bin/python experiments/2026-09-06/rh4_readings.py`

@@ -1,6 +1,6 @@
 # A thirteen-block reflection word with the gain leakage column removed (v = 0)
 
-Claire, 2026-09-05 evening.  Runner `claire_v0_thirteen.py` (30 seeded starts, ~6 min), receipt `docs/claire-v0-thirteen-checks.json`.
+Claire, 2026-09-05 evening.  Runner `experiments/2026-09-05/claire_v0_thirteen.py` (30 seeded starts, ~6 min), receipt `docs/claire-v0-thirteen-checks.json`.
 Judge: Will's own evaluators (`reflection_loop_detuning_order`, `_reference_echo`, `_compression`); the design is the input.
 No existing document or runner is edited.  **Tier: DERIVED | Will's evaluators as stated.**  No interval certificate: the centre is a
 double-precision root with residual 5.6e-12.  KILL: any printed check failing on re-run.

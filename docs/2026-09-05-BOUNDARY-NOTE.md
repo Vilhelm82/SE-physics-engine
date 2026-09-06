@@ -1,6 +1,6 @@
 # The boundary note -- the readout tier, the horizon and the sky are one boundary
 
-Written 2026-09-05 evening (Claire). Receipt: `bnd1_boundary_receipt.py` (10/10). Source of the identification:
+Written 2026-09-05 evening (Claire). Receipt: `suites/bnd1_boundary_receipt.py` (10/10). Source of the identification:
 MATH-FOUNDATION-AUDIT sec. 2.9 (`8771dda`), which named it and asked for no new computation; Codex's second audit sec. 3.9,
 which supplies the 2+1 caveat. Tier: the identities are DERIVED; the reading of them is a NAMING, and one consequence is a
 consistency the fourth direction must pass. Nothing here changes a number.
@@ -29,7 +29,7 @@ With u = -cos theta this is s^-(n-1). So:
   round measure -- harmonic measure (b2a, b2b);
 - the Legendre polynomials are the zonal spherical functions of SO(2,1);
 - the mirror (p, m) -> (-p, 1 - m) is the weight duality w <-> Q - w of the boundary (principal-series) representations,
-  which graph_cocycle.py had already reduced it to;
+  which suites/graph_cocycle.py had already reduced it to;
 - Q-RN ("why is a reading a power of a Radon-Nikodym derivative?") has its answer: a seat's readings are sections of
   homogeneous line bundles over the boundary of its symmetric space; the weight is the representation label; Q is the
   dimension of the boundary. The 08-28 handoff's "structural bet" that Q is a carrier dimension is confirmed.

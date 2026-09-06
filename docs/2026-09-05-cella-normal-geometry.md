@@ -529,7 +529,7 @@ This connects the resolved constitutive trajectory, implicit normal geometry and
 
 ## 8. Verification and provenance
 
-Run [cella_normal_geometry.py](/home/williaml/seated-root/cella_normal_geometry.py). Its exact output is [cella-normal-geometry-checks.json](/home/williaml/seated-root/docs/cella-normal-geometry-checks.json). The replay compares implicit reconstruction with direct embedding derivatives for a mixed codimension-two graph in \(1+4\) dimensions, checks all cubic normal monomials, tests a nonconstant matrix defining-function gauge including nonzero channel transfer, and checks the normal-connection law from independently differentiated gauged relations. A second graph has
+Run [suites/cella_normal_geometry.py](/home/williaml/seated-root/cella_normal_geometry.py). Its exact output is [cella-normal-geometry-checks.json](/home/williaml/seated-root/docs/cella-normal-geometry-checks.json). The replay compares implicit reconstruction with direct embedding derivatives for a mixed codimension-two graph in \(1+4\) dimensions, checks all cubic normal monomials, tests a nonconstant matrix defining-function gauge including nonzero channel transfer, and checks the normal-connection law from independently differentiated gauged relations. A second graph has
 
 \[
 \omega_u(0)=\omega_v(0)=0,\qquad

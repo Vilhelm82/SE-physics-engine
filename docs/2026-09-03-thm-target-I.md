@@ -1,6 +1,6 @@
 # THM-TARGET I — light, matter and the field law in the pinned family
 Written 2026-09-03.  Three suites, all green on the 7800X3D, all committed with logs:
-`thm_i_pre.py` **19/19** (`baf7401`), `thm_i_transport.py` **11/11** (`67f573f`), `thm_i_field.py` **10/10** (`3fedde7`).
+`suites/thm_i_pre.py` **19/19** (`baf7401`), `suites/thm_i_transport.py` **11/11** (`67f573f`), `suites/thm_i_field.py` **10/10** (`3fedde7`).
 Read after `docs/prereg/CURV-1/CURV1-RESULTS.md`.  Re-running is the verification.
 
 ## The question and what it became
@@ -24,7 +24,7 @@ New, named this target:
   drifts at the pinned velocity toward the centre relative to the static seats.  [construction]
 - **RULE G** — the local transport law found in part A (below).  [derived from STAT-1/ROT-1: the unique candidate]
 
-## 1. Pre-tests (`thm_i_pre.py`)
+## 1. Pre-tests (`suites/thm_i_pre.py`)
 - **Redshift.**  The static seat reads a ray by pairing with A·1·A; the frozen E-4 convention gives e^{−λ} for an
   outgoing ray (redshift; sign not chosen).  With STAT-1, ω_static ∝ cosh λ, so between static seats
   ω₂/ω₁ = √((1−r_s/r₁)/(1−r_s/r₂)) = 1 − (r_s/2)(1/r₁ − 1/r₂) + …: coefficient ½.
@@ -37,7 +37,7 @@ New, named this target:
 - **The deflection.**  b·δ → 2.000003 at b/r_s = 10⁶; second-order coefficient 2.945248 against 15π/16 = 2.945243.
   The factor 2 has an address: the rod office supplies 1 − r_s/r, the time office supplies the drift in ω_t.
 
-## 2. The local transport rule (`thm_i_transport.py`, part A)
+## 2. The local transport rule (`suites/thm_i_transport.py`, part A)
 Three candidate local maps X(x+dx) = Λ X Λ†, symbolic first-order drift of (ω_t, L), then integrated as ODEs:
 
 | rule | what it is | d ω_t/dt, dL/dt at a generic point | swept angle vs exact (b = 100 r_s, r₀ = 1000 r_s) |
@@ -57,7 +57,7 @@ L = m r sinh ζ sin α, and the orbit closes as the identity
 (dr/dφ)² = (r⁴/L̃²)[Ẽ² − (1 − tanh²λ)(1 + L̃²/r²)] for any profile (M-2); rule G conserves E and L with the body's
 own step e⃗ = u⃗ dt (M-3); the perihelion advance for r_p = 2×10⁴, r_a = 3×10⁴ r_s gives Δφ·ℓ/π = **3.0003** (M-4).
 
-## 3. The field law (`thm_i_field.py`, part B)
+## 3. The field law (`suites/thm_i_field.py`, part B)
 **Forced for every profile (kinematic tier):** ρ_K·N² = cosh²λ·sech²λ = 1.  The presented radial rod and the static
 clock are one Lorentz factor, so the spatial stretch per unit potential is 1 — PPN γ = 1 with no field law at all.
 

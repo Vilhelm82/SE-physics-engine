@@ -130,7 +130,7 @@ The runtime dependencies are pinned in [qec_stack_requirements.txt](/home/willia
 uv venv --python 3.13 /home/williaml/.cache/seated-root-qec-venv
 uv pip install --python /home/williaml/.cache/seated-root-qec-venv/bin/python -r qec_stack_requirements.txt
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
-  /home/williaml/.cache/seated-root-qec-venv/bin/python qec_distance_stack.py \
+  /home/williaml/.cache/seated-root-qec-venv/bin/python rlq/qec_distance_stack.py \
   --check --shots 200000 --bb-shots 10000 --distances 3 5 7 9 \
   --scenarios baseline five background \
   --json docs/qec-distance-stack-checks.json \

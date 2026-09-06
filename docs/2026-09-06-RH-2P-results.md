@@ -8,7 +8,7 @@ correction of exponent rho = 1.048 (U-0799). The amplitude is path-invariant acr
 16+ digits at 50 dps, and eps-independent up to that O(eps) drift. The cubic law is physics, not the integrator.
 
 **[provenance]** Run 2026-09-06 by Claire from HEAD `95ab648` (runner with predictions P1-P4 in its docstring
-committed before the log). `rh2_precision.py`, receipt `rh2_precision-checks.json`, log `rh2_precision.log`.
+committed before the log). `rlq/rh2_precision.py`, receipt `rh2_precision-checks.json`, log `rh2_precision.log`.
 20/20 numerical checks. The float64 closed form reproduces `rh1_common.trine_loop` to 0.0 (bit-identical
 algebra). Precisions: complex64 (u = 2^-24), complex128 (2^-53), mpmath 30 dps (2.0e-31), 50 dps (2.7e-51).
 
@@ -78,7 +78,7 @@ information loss (U-1558) is the flat zero of RH-1c; the early/late reassociatio
 is RH-1b vs RH-2; the BACL invariant (U-0766) is the representability condition the fold-back needed. Cross-corpus
 edges are candidates for the DAG when submissions reopen; none submitted.
 
-Replay: `OPENBLAS_NUM_THREADS=1 python3 rh2_precision.py --json docs/rh2_precision-checks.json | tee docs/rh2_precision.log`
+Replay: `OPENBLAS_NUM_THREADS=1 python3 rlq/rh2_precision.py --json docs/rh2_precision-checks.json | tee docs/rh2_precision.log`
 
 **Closed form found 2026-09-06 (RH-2A, `docs/2026-09-06-RH-2A-a0-closed-form.md`):** a0 = 3375 sqrt(5) pi^3/32768 exactly;
 with x = (15 pi/32) eps, DB = sqrt(5) x^3 (1 - 55 eps/32 + ...), c = (15/2) x^2, floor = (25/4) x^8 = 138.2322 eps^8.

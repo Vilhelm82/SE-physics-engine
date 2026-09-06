@@ -2,8 +2,8 @@
 Written 2026-09-05 against HEAD `45c7443` (paper v0.5, PRIMITIVES v0 draft, LABELLED-MODEL, CONJECTURE-COSMOLOGY).
 **Status: AUDIT.** Nothing here changes a tier in the repo. It says which tiers are carrying the wrong label, which body of
 mathematics is doing which job, where a stronger and more general frame already exists, and where the model would have to
-build its own. Every runner cited was read in full or in its header block; `prim_t7_seat_form.py` (18/18) and
-`prim_t8c_reciprocity.py` (14/14) were re-run during the audit and are green in this environment. Will's untracked
+build its own. Every runner cited was read in full or in its header block; `suites/prim_t7_seat_form.py` (18/18) and
+`suites/prim_t8c_reciprocity.py` (14/14) were re-run during the audit and are green in this environment. Will's untracked
 curvature notes (`GRAM_SUBMERSION_CURVATURE.md`, `INERTIA_NODE_DETECTOR.md`) were read from the main checkout. No other
 corpus was used as an input.
 
@@ -54,11 +54,11 @@ invented: Will's impedance is a Hermitian structure on the seat's state space, a
 | 5 | real Clifford algebra, Pin(2,1), central idempotents | `prim_t5b`, `prim_t5c`, `prim_t8a`, `prim_t8b` | the sheet, the fourth direction, the spinor bilinear | Cl(2,1) ≅ M₂(ℝ) ⊕ M₂(ℝ); Cl(2,1) ⊂ Cl(3,1) or Cl(2,2); the charge-conjugation form |
 | 6 | exterior algebra, Hodge star | `prim_t8c`, `thm_k_response_map` | signature of Γ₄; constitutive map | ⋆² = (−1)^{n₋} on 2-forms in n = 4; premetric electrodynamics (Hehl–Obukhov) |
 | 7 | finite combinatorics | `label2`, `label3`, `label3b`, `prim_t5b` part B | the octahedron, the Boolean lattice, parity | the 3-cross-polytope; 2^{C,H,G}; S₃/A₃; hyperoctahedral group B₃ |
-| 8 | real algebraic geometry of symmetroids, convex geometry | `cayley.py`, paper §2 | the branch surface, the click group | Cayley's nodal cubic; the elliptope; Aut = S₄ |
-| 9 | Kummer theory, Galois covers, monodromy | `galois.py`, `thm_b_monodromy`, `thm_galois_deck_descent`, `correspondence_july` | the deck ℤ₂, the descent of arg B | multiquadratic extensions; odd-valuation rank criterion; inertia at nodes |
-| 10 | U(1) graph cohomology, Bargmann invariants | `bargmann.py`, `graph_cocycle.py`, `pred1_*`, `pivot_map*`, `census_c`, `view1` | the phase, PREDICTION-1 | Bargmann/Pancharatnam; Li–Wagner–Zhang Thm V.1; Van Oosterom–Strackee |
+| 8 | real algebraic geometry of symmetroids, convex geometry | `suites/cayley.py`, paper §2 | the branch surface, the click group | Cayley's nodal cubic; the elliptope; Aut = S₄ |
+| 9 | Kummer theory, Galois covers, monodromy | `suites/galois.py`, `thm_b_monodromy`, `thm_galois_deck_descent`, `correspondence_july` | the deck ℤ₂, the descent of arg B | multiquadratic extensions; odd-valuation rank criterion; inertia at nodes |
+| 10 | U(1) graph cohomology, Bargmann invariants | `suites/bargmann.py`, `suites/graph_cocycle.py`, `pred1_*`, `pivot_map*`, `census_c`, `view1` | the phase, PREDICTION-1 | Bargmann/Pancharatnam; Li–Wagner–Zhang Thm V.1; Van Oosterom–Strackee |
 | 11 | Möbius action on the boundary, Radon–Nikodym cocycles, power means, Mellin | `thm_g`, `thm_rn`, `bridge_dbp`, `graph_cocycle` part 1, spec I | the readout tier: presentation families, blind mass, mirror, trichotomy | Poisson kernel of H^n; conformal weights; Hellinger midpoint |
-| 12 | Kähler geometry of (S²)³; Hamiltonian vs gradient flow | `kahler.py`, `doors.py` | the dynamics candidates; the dial | h = g + iω on (ℂP¹)³; metriplectic flow |
+| 12 | Kähler geometry of (S²)³; Hamiltonian vs gradient flow | `suites/kahler.py`, `suites/doors.py` | the dynamics candidates; the dial | h = g + iω on (ℂP¹)³; metriplectic flow |
 | 13 | Riemannian submersion, O'Neill, mechanical connection | Will's `GRAM_SUBMERSION_CURVATURE`, `INERTIA_NODE_DETECTOR`, THM-J | the curvature tier KIN-2b; the dead dynamics | shape-space geometry (Littlejohn–Reinsch); ‖F‖ ∼ Δ^{−m/2} |
 | 14 | Cl(3) paravector boosts; PG river; Gauss–Codazzi on a flat slice; geodesics | `thm_h*`, `thm_i*`, `thm_l`, `thm_m`, `thm_n`, `thm_o`, `curv1_*`, `sect1` | the gravitational sector | Lorentz boosts of a 4-vector; ADM constraints in Painlevé–Gullstrand gauge; Schwarzschild/Lense–Thirring |
 | 15 | thermodynamic declarations | `thm_k_clausius` | the pinning from temperature | Jacobson/Verlinde equipartition with the Bekenstein–Hawking entropy declared |
@@ -146,7 +146,7 @@ H² = SO(2,1)/SO(2), and by Gauss–Bonnet holonomy equals enclosed area at curv
 Van Oosterom–Strackee formula is the right closed form. **[retrodiction]** as mathematics; nothing conditioned. It generalises
 verbatim to H^n (the Thomas–Wigner rotation is the area of the geodesic triangle for any n). Its role in the model is to identify
 the seat-cycle holonomy of §9 with the boost-triangle area — which is a *Lorentzian* statement on the (2,1) frame space, and
-therefore the natural replacement for the Euclidean solid-angle statement of `bargmann.py` when §9 is migrated (§4).
+therefore the natural replacement for the Euclidean solid-angle statement of `suites/bargmann.py` when §9 is migrated (§4).
 
 ### 2.4 Complexified one-parameter groups — the periods and the cover (row 4; T4, THM-D2)
 
@@ -262,7 +262,7 @@ moves the origin by λ is P^{\,n−1} in the round measure. So:
 - the blind-mass theorem ∫ s^{Q} dμ′ = 1 is the statement that the Poisson kernel integrates to one (harmonic measure);
 - the Legendre polynomials are the zonal spherical functions of SO(2,1);
 - the mirror (p, m) ↦ (−p, 1−m) is the weight duality w ↔ Q − w of the boundary (principal-series) representations, the
-  α ↔ 1−α symmetry `graph_cocycle.py` already downgraded it to;
+  α ↔ 1−α symmetry `suites/graph_cocycle.py` already downgraded it to;
 - Q-RN ("why is a reading a power of a Radon–Nikodym derivative?") has an answer: because a seat's readings are sections of
   homogeneous line bundles over the boundary of its symmetric space, and the weight is the representation label. Q is the
   carrier dimension — the 08-28 handoff's "structural bet", confirmed.
@@ -293,7 +293,7 @@ Second, and more useful: **the dial is Will's impedance.** A complex coefficient
 with an in-phase (dissipative) part and a quadrature (reactive) part, and that is exactly a Hermitian form h = g + iω on the
 state space: g is the resistance, ω the reactance, the dial angle θ the impedance phase. So "the load's impedance as a function
 of state" — named in PRIMITIVES as the one unknown behind the dynamics tier — is *a Hermitian structure on the state space*,
-which the repo already has in `kahler.py`. The open question is not what mathematics to invent but which Hermitian structure on
+which the repo already has in `suites/kahler.py`. The open question is not what mathematics to invent but which Hermitian structure on
 which quotient of the (2,1) frame space is forced; on H² there is one candidate up to a scalar. This is a hunch with a runner
 behind it, and it is the reason §6 recommends against inventing a dynamics calculus.
 
@@ -344,7 +344,7 @@ Row 16: Ford–Kac–Mazur elimination and classical FDT, lineage loud, coupling
 Label-free it is: the seat's environment is the boundary of its symmetric space with the round measure pushed through the
 pivot (§2.9), which is why the band is flat. Row 17: N² = 1/(1+η) as a divider ratio is algebra (any number in (0,1] is a
 divider ratio); its content is the identification η = Z_source/Z_load, which is a claim about a response map not yet built.
-Its mathematical form is §2.10's Hermitian structure. `hunch_z0_impedance.py` is honest that it is dimensional analysis until the
+Its mathematical form is §2.10's Hermitian structure. `suites/hunch_z0_impedance.py` is honest that it is dimensional analysis until the
 charged load is constructed.
 
 ---
@@ -391,8 +391,8 @@ hypothesis it uses.
 T7b1 proves one form for the frame; the frame therefore has exactly one negative line, and no seat's resolution is the
 positive-definite Gram. So the Euclidean cell is not "the Euclidean seat's construction" (as the PRIMITIVES corrections say) —
 there is no such seat. It is the vector part of the Cl(3) paravector: the import, surviving in every file that predates T7.
-That includes the banked prediction. PRED-1's algebraic half (`thm_galois_deck_descent.py`) and its operational protocol
-(`pred1_operational_chain.py`, `pred1_physical_protocol.py`) are computed on S².
+That includes the banked prediction. PRED-1's algebraic half (`suites/thm_galois_deck_descent.py`) and its operational protocol
+(`suites/pred1_operational_chain.py`, `suites/pred1_physical_protocol.py`) are computed on S².
 
 **What survives migration unchanged, what changes, what dies.** The two state spaces are the two real forms of one complex
 object: the complex symmetroid {det G = 0} in the space of complex symmetric 3×3 matrices with the diagonal fixed up to signs,

@@ -2,8 +2,8 @@
 
 **Outcome:** the minimal continuation of THM-M is **killed before the Kerr quadrupole gate**.
 
-Artifact: `thm_n_kerr_quadrupole.py`. Regression tests:
-`test_thm_n_kerr_quadrupole.py` (4/4). The theorem script carries eight exact
+Artifact: `suites/thm_n_kerr_quadrupole.py`. Regression tests:
+`tests/test_thm_n_kerr_quadrupole.py` (4/4). The theorem script carries eight exact
 checks by two independent angular-average routes.
 
 ## Question

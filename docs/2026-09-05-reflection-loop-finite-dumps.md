@@ -183,7 +183,7 @@ The dump sweep retains duration as a variable. At $\kappa/a=10$, action 24 gives
 All **139 numerical checks and six symbolic identities pass**. They cover all three returns; the six static logical responses; the complete finite no-click map; gain endpoints; mixed coefficients and detuning scaling; probability conservation and flag positivity; direct chronological dump integration; integration convergence; physical joins; and the nominal background-loss law. FD-7 is checked against independent density-matrix evolution with separate absorbing registers, together with the zero-background and fully monitored limits. The independent laboratory integrations include the negative time-reversed controls and absorbing dumps explicitly.
 
 ```bash
-OPENBLAS_NUM_THREADS=1 python3 reflection_loop_finite_dump.py --json docs/reflection-loop-finite-dump-checks.json --plot docs/reflection-loop-finite-dump-tradeoffs.png
+OPENBLAS_NUM_THREADS=1 python3 rlq/reflection_loop_finite_dump.py --json docs/reflection-loop-finite-dump-checks.json --plot docs/reflection-loop-finite-dump-tradeoffs.png
 ```
 
 **Next target:** cancel the quadratic full-instrument response: the remaining logical detuning/mixed-gain distortion and state dependence of the flag effect, while retaining the finite dump and its duration. The five-loop construction supplies the baseline and exact response matrices for that extension.

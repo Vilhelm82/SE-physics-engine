@@ -16,7 +16,7 @@ they differ and is not in the repo.
 Three lines through a root (P2), each with two ends. Six ends = six poles. Take the six poles as
 vertices: they form an **octahedron**. Its 12 edges join poles on *different* axes. Its 8 faces are
 the octants — each bordered by exactly one pole from each axis. Every edge borders exactly two
-faces, and they differ only in the axis the edge does not touch. [PROVED, `label2_octahedron.py`]
+faces, and they differ only in the axis the edge does not touch. [PROVED, `suites/label2_octahedron.py`]
 
 A face is what the seat sees looking into an octant: the plane perpendicular to that line of
 sight, bordered by three poles. "Faces" here are these eight — not the six faces of a cube. [Will]
@@ -116,7 +116,7 @@ real loop. [LABEL-1, 13/13, checked against a DECLARED comparison table; graded 
 cover; even powers of $W$ are axes (poles), odd powers are planes. [PROVED, inline 09-04] Each loop
 has eight stations; the four odd ones sit on the octahedron's edges, and an edge is labelled by
 the axis the loop never touches — the seat's space showing up as what you are not looking at.
-[PROVED, `label2_octahedron.py`]
+[PROVED, `suites/label2_octahedron.py`]
 
 **Shared-station consistency.** Loops A and B both pass through Light and Temperature: the
 temperature reached via ħ (Unruh) must equal the one reached via G (Hawking). **DERIVED — T4.**
@@ -130,7 +130,7 @@ Loops A and C share Action/Evanescence; B and C share Mass/Energy: those two con
 Each face is a triple — one pole per axis — and its physics is the sum of its three borders.
 The faces form the Boolean lattice $2^{\{C,H,G\}}$ of three flips: $C$: Light → Temperature,
 $H$: Action → Evanescence, $G$: Mass → Energy. Ours is $\varnothing$; Hawking's is $CHG$, its exact
-antipode $-f_0$. [PROVED, `label3_lattice.py`, `label3b_corrections.py`]
+antipode $-f_0$. [PROVED, `suites/label3_lattice.py`, `suites/label3b_corrections.py`]
 
 | flips | poles | contributions | physics (DECLARED candidate) | status |
 |---|---|---|---|---|
@@ -171,7 +171,7 @@ two classes by permutation parity, $S_3/A_3 = \mathbb Z_2$:
 $$\mathcal C_+ = \{CHG, HGC, GCH\}, \qquad \mathcal C_- = \{CGH, GHC, HCG\}.$$
 
 Face = unordered physical content. **Sheet = causal orientation of arrival.** [Will; PROVED as
-the Pin(2,1) lift, `prim_t5b_parity.py`: the flips are orthogonal reflections, their lifts
+the Pin(2,1) lift, `suites/prim_t5b_parity.py`: the flips are orthogonal reflections, their lifts
 anticommute, every adjacent transposition costs $-1$]
 
 The observable that reads the sheet is the raw spinor trace
@@ -180,7 +180,7 @@ $$\mathcal V_{\rm spin} = \operatorname{tr}_2(\Gamma_C \Gamma_H \Gamma_G) = 2D, 
 
 with $D = \det[\hbar, G, c]$ the frame's *oriented* volume. Magnitude = volume, sign = orientation,
 defined and zero on the branch locus where only $\operatorname{sgn} D$ is undefined. This is **not**
-the projector Bargmann invariant, which is real and even in $D$. [PROVED, `prim_t5c_corrections.py`]
+the projector Bargmann invariant, which is real and even in $D$. [PROVED, `suites/prim_t5c_corrections.py`]
 
 $\mathrm{Cl}(2,1) = M_2(\mathbb R) \oplus M_2(\mathbb R)$; the two blocks give $\mathcal V_{\rm spin} =
 \pm 2D$; **the block label is the sheet**; the full $4\times4$ trace is sheet-blind. The
@@ -223,8 +223,8 @@ constitutive channels.
 
 ## Sources
 
-`label1_wick_loops.py` (13/13) · `label2_octahedron.py` (11/11) · `label3_lattice.py` (14/14) ·
-`label3b_corrections.py` (10/10) · `prim_t5_area_and_lifts.py` (14/14) · `prim_t5b_parity.py`
-(19/19) · `prim_t5c_corrections.py` (19/19) · `prim_t7b_labelling.py` (18/18) ·
-`hunch_z0_impedance.py` (8/8) · `thm_k_response_map.py` (7/7). The table in §1 is Will's,
+`suites/label1_wick_loops.py` (13/13) · `suites/label2_octahedron.py` (11/11) · `suites/label3_lattice.py` (14/14) ·
+`suites/label3b_corrections.py` (10/10) · `suites/prim_t5_area_and_lifts.py` (14/14) · `suites/prim_t5b_parity.py`
+(19/19) · `suites/prim_t5c_corrections.py` (19/19) · `suites/prim_t7b_labelling.py` (18/18) ·
+`suites/hunch_z0_impedance.py` (8/8) · `suites/thm_k_response_map.py` (7/7). The table in §1 is Will's,
 2026-09-04.

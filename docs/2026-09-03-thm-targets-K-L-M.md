@@ -1,6 +1,6 @@
 # THM-TARGETS K, L, M — the pinning from temperature, rotation, and the swirl as the boost of the pinning
-Written 2026-09-03, late.  `thm_k_clausius.py` **16/16** (`5c58e8e`), `thm_l_rotation.py` **10/10** (`d863efa`),
-`thm_m_swirl.py` **9/9** (`68f3a9f`).  Read after `docs/2026-09-03-thm-target-J.md`.  Re-running is the verification.
+Written 2026-09-03, late.  `suites/thm_k_clausius.py` **16/16** (`5c58e8e`), `suites/thm_l_rotation.py` **10/10** (`d863efa`),
+`suites/thm_m_swirl.py` **9/9** (`68f3a9f`).  Read after `docs/2026-09-03-thm-target-J.md`.  Re-running is the verification.
 
 ## In one paragraph
 THM-J closed the geometric route to the field law.  THM-K opened the thermal one and it went through: the seat's own Unruh

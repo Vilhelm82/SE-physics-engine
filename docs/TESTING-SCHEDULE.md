@@ -1,7 +1,7 @@
 # TESTING SCHEDULE (opened 2026-08-30)
 
 ## RUN
-- **THM-H part 2, D1 two-seat interior** -- `thm_h2_d1.py` (30/30, `run_h2_d1.log`).
+- **THM-H part 2, D1 two-seat interior** -- `suites/thm_h2_d1.py` (30/30, `run_h2_d1.log`).
   Fork (b): NO rod-free click-invariant diverges at the centre, seat layer (K = root)
   or world layer (K click-symmetric, run as control). RULING-2 (Will, 2026-09-02):
   C is the hole, A is the infalling seat projected out of C.
@@ -20,7 +20,7 @@
   Conditional on KIN-2a, CONT-1, RULING-2. New named debt: CURV-1 (does the model
   own a rod-free curvature reading? -- the single remaining way (b) could be
   'too coarse to see it' rather than 'artifact').
-- **THM-H part 1, the presented state along the pinned family** — `thm_h.py`
+- **THM-H part 1, the presented state along the pinned family** — `suites/thm_h.py`
   (25/25, `run_h.log`). Fork (b): the hole is a PRESENTED STATE. Theorem:
   G'(l) = G + sinh^2(l) k k^T with k_i = a_i.K, so det G' = Delta cosh^2(l)
   (the frame's Delta is a spectator; RULE-1 pairing Gram is l-independent).
@@ -35,14 +35,14 @@
   Naming: KIN-2 is now split — KIN-2a = the pinning (still DECLARED);
   KIN-2b = the curvature tier (CLOSED by docs/GRAM_SUBMERSION_CURVATURE/).
   The 08-30 handoff's "KIN-2 closed" refers to 2b only.
-- **PRED-1 cross-seat cycle** — `pred1_cross_seat.py` (12/12). Split verdict:
+- **PRED-1 cross-seat cycle** — `suites/pred1_cross_seat.py` (12/12). Split verdict:
   modulus layer is a coboundary (kill condition fires there; the DeltaQ
   "holonomy" is paid exactly by the cover measure density); the phase layer
   arg B = arg(S+iV) is the genuine class — gauge-invariant, Z2-conjugated,
   generically nonzero, and equal to the banked PREDICTION-1 observable
   (J = V at s = 1/2). Transition map = G-8 cover dictionary (named input).
 
-- **E-8-X cross-seat pairing** — `e8x_cross_pairing.py` (15/15). Fork (b):
+- **E-8-X cross-seat pairing** — `suites/e8x_cross_pairing.py` (15/15). Fork (b):
   the net closes. Invariant exists for one rotor acting two-sided on the c
   slot, one-sided on the hbar slot; the quadratic hbar slot is REQUIRED
   (linear no-go). State lemma: psi psi~ has grades {0,1}, so the hbar STATE
@@ -51,10 +51,10 @@
   J = V is the area-tangent identity (comparison-stage names in the file;
   protocol family for PRED-1 = polarimetric interferometry).
 
-- **DEBT-2b, c(w) from the channel law** — `debt2b.py` (12/12). Fork (a):
+- **DEBT-2b, c(w) from the channel law** — `suites/debt2b.py` (12/12). Fork (a):
   DISCHARGED. RULE-4 + M-2's office Jacobian + the golden rule force
   c(w)^2 g0(w) = C w^2 uniquely (functional equation; eta the only knob).
-  debt2.py's declared Ohmic-in-band becomes derived, zero amendment. Bonus:
+  suites/debt2.py's declared Ohmic-in-band becomes derived, zero amendment. Bonus:
   the F-12..15 moment table is the pivot's eigenvalue table on power-law
   bath weights; fixed points exactly {0,2}; the forced alpha = 2 is the
   Jacobian-blind route. Office-ghost quantified: one office error shifts
@@ -62,40 +62,40 @@
   LBL-2, GR conventions (named).
 
 ## QUEUED
-  0. ~~**CURV-1**~~ DONE 2026-09-02 evening: `curv1_path1.py` 40/40, `curv1_path23.py` 15/15,
+  0. ~~**CURV-1**~~ DONE 2026-09-02 evening: `suites/curv1_path1.py` 40/40, `suites/curv1_path23.py` 15/15,
      report `docs/prereg/CURV-1/CURV1-RESULTS.md`. Fork (b) at the centre on every path:
      seat layer reads the dihedral angle at the root, world layer reads 2 pi with spin -1
      (the deck Z2), loop holonomy -1 around the centre at every radius. The excess DOES
      diverge inside, at presented-collision radii (seat layer: r_s Delta/(1-g12^2)).
      Two rulings owed (CARRY-8 letter vs angular separations; identity semantics).
 - (next, in order:)
-  0a. **THM-TARGET I** DONE 2026-09-03: `thm_i_pre.py` 19/19, `thm_i_transport.py` 11/11, `thm_i_field.py`
+  0a. **THM-TARGET I** DONE 2026-09-03: `suites/thm_i_pre.py` 19/19, `suites/thm_i_transport.py` 11/11, `suites/thm_i_field.py`
      10/10, report `docs/2026-09-03-thm-target-I.md`. Ray and orbit kinematics of the pinned family = the
      full Schwarzschild geodesic structure (null and timelike, 2nd order incl.): factor 2, 15 pi/16, perihelion 3;
      gamma = 1 forced by the boost; local transport = gradient of the pivot field along the co-moving step (both
      seat-rotor rules fail); field law narrowed to ONE variable: Delta/det G' (reciprocal presented volume) harmonic.
-  0b. ~~dynamics-tier question~~ DONE 2026-09-03 as **THM-TARGET J** (`thm_j_dyn.py` 7/7,
+  0b. ~~dynamics-tier question~~ DONE 2026-09-03 as **THM-TARGET J** (`suites/thm_j_dyn.py` 7/7,
      `docs/2026-09-03-thm-target-J.md`): NOT DERIVED. Any gradient-quadratic energy makes its own arc
      length harmonic (theorem); KIN-2a needs that arc length affine in sech^2 l, which no polynomial
      invariant is (pole at det G' = 0); the frozen elliptope metric's harmonic-map energy gives
      perihelion coefficients 1.5-1.87 (dead). The field law must be DECLARED as KIN-2a'':
      E = int |grad(Delta/det G')|^2, sourced by the blind-mass measure. A Newton, not an Einstein.
-  0c. ~~dissipator static limit~~ SUPERSEDED 2026-09-03 by **THM-TARGET K** (`thm_k_clausius.py`
+  0c. ~~dissipator static limit~~ SUPERSEDED 2026-09-03 by **THM-TARGET K** (`suites/thm_k_clausius.py`
      16/16): the pinning is DERIVED from the seat's temperature -- Unruh (D2's 2 pi) on the
      seat's presented sphere with area entropy (SCREEN-1), equipartition (THERM-1), the blind
      mass enclosed (MASS-1), equilibrium at the temperature seen from infinity (EQ-1); the
      exponent fixed by K-1 (alpha N = gradient of sech^2 l); the local-temperature fork dead at
-     Mercury. **THM-L** (`thm_l_rotation.py` 10/10): rotation carried by rule G' (symmetric
+     Mercury. **THM-L** (`suites/thm_l_rotation.py` 10/10): rotation carried by rule G' (symmetric
      strain boost + rotation at half the curl), gyroscope and node numbers land. **THM-M**
-     (`thm_m_swirl.py` 9/9): the swirl DERIVED as the boost of the pinning, coefficient 2 =
+     (`suites/thm_m_swirl.py` 9/9): the swirl DERIVED as the boost of the pinning, coefficient 2 =
      clock + rods; scalar theory dead at GP-B. Report `docs/2026-09-03-thm-targets-K-L-M.md`.
      Paper v0.2 amended (68f3a9f + this commit).
   0d. **RULINGS OWED (Will):** (i) the letter of the rod-free definition vs normalised cosines
      (CURV-1); (ii) "identity" baseline-relative or mod 2 pi; (iii) EQ-1 -- is Tolman's
      condition a principle you own or a fact Mercury owns?  Each changes a label, not a number.
   0e. **NEXT TESTS WITH KILL NUMBERS:** (a) **DONE as THM-N** -- rotation beyond first order
-     in J, `thm_n_kerr_quadrupole.py` (8/8 exact checks) and
-     `test_thm_n_kerr_quadrupole.py` (4/4): the minimal THM-M continuation is KILLED before
+     in J, `suites/thm_n_kerr_quadrupole.py` (8/8 exact checks) and
+     `tests/test_thm_n_kerr_quadrupole.py` (4/4): the minimal THM-M continuation is KILLED before
      the Kerr quadrupole gate.  It produces a forbidden direction-dependent P2/r term
      (-2/9 component-only; -1/9 with the field argument also transformed); ignoring that,
      its formal quadrupole is only 3/10 of Kerr.  THM-M remains valid at its declared first-
@@ -106,7 +106,7 @@
      interferometry) as an owed comparison against SCREEN-1/THERM-1 -- the model inherits them.
   0f. Also open from CURV-1: the interior antipodal collisions at r_s Delta/sin^2(theta_12) --
      candidate-new, lineage unsearched; THM-J's pole obstruction as a general statement.
-  0g. **THM-TARGET O** DONE 2026-09-04 (`thm_o_strain_law.py` 33/33, 114.7 s, `714bf5c`; report
+  0g. **THM-TARGET O** DONE 2026-09-04 (`suites/thm_o_strain_law.py` 33/33, 114.7 s, `714bf5c`; report
      `docs/2026-09-04-thm-target-O.md`): the strain law is Gauss + Codazzi on the seat's flat rods --
      G_nn = e_2(sym grad v) IDENTICALLY, G_ni = -(1/2) curl curl v; e_2 presented, not selected.
      NORMAL-1 declared (vacuum through the normal). Pinning derived a second time (exponent),
@@ -117,7 +117,7 @@
      Gate 2 re-declared (hole vs shell). Scaffold register opened. NEXT: sourced Gauss from MASS-1;
      sourced Codazzi for the drag amplitude; tangential-law candidates on a STATIC OBLATE source
      before any spin; BEND-1.
-  1. ~~**D1 two-seat interior**~~ DONE 2026-09-02, `thm_h2_d1.py` 30/30 (`b4ac768`):
+  1. ~~**D1 two-seat interior**~~ DONE 2026-09-02, `suites/thm_h2_d1.py` 30/30 (`b4ac768`):
      no rod-free click-invariant diverges at mu = 0; every divergence there has a
      rod in its denominator. The falsifier did not fire; it left CURV-1 as the
      remaining fork.
@@ -130,7 +130,7 @@
      statistics-from-sidedness (c slot two-sided periodic, hbar slot
      one-sided anti-periodic; rerun F-6 with the flipped sign).
   4. RULING OWED (Will): which axis is K at the G seat (root, or in the
-     visible plane)? thm_h.py runs general K; H-24 is the K = root case.
+     visible plane)? suites/thm_h.py runs general K; H-24 is the K = root case.
   5. P33 double-flip pi-phase test [= the half imaginary period, H-16 line];
      triality on the Kummer layer; trichotomy classification; Q-RN proper.
 

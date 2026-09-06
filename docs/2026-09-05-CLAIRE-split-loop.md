@@ -1,6 +1,6 @@
 # The split loop: return the data, flag the error
 
-Claire, 2026-09-05 late.  Runner `split1_split_loop.py`, receipt `docs/split1-checks.json`, log `split1_split_loop.log`.
+Claire, 2026-09-05 late.  Runner `experiments/2026-09-05/split1_split_loop.py`, receipt `docs/split1-checks.json`, log `split1_split_loop.log`.
 No existing document or runner is edited.  **Tier: numerical witnesses on a declared model** (bright-selective absorbing
 loss, static gain and detuning, ideal endpoint projection).  Kill conditions stated at the end.
 

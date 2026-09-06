@@ -37,7 +37,7 @@ P9. A constant is what a view collapses to a point. Constancy is a property of t
     is a constant of nature. The second kind is a horizon. Do not graft the first
     kind's constraints onto the second: c's five properties follow from c's POSITION,
     and grafting them onto anything else draws c's page twice. Read each constant's
-    constraints off its own position. (prim_t7g_two_horizons.py for n0's position.)]
+    constraints off its own position. (suites/prim_t7g_two_horizons.py for n0's position.)]
 P10. [Will's ruling, 2026-09-04 late; WORDING CORRECTED by Will same night] c is the
     NEGATIVE line of the frame's form (T7b2: derived, not declared). "Timelike" is the
     form's word for it; "time" is NOT. A (2,1) form contains a whole negative cone and
@@ -48,7 +48,7 @@ P10. [Will's ruling, 2026-09-04 late; WORDING CORRECTED by Will same night] c is
     and sech(lambda) is the lapse -- the time-dilation factor between the seat's clock
     and the resolved one. Time is an ordered duration along a path through states;
     without dynamics T7 gives causal geometry and no time. Calling c "time" erases the
-    tilt that produces dilation. (prim_t7d_tilt.py, 12/12.)
+    tilt that produces dilation. (suites/prim_t7d_tilt.py, 12/12.)
 P11. [Will, 2026-09-04, RESOLUTION] A seat resolves the frame into one point, two
     lines, one plane. The point is the seated axis (its constant, both poles
     collapsed). The two lines are the other two axes, which are the edge-on traces of

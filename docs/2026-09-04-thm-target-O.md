@@ -1,5 +1,5 @@
 # THM-TARGET O — the strain law: Gauss and Codazzi on the seat's flat rods, at THM-N's gate
-Written 2026-09-04, early.  `thm_o_strain_law.py` **33/33** (`714bf5c`, `run_o.log`, 114.7 s on the workstation).  Read after `docs/2026-09-03-thm-target-N.md`.
+Written 2026-09-04, early.  `suites/thm_o_strain_law.py` **33/33** (`714bf5c`, `run_o.log`, 114.7 s on the workstation).  Read after `docs/2026-09-03-thm-target-N.md`.
 Re-running is the verification; each check flushes as it lands, so `tail -f run_o.log` shows progress.
 
 ## In one paragraph

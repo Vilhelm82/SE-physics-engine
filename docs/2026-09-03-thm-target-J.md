@@ -1,5 +1,5 @@
 # THM-TARGET J — does the model's own geometry produce the field law?  (schedule item 0b)
-Written 2026-09-03.  `thm_j_dyn.py` **7/7**, `run_thm_j_dyn.log`.  Read after `docs/2026-09-03-thm-target-I.md`.
+Written 2026-09-03.  `suites/thm_j_dyn.py` **7/7**, `run_thm_j_dyn.log`.  Read after `docs/2026-09-03-thm-target-I.md`.
 
 ## Verdict: NOT DERIVED — and the reason is structural, not numerical
 1. **Theorem (D-1).**  Any gradient-quadratic static energy Σ M_ab(g)∇g_a·∇g_b of click-invariant fields, restricted to the

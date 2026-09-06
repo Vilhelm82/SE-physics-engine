@@ -1,0 +1,73 @@
+== consistency: float64 closed form vs rh1_common.trine_loop ==
+  [ok] loop_np(complex128) == trine_loop  alpha=1.0472 eps=0.01: 0.000e+00 (tol 1e-13)
+  [ok] loop_np(complex128) == trine_loop  alpha=2.0944 eps=0.01: 0.000e+00 (tol 1e-13)
+  [ok] loop_np(complex128) == trine_loop  alpha=1.0472 eps=0.01: 0.000e+00 (tol 1e-13)
+  [ok] loop_np(complex128) == trine_loop  alpha=1.0472 eps=0.001: 0.000e+00 (tol 1e-13)
+  [ok] loop_np(complex128) == trine_loop  alpha=2.0944 eps=0.001: 0.000e+00 (tol 1e-13)
+  [ok] loop_np(complex128) == trine_loop  alpha=1.0472 eps=0.001: 0.000e+00 (tol 1e-13)
+
+== DB_stack by precision and path ==
+      eps  prec         u |        k1 svd     k2 stable     k3 tr/det       k4 I-KK
+2.0000e-02   f32   6.0e-08 |  5.492807e-05  5.494210e-05  3.081991e-04  5.585051e-05
+2.0000e-02   f64   1.1e-16 |  5.494127e-05  5.494127e-05  5.494127e-05  5.494127e-05
+2.0000e-02  mp30   2.0e-31 |  5.494127e-05  5.494127e-05  5.494127e-05  5.494127e-05
+2.0000e-02  mp50   2.7e-51 |  5.494127e-05  5.494127e-05  5.494127e-05  5.494127e-05
+1.0000e-02   f32   6.0e-08 |  7.021111e-06  7.010592e-06           nan  8.819495e-06
+1.0000e-02   f64   1.1e-16 |  7.011092e-06  7.011092e-06  7.011087e-06  7.011092e-06
+1.0000e-02  mp30   2.0e-31 |  7.011092e-06  7.011092e-06  7.011092e-06  7.011092e-06
+1.0000e-02  mp50   2.7e-51 |  7.011092e-06  7.011092e-06  7.011092e-06  7.011092e-06
+5.0000e-03   f32   6.0e-08 |  8.312937e-07  8.855819e-07  2.960851e-04  3.146758e-06
+5.0000e-03   f64   1.1e-16 |  8.847260e-07  8.847260e-07  8.847177e-07  8.847260e-07
+5.0000e-03  mp30   2.0e-31 |  8.847260e-07  8.847260e-07  8.847260e-07  8.847260e-07
+5.0000e-03  mp50   2.7e-51 |  8.847260e-07  8.847260e-07  8.847260e-07  8.847260e-07
+2.5000e-03   f32   6.0e-08 |  1.078628e-07  1.239208e-07           nan  2.849816e-05
+2.5000e-03   f64   1.1e-16 |  1.110914e-07  1.110914e-07  1.108306e-07  1.110914e-07
+2.5000e-03  mp30   2.0e-31 |  1.110914e-07  1.110914e-07  1.110914e-07  1.110914e-07
+2.5000e-03  mp50   2.7e-51 |  1.110914e-07  1.110914e-07  1.110914e-07  1.110914e-07
+1.2500e-03   f32   6.0e-08 |  1.075983e-07  3.880190e-08  2.938152e-04  7.026335e-04
+1.2500e-03   f64   1.1e-16 |  1.391706e-08  1.391706e-08  1.268233e-08  1.391706e-08
+1.2500e-03  mp30   2.0e-31 |  1.391706e-08  1.391706e-08  1.391706e-08  1.391706e-08
+1.2500e-03  mp50   2.7e-51 |  1.391706e-08  1.391706e-08  1.391706e-08  1.391706e-08
+6.2500e-04   f32   6.0e-08 |  0.000000e+00  4.875228e-08  2.934129e-04  1.038041e-02
+6.2500e-04   f64   1.1e-16 |  1.741526e-09  1.741526e-09  1.266746e-08  1.741526e-09
+6.2500e-04  mp30   2.0e-31 |  1.741526e-09  1.741526e-09  1.741526e-09  1.741526e-09
+6.2500e-04  mp50   2.7e-51 |  1.741526e-09  1.741526e-09  1.741526e-09  1.741526e-09
+3.1250e-04   f32   6.0e-08 |  1.074365e-07  8.180298e-08  2.933732e-04  2.917007e-02
+3.1250e-04   f64   1.1e-16 |  2.178085e-10  2.178085e-10  0.000000e+00  2.190202e-10
+3.1250e-04  mp30   2.0e-31 |  2.178085e-10  2.178085e-10  2.178085e-10  2.178085e-10
+3.1250e-04  mp50   2.7e-51 |  2.178085e-10  2.178085e-10  2.178085e-10  2.178085e-10
+
+== Theorem 2 fit: C = DB/eps^3 = a + u b_k ==
+      eps     a (mp50) |a30-a50|/a |        b_k1  f32 pred/meas        b_k2  f32 pred/meas        b_k3  f32 pred/meas        b_k4  f32 pred/meas
+  [ok] eps=0.02: mp30 and mp50 agree on a (identifiability): 7.240e-29 (tol 1e-20)
+  [ok] eps=0.02: k1 == k2 at 50 dps (paths agree when conditioning is gone): 4.073e-47 (tol 1e-20)
+2.0000e-02 6.867658e+00     7.2e-29 |   -1.37e+05          0.999   -1.33e+04            1.0    4.40e+08          0.858   -9.12e+03          0.984
+  [ok] eps=0.01: mp30 and mp50 agree on a (identifiability): 6.770e-28 (tol 1e-20)
+  [ok] eps=0.01: k1 == k2 at 50 dps (paths agree when conditioning is gone): 7.707e-47 (tol 1e-20)
+1.0000e-02 7.011092e+00     6.8e-28 |   -1.68e+06          0.984   -7.30e+04          0.999   -4.16e+10            n/a   -2.38e+06          0.779
+  [ok] eps=0.005: mp30 and mp50 agree on a (identifiability): 2.463e-27 (tol 1e-20)
+  [ok] eps=0.005: k1 == k2 at 50 dps (paths agree when conditioning is gone): 1.006e-45 (tol 1e-20)
+5.0000e-03 7.077808e+00     2.5e-27 |    1.51e+07            1.2   -9.52e+04          0.998   -5.99e+11        -15.072    3.52e+07          0.364
+  [ok] eps=0.0025: mp30 and mp50 agree on a (identifiability): 8.329e-28 (tol 1e-20)
+  [ok] eps=0.0025: k1 == k2 at 50 dps (paths agree when conditioning is gone): 9.357e-46 (tol 1e-20)
+2.5000e-03 7.109850e+00     8.3e-28 |    7.87e+06          1.098   -1.36e+06          0.886   -1.50e+14            n/a   -1.81e+08         -0.002
+  [ok] eps=0.00125: mp30 and mp50 agree on a (identifiability): 3.391e-26 (tol 1e-20)
+  [ok] eps=0.00125: k1 == k2 at 50 dps (paths agree when conditioning is gone): 6.358e-44 (tol 1e-20)
+1.2500e-03 7.125534e+00     3.4e-26 |    3.89e+08           0.55   -9.44e+05          0.356   -5.69e+15      -2256.154   -1.89e+09           -0.0
+  [ok] eps=0.000625: mp30 and mp50 agree on a (identifiability): 1.313e-25 (tol 1e-20)
+  [ok] eps=0.000625: k1 == k2 at 50 dps (paths agree when conditioning is gone): 2.942e-43 (tol 1e-20)
+6.2500e-04 7.133291e+00     1.3e-25 |    2.64e+09            n/a   -4.70e+06          0.034    4.03e+17      19991.671    4.46e+09            0.0
+  [ok] eps=0.0003125: mp30 and mp50 agree on a (identifiability): 6.075e-25 (tol 1e-20)
+  [ok] eps=0.0003125: k1 == k2 at 50 dps (paths agree when conditioning is gone): 4.103e-42 (tol 1e-20)
+3.1250e-04 7.137148e+00     6.1e-25 |    1.67e+10          0.284   -1.91e+07          0.002   -6.43e+16       -398.588    3.58e+14          0.022
+
+== log-log slope of DB_stack (k2, 50 dps) between adjacent eps; and of the floor c DB^2/6 ==
+  eps_mid 1.414e-02: slope DB = 2.970179180   slope c = 1.959010116   slope floor = 7.899368476
+  eps_mid 7.071e-03: slope DB = 2.986336400   slope c = 1.983206690   slope floor = 7.955879491
+  eps_mid 3.536e-03: slope DB = 2.993483513   slope c = 1.992532050   slope floor = 7.979499076
+  eps_mid 1.768e-03: slope DB = 2.996820985   slope c = 1.996498587   slope floor = 7.990140557
+  eps_mid 8.839e-04: slope DB = 2.998430346   slope c = 1.998307480   slope floor = 7.995168173
+  eps_mid 4.419e-04: slope DB = 2.999220142   slope c = 1.999168292   slope floor = 7.997608577
+  two-term bias (U-0799): slope - 3 = kappa eps^rho with rho = 1.0482, sign -
+
+RESULT: 20/20 checks passed.  runtime 0.1s

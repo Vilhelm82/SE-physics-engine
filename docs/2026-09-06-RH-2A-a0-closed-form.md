@@ -66,3 +66,50 @@ One rerun of this script with the n = 2 primitives decides it.
   and, by RH-2, of the same order: DB = 4.2e-6 at 1% against the trine's 7.0e-6).
 
 Replay: `python3 rh2_a0_closed_form.py | tee docs/rh2_a0.log`
+
+
+---
+
+## Addendum 2026-09-06: the five-loop word (RH-2P/5), `rh2p_five.py`, 21/21
+
+**[proved | same reduction, five angles, sigma -> conj(sigma) on the two inverse loops]**
+
+    a0(five) = 2025 sqrt(5) pi^3 / 32768 = 4.28459437049230186 = (3/5) a0(trine) = (3 sqrt5 / 5) x^3
+    c0(five) = 5625 pi^2 / 2048          = 27.1076781035779    = (25/2) x^2
+    kappa1   = -55/32  (identical to the trine)
+    floor    = (15/4) x^8 = 38443359375 pi^8 / 4398046511104 = 82.9393 eps^8
+
+**[numerical]** Four precisions x four paths (Cella U-0784 again): a identified to 1e-25..1e-29, paths agree to
+1e-42 at 50 dps, slope 2.9680 -> 2.9992 from below, floor slope -> 7.9976. Third-order Richardson at 70 dps:
+a0 = 4.28459437049229802 (rel 9.0e-16 to the closed form), c0 rel 3.1e-15, kappa1 numerical -1.71899 (0.014%).
+RH-2's float64 DB_stack(1e-2) = 4.204421e-6 reproduced to 2.8e-11. RH-2's measured self-calibrated
+accumulator error 1.03e-14 at 1% against 82.94e-16 + conditional 2.5e-15 = 1.08e-14 (5%).
+Conditioning as for the trine: tr/det (k3) returns 0 in float64 at eps <= 6.25e-4; I - K^dag K (k4) is 20% off
+at 3.1e-4; the stable formula and the SVD hold to the bottom of the grid.
+
+## Why 3/5, and what the five-loop word actually is
+
+**[proved | leading order]** The leading coefficient of t^2 + |w|^2 is IDENTICAL for the two words:
+sqrt(D2_10) = 11390625 sqrt(5) pi^5 / 67108864 for both. The absolute anisotropy of the stacked leak is the same;
+the five-loop word only divides it by more erasure. Splitting the word (sandbox check, same series):
+
+- loops 1-3 alone, angles (pi/6, 5pi/6, 7pi/6): D2_10 and c0 equal to the trine's exactly. Their effective
+  directions are 30, 90, 150 degrees -- the augmented triad rotated by 30 degrees. Codex's word contains a
+  tight-frame trine.
+- loops 4-5 alone, angles (3pi/4, pi/4), both inverse: the traceless part of F^dag F vanishes at EVERY computed
+  order (through eps^13). Their effective directions are 135 and 45 degrees -- orthogonal -- and for u_2 perp u_1
+  the partial reflection S_1 fixes u_2 exactly, so the pair is a two-vector tight frame for all eps, not just at
+  leading order.
+
+So: **five-loop = (rotated tight trine) + (exactly tight orthogonal pair)**. The pair supplies the detuning
+cancellation (FD-2) and (2/3 of the trine's) extra erasure, with no leading anisotropy. Hence
+c0 scales by 5/3, a0 by 3/5, and the floor c0 a0^2/6 = |T|^2/(6 c) by 3/5.
+
+**[derived, and worth saying out loud]** The accumulator floor is |T|^2/(6c): the SQUARE of the absolute
+anisotropy divided by the total erasure. Adding loops whose leak is isotropic RAISES the erasure and LOWERS the
+unconditional floor. More (isotropic) leakage is better for the accumulator, at the price of a register that must
+capture more. That is not intuitive and it is exact at leading order.
+
+**[not checked]** Equality of the full D2 series beyond the leading coefficient; general n; the absorbing interface.
+
+Replay: `OPENBLAS_NUM_THREADS=1 python3 rh2p_five.py | tee docs/rh2p_five.log`

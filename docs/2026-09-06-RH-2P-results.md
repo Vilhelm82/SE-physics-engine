@@ -79,3 +79,7 @@ is RH-1b vs RH-2; the BACL invariant (U-0766) is the representability condition 
 edges are candidates for the DAG when submissions reopen; none submitted.
 
 Replay: `OPENBLAS_NUM_THREADS=1 python3 rh2_precision.py --json docs/rh2_precision-checks.json | tee docs/rh2_precision.log`
+
+**Closed form found 2026-09-06 (RH-2A, `docs/2026-09-06-RH-2A-a0-closed-form.md`):** a0 = 3375 sqrt(5) pi^3/32768 exactly;
+with x = (15 pi/32) eps, DB = sqrt(5) x^3 (1 - 55 eps/32 + ...), c = (15/2) x^2, floor = (25/4) x^8 = 138.2322 eps^8.
+The "rho = 1.048" two-term fit is the -55/32 linear correction plus the next term's shadow; the exponent is exactly 1.

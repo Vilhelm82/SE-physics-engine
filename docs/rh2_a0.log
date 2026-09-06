@@ -1,0 +1,31 @@
+[  0.4s] primitives: delta = 5470875*epsilon**6/268435456 - 192375*epsilon**5/8388608 + 13275*epsilon**4/524288 - 225*epsilon**3/8192 + 15*epsilon**2/512 + 15*epsilon/16
+[  1.9s] sigma:
+    sigma[0] = -1
+    sigma[1] = 0
+    sigma[2] = 1125*pi**2/2048
+    sigma[3] = 1125*pi**2*(-29 + 6*sqrt(15)*I*pi)/32768
+    sigma[4] = 1125*pi**2*(-3090*pi**2 + 2461 - 660*sqrt(15)*I*pi)/2097152
+    sigma[5] = 3375*pi**2*(-15045 + 27940*pi**2 - 2025*sqrt(15)*I*pi**3 + 4338*sqrt(15)*I*pi)/33554432
+    sigma[6] = 3375*pi**2*(-8698320*pi**2 + 4006680 + 5523375*pi**4 - 1148288*sqrt(15)*I*pi + 966600*sqrt(15)*I*pi**3)/8589934592
+[  2.8s] frame algebra done
+
+[  2.8s] RESULTS
+  c0     = 3375*pi**2/2048  = 16.2646068621467702
+  a0     = 3375*sqrt(5)*pi**3/32768  = 7.14099061748716977
+  kappa1 = -55/32   (DB = a0 eps^3 (1 + kappa1 eps + ...))
+  floor  = c0 a0^2/6 = 64072265625*pi**8/4398046511104 = 138.232207895 eps^8
+  [ok] sigma2_real
+  [ok] sigma3_imag_nonzero
+  [ok] c0 = 3375 pi^2/2048
+  [ok] c0 = (15/2) x^2
+  [ok] D2 leading order = 10
+  [ok] a0 = 3375 sqrt5 pi^3/32768
+  [ok] a0 = sqrt5 x^3
+  [ok] floor c0 a0^2/6 = (25/4) x^8
+  [ok] kappa1 = -55/32
+
+  route B (Richardson, 70 dps): 7.14099061748716753   rel diff to route A: 3.138e-16
+  kappa1 numerical at eps=2^-16: -1.718907   (series: -1.718750)
+  RH-2P a(3.1e-4) = 7.1371480; series prediction a0 (1 + kappa1 eps) = 7.1371551
+
+RESULT: 12/12 checks passed.  runtime 3.2s

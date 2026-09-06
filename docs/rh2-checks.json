@@ -1,0 +1,1278 @@
+{
+  "spec": "docs/2026-09-06-RH-2-spec.md",
+  "predictions_sealed": "docs/prereg/RH-2/DESIGNER-PREDICTIONS.md",
+  "interface": "coherent send into frozen register at every dump; one readout; one isometry back",
+  "words": {
+    "trine": {
+      "rows": [
+        {
+          "case": [
+            0.005,
+            0.0,
+            0.0
+          ],
+          "N": 3,
+          "DB_stack": 8.847260244835697e-07,
+          "c": 0.0004026003571973459,
+          "singular_values": [
+            0.02006491249391234,
+            0.02006489474196993
+          ],
+          "identity_defect": 5.101624005055012e-16,
+          "isometry_defect": 7.572166465884332e-16,
+          "conditional": 1.0154633075411093e-17,
+          "discard_unconditional": 0.0002013001785986831,
+          "erasure": 0.00040260035719734595,
+          "per_dump": {
+            "infidelity": 0.00013429534550331312,
+            "direct_infidelity": 0.0001342953455036137,
+            "tp_defect": 3.701562197548383e-16,
+            "mean_trace": 0.9999999999999998
+          },
+          "acc_self": {
+            "infidelity": 6.267245466964034e-17,
+            "direct_infidelity": 2.9605947323337506e-16,
+            "tp_defect": 5.101798300821363e-16,
+            "mean_trace": 0.9999999999999997,
+            "leftover": 1.003595051550883e-34
+          },
+          "acc_fixed": {
+            "infidelity": 1.327279946952582e-07,
+            "direct_infidelity": 1.3272799503916133e-07,
+            "tp_defect": 4.725203031462429e-16,
+            "mean_trace": 0.9999999999999998,
+            "leftover": 2.654542315006369e-07
+          },
+          "floor": 5.252190988532281e-17
+        },
+        {
+          "case": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "N": 3,
+          "DB_stack": 7.011091514498935e-06,
+          "c": 0.0015917646553810063,
+          "singular_values": [
+            0.03989706524781835,
+            0.03989678552682331
+          ],
+          "identity_defect": 9.8332220396332e-16,
+          "isometry_defect": 7.163966660980139e-16,
+          "conditional": 2.495065916222185e-15,
+          "discard_unconditional": 0.0007958823276929942,
+          "erasure": 0.0015917646553810063,
+          "per_dump": {
+            "infidelity": 0.0005306938740137126,
+            "direct_infidelity": 0.0005306938740143874,
+            "tp_defect": 9.834025690344574e-16,
+            "mean_trace": 0.9999999999999993
+          },
+          "acc_self": {
+            "infidelity": 1.5531733536909898e-14,
+            "direct_infidelity": 1.6061226422910597e-14,
+            "tp_defect": 9.251955714980363e-16,
+            "mean_trace": 0.9999999999999993,
+            "leftover": 5.351981188462537e-34
+          },
+          "acc_fixed": {
+            "infidelity": 1.5531733536909898e-14,
+            "direct_infidelity": 1.6061226422910597e-14,
+            "tp_defect": 9.251955714980363e-16,
+            "mean_trace": 0.9999999999999993,
+            "leftover": 5.351981188462537e-34
+          },
+          "floor": 1.3040639177635029e-14
+        },
+        {
+          "case": [
+            0.02,
+            0.0,
+            0.0
+          ],
+          "N": 3,
+          "DB_stack": 5.49412658827468e-05,
+          "c": 0.006188703324389815,
+          "singular_values": [
+            0.07867047311148338,
+            0.07866615097483161
+          ],
+          "identity_defect": 7.407330739450426e-17,
+          "isometry_defect": 9.163419494759544e-16,
+          "conditional": 5.827953891299318e-13,
+          "discard_unconditional": 0.003094351662774096,
+          "erasure": 0.006188703324389815,
+          "per_dump": {
+            "infidelity": 0.0020699156605178764,
+            "direct_infidelity": 0.0020699156605178035,
+            "tp_defect": 2.338886532586206e-16,
+            "mean_trace": 1.0
+          },
+          "acc_self": {
+            "infidelity": 3.69266618081066e-12,
+            "direct_infidelity": 3.6925277650349626e-12,
+            "tp_defect": 7.508190328802958e-17,
+            "mean_trace": 1.0,
+            "leftover": 2.5514728500675023e-33
+          },
+          "acc_fixed": {
+            "infidelity": 8.138067075974246e-06,
+            "direct_infidelity": 8.138067075854257e-06,
+            "tp_defect": 1.3436348665060318e-16,
+            "mean_trace": 1.0,
+            "leftover": 1.627572261916344e-05
+          },
+          "floor": 3.113477537081762e-12
+        },
+        {
+          "case": [
+            0.0,
+            0.0001,
+            0.0
+          ],
+          "N": 3,
+          "DB_stack": 0.6775976157113035,
+          "c": 1.868926725667558e-09,
+          "singular_values": [
+            5.599381232706904e-05,
+            2.4546821228340083e-05
+          ],
+          "identity_defect": 2.8729198467365844e-15,
+          "isometry_defect": 4.510278799024139e-16,
+          "conditional": 2.4202777160984144e-08,
+          "discard_unconditional": 2.5137240478584652e-08,
+          "erasure": 1.868926725667558e-09,
+          "per_dump": {
+            "infidelity": 2.533216849928899e-08,
+            "direct_infidelity": 2.5332169991306348e-08,
+            "tp_defect": 2.902797231741885e-15,
+            "mean_trace": 0.999999999999998
+          },
+          "acc_self": {
+            "infidelity": 2.4367595990611464e-08,
+            "direct_infidelity": 2.436759742134124e-08,
+            "tp_defect": 2.8729198467110056e-15,
+            "mean_trace": 0.999999999999998,
+            "leftover": 4.771889710835176e-40
+          },
+          "acc_fixed": {
+            "infidelity": 2.5262812391290257e-08,
+            "direct_infidelity": 2.5262813840853937e-08,
+            "tp_defect": 2.844895617487936e-15,
+            "mean_trace": 0.999999999999998,
+            "leftover": 8.485841478888679e-10
+          },
+          "floor": 1.4301604454849633e-10
+        },
+        {
+          "case": [
+            0.01,
+            0.0001,
+            0.0
+          ],
+          "N": 3,
+          "DB_stack": 0.0012538088598947259,
+          "c": 0.0015910051802328776,
+          "singular_values": [
+            0.0399124040446575,
+            0.039862392851430326
+          ],
+          "identity_defect": 2.968746084260861e-15,
+          "isometry_defect": 4.865412222046687e-16,
+          "conditional": 2.4293959002240504e-08,
+          "discard_unconditional": 0.0007955268454236262,
+          "erasure": 0.0015910051802328774,
+          "per_dump": {
+            "infidelity": 0.0005305534961296653,
+            "direct_infidelity": 0.0005305534961309218,
+            "tp_defect": 3.0125168652774125e-15,
+            "mean_trace": 0.9999999999999982
+          },
+          "acc_self": {
+            "infidelity": 2.4672160428934628e-08,
+            "direct_infidelity": 2.4672161647032453e-08,
+            "tp_defect": 2.968923579343585e-15,
+            "mean_trace": 0.9999999999999982,
+            "leftover": 4.640191013538781e-34
+          },
+          "acc_fixed": {
+            "infidelity": 2.5899534283559665e-08,
+            "direct_infidelity": 2.5899535553245794e-08,
+            "tp_defect": 2.8371845126066406e-15,
+            "mean_trace": 0.9999999999999983,
+            "leftover": 1.1097520089219943e-09
+          },
+          "floor": 4.1685307750707355e-10
+        }
+      ],
+      "U_cal": {
+        "real": [
+          [
+            -0.18217473744551987,
+            -0.3155354706168942
+          ],
+          [
+            0.36373601723052673,
+            0.6300090578503157
+          ],
+          [
+            0.36430111940073134,
+            -8.33161645658249e-05
+          ],
+          [
+            -0.7273754861627502,
+            0.0001670072070795668
+          ],
+          [
+            -0.18212639468977612,
+            0.3154525703988757
+          ],
+          [
+            0.36363949450911814,
+            -0.6298422256976652
+          ]
+        ],
+        "imag": [
+          [
+            -0.03122502897411783,
+            -0.05408589238360718
+          ],
+          [
+            0.015632727056815024,
+            0.027081778498582128
+          ],
+          [
+            0.06244176913850223,
+            -1.691178348340436e-05
+          ],
+          [
+            -0.03126130346453114,
+            1.2290830112111603e-05
+          ],
+          [
+            -0.03121674295188659,
+            0.05406642062838502
+          ],
+          [
+            0.01562857868218985,
+            -0.0270643820339661
+          ]
+        ]
+      },
+      "forks": {
+        "(0.005, 0.0, 0.0)": {
+          "self_over_floor": 1.193263055484471,
+          "self_over_discard": 3.1133829639856233e-13,
+          "fork": "a"
+        },
+        "(0.01, 0.0, 0.0)": {
+          "self_over_floor": 1.1910254800659732,
+          "self_over_discard": 1.9515112971450663e-11,
+          "fork": "a"
+        },
+        "(0.02, 0.0, 0.0)": {
+          "self_over_floor": 1.1860262798850212,
+          "self_over_discard": 1.193356988229377e-09,
+          "fork": "a"
+        },
+        "(0.0, 0.0001, 0.0)": {
+          "self_over_floor": 1.0068099139421494,
+          "self_over_discard": 0.9693822999931565,
+          "fork": "a"
+        },
+        "(0.01, 0.0001, 0.0)": {
+          "self_over_floor": 1.0155677148652158,
+          "self_over_discard": 3.101361138327953e-05,
+          "fork": "a"
+        }
+      },
+      "per_dump_over_discard_at_eps0": 0.6667994193966119,
+      "fixed_cal_excess": {
+        "at_5e3": 1.3272799463258575e-07,
+        "at_2e2": 8.138063383308065e-06,
+        "exponent_in_eps_minus_eps0": 5.938140919602748
+      },
+      "detuning_case_acc_fixed_over_discard": 3.2556455426426116e-05
+    },
+    "five": {
+      "rows": [
+        {
+          "case": [
+            0.005,
+            0.0,
+            0.0
+          ],
+          "N": 5,
+          "DB_stack": 5.307643603417094e-07,
+          "c": 0.0006709105429404114,
+          "singular_values": [
+            0.025901947784593666,
+            0.025901934036766567
+          ],
+          "identity_defect": 6.106516910997943e-16,
+          "isometry_defect": 2.4341371850184775e-16,
+          "conditional": 1.0154634292944183e-17,
+          "discard_unconditional": 0.0003354552714702159,
+          "erasure": 0.0006709105429404115,
+          "per_dump": {
+            "infidelity": 0.00022380003878047508,
+            "direct_infidelity": 0.00022380003878101165,
+            "tp_defect": 5.117150422784e-16,
+            "mean_trace": 0.9999999999999997
+          },
+          "acc_self": {
+            "infidelity": 4.164827976821631e-17,
+            "direct_infidelity": 4.440892098500626e-16,
+            "tp_defect": 6.106832818625814e-16,
+            "mean_trace": 0.9999999999999996,
+            "leftover": 3.1403905004868027e-35
+          },
+          "acc_fixed": {
+            "infidelity": 5.997746098665337e-07,
+            "direct_infidelity": 5.997746101993329e-07,
+            "tp_defect": 6.866696703234504e-16,
+            "mean_trace": 0.9999999999999996,
+            "leftover": 1.1995481693701363e-06
+          },
+          "floor": 3.1500458324303925e-17
+        },
+        {
+          "case": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "N": 5,
+          "DB_stack": 4.204420931712923e-06,
+          "c": 0.002651533223926271,
+          "singular_values": [
+            0.051493148787853896,
+            0.05149293228943642
+          ],
+          "identity_defect": 9.430071362093828e-16,
+          "isometry_defect": 3.1641867720769337e-16,
+          "conditional": 2.4950659296524e-15,
+          "discard_unconditional": 0.001325766611965624,
+          "erasure": 0.002651533223926271,
+          "per_dump": {
+            "infidelity": 0.000884090806756193,
+            "direct_infidelity": 0.0008840908067565915,
+            "tp_defect": 9.43111747737925e-16,
+            "mean_trace": 0.9999999999999993
+          },
+          "acc_self": {
+            "infidelity": 1.0300377640754919e-14,
+            "direct_infidelity": 1.0658141036401503e-14,
+            "tp_defect": 9.430009381698062e-16,
+            "mean_trace": 0.9999999999999993,
+            "leftover": 1.6951727164669673e-34
+          },
+          "acc_fixed": {
+            "infidelity": 1.0300377640754919e-14,
+            "direct_infidelity": 1.0658141036401503e-14,
+            "tp_defect": 9.430009381698062e-16,
+            "mean_trace": 0.9999999999999993,
+            "leftover": 1.6951727164669673e-34
+          },
+          "floor": 7.811927461796923e-15
+        },
+        {
+          "case": [
+            0.02,
+            0.0,
+            0.0
+          ],
+          "N": 5,
+          "DB_stack": 3.2896521813227154e-05,
+          "c": 0.010293213074172426,
+          "singular_values": [
+            0.10145714210976402,
+            0.1014538045775712
+          ],
+          "identity_defect": 1.1445560414805122e-16,
+          "isometry_defect": 9.020038330311574e-16,
+          "conditional": 5.827953892755459e-13,
+          "discard_unconditional": 0.00514660653766301,
+          "erasure": 0.010293213074172428,
+          "per_dump": {
+            "infidelity": 0.0034438139077744017,
+            "direct_infidelity": 0.0034438139077742993,
+            "tp_defect": 2.4898991070614075e-16,
+            "mean_trace": 1.0
+          },
+          "acc_self": {
+            "infidelity": 2.433316741826373e-12,
+            "direct_infidelity": 2.4332387956368016e-12,
+            "tp_defect": 1.148430041276181e-16,
+            "mean_trace": 1.0,
+            "leftover": 3.4809608958320625e-33
+          },
+          "acc_fixed": {
+            "infidelity": 3.69081735142397e-05,
+            "direct_infidelity": 3.690817351416816e-05,
+            "tp_defect": 3.153104901905922e-16,
+            "mean_trace": 1.0000000000000002,
+            "leftover": 7.381610121425913e-05
+          },
+          "floor": 1.8565201891873797e-12
+        },
+        {
+          "case": [
+            0.0,
+            0.0001,
+            0.0
+          ],
+          "N": 5,
+          "DB_stack": 0.04238544136790861,
+          "c": 1.2051876476733606e-08,
+          "singular_values": [
+            0.00011208345364286147,
+            0.00010742929010728748
+          ],
+          "identity_defect": 5.704448881090402e-16,
+          "isometry_defect": 1.019780113003411e-15,
+          "conditional": 1.1130617209394893e-13,
+          "discard_unconditional": 6.026049544537555e-09,
+          "erasure": 1.2051876476733606e-08,
+          "per_dump": {
+            "infidelity": 7.51312694021628e-09,
+            "direct_infidelity": 7.513127157447267e-09,
+            "tp_defect": 6.789645343059654e-16,
+            "mean_trace": 0.9999999999999996
+          },
+          "acc_self": {
+            "infidelity": 3.721512540063569e-12,
+            "direct_infidelity": 3.721763638016758e-12,
+            "tp_defect": 5.70444887791831e-16,
+            "mean_trace": 0.9999999999999997,
+            "leftover": 7.06861063585908e-39
+          },
+          "acc_fixed": {
+            "infidelity": 6.3708324129764355e-09,
+            "direct_infidelity": 6.370832676220554e-09,
+            "tp_defect": 1.007799911975857e-15,
+            "mean_trace": 0.9999999999999994,
+            "leftover": 9.701213578208455e-09
+          },
+          "floor": 3.60858418333189e-12
+        },
+        {
+          "case": [
+            0.01,
+            0.0001,
+            0.0
+          ],
+          "N": 5,
+          "DB_stack": 0.0018788631019213328,
+          "c": 0.0026505816088798952,
+          "singular_values": [
+            0.0515321422887061,
+            0.05143541123483256
+          ],
+          "identity_defect": 2.735301653740501e-15,
+          "isometry_defect": 5.033018808323411e-16,
+          "conditional": 4.304101667286715e-12,
+          "discard_unconditional": 0.001325290808732641,
+          "erasure": 0.0026505816088798952,
+          "per_dump": {
+            "infidelity": 0.000883653003147625,
+            "direct_infidelity": 0.0008836530031464859,
+            "tp_defect": 2.6150044478341982e-15,
+            "mean_trace": 1.0000000000000018
+          },
+          "acc_self": {
+            "infidelity": 1.5637754905419997e-09,
+            "direct_infidelity": 1.5637742212248895e-09,
+            "tp_defect": 2.7353188795827835e-15,
+            "mean_trace": 1.0000000000000018,
+            "leftover": 5.985887424962138e-34
+          },
+          "acc_fixed": {
+            "infidelity": 6.792606800307595e-09,
+            "direct_infidelity": 6.7926056631269676e-09,
+            "tp_defect": 2.5584012146596125e-15,
+            "mean_trace": 1.0000000000000018,
+            "leftover": 9.8444973477557e-09
+          },
+          "floor": 1.5594814209533058e-09
+        }
+      ],
+      "U_cal": {
+        "real": [
+          [
+            -0.24447763592870933,
+            -0.14114934439731872
+          ],
+          [
+            0.4881324712865206,
+            0.28182346856557366
+          ],
+          [
+            6.448566122494955e-05,
+            -0.28226134048387586
+          ],
+          [
+            -0.00012936357432251998,
+            0.56357219019429
+          ],
+          [
+            -0.24441333675777227,
+            0.14111200591376696
+          ],
+          [
+            0.48800317536384996,
+            -0.28174874141347384
+          ],
+          [
+            -0.3982406186273975,
+            -0.398240492294218
+          ],
+          [
+            0.1994550995071001,
+            0.19945492825262068
+          ],
+          [
+            0.39824049788107113,
+            -0.39824061304054437
+          ],
+          [
+            -0.19945493105087483,
+            0.19945509670884604
+          ]
+        ],
+        "imag": [
+          [
+            -0.041905674642587994,
+            -0.02419356694269149
+          ],
+          [
+            0.020982628229865668,
+            0.012112957685254519
+          ],
+          [
+            1.3499393503112096e-05,
+            -0.04838002544175774
+          ],
+          [
+            -1.0313839552001928e-05,
+            0.024221329237087266
+          ],
+          [
+            -0.04189098398737025,
+            0.024186460839556632
+          ],
+          [
+            0.02096994028581031,
+            -0.012108373677084096
+          ],
+          [
+            0.017131801490818523,
+            0.01713347797812796
+          ],
+          [
+            -0.034195209091164844,
+            -0.03419604526365909
+          ],
+          [
+            -0.017133478216429656,
+            0.017131801252516916
+          ],
+          [
+            0.03419604574235198,
+            -0.03419520861247195
+          ]
+        ]
+      },
+      "forks": {
+        "(0.005, 0.0, 0.0)": {
+          "self_over_floor": 1.3221483744597746,
+          "self_over_discard": 1.2415449483229878e-13,
+          "fork": "a"
+        },
+        "(0.01, 0.0, 0.0)": {
+          "self_over_floor": 1.3185449674395204,
+          "self_over_discard": 7.769374751022919e-12,
+          "fork": "a"
+        },
+        "(0.02, 0.0, 0.0)": {
+          "self_over_floor": 1.3106869270791306,
+          "self_over_discard": 4.728002274934547e-10,
+          "fork": "a"
+        },
+        "(0.0, 0.0001, 0.0)": {
+          "self_over_floor": 1.0312943667084993,
+          "self_over_discard": 0.0006175708501163944,
+          "fork": "a"
+        },
+        "(0.01, 0.0001, 0.0)": {
+          "self_over_floor": 1.0027535240439536,
+          "self_over_discard": 1.1799489442150577e-06,
+          "fork": "a"
+        }
+      },
+      "per_dump_over_discard_at_eps0": 0.6668525204790093,
+      "fixed_cal_excess": {
+        "at_5e3": 5.997746098248854e-07,
+        "at_2e2": 3.690817108092296e-05,
+        "exponent_in_eps_minus_eps0": 5.943375988839946
+      },
+      "detuning_case_acc_fixed_over_discard": 5.125370790734812e-06
+    }
+  },
+  "checks": [
+    {
+      "name": "trine(0.005, 0.0, 0.0) F^dagF + K^dagK = I",
+      "value": 5.101624005055012e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.005, 0.0, 0.0) U isometry",
+      "value": 7.572166465884332e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.005, 0.0, 0.0) acc_self trace preserving",
+      "value": 5.101798300821363e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.005, 0.0, 0.0) acc_self direct vs stable infidelity agree",
+      "value": -2.3338701856373473e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.005, 0.0, 0.0) acc_fixed trace preserving",
+      "value": 4.725203031462429e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.005, 0.0, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": -3.4390313223066923e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.005, 0.0, 0.0) per_dump trace preserving",
+      "value": 3.701562197548383e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.005, 0.0, 0.0) per_dump direct vs stable infidelity agree",
+      "value": -3.0056794726729397e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.005, 0.0, 0.0) self-calibrated leftover is zero",
+      "value": 1.003595051550883e-34,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0, 0.0) F^dagF + K^dagK = I",
+      "value": 9.8332220396332e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0, 0.0) U isometry",
+      "value": 7.163966660980139e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0, 0.0) acc_self trace preserving",
+      "value": 9.251955714980363e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0, 0.0) acc_self direct vs stable infidelity agree",
+      "value": -5.294928860006994e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0, 0.0) acc_fixed trace preserving",
+      "value": 9.251955714980363e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": -5.294928860006994e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0, 0.0) per_dump trace preserving",
+      "value": 9.834025690344574e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0, 0.0) per_dump direct vs stable infidelity agree",
+      "value": -6.74807432154978e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0, 0.0) self-calibrated leftover is zero",
+      "value": 5.351981188462537e-34,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "trine(0.02, 0.0, 0.0) F^dagF + K^dagK = I",
+      "value": 7.407330739450426e-17,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.02, 0.0, 0.0) U isometry",
+      "value": 9.163419494759544e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.02, 0.0, 0.0) acc_self trace preserving",
+      "value": 7.508190328802958e-17,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.02, 0.0, 0.0) acc_self direct vs stable infidelity agree",
+      "value": 1.3841577569775887e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.02, 0.0, 0.0) acc_fixed trace preserving",
+      "value": 1.3436348665060318e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.02, 0.0, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": 1.1998899324214968e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.02, 0.0, 0.0) per_dump trace preserving",
+      "value": 2.338886532586206e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.02, 0.0, 0.0) per_dump direct vs stable infidelity agree",
+      "value": 7.28583859910259e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.02, 0.0, 0.0) self-calibrated leftover is zero",
+      "value": 2.5514728500675023e-33,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "trine(0.0, 0.0001, 0.0) F^dagF + K^dagK = I",
+      "value": 2.8729198467365844e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.0, 0.0001, 0.0) U isometry",
+      "value": 4.510278799024139e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.0, 0.0001, 0.0) acc_self trace preserving",
+      "value": 2.8729198467110056e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.0, 0.0001, 0.0) acc_self direct vs stable infidelity agree",
+      "value": -1.430729776746237e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.0, 0.0001, 0.0) acc_fixed trace preserving",
+      "value": 2.844895617487936e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.0, 0.0001, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": -1.4495636800598895e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.0, 0.0001, 0.0) per_dump trace preserving",
+      "value": 2.902797231741885e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.0, 0.0001, 0.0) per_dump direct vs stable infidelity agree",
+      "value": -1.4920173584968017e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.0, 0.0001, 0.0) self-calibrated leftover is zero",
+      "value": 4.771889710835176e-40,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0001, 0.0) F^dagF + K^dagK = I",
+      "value": 2.968746084260861e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0001, 0.0) U isometry",
+      "value": 4.865412222046687e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0001, 0.0) acc_self trace preserving",
+      "value": 2.968923579343585e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0001, 0.0) acc_self direct vs stable infidelity agree",
+      "value": -1.2180978254475691e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0001, 0.0) acc_fixed trace preserving",
+      "value": 2.8371845126066406e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0001, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": -1.2696861288720759e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0001, 0.0) per_dump trace preserving",
+      "value": 3.0125168652774125e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0001, 0.0) per_dump direct vs stable infidelity agree",
+      "value": -1.2565903179106996e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "trine(0.01, 0.0001, 0.0) self-calibrated leftover is zero",
+      "value": 4.640191013538781e-34,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "trine per-dump/discard ratio reproduces RH-1b (0.6668)",
+      "value": -5.806033880340067e-07,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "KILL 1: trine gain-only DB_stack <= 1e-2",
+      "value": 5.49412658827468e-05,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "KILL 2: trine self-cal accumulator NOT within 10x of discard (self/discard <= 0.1)",
+      "value": 1.193356988229377e-09,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "five(0.005, 0.0, 0.0) F^dagF + K^dagK = I",
+      "value": 6.106516910997943e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.005, 0.0, 0.0) U isometry",
+      "value": 2.4341371850184775e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.005, 0.0, 0.0) acc_self trace preserving",
+      "value": 6.106832818625814e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.005, 0.0, 0.0) acc_self direct vs stable infidelity agree",
+      "value": -4.024409300818463e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.005, 0.0, 0.0) acc_fixed trace preserving",
+      "value": 6.866696703234504e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.005, 0.0, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": -3.327991390970962e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.005, 0.0, 0.0) per_dump trace preserving",
+      "value": 5.117150422784e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.005, 0.0, 0.0) per_dump direct vs stable infidelity agree",
+      "value": -5.365716551630761e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.005, 0.0, 0.0) self-calibrated leftover is zero",
+      "value": 3.1403905004868027e-35,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0, 0.0) F^dagF + K^dagK = I",
+      "value": 9.430071362093828e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0, 0.0) U isometry",
+      "value": 3.1641867720769337e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0, 0.0) acc_self trace preserving",
+      "value": 9.430009381698062e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0, 0.0) acc_self direct vs stable infidelity agree",
+      "value": -3.577633956465842e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0, 0.0) acc_fixed trace preserving",
+      "value": 9.430009381698062e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": -3.577633956465842e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0, 0.0) per_dump trace preserving",
+      "value": 9.43111747737925e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0, 0.0) per_dump direct vs stable infidelity agree",
+      "value": -3.984442983884229e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0, 0.0) self-calibrated leftover is zero",
+      "value": 1.6951727164669673e-34,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "five(0.02, 0.0, 0.0) F^dagF + K^dagK = I",
+      "value": 1.1445560414805122e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.02, 0.0, 0.0) U isometry",
+      "value": 9.020038330311574e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.02, 0.0, 0.0) acc_self trace preserving",
+      "value": 1.148430041276181e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.02, 0.0, 0.0) acc_self direct vs stable infidelity agree",
+      "value": 7.794618957126703e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.02, 0.0, 0.0) acc_fixed trace preserving",
+      "value": 3.153104901905922e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.02, 0.0, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": 7.153701459330919e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.02, 0.0, 0.0) per_dump trace preserving",
+      "value": 2.4898991070614075e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.02, 0.0, 0.0) per_dump direct vs stable infidelity agree",
+      "value": 1.0234868508263162e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.02, 0.0, 0.0) self-calibrated leftover is zero",
+      "value": 3.4809608958320625e-33,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "five(0.0, 0.0001, 0.0) F^dagF + K^dagK = I",
+      "value": 5.704448881090402e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.0, 0.0001, 0.0) U isometry",
+      "value": 1.019780113003411e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.0, 0.0001, 0.0) acc_self trace preserving",
+      "value": 5.70444887791831e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.0, 0.0001, 0.0) acc_self direct vs stable infidelity agree",
+      "value": -2.510979531887825e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.0, 0.0001, 0.0) acc_fixed trace preserving",
+      "value": 1.007799911975857e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.0, 0.0001, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": -2.632441187346355e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.0, 0.0001, 0.0) per_dump trace preserving",
+      "value": 6.789645343059654e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.0, 0.0001, 0.0) per_dump direct vs stable infidelity agree",
+      "value": -2.1723098616895657e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.0, 0.0001, 0.0) self-calibrated leftover is zero",
+      "value": 7.06861063585908e-39,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0001, 0.0) F^dagF + K^dagK = I",
+      "value": 2.735301653740501e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0001, 0.0) U isometry",
+      "value": 5.033018808323411e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0001, 0.0) acc_self trace preserving",
+      "value": 2.7353188795827835e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0001, 0.0) acc_self direct vs stable infidelity agree",
+      "value": 1.269317110159131e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0001, 0.0) acc_fixed trace preserving",
+      "value": 2.5584012146596125e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0001, 0.0) acc_fixed direct vs stable infidelity agree",
+      "value": 1.1371806273756617e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0001, 0.0) per_dump trace preserving",
+      "value": 2.6150044478341982e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0001, 0.0) per_dump direct vs stable infidelity agree",
+      "value": 1.1391712226305195e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "five(0.01, 0.0001, 0.0) self-calibrated leftover is zero",
+      "value": 5.985887424962138e-34,
+      "tolerance": 1e-24,
+      "passed": true
+    },
+    {
+      "name": "five per-dump/discard ratio reproduces RH-1b (0.6668)",
+      "value": 5.2520479009388055e-05,
+      "tolerance": 0.002,
+      "passed": true
+    }
+  ],
+  "provenance": {
+    "test": "rh2",
+    "date": "2026-09-06",
+    "runtime_s": 0.2,
+    "head": "ffa01f357aa7fb57c84370b912207c1d59efd51a",
+    "blinding": "designer-run: spec and predictions written and sealed by the same agent (Claire) that wrote and ran this runner; sealed BEFORE the runner existed (commit ffa01f3) but NOT independent.",
+    "sha256": {
+      "rh2.py": "233d7c89868dfdf3c3ec2cf992453661a3e85a7058516b5fb9f235379f8b7e35",
+      "rh1_common.py": "93765a137867c4d6329466402d45c647aef5b712544b8d4505c49c2d4c7238b2",
+      "reflection_loop_composite.py": "223a895439ec08c16c231fc39a76b1923ba055746ec1b6bd132585f5d09f0b1d",
+      "reflection_loop_dynamics.py": "b4ceffe201de66994a3e6557a285fa1368ce05a6b780009be35283787f08deb1",
+      "reflection_loop_finite_dump.py": "0336ce9e9da80520fd58d7168976df1bb4b5afe32e4a9126e128b9af88627ab6",
+      "reflection_loop_reference_echo.py": "03b1ec12d8ed4455aa81e1127e82f1f49f1ef0563b3b95bda0e629a053b073a6",
+      "docs/2026-09-06-RH-2-spec.md": "055930f06a627f63a07526f6ad2c1f6bad052b4e3729ba12b0b47e85b3ee7c95",
+      "docs/prereg/RH-2/DESIGNER-PREDICTIONS.md": "ec287543cb366f450620558e6f4c5dd343867a72c6e3ee76633c6138f15da316"
+    }
+  },
+  "check_count": 94,
+  "checks_passed": 94,
+  "summary": {
+    "trine": {
+      "forks": {
+        "(0.005, 0.0, 0.0)": {
+          "self_over_floor": 1.193263055484471,
+          "self_over_discard": 3.1133829639856233e-13,
+          "fork": "a"
+        },
+        "(0.01, 0.0, 0.0)": {
+          "self_over_floor": 1.1910254800659732,
+          "self_over_discard": 1.9515112971450663e-11,
+          "fork": "a"
+        },
+        "(0.02, 0.0, 0.0)": {
+          "self_over_floor": 1.1860262798850212,
+          "self_over_discard": 1.193356988229377e-09,
+          "fork": "a"
+        },
+        "(0.0, 0.0001, 0.0)": {
+          "self_over_floor": 1.0068099139421494,
+          "self_over_discard": 0.9693822999931565,
+          "fork": "a"
+        },
+        "(0.01, 0.0001, 0.0)": {
+          "self_over_floor": 1.0155677148652158,
+          "self_over_discard": 3.101361138327953e-05,
+          "fork": "a"
+        }
+      },
+      "fixed_cal_excess": {
+        "at_5e3": 1.3272799463258575e-07,
+        "at_2e2": 8.138063383308065e-06,
+        "exponent_in_eps_minus_eps0": 5.938140919602748
+      }
+    },
+    "five": {
+      "forks": {
+        "(0.005, 0.0, 0.0)": {
+          "self_over_floor": 1.3221483744597746,
+          "self_over_discard": 1.2415449483229878e-13,
+          "fork": "a"
+        },
+        "(0.01, 0.0, 0.0)": {
+          "self_over_floor": 1.3185449674395204,
+          "self_over_discard": 7.769374751022919e-12,
+          "fork": "a"
+        },
+        "(0.02, 0.0, 0.0)": {
+          "self_over_floor": 1.3106869270791306,
+          "self_over_discard": 4.728002274934547e-10,
+          "fork": "a"
+        },
+        "(0.0, 0.0001, 0.0)": {
+          "self_over_floor": 1.0312943667084993,
+          "self_over_discard": 0.0006175708501163944,
+          "fork": "a"
+        },
+        "(0.01, 0.0001, 0.0)": {
+          "self_over_floor": 1.0027535240439536,
+          "self_over_discard": 1.1799489442150577e-06,
+          "fork": "a"
+        }
+      },
+      "fixed_cal_excess": {
+        "at_5e3": 5.997746098248854e-07,
+        "at_2e2": 3.690817108092296e-05,
+        "exponent_in_eps_minus_eps0": 5.943375988839946
+      }
+    }
+  }
+}

@@ -1,0 +1,3719 @@
+{
+  "scope": "RH-3: accumulator channel in the FD QEC stack; ideal coherent capture of E_h with register error r; background loss and stack noise unchanged; codes/decoders/seeds are qec_distance_stack.py",
+  "stack_noise": 0.001,
+  "shots": 200000,
+  "channels": {
+    "fd": {
+      "herald": 0.0026505479096192875,
+      "pauli": [
+        0.9999955490779245,
+        1.483638957268445e-06,
+        1.4836441495165821e-06,
+        1.4836389686485943e-06
+      ],
+      "replaced_unheralded": 5.9188260045256965e-06,
+      "repaired_conditional_average_infidelity": 2.967281383622414e-06,
+      "original_conditional_average_infidelity": 5.934559298158934e-06,
+      "n": 1,
+      "gain": 0.01,
+      "background_rate": 1e-06,
+      "delta_d": 0.0001,
+      "delta_r": 0.0,
+      "total_time": 124.87350186269815,
+      "dump_rate": 10.0,
+      "dump_action": 40.0
+    },
+    "acc_r0": {
+      "herald": 0.0,
+      "pauli": [
+        0.9999955590479916,
+        1.479706501204741e-06,
+        1.4815389714034572e-06,
+        1.4797065357723296e-06
+      ],
+      "register_error": 0.0,
+      "recovered_fraction": 0.0026505479096192875,
+      "replaced_unheralded": 5.9188260045256965e-06,
+      "unheralded_pauli_rate": 4.440952008380528e-06,
+      "recovered_branch_floor": 1.8273151498252204e-09,
+      "twirl_error": 3.140185647009218e-16,
+      "total_time": 124.87350186269815,
+      "n": 1,
+      "gain": 0.01,
+      "background_rate": 1e-06
+    },
+    "acc_r0.01": {
+      "herald": 0.0,
+      "pauli": [
+        0.9999756799569426,
+        8.106076275252228e-06,
+        8.107890472533815e-06,
+        8.10607630958764e-06
+      ],
+      "register_error": 0.01,
+      "recovered_fraction": 0.0026505479096192875,
+      "replaced_unheralded": 3.242430510071857e-05,
+      "unheralded_pauli_rate": 2.432004305737368e-05,
+      "recovered_branch_floor": 1.8273151498252204e-09,
+      "twirl_error": 6.280370199555966e-16,
+      "total_time": 124.87350186269815,
+      "n": 1,
+      "gain": 0.01,
+      "background_rate": 1e-06
+    },
+    "acc_r0.1": {
+      "herald": 0.0,
+      "pauli": [
+        0.9997967681375017,
+        6.774340424167962e-05,
+        6.774505398270705e-05,
+        6.774340427392546e-05
+      ],
+      "register_error": 0.1,
+      "recovered_fraction": 0.0026505479096192875,
+      "replaced_unheralded": 0.00027097361696645447,
+      "unheralded_pauli_rate": 0.00020323186249831214,
+      "recovered_branch_floor": 1.8273151498252204e-09,
+      "twirl_error": 6.280369843647549e-16,
+      "total_time": 124.87350186269815,
+      "n": 1,
+      "gain": 0.01,
+      "background_rate": 1e-06
+    },
+    "acc_r0.3": {
+      "herald": 0.0,
+      "pauli": [
+        0.9993991863165218,
+        0.00020027079972262935,
+        0.0002002720840053142,
+        0.00020027079975023165
+      ],
+      "register_error": 0.3,
+      "recovered_fraction": 0.0026505479096192875,
+      "replaced_unheralded": 0.0008010831988903118,
+      "unheralded_pauli_rate": 0.0006008136834781752,
+      "recovered_branch_floor": 1.8273151498252204e-09,
+      "twirl_error": 6.280370199555966e-16,
+      "total_time": 124.87350186269815,
+      "n": 1,
+      "gain": 0.01,
+      "background_rate": 1e-06
+    },
+    "acc_r1": {
+      "herald": 0.0,
+      "pauli": [
+        0.9980076499430923,
+        0.0006641166839059535,
+        0.0006641166890844393,
+        0.0006641166839173035
+      ],
+      "register_error": 1.0,
+      "recovered_fraction": 0.0026505479096192875,
+      "replaced_unheralded": 0.0026564667356238133,
+      "unheralded_pauli_rate": 0.0019923500569076964,
+      "recovered_branch_floor": 1.8273151498252204e-09,
+      "twirl_error": 4.7102778624791355e-16,
+      "total_time": 124.87350186269815,
+      "n": 1,
+      "gain": 0.01,
+      "background_rate": 1e-06
+    },
+    "baseline": {
+      "herald": 0.0,
+      "pauli": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_time": 124.87350186269815
+    }
+  },
+  "runs": [
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20260906,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0026505479096192875,
+        "pauli": [
+          0.9999955490779245,
+          1.483638957268445e-06,
+          1.4836441495165821e-06,
+          1.4836389686485943e-06
+        ],
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "repaired_conditional_average_infidelity": 2.967281383622414e-06,
+        "original_conditional_average_infidelity": 5.934559298158934e-06,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06,
+        "delta_d": 0.0001,
+        "delta_r": 0.0,
+        "total_time": 124.87350186269815,
+        "dump_rate": 10.0,
+        "dump_action": 40.0
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 14385,
+      "sampled_blocks_with_flag": 13886,
+      "paired_discordance_visible_only_hidden_only": [
+        38,
+        178
+      ],
+      "elapsed_seconds": 0.708594757001265,
+      "flags_visible": {
+        "failures": 218,
+        "rate": 0.00109,
+        "interval_95": [
+          0.0009501638781039031,
+          0.0012446039528992156
+        ],
+        "logical_failures": [
+          218
+        ]
+      },
+      "flags_hidden": {
+        "failures": 358,
+        "rate": 0.00179,
+        "interval_95": [
+          0.0016095003424077068,
+          0.0019851755306996856
+        ],
+        "logical_failures": [
+          358
+        ]
+      },
+      "scenario": "fd"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20261915,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0026505479096192875,
+        "pauli": [
+          0.9999955490779245,
+          1.483638957268445e-06,
+          1.4836441495165821e-06,
+          1.4836389686485943e-06
+        ],
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "repaired_conditional_average_infidelity": 2.967281383622414e-06,
+        "original_conditional_average_infidelity": 5.934559298158934e-06,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06,
+        "delta_d": 0.0001,
+        "delta_r": 0.0,
+        "total_time": 124.87350186269815,
+        "dump_rate": 10.0,
+        "dump_action": 40.0
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 14260,
+      "sampled_blocks_with_flag": 13760,
+      "paired_discordance_visible_only_hidden_only": [
+        33,
+        141
+      ],
+      "elapsed_seconds": 0.7024501519990736,
+      "flags_visible": {
+        "failures": 227,
+        "rate": 0.001135,
+        "interval_95": [
+          0.00099221051493476,
+          0.0012925494955003313
+        ],
+        "logical_failures": [
+          227
+        ]
+      },
+      "flags_hidden": {
+        "failures": 335,
+        "rate": 0.001675,
+        "interval_95": [
+          0.0015005428252854531,
+          0.0018641449985341923
+        ],
+        "logical_failures": [
+          335
+        ]
+      },
+      "scenario": "fd"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20262924,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0026505479096192875,
+        "pauli": [
+          0.9999955490779245,
+          1.483638957268445e-06,
+          1.4836441495165821e-06,
+          1.4836389686485943e-06
+        ],
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "repaired_conditional_average_infidelity": 2.967281383622414e-06,
+        "original_conditional_average_infidelity": 5.934559298158934e-06,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06,
+        "delta_d": 0.0001,
+        "delta_r": 0.0,
+        "total_time": 124.87350186269815,
+        "dump_rate": 10.0,
+        "dump_action": 40.0
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 66282,
+      "sampled_blocks_with_flag": 56356,
+      "paired_discordance_visible_only_hidden_only": [
+        10,
+        57
+      ],
+      "elapsed_seconds": 2.4858051580013125,
+      "flags_visible": {
+        "failures": 36,
+        "rate": 0.00018,
+        "interval_95": [
+          0.00012607287159179277,
+          0.0002491872506128349
+        ],
+        "logical_failures": [
+          36
+        ]
+      },
+      "flags_hidden": {
+        "failures": 83,
+        "rate": 0.000415,
+        "interval_95": [
+          0.0003305583169430973,
+          0.0005144293547265325
+        ],
+        "logical_failures": [
+          83
+        ]
+      },
+      "scenario": "fd"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20263933,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0026505479096192875,
+        "pauli": [
+          0.9999955490779245,
+          1.483638957268445e-06,
+          1.4836441495165821e-06,
+          1.4836389686485943e-06
+        ],
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "repaired_conditional_average_infidelity": 2.967281383622414e-06,
+        "original_conditional_average_infidelity": 5.934559298158934e-06,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06,
+        "delta_d": 0.0001,
+        "delta_r": 0.0,
+        "total_time": 124.87350186269815,
+        "dump_rate": 10.0,
+        "dump_action": 40.0
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 66539,
+      "sampled_blocks_with_flag": 56681,
+      "paired_discordance_visible_only_hidden_only": [
+        10,
+        44
+      ],
+      "elapsed_seconds": 2.2813225270001567,
+      "flags_visible": {
+        "failures": 35,
+        "rate": 0.000175,
+        "interval_95": [
+          0.00012189684411249843,
+          0.00024337431511552374
+        ],
+        "logical_failures": [
+          35
+        ]
+      },
+      "flags_hidden": {
+        "failures": 69,
+        "rate": 0.000345,
+        "interval_95": [
+          0.00026844019957728856,
+          0.0004365995779721104
+        ],
+        "logical_failures": [
+          69
+        ]
+      },
+      "scenario": "fd"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20264942,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0026505479096192875,
+        "pauli": [
+          0.9999955490779245,
+          1.483638957268445e-06,
+          1.4836441495165821e-06,
+          1.4836389686485943e-06
+        ],
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "repaired_conditional_average_infidelity": 2.967281383622414e-06,
+        "original_conditional_average_infidelity": 5.934559298158934e-06,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06,
+        "delta_d": 0.0001,
+        "delta_r": 0.0,
+        "total_time": 124.87350186269815,
+        "dump_rate": 10.0,
+        "dump_action": 40.0
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 181943,
+      "sampled_blocks_with_flag": 119583,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        11
+      ],
+      "elapsed_seconds": 25.368118291997234,
+      "flags_visible": {
+        "failures": 5,
+        "rate": 2.5e-05,
+        "interval_95": [
+          8.117480179060688e-06,
+          5.8340687798037695e-05
+        ],
+        "logical_failures": [
+          5
+        ]
+      },
+      "flags_hidden": {
+        "failures": 16,
+        "rate": 8e-05,
+        "interval_95": [
+          4.5727581572674456e-05,
+          0.00012991174562870195
+        ],
+        "logical_failures": [
+          16
+        ]
+      },
+      "scenario": "fd"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20265951,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0026505479096192875,
+        "pauli": [
+          0.9999955490779245,
+          1.483638957268445e-06,
+          1.4836441495165821e-06,
+          1.4836389686485943e-06
+        ],
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "repaired_conditional_average_infidelity": 2.967281383622414e-06,
+        "original_conditional_average_infidelity": 5.934559298158934e-06,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06,
+        "delta_d": 0.0001,
+        "delta_r": 0.0,
+        "total_time": 124.87350186269815,
+        "dump_rate": 10.0,
+        "dump_action": 40.0
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 181623,
+      "sampled_blocks_with_flag": 119457,
+      "paired_discordance_visible_only_hidden_only": [
+        1,
+        9
+      ],
+      "elapsed_seconds": 26.125498649998917,
+      "flags_visible": {
+        "failures": 4,
+        "rate": 2e-05,
+        "interval_95": [
+          5.4493528907159655e-06,
+          5.1207144334463475e-05
+        ],
+        "logical_failures": [
+          4
+        ]
+      },
+      "flags_hidden": {
+        "failures": 12,
+        "rate": 6e-05,
+        "interval_95": [
+          3.100324754234373e-05,
+          0.00010480557713051476
+        ],
+        "logical_failures": [
+          12
+        ]
+      },
+      "scenario": "fd"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20266960,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0026505479096192875,
+        "pauli": [
+          0.9999955490779245,
+          1.483638957268445e-06,
+          1.4836441495165821e-06,
+          1.4836389686485943e-06
+        ],
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "repaired_conditional_average_infidelity": 2.967281383622414e-06,
+        "original_conditional_average_infidelity": 5.934559298158934e-06,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06,
+        "delta_d": 0.0001,
+        "delta_r": 0.0,
+        "total_time": 124.87350186269815,
+        "dump_rate": 10.0,
+        "dump_action": 40.0
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 386560,
+      "sampled_blocks_with_flag": 170968,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 179.2674888670008,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "scenario": "fd"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20267969,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0026505479096192875,
+        "pauli": [
+          0.9999955490779245,
+          1.483638957268445e-06,
+          1.4836441495165821e-06,
+          1.4836389686485943e-06
+        ],
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "repaired_conditional_average_infidelity": 2.967281383622414e-06,
+        "original_conditional_average_infidelity": 5.934559298158934e-06,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06,
+        "delta_d": 0.0001,
+        "delta_r": 0.0,
+        "total_time": 124.87350186269815,
+        "dump_rate": 10.0,
+        "dump_action": 40.0
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 386696,
+      "sampled_blocks_with_flag": 171250,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        1
+      ],
+      "elapsed_seconds": 181.01211151000462,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "scenario": "fd"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20268978,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999955590479916,
+          1.479706501204741e-06,
+          1.4815389714034572e-06,
+          1.4797065357723296e-06
+        ],
+        "register_error": 0.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "unheralded_pauli_rate": 4.440952008380528e-06,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 3.140185647009218e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.6354046699998435,
+      "flags_visible": {
+        "failures": 166,
+        "rate": 0.00083,
+        "interval_95": [
+          0.0007085797841896579,
+          0.0009662429819356567
+        ],
+        "logical_failures": [
+          166
+        ]
+      },
+      "flags_hidden": {
+        "failures": 166,
+        "rate": 0.00083,
+        "interval_95": [
+          0.0007085797841896579,
+          0.0009662429819356567
+        ],
+        "logical_failures": [
+          166
+        ]
+      },
+      "scenario": "acc_r0"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20269987,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999955590479916,
+          1.479706501204741e-06,
+          1.4815389714034572e-06,
+          1.4797065357723296e-06
+        ],
+        "register_error": 0.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "unheralded_pauli_rate": 4.440952008380528e-06,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 3.140185647009218e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.622730925999349,
+      "flags_visible": {
+        "failures": 147,
+        "rate": 0.000735,
+        "interval_95": [
+          0.000621021614861584,
+          0.0008638271559540776
+        ],
+        "logical_failures": [
+          147
+        ]
+      },
+      "flags_hidden": {
+        "failures": 147,
+        "rate": 0.000735,
+        "interval_95": [
+          0.000621021614861584,
+          0.0008638271559540776
+        ],
+        "logical_failures": [
+          147
+        ]
+      },
+      "scenario": "acc_r0"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20270996,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999955590479916,
+          1.479706501204741e-06,
+          1.4815389714034572e-06,
+          1.4797065357723296e-06
+        ],
+        "register_error": 0.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "unheralded_pauli_rate": 4.440952008380528e-06,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 3.140185647009218e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0438835499953711,
+      "flags_visible": {
+        "failures": 33,
+        "rate": 0.000165,
+        "interval_95": [
+          0.00011358104426273957,
+          0.00023171361583470884
+        ],
+        "logical_failures": [
+          33
+        ]
+      },
+      "flags_hidden": {
+        "failures": 33,
+        "rate": 0.000165,
+        "interval_95": [
+          0.00011358104426273957,
+          0.00023171361583470884
+        ],
+        "logical_failures": [
+          33
+        ]
+      },
+      "scenario": "acc_r0"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20272005,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999955590479916,
+          1.479706501204741e-06,
+          1.4815389714034572e-06,
+          1.4797065357723296e-06
+        ],
+        "register_error": 0.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "unheralded_pauli_rate": 4.440952008380528e-06,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 3.140185647009218e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.008747781997954,
+      "flags_visible": {
+        "failures": 41,
+        "rate": 0.000205,
+        "interval_95": [
+          0.00014711542986909092,
+          0.00027809548203235827
+        ],
+        "logical_failures": [
+          41
+        ]
+      },
+      "flags_hidden": {
+        "failures": 41,
+        "rate": 0.000205,
+        "interval_95": [
+          0.00014711542986909092,
+          0.00027809548203235827
+        ],
+        "logical_failures": [
+          41
+        ]
+      },
+      "scenario": "acc_r0"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20273014,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999955590479916,
+          1.479706501204741e-06,
+          1.4815389714034572e-06,
+          1.4797065357723296e-06
+        ],
+        "register_error": 0.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "unheralded_pauli_rate": 4.440952008380528e-06,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 3.140185647009218e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.787756060999527,
+      "flags_visible": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "flags_hidden": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "scenario": "acc_r0"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20274023,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999955590479916,
+          1.479706501204741e-06,
+          1.4815389714034572e-06,
+          1.4797065357723296e-06
+        ],
+        "register_error": 0.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "unheralded_pauli_rate": 4.440952008380528e-06,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 3.140185647009218e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.7316386199963745,
+      "flags_visible": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "flags_hidden": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "scenario": "acc_r0"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20275032,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999955590479916,
+          1.479706501204741e-06,
+          1.4815389714034572e-06,
+          1.4797065357723296e-06
+        ],
+        "register_error": 0.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "unheralded_pauli_rate": 4.440952008380528e-06,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 3.140185647009218e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.9371936669995193,
+      "flags_visible": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "flags_hidden": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "scenario": "acc_r0"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20276041,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999955590479916,
+          1.479706501204741e-06,
+          1.4815389714034572e-06,
+          1.4797065357723296e-06
+        ],
+        "register_error": 0.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 5.9188260045256965e-06,
+        "unheralded_pauli_rate": 4.440952008380528e-06,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 3.140185647009218e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.830887848002021,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "scenario": "acc_r0"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20277050,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999756799569426,
+          8.106076275252228e-06,
+          8.107890472533815e-06,
+          8.10607630958764e-06
+        ],
+        "register_error": 0.01,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 3.242430510071857e-05,
+        "unheralded_pauli_rate": 2.432004305737368e-05,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.6370407180002076,
+      "flags_visible": {
+        "failures": 174,
+        "rate": 0.00087,
+        "interval_95": [
+          0.0007455749533199863,
+          0.0010092380119637297
+        ],
+        "logical_failures": [
+          174
+        ]
+      },
+      "flags_hidden": {
+        "failures": 174,
+        "rate": 0.00087,
+        "interval_95": [
+          0.0007455749533199863,
+          0.0010092380119637297
+        ],
+        "logical_failures": [
+          174
+        ]
+      },
+      "scenario": "acc_r0.01"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20278059,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999756799569426,
+          8.106076275252228e-06,
+          8.107890472533815e-06,
+          8.10607630958764e-06
+        ],
+        "register_error": 0.01,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 3.242430510071857e-05,
+        "unheralded_pauli_rate": 2.432004305737368e-05,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.6275443330014241,
+      "flags_visible": {
+        "failures": 149,
+        "rate": 0.000745,
+        "interval_95": [
+          0.0006302163810223935,
+          0.0008746294468807693
+        ],
+        "logical_failures": [
+          149
+        ]
+      },
+      "flags_hidden": {
+        "failures": 149,
+        "rate": 0.000745,
+        "interval_95": [
+          0.0006302163810223935,
+          0.0008746294468807693
+        ],
+        "logical_failures": [
+          149
+        ]
+      },
+      "scenario": "acc_r0.01"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20279068,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999756799569426,
+          8.106076275252228e-06,
+          8.107890472533815e-06,
+          8.10607630958764e-06
+        ],
+        "register_error": 0.01,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 3.242430510071857e-05,
+        "unheralded_pauli_rate": 2.432004305737368e-05,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0498277740043704,
+      "flags_visible": {
+        "failures": 25,
+        "rate": 0.000125,
+        "interval_95": [
+          8.08949910439919e-05,
+          0.00018451916655096365
+        ],
+        "logical_failures": [
+          25
+        ]
+      },
+      "flags_hidden": {
+        "failures": 25,
+        "rate": 0.000125,
+        "interval_95": [
+          8.08949910439919e-05,
+          0.00018451916655096365
+        ],
+        "logical_failures": [
+          25
+        ]
+      },
+      "scenario": "acc_r0.01"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20280077,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999756799569426,
+          8.106076275252228e-06,
+          8.107890472533815e-06,
+          8.10607630958764e-06
+        ],
+        "register_error": 0.01,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 3.242430510071857e-05,
+        "unheralded_pauli_rate": 2.432004305737368e-05,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0106887630026904,
+      "flags_visible": {
+        "failures": 21,
+        "rate": 0.000105,
+        "interval_95": [
+          6.499779251497361e-05,
+          0.0001604991993776173
+        ],
+        "logical_failures": [
+          21
+        ]
+      },
+      "flags_hidden": {
+        "failures": 21,
+        "rate": 0.000105,
+        "interval_95": [
+          6.499779251497361e-05,
+          0.0001604991993776173
+        ],
+        "logical_failures": [
+          21
+        ]
+      },
+      "scenario": "acc_r0.01"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20281086,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999756799569426,
+          8.106076275252228e-06,
+          8.107890472533815e-06,
+          8.10607630958764e-06
+        ],
+        "register_error": 0.01,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 3.242430510071857e-05,
+        "unheralded_pauli_rate": 2.432004305737368e-05,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.7855918139975984,
+      "flags_visible": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "flags_hidden": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "scenario": "acc_r0.01"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20282095,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999756799569426,
+          8.106076275252228e-06,
+          8.107890472533815e-06,
+          8.10607630958764e-06
+        ],
+        "register_error": 0.01,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 3.242430510071857e-05,
+        "unheralded_pauli_rate": 2.432004305737368e-05,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.7297209829994245,
+      "flags_visible": {
+        "failures": 6,
+        "rate": 3e-05,
+        "interval_95": [
+          1.1009548282571499e-05,
+          6.529621770560541e-05
+        ],
+        "logical_failures": [
+          6
+        ]
+      },
+      "flags_hidden": {
+        "failures": 6,
+        "rate": 3e-05,
+        "interval_95": [
+          1.1009548282571499e-05,
+          6.529621770560541e-05
+        ],
+        "logical_failures": [
+          6
+        ]
+      },
+      "scenario": "acc_r0.01"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20283104,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999756799569426,
+          8.106076275252228e-06,
+          8.107890472533815e-06,
+          8.10607630958764e-06
+        ],
+        "register_error": 0.01,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 3.242430510071857e-05,
+        "unheralded_pauli_rate": 2.432004305737368e-05,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.901831046001462,
+      "flags_visible": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "flags_hidden": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "scenario": "acc_r0.01"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20284113,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9999756799569426,
+          8.106076275252228e-06,
+          8.107890472533815e-06,
+          8.10607630958764e-06
+        ],
+        "register_error": 0.01,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 3.242430510071857e-05,
+        "unheralded_pauli_rate": 2.432004305737368e-05,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.8337618180012214,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "scenario": "acc_r0.01"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20285122,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9997967681375017,
+          6.774340424167962e-05,
+          6.774505398270705e-05,
+          6.774340427392546e-05
+        ],
+        "register_error": 0.1,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.00027097361696645447,
+        "unheralded_pauli_rate": 0.00020323186249831214,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280369843647549e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.6434619520005072,
+      "flags_visible": {
+        "failures": 177,
+        "rate": 0.000885,
+        "interval_95": [
+          0.0007594660643024051,
+          0.001025343376266532
+        ],
+        "logical_failures": [
+          177
+        ]
+      },
+      "flags_hidden": {
+        "failures": 177,
+        "rate": 0.000885,
+        "interval_95": [
+          0.0007594660643024051,
+          0.001025343376266532
+        ],
+        "logical_failures": [
+          177
+        ]
+      },
+      "scenario": "acc_r0.1"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20286131,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9997967681375017,
+          6.774340424167962e-05,
+          6.774505398270705e-05,
+          6.774340427392546e-05
+        ],
+        "register_error": 0.1,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.00027097361696645447,
+        "unheralded_pauli_rate": 0.00020323186249831214,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280369843647549e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.6269838850057567,
+      "flags_visible": {
+        "failures": 176,
+        "rate": 0.00088,
+        "interval_95": [
+          0.0007548346388658299,
+          0.0010199759679106613
+        ],
+        "logical_failures": [
+          176
+        ]
+      },
+      "flags_hidden": {
+        "failures": 176,
+        "rate": 0.00088,
+        "interval_95": [
+          0.0007548346388658299,
+          0.0010199759679106613
+        ],
+        "logical_failures": [
+          176
+        ]
+      },
+      "scenario": "acc_r0.1"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20287140,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9997967681375017,
+          6.774340424167962e-05,
+          6.774505398270705e-05,
+          6.774340427392546e-05
+        ],
+        "register_error": 0.1,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.00027097361696645447,
+        "unheralded_pauli_rate": 0.00020323186249831214,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280369843647549e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0606486850010697,
+      "flags_visible": {
+        "failures": 33,
+        "rate": 0.000165,
+        "interval_95": [
+          0.00011358104426273957,
+          0.00023171361583470884
+        ],
+        "logical_failures": [
+          33
+        ]
+      },
+      "flags_hidden": {
+        "failures": 33,
+        "rate": 0.000165,
+        "interval_95": [
+          0.00011358104426273957,
+          0.00023171361583470884
+        ],
+        "logical_failures": [
+          33
+        ]
+      },
+      "scenario": "acc_r0.1"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20288149,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9997967681375017,
+          6.774340424167962e-05,
+          6.774505398270705e-05,
+          6.774340427392546e-05
+        ],
+        "register_error": 0.1,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.00027097361696645447,
+        "unheralded_pauli_rate": 0.00020323186249831214,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280369843647549e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0233032929972978,
+      "flags_visible": {
+        "failures": 20,
+        "rate": 0.0001,
+        "interval_95": [
+          6.108363384727002e-05,
+          0.00015443768543685384
+        ],
+        "logical_failures": [
+          20
+        ]
+      },
+      "flags_hidden": {
+        "failures": 20,
+        "rate": 0.0001,
+        "interval_95": [
+          6.108363384727002e-05,
+          0.00015443768543685384
+        ],
+        "logical_failures": [
+          20
+        ]
+      },
+      "scenario": "acc_r0.1"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20289158,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9997967681375017,
+          6.774340424167962e-05,
+          6.774505398270705e-05,
+          6.774340427392546e-05
+        ],
+        "register_error": 0.1,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.00027097361696645447,
+        "unheralded_pauli_rate": 0.00020323186249831214,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280369843647549e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.8056510790047469,
+      "flags_visible": {
+        "failures": 3,
+        "rate": 1.5e-05,
+        "interval_95": [
+          3.093371296905321e-06,
+          4.383573331190015e-05
+        ],
+        "logical_failures": [
+          3
+        ]
+      },
+      "flags_hidden": {
+        "failures": 3,
+        "rate": 1.5e-05,
+        "interval_95": [
+          3.093371296905321e-06,
+          4.383573331190015e-05
+        ],
+        "logical_failures": [
+          3
+        ]
+      },
+      "scenario": "acc_r0.1"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20290167,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9997967681375017,
+          6.774340424167962e-05,
+          6.774505398270705e-05,
+          6.774340427392546e-05
+        ],
+        "register_error": 0.1,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.00027097361696645447,
+        "unheralded_pauli_rate": 0.00020323186249831214,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280369843647549e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.7309877490042709,
+      "flags_visible": {
+        "failures": 6,
+        "rate": 3e-05,
+        "interval_95": [
+          1.1009548282571499e-05,
+          6.529621770560541e-05
+        ],
+        "logical_failures": [
+          6
+        ]
+      },
+      "flags_hidden": {
+        "failures": 6,
+        "rate": 3e-05,
+        "interval_95": [
+          1.1009548282571499e-05,
+          6.529621770560541e-05
+        ],
+        "logical_failures": [
+          6
+        ]
+      },
+      "scenario": "acc_r0.1"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20291176,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9997967681375017,
+          6.774340424167962e-05,
+          6.774505398270705e-05,
+          6.774340427392546e-05
+        ],
+        "register_error": 0.1,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.00027097361696645447,
+        "unheralded_pauli_rate": 0.00020323186249831214,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280369843647549e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.918484346002515,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "scenario": "acc_r0.1"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20292185,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9997967681375017,
+          6.774340424167962e-05,
+          6.774505398270705e-05,
+          6.774340427392546e-05
+        ],
+        "register_error": 0.1,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.00027097361696645447,
+        "unheralded_pauli_rate": 0.00020323186249831214,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280369843647549e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.8450445470007253,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "scenario": "acc_r0.1"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20293194,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9993991863165218,
+          0.00020027079972262935,
+          0.0002002720840053142,
+          0.00020027079975023165
+        ],
+        "register_error": 0.3,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0008010831988903118,
+        "unheralded_pauli_rate": 0.0006008136834781752,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.6462572009986616,
+      "flags_visible": {
+        "failures": 229,
+        "rate": 0.001145,
+        "interval_95": [
+          0.0010015622386584802,
+          0.0013031960858474725
+        ],
+        "logical_failures": [
+          229
+        ]
+      },
+      "flags_hidden": {
+        "failures": 229,
+        "rate": 0.001145,
+        "interval_95": [
+          0.0010015622386584802,
+          0.0013031960858474725
+        ],
+        "logical_failures": [
+          229
+        ]
+      },
+      "scenario": "acc_r0.3"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20294203,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9993991863165218,
+          0.00020027079972262935,
+          0.0002002720840053142,
+          0.00020027079975023165
+        ],
+        "register_error": 0.3,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0008010831988903118,
+        "unheralded_pauli_rate": 0.0006008136834781752,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.6406049439974595,
+      "flags_visible": {
+        "failures": 227,
+        "rate": 0.001135,
+        "interval_95": [
+          0.00099221051493476,
+          0.0012925494955003313
+        ],
+        "logical_failures": [
+          227
+        ]
+      },
+      "flags_hidden": {
+        "failures": 227,
+        "rate": 0.001135,
+        "interval_95": [
+          0.00099221051493476,
+          0.0012925494955003313
+        ],
+        "logical_failures": [
+          227
+        ]
+      },
+      "scenario": "acc_r0.3"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20295212,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9993991863165218,
+          0.00020027079972262935,
+          0.0002002720840053142,
+          0.00020027079975023165
+        ],
+        "register_error": 0.3,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0008010831988903118,
+        "unheralded_pauli_rate": 0.0006008136834781752,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0776204020003206,
+      "flags_visible": {
+        "failures": 45,
+        "rate": 0.000225,
+        "interval_95": [
+          0.00016412112999372817,
+          0.0003010562513950036
+        ],
+        "logical_failures": [
+          45
+        ]
+      },
+      "flags_hidden": {
+        "failures": 45,
+        "rate": 0.000225,
+        "interval_95": [
+          0.00016412112999372817,
+          0.0003010562513950036
+        ],
+        "logical_failures": [
+          45
+        ]
+      },
+      "scenario": "acc_r0.3"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20296221,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9993991863165218,
+          0.00020027079972262935,
+          0.0002002720840053142,
+          0.00020027079975023165
+        ],
+        "register_error": 0.3,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0008010831988903118,
+        "unheralded_pauli_rate": 0.0006008136834781752,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0614752900000894,
+      "flags_visible": {
+        "failures": 44,
+        "rate": 0.00022,
+        "interval_95": [
+          0.00015985674486443738,
+          0.0002953286056880503
+        ],
+        "logical_failures": [
+          44
+        ]
+      },
+      "flags_hidden": {
+        "failures": 44,
+        "rate": 0.00022,
+        "interval_95": [
+          0.00015985674486443738,
+          0.0002953286056880503
+        ],
+        "logical_failures": [
+          44
+        ]
+      },
+      "scenario": "acc_r0.3"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20297230,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9993991863165218,
+          0.00020027079972262935,
+          0.0002002720840053142,
+          0.00020027079975023165
+        ],
+        "register_error": 0.3,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0008010831988903118,
+        "unheralded_pauli_rate": 0.0006008136834781752,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.8239650959949358,
+      "flags_visible": {
+        "failures": 5,
+        "rate": 2.5e-05,
+        "interval_95": [
+          8.117480179060688e-06,
+          5.8340687798037695e-05
+        ],
+        "logical_failures": [
+          5
+        ]
+      },
+      "flags_hidden": {
+        "failures": 5,
+        "rate": 2.5e-05,
+        "interval_95": [
+          8.117480179060688e-06,
+          5.8340687798037695e-05
+        ],
+        "logical_failures": [
+          5
+        ]
+      },
+      "scenario": "acc_r0.3"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20298239,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9993991863165218,
+          0.00020027079972262935,
+          0.0002002720840053142,
+          0.00020027079975023165
+        ],
+        "register_error": 0.3,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0008010831988903118,
+        "unheralded_pauli_rate": 0.0006008136834781752,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.774734623999393,
+      "flags_visible": {
+        "failures": 7,
+        "rate": 3.5e-05,
+        "interval_95": [
+          1.4071927328447343e-05,
+          7.211203862894598e-05
+        ],
+        "logical_failures": [
+          7
+        ]
+      },
+      "flags_hidden": {
+        "failures": 7,
+        "rate": 3.5e-05,
+        "interval_95": [
+          1.4071927328447343e-05,
+          7.211203862894598e-05
+        ],
+        "logical_failures": [
+          7
+        ]
+      },
+      "scenario": "acc_r0.3"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20299248,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9993991863165218,
+          0.00020027079972262935,
+          0.0002002720840053142,
+          0.00020027079975023165
+        ],
+        "register_error": 0.3,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0008010831988903118,
+        "unheralded_pauli_rate": 0.0006008136834781752,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.9923434629963594,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "scenario": "acc_r0.3"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20300257,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9993991863165218,
+          0.00020027079972262935,
+          0.0002002720840053142,
+          0.00020027079975023165
+        ],
+        "register_error": 0.3,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0008010831988903118,
+        "unheralded_pauli_rate": 0.0006008136834781752,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 6.280370199555966e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.8843104929983383,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "scenario": "acc_r0.3"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20301266,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9980076499430923,
+          0.0006641166839059535,
+          0.0006641166890844393,
+          0.0006641166839173035
+        ],
+        "register_error": 1.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0026564667356238133,
+        "unheralded_pauli_rate": 0.0019923500569076964,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 4.7102778624791355e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.658438334998209,
+      "flags_visible": {
+        "failures": 344,
+        "rate": 0.00172,
+        "interval_95": [
+          0.0015431542709612317,
+          0.001911528774421997
+        ],
+        "logical_failures": [
+          344
+        ]
+      },
+      "flags_hidden": {
+        "failures": 344,
+        "rate": 0.00172,
+        "interval_95": [
+          0.0015431542709612317,
+          0.001911528774421997
+        ],
+        "logical_failures": [
+          344
+        ]
+      },
+      "scenario": "acc_r1"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20302275,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9980076499430923,
+          0.0006641166839059535,
+          0.0006641166890844393,
+          0.0006641166839173035
+        ],
+        "register_error": 1.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0026564667356238133,
+        "unheralded_pauli_rate": 0.0019923500569076964,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 4.7102778624791355e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.6407047239990789,
+      "flags_visible": {
+        "failures": 292,
+        "rate": 0.00146,
+        "interval_95": [
+          0.0012974278038869033,
+          0.0016372849933263232
+        ],
+        "logical_failures": [
+          292
+        ]
+      },
+      "flags_hidden": {
+        "failures": 292,
+        "rate": 0.00146,
+        "interval_95": [
+          0.0012974278038869033,
+          0.0016372849933263232
+        ],
+        "logical_failures": [
+          292
+        ]
+      },
+      "scenario": "acc_r1"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20303284,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9980076499430923,
+          0.0006641166839059535,
+          0.0006641166890844393,
+          0.0006641166839173035
+        ],
+        "register_error": 1.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0026564667356238133,
+        "unheralded_pauli_rate": 0.0019923500569076964,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 4.7102778624791355e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0993659309970099,
+      "flags_visible": {
+        "failures": 80,
+        "rate": 0.0004,
+        "interval_95": [
+          0.00031718746660390224,
+          0.0004978102705468565
+        ],
+        "logical_failures": [
+          80
+        ]
+      },
+      "flags_hidden": {
+        "failures": 80,
+        "rate": 0.0004,
+        "interval_95": [
+          0.00031718746660390224,
+          0.0004978102705468565
+        ],
+        "logical_failures": [
+          80
+        ]
+      },
+      "scenario": "acc_r1"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20304293,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9980076499430923,
+          0.0006641166839059535,
+          0.0006641166890844393,
+          0.0006641166839173035
+        ],
+        "register_error": 1.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0026564667356238133,
+        "unheralded_pauli_rate": 0.0019923500569076964,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 4.7102778624791355e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0657068989967229,
+      "flags_visible": {
+        "failures": 74,
+        "rate": 0.00037,
+        "interval_95": [
+          0.0002905404004466009,
+          0.00046447916830467554
+        ],
+        "logical_failures": [
+          74
+        ]
+      },
+      "flags_hidden": {
+        "failures": 74,
+        "rate": 0.00037,
+        "interval_95": [
+          0.0002905404004466009,
+          0.00046447916830467554
+        ],
+        "logical_failures": [
+          74
+        ]
+      },
+      "scenario": "acc_r1"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20305302,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9980076499430923,
+          0.0006641166839059535,
+          0.0006641166890844393,
+          0.0006641166839173035
+        ],
+        "register_error": 1.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0026564667356238133,
+        "unheralded_pauli_rate": 0.0019923500569076964,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 4.7102778624791355e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.8598605919978581,
+      "flags_visible": {
+        "failures": 19,
+        "rate": 9.5e-05,
+        "interval_95": [
+          5.719714398162783e-05,
+          0.00014835031017351722
+        ],
+        "logical_failures": [
+          19
+        ]
+      },
+      "flags_hidden": {
+        "failures": 19,
+        "rate": 9.5e-05,
+        "interval_95": [
+          5.719714398162783e-05,
+          0.00014835031017351722
+        ],
+        "logical_failures": [
+          19
+        ]
+      },
+      "scenario": "acc_r1"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20306311,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9980076499430923,
+          0.0006641166839059535,
+          0.0006641166890844393,
+          0.0006641166839173035
+        ],
+        "register_error": 1.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0026564667356238133,
+        "unheralded_pauli_rate": 0.0019923500569076964,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 4.7102778624791355e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.8488868400017964,
+      "flags_visible": {
+        "failures": 13,
+        "rate": 6.5e-05,
+        "interval_95": [
+          3.4610201841238936e-05,
+          0.00011114941464963615
+        ],
+        "logical_failures": [
+          13
+        ]
+      },
+      "flags_hidden": {
+        "failures": 13,
+        "rate": 6.5e-05,
+        "interval_95": [
+          3.4610201841238936e-05,
+          0.00011114941464963615
+        ],
+        "logical_failures": [
+          13
+        ]
+      },
+      "scenario": "acc_r1"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20307320,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9980076499430923,
+          0.0006641166839059535,
+          0.0006641166890844393,
+          0.0006641166839173035
+        ],
+        "register_error": 1.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0026564667356238133,
+        "unheralded_pauli_rate": 0.0019923500569076964,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 4.7102778624791355e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 3.076699183002347,
+      "flags_visible": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "flags_hidden": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "scenario": "acc_r1"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20308329,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          0.9980076499430923,
+          0.0006641166839059535,
+          0.0006641166890844393,
+          0.0006641166839173035
+        ],
+        "register_error": 1.0,
+        "recovered_fraction": 0.0026505479096192875,
+        "replaced_unheralded": 0.0026564667356238133,
+        "unheralded_pauli_rate": 0.0019923500569076964,
+        "recovered_branch_floor": 1.8273151498252204e-09,
+        "twirl_error": 4.7102778624791355e-16,
+        "total_time": 124.87350186269815,
+        "n": 1,
+        "gain": 0.01,
+        "background_rate": 1e-06
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.9615067319973605,
+      "flags_visible": {
+        "failures": 4,
+        "rate": 2e-05,
+        "interval_95": [
+          5.4493528907159655e-06,
+          5.1207144334463475e-05
+        ],
+        "logical_failures": [
+          4
+        ]
+      },
+      "flags_hidden": {
+        "failures": 4,
+        "rate": 2e-05,
+        "interval_95": [
+          5.4493528907159655e-06,
+          5.1207144334463475e-05
+        ],
+        "logical_failures": [
+          4
+        ]
+      },
+      "scenario": "acc_r1"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20309338,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_time": 124.87350186269815
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.6499117479979759,
+      "flags_visible": {
+        "failures": 171,
+        "rate": 0.000855,
+        "interval_95": [
+          0.0007316934757489596,
+          0.0009931230944115726
+        ],
+        "logical_failures": [
+          171
+        ]
+      },
+      "flags_hidden": {
+        "failures": 171,
+        "rate": 0.000855,
+        "interval_95": [
+          0.0007316934757489596,
+          0.0009931230944115726
+        ],
+        "logical_failures": [
+          171
+        ]
+      },
+      "scenario": "baseline"
+    },
+    {
+      "code": "rotated_surface_d3",
+      "distance": 3,
+      "data_qubits": 9,
+      "logical_qubits": 1,
+      "syndrome_rounds": 3,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20310347,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_time": 124.87350186269815
+      },
+      "detector_count": 16,
+      "error_mechanisms": 55,
+      "circuit_qubits": 26,
+      "native_gate_locations": 27,
+      "native_parallel_layer_time": 374.62050558809443,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 0.634530242998153,
+      "flags_visible": {
+        "failures": 156,
+        "rate": 0.00078,
+        "interval_95": [
+          0.0006624399178546599,
+          0.0009123960109915448
+        ],
+        "logical_failures": [
+          156
+        ]
+      },
+      "flags_hidden": {
+        "failures": 156,
+        "rate": 0.00078,
+        "interval_95": [
+          0.0006624399178546599,
+          0.0009123960109915448
+        ],
+        "logical_failures": [
+          156
+        ]
+      },
+      "scenario": "baseline"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20311356,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_time": 124.87350186269815
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.054012310996768,
+      "flags_visible": {
+        "failures": 29,
+        "rate": 0.000145,
+        "interval_95": [
+          9.711085835321686e-05,
+          0.00020823760198843968
+        ],
+        "logical_failures": [
+          29
+        ]
+      },
+      "flags_hidden": {
+        "failures": 29,
+        "rate": 0.000145,
+        "interval_95": [
+          9.711085835321686e-05,
+          0.00020823760198843968
+        ],
+        "logical_failures": [
+          29
+        ]
+      },
+      "scenario": "baseline"
+    },
+    {
+      "code": "rotated_surface_d5",
+      "distance": 5,
+      "data_qubits": 25,
+      "logical_qubits": 1,
+      "syndrome_rounds": 5,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20312365,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_time": 124.87350186269815
+      },
+      "detector_count": 72,
+      "error_mechanisms": 301,
+      "circuit_qubits": 64,
+      "native_gate_locations": 125,
+      "native_parallel_layer_time": 624.3675093134907,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.0228009540005587,
+      "flags_visible": {
+        "failures": 18,
+        "rate": 9e-05,
+        "interval_95": [
+          5.334054830615181e-05,
+          0.00014223508613182994
+        ],
+        "logical_failures": [
+          18
+        ]
+      },
+      "flags_hidden": {
+        "failures": 18,
+        "rate": 9e-05,
+        "interval_95": [
+          5.334054830615181e-05,
+          0.00014223508613182994
+        ],
+        "logical_failures": [
+          18
+        ]
+      },
+      "scenario": "baseline"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20313374,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_time": 124.87350186269815
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.7982347489960375,
+      "flags_visible": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "flags_hidden": {
+        "failures": 1,
+        "rate": 5e-06,
+        "interval_95": [
+          1.265890319090572e-07,
+          2.785789856219694e-05
+        ],
+        "logical_failures": [
+          1
+        ]
+      },
+      "scenario": "baseline"
+    },
+    {
+      "code": "rotated_surface_d7",
+      "distance": 7,
+      "data_qubits": 49,
+      "logical_qubits": 1,
+      "syndrome_rounds": 7,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20314383,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_time": 124.87350186269815
+      },
+      "detector_count": 192,
+      "error_mechanisms": 883,
+      "circuit_qubits": 118,
+      "native_gate_locations": 343,
+      "native_parallel_layer_time": 874.114513038887,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 1.7263117440015776,
+      "flags_visible": {
+        "failures": 5,
+        "rate": 2.5e-05,
+        "interval_95": [
+          8.117480179060688e-06,
+          5.8340687798037695e-05
+        ],
+        "logical_failures": [
+          5
+        ]
+      },
+      "flags_hidden": {
+        "failures": 5,
+        "rate": 2.5e-05,
+        "interval_95": [
+          8.117480179060688e-06,
+          5.8340687798037695e-05
+        ],
+        "logical_failures": [
+          5
+        ]
+      },
+      "scenario": "baseline"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "X",
+      "shots": 200000,
+      "seed": 20315392,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_time": 124.87350186269815
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.9204635299975052,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "scenario": "baseline"
+    },
+    {
+      "code": "rotated_surface_d9",
+      "distance": 9,
+      "data_qubits": 81,
+      "logical_qubits": 1,
+      "syndrome_rounds": 9,
+      "basis": "Z",
+      "shots": 200000,
+      "seed": 20316401,
+      "decoder": "matching",
+      "channel": {
+        "herald": 0.0,
+        "pauli": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_time": 124.87350186269815
+      },
+      "detector_count": 400,
+      "error_mechanisms": 1945,
+      "circuit_qubits": 188,
+      "native_gate_locations": 729,
+      "native_parallel_layer_time": 1123.8615167642834,
+      "sampled_erasure_events": 0,
+      "sampled_blocks_with_flag": 0,
+      "paired_discordance_visible_only_hidden_only": [
+        0,
+        0
+      ],
+      "elapsed_seconds": 2.8196436100042774,
+      "flags_visible": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "flags_hidden": {
+        "failures": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          1.497854918818187e-05
+        ],
+        "logical_failures": [
+          0
+        ]
+      },
+      "scenario": "baseline"
+    }
+  ],
+  "provenance": {
+    "date": "2026-09-06",
+    "head": "04a3337adc2a30066a7c3db542e52703bfe211b8",
+    "sha256": {
+      "rh3_qec_accumulator.py": "43d73d440ba5efed472556f08d31bf1da1ff97ac374a8a137241fb0e0d6cdbd0",
+      "qec_distance_stack.py": "bbc7f59daae90901dc5ddf00422223e6c817b9240d16f15952b3a0f8122965d7",
+      "docs/reflection-loop-finite-dump-checks.json": "ac28b7142c87e8d23b106fc620552033e55826070a8e8f45596e2f04aabde768"
+    }
+  }
+}

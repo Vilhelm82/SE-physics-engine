@@ -1,0 +1,299 @@
+== per-gate channels (n=1, gain 1%, gamma/a=1e-6) ==
+  fd         herald 2.650548e-03  unheralded Pauli 4.450922e-06  (X,Y,Z)=['1.484e-06', '1.484e-06', '1.484e-06']
+  acc_r0     herald 0.000000e+00  unheralded Pauli 4.440952e-06  (X,Y,Z)=['1.480e-06', '1.482e-06', '1.480e-06']  twirl_err 3.1e-16  floor 1.83e-09
+  acc_r0.01  herald 0.000000e+00  unheralded Pauli 2.432004e-05  (X,Y,Z)=['8.106e-06', '8.108e-06', '8.106e-06']  twirl_err 6.3e-16  floor 1.83e-09
+  acc_r0.1   herald 0.000000e+00  unheralded Pauli 2.032319e-04  (X,Y,Z)=['6.774e-05', '6.775e-05', '6.774e-05']  twirl_err 6.3e-16  floor 1.83e-09
+  acc_r0.3   herald 0.000000e+00  unheralded Pauli 6.008137e-04  (X,Y,Z)=['2.003e-04', '2.003e-04', '2.003e-04']  twirl_err 6.3e-16  floor 1.83e-09
+  acc_r1     herald 0.000000e+00  unheralded Pauli 1.992350e-03  (X,Y,Z)=['6.641e-04', '6.641e-04', '6.641e-04']  twirl_err 4.7e-16  floor 1.83e-09
+  baseline   herald 0.000000e+00  unheralded Pauli 0.000000e+00  (X,Y,Z)=['0.000e+00', '0.000e+00', '0.000e+00']
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [59, 93]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [111, 177]; 0.4s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [162, 260]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [218, 358]; 0.7s
+  >> fd         rotated_surface_d3 X: failures visible 218 / hidden 358 of 200000  (1s)
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [60, 94]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [105, 167]; 0.4s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [165, 251]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [227, 335]; 0.7s
+  >> fd         rotated_surface_d3 Z: failures visible 227 / hidden 335 of 200000  (1s)
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [3, 23]; 0.7s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [12, 40]; 1.3s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [23, 63]; 1.9s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [36, 83]; 2.5s
+  >> fd         rotated_surface_d5 X: failures visible 36 / hidden 83 of 200000  (2s)
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [8, 16]; 0.5s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [16, 32]; 1.1s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [24, 52]; 1.7s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [35, 69]; 2.3s
+  >> fd         rotated_surface_d5 Z: failures visible 35 / hidden 69 of 200000  (2s)
+rotated_surface_d7 X: 50000/200000; failures visible/hidden [0, 3]; 5.6s
+rotated_surface_d7 X: 100000/200000; failures visible/hidden [1, 7]; 12.0s
+rotated_surface_d7 X: 150000/200000; failures visible/hidden [2, 10]; 18.5s
+rotated_surface_d7 X: 200000/200000; failures visible/hidden [5, 16]; 25.4s
+  >> fd         rotated_surface_d7 X: failures visible 5 / hidden 16 of 200000  (25s)
+rotated_surface_d7 Z: 50000/200000; failures visible/hidden [1, 6]; 5.8s
+rotated_surface_d7 Z: 100000/200000; failures visible/hidden [3, 9]; 12.4s
+rotated_surface_d7 Z: 150000/200000; failures visible/hidden [4, 10]; 19.2s
+rotated_surface_d7 Z: 200000/200000; failures visible/hidden [4, 12]; 26.1s
+  >> fd         rotated_surface_d7 Z: failures visible 4 / hidden 12 of 200000  (26s)
+rotated_surface_d9 X: 50000/200000; failures visible/hidden [0, 0]; 41.1s
+rotated_surface_d9 X: 100000/200000; failures visible/hidden [0, 0]; 86.5s
+rotated_surface_d9 X: 150000/200000; failures visible/hidden [0, 0]; 132.8s
+rotated_surface_d9 X: 200000/200000; failures visible/hidden [0, 0]; 179.3s
+  >> fd         rotated_surface_d9 X: failures visible 0 / hidden 0 of 200000  (179s)
+rotated_surface_d9 Z: 50000/200000; failures visible/hidden [0, 0]; 40.5s
+rotated_surface_d9 Z: 100000/200000; failures visible/hidden [0, 0]; 87.6s
+rotated_surface_d9 Z: 150000/200000; failures visible/hidden [0, 1]; 134.6s
+rotated_surface_d9 Z: 200000/200000; failures visible/hidden [0, 1]; 181.0s
+  >> fd         rotated_surface_d9 Z: failures visible 0 / hidden 1 of 200000  (181s)
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [44, 44]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [84, 84]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [126, 126]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [166, 166]; 0.6s
+  >> acc_r0     rotated_surface_d3 X: failures visible 166 / hidden 166 of 200000  (1s)
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [30, 30]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [62, 62]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [107, 107]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [147, 147]; 0.6s
+  >> acc_r0     rotated_surface_d3 Z: failures visible 147 / hidden 147 of 200000  (1s)
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [13, 13]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [18, 18]; 0.5s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [25, 25]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [33, 33]; 1.0s
+  >> acc_r0     rotated_surface_d5 X: failures visible 33 / hidden 33 of 200000  (1s)
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [8, 8]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [23, 23]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [28, 28]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [41, 41]; 1.0s
+  >> acc_r0     rotated_surface_d5 Z: failures visible 41 / hidden 41 of 200000  (1s)
+rotated_surface_d7 X: 50000/200000; failures visible/hidden [0, 0]; 0.5s
+rotated_surface_d7 X: 100000/200000; failures visible/hidden [1, 1]; 0.9s
+rotated_surface_d7 X: 150000/200000; failures visible/hidden [1, 1]; 1.3s
+rotated_surface_d7 X: 200000/200000; failures visible/hidden [1, 1]; 1.8s
+  >> acc_r0     rotated_surface_d7 X: failures visible 1 / hidden 1 of 200000  (2s)
+rotated_surface_d7 Z: 50000/200000; failures visible/hidden [1, 1]; 0.4s
+rotated_surface_d7 Z: 100000/200000; failures visible/hidden [1, 1]; 0.9s
+rotated_surface_d7 Z: 150000/200000; failures visible/hidden [1, 1]; 1.3s
+rotated_surface_d7 Z: 200000/200000; failures visible/hidden [1, 1]; 1.7s
+  >> acc_r0     rotated_surface_d7 Z: failures visible 1 / hidden 1 of 200000  (2s)
+rotated_surface_d9 X: 50000/200000; failures visible/hidden [1, 1]; 0.7s
+rotated_surface_d9 X: 100000/200000; failures visible/hidden [1, 1]; 1.5s
+rotated_surface_d9 X: 150000/200000; failures visible/hidden [1, 1]; 2.2s
+rotated_surface_d9 X: 200000/200000; failures visible/hidden [1, 1]; 2.9s
+  >> acc_r0     rotated_surface_d9 X: failures visible 1 / hidden 1 of 200000  (3s)
+rotated_surface_d9 Z: 50000/200000; failures visible/hidden [0, 0]; 0.7s
+rotated_surface_d9 Z: 100000/200000; failures visible/hidden [0, 0]; 1.4s
+rotated_surface_d9 Z: 150000/200000; failures visible/hidden [0, 0]; 2.1s
+rotated_surface_d9 Z: 200000/200000; failures visible/hidden [0, 0]; 2.8s
+  >> acc_r0     rotated_surface_d9 Z: failures visible 0 / hidden 0 of 200000  (3s)
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [46, 46]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [92, 92]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [136, 136]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [174, 174]; 0.6s
+  >> acc_r0.01  rotated_surface_d3 X: failures visible 174 / hidden 174 of 200000  (1s)
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [41, 41]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [77, 77]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [117, 117]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [149, 149]; 0.6s
+  >> acc_r0.01  rotated_surface_d3 Z: failures visible 149 / hidden 149 of 200000  (1s)
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [6, 6]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [13, 13]; 0.5s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [20, 20]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [25, 25]; 1.0s
+  >> acc_r0.01  rotated_surface_d5 X: failures visible 25 / hidden 25 of 200000  (1s)
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [5, 5]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [12, 12]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [15, 15]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [21, 21]; 1.0s
+  >> acc_r0.01  rotated_surface_d5 Z: failures visible 21 / hidden 21 of 200000  (1s)
+rotated_surface_d7 X: 50000/200000; failures visible/hidden [1, 1]; 0.5s
+rotated_surface_d7 X: 100000/200000; failures visible/hidden [1, 1]; 0.9s
+rotated_surface_d7 X: 150000/200000; failures visible/hidden [1, 1]; 1.3s
+rotated_surface_d7 X: 200000/200000; failures visible/hidden [1, 1]; 1.8s
+  >> acc_r0.01  rotated_surface_d7 X: failures visible 1 / hidden 1 of 200000  (2s)
+rotated_surface_d7 Z: 50000/200000; failures visible/hidden [1, 1]; 0.4s
+rotated_surface_d7 Z: 100000/200000; failures visible/hidden [3, 3]; 0.9s
+rotated_surface_d7 Z: 150000/200000; failures visible/hidden [4, 4]; 1.3s
+rotated_surface_d7 Z: 200000/200000; failures visible/hidden [6, 6]; 1.7s
+  >> acc_r0.01  rotated_surface_d7 Z: failures visible 6 / hidden 6 of 200000  (2s)
+rotated_surface_d9 X: 50000/200000; failures visible/hidden [1, 1]; 0.7s
+rotated_surface_d9 X: 100000/200000; failures visible/hidden [1, 1]; 1.5s
+rotated_surface_d9 X: 150000/200000; failures visible/hidden [1, 1]; 2.2s
+rotated_surface_d9 X: 200000/200000; failures visible/hidden [1, 1]; 2.9s
+  >> acc_r0.01  rotated_surface_d9 X: failures visible 1 / hidden 1 of 200000  (3s)
+rotated_surface_d9 Z: 50000/200000; failures visible/hidden [0, 0]; 0.7s
+rotated_surface_d9 Z: 100000/200000; failures visible/hidden [0, 0]; 1.4s
+rotated_surface_d9 Z: 150000/200000; failures visible/hidden [0, 0]; 2.1s
+rotated_surface_d9 Z: 200000/200000; failures visible/hidden [0, 0]; 2.8s
+  >> acc_r0.01  rotated_surface_d9 Z: failures visible 0 / hidden 0 of 200000  (3s)
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [52, 52]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [93, 93]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [134, 134]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [177, 177]; 0.6s
+  >> acc_r0.1   rotated_surface_d3 X: failures visible 177 / hidden 177 of 200000  (1s)
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [42, 42]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [81, 81]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [133, 133]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [176, 176]; 0.6s
+  >> acc_r0.1   rotated_surface_d3 Z: failures visible 176 / hidden 176 of 200000  (1s)
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [8, 8]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [15, 15]; 0.5s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [24, 24]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [33, 33]; 1.1s
+  >> acc_r0.1   rotated_surface_d5 X: failures visible 33 / hidden 33 of 200000  (1s)
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [5, 5]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [9, 9]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [13, 13]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [20, 20]; 1.0s
+  >> acc_r0.1   rotated_surface_d5 Z: failures visible 20 / hidden 20 of 200000  (1s)
+rotated_surface_d7 X: 50000/200000; failures visible/hidden [1, 1]; 0.5s
+rotated_surface_d7 X: 100000/200000; failures visible/hidden [2, 2]; 0.9s
+rotated_surface_d7 X: 150000/200000; failures visible/hidden [2, 2]; 1.4s
+rotated_surface_d7 X: 200000/200000; failures visible/hidden [3, 3]; 1.8s
+  >> acc_r0.1   rotated_surface_d7 X: failures visible 3 / hidden 3 of 200000  (2s)
+rotated_surface_d7 Z: 50000/200000; failures visible/hidden [3, 3]; 0.4s
+rotated_surface_d7 Z: 100000/200000; failures visible/hidden [3, 3]; 0.9s
+rotated_surface_d7 Z: 150000/200000; failures visible/hidden [3, 3]; 1.3s
+rotated_surface_d7 Z: 200000/200000; failures visible/hidden [6, 6]; 1.7s
+  >> acc_r0.1   rotated_surface_d7 Z: failures visible 6 / hidden 6 of 200000  (2s)
+rotated_surface_d9 X: 50000/200000; failures visible/hidden [0, 0]; 0.7s
+rotated_surface_d9 X: 100000/200000; failures visible/hidden [0, 0]; 1.5s
+rotated_surface_d9 X: 150000/200000; failures visible/hidden [0, 0]; 2.2s
+rotated_surface_d9 X: 200000/200000; failures visible/hidden [0, 0]; 2.9s
+  >> acc_r0.1   rotated_surface_d9 X: failures visible 0 / hidden 0 of 200000  (3s)
+rotated_surface_d9 Z: 50000/200000; failures visible/hidden [0, 0]; 0.7s
+rotated_surface_d9 Z: 100000/200000; failures visible/hidden [0, 0]; 1.4s
+rotated_surface_d9 Z: 150000/200000; failures visible/hidden [0, 0]; 2.1s
+rotated_surface_d9 Z: 200000/200000; failures visible/hidden [0, 0]; 2.8s
+  >> acc_r0.1   rotated_surface_d9 Z: failures visible 0 / hidden 0 of 200000  (3s)
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [62, 62]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [121, 121]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [172, 172]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [229, 229]; 0.6s
+  >> acc_r0.3   rotated_surface_d3 X: failures visible 229 / hidden 229 of 200000  (1s)
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [59, 59]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [110, 110]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [161, 161]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [227, 227]; 0.6s
+  >> acc_r0.3   rotated_surface_d3 Z: failures visible 227 / hidden 227 of 200000  (1s)
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [12, 12]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [21, 21]; 0.5s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [34, 34]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [45, 45]; 1.1s
+  >> acc_r0.3   rotated_surface_d5 X: failures visible 45 / hidden 45 of 200000  (1s)
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [10, 10]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [20, 20]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [28, 28]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [44, 44]; 1.1s
+  >> acc_r0.3   rotated_surface_d5 Z: failures visible 44 / hidden 44 of 200000  (1s)
+rotated_surface_d7 X: 50000/200000; failures visible/hidden [1, 1]; 0.5s
+rotated_surface_d7 X: 100000/200000; failures visible/hidden [2, 2]; 0.9s
+rotated_surface_d7 X: 150000/200000; failures visible/hidden [4, 4]; 1.4s
+rotated_surface_d7 X: 200000/200000; failures visible/hidden [5, 5]; 1.8s
+  >> acc_r0.3   rotated_surface_d7 X: failures visible 5 / hidden 5 of 200000  (2s)
+rotated_surface_d7 Z: 50000/200000; failures visible/hidden [1, 1]; 0.5s
+rotated_surface_d7 Z: 100000/200000; failures visible/hidden [2, 2]; 0.9s
+rotated_surface_d7 Z: 150000/200000; failures visible/hidden [5, 5]; 1.3s
+rotated_surface_d7 Z: 200000/200000; failures visible/hidden [7, 7]; 1.8s
+  >> acc_r0.3   rotated_surface_d7 Z: failures visible 7 / hidden 7 of 200000  (2s)
+rotated_surface_d9 X: 50000/200000; failures visible/hidden [0, 0]; 0.7s
+rotated_surface_d9 X: 100000/200000; failures visible/hidden [0, 0]; 1.5s
+rotated_surface_d9 X: 150000/200000; failures visible/hidden [0, 0]; 2.2s
+rotated_surface_d9 X: 200000/200000; failures visible/hidden [0, 0]; 3.0s
+  >> acc_r0.3   rotated_surface_d9 X: failures visible 0 / hidden 0 of 200000  (3s)
+rotated_surface_d9 Z: 50000/200000; failures visible/hidden [0, 0]; 0.7s
+rotated_surface_d9 Z: 100000/200000; failures visible/hidden [0, 0]; 1.4s
+rotated_surface_d9 Z: 150000/200000; failures visible/hidden [0, 0]; 2.2s
+rotated_surface_d9 Z: 200000/200000; failures visible/hidden [0, 0]; 2.9s
+  >> acc_r0.3   rotated_surface_d9 Z: failures visible 0 / hidden 0 of 200000  (3s)
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [78, 78]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [168, 168]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [246, 246]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [344, 344]; 0.7s
+  >> acc_r1     rotated_surface_d3 X: failures visible 344 / hidden 344 of 200000  (1s)
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [82, 82]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [141, 141]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [218, 218]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [292, 292]; 0.6s
+  >> acc_r1     rotated_surface_d3 Z: failures visible 292 / hidden 292 of 200000  (1s)
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [21, 21]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [41, 41]; 0.5s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [66, 66]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [80, 80]; 1.1s
+  >> acc_r1     rotated_surface_d5 X: failures visible 80 / hidden 80 of 200000  (1s)
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [17, 17]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [36, 36]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [51, 51]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [74, 74]; 1.1s
+  >> acc_r1     rotated_surface_d5 Z: failures visible 74 / hidden 74 of 200000  (1s)
+rotated_surface_d7 X: 50000/200000; failures visible/hidden [5, 5]; 0.5s
+rotated_surface_d7 X: 100000/200000; failures visible/hidden [8, 8]; 0.9s
+rotated_surface_d7 X: 150000/200000; failures visible/hidden [12, 12]; 1.4s
+rotated_surface_d7 X: 200000/200000; failures visible/hidden [19, 19]; 1.9s
+  >> acc_r1     rotated_surface_d7 X: failures visible 19 / hidden 19 of 200000  (2s)
+rotated_surface_d7 Z: 50000/200000; failures visible/hidden [3, 3]; 0.5s
+rotated_surface_d7 Z: 100000/200000; failures visible/hidden [5, 5]; 0.9s
+rotated_surface_d7 Z: 150000/200000; failures visible/hidden [10, 10]; 1.4s
+rotated_surface_d7 Z: 200000/200000; failures visible/hidden [13, 13]; 1.8s
+  >> acc_r1     rotated_surface_d7 Z: failures visible 13 / hidden 13 of 200000  (2s)
+rotated_surface_d9 X: 50000/200000; failures visible/hidden [0, 0]; 0.8s
+rotated_surface_d9 X: 100000/200000; failures visible/hidden [1, 1]; 1.5s
+rotated_surface_d9 X: 150000/200000; failures visible/hidden [1, 1]; 2.3s
+rotated_surface_d9 X: 200000/200000; failures visible/hidden [1, 1]; 3.1s
+  >> acc_r1     rotated_surface_d9 X: failures visible 1 / hidden 1 of 200000  (3s)
+rotated_surface_d9 Z: 50000/200000; failures visible/hidden [0, 0]; 0.7s
+rotated_surface_d9 Z: 100000/200000; failures visible/hidden [1, 1]; 1.5s
+rotated_surface_d9 Z: 150000/200000; failures visible/hidden [2, 2]; 2.2s
+rotated_surface_d9 Z: 200000/200000; failures visible/hidden [4, 4]; 3.0s
+  >> acc_r1     rotated_surface_d9 Z: failures visible 4 / hidden 4 of 200000  (3s)
+rotated_surface_d3 X: 50000/200000; failures visible/hidden [35, 35]; 0.2s
+rotated_surface_d3 X: 100000/200000; failures visible/hidden [83, 83]; 0.3s
+rotated_surface_d3 X: 150000/200000; failures visible/hidden [132, 132]; 0.5s
+rotated_surface_d3 X: 200000/200000; failures visible/hidden [171, 171]; 0.6s
+  >> baseline   rotated_surface_d3 X: failures visible 171 / hidden 171 of 200000  (1s)
+rotated_surface_d3 Z: 50000/200000; failures visible/hidden [45, 45]; 0.2s
+rotated_surface_d3 Z: 100000/200000; failures visible/hidden [89, 89]; 0.3s
+rotated_surface_d3 Z: 150000/200000; failures visible/hidden [123, 123]; 0.5s
+rotated_surface_d3 Z: 200000/200000; failures visible/hidden [156, 156]; 0.6s
+  >> baseline   rotated_surface_d3 Z: failures visible 156 / hidden 156 of 200000  (1s)
+rotated_surface_d5 X: 50000/200000; failures visible/hidden [9, 9]; 0.3s
+rotated_surface_d5 X: 100000/200000; failures visible/hidden [15, 15]; 0.5s
+rotated_surface_d5 X: 150000/200000; failures visible/hidden [25, 25]; 0.8s
+rotated_surface_d5 X: 200000/200000; failures visible/hidden [29, 29]; 1.1s
+  >> baseline   rotated_surface_d5 X: failures visible 29 / hidden 29 of 200000  (1s)
+rotated_surface_d5 Z: 50000/200000; failures visible/hidden [1, 1]; 0.3s
+rotated_surface_d5 Z: 100000/200000; failures visible/hidden [8, 8]; 0.5s
+rotated_surface_d5 Z: 150000/200000; failures visible/hidden [11, 11]; 0.8s
+rotated_surface_d5 Z: 200000/200000; failures visible/hidden [18, 18]; 1.0s
+  >> baseline   rotated_surface_d5 Z: failures visible 18 / hidden 18 of 200000  (1s)
+rotated_surface_d7 X: 50000/200000; failures visible/hidden [0, 0]; 0.5s
+rotated_surface_d7 X: 100000/200000; failures visible/hidden [1, 1]; 0.9s
+rotated_surface_d7 X: 150000/200000; failures visible/hidden [1, 1]; 1.3s
+rotated_surface_d7 X: 200000/200000; failures visible/hidden [1, 1]; 1.8s
+  >> baseline   rotated_surface_d7 X: failures visible 1 / hidden 1 of 200000  (2s)
+rotated_surface_d7 Z: 50000/200000; failures visible/hidden [1, 1]; 0.4s
+rotated_surface_d7 Z: 100000/200000; failures visible/hidden [4, 4]; 0.9s
+rotated_surface_d7 Z: 150000/200000; failures visible/hidden [4, 4]; 1.3s
+rotated_surface_d7 Z: 200000/200000; failures visible/hidden [5, 5]; 1.7s
+  >> baseline   rotated_surface_d7 Z: failures visible 5 / hidden 5 of 200000  (2s)
+rotated_surface_d9 X: 50000/200000; failures visible/hidden [0, 0]; 0.7s
+rotated_surface_d9 X: 100000/200000; failures visible/hidden [0, 0]; 1.5s
+rotated_surface_d9 X: 150000/200000; failures visible/hidden [0, 0]; 2.2s
+rotated_surface_d9 X: 200000/200000; failures visible/hidden [0, 0]; 2.9s
+  >> baseline   rotated_surface_d9 X: failures visible 0 / hidden 0 of 200000  (3s)
+rotated_surface_d9 Z: 50000/200000; failures visible/hidden [0, 0]; 0.7s
+rotated_surface_d9 Z: 100000/200000; failures visible/hidden [0, 0]; 1.4s
+rotated_surface_d9 Z: 150000/200000; failures visible/hidden [0, 0]; 2.1s
+rotated_surface_d9 Z: 200000/200000; failures visible/hidden [0, 0]; 2.8s
+  >> baseline   rotated_surface_d9 Z: failures visible 0 / hidden 0 of 200000  (3s)
+
+== summary: failures per shots (flags visible) ==
+  fd         d3X=218  d3Z=227  d5X=36  d5Z=35  d7X=5  d7Z=4  d9X=0  d9Z=0
+  acc_r0     d3X=166  d3Z=147  d5X=33  d5Z=41  d7X=1  d7Z=1  d9X=1  d9Z=0
+  acc_r0.01  d3X=174  d3Z=149  d5X=25  d5Z=21  d7X=1  d7Z=6  d9X=1  d9Z=0
+  acc_r0.1   d3X=177  d3Z=176  d5X=33  d5Z=20  d7X=3  d7Z=6  d9X=0  d9Z=0
+  acc_r0.3   d3X=229  d3Z=227  d5X=45  d5Z=44  d7X=5  d7Z=7  d9X=0  d9Z=0
+  acc_r1     d3X=344  d3Z=292  d5X=80  d5Z=74  d7X=19  d7Z=13  d9X=1  d9Z=4
+  baseline   d3X=171  d3Z=156  d5X=29  d5Z=18  d7X=1  d7Z=5  d9X=0  d9Z=0
+
+DONE runtime 506s

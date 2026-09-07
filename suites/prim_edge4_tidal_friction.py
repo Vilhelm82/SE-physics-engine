@@ -11,7 +11,7 @@
 #   TORQUE   J_dot = -P/Omega (the dissipated power is drawn from the rotation; dM/dt = 0 at this order: first law dM = T dS + Omega dJ).
 # COMPARISON (not input): Poisson 2004 Eq. (9.39) (EXT-037; as quoted in Comeau & Poisson 2009, arXiv:0908.4518):
 #   dJ/dt = -(2/45) M^5 chi [ 8(1+3chi^2) E1 - 3(4+17chi^2) E2 + 15 chi^2 E3 ],  E1 = E_ab E^ab, E2 = (E_ab s^b)(E^a_c s^c), E3 = (E_ab s^a s^b)^2.
-#   Small spin: dJ/dt = -(8/45) M^5 chi [E1 - (3/2) E2],  chi ~ 4 M Omega_H.   (Fetched 09-08; not from memory.)
+#   Small spin: dJ/dt = -(8/45) M^5 chi [E1 - (3/2) E2],  chi ~ 4 M Omega_H.   (Fetched 2026-09-07; not from memory.)
 #   Damour 1978/82, Thorne-Price-Macdonald 1986 (EXT-036): horizon surface shear viscosity 1/(16 pi G), surface resistivity Z_0.
 # KILLS: (K1) torque != 0 for a tide axisymmetric about the spin axis -> mechanism wrong. (K2) torque != 0 at Omega = 0 -> mechanism wrong.
 #        (K3) the m-structure of the torque must be sum_m m^2 |E_2m|^2 (Teukolsky's m-by-m flux at low frequency), else it is not Kerr's shape.

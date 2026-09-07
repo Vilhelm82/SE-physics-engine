@@ -110,9 +110,9 @@ runner header records this. Everything after DYN-1 was run forward.
 
 ---
 
-# AMENDMENT — 2026-09-08 (afternoon/evening, Will at the workstation)
+# AMENDMENT — 2026-09-07 (afternoon/evening, Will at the workstation)
 
-This section is appended to `HANDOFF-2026-09-07-evening.md` and makes it the live state through 09-08.
+This section is appended to `HANDOFF-2026-09-07-evening.md` and makes it the live state through the end of 09-07.
 All runners below were executed on the workstation and committed with their logs; nothing is sandbox-only.
 
 ## What happened
@@ -121,7 +121,7 @@ The 09-07 register left three things owed on the physics side: the O(J²) discri
 octahedron, and the tensor Love number. All three ran. The chain produced one prediction with an instrument, closed
 the last edge of the octahedron, and — in the course of the rotating case — **retracted one identification and replaced
 one constitutive reading**. The retractions are the most important part of this amendment; they are at the front of
-`docs/results/2026-09-08/2026-09-08-EDGE-chain.md`.
+`docs/results/2026-09-07/2026-09-07-EDGE-chain.md`.
 
 ## Runners added (all on the workstation, all committed with logs)
 
@@ -168,7 +168,7 @@ EXT-037 + amendment (Poisson Eq. 9.39, **fetched not remembered**), EXT-038 (Reg
 5. The 09-07 structural runners, still unrun: ħ- and G-seat readings of the ground; lit face on the octahedron
    vertices; the η → 1/η involution as an object on the Gram.
 
-### Addendum, 09-08 evening — EDGE-6
+### Addendum, 09-07 late evening — EDGE-6
 `prim_edge6_membrane_viscosity.py` 10/10: Damour's three membrane coefficients (η = 1/16π, ζ = −1/16π, p = κ/8π) are OUTPUT of the medium:
 Ricci-flat divider metric (computed) → vacuum Raychaudhuri on the stalled sound rays; κ (DYN-2); T = κ/2π (KMS); first law with r_s = 2M
 → S = A/4 as output; teleological θ = σ²/κ. No Einstein equations, no Bekenstein. The η_s pin is gone; prediction 2 (tidal friction

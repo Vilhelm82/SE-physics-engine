@@ -1,6 +1,6 @@
 # prim_ns1_swirl_inertia.py  --  NS-1: Navier-Stokes on the river + swirl, to O(J^2). Run FORWARD.
 #
-# QUESTION (09-08): what is the medium's O(J^2) exterior? Kerr has a mass quadrupole Q = -J^2/M (spin-induced quadrupole
+# QUESTION (09-07 late): what is the medium's O(J^2) exterior? Kerr has a mass quadrupole Q = -J^2/M (spin-induced quadrupole
 #   parameter kappa = 1). The medium (MAT-1: river + Stokes swirl + no-slip electrode) must say what IT has.
 #
 # INPUTS:

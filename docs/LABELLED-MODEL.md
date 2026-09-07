@@ -136,9 +136,9 @@ antipode $-f_0$. [PROVED, `suites/label3_lattice.py`, `suites/label3b_correction
 |---|---|---|---|---|
 | $\varnothing$ | Light, Action, Mass | GR + Wave + Bound | light waves in bound orbits around mass, in curved spacetime — **our face** | established |
 | $G$ | Light, Action, Energy | GR + Wave + Escaping | light with phase leaving a well: gravitational redshift, Shapiro delay, escaping GW | named 09-04 |
-| $H$ | Light, Evanescence, Mass | GR + Particle + Bound | light tunnelling in a bound system: near-horizon greybody filter (G-2) | **DERIVED 09-08, both ends**: fold's Fermi edge width $\lambda_L$ (FOLD-1) and electrode's $|T_0|^2 = 4(\omega r_s)^2$ (EDGE-1) |
+| $H$ | Light, Evanescence, Mass | GR + Particle + Bound | light tunnelling in a bound system: near-horizon greybody filter (G-2) | **DERIVED 09-07 late, both ends**: fold's Fermi edge width $\lambda_L$ (FOLD-1) and electrode's $|T_0|^2 = 4(\omega r_s)^2$ (EDGE-1) |
 | $C$ | Temperature, Action, Mass | Quantum + Wave + Bound | thermal waves around bound mass: Tolman–Ehrenfest (EQ-1) | named 09-04 |
-| $HG$ | Light, Evanescence, Energy | GR + Particle + Escaping | light tunnelling out carrying energy: Parikh–Wilczek emission, pre-thermal | **THEORY** (09-08): no emission channel derived; H's closure does not cover it |
+| $HG$ | Light, Evanescence, Energy | GR + Particle + Escaping | light tunnelling out carrying energy: Parikh–Wilczek emission, pre-thermal | **THEORY** (09-07 late): no emission channel derived; H's closure does not cover it |
 | $CG$ | Temperature, Action, Energy | Quantum + Wave + Escaping | thermal waves carrying energy, no mass: **blackbody, Planck's face** | named 09-04 |
 | $CH$ | Temperature, Evanescence, Mass | Quantum + Particle + Bound | thermal tunnelling in a bound system: finite-$T$ instantons, stellar fusion | named 09-04 |
 | $CHG$ | Temperature, Evanescence, Energy | Quantum + Particle + Escaping | thermal tunnelling carrying energy away — **Hawking radiation** | established |
@@ -232,13 +232,13 @@ constitutive channels.
 
 ---
 
-## 9. Status update, 2026-09-08 (EDGE chain)
+## 9. Status update, 2026-09-07 (EDGE chain)
 
-Full results and the four retractions: `docs/results/2026-09-08/2026-09-08-EDGE-chain.md`.
+Full results and the four retractions: `docs/results/2026-09-07/2026-09-07-EDGE-chain.md`.
 Register update: `docs/results/2026-09-07/AUDIT-2026-09-07-LOCKS.md` (appended section).
 
 **The octahedron's scaffold edge is closed.** Face $H$ has both ends derived: the fold's Fermi edge of width
-$\lambda_L$ (FOLD-1, 09-07) and the electrode's power law $|T_0|^2 = 4(\omega r_s)^2$ (EDGE-1, 09-08), with DYN-2's
+$\lambda_L$ (FOLD-1, 09-07) and the electrode's power law $|T_0|^2 = 4(\omega r_s)^2$ (EDGE-1, 09-07 late), with DYN-2's
 electrode temperature as the thermal factor between them. The CHG spectrum is therefore
 Planck($\kappa$) $\times$ [Fermi-edge($\lambda_L$) at high $l$, $4(\omega r_s)^2$ at $l = 0$], every piece with a runner.
 Face $HG$ (emission) stays THEORY and is now stated separately rather than covered by $H$.

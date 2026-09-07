@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+
+# Local gravitational-wave analysis environment and downloaded data
+/.venv-ligo/
+/.ligo-data/

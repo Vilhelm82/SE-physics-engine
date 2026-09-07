@@ -115,7 +115,7 @@ The mathematics has supplied the variable. One computation decides whether any o
 
 ---
 
-## Kill 3 is withdrawn as a kill condition, 2026-09-08
+## Kill 3 is withdrawn as a kill condition, 2026-09-07
 
 **Will's ruling:** *"the model has no agency. A model with agency is manufacturing, not observing."* And: *"seats don't move,
 the axis it rides does"* — a seat cannot pivot away from c, because a seat IS a line and c is the negative line (T7b2a);
@@ -127,7 +127,7 @@ There is none in P1–P13: a seat reads, a frame is what it is, a state is a Gra
 with settings, and then the test is of the added agent, not of the model. That is the Cl(3) failure one level up: Cl(3)
 imported an algebra that already contained the target; this imports an actor that already contains the experiment.
 
-**Recorded failure (Claire, 09-08):** a runner was written and committed (`SIG-1`, commit `f65dba2`) that did exactly this —
+**Recorded failure (Claire, 09-07 late):** a runner was written and committed (`SIG-1`, commit `f65dba2`) that did exactly this —
 it gave two seats independent rotors, moved one seat's line off c (an impossible operation, and P8-forbidden besides), and
 reported "no signalling" as a pass. It tested a scenario the primitives cannot express. Reverted in `7c5fc80`. The only
 salvageable content was trivial: rotors are isometries, so a whole-frame rotation changes no Gram entry and is invisible to

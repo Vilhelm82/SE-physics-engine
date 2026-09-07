@@ -1,6 +1,6 @@
 # prim_edge5_spin_ratio.py  --  EDGE-5: is EDGE-4's factor 32 the spin-0 / spin-2 coupling ratio?  Run FORWARD.
 #
-# HYPOTHESIS (09-08): EDGE-4 compared the medium's SPIN-0 tide (Bernoulli, sound) to Poisson's SPIN-2 formula. Page 1976's
+# HYPOTHESIS (09-07 late): EDGE-4 compared the medium's SPIN-0 tide (Bernoulli, sound) to Poisson's SPIN-2 formula. Page 1976's
 #   low-frequency absorption has the s-dependence [(l-s)!(l+s)!]^2; for l = 2 that is 576/16 = 36 between s = 2 and s = 0.
 #   If the ratio of the two l = 2 absorption coefficients on the SAME background comes out 36, EDGE-4's 1/32 is 1/36 x 1.125 and
 #   the number 1/(512 pi) is Damour's 1/(16 pi) seen through a spin-0 coupling -- owned by Page's factorial, not by the model.

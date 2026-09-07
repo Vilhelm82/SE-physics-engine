@@ -1,0 +1,45 @@
+== sweep_instrument: 288 physics points x 31 register/capture configs, t_c=1.0
+   run dir runs/2026-09-06/sweep_instrument
+    8/288  2s elapsed, ~59s left
+    16/288  2s elapsed, ~37s left
+    24/288  3s elapsed, ~29s left
+    32/288  3s elapsed, ~25s left
+    40/288  4s elapsed, ~22s left
+    48/288  4s elapsed, ~20s left
+    56/288  5s elapsed, ~19s left
+    64/288  5s elapsed, ~18s left
+    72/288  5s elapsed, ~16s left
+    80/288  6s elapsed, ~15s left
+    88/288  6s elapsed, ~15s left
+    96/288  7s elapsed, ~14s left
+    104/288  10s elapsed, ~17s left
+    112/288  10s elapsed, ~16s left
+    120/288  11s elapsed, ~15s left
+    128/288  11s elapsed, ~14s left
+    136/288  12s elapsed, ~13s left
+    144/288  12s elapsed, ~12s left
+    152/288  13s elapsed, ~11s left
+    160/288  13s elapsed, ~10s left
+    168/288  13s elapsed, ~10s left
+    176/288  14s elapsed, ~9s left
+    184/288  14s elapsed, ~8s left
+    192/288  15s elapsed, ~7s left
+    200/288  19s elapsed, ~8s left
+    208/288  19s elapsed, ~7s left
+    216/288  20s elapsed, ~7s left
+    224/288  20s elapsed, ~6s left
+    232/288  21s elapsed, ~5s left
+    240/288  21s elapsed, ~4s left
+    248/288  22s elapsed, ~4s left
+    256/288  22s elapsed, ~3s left
+    264/288  23s elapsed, ~2s left
+    272/288  23s elapsed, ~1s left
+    280/288  24s elapsed, ~1s left
+    288/288  24s elapsed, ~0s left
+  [ok] fd config at the operating point reproduces native_channel herald: 3.175e-16 (tol 1e-09)
+  [ok] fd config at the operating point reproduces native_channel unheralded rate: -9.889e-17 (tol 1e-11)
+  [ok] fd config at the operating point reproduces FD receipt q_u: -6.613e-17 (tol 1e-12)
+  [ok] ideal capture: herald below 1e-4 x captured fraction at every physics point: 2.670e-10 (tol 1e-04)
+  fork ideal capture unheralded vs FD background across the map: (reported) max ratio p_acc/p_fd = 178595202862674.688
+
+RESULT: 4/4 checks passed; 1 forks recorded; 6 held out; 0 figures.  runtime 24.2s

@@ -518,7 +518,7 @@ Append a dated receipt whenever online research informs this project. Before usi
 - **Use:** EDGE-3B contrasts the viscous medium (spin-down without tide, no tidal torque) with Kerr (no spin-down, tidal torque). EDGE-4's target: reproduce the coefficient with the electrode's resistivity, and compare the required resistivity with Damour's Z₀.
 - **Status:** COMPARISON. Not an input.
 
-## EXT-037 (amended 09-08) — Poisson 2004 Eq. (9.39), fetched, not remembered
+## EXT-037 (amended 09-07 late) — Poisson 2004 Eq. (9.39), fetched, not remembered
 - **Exact form** (as quoted in Comeau & Poisson 2009, arXiv:0908.4518): dJ/dt = −(2/45)M⁵χ[8(1+3χ²)E₁ − 3(4+17χ²)E₂ + 15χ²E₃], E₁ = E_abE^ab, E₂ = (E_ab s^b)(E^a_c s^c), E₃ = (E_ab s^a s^b)². Small spin: −(8/45)M⁵χ[E₁ − (3/2)E₂].
 - **EDGE-4 finding:** the medium's rotating-membrane torque is ∝ Σ_m m²|A_m|² = (8π/15)[E₁ − (3/2)E₂] — the SAME invariant combination, from the angular integral of a rotating l = 2 pattern on a sphere. Structure matched exactly; coefficient not: the surface viscosity that reproduces Poisson is 1/(512π) = Damour's 1/(16π) ÷ 32 (viscous membrane), or R_s = 2π/25 = Damour's 4π ÷ 50 (resistive membrane). Suspects: the sonic-surface displacement h (EDGE-3A) vs the horizon's intrinsic tidal deformation (Poisson 2005, Poisson–Vlasov 2010) — an O(1) the model has not computed; and the area-preserving membrane-flow map.
 - **Status:** COMPARISON. The structural agreement is the result; the coefficient is an open computation, not a kill (the coefficient is a free transport parameter until the medium derives it).

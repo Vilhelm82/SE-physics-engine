@@ -1,4 +1,4 @@
-# 2026-09-08 — The EDGE chain: the electrode's response, and the fingerprint
+# 2026-09-07 — The EDGE chain: the electrode's response, and the fingerprint
 
 Runners: `suites/prim_edge1_electrode_absorption.py` (7/7), `prim_edge2_tensor_love.py` (7/7),
 `prim_edge3_rotating_dissipation.py` (12/12), `prim_edge4_tidal_friction.py` (8/8), `prim_edge5_spin_ratio.py` (7/7).
@@ -106,3 +106,29 @@ combination nothing in that literature produces.**
 - **Finite-Re meridional flow at O(J²)** (NS-1), and the **electrode's shape as a derived boundary condition** — an oblate
   electrode is the only way the medium recovers Kerr's Q, and the model does not currently produce one.
 - **AREA** (first-order area preservation) and the shape→flow map are DECLARED in EDGE-4; they are the residual O(1).
+
+---
+
+## 6. Date correction and drift audit (appended, same day)
+
+**Date correction.** Everything in this chain was produced on **2026-09-07**, in one long session. Claire mislabelled the later
+runners, this results page, the ledger entries EXT-034…039, the register update and the handoff amendment as "2026-09-08".
+All corrected in place; `docs/results/2026-09-08/` removed and its contents moved to `docs/results/2026-09-07/`. No runner
+output changed. Provenance note kept because a wrong date in a handoff is a provenance fault, not a typo.
+
+**Drift audit (Will's request).** The failure mode was Claire treating the seat as an agent that pivots and the frame as
+something that deforms — both contrary to rulings Will had already given earlier the same session (the sheet never warps, it
+is a lux gradient on an undeformed plane; seats don't move, the axis they ride does; the model has no agency).
+
+- **First entry into a runner: `RIDE-2` in SHEET-1** (declared line: "the seat's rulers are material lines of the medium,
+  strained by the velocity gradient"). This makes the frame deform, which the head-torch ruling forbids. It produced
+  cosh l = (r₀/r)^{3/2} and D → ∞, i.e. an infinity relocated from one seat to another — a two-sided reading of a place the
+  model handles with a half-twist.
+- **Contamination is confined to SHEET-1's c-block (c1–c5)** and the one handoff line quoting it. Verified by grep: no other
+  runner references RIDE-2, material rulers, or a moving seat. DYN-1/2/3, EQ-1, FOLD-1, GUD-1/2, NS-0/1 and EDGE-1…6 do not
+  depend on it. SHEET-1's a-block (the unique sheet swap), b-block (I = −1 reverses the interior clock; kill 2) and d-block
+  (θ₊ = 0 at river = c; θ₋ = 0 on the other block) are independent of RIDE-2 and stand.
+- **Also drifted and reverted separately:** SIG-1 (commit `f65dba2`, reverted in `7c5fc80`), which gave two seats independent
+  pivots and moved a seat off c. See the kill-3 withdrawal section of `docs/CONJECTURE-COSMOLOGY.md`.
+- **Status of SHEET-1 c1–c5: WITHDRAWN pending reconstruction.** The correct construction must place the infalling reading and
+  the exterior reading as two charts of ONE reading, with nothing straining and no seat moving. Not yet built.

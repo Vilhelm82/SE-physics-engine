@@ -147,10 +147,10 @@ factors; ISCO (Kerr-assumed X-ray fits); marginally bound orbit.
 
 ---
 
-# LOCK REGISTER / STATION STATUS — UPDATE 2026-09-08
+# LOCK REGISTER / STATION STATUS — UPDATE 2026-09-07
 
 Appended to `AUDIT-2026-09-07-LOCKS.md` and `LOCK5-STATIONS-2026-09-07.md`. See
-`2026-09-08-EDGE-chain.md` for the full results and the four retractions (R-1 … R-4).
+`2026-09-07-EDGE-chain.md` for the full results and the four retractions (R-1 … R-4).
 
 ## Register changes
 
@@ -168,7 +168,7 @@ Appended to `AUDIT-2026-09-07-LOCKS.md` and `LOCK5-STATIONS-2026-09-07.md`. See
 
 ## Station status changes (`docs/LABELLED-MODEL.md` §4)
 
-| flips | was (09-07) | now (09-08) | receipt |
+| flips | was (09-07) | now (09-07 late) | receipt |
 |---|---|---|---|
 | H | THEORY, with a DERIVED geometric-optics limit | **DERIVED** (both ends) | FOLD-1 (fold, Fermi edge λ_L) + EDGE-1 (electrode, 4(ωr_s)²); DYN-2 supplies the thermal factor between them |
 | HG | THEORY | **THEORY** (unchanged, and now stated separately) | no emission channel derived; H's closure does not cover it |
@@ -187,6 +187,6 @@ Laplace, Euler, induction, and the primitives.
 3. Subring ladder e^{−π} per half-orbit; λ_L = Ω_c; greybody edge width λ_L ≠ κ (next-gen space VLBI).
 4. No swirl correction at any order (Kerr has O(J³)); isotropic g₀₀ at O(U³) = −3/2 (unmeasured).
 
-## 2026-09-08, later: the η_s pin is removed (EDGE-6, 10/10)
+## 2026-09-07, later: the η_s pin is removed (EDGE-6, 10/10)
 η_s = 1/(16π), ζ = −1/(16π), p = κ/8π DERIVED-given-KMS from the Ricci-flat divider metric, DYN-2's κ, the first law (S = A/4 as output)
 and the teleological Raychaudhuri balance. Residue and pins now: KMS (declared); d = 3 (T8c); K = 2GJ/c² (LAGEOS). Two pins, one line.

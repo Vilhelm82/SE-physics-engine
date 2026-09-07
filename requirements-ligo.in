@@ -1,0 +1,25 @@
+# Direct dependencies for the isolated LIGO environment (Python 3.13).
+# requirements-ligo.txt records the resolved versions, including dependencies.
+
+# Public strain access, time series, frame I/O, and comparison waveforms.
+gwosc
+gwpy
+pycbc
+lalsuite
+
+# General inference, nested sampling, and posterior plots.
+bilby
+dynesty
+corner
+
+# Numerical analysis, units, storage, and plotting.
+numpy
+scipy
+astropy
+h5py
+pandas
+matplotlib
+
+# Interactive analysis.
+jupyterlab
+ipykernel

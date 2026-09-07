@@ -1,0 +1,41 @@
+=== SHEET-1a: the two blocks, rebuilt ===
+  [PASS][   0.0s] a1 Gamma_C^2 = -1, Gamma_H^2 = Gamma_G^2 = +1: signature (-,+,+)
+  [PASS][   0.0s] a2 all three anticommute: a real 2x2 rep of Cl(2,1)
+  [PASS][   0.0s] a3 block chosen with pseudoscalar I = +1 (the I = +1 block)
+  [PASS][   0.0s] a4 Gamma_C -> -Gamma_C preserves every relation and sends I to -1: the I = -1 block
+  reflection-through-the-ruler-plane: {Gamma_C', Gamma_H} = 4*alpha ,  {Gamma_C', Gamma_G} = 4*beta
+  [PASS][   0.1s] a5 the reflection through the ruler plane preserves the relations ONLY at alpha = beta = 0, i.e. only when it IS Gamma_C -> -Gamma_C. The sheet swap is unique (K1 passes)
+=== SHEET-1b: what the swap does to the interior clock ===
+  [PASS][   0.1s] b1 Gamma_C -> -Gamma_C sends (a,b) -> (-a,-b): the tilt eta is unchanged (the same state, the same r)
+  [PASS][   0.1s] b2 and the projection p of c on the ruler plane reverses: the interior clock runs the other way on the I = -1 block
+  witness f2 line (a=b=-sinh l, t=pi/2): eta = -2*sinh(l)**2/(cosh(l)**2 - 2)  -> at sinh l = 3/2: -18/5
+  [PASS][   0.1s] b3 the witness is in f2: eta < -1 and the rulers' span is Lorentzian (det S < 0)
+  [PASS][   0.2s] b4 q(p,p) = eta < -1 there: p is timelike, it IS the interior clock; and b2 says the I = -1 block reverses it
+  => KILL 2 of the conjecture does NOT fire: on the I = -1 block the interior clock is reversed, so the radial direction reads OUTWARD.
+     (This is Gamma_C -> -Gamma_C being time reversal, T8a; the point of a5 is that there is no OTHER sheet swap that keeps the clock.)
+=== SHEET-1c: the fluid path from the river, and its holonomy ===
+  tau(r0 -> r) = 2*(-r**(3/2) + r_0**(3/2))/(3*c*sqrt(r_s)) ;  from r_s to 0: 2*r_s/(3*c)
+  [PASS][   0.2s] c1 the fluid reaches the centre a proper time (2/3) r_s/c after crossing the electrode: finite (derived from the river)
+  velocity-gradient eigenvalues: radial c*sqrt(r_s)/(2*r**(3/2))   transverse -c*sqrt(r_s)/r**(3/2)
+  material ruler lengths ~ radial 1/sqrt(r)   transverse r
+  [PASS][   0.2s] c2 radial ruler ~ r^(-1/2) (stretches), transverse ~ r (compresses): tidal strain from the river, not imported
+  visible depth: cosh l(r) = r_0**(3/2)/r**(3/2)
+  [PASS][   0.2s] c3 cosh l = (r0/r)^(3/2): one real depth, growing; the transverse pair is the unit and carries no depth (l2 = 0)
+  D along the fluid path = r_0**(3/2)/r**(3/2)
+  [PASS][   0.2s] c4 D > 0 for every r > 0 and D -> oo at r -> 0: the fluid NEVER reaches the branch locus (K2 passes); its end is a strain divergence, not a rank loss
+  [PASS][   0.2s] c5 => chi[Gamma_fluid] = sgn D = the exterior's sign at every point of the fall, through the electrode, to the centre: the sheet is INHERITED by continuity
+  the rank-loss centre (D = 0, f4) belongs to the STATIC presentation from outside -- the seat artefact. The fluid meets D -> oo instead.
+=== SHEET-1d: the two blocks are the two trapped conditions in the river ===
+  outgoing light dr/dt = c - c*sqrt(r_s)/sqrt(r)  ; ingoing = -c - c*sqrt(r_s)/sqrt(r)
+  [PASS][   0.2s] d1 theta_+ = 0 (outgoing light stalls) exactly where the river runs at c: r = r_s, i.e. 2Gm/(c^2 R) = 1 -- LABEL-3b's owed identity
+  [PASS][   0.3s] d2 on the I = -1 block outgoing light never stalls and INGOING light stalls at r_s: theta_- = 0. The black sheet is theta_+ = 0, the white sheet is theta_- = 0: two blocks, two trapped conditions
+  [PASS][   0.3s] d3 chi[Gamma_fluid] = chi_BH: the fluid rides the river inward on its own block, and there theta_+ = 0 at the electrode. LABEL-3b's test passes
+
+=== SHEET-1: 17/17 checks passed in 0.3s ===
+RESULT for CONJECTURE-COSMOLOGY:
+  kill 2 does NOT fire: the I = -1 block reads the interior clock reversed; radial direction outward. [DERIVED, T5c/T8a rebuilt]
+  BUT: no fluid path changes sheet (D != 0 all the way, D -> oo at the centre). The white sheet is not somewhere a fluid can GO;
+  it is the I = -1 READING of a collapse. 'We are on the white sheet of a parent' means: our c is reversed relative to the
+  parent's -- an orientation class, chosen at seating (P11), invisible to the full trace (T5c 3g). Consistent with 'the way out'.
+  Kill 1 (the number) is now the only kill with teeth. Kill 3 (signalling) is a separate runner.
+TIER: a1-a5, b1-b4, d1-d2 DERIVED. c1-c4 DERIVED given RIDE-2 + the P11 ratio convention (the first concrete fluid -> state map).

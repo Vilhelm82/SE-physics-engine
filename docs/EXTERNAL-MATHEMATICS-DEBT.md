@@ -444,3 +444,45 @@ Sources and read depth are recorded in EXT-021. Nature's direct entangling-gate 
 Check Cella's relevant source proofs and derivation notes before adopting external mathematics. Record what already solves the problem, what can be extended, and the exact remaining target. A search with no matching keywords is not a proof of absence.
 
 Append a dated receipt whenever online research informs this project. Before using an external result, assign or update an EXT entry stating its exact content, local use, hypotheses, retention decision and any actual native construction still needed. Reuse keeps the same ID and adds the new location. Keep proved constructions and remaining model inputs distinct; neither is inferred from passing checks alone. Internal reuse retains source dependencies. Do not reopen a completed standard result solely because of its external provenance.
+
+## EXT-027 — Spreading resistance and the Ohmic divider (DYN-1)
+- **Source:** standard electrostatics/conduction: resistance of a spherical shell in a uniform Ohmic medium R(a→b) = ρ(1/a − 1/b)/(4π); Kirchhoff's laws. No online search; textbook.
+- **Entry point:** `suites/prim_dyn1_ohmic_divider.py`; DYN-2, EQ-1, DYN-3, SHEET-1, FOLD-1, GUD-1/2, NS-0 inherit.
+- **Imported content:** Ohm's law (linear response), conservation of current in d spatial dimensions (inverse-square spreading), KVL single-valuedness (used in DYN-2 as the regularity condition).
+- **Exact use:** N² = Z_L/(Z_L+Z_s) with load = shell(r_s→seat), source = shell(seat→∞) [both DECLARED by Will, T7f]. Output A(r) = 1 − r_s/r.
+- **Assumptions:** d = 3 taken from T8c (reciprocity); medium uniform; the electrode at r_s is a boundary.
+- **Status:** RETAINED STANDARD MATHEMATICS. The divider identification is the model's DECLARED material law MAT-1; passes ground at O(U²). Not a closed foundational debt.
+
+## EXT-028 — Johnson–Nyquist noise and equilibrium balance (EQ-1)
+- **Source:** Nyquist 1928 (white noise power k_BT per unit bandwidth); noise thermometry realises the kelvin in the 2019 SI.
+- **Use:** route R2 of EQ-1 (power balance in a band) as an independent path to T·N = const. Route R1 (mode-by-mode occupation) needs only SI definitions.
+- **Status:** RETAINED STANDARD. Two routes agree; the result is DERIVED given DYN-1 + the definition of equilibrium.
+
+## EXT-029 — KMS identification (DYN-2, the residue)
+- **Source:** Kubo 1957, Martin–Schwinger 1959; Euclidean-regularity route Gibbons–Hawking 1977.
+- **Use:** the ONE declared line on the far column: the period of the seat's imaginary loop is ħ/(k_B T). Everything thermal on the octahedron inherits "given KMS".
+- **Assumptions/lab support:** analogue Hawking spectra in fluids (Weinfurtner 2011; Steinhauer 2016/2019/2021) with T = ħκ/(2πk_B) for the flow's surface gravity — the only measurements near this line, and in the model's own class of medium.
+- **Status:** DECLARED. Not derived; not closed.
+
+## EXT-030 — Stokes flow around a rotating sphere and Faxén's law (DYN-3)
+- **Source:** Stokes 1851 (creeping flow); Faxén 1922 (a torque-free sphere rotates at half the local vorticity). Standard low-Reynolds hydrodynamics.
+- **Use:** swirl v_φ = Ωa³ sinθ/r² from Laplace + no-slip; gyroscope precession = ½ curl v; orbit rides the medium (RIDE, DECLARED).
+- **Assumptions:** the electrode is a rigid rotating sphere; no inertia (Stokes); strength K pinned to LAGEOS (1 % agreement with 2GJ/c², not derived).
+- **Comparison literature (NOT inputs):** Lense–Thirring 1918; Schiff 1960; Hartle–Thorne 1968 for the O(J²) exterior of fluid bodies; membrane paradigm (Damour 1978/82, Thorne–Price–Macdonald 1986) for horizon viscosity, resistivity 377 Ω, negative bulk viscosity.
+- **Status:** RETAINED STANDARD. KIN-3 (THM-L) retired as an import; THM-M (on BARE-1) archivable.
+
+## EXT-031 — Parabolic-barrier transmission and the eikonal light-ring correspondence (FOLD-1)
+- **Source:** Kemble 1935 / Schutz–Will 1985 (WKB transmission through a parabolic peak, exact for an inverted parabola); Cardoso et al. 2009 (Lyapunov exponent ↔ QNM damping) and Sanchez 1978 / Décanini–Esposito-Farèse–Folacci 2011 (e^{−πβ}, β = λ_L/Ω_c) as comparison literature, not inputs.
+- **Use:** greybody edge T(ω) = 1/(1+e^{−2π(ω−ω_c)/λ_L}); subring ladder e^{−π}; eikonal QNM ω = Ω_c(l+½) − iλ_L(n+½).
+- **Status:** RETAINED STANDARD. λ_L = Ω_c is derived from the divider's output; the correspondence is checked (two paths), not assumed.
+
+## EXT-032 — Acoustic metric of a barotropic irrotational flow (NS-0)
+- **Source:** Unruh 1981; Visser 1998 (acoustic black holes); Hamilton–Lisle 2008 (river model) as comparison.
+- **Use:** linearised Euler + continuity on the river gives the sound-cone metric; with c_s = c it reproduces the divider metric in Painlevé–Gullstrand form (verified by explicit time shift).
+- **Assumptions:** c_s = c (DECLARED); barotropic; irrotational (the river is potential flow, verified).
+- **Status:** RETAINED STANDARD. This is the AC sector's construction principle; the medium's ρc (its Z₀) is the open target.
+
+## EXT-033 — Gudermannian function; Couch–Torrence inversion (GUD-1/2)
+- **Source:** Gudermannian (standard); Couch–Torrence 1984 (conformal inversion symmetry of extremal RN) as LINEAGE only.
+- **Use:** η = tan²θ; the load/source swap is θ → π/2 − θ; the orbit-family identity (L/E)_circ(r) = b_turn(σr)/√2 is exact in the divider's metric. GUD-2 shows σ is NOT a symmetry of the geodesic flow (Q1 no); the family identity is weaker than Couch–Torrence and lives in a different spacetime.
+- **Status:** exact symbolic result, DERIVED. Novelty unverified against the literature; verify before claiming.

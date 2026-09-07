@@ -79,7 +79,7 @@ runner header records this. Everything after DYN-1 was run forward.
 
 0. **Will:** freeze PRIMITIVES-v0 (P1–P13). Line zero.
 1. **Will:** re-run the seven on the 7800X3D; commit each with its .log and the draft receipts (in chat log / below).
-2. **Docs:** LABELLED-MODEL.md edits (five items in LOCK5-STATIONS); CONJECTURE-COSMOLOGY header (all r-language is LOCK-1;
+2. **Docs:** MODEL.md edits (five items in LOCK5-STATIONS); CONJECTURE-COSMOLOGY header (all r-language is LOCK-1;
    kill 2 survived; sheet = reading); HANDOFF: this file. Paper v0.6: scaffold entry BARE-1/Cl(3) + the pinning re-tiered.
 3. **Kill 3 (signalling)** — a cheap runner with a "dies immediately" outcome; must run before any further cosmology.
 4. **The AC sector = the 377 Ω chase, reframed.** The medium so far is DC: resistive only. A purely resistive continuum carries no
@@ -112,7 +112,7 @@ runner header records this. Everything after DYN-1 was run forward.
 
 # AMENDMENT — 2026-09-07 (afternoon/evening, Will at the workstation)
 
-This section is appended to `HANDOFF-2026-09-07-evening.md` and makes it the live state through the end of 09-07.
+This section is appended to `HANDOFF.md` and makes it the live state through the end of 09-07.
 All runners below were executed on the workstation and committed with their logs; nothing is sandbox-only.
 
 ## What happened
@@ -176,7 +176,7 @@ Ricci-flat divider metric (computed) → vacuum Raychaudhuri on the stalled soun
 
 ### Addendum, 09-07 late — vocabulary pass (Will's analogy-containment ruling)
 
-All circuit vocabulary removed from runners, results pages, the ledger and LABELLED-MODEL.md; exact physics labels substituted
+All circuit vocabulary removed from runners, results pages, the ledger and MODEL.md; exact physics labels substituted
 (192 substitutions across 16 runners, plus the docs). Four runners renamed: prim_dyn1_lapse_from_potential,
 prim_dyn2_horizon_period, prim_edge1_horizon_absorption, prim_eq1_tolman_from_lapse. **Every runner re-run: all 16 check counts
 identical, 0 FAIL — 16/16, 12/12, 12/12, 10/10, 17/17, 10/10, 8/8, 11/11, 6/6, 10/10, 7/7, 7/7, 12/12, 8/8, 7/7, 10/10.** No

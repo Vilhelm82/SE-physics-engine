@@ -446,9 +446,16 @@ Everything else in Part II is derived from the Newtonian potential, Laplace, Eul
 1. **The AC sector — L and C.** One construction carrying: the value of the characteristic ratio (THM-K's scalar half,
    ζ = e²Z₀/ħ = 4πα); whether the medium has a spin-2 tidal channel (§12's condition); and kill 1 of
    `docs/CONJECTURE-COSMOLOGY.md`.
-2. **SHEET-1's c-block**, withdrawn. It was built on rulers strained as material lines, which deforms the frame. The
-   reconstruction needs no new declaration: the tilt relation sinh²λ = r_s/(r−r_s) is §7's, and the infalling reading is
-   the untilted one, η = 0. Two charts of one reading.
+2. ~~SHEET-1's c-block.~~ **Rebuilt** as `suites/prim_sheet1c_two_charts.py` (11/11): the infalling observer's
+   reference frame is the **untilted** presentation, η = 0 at every r, so its D is the frame's D and is constant — the
+   old D → ∞ came from RIDE-2's strain and is gone with it. The station-keeping presentation is the tilted one,
+   η = sinh²λ = r_s/(r−r_s), and its family **terminates at r_s** (holding position below needs v > c relative to the
+   river), so its interior readings are a formula continued past its last occupant: η < −1 and N² < 0 is an imaginary
+   clock rate for a seat that is not there. det G′ vanishes at r = r_s(1 − kᵀG⁻¹k) — a locus whose position is set by
+   the seat's own direction, which is what an artefact does and a place does not. The block label references no η, so
+   the sheet reads the same in both charts. No new declaration; RIDE-2 not used.
+   *Still open:* what the infalling chart reads **at** r = 0 is a question about the frame, not about either
+   presentation, and the runner does not answer it — only that neither chart diverges there.
 3. **Unpin K:** the medium's own angular-momentum content.
 4. Finite-Reynolds meridional flow at O(J²); the trapping surface's shape as a derived boundary condition (an oblate
    one is the only way the medium recovers Kerr's Q, and the model does not produce one).

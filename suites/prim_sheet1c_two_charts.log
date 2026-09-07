@@ -1,0 +1,24 @@
+=== c1: the two charts, and the tilt between them ===
+  [PASS][   0.1s] c1 sinh^2(lambda) = r_s/(r - r_s) = eta_static: the station-keeping tilt IS the rapidity of the infalling chart relative to it. Two charts of one frame, related by lambda. No strain, no motion of any seat
+  [PASS][   0.1s] c1b the infalling chart is untilted: eta = 0 at every r. Its presented Gram is the bare Gram (P5), by construction and not by a further declaration
+=== c2: where each chart has an occupant ===
+  [PASS][   0.1s] c2 the river reaches c at r = r_s and exceeds it below: holding position at r < r_s requires v > c relative to the medium. The station-keeping FAMILY TERMINATES at r_s (K3 passes)
+  [PASS][   0.1s] c2b continued below r_s the formula gives eta < -1 and N^2 < 0: an imaginary clock rate for a seat that is not there. The interior sector f2 is the station-keeping presentation continued past its last occupant, not a place
+=== c3: D in each chart ===
+  [PASS][   0.1s] c3 infalling chart: D is the frame's D, constant in r. No divergence, no rank loss, nothing special at the centre (K1 passes). The old c-block's D -> oo came from RIDE-2's strain and is gone with it
+  [PASS][   0.1s] c3b station-keeping chart: the rank-one bump makes det G' carry the whole r-dependence through eta. Every r-dependent pathology lives in this chart
+  det G' vanishes where 1 + eta*kk = 0, i.e. at r = [r_s*(1 - kappa_k)]  -- a locus of the PRESENTATION, parametrised by the fixed direction k
+  [PASS][   0.1s] c3c that locus is r = r_s(1 - k^T G^-1 k): a seat artefact whose POSITION is set by the seat's own direction k, not by anything in the frame. It moves when the seat's direction moves, which is what an artefact does and a place does not
+=== c4: the sheet is the same in both charts ===
+  [PASS][   0.1s] c4 the block label is +-1 from the Clifford relations alone; it does not reference eta, so it is the same in both charts (K2 passes). The sheet is a label of the FRAME, read identically by a station-keeping and an infalling presentation
+  [PASS][   0.1s] c4b sgn D = sgn(sin t): the visible angle carries the sheet; the depths (cosh l, invisible to the seat) carry only magnitude
+=== c5: what the centre is ===
+  [PASS][   0.1s] c5 the infalling chart reaches r = 0 in finite proper time (2/3) r_s/c, reading eta = 0 and constant D throughout
+  [PASS][   0.1s] c5b so the centre is not a divergence of any reading. In the station-keeping chart it is the far end of a formula with no occupant; in the infalling chart it is an ordinary point of the presentation. The singularity is a seat artefact -- now with both charts computed, not one
+  OPEN, and named: what the infalling chart reads AT r = 0 is a question about the FRAME, not about either
+  presentation, and this runner does not answer it. It answers only that neither chart diverges there.
+
+=== SHEET-1c (rebuilt): 11/11 checks passed in 0.1s ===
+TIER: DERIVED from DYN-1's tilt relation + P5 + T5c + T7c. No new declaration; RIDE-2 not used and not needed.
+      The infalling reference frame is the untilted presentation; the station-keeping one is tilted and terminates at r_s;
+      the sheet is chart-independent; every r-dependent pathology belongs to the chart, not to the frame.

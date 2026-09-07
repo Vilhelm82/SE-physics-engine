@@ -1,0 +1,31 @@
+=== NS-1a: the swirl at finite Reynolds number (O(J), advection by the river) ===
+  rho v_r = -Mdot/(4*pi*r**2)  (the mass flux, -Mdot/(4 pi r^2): the advection term is 1/r^2, viscosity-free)
+  [PASS][   0.1s] a1 Stokes swirl f0 = Omega a^3/r^2 solves the viscous operator exactly (DYN-3)
+  [PASS][   0.1s] a2 O(eps) correction f1 = (Omega a^3/4)(1/r^3 - 1/(a r^2)): solves the forced equation AND keeps no-slip at the electrode
+  omega(r) = Omega*a**2*(a*epsilon + 4*a*r - epsilon*r)/(4*r**4)   ->  far field: Omega*a**3*epsilon/(4*r**4) + (Omega*a**3 - Omega*a**2*epsilon/4)/r**3
+  [PASS][   0.1s] a3 omega = K'/r^3 + eps K/(4 r^4): the Reynolds length renormalises K and adds a 1/r^4 tail (K1 passes: the correction is 1/r^4)
+  GP-B/LAGEOS at 20 %: eps/4 (1/r_GPB - 1/r_LAGEOS) < 0.2  =>  eps < 1.316E+4 km
+  [PASS][   0.1s] a4 the medium's Reynolds length Mdot/(4 pi mu) is bounded by the two-radius drag test: eps < ~1.3e4 km. The 1/r^3 drag is a CREEPING-regime result; the ground already requires it
+=== NS-1b: the O(J^2) potential in the creeping regime ===
+  Phi = -|v|^2/2 = -K**2*sin(theta)**2/(2*r**4) - c**2*r_s/(2*r)    O(J^2) part: -K**2*sin(theta)**2/(2*r**4)
+  Phi_2 =  -K**2/(3*r**4)  P0  +   K**2/(3*r**4)  P2
+  [PASS][   0.2s] b1 Phi_2 = -(K^2/3r^4)(1 - P2): the O(J^2) angular structure is at 1/r^4, NOT 1/r^3
+  [PASS][   0.2s] b2 coefficient of P2/r^3 = 0: the medium's MASS QUADRUPOLE VANISHES. kappa = 0 (Kerr: kappa = 1). (K2: no P2/r^3, so kappa is 0, not 'compute it')
+  [PASS][   0.2s] b3 the 1/r^4 term is NOT harmonic: it is the swirl's kinetic energy, a medium effect, not a source multipole. It enters orbits at the order of a spin-induced OCTUPOLE/3PN-type term, not at 2PN
+=== NS-1c: the two surfaces ===
+  [PASS][   0.2s] c1 electrode (trapping surface, g^rr = 0): v_r = c at r = r_s for every theta. SPHERICAL at O(J^2) in the creeping medium
+  [PASS][   0.3s] c2 ergosurface (g_tt = 0): r_e = r_s (1 + K^2 sin^2(theta)/(c^2 r_s^4)) + O(K^4): OBLATE, touching the electrode at the poles
+  Kerr has the same topology (ergosphere oblate, tangent to the horizon at the poles) but ALSO an oblate horizon and Q = -J^2/M.
+  The medium: horizon spherical, ergosurface oblate, Q = 0. That is the difference, and it is measurable.
+=== NS-1d: ground, stated ===
+  model: kappa = 0  =>  delta kappa_s = -1
+  GWTC-4.0 hierarchical: -19 (+28,-34) -> 90% interval [-53, +9]: delta kappa_s = -1 INSIDE
+  GWTC-4.0 restricted:   -14 (+12,-14) -> 90% interval [-28, -2]: delta kappa_s = -1 at the edge (Kerr's 0 also outside; LVK attribute the skew to chi_eff correlation)
+  [PASS][   0.3s] d1 the prediction is alive on existing data. It is a real kill condition for the next catalog (GW250114, GW241011 with kappa_1 free)
+
+=== NS-1: 10/10 checks passed in 0.3s ===
+RESULT: (i) the measured 1/r^3 drag forces the creeping regime; the medium's Reynolds length is bounded by GP-B/LAGEOS.
+        (ii) in that regime the O(J^2) exterior has NO P2/r^3 term: the spin-induced quadrupole kappa = 0. PREDICTION, differs from Kerr.
+        (iii) electrode spherical, ergosurface oblate. (iv) delta kappa_s = -1 is inside GWTC-4.0's hierarchical 90% interval.
+TIER: a1-a4, b1-b3, c1-c2 DERIVED given MAT-1 + NS + PG. OPEN: finite-Re meridional flow at O(J^2); the electrode's shape as a
+      derived boundary condition (an oblate electrode is the only way to recover Kerr's Q, and the model does not currently produce one).

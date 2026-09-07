@@ -111,3 +111,32 @@ It is directive. It says the next computation is not "some open debt" but **the 
 interior sector on the $I = -1$ block** — because flatness, the horizon problem, the arrow, the structure
 seeds and the information paradox all fall on one side of that sign for free, and all die on the other.
 The mathematics has supplied the variable. One computation decides whether any of this page survives.
+
+
+---
+
+## Kill 3 is withdrawn as a kill condition, 2026-09-08
+
+**Will's ruling:** *"the model has no agency. A model with agency is manufacturing, not observing."* And: *"seats don't move,
+the axis it rides does"* — a seat cannot pivot away from c, because a seat IS a line and c is the negative line (T7b2a);
+a rotor preserves q, so no isometry takes the seat off its own line. The tilt λ is the rulers' Gram against a fixed seat,
+not the seat swinging.
+
+Kill 3 as written — *"if they also give a usable channel, the model predicts superluminal signalling"* — presupposes a chooser.
+There is none in P1–P13: a seat reads, a frame is what it is, a state is a Gram. To test the clause one must ADD an agent
+with settings, and then the test is of the added agent, not of the model. That is the Cl(3) failure one level up: Cl(3)
+imported an algebra that already contained the target; this imports an actor that already contains the experiment.
+
+**Recorded failure (Claire, 09-08):** a runner was written and committed (`SIG-1`, commit `f65dba2`) that did exactly this —
+it gave two seats independent rotors, moved one seat's line off c (an impossible operation, and P8-forbidden besides), and
+reported "no signalling" as a pass. It tested a scenario the primitives cannot express. Reverted in `7c5fc80`. The only
+salvageable content was trivial: rotors are isometries, so a whole-frame rotation changes no Gram entry and is invisible to
+every line of the frame.
+
+**Status of kill 3:** WITHDRAWN, not passed and not failed. It becomes meaningful only if and when the model has a dynamics
+tier in which a state changes along a path, so that two readings on one path can carry an order without an agent choosing
+anything. Re-pose it then, in terms of the frame path, or not at all.
+
+**Kill status of this conjecture:** kill 2 survived (SHEET-1, 09-07, with the white sheet re-read as a READING rather than a
+destination). Kill 3 withdrawn. **Kill 1 — the number — is the only kill condition this document still has.** Tier: CONJECTURE,
+unchanged.

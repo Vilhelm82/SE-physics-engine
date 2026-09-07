@@ -56,6 +56,7 @@ layer, quarantined and clearly marked, is `docs/CONJECTURE-COSMOLOGY.md`.
 | **P4** | ~~The state is the three angles between the lines. Nothing else.~~ **Struck 2026-09-07** — reverse dependency order: the measured constants are the ground, they pin the root, the model derives outward. Nothing depended on it. |
 | **P5** | A seat is one line taken as reference. The seat cannot see its own line; both poles collapse to the root. |
 | **P6** | A pivot is a rotation of the frame by an *imaginary* angle. Not a spatial motion. |
+| **P6a** | A seat does not move. It cannot pivot away from c (a seat is a line, c is the unique negative line, rotors preserve q). The frame pivots; the seat reads. The tilt is the rulers' Gram against a fixed seat. |
 | **P7** | A presentation is what a seat reads after a pivot. Presentations are non-injective: distinct states can present identically. |
 | **P8** | Axes cannot be moved in isolation. |
 | **P9** | A constant is what a view collapses to a point. Constancy is a property of the view. |

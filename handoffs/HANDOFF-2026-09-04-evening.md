@@ -1,3 +1,5 @@
+> PROVENANCE ONLY. Superseded by handoffs/HANDOFF-2026-09-07-evening.md. Do not read this file as live state.
+
 # HANDOFF 2026-09-04 (evening session) -- the rebuild begins: Cl(3) exposed, the primitives written, the seat's form DERIVED
 Written 2026-09-04 19:10 AEST. Covers the evening session of 2026-09-04.
 Supersedes `handoffs/HANDOFF-2026-09-04.md` (the morning/afternoon session) for STATE; that file remains provenance for THM-O, VIEW-1, CENSUS-C, PRED-1.
@@ -83,7 +85,7 @@ one-third theorem (c = the negative line) and two-thirds pending (hbar vs G is n
 0. **Will reads and freezes `docs/results/2026-09-04/2026-09-04-PRIMITIVES-v0.md`.** Nothing above it runs until it is his.
 1. **T8, the fourth direction**, reshaped by T7: the c seat's constructed space is a 2D compact plane plus one invisible tilt.
    Fork: (a) 3+1 is what the seat PRESENTS under a pivot; (b) the root needs extent; (c) NEW -- the fourth direction is one of the
-   two tangential functions the pinning leaves free. Runner: pivot the seat and count what it presents.
+   two tangential functions the pinning leaves free. Runner: apply a pivot (a rotation OF THE FRAME) and count what the seat presents. NB: a seat does not move -- see PRIMITIVES P5/P6.
 2. **The hbar/G distinction**: T7b3 says the bare tier is silent. Where does it enter -- SECT-1's one-sided/two-sided readout,
    or convention? Runner in the primitives' language, Cl(3) banned.
 3. **The frame path**: two tangential functions of r undetermined by eta(r). This is THM-O's tangential-sector debt with

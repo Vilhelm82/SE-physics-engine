@@ -1,3 +1,4 @@
+# SCAFFOLD (Cl(3)-era, pre-pivot to Cl(2,1)). Retained as provenance. Do NOT cite as a live input.
 #!/usr/bin/env python3
 # =============================================================================
 # THM-G part 2 - THE G-SEAT HORIZON LEG  (2026-08-28, Friday, the deep shift)
@@ -10,7 +11,7 @@
 # ALLOWED: BARE-1; THM-G part 1 (hbar floor = orbit separation, 22/22);
 #   THM-D2 tonight (T = hbar*alpha/(2 pi c kB), tensorial 2pi); E-8 pattern
 #   (the invariant rides the pair); LBL-1 (consumed via D2).
-# DECLARED: KIN-2 - the G-seat pivot is PINNED BY POSITION:
+# DECLARED: KIN-2 - the pivot READ FROM the G seat is PINNED BY POSITION (the frame rotates; the seat does not move):
 #   tanh(lambda(r)) = sqrt(rs/r)  (static seat vs local free-fall river).
 #   Status: the G-label's operational datum, analog of LBL-1. Its derivation
 #   from a curvature tier is future work; here it is consumed, flagged.

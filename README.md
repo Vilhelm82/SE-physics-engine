@@ -9,10 +9,6 @@ The point is not to predict something general relativity does not. It is to find
 little has to be assumed before the usual structures become forced, and to keep an honest
 ledger of what was assumed anyway.
 
-> **Standing rulings: `docs/RULINGS.md`.** Read it first. It carries the invariant-vs-observer-artefact
-> distinction and the rulings every document here is to be read against; where anything disagrees with it, it is current.
-> Handoff index: `handoffs/README.md`. Runner era index: `suites/README.md`.
-
 ## Layout (since 2026-09-06)
 
 ```

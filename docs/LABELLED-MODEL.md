@@ -1,8 +1,5 @@
 # The labelled model — the whole octahedron
 
-> **Read `docs/RULINGS.md` first.** It carries the standing rulings and the invariant-vs-artefact distinction that
-> every entry below is to be read against. Where this document and RULINGS.md disagree, RULINGS.md is current.
-
 **Status: CONJECTURE tier throughout, except where marked.** The geometry it sits on is proved
 (LABEL-2, LABEL-3, T5b, T5c). The *names* on the geometry are the labelling, and the labelling is
 graded as a labelling: it has been checked against known physics (LABEL-1) and it has kill
@@ -246,14 +243,13 @@ sonic surface temperature as the thermal factor between them. The CHG spectrum i
 Planck($\kappa$) $\times$ [Fermi-edge($\lambda_L$) at high $l$, $4(\omega r_s)^2$ at $l = 0$], every piece with a runner.
 Face $HG$ (emission) stays THEORY and is now stated separately rather than covered by $H$.
 
-**Residue and pins, consolidated.** One declared line — KMS (EXT-029) — and **two** quantities pinned to ground:
-$d = 3$ (T8c, reciprocity ground-adjacent) and $K = 2GJ/c^2$ (LAGEOS, 1 %). The membrane surface viscosity $\eta_s$ was a
-third pin until EDGE-6 derived it ($\eta_s = 1/16\pi$, $\zeta = -1/16\pi$, $p = \kappa/8\pi$ from the Ricci-flat metric,
-$\kappa$, KMS, the first law and the teleological Raychaudhuri balance, with $S = A/4$ as output). Everything else in the DYN/EDGE/GUD/NS chain is derived from Newton, Laplace,
+**Residue and pins, consolidated.** One declared line — KMS (EXT-029) — and three quantities pinned to ground:
+$d = 3$ (T8c, reciprocity ground-adjacent), $K = 2GJ/c^2$ (LAGEOS, 1 %), and the membrane surface viscosity
+$\eta_s$ (Damour's $1/16\pi G$, EDGE-4). Everything else in the DYN/EDGE/GUD/NS chain is derived from Newton, Laplace,
 Euler, induction and the primitives.
 
 **Constitutive change (R-3).** The swirl is the medium's *vector potential*, not a viscous velocity: MAT-1 → MAT-2.
 Every DYN-3/NS-1 result survives — the equation was right, the constitutive word was wrong.
 
-**Fingerprint** ($\kappa$, $k_2$, $\sigma_0/A_H$, tidal friction) = (0, 0, 1, ~1/32–1/36 of Kerr): two BH-like entries,
+**Fingerprint** ($\kappa$, $k_2$, $\sigma_0/A_H$, tidal friction) = (0, 0, 1, ~1/36 of Kerr): two BH-like entries,
 two not, none ECO-like.

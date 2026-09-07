@@ -1,0 +1,36 @@
+=== FOLD-1a: the fold from the divider ===
+  light ring r_ph = 3*r_s/2  critical impact parameter b_c = 3*sqrt(3)*r_s/2  winding rate Omega_c = 2*sqrt(3)/(9*r_s)
+  [PASS][   0.1s] a1 r_ph = 3 r_s/2, b_c = 3 sqrt3 r_s/2: the fold's radius and its position on the image plane
+  M87* shadow diameter from the fold: 39.7 muas   (EHT ring 42 +- 3 muas; emission ring sits ~10 % outside the fold)
+  [PASS][   0.1s] a2 M87* shadow within the composite reading's error (a 10-17 % test, model-mediated)
+=== FOLD-1b: the Lyapunov exponent of the fold, two paths ===
+  [PASS][   0.1s] b1 the critical ray has a double root at r_ph: the fold is a tangency (the ray family's turning points pile up)
+  P1: lambda_L = sqrt(F''(r_ph)/2) = 2*sqrt(3)/(9*r_s)
+  P2: numeric e-folding rate of a perturbed critical ray = 0.3849011939   (P1 = 0.3849001795)
+  [PASS][   0.6s] b2 P1 = P2 to 2.6e-6 (K1 passes)
+  [PASS][   0.6s] b3 lambda_L / Omega_c = 1: the fold's instability rate EQUALS its winding rate. (A property of 1 - r_s/r; other lapses give other ratios.)
+=== FOLD-1c: the particle reading -- the subring ladder ===
+  demagnification exponent per half-orbit gamma = pi lambda_L/Omega_c = pi  -> factor e^-gamma = 0.0432139
+  [PASS][   0.6s] c1 gamma = pi exactly: each successive subring is e^-pi = 0.0432 as wide and as bright as the last
+  PREDICTION (unmeasured): n = 1 subring width/flux ratio 4.32 %, n = 2: 0.187 %. Next-generation space VLBI targets n = 1.
+  The ladder counts HALF-orbits: the fold is seen from both sides of the sheet. A full orbit is e^-2pi -- the vector reading's period.
+=== FOLD-1d: the wave reading -- the eikonal ringdown (the H flip) ===
+  omega_{l n} = Omega_c (l + 1/2) - i lambda_L (n + 1/2)  = sqrt(3)*(2*l - 2*I*n + 1 - I)/(9*r_s)
+  real part = the winding (Light/Action pole); imaginary part = the decay (Evanescence pole). One fold, two poles: the H flip.
+  GW150914-like remnant (62 Msun, nonspinning eikonal): f_220 ~ 250.7 Hz, tau_220 ~ 3.17 ms   (ground: ~251 Hz, ~4 ms at tens of %)
+  CAVEATS, named: the eikonal (l+1/2) overestimates the exact l=2 frequency by ~30 %, and the remnant's spin 0.67 raises the true
+  frequency by a comparable amount; the numbers land near ground partly by cancellation. Ballpark, not precision. Spin needs O(J^2).
+  [PASS][   0.6s] d1 eikonal nonspinning ringdown within the tens-of-percent ground (with the caveats above)
+=== FOLD-1e: the greybody edge -- transmission through the fold (face H) ===
+  [PASS][   0.6s] e1 the ray potential peaks at the light ring with U0 = Omega_c^2 and negative curvature: a parabolic barrier
+  transmission T(omega) = 1/(1 + exp(-2 pi (omega - omega_c)/width)) with width = 2*sqrt(3)/(9*r_s)
+  [PASS][   0.7s] e2 the edge width IS the ray exponent lambda_L: the wave's barrier and the ray's fold are one object (K2 passes; the H-flip identification holds)
+  two 'temperatures' on the far column: the electrode's kappa/2pi = 1/(4*pi*r_s)  and the fold's lambda_L/2pi = sqrt(3)/(9*pi*r_s) ; ratio lambda_L/kappa = 4*sqrt(3)/9 = 0.76980
+  [PASS][   0.7s] e3 lambda_L/kappa = 4/(3 sqrt3): the fold's edge is 0.77 of the electrode's slope -- the greybody's edge is NOT the Hawking temperature, and the model keeps them apart
+  => in the eikonal limit the CHG face's spectrum is Planck(kappa) x Fermi-edge(lambda_L): the electrode supplies the thermal factor
+     (DYN-2, given KMS), the fold supplies the filter (this runner, given PB). Face H is derived AT THE FOLD. The electrode part of the
+     tunnelling (l = 0, below the barrier) is the remaining owed piece of the H edge.
+
+=== FOLD-1: 10/10 checks passed in 0.7s ===
+TIER: a1, b1-b3, c1, e1-e3 DERIVED from the divider output (+ PB, exact math). d1 is a ballpark against tens-of-percent ground.
+PREDICTIONS cast: subring ladder e^-pi per half-orbit (EHT n=1); lambda_L = Omega_c; greybody edge width = lambda_L, not kappa.

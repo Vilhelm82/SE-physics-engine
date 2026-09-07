@@ -486,3 +486,14 @@ Append a dated receipt whenever online research informs this project. Before usi
 - **Source:** Gudermannian (standard); Couch–Torrence 1984 (conformal inversion symmetry of extremal RN) as LINEAGE only.
 - **Use:** η = tan²θ; the load/source swap is θ → π/2 − θ; the orbit-family identity (L/E)_circ(r) = b_turn(σr)/√2 is exact in the divider's metric. GUD-2 shows σ is NOT a symmetry of the geodesic flow (Q1 no); the family identity is weaker than Couch–Torrence and lives in a different spacetime.
 - **Status:** exact symbolic result, DERIVED. Novelty unverified against the literature; verify before claiming.
+
+## EXT-034 — Acoustic perturbations of transonic accretion (Moncrief)
+- **Source:** Moncrief 1980, ApJ 235, 1038 (stability of stationary spherical accretion: linear perturbations of the velocity potential obey a wave equation in an effective acoustic metric); Unruh 1981.
+- **Use:** identifies the medium's ONLY linear perturbation field as the velocity potential, obeying the acoustic wave equation already built in NS-0. Consequence: the medium's tidal Love number IS the scalar static l = 2 problem of EDGE-1c (k_2 = 0). Not a proxy.
+- **Status:** RETAINED STANDARD; in NS-0 the acoustic metric was derived from linearised Euler + continuity, so the theorem is reproduced, not imported.
+
+## EXT-035 — Static even-parity perturbations of Schwarzschild (COMPARISON ONLY)
+- **Source:** Hinderer 2008 (ApJ 677, 1216); Binnington & Poisson 2009; Damour & Nagar 2009. The master equation for H in Regge-Wheeler gauge is the associated Legendre equation (2,2) in x = r/M − 1.
+- **Use:** EDGE-2B computes GR's tensor Love number as the object LIGO bounds at 5PN and compares its branch structure to the medium's. Einstein's equations enter here as labelled THEORY input for the comparison; they are NOT an input to the model. The runner verifies the equation by checking P_2^2, Q_2^2 solve it.
+- **Result:** regular branch 3(r² − 2Mr)/M², polynomial, no r^-3 tail; Hinderer's formula → 0 along the regular family as R → 2M. Same zero as the medium's, same mechanism.
+- **Status:** COMPARISON. Lineage for the rotating case: Le Tiec & Casals 2021, Chia 2021 (Kerr static Love numbers vanish; dissipative response ∝ spin) — owed as EDGE-3.

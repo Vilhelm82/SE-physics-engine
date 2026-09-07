@@ -1,0 +1,32 @@
+=== GUD-2a: the inversion ===
+  [PASS][   0.1s] a1 sigma is an involution
+  [PASS][   0.1s] a2 sigma is exactly eta -> 1/eta (the load/source swap)
+  [PASS][   0.1s] a3 fixed point r = 2 r_s
+=== GUD-2b: Q1 -- the full flow ===
+  coefficient of E^2 in the mapped radial equation: (r_s - rho)**4/r_s**4
+  [PASS][   0.2s] b1 the E^2 term acquires a position-dependent factor (rho - r_s)^4/r_s^4: sigma is NOT a symmetry of the geodesic flow. No Couch-Torrence here (Q1: no; recorded, not a kill)
+=== GUD-2c: Q2 -- the two families ===
+  circular timelike:  E^2 = 2*(r - r_s)**2/(r*(2*r - 3*r_s))    L^2 = r**2*r_s/(2*r - 3*r_s)    (L/E)^2 = r**3*r_s/(2*(r - r_s)**2)
+  null turning point: b^2 = r**3/(r - r_s)
+  (L/E)^2(r) - b_turn^2(sigma(r))/2 = 0
+  [PASS][   0.2s] c1 IDENTITY IN r:  b_circ(r) = b_turn(sigma(r)) / sqrt(2). The family of circular timelike orbits maps to the family of null turning points under sigma, with a fixed factor sqrt2 (Q2: YES -- conditions map, not just roots)
+  [PASS][   0.2s] c2 and the involution runs it back: b_turn(r) = sqrt2 * b_circ(sigma(r))
+  for the record: E^2_circ(sigma(r)) = 2*r_s**2/(r*(-r + 3*r_s)) ;  L^2_circ(sigma(r)) = r**2*r_s**2/((-r + 3*r_s)*(r - r_s))  -- neither is a clean function of A(r) or U(r); only the ratio maps
+=== GUD-2d: Q3 -- the extremum conditions ===
+  d/dr (L/E)^2 = r**2*r_s*(r - 3*r_s)/(2*(r - r_s)**3)    d/dr b_turn^2 = r**2*(2*r - 3*r_s)/(r - r_s)**2
+  [PASS][   0.3s] d1 ISCO = argmin of (L/E)^2 = 3 r_s; photon sphere = argmin of b_turn^2 = 3 r_s/2 -- both out of the identity's two sides
+  [PASS][   0.3s] d2 by the chain rule on the identity, the ISCO condition IS the image of the photon-sphere condition (Q3: YES). Not a coincidence of two roots
+=== GUD-2e: the identity in the seat's angle ===
+  b_turn(theta) = r_s/(sin(theta)**2*Abs(cos(theta)))    b_circ(theta) = sqrt(2)*r_s/(2*cos(theta)**2*Abs(sin(theta)))
+  [PASS][   0.4s] e1 b_turn = r_s/(sin^2 cos), b_circ = r_s/(sqrt2 sin cos^2): the SAME function with sin <-> cos. The swap is the complement, as functions
+  d/dtheta (sin^2 cos) = (-sin(theta)**2 + 2*cos(theta)**2)*sin(theta)    d/dtheta (sin cos^2) = (-2*sin(theta)**2 + cos(theta)**2)*cos(theta)
+  [PASS][   0.4s] e2 photon sphere: 3cos^2 - 1 = 0 (P2(cos theta) = 0); ISCO: 3 sin^2 - 1 = 0 (P2(sin theta) = 0). The two Legendre zeros are complements
+  [PASS][   0.4s] e3 and the ISCO's function is the photon sphere's under theta -> pi/2 - theta
+
+=== GUD-2: 11/11 checks passed in 0.4s ===
+RESULT: Q1 no (sigma is not a symmetry of the geodesic flow). Q2 YES: (L/E)_circ(r) = b_turn(sigma(r))/sqrt2 as an identity in r.
+        Q3 YES: the ISCO condition is the image of the photon-sphere condition under sigma, by the chain rule on that identity.
+        The duality is a symmetry of the two circular-orbit FAMILIES (not of the spacetime), with the fixed point at the marginally
+        bound orbit r = 2 r_s (theta = pi/4). In the seat's angle the two families are one function with sin <-> cos.
+TIER: DERIVED (exact symbolic) from the divider's output metric. Lineage: Couch-Torrence inversion is a symmetry of extremal RN's
+      METRIC; this is weaker and different -- an orbit-family symmetry of Schwarzschild. Not known to Claire from the literature; verify.

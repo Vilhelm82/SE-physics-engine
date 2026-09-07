@@ -15,7 +15,16 @@ P1. A point (the root).
 P2. Three lines through the root. Each line has two ends (poles).
 P3. Three planes, each spanned by two of the lines. Each plane has a fixed intrinsic
     metric that never deforms. The planes need not be alike.
-P4. The state is the three angles between the lines. Nothing else.
+~~P4. The state is the three angles between the lines. Nothing else.~~
+    [**STRUCK 2026-09-07, Will's ruling.** Removed, not retiered. It is written in the reverse dependency
+    order to the model: the measured constants are the ground, they pin the root, and the model derives
+    outward. The three lines are not given with a seat chosen among them — they are axes only because this
+    root's alignment collapses them to points (P9); c reads as a fixed "lightspeed" only because we see it
+    end-on, and perpendicular to it lightspeed is a metric ON a line. Only constants are observed;
+    everything else is relative measurement, so the three angles are precisely the non-observable
+    quantities, and "nothing else" excluded the collapsed constants that are the only things anyone reads.
+    Nothing depended on it: T1 lists P4 among its inputs but uses P2/P3/P6; T7 parametrises by the seat's
+    own (t, l1, l2).]
 P5. A seat is one line taken as reference. The seat cannot see its own line; both
     poles collapse to the root.
 P6. A pivot is a rotation of the frame by an IMAGINARY angle. It is the operation that
@@ -132,9 +141,9 @@ colour on fixed incidence, never as shape.
 CORRECTIONS forced by P11/P12:
  - P3 keeps "planes have intrinsic character (hyperbolic / compact), never deforming"
    and LOSES the word "metric": metric is a seat's word for its rulers (P11).
- - P4 is stronger than written: the three angles are ARBITRARY and unconstrained by
-   the model. The elliptope (Delta >= 0, |gamma| <= 1) was the Euclidean seat's
-   construction, not the model's.
+ - ~~P4 is stronger than written: the three angles are ARBITRARY and unconstrained by
+   the model.~~ [P4 STRUCK 2026-09-07. What survives of this line: the elliptope
+   (Delta >= 0, |gamma| <= 1) was the Euclidean seat's construction, not the model's.]
  - There is NO bilinear form among the primitives. A form is what a seat's resolution
    constructs. T2's SO(2,1) is the c seat's construction (compact plane face-on, two
    hyperbolic edges). From hbar the same frame resolves with a hyperbolic plane

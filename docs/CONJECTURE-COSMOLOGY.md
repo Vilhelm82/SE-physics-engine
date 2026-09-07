@@ -111,22 +111,3 @@ It is directive. It says the next computation is not "some open debt" but **the 
 interior sector on the $I = -1$ block** — because flatness, the horizon problem, the arrow, the structure
 seeds and the information paradox all fall on one side of that sign for free, and all die on the other.
 The mathematics has supplied the variable. One computation decides whether any of this page survives.
-
-
----
-
-## Kill status, 2026-09-08 (appended; the text above is unchanged as provenance)
-
-- **Kill 2 (the direction): did not fire.** SHEET-1 (`suites/prim_sheet1_block_and_holonomy.py`, 17/17, 09-07): the I = −1 block reverses the
-  interior clock; the radial direction reads outward. But the white sheet is a *reading*, not a destination: the river path has D ≠ 0
-  everywhere (D → ∞ at the centre), so the sheet is inherited along generic paths; the codim-2 pinch (PINCH-1/2/3, load transport) is the
-  only route that changes sheet.
-- **Kill 3 (signalling): did not fire.** SIG-1 (`suites/prim_sig1_no_signalling.py`, 8/8, 09-08): under BOTH readings of P6 — the pivot
-  moves the seat's line (T7d), or the pivot rotates the whole frame — seat B's presentation is independent of seat A's pivot, exactly.
-  No channel. **Correction to this document's §"What in the repo already points at it", item 2 and Kill 3's premise:** non-injective
-  presentations give correlation without transit, but Gram-level readings of a shared frame are a local model — CHSH ≤ 2 (numerically
-  ≤ 0.54 on a settings grid; Fine's theorem as comparison). Any Bell violation the model claims must come from the quantum fork's
-  non-classical structure (REALFIBER holonomy phases, block-resolved traces), not from non-injectivity. The mechanism is safe and weaker
-  than written.
-- **Kill 1 (the number): still the only kill with teeth.** Needs the parent's mass through the seat switch. Not run.
-- All r-language in this document is LOCK-1, now DERIVED-given-Ohm (DYN-1). Tier of the conjecture: **CONJECTURE, unchanged.**

@@ -11,7 +11,9 @@
 #   T7c   D = cosh l1 cosh l2 sin t ; the branch locus is sin t = 0 ; sgn D constant on any path with D != 0.               [PROVED] (recomputed)
 #   DYN-1 the river: a seat in free fall from rest at infinity moves at tanh(lambda) = sqrt(r_s/r) relative to the static seat;
 #         the free-fall seat is untilted (eta = 0): it is the reference seat carried by the medium.                          [DERIVED 09-07]
-#   RIDE-2 the seat's rulers are material lines of the medium: d ln(length)/d tau = the velocity gradient along the ruler.  [DECLARED, continuum kinematics]
+#   RIDE-2 [WITHDRAWN 2026-09-07 — used ONLY by the c-block (c1-c5), which is withdrawn with it: it makes the FRAME
+#          deform, and the frame does not deform (the presentation does). The surviving checks a1-a5, b1-b4 and d1-d2
+#          do not use it.] the seat's rulers are material lines of the medium: d ln(length)/d tau = the velocity gradient along the ruler.  [DECLARED, continuum kinematics]
 #   P11   a seat reads ratios to its own constant. Its transverse rulers ARE its unit; the visible depth is the RATIO of the
 #         radial ruler to the transverse one, with cosh l = presented length ratio (thm_i: rho_K = cosh^2 l).              [P11 + thm_i convention]
 #
@@ -109,4 +111,4 @@ print("  BUT: no fluid path changes sheet (D != 0 all the way, D -> oo at the ce
 print("  it is the I = -1 READING of a collapse. 'We are on the white sheet of a parent' means: our c is reversed relative to the")
 print("  parent's -- an orientation class, chosen at seating (P11), invisible to the full trace (T5c 3g). Consistent with 'the way out'.")
 print("  Kill 1 (the number) is now the only kill with teeth. Kill 3 (signalling) is a separate runner.")
-print("TIER: a1-a5, b1-b4, d1-d2 DERIVED. c1-c4 DERIVED given RIDE-2 + the P11 ratio convention (the first concrete fluid -> state map).")
+print("TIER: a1-a5, b1-b4, d1-d2 DERIVED (no RIDE-2 dependency). c1-c5 WITHDRAWN: they rest on RIDE-2, which deforms the frame. (the first concrete fluid -> state map).")

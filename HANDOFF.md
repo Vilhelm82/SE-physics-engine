@@ -77,21 +77,9 @@ runner header records this. Everything after DYN-1 was run forward.
 
 ## Order of what is next (critical first)
 
-0. **Will:** freeze PRIMITIVES-v0 (P1–P13). Line zero.
-1. **Will:** re-run the seven on the 7800X3D; commit each with its .log and the draft receipts (in chat log / below).
-2. **Docs:** MODEL.md edits (five items in LOCK5-STATIONS); CONJECTURE-COSMOLOGY header (all r-language is LOCK-1;
-   kill 2 survived; sheet = reading); HANDOFF: this file. Paper v0.6: scaffold entry BARE-1/Cl(3) + the pinning re-tiered.
-3. **Kill 3 (signalling)** — a cheap runner with a "dies immediately" outcome; must run before any further cosmology.
-4. **The AC sector = the 377 Ω chase, reframed.** The medium so far is DC: resistive only. A purely resistive continuum carries no
-   waves; the model must carry gravitational waves at c (GW170817: |c_gw − c|/c < 10⁻¹⁵) and must have a light cone. That needs
-   inductance and compliance — the L and C of V = IZ — and the wave impedance of such a line is √(L/C). Damour's horizon
-   resistivity 377 Ω = Z₀ is the matched termination of that line at the electrode. So "chase 377 Ω" and "give the medium
-   waves" are ONE task, and it is THM-K's scalar half (ζ = e²Z₀/ħ = 4πα). External target: reproduce Damour 1978 / Znajek 1978.
-   Header must be written blind; this is the most seductive item on the list and therefore the one most likely to be steered.
-5. Remaining edge of the octahedron: l = 0 below-barrier tunnelling at the electrode.
-6. Unpin K: the medium's angular-momentum content. Compare the O(J²) exterior against Hartle–Thorne (fluid body), not Kerr.
-7. Structural runners from the afternoon, unrun: ħ- and G-seat readings of the ground (six readings, one surface); lit face on the
-   octahedron vertices; the η → 1/η involution as an object on the Gram (is it a rotor?).
+*(Superseded. The order of work is `MODEL.md` §13, which is current. The list that stood here was written before
+EDGE-6, before the primitives retier and before kill 3 was withdrawn; it is removed rather than corrected so that
+there is one ordering in the repo, not two.)*
 
 ## Draft commit receipts
 - `DYN-1 ohmic divider 16/16: lapse derived from Ohm+T8c+THM-I; beta=gamma=1 read off output; Mercury 42.9807 by two paths; d=2 control fails; U^3 = -3/2 PREDICTION`
@@ -160,13 +148,11 @@ EXT-037 + amendment (Poisson Eq. 9.39, **fetched not remembered**), EXT-038 (Reg
 
 ## Next, in order
 
-1. **η_s from the medium itself** (makes prediction 2 unconditional). Two routes, both named in the results page; the
-   resistivity route *is* the 377 Ω chase / THM-K's scalar half.
-2. **Does the AC sector's frame twist (T8) give the medium a spin-2 tidal channel?** Decides whether prediction 2 stands.
-3. Kill 3 of CONJECTURE-COSMOLOGY (signalling) — still owed, still cheap, still ahead of any further cosmology.
-4. NS-1's open items: finite-Re meridional flow at O(J²); the electrode's shape as a derived boundary condition.
-5. The 09-07 structural runners, still unrun: ħ- and G-seat readings of the ground; lit face on the octahedron
-   vertices; the η → 1/η involution as an object on the Gram.
+See `MODEL.md` §13. It is the single ordering.
+
+**Note for a reader arriving from an older copy of this file:** kill 3 of `docs/CONJECTURE-COSMOLOGY.md` is **withdrawn**,
+not owed — the clause presupposes a chooser and the model has no agency. It is neither passed nor failed. Kill 2 was
+answered by SHEET-1 (it does not fire). Kill 1, the number, is the conjecture's only remaining kill condition.
 
 ### Addendum, 09-07 late evening — EDGE-6
 `prim_edge6_membrane_viscosity.py` 10/10: Damour's three membrane coefficients (η = 1/16π, ζ = −1/16π, p = κ/8π) are OUTPUT of the medium:

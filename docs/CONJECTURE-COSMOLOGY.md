@@ -107,10 +107,14 @@ those are the frame's invariants and not any page's; the rest is hair because so
 
 ## Why this is in the repo
 
-It is directive. It says the next computation is not "some open debt" but **the sign of $D$ in the
-interior sector on the $I = -1$ block** — because flatness, the horizon problem, the arrow, the structure
-seeds and the information paradox all fall on one side of that sign for free, and all die on the other.
-The mathematics has supplied the variable. One computation decides whether any of this page survives.
+It was directive. It said the next computation was **the sign of $D$ in the interior sector on the $I = -1$
+block** — because flatness, the horizon problem, the arrow, the structure seeds and the information paradox
+all fall on one side of that sign and die on the other.
+
+**That computation has been done** (`suites/prim_sheet1_block_and_holonomy.py`, 2026-09-07): $\Gamma_C \to -\Gamma_C$
+is the unique relation-preserving sheet swap, and on the $I = -1$ block the interior clock is reversed, so the
+radial direction reads outward. **Kill 2 does not fire.** It is no longer the next computation. See the kill-status
+sections below for what remains: kill 1, the number, is this page's only surviving kill condition.
 
 
 ---

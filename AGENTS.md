@@ -12,6 +12,8 @@ Maintain `docs/EXTERNAL-MATHEMATICS-DEBT.md` during research:
 - Do not mark foundational debt closed merely because a symbolic or numerical check passes.
 - This ledger supports continuing the authorized research; it does not introduce an approval gate.
 
+> Standing rulings: `docs/RULINGS.md`. Handoff index: `handoffs/README.md`. Runner era index: `suites/README.md`.
+
 ## Analogy containment (Will's ruling, 2026-09-07)
 
 **Analogy stays in chat.** Only exact physics labels go into files or runners: headers, input lists, check strings, print

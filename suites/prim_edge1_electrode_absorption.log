@@ -1,0 +1,26 @@
+=== EDGE-1a: the l = 0 transmission at low frequency, and the absorption cross-section ===
+  omega r_s =  0.200:  |T_0|^2 = 3.244916e-01   |R|^2+|T|^2 = 1.00000000   sigma/A_H = 2.028073   |T_0|^2/(2 omega r_s)^2 = 2.028073
+  omega r_s =  0.100:  |T_0|^2 = 5.931719e-02   |R|^2+|T|^2 = 1.00000000   sigma/A_H = 1.482930   |T_0|^2/(2 omega r_s)^2 = 1.482930
+  omega r_s =  0.050:  |T_0|^2 = 1.204588e-02   |R|^2+|T|^2 = 1.00000000   sigma/A_H = 1.204588   |T_0|^2/(2 omega r_s)^2 = 1.204588
+  omega r_s =  0.025:  |T_0|^2 = 2.728956e-03   |R|^2+|T|^2 = 1.00000000   sigma/A_H = 1.091582   |T_0|^2/(2 omega r_s)^2 = 1.091582
+  omega r_s =  0.013:  |T_0|^2 = 6.517847e-04   |R|^2+|T|^2 = 1.00000000   sigma/A_H = 1.042855   |T_0|^2/(2 omega r_s)^2 = 1.042855
+  [PASS][  15.0s] a1 flux conserved |R|^2 + |T|^2 = 1 at every frequency to 1e-6 (K1 passes)
+  sigma(omega->0)/A_H (quadratic extrapolation on the three lowest frequencies) = 0.99931
+  [PASS][  15.0s] a2 sigma_abs(omega -> 0) = A_H to better than 1 %: the electrode absorbs long waves with exactly its geometric area (K2 passes; DGM/Page recovered as OUTPUT)
+  [PASS][  15.0s] a3 already within 5 % of A_H at omega r_s = 0.0125 without extrapolation; the approach is linear in omega (the known O(M omega) correction), from ABOVE: the l=0 barrier peak sits at omega r_s = 0.325 and the ratio peaks near 0.2
+  => the AC absorption area equals the DC capture area of the marginally bound orbit (GUD-1: pi b_mb^2 = 4 pi r_s^2 = A_H).
+     Two different physics -- long waves and slow particles -- read the electrode as the same matched load of area A_H.
+=== EDGE-1b: the greybody edge completed: face H at the electrode ===
+  [PASS][  15.0s] b1 |T_0|^2 = 4 (omega r_s)^2 at low frequency: the l = 0 edge is a power law in omega, set by the ELECTRODE's area, while FOLD-1's l >> 1 edge is a Fermi function set by the FOLD's lambda_L. Face H now has both ends
+=== EDGE-1c: the static l = 2 response (scalar tidal Love number) ===
+  candidate branches: P2(2r-1) = 6*r**2 - 6*r + 1    Q2(2r-1) = P2 * ln(r/(r-1))/2 - 3(2r-1)/2
+  [PASS][  15.2s] c0 both P2(2r-1) and Q2(2r-1) solve the static l=2 equation: the general solution is their span (verified by substitution, not dsolve)
+  [PASS][  15.3s] c1 Q2 is log-singular at the electrode, P2 is finite: regularity (no reflection at omega = 0) selects P2 alone
+  [PASS][  15.3s] c2 the regular branch is a degree-2 POLYNOMIAL: no r^-3 tail. Scalar Love number k_2 = 0 (K3 passes): the electrode does not deform under a static tide, like a black hole and unlike an ECO
+  for the record, the excluded branch's tail: Q2 ~ 1/60 / r^3 + ... (that is what a deformable body would carry)
+
+=== EDGE-1: 7/7 checks passed in 15.3s ===
+RESULT: sigma_abs(0) = A_H (matched absorber, geometric area); |T_0|^2 = 4 (omega r_s)^2; scalar k_2 = 0.
+        FINGERPRINT of the medium's rotating hole (with NS-1): (kappa, k_2, sigma_0/A_H) = (0, 0, 1). Kerr: (1, 0, 1). ECOs: (!=1, !=0, !=1).
+TIER: DERIVED from the divider metric + the derived ingoing condition; numerics two-checked by flux conservation. The tensor
+      (gravitational) Love number and the spin-dependent absorption are owed; the scalar versions are the proxies.

@@ -194,6 +194,10 @@ $\mathrm{Cl}(2,1) = M_2(\mathbb R) \oplus M_2(\mathbb R)$; the two blocks give $
 \pm 2D$; **the block label is the sheet**; the full $4\times4$ trace is sheet-blind. The
 "one-sided reading" is the choice of block. [PROVED, T5c]
 
+**The sheet is chart-independent.** The block label is fixed by the Clifford relations and references no tilt, so a
+station-keeping and an infalling presentation of the same frame read the same sheet (§7.1). It labels the frame, not
+the seat. [DERIVED, `suites/prim_sheet1c_two_charts.py`]
+
 **The stellar reading** [CONJECTURE, dynamical]: a neutron star and a black hole are the *same far
 face* — thermal, degenerate, radiating. They differ by the sheet: whether quantum support
 established first ($H \prec G$) or gravitational collapse did ($G \prec H$). Which sheet is the
@@ -271,10 +275,36 @@ the exact lapse is linear in the Newtonian potential **to all orders**. Read off
 Controls: in d = 2 the outer shell integral diverges and N² = 0 everywhere, so the dimension is load-bearing and is
 T8c's, not the medium's. [DERIVED, `suites/prim_dyn1_lapse_from_potential.py`, 16/16]
 
-**The tilt.** η = r_s/(r − r_s) = sinh²λ, where λ is the rapidity of free fall from rest at infinity relative to a
-seat holding station. So η is a presentation quantity: the tilt of the rulers against a **fixed** seat, not a motion of
-the seat. N = sech λ is simultaneously the gravitational lapse and the boosted clock rate — the equivalence principle as
-an identity in the tilt.
+### 7.1 The two charts
+
+η is a **presentation** quantity: the tilt of the rulers against a **fixed** seat. Nothing strains and no seat moves.
+One frame is read two ways.
+
+| | station-keeping chart | infalling chart |
+|---|---|---|
+| tilt | η = r_s/(r − r_s) = sinh²λ | **η = 0 at every r** |
+| presented Gram | G′ = G + η·kkᵀ | the bare Gram |
+| D | carries the whole r-dependence | the frame's D, **constant** |
+| occupants | r > r_s only | all r |
+
+λ is the rapidity of free fall from rest at infinity relative to a seat holding station, and **sinh²λ = r_s/(r − r_s)
+identically** — the station-keeping tilt *is* that rapidity. N = sech λ is simultaneously the gravitational lapse and
+the boosted clock rate: the equivalence principle as an identity in the tilt.
+
+**The station-keeping family terminates at r = r_s.** Holding position below it requires v > c relative to the river.
+So its readings inside are the formula continued past its last occupant — η < −1, N² < 0, an imaginary clock rate for a
+seat that is not there. **Every r-dependent pathology in this model belongs to that chart, not to the frame.**
+
+The artefact can be watched moving: det G′ vanishes at r = r_s(1 − kᵀG⁻¹k), a locus whose position is set by the seat's
+own direction k. It moves when the seat's direction moves — which is what an artefact does and a place does not.
+
+The block label (§5) is fixed by the Clifford relations and references no η, so **the sheet reads the same in both
+charts**: it labels the frame, not the chair. And the infalling chart reaches r = 0 in finite proper time (2/3)r_s/c
+reading η = 0 and constant D throughout — **neither chart diverges there.**
+
+*Open, and named:* what the infalling chart reads **at** r = 0 is a question about the frame, not about either
+presentation, and is not answered by this.
+[DERIVED, `suites/prim_sheet1c_two_charts.py`, 11/11]
 
 **The σ involution.** Swapping which shell is taken as the numerator sends η → 1/η and N² ↔ v²_esc, exactly. This is an
 involution of the radial line with fixed point η = 1 at r = 2r_s. [DERIVED, DYN-1 b1]
@@ -364,7 +394,8 @@ against a 42 ± 3 μas ring. [DERIVED, `suites/prim_fold1_lightring_dressing.py`
 ## 11. The boundary at r = r_s
 
 Where the river runs at c the sound cone stalls: no outward-directed characteristic. Three equivalent statements of one
-boundary — N → 0 there, no reflected wave, no outward characteristic.
+boundary — N → 0 there, no reflected wave, no outward characteristic. It is also where the station-keeping chart runs
+out of occupants (§7.1): readings below it are that chart continued, not readings taken.
 
 **Absorption.** σ_abs(ω→0)/A_H = 0.9993, with |T₀|² = 4(ωr_s)². The long-wavelength absorption area equals the
 capture area of the marginally bound orbit, πb²_mb = 4πr_s². Flux conserved to 10⁻⁸ at every frequency.
@@ -446,16 +477,10 @@ Everything else in Part II is derived from the Newtonian potential, Laplace, Eul
 1. **The AC sector — L and C.** One construction carrying: the value of the characteristic ratio (THM-K's scalar half,
    ζ = e²Z₀/ħ = 4πα); whether the medium has a spin-2 tidal channel (§12's condition); and kill 1 of
    `docs/CONJECTURE-COSMOLOGY.md`.
-2. ~~SHEET-1's c-block.~~ **Rebuilt** as `suites/prim_sheet1c_two_charts.py` (11/11): the infalling observer's
-   reference frame is the **untilted** presentation, η = 0 at every r, so its D is the frame's D and is constant — the
-   old D → ∞ came from RIDE-2's strain and is gone with it. The station-keeping presentation is the tilted one,
-   η = sinh²λ = r_s/(r−r_s), and its family **terminates at r_s** (holding position below needs v > c relative to the
-   river), so its interior readings are a formula continued past its last occupant: η < −1 and N² < 0 is an imaginary
-   clock rate for a seat that is not there. det G′ vanishes at r = r_s(1 − kᵀG⁻¹k) — a locus whose position is set by
-   the seat's own direction, which is what an artefact does and a place does not. The block label references no η, so
-   the sheet reads the same in both charts. No new declaration; RIDE-2 not used.
-   *Still open:* what the infalling chart reads **at** r = 0 is a question about the frame, not about either
-   presentation, and the runner does not answer it — only that neither chart diverges there.
+2. **What the infalling chart reads at r = 0.** The c-block is rebuilt (§7.1,
+   `suites/prim_sheet1c_two_charts.py`, 11/11) and neither chart diverges at the centre; what the frame itself has
+   there is a separate question and is not answered.
+
 3. **Unpin K:** the medium's own angular-momentum content.
 4. Finite-Reynolds meridional flow at O(J²); the trapping surface's shape as a derived boundary condition (an oblate
    one is the only way the medium recovers Kerr's Q, and the model does not produce one).
@@ -468,7 +493,7 @@ Everything else in Part II is derived from the Newtonian potential, Laplace, Eul
 
 `suites/prim_dyn1_lapse_from_potential.py` (16/16) · `prim_eq1_tolman_from_lapse.py` (12/12) ·
 `prim_dyn2_horizon_period.py` (12/12) · `prim_dyn3_stokes_swirl.py` (10/10) · `prim_sheet1_block_and_holonomy.py`
-(17/17, c-block withdrawn) · `prim_fold1_lightring_dressing.py` (10/10) · `prim_gud1_complement.py` (8/8) ·
+(17/17; original c-block withdrawn, rebuilt as `prim_sheet1c_two_charts.py`, 11/11) · `prim_fold1_lightring_dressing.py` (10/10) · `prim_gud1_complement.py` (8/8) ·
 `prim_gud2_inversion_map.py` (11/11) · `prim_ns0_river_euler.py` (6/6) · `prim_ns1_swirl_inertia.py` (10/10) ·
 `prim_edge1_horizon_absorption.py` (7/7) · `prim_edge2_tensor_love.py` (7/7) · `prim_edge3_rotating_dissipation.py`
 (12/12) · `prim_edge4_tidal_friction.py` (8/8) · `prim_edge5_spin_ratio.py` (7/7) ·

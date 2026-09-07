@@ -167,3 +167,9 @@ EXT-037 + amendment (Poisson Eq. 9.39, **fetched not remembered**), EXT-038 (Reg
 4. NS-1's open items: finite-Re meridional flow at O(J²); the electrode's shape as a derived boundary condition.
 5. The 09-07 structural runners, still unrun: ħ- and G-seat readings of the ground; lit face on the octahedron
    vertices; the η → 1/η involution as an object on the Gram.
+
+### Addendum, 09-08 evening — EDGE-6
+`prim_edge6_membrane_viscosity.py` 10/10: Damour's three membrane coefficients (η = 1/16π, ζ = −1/16π, p = κ/8π) are OUTPUT of the medium:
+Ricci-flat divider metric (computed) → vacuum Raychaudhuri on the stalled sound rays; κ (DYN-2); T = κ/2π (KMS); first law with r_s = 2M
+→ S = A/4 as output; teleological θ = σ²/κ. No Einstein equations, no Bekenstein. The η_s pin is gone; prediction 2 (tidal friction
+~1/32–1/36 of Kerr's) is unconditional. ζ < 0 is Will's "active element" with its coefficient. Next item 1 in the order becomes item 2.

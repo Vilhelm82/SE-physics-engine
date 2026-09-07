@@ -1,0 +1,27 @@
+=== EDGE-6a: is the metric the sound sees Ricci-flat? ===
+  [PASS][   0.2s] a1 Ricci tensor of the divider's output metric vanishes identically: the sound's geometry is VACUUM. R_ab k^a k^b = 0 for every null k; the Raychaudhuri equation of the stalled rays has NO matter term (K1 passes)
+  [PASS][   0.2s] a2 kappa = A'(r_s)/2 = 1/(4M) = 1/(2 r_s): DYN-2's electrode slope, recovered from the metric
+=== EDGE-6b: the first law -> the electrode's entropy ===
+  T = kappa/2pi = 1/(8*pi*M) ;  S = int dM/T = 4*pi*M**2 ;  A = 4 pi r_s^2 = 16*pi*M**2
+  [PASS][   0.2s] b1 S = 4 pi M^2 = A/4: the area law is OUTPUT of (first law + KMS temperature + r_s = 2M). Bekenstein not used (K2 passes)
+=== EDGE-6c: the teleological Raychaudhuri balance on the stalled rays ===
+  [PASS][   0.2s] c1 with theta -> 0 in the future, steady shear gives theta = sigma^2/kappa: the electrode expands at a rate set by its shear over its own relaxation time 1/kappa = 4M
+  [PASS][   0.2s] c2 the alternative (theta fixed in the past) grows as e^{kappa v}: excluded by the same future condition the horizon's regularity used (DYN-2). Teleology is not an extra assumption here
+=== EDGE-6d: the transport coefficients ===
+  T dS/dt = (1/(8 pi)) int sigma^2 dA  =>  2 eta_s = 1/(8 pi)  =>  eta_s = 1/(16*pi)
+  [PASS][   0.2s] d1 eta_s = 1/(16 pi) [G = c = 1]: Damour's surface shear viscosity, DERIVED from (Ricci-flat divider metric) + kappa + KMS temperature + first law + teleological Raychaudhuri. Einstein's equations not used (K3 passes)
+  [PASS][   0.2s] d2 zeta = -1/(16 pi): NEGATIVE bulk viscosity from the theta^2 term under the future boundary condition. Will's 'the interior is an active element / negative resistance' from 09-07 morning, with its coefficient
+  [PASS][   0.2s] d3 membrane surface pressure kappa/(8 pi) = 1/(32 pi M): the paradigm's third coefficient, for the record
+=== EDGE-6e: consequences ===
+  EDGE-4: the membrane model with eta_s reproduces Kerr's tidal torque only at eta_s = 1/(512 pi). With eta_s DERIVED = 1/(16 pi),
+  the medium's tidal torque is (1/32) x Kerr's by the membrane model, (1/36) x Kerr's by the absorption-coefficient route (EDGE-5).
+  [PASS][   0.2s] e1 PREDICTION now UNCONDITIONAL: the medium's tidal friction (horizon absorption, torquing and heating by a companion) is ~1/32-1/36 of Kerr's, because its tide is spin-0 and its membrane viscosity is Damour's. Instrument: LISA EMRI horizon flux; LVK horizon-absorption tests
+  Resistivity: EDGE-1 showed the electrode is a MATCHED load (sigma_0 = A_H). A matched termination has the line's own wave impedance:
+  R_s = Z_medium = sqrt(L/C) of the AC sector. Damour's 377 Ohm is that statement with Z_medium = Z_0. The VALUE of Z_medium is THM-K's
+  scalar half (zeta = e^2 Z_0/hbar = 4 pi alpha), still open; the IDENTIFICATION R_s = Z_medium is now derived by matching.
+  [PASS][   0.2s] e2 R_s = Z_medium by matching (EDGE-1); value open (THM-K)
+
+=== EDGE-6: 10/10 checks passed in 0.2s ===
+TIER: a1-a2, b1, c1, d1-d3 DERIVED-given-KMS (the only declared line). Einstein's equations, Bekenstein's area law and Damour's
+      coefficients were not inputs; Damour's three coefficients (1/16pi, -1/16pi, kappa/8pi) are OUTPUT. The 16 pi assembles as
+      2 x (2 pi from the KMS period) x (4 from S = A/4, itself from the first law with r_s = 2M). No 8 pi G was needed.

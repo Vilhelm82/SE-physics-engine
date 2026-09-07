@@ -186,3 +186,7 @@ Laplace, Euler, induction, and the primitives.
 2. Tidal friction ~1/36 of Kerr's, conditional on η_s = Damour (LISA EMRI horizon flux; LVK horizon absorption).
 3. Subring ladder e^{−π} per half-orbit; λ_L = Ω_c; greybody edge width λ_L ≠ κ (next-gen space VLBI).
 4. No swirl correction at any order (Kerr has O(J³)); isotropic g₀₀ at O(U³) = −3/2 (unmeasured).
+
+## 2026-09-08, later: the η_s pin is removed (EDGE-6, 10/10)
+η_s = 1/(16π), ζ = −1/(16π), p = κ/8π DERIVED-given-KMS from the Ricci-flat divider metric, DYN-2's κ, the first law (S = A/4 as output)
+and the teleological Raychaudhuri balance. Residue and pins now: KMS (declared); d = 3 (T8c); K = 2GJ/c² (LAGEOS). Two pins, one line.

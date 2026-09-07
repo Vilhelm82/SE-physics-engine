@@ -528,3 +528,9 @@ Append a dated receipt whenever online research informs this project. Before usi
 - **Use (EDGE-5):** the spin-2 l = 2 absorption is computed with the SAME integrator and boundary condition as the medium's spin-0 sound (EDGE-1 method). Both Page coefficients (1/2025 and 4/225 = the classic 256/225 (Mω)⁶) come out as OUTPUT to <3 %. Their ratio 36.006 is the s-dependence [(l−s)!(l+s)!]².
 - **Consequence:** EDGE-4's required membrane viscosity 1/(512π) = Damour's 1/(16π)/32 is explained: the medium's tide is spin-0 and couples 36× more weakly than GR's spin-2 tide; the residual 1.125 is inside EDGE-4's declared O(1). 1/(512π) is not a model number; Page's factorial owns it.
 - **Status:** COMPARISON. The prediction that follows (tidal friction ~1/36 of Kerr's if the medium's tide stays spin-0 and the membrane viscosity is Damour's) is the model's; instruments: LISA EMRI horizon-flux phasing; LVK horizon-absorption tests.
+
+## EXT-039 — Raychaudhuri equation for null geodesic congruences
+- **Source:** Raychaudhuri 1955; standard (Hawking & Ellis; Poisson, *A Relativist's Toolkit*). dθ/dv = κθ − θ²/2 − σ_abσ^ab − R_ab k^a k^b for an affinely-related non-affine parametrisation with inaffinity κ.
+- **Use (EDGE-6):** applied to the stalled sound rays at the electrode. The R_kk term is not assumed zero: the divider's output metric was shown Ricci-flat by explicit computation (a1). The teleological (future-fixed) solution θ = σ²/κ uses the same future boundary condition as DYN-2's regularity.
+- **Result:** with T = κ/2π (KMS) and S = A/4 (itself OUTPUT of the first law with r_s = 2M), T Ṡ = (1/8π)∫σ²dA ⇒ η_s = 1/(16π), ζ = −1/(16π), p = κ/8π — Damour 1978/82's three membrane coefficients as OUTPUT, with no Einstein equations and no Bekenstein input. Comparison: Damour; Thorne–Price–Macdonald 1986 (EXT-036).
+- **Status:** RETAINED STANDARD (the identity); the derivation is the model's, DERIVED-given-KMS.

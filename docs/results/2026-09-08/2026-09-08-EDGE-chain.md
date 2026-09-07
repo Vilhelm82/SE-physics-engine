@@ -71,7 +71,7 @@ spin-0 l = 2 → 4.959×10⁻⁴ (Page 1/2025 = 4.938×10⁻⁴); spin-2 l = 2 (
 | spin-induced quadrupole κ | **0** | 1 | ≠1 (NS 2–14; boson stars 10–150; gravastars <0) | NS-1, DERIVED |
 | tidal Love number k₂ | **0** | 0 | ≠0 | EDGE-3A trivially exact; EDGE-2B for GR |
 | σ_abs(0)/A_H | **1** | 1 | ≠1 | EDGE-1, DERIVED |
-| tidal friction | **~1/36 of Kerr** | 1 | varies | EDGE-4+5, given Damour's η_s |
+| tidal friction | **~1/32–1/36 of Kerr** | 1 | varies | EDGE-4+5, η_s DERIVED in EDGE-6 |
 
 Two BH-like entries, two not, none ECO-like. The GWTC-4.0 paper's expectation — that κ ≠ 1 implies nonzero tidal
 deformability — is exactly where the medium breaks from the ECO profile: **κ = 0 with black-hole tidal properties is a
@@ -84,7 +84,7 @@ combination nothing in that literature produces.**
 1. **κ = 0 → δκ_s = −1.** GWTC-4.0: hierarchical 90 % [−53, +9], restricted [−28, −2]. The model and Kerr differ by
    **one unit on a ruler whose tick is 26–62**; current data cannot distinguish them. Needs σ(δκ_s) ≲ 0.3 — a factor 30–100.
    Named movers: GW241011 (κ₁ free), GW250114 (loudest), 3G/LISA.
-2. **Tidal friction ~1/36 of Kerr's**, if the medium's tide stays spin-0 and the membrane viscosity is Damour's.
+2. **Tidal friction ~1/32–1/36 of Kerr's** (unconditional after EDGE-6: η_s derived), provided the medium's tide stays spin-0.
    Instrument: LISA EMRI horizon-flux phasing (tens of radians in GR → ~1); LVK horizon-absorption tests, currently
    unconstraining. *Escape route, open:* the medium may acquire a spin-2 tide through the AC sector's frame twist (T8).
 3. **Λ = 0 exactly** for the medium's holes (BH-like, not ECO-like). No BH Love number has ever been measured.
@@ -95,9 +95,12 @@ combination nothing in that literature produces.**
 
 ## 5. Open, named
 
-- **η_s from the medium itself.** EDGE-4 treats the surface viscosity as a free transport coefficient. Until the medium
-  derives it, the tidal-friction prediction is conditional on Damour's value. Two routes: the electrode's own resistivity
-  (the 377 Ω chase, THM-K), or the horizon's intrinsic deformation vs the sonic surface's (Poisson 2005; Poisson–Vlasov 2010).
+- ~~η_s from the medium itself.~~ **Closed by EDGE-6** (`prim_edge6_membrane_viscosity.py`, 10/10): the divider's output metric is
+  Ricci-flat (computed), so the stalled sound rays obey the vacuum Raychaudhuri equation; with κ (DYN-2), T = κ/2π (KMS), the
+  first law with r_s = 2M giving S = A/4 as OUTPUT, and the teleological steady state θ = σ²/κ, the dissipated power is
+  (1/8π)∫σ²dA ⇒ **η_s = 1/(16π), ζ = −1/(16π), p = κ/8π** — Damour's three membrane coefficients, no Einstein equations, no
+  Bekenstein. The 16π is 2 × (2π from KMS) × (4 from S = A/4). Pin removed; prediction 2 is now unconditional.
+  R_s = Z_medium follows by matching (EDGE-1); its VALUE is THM-K's scalar half, still open.
 - **Spin-2 in the medium.** Does the AC sector's frame twist give the medium a spin-2 tidal channel? If yes, prediction 2
   moves; if no, it stands.
 - **Finite-Re meridional flow at O(J²)** (NS-1), and the **electrode's shape as a derived boundary condition** — an oblate

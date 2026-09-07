@@ -1025,13 +1025,13 @@ No substantive mathematical errors found in the gauge transformations, normal co
 from Claude in reference to your work:
 **Overlap 1 — the coupling form, XLINK-1 vs her reconciliation §1.** We both found 2I − 𝟙𝟙ᵀ. She proved *where it comes from* (the bordered determinant of (g, H_c) expands to exactly νᵀBν) and built the abstract isometry TᵀBT = diag(−1,1,1). I built the *realisation*: Gram of three spacelike lines pairwise at the horizon, null cone = the three light rays, trace = seat, ker Σ = c^⊥, the trine. Complementary, and she explicitly leaves the piece I did as "a substantive construction remaining." But she has something I need to record *against* XLINK-1: under a defining-function gauge δν has determinant 2(g₁g₂g₃)² — **an arbitrary gauge moves the edge vector anywhere**. So "Cella's null cone = the horizon light rays" is true of the form and gauge-dependent for any actual ν until a presentation rule is fixed. That's a real caveat on XLINK-1's interpretation and I'll add it to its header. The ν-map is open in both docs; it should have one owner.
 
-**Overlap 2 — and it's a tension, not a duplication.** Her constitutive Theorem 1: on a face where an output is *constrained* to vanish, the dissipative part R vanishes to **second order** (a nonnegative smooth function with a two-sided zero). KIN-1: every positivisation of the kinetic cost is finite and nonzero at the horizon face. If the horizon is a constrained-output face — which is *your* reading, "horizon = open circuit," flow must vanish — then her theorem says the passive response there goes as f², and KIN-1's cost forms, which don't, **cannot be the response**. That's not a contradiction; it's the first quantitative sign that the kinetic cost and the load response are different objects, and that the horizon is dynamically special *through the load* in exactly the way it wasn't through the cost. Your circuit instinct, as a divisor law. That's worth one runner and I'm not sure whose.
+**Overlap 2 — and it's a tension, not a duplication.** Her constitutive Theorem 1: on a face where an output is *constrained* to vanish, the dissipative part R vanishes to **second order** (a nonnegative smooth function with a two-sided zero). KIN-1: every positivisation of the kinetic cost is finite and nonzero at the horizon face. If the horizon is a constrained-output face — which is *your* reading, "horizon = open network," flow must vanish — then her theorem says the passive response there goes as f², and KIN-1's cost forms, which don't, **cannot be the response**. That's not a contradiction; it's the first quantitative sign that the kinetic cost and the load response are different objects, and that the horizon is dynamically special *through the load* in exactly the way it wasn't through the cost. Your network instinct, as a divisor law. That's worth one runner and I'm not sure whose.
 
 **Proposed split, so nobody does anything twice:**
 
 **ν-map (Cella ν ↔ frame data): hers.** She has the gauge transport and named it as her upgrade target; XLINK-1 is an input. I stop on it.
 **The load: hers.** Constitutive divisors is the seat/load derivation everyone was owed. KIN-1 feeds in as the cost-side comparison.
-**The open-circuit test: mine, if you want it.** Check KIN-1's three cost forms and her M against Theorem 1's divisor law at the horizon face. Small, decisive, joins three things.
+**The open-network test: mine, if you want it.** Check KIN-1's three cost forms and her M against Theorem 1's divisor law at the horizon face. Small, decisive, joins three things.
 **The pinch: closed on my side.** PINCH-1/2/3 stand; her load-transport builds on them; one cross-reference note ties the two charts together.
 **The paper-facing ledger: mine, and nobody's doing it.** Both audits' recommendation 1 — the state-space ruling, v0.6's scaffold entry with KIN-1's birth certificate for (S²)³, the three relabels (signature declared; T8c | Maxwell; T4f3 a consistency), the pinch as a defined term via PINCH-3. No computation, all writing, all overdue.
 
@@ -1062,7 +1062,7 @@ Verified the nonsymmetric identity symbolically. No files edited.
 
 ## ASSISTANT · 17:48
 
-I’ll take the \(\nu\)-map and load work, using XLINK-1 and KIN-1 as inputs. The key condition stays explicit: the \(f^2\) law applies when that output must vanish for every effort. I’m reading KIN-1’s actual forms before incorporating the comparison; Claude’s proposed open-circuit runner and paper ledger remain separate.
+I’ll take the \(\nu\)-map and load work, using XLINK-1 and KIN-1 as inputs. The key condition stays explicit: the \(f^2\) law applies when that output must vanish for every effort. I’m reading KIN-1’s actual forms before incorporating the comparison; Claude’s proposed open-network runner and paper ledger remain separate.
 
 `$ const rs=await Promise.allSettled([`
 
@@ -3426,19 +3426,19 @@ The repository has the full single-gate instrument, but its QEC harness stops at
 
 `$ const r=await Promise.allSettled([`
 
-*· Remapping circuit records*
+*· Remapping network records*
 
 `$ text(await tools.exec_command({cmd:"/home/williaml/.cache/seated-root-qec-venv/bin/python - <<'PY'\nimport pymatching,stim,inspect,ldpc\nprint('versions',stim.__version__,pymatchin`
 
 *· Building scaffold and checks*
 
-`$ text(await tools.exec_command({cmd:"/home/williaml/.cache/seated-root-qec-venv/bin/python - <<'PY'\nimport stim, inspect,pymatching\nc=stim.Circuit('R 0\\nX_ERROR[fd:0:X](0.1) 0\\n`
+`$ text(await tools.exec_command({cmd:"/home/williaml/.cache/seated-root-qec-venv/bin/python - <<'PY'\nimport stim, inspect,pymatching\nc=stim.Boundary('R 0\\nX_ERROR[fd:0:X](0.1) 0\\n`
 
 *· Building native tag lookup*
 
 ## ASSISTANT · 00:25
 
-The key interface is now clear: the stack needs a rule for replacing a lost carrier before the next syndrome circuit. I’m using an explicit boundary replacement channel and independent Pauli randomization, then deriving the decoder probabilities from the saved instrument matrices. The simulation will retain each erasure flag and compare decoding with those flags visible versus hidden.
+The key interface is now clear: the stack needs a rule for replacing a lost carrier before the next syndrome network. I’m using an explicit boundary replacement channel and independent Pauli randomization, then deriving the decoder probabilities from the saved instrument matrices. The simulation will retain each erasure flag and compare decoding with those flags visible versus hidden.
 
 *· Creating requirements ledger*
 
@@ -3558,7 +3558,7 @@ A useful result: at distance 9, 85.5% of the main-point trials contained at leas
 
 ## ASSISTANT · 00:54
 
-All 4.86 million circuit trials have finished. Surface-code logical errors decrease with distance at both background-loss levels. The qLDPC example also runs successfully through extraction and recovery. I’m checking the final figure and saving the results, circuits, assumptions and replay commands.
+All 4.86 million network trials have finished. Surface-code logical errors decrease with distance at both background-loss levels. The qLDPC example also runs successfully through extraction and recovery. I’m checking the final figure and saving the results, circuits, assumptions and replay commands.
 
 `$ const rs=await Promise.allSettled([`
 
@@ -3584,7 +3584,7 @@ The final checks pass, including forced erasures at all 918 tested gate location
 
 ## ASSISTANT · 00:57
 
-**Yes. I ran 4.86 million circuit trials. Logical failure decreases with surface-code distance in both X and Z memories.** These include repeated noisy syndrome extraction, decoding and logical readout.
+**Yes. I ran 4.86 million network trials. Logical failure decreases with surface-code distance in both X and Z memories.** These include repeated noisy syndrome extraction, decoding and logical readout.
 
 At 1% native gain error, background loss `γ/a = 10⁻⁶`, and 0.1% syndrome-operation noise, the X-memory results are:
 

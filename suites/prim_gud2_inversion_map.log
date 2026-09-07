@@ -1,6 +1,6 @@
 === GUD-2a: the inversion ===
   [PASS][   0.1s] a1 sigma is an involution
-  [PASS][   0.1s] a2 sigma is exactly eta -> 1/eta (the load/source swap)
+  [PASS][   0.1s] a2 sigma is exactly eta -> 1/eta (the involution sigma: eta -> 1/eta)
   [PASS][   0.1s] a3 fixed point r = 2 r_s
 === GUD-2b: Q1 -- the full flow ===
   coefficient of E^2 in the mapped radial equation: (r_s - rho)**4/r_s**4
@@ -28,5 +28,5 @@ RESULT: Q1 no (sigma is not a symmetry of the geodesic flow). Q2 YES: (L/E)_circ
         Q3 YES: the ISCO condition is the image of the photon-sphere condition under sigma, by the chain rule on that identity.
         The duality is a symmetry of the two circular-orbit FAMILIES (not of the spacetime), with the fixed point at the marginally
         bound orbit r = 2 r_s (theta = pi/4). In the seat's angle the two families are one function with sin <-> cos.
-TIER: DERIVED (exact symbolic) from the divider's output metric. Lineage: Couch-Torrence inversion is a symmetry of extremal RN's
+TIER: DERIVED (exact symbolic) from the potential ratio's output metric. Lineage: Couch-Torrence inversion is a symmetry of extremal RN's
       METRIC; this is weaker and different -- an orbit-family symmetry of Schwarzschild. Not known to Claire from the literature; verify.

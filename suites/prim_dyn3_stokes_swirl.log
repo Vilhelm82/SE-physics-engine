@@ -1,4 +1,4 @@
-=== DYN-3a: the swirl from Laplace (G1) with no-slip at the electrode (NS) ===
+=== DYN-3a: the swirl from Laplace (G1) with no-slip at the sonic surface r = r_s (NS) ===
   general l=1 solution f(r) = C1/r**2 + C2*r
   decaying + no-slip:  v_phi(r,theta) = Omega*a**3/r**2 * sin(theta)
   [PASS][   0.1s] a1 v_phi = Omega a^3 sin(theta)/r^2 : Stokes swirl of a rotating sphere, DERIVED from Laplace + no-slip
@@ -17,8 +17,8 @@
   reverse: K from GP-B predicts LAGEOS nodal drag 29.21 mas/yr (measured ~30.7 +- 3)
   [PASS][   0.2s] c2 reverse prediction inside LAGEOS's error bar
   for the register: 2 G J_E / c^2 = 8.7035e+6 m^3/s  vs K(LAGEOS) = 8.7125e+6  ratio 1.001 -- the source relation K = 2GJ/c^2 holds at the 1 % level of the LAGEOS number; it is a BAND (source side), not derived here
-=== DYN-3d: the electrode, and the O(J^2) question ===
-  [PASS][   0.2s] d1 at r = a the medium co-rotates rigidly with the electrode: a rigidly rotating horizon is the no-slip condition (Kerr has this; here it is OUTPUT)
+=== DYN-3d: the sonic surface r = r_s, and the O(J^2) question ===
+  [PASS][   0.2s] d1 at r = a the medium co-rotates rigidly with the sonic surface r = r_s: a rigidly rotating horizon is the no-slip condition (Kerr has this; here it is OUTPUT)
   [PASS][   0.2s] d2 omega r^3 = const exactly: no correction to the swirl profile at ANY order in the medium. Kerr's omega has O(J^3) terms (unmeasured). PREDICTION. The O(J^2) mass quadrupole (THM-N) is a separate, still-open object
 
 === DYN-3: 10/10 checks passed in 0.2s ===

@@ -71,7 +71,7 @@ factors; ISCO (Kerr-assumed X-ray fits); marginally bound orbit.
   fact about the octahedron and is kept.
 - **Removal route:** demote the temperature identification to DECLARED (a hypothesis in the list, per
   "nothing is banned"). Drop the 4r_s scale until LOCK-1 is removed. T_H's *number* becomes CONJECTURE.
-  If the dynamics tier produces its own scale at the open circuit, T_H is re-derived; otherwise it stays
+  If the dynamics tier produces its own scale at the lapse zero, T_H is re-derived; otherwise it stays
   a named conjecture with three internally consistent routes and no ground.
 - **Tier after removal:** structure DERIVED; identification DECLARED; number CONJECTURE.
 
@@ -99,8 +99,8 @@ factors; ISCO (Kerr-assumed X-ray fits); marginally bound orbit.
 ### LOCK-6 — EQ-1 Tolman equilibrium
 - **Open ruling from earlier sessions: "Will's principle or Mercury's fact?"** Resolved by this directive:
   **neither — it is a target.** T√g_00 = const is theory (GR + thermodynamics), unmeasured.
-- **Removal route:** derive equilibrium from the divider (V = IZ). The condition "no work through the load
-  ⇒ no time" at the open circuit is the model's candidate. Until derived: CONJECTURE.
+- **Removal route:** derive equilibrium from the potential ratio (V = IZ). The condition "no work through the load
+  ⇒ no time" at the lapse zero is the model's candidate. Until derived: CONJECTURE.
 
 ### LOCK-7 — The white-hole sheet  [CONJECTURE-COSMOLOGY.md]
 - **Imports:** the maximal analytic extension (Kruskal) as the thing the sheet exchange Γ_C → −Γ_C
@@ -133,7 +133,7 @@ factors; ISCO (Kerr-assumed X-ray fits); marginally bound orbit.
 
 1. **LOCK-1** (everything else waits on it). Deliverable: η(r) as output of the dynamics tier.
    Pass condition: 1 − r_s/r to O(U²) in the lapse, γ = 1 in the space part. Prediction: O(U³).
-2. LOCK-6 alongside (the divider *is* the dynamics candidate; EQ-1 is its first theorem or its first casualty).
+2. LOCK-6 alongside (the potential ratio *is* the dynamics candidate; EQ-1 is its first theorem or its first casualty).
 3. LOCK-2/3: demote now (one-line tier edits), re-derive after 1.
 4. LOCK-5: relabel now.
 5. LOCK-4: read the three THM runners for reached-vs-read-in; band them at measured order.
@@ -159,7 +159,7 @@ Appended to `AUDIT-2026-09-07-LOCKS.md` and `LOCK5-STATIONS-2026-09-07.md`. See
   retained as GEM's ½, and the Stokes constitutive reading is retired (R-2). NS-1's finite-Re correction carries over
   under the induction operator with diffusivity for kinematic viscosity.
 - **LOCK-5 (station labels).** The scaffold edge is **closed**. Face H was the last: its geometric-optics fold (09-07)
-  now has the wave dressing at both ends — the electrode's power law |T₀|² = 4(ωr_s)² (EDGE-1) and the fold's Fermi edge
+  now has the wave dressing at both ends — the sonic surface r = r_s's power law |T₀|² = 4(ωr_s)² (EDGE-1) and the fold's Fermi edge
   of width λ_L (FOLD-1). Face HG (Parikh–Wilczek) remains THEORY: the model has not derived a tunnelling *emission*
   channel, only the transmission edges. Retier HG explicitly rather than letting H's closure cover it.
 - **New pin, named:** the membrane surface viscosity η_s (EDGE-4) is a **free transport coefficient**. The tidal-friction
@@ -170,14 +170,14 @@ Appended to `AUDIT-2026-09-07-LOCKS.md` and `LOCK5-STATIONS-2026-09-07.md`. See
 
 | flips | was (09-07) | now (09-07 late) | receipt |
 |---|---|---|---|
-| H | THEORY, with a DERIVED geometric-optics limit | **DERIVED** (both ends) | FOLD-1 (fold, Fermi edge λ_L) + EDGE-1 (electrode, 4(ωr_s)²); DYN-2 supplies the thermal factor between them |
+| H | THEORY, with a DERIVED geometric-optics limit | **DERIVED** (both ends) | FOLD-1 (fold, Fermi edge λ_L) + EDGE-1 (sonic surface, 4(ωr_s)²); DYN-2 supplies the thermal factor between them |
 | HG | THEORY | **THEORY** (unchanged, and now stated separately) | no emission channel derived; H's closure does not cover it |
 | CHG | DERIVED-given-KMS · PREDICTION | unchanged, **plus** the greybody factor is now derived at both ends | the spectrum is Planck(κ) × [Fermi-edge(λ_L) at high l, 4(ωr_s)² at l = 0] |
 
 ## Residue and pins, consolidated
 
 One declared line (KMS, EXT-029) and three pinned-to-ground quantities: d = 3 (T8c, reciprocity ground-adjacent),
-K = 2GJ/c² (LAGEOS, 1 %), η_s (Damour, EDGE-4). Everything else in the DYN/EDGE/GUD/NS chain is derived from Ohm,
+K = 2GJ/c² (LAGEOS, 1 %), η_s (Damour, EDGE-4). Everything else in the DYN/EDGE/GUD/NS chain is derived from Newton,
 Laplace, Euler, induction, and the primitives.
 
 ## Predictions register (new section; four live, all with instruments)
@@ -188,5 +188,5 @@ Laplace, Euler, induction, and the primitives.
 4. No swirl correction at any order (Kerr has O(J³)); isotropic g₀₀ at O(U³) = −3/2 (unmeasured).
 
 ## 2026-09-07, later: the η_s pin is removed (EDGE-6, 10/10)
-η_s = 1/(16π), ζ = −1/(16π), p = κ/8π DERIVED-given-KMS from the Ricci-flat divider metric, DYN-2's κ, the first law (S = A/4 as output)
+η_s = 1/(16π), ζ = −1/(16π), p = κ/8π DERIVED-given-KMS from the Ricci-flat potential-ratio metric, DYN-2's κ, the first law (S = A/4 as output)
 and the teleological Raychaudhuri balance. Residue and pins now: KMS (declared); d = 3 (T8c); K = 2GJ/c² (LAGEOS). Two pins, one line.

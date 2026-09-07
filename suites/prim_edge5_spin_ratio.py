@@ -6,7 +6,7 @@
 #   the number 1/(512 pi) is Damour's 1/(16 pi) seen through a spin-0 coupling -- owned by Page's factorial, not by the model.
 #
 # INPUTS:
-#   NS-0/EDGE-1  the medium's sound: scalar wave equation of the divider metric, V_0 = A(l(l+1)/r^2 + r_s/r^3), ingoing at the electrode. [DERIVED]
+#   NS-0/EDGE-1  the medium's sound: scalar wave equation of the potential ratio metric, V_0 = A(l(l+1)/r^2 + r_s/r^3), ingoing at the sonic surface r = r_s. [DERIVED]
 #   RW           GR's axial gravitational perturbation (Regge-Wheeler): V_2 = A(l(l+1)/r^2 - 3 r_s/r^3). COMPARISON, labelled (EXT-038).
 #   Same integrator (EDGE-1), same background, same boundary condition, same extraction.
 # COMPARISON: Page 1976 low frequency, Schwarzschild: Gamma_{sl} -> 4 [ (l-s)!(l+s)! / ((2l)!(2l+1)!!) ]^2 (omega r_s)^{2l+2}.
@@ -75,7 +75,7 @@ check("c2", abs(36/edge4 - 1) < 0.25, f"after the spin correction the membrane n
 
 print("=== EDGE-5d: what this makes EDGE-4 say ===")
 print("  The medium's tide is spin-0: a companion's field in the medium is its river, a Bernoulli scalar. The medium has no spin-2 field.")
-print("  Therefore, IF the electrode's membrane viscosity is Damour's 1/(16 pi G), the medium's tidal torque and heating are weaker than")
+print("  Therefore, IF the sonic surface r = r_s's membrane viscosity is Damour's 1/(16 pi G), the medium's tidal torque and heating are weaker than")
 print("  Kerr's by the spin ratio: ~1/36 (EDGE-4's membrane model says 1/32). PREDICTION: horizon absorption (tidal heating/torquing) in")
 print("  the medium is ~30x smaller than GR's. Instrument: LISA EMRIs (horizon-flux phase shifts of tens of radians in GR would shrink to")
 print("  ~1 radian); LVK horizon-absorption tests on high-spin BBH (currently unconstraining). Alternatively the medium acquires a spin-2")

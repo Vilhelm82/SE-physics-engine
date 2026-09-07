@@ -6,7 +6,7 @@ Standing documents live here; everything dated or generated has a home by kind.
 |---|---|
 | `LABELLED-MODEL.md`, `CONJECTURE-COSMOLOGY.md`, `TESTING-SCHEDULE.md`, `EXTERNAL-MATHEMATICS-DEBT.md`, foundation audit/programme | standing state documents |
 | `results/<date>/` | dated specs, reports and results, by the date in the filename |
-| `receipts/` | every `*-checks.json`, run log, and the QEC circuit files; the machine-verified side of each result |
+| `receipts/` | every `*-checks.json`, run log, and the QEC network files; the machine-verified side of each result |
 | `figures/` | figures produced by runners; `figures/seated_root_figures/` the paper figures |
 | `prereg/` | sealed designer predictions per experiment |
 | `archive/` | Gram-submersion and inertia-node notes, chat snippets, the missing-window note, plan files |

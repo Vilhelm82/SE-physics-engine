@@ -1,18 +1,20 @@
-# prim_dyn1_ohmic_divider.py  --  DYN-1: the lapse as an Ohmic voltage divider, run FORWARD.
+# prim_dyn1_lapse_from_potential.py  --  DYN-1: the lapse from the Newtonian potential, run FORWARD.
+#   CONTENT: N^2 = 1 - phi(r)/phi(r_s) with phi = -GM/r, normalised where escape velocity = c.
+#   The claim is the TAIL: the exact lapse is linear in the Newtonian potential to ALL orders, not just to first.
 #
 # DIRECTIVE (Will, 2026-09-07): remove LOCK-1 (the pinning eta = r_s/(r - r_s), which imports the whole of
 #   Schwarzschild's g_00 when only two orders are measured). Let the model produce eta(r) itself.
 #
 # INPUTS (each named, each tiered):
-#   G1  Ohm's law: a uniform linear medium, potential satisfies Laplace outside the source.       [GROUND]
+#   G1  the Newtonian potential: a uniform linear medium, potential satisfies Laplace outside the source.       [GROUND]
 #   G2  Conservation of current across concentric spheres in d spatial dimensions, so the
-#       spreading resistance of a shell is R(a->b) = rho * int_a^b dr / (Omega_d r^(d-1)).         [GROUND: inverse-square]
+#       shell integral of 1/r^(d-1) of a shell is R(a->b) = rho * int_a^b dr / (Omega_d r^(d-1)).         [GROUND: inverse-square]
 #   T8c d = 3: the fourth direction is SPACELIKE (EM reciprocity), Cl(3,1), three spatial dims.    [DERIVED, prim_t8c]
-#   T7f "time is work through the load": the LOAD is the shell from the open circuit (r_s) to
+#   T7f "time is work through the load": the LOAD is the shell from the lapse zero (N = 0) (r_s) to
 #       the seat; the SOURCE is the shell from the seat to infinity.                                [DECLARED, Will]
-#   T7f N^2 = Z_L / (Z_L + Z_s): the lapse is the divider.                                         [DECLARED, Will -- HYPOTHESIS UNDER TEST]
+#   T7f N^2 = W_in / (W_in + W_out): the lapse is the potential ratio.                                         [DECLARED, Will -- HYPOTHESIS UNDER TEST]
 #   THM-I rho_K N^2 = 1: presented radial rod x lapse^2 = 1 identically  =>  B(r) = 1/A(r).       [DERIVED, thm_i_field]
-#   One scale r_s = the inner electrode radius (its value 2GM/c^2 is Newton's v_esc = c).          [DECLARED scale]
+#   One scale r_s = the inner sonic surface radius (its value 2GM/c^2 is Newton's v_esc = c).          [DECLARED scale]
 #   r is the AREAL radius by construction: the sphere over which current spreads has area Omega_d r^(d-1).
 #
 # BANNED: any metric ansatz, Schwarzschild, Kerr, the Einstein equations, PPN as an input, the old pinning.
@@ -32,7 +34,7 @@
 #   from the OUTPUT metric, perihelion-to-perihelion. They must agree.
 #
 # KILLS: (K1) d = 2 control must FAIL (dimension is load-bearing and must come from T8c, not the medium).
-#        (K2) if the output does not give 1 - 2U at O(U) and beta = 1 at O(U^2), the divider dies at measured order.
+#        (K2) if the output does not give 1 - 2U at O(U) and beta = 1 at O(U^2), the potential ratio dies at measured order.
 #        (K3) if P1 and P2 disagree beyond 1e-6 relative, the runner is wrong, not the physics.
 
 import sympy as sp, mpmath as mp, time, math
@@ -44,17 +46,17 @@ def check(tag, ok, msg):
 
 r, rs, a, b, m, U, rb, d = sp.symbols('r r_s a b m U rbar d', positive=True)
 
-# ---------- G1+G2: spreading resistance of a shell in d dims (rho and Omega_d cancel in every ratio) ----------
+# ---------- G1+G2: shell integral of 1/r^(d-1) of a shell in d dims (rho and Omega_d cancel in every ratio) ----------
 def R_shell(lo, hi, dim):
     return sp.integrate(1/r**(dim-1), (r, lo, hi))
 
-print("=== DYN-1a: the divider, d = 3 (T8c) ===")
-RL = R_shell(rs, r, 3)            # load: open circuit -> seat   (T7f declaration)
+print("=== DYN-1a: the potential ratio, d = 3 (T8c) ===")
+RL = R_shell(rs, r, 3)            # load: lapse zero (N = 0) -> seat   (T7f declaration)
 RS = R_shell(r, sp.oo, 3)         # source: seat -> infinity
 A  = sp.simplify(RL/(RL+RS))      # N^2  (T7f hypothesis)
 eta = sp.simplify(RS/RL)
-print("  R_load  =", RL, "   R_source =", RS)
-print("  N^2 = A(r) =", A, "     eta = Z_s/Z_L =", eta)
+print("  W_in  =", RL, "   W_out =", RS)
+print("  N^2 = A(r) =", A, "     eta = W_out/W_in =", eta)
 check("a1", sp.simplify(A - (1 - rs/r)) == 0, f"A(r) = 1 - r_s/r  (all orders; the OUTPUT, not an input)")
 check("a2", sp.simplify(eta - rs/(r-rs)) == 0, "eta = r_s/(r - r_s): the old pinning is REPRODUCED as output (LOCK-1 removable)")
 Aser = sp.series(A.subs(rs, 2*U*r), U, 0, 4).removeO()
@@ -63,14 +65,14 @@ check("a3", sp.expand(Aser - (1 - 2*U)) == 0, f"A = {Aser}: exactly 1 - 2U in ar
 print("=== DYN-1b: control -- the other shell assignment (NOT a candidate; T7f fixes the load) ===")
 A_dual = sp.simplify(RS/(RL+RS))
 print("  swapped: N^2 =", A_dual, "= r_s/r = v_esc^2 ;  eta_dual =", sp.simplify(RL/RS), "= 1/eta")
-check("b1", sp.simplify(A_dual - rs/r) == 0, "load/source swap is exactly eta -> 1/eta and N^2 <-> v_esc^2 (the reciprocity is STRUCTURAL)")
-Zl, Zs = sp.symbols('Z_L Z_s', positive=True)
+check("b1", sp.simplify(A_dual - rs/r) == 0, "involution sigma: eta -> 1/eta is exactly eta -> 1/eta and N^2 <-> v_esc^2 (the reciprocity is STRUCTURAL)")
+Zl, Zs = sp.symbols('W_in W_out', positive=True)
 Pmax = sp.solve(sp.diff(Zl/(Zl+Zs)**2, Zl), Zl)[0]
-check("b2", sp.simplify(Pmax - Zs) == 0 and sp.solve(sp.Eq(eta, 1), r)[0] == 2*rs, "max power transfer Z_L = Z_s  <=>  eta = 1  <=>  r = 2 r_s (marginally bound radius; FLAGGED, not claimed)")
+check("b2", sp.simplify(Pmax - Zs) == 0 and sp.solve(sp.Eq(eta, 1), r)[0] == 2*rs, "W_in = W_out point W_in = W_out  <=>  eta = 1  <=>  r = 2 r_s (marginally bound radius; FLAGGED, not claimed)")
 
 print("=== DYN-1c: K1 control -- d = 2 must fail ===")
 RL2 = R_shell(rs, r, 2); RS2 = sp.limit(R_shell(r, b, 2), b, sp.oo)
-print("  d=2: R_load =", RL2, "  R_source =", RS2)
+print("  d=2: W_in =", RL2, "  W_out =", RS2)
 check("c1", RS2 == sp.oo, "in two spatial dimensions the source shell has infinite resistance: N^2 = 0 everywhere. FAILS. d = 3 is load-bearing and is T8c's.")
 
 print("=== DYN-1d: the output metric and its PPN parameters (read OFF, not fed in) ===")
@@ -150,4 +152,4 @@ print(f"  isotropic g00 to O(U^3) = {sp.expand(s4)}   <- the U^3 coefficient is 
 n = sum(CH); print(f"\n=== DYN-1: {n}/{len(CH)} checks passed in {time.time()-t0:.1f}s ===")
 print("TIER: A(r) = 1 - r_s/r is DERIVED given [G1, G2, T8c, THM-I] and the two T7f DECLARATIONS.")
 print("      beta = gamma = 1 are read off the output and match ground at 1e-4 / 1e-5. LOCK-1 removable.")
-print("      The T7f divider identification has now passed a test that could have failed; it is no longer 'trust me'.")
+print("      The T7f potential-ratio identification has now passed a test that could have failed; it is no longer 'trust me'.")

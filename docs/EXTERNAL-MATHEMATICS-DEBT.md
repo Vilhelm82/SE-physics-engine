@@ -151,7 +151,7 @@ These mathematical extensions are usable now. The remaining Seated Root predicti
 ## EXT-014 — Quantum operator spreading, locality and code detection
 
 - **Sources read:** [Operator Spreading in Random Unitary Circuits](https://arxiv.org/abs/1705.08975), abstract and primary PDF's operator-response setup; [Dynamics of entanglement and transport in 1D systems with quenched randomness](https://arxiv.org/abs/1705.10364), abstract; [Lieb–Robinson bounds and generation of correlations and topological quantum order](https://arxiv.org/abs/quant-ph/0603121), abstract; [Operator spreading in random circuits with orthogonal or symplectic symmetry](https://arxiv.org/abs/2606.03956), June 2026 preprint abstract.
-- **Retained content:** squared commutators diagnose operator spreading; weak links and symmetry-constrained circuit ensembles already have nontrivial growth laws. Locality bounds have tails. The code-detection condition PEP proportional to P below code distance is retained standard quantum-code background, stated as a hypothesis and used directly.
+- **Retained content:** squared commutators diagnose operator spreading; weak links and symmetry-constrained network ensembles already have nontrivial growth laws. Locality bounds have tails. The code-detection condition PEP proportional to P below code distance is retained standard quantum-code background, stated as a hypothesis and used directly.
 - **Native construction:** quantum targets equations (11)–(13) define a positive commutator-response matrix, its actual probe congruence and controlled detection order. The locality/code bound follows term by term from a nested-commutator support estimate. The CNOT probe verifies that operator growth can occur with a nonsingular full-state Jacobian.
 - **Extension target and hypotheses:** derive full response jets, cancellations and finite-time recovery bounds for specified local controls and preparations. Apply BR-3 to the actual singular probe map, not an assumed singular full quantum evolution. The 2026 orthogonal-ensemble velocity result is a comparison, not a theorem transferred to the native holonomy gates without matching its gate-distribution assumptions.
 - **Status:** STANDARD SCRAMBLING/LOCALITY BASELINES RETAINED; RESPONSE BRIDGE CONSTRUCTED; FAMILY-SPECIFIC ONSET AND RECOVERY PREDICTIONS OPEN.
@@ -199,30 +199,30 @@ These mathematical extensions are usable now. The remaining Seated Root predicti
 - **Loss-readout continuation:** FD-7 separates monitored dump absorption and unmonitored terminal background absorption in the full instrument. It derives the paired heralded fraction/unheralded residual, total absorption, per-attempt residual and Bell-pair convention for arbitrary monitoring efficiencies. Stable loss-effect integration and an independent density-matrix evolution verify the accepted ensemble; unobserved loss is not removed by conditioning. The figure and receipt include complete operating points and code maps/effects for a subsequent threshold calculation. This extends the retained absorbing-sink and probability rules locally; no online search or new external result was used.
 - **Status:** STANDARD FINITE-GATE CORRECTION RETAINED; CERTIFIED FULL SECOND-ORDER ENCODED CORRECTION WITHIN THE ECHO BUDGET, GENERAL GAIN-ORDER DOUBLING, ARBITRARY JOINT RESPONSE AND TEMPORAL DIMENSION FORMULAS DERIVED. THE BROADER SD QUADRATIC NOISE-LOG CONSTRUCTION REMAINS AVAILABLE.
 
-## EXT-019 — Circuit QEC, Pauli instruments and erasure-aware decoding
+## EXT-019 — Boundary QEC, Pauli instruments and erasure-aware decoding
 
 - **Sources read, 6 September 2026:** [Stim's official gate reference](https://github.com/quantumlib/Stim/blob/main/doc/gates.md), especially `HERALDED_ERASE` and its detector-model approximation warning; [PyMatching's official API](https://pymatching.readthedocs.io/en/stable/api.html) and [maintainer repository](https://github.com/oscarhiggott/PyMatching), check-matrix decoding, logical fault matrices and likelihood weights; [LDPC quantum-decoder documentation](https://software.roffe.eu/ldpc/quantum_decoder.html) and [BP+OSD API](https://software.roffe.eu/ldpc/ldpc/bposd_decoder.html), syndrome decoding and per-shot channel updates. Installed API signatures were inspected directly.
 - **Retained standard mathematics:** stabilizer circuits, binary syndrome equations and logical cosets; minimum-weight matching, belief propagation plus ordered-statistics decoding; Pauli orthogonality/randomization; binomial sampling intervals. These are retained with their specified decoder models, not scheduled for ceremonial rederivation.
 - **Native input and new interface:** `rlq/reflection_loop_finite_dump.py` and its saved full code maps/loss effects. `rlq/qec_distance_stack.py` derives the two-outcome Pauli instrument after an explicit boundary repair: valid code state is preserved, every non-code outcome is replaced by the maximally mixed qubit. The native gate is independently Pauli randomized at each location. Its exact conditional probabilities are derived from the complete matrices, not inferred from average infidelity.
 - **Hypotheses:** independent physical reservoirs and independent ideal Pauli wrappers; immediate ideal boundary repair without revealing unobserved loss; separate declared CNOT, preparation, measurement and idle noise. Persistent lost carriers interacting with later gates and imperfect repair require an extended physical model. The native one-qubit gate does not supply the syndrome CNOTs.
-- **Decoder handling:** actual shots are sampled from Stim circuits. Herald records select zero-cost error columns per shot; hiding the same records supplies the comparison. The heralded channel is not sampled from its approximate independent detector model. Residual-channel Pauli correlations remain in the sampled circuit; the decoding priors make the stated separate-sector/independent-mechanism approximation.
+- **Decoder handling:** actual shots are sampled from Stim circuits. Herald records select zero-cost error columns per shot; hiding the same records supplies the comparison. The heralded channel is not sampled from its approximate independent detector model. Residual-channel Pauli correlations remain in the sampled network; the decoding priors make the stated separate-sector/independent-mechanism approximation.
 - **Status:** STANDARD QEC STACK RETAINED; NATIVE INSTRUMENT INTERFACE DERIVED; DISTANCE-DEPENDENT CIRCUIT TESTS RECORDED IN THEIR OWN RECEIPT. Physical repair and control realization remain stated inputs.
 
 ## EXT-020 — Bivariate bicycle qLDPC code
 
-- **Source:** [Bravyi et al., High-threshold and low-overhead fault-tolerant quantum memory](https://arxiv.org/pdf/2308.07915), code construction and Table 3; [authors' parameter/circuit source](https://github.com/sbravyi/BivariateBicycleCodes/blob/main/decoder_setup.py). The 72-qubit member uses `ell=m=6`, `A=x^3+y+y^2`, `B=y^3+x+x^2`, `H_X=[A B]`, `H_Z=[B^T A^T]`.
+- **Source:** [Bravyi et al., High-threshold and low-overhead fault-tolerant quantum memory](https://arxiv.org/pdf/2308.07915), code construction and Table 3; [authors' parameter/network source](https://github.com/sbravyi/BivariateBicycleCodes/blob/main/decoder_setup.py). The 72-qubit member uses `ell=m=6`, `A=x^3+y+y^2`, `B=y^3+x+x^2`, `H_X=[A B]`, `H_Z=[B^T A^T]`.
 - **Exact use:** the `[[72,12,6]]` code is an external working qLDPC baseline for the native instrument. Binary ranks, commutation, logical quotient bases and the distance-six statement are independently checked locally. The distance test excludes every logical support of weight at most five by an exhaustive pair/triple meet-in-the-middle calculation and exhibits weight-six logicals.
-- **Circuit boundary:** the local runner uses the source's seven CNOT-layer ordering, independently assembled from the permutation matrices. Both ancilla families are reset at the beginning and read at the end of each cycle; the extra waits have explicit idle noise. Each layer is checked for qubit collisions. The paper's threshold and circuit distance are not imported for this noise/endpoint convention. The noiseless circuit, actual fault syndromes and decoded logical outcomes determine the tested performance.
+- **Boundary boundary:** the local runner uses the source's seven CNOT-layer ordering, independently assembled from the permutation matrices. Both ancilla families are reset at the beginning and read at the end of each cycle; the extra waits have explicit idle noise. Each layer is checked for qubit collisions. The paper's threshold and network distance are not imported for this noise/endpoint convention. The noiseless network, actual fault syndromes and decoded logical outcomes determine the tested performance.
 - **Status:** STANDARD CODE CONSTRUCTION RETAINED; LOCAL CODE AND CIRCUIT REALIZATION AVAILABLE. No general qLDPC threshold or native entangling-gate construction is inferred.
 
 ## EXT-021 — Erasure-QEC field comparison and implementation targets
 
 - **Use, 6 September 2026:** comparison of the native five-loop/QEC results against published gates, circuits and decoders. Native inputs inspected: the quantum-work report, distance-code report, full QEC receipt and EXT-016–020. No external pulse, channel, decoder or theorem was added to the runner in this comparison.
-- **Physical one-qubit benchmark:** [Levine et al., PRX 14, 011051 (2024)](https://arxiv.org/abs/2307.08737), abstract: measured dual-rail gate erasure `2.19(2) × 10⁻³`, residual errors about forty times smaller, and mid-circuit erasure checks with less than 0.1% added dephasing. The native repaired/randomized point has `h=0.00265055`, conditional nonidentity Pauli probability `4.45092 × 10⁻⁶`, and per-attempt unheralded Pauli probability `(1−h)p=4.43912 × 10⁻⁶`. Its ratio `h/[(1−h)p]=597.09` is a model result; the experimental residual metric, controls and costs are not identical.
+- **Physical one-qubit benchmark:** [Levine et al., PRX 14, 011051 (2024)](https://arxiv.org/abs/2307.08737), abstract: measured dual-rail gate erasure `2.19(2) × 10⁻³`, residual errors about forty times smaller, and mid-network erasure checks with less than 0.1% added dephasing. The native repaired/randomized point has `h=0.00265055`, conditional nonidentity Pauli probability `4.45092 × 10⁻⁶`, and per-attempt unheralded Pauli probability `(1−h)p=4.43912 × 10⁻⁶`. Its ratio `h/[(1−h)p]=597.09` is a model result; the experimental residual metric, controls and costs are not identical.
 - **Current entangling-gate benchmark:** [D-Wave Quantum Inc., Nature, 5 August 2026](https://www.nature.com/articles/s41586-026-10822-y), abstract, gate benchmarking, discussion and QEC Methods: a measured approximately 500 ns cavity dual-rail CZ with approximately 0.5% erasure and residual Pauli errors below 0.1%. Its preliminary code comparison models CZ errors; the authors explicitly leave other operation errors for more complete simulations. This is a physical two-qubit construction. The native QEC runner currently supplies syndrome CNOT noise independently of its one-qubit instrument.
 - **Surface-code hardware benchmark:** [Google Quantum AI, Nature 638 (2025)](https://www.nature.com/articles/s41586-024-08449-y), abstract and performance/decoding sections: distance-7 memory, `0.143%` logical error per cycle, suppression factor `2.14`, and real-time distance-5 decoding. Native numbers are simulated per-`d`-round block under a different noise/interface model; numerical rate ratios between these experiments are not a hardware comparison.
-- **Repair and timing targets:** [Chang et al., Surface Code with Imperfect Erasure Checks](https://arxiv.org/abs/2408.00842), abstract, identifies check accuracy and leaked-qubit interactions as determinants of threshold and effective distance. [Pavlovich et al., 20 August 2026 version](https://arxiv.org/html/2607.29443v3), abstract and fault-distance discussion, proposes a circuit using terminal three-state measurement, skip-gate leakage behavior and an adapted decoder. Neither leakage-interaction rule is established for the native controls; finite repair, delayed detection and propagation must come from their actual instrument.
-- **qLDPC comparison:** [BiBiEQ, February 2026](https://arxiv.org/html/2602.07578v1), abstract, noise model and construction sections, already studies BB erasure circuits at distances 6, 10 and 12 with noisy checks/resets and exact-versus-approximate erasure handling. [Blue et al., June 2026 revision](https://arxiv.org/html/2504.13043v2), sections 1.3 and 2.7, reports roughly 4.5-fold lower logical error than its BP-OSD-3 baseline for `[[72,12,6]]` at 0.1% circuit noise. It uses both syndrome sectors for the learned decoder and one for that BP-OSD baseline. This establishes a stronger decoder comparison target, not an improvement factor transferable to our erasure channel.
+- **Repair and timing targets:** [Chang et al., Surface Code with Imperfect Erasure Checks](https://arxiv.org/abs/2408.00842), abstract, identifies check accuracy and leaked-qubit interactions as determinants of threshold and effective distance. [Pavlovich et al., 20 August 2026 version](https://arxiv.org/html/2607.29443v3), abstract and fault-distance discussion, proposes a network using terminal three-state measurement, skip-gate leakage behavior and an adapted decoder. Neither leakage-interaction rule is established for the native controls; finite repair, delayed detection and propagation must come from their actual instrument.
+- **qLDPC comparison:** [BiBiEQ, February 2026](https://arxiv.org/html/2602.07578v1), abstract, noise model and construction sections, already studies BB erasure circuits at distances 6, 10 and 12 with noisy checks/resets and exact-versus-approximate erasure handling. [Blue et al., June 2026 revision](https://arxiv.org/html/2504.13043v2), sections 1.3 and 2.7, reports roughly 4.5-fold lower logical error than its BP-OSD-3 baseline for `[[72,12,6]]` at 0.1% network noise. It uses both syndrome sectors for the learned decoder and one for that BP-OSD baseline. This establishes a stronger decoder comparison target, not an improvement factor transferable to our erasure channel.
 - **Native continuation:** compare five-loop, bare and coherent-corrected controls for the same useful operation, code, decoder, physical storage time and control resources, including finite detection/repair and idle errors. Determine the operating region where the native construction reduces logical error or qubit-time cost. Derive an entangling instrument next; enlarge the qLDPC distance series after the interface is specified. The present flags-used/hidden comparison measures information value, not superiority to another physical gate.
 - **Status:** COMPARISON SOURCES RETAINED; NO NEW MATHEMATICAL DEPENDENCY ADOPTED. Source scope was inspected as listed, not independently certified. Standard methods remain retained without ceremonial rederivation.
 
@@ -365,7 +365,7 @@ Exact online queries:
 
 The APS full-text endpoint for DOI 10.1103/PhysRevLett.102.080501 was not retrievable through the web tool. The arXiv primary PDF was then located and read at the depth recorded in EXT-018. Other returned candidates were not adopted. No external pulse sequence or code was copied. The native construction was derived from the existing loop and then compared against the retained finite-control framework.
 
-### SR-007 — Distance-dependent circuit QEC, 2026-09-06
+### SR-007 — Distance-dependent network QEC, 2026-09-06
 
 Native inspection preceded adoption: current finite-dump source and complete instrument receipt, quantum target/ledger sections and the existing QI harness. Cella DAG queries for `error correction` and `quantum` returned no correction theorem and one unrelated photonic-coupler item, respectively. Targeted backing-library searches covered surface codes, qLDPC, stabilizers, Pauli twirling, Knill–Laflamme and erasure decoding. No additional native decoder was identified in those inspected sources; this is not a corpus-wide absence assertion. The existing code-detection background is retained in EXT-014.
 
@@ -384,10 +384,10 @@ Exact online queries:
 - `erasure qubit quantum error correction logical qubit surface code 2026`
 - `dual rail erasure qubit two qubit gate 2025 2026`
 - `quantum error correction below surface code threshold Nature 2025 0.143% 2.14`
-- `bivariate bicycle codes erasure decoding 2025 2026 circuit`
+- `bivariate bicycle codes erasure decoding 2025 2026 network`
 - `site:nature.com "Quantum error correction below the surface code threshold"`
 - `site:arxiv.org erasure conversion surface code 2025 2026 finite detection reset`
-- `site:arxiv.org qLDPC bivariate bicycle circuit level 2026 error correction`
+- `site:arxiv.org qLDPC bivariate bicycle network level 2026 error correction`
 - `"An entangling gate for dual-rail erasure qubits"`
 - `site:nature.com/articles/s41586-026-10822-y "0.5"`
 - `site:arxiv.org "An entangling gate" "dual-rail"`
@@ -445,13 +445,13 @@ Check Cella's relevant source proofs and derivation notes before adopting extern
 
 Append a dated receipt whenever online research informs this project. Before using an external result, assign or update an EXT entry stating its exact content, local use, hypotheses, retention decision and any actual native construction still needed. Reuse keeps the same ID and adds the new location. Keep proved constructions and remaining model inputs distinct; neither is inferred from passing checks alone. Internal reuse retains source dependencies. Do not reopen a completed standard result solely because of its external provenance.
 
-## EXT-027 — Spreading resistance and the Ohmic divider (DYN-1)
-- **Source:** standard electrostatics/conduction: resistance of a spherical shell in a uniform Ohmic medium R(a→b) = ρ(1/a − 1/b)/(4π); Kirchhoff's laws. No online search; textbook.
-- **Entry point:** `suites/prim_dyn1_ohmic_divider.py`; DYN-2, EQ-1, DYN-3, SHEET-1, FOLD-1, GUD-1/2, NS-0 inherit.
-- **Imported content:** Ohm's law (linear response), conservation of current in d spatial dimensions (inverse-square spreading), KVL single-valuedness (used in DYN-2 as the regularity condition).
+## EXT-027 — Spreading resistance and the linear-medium potential-ratio (DYN-1)
+- **Source:** standard electrostatics/conduction: resistance of a spherical shell in a uniform linear-medium medium R(a→b) = ρ(1/a − 1/b)/(4π); single-valuedness's laws. No online search; textbook.
+- **Entry point:** `suites/prim_dyn1_lapse_from_potential.py`; DYN-2, EQ-1, DYN-3, SHEET-1, FOLD-1, GUD-1/2, NS-0 inherit.
+- **Imported content:** the Newtonian potential (linear response), conservation of current in d spatial dimensions (inverse-square spreading), SNGL single-valuedness (used in DYN-2 as the regularity condition).
 - **Exact use:** N² = Z_L/(Z_L+Z_s) with load = shell(r_s→seat), source = shell(seat→∞) [both DECLARED by Will, T7f]. Output A(r) = 1 − r_s/r.
-- **Assumptions:** d = 3 taken from T8c (reciprocity); medium uniform; the electrode at r_s is a boundary.
-- **Status:** RETAINED STANDARD MATHEMATICS. The divider identification is the model's DECLARED material law MAT-1; passes ground at O(U²). Not a closed foundational debt.
+- **Assumptions:** d = 3 taken from T8c (reciprocity); medium uniform; the sonic surface r = r_s at r_s is a boundary.
+- **Status:** RETAINED STANDARD MATHEMATICS. The potential-ratio identification is the model's DECLARED material law MAT-1; passes ground at O(U²). Not a closed foundational debt.
 
 ## EXT-028 — Johnson–Nyquist noise and equilibrium balance (EQ-1)
 - **Source:** Nyquist 1928 (white noise power k_BT per unit bandwidth); noise thermometry realises the kelvin in the 2019 SI.
@@ -467,24 +467,24 @@ Append a dated receipt whenever online research informs this project. Before usi
 ## EXT-030 — Stokes flow around a rotating sphere and Faxén's law (DYN-3)
 - **Source:** Stokes 1851 (creeping flow); Faxén 1922 (a torque-free sphere rotates at half the local vorticity). Standard low-Reynolds hydrodynamics.
 - **Use:** swirl v_φ = Ωa³ sinθ/r² from Laplace + no-slip; gyroscope precession = ½ curl v; orbit rides the medium (RIDE, DECLARED).
-- **Assumptions:** the electrode is a rigid rotating sphere; no inertia (Stokes); strength K pinned to LAGEOS (1 % agreement with 2GJ/c², not derived).
-- **Comparison literature (NOT inputs):** Lense–Thirring 1918; Schiff 1960; Hartle–Thorne 1968 for the O(J²) exterior of fluid bodies; membrane paradigm (Damour 1978/82, Thorne–Price–Macdonald 1986) for horizon viscosity, resistivity 377 Ω, negative bulk viscosity.
+- **Assumptions:** the sonic surface r = r_s is a rigid rotating sphere; no inertia (Stokes); strength K pinned to LAGEOS (1 % agreement with 2GJ/c², not derived).
+- **Comparison literature (NOT inputs):** Lense–Thirring 1918; Schiff 1960; Hartle–Thorne 1968 for the O(J²) exterior of fluid bodies; membrane paradigm (Damour 1978/82, Thorne–Price–Macdonald 1986) for horizon viscosity, resistivity the characteristic ratio, negative bulk viscosity.
 - **Status:** RETAINED STANDARD. KIN-3 (THM-L) retired as an import; THM-M (on BARE-1) archivable.
 
 ## EXT-031 — Parabolic-barrier transmission and the eikonal light-ring correspondence (FOLD-1)
 - **Source:** Kemble 1935 / Schutz–Will 1985 (WKB transmission through a parabolic peak, exact for an inverted parabola); Cardoso et al. 2009 (Lyapunov exponent ↔ QNM damping) and Sanchez 1978 / Décanini–Esposito-Farèse–Folacci 2011 (e^{−πβ}, β = λ_L/Ω_c) as comparison literature, not inputs.
 - **Use:** greybody edge T(ω) = 1/(1+e^{−2π(ω−ω_c)/λ_L}); subring ladder e^{−π}; eikonal QNM ω = Ω_c(l+½) − iλ_L(n+½).
-- **Status:** RETAINED STANDARD. λ_L = Ω_c is derived from the divider's output; the correspondence is checked (two paths), not assumed.
+- **Status:** RETAINED STANDARD. λ_L = Ω_c is derived from the potential ratio's output; the correspondence is checked (two paths), not assumed.
 
 ## EXT-032 — Acoustic metric of a barotropic irrotational flow (NS-0)
 - **Source:** Unruh 1981; Visser 1998 (acoustic black holes); Hamilton–Lisle 2008 (river model) as comparison.
-- **Use:** linearised Euler + continuity on the river gives the sound-cone metric; with c_s = c it reproduces the divider metric in Painlevé–Gullstrand form (verified by explicit time shift).
+- **Use:** linearised Euler + continuity on the river gives the sound-cone metric; with c_s = c it reproduces the potential ratio metric in Painlevé–Gullstrand form (verified by explicit time shift).
 - **Assumptions:** c_s = c (DECLARED); barotropic; irrotational (the river is potential flow, verified).
 - **Status:** RETAINED STANDARD. This is the AC sector's construction principle; the medium's ρc (its Z₀) is the open target.
 
 ## EXT-033 — Gudermannian function; Couch–Torrence inversion (GUD-1/2)
 - **Source:** Gudermannian (standard); Couch–Torrence 1984 (conformal inversion symmetry of extremal RN) as LINEAGE only.
-- **Use:** η = tan²θ; the load/source swap is θ → π/2 − θ; the orbit-family identity (L/E)_circ(r) = b_turn(σr)/√2 is exact in the divider's metric. GUD-2 shows σ is NOT a symmetry of the geodesic flow (Q1 no); the family identity is weaker than Couch–Torrence and lives in a different spacetime.
+- **Use:** η = tan²θ; the involution sigma is θ → π/2 − θ; the orbit-family identity (L/E)_circ(r) = b_turn(σr)/√2 is exact in the potential ratio's metric. GUD-2 shows σ is NOT a symmetry of the geodesic flow (Q1 no); the family identity is weaker than Couch–Torrence and lives in a different spacetime.
 - **Status:** exact symbolic result, DERIVED. Novelty unverified against the literature; verify before claiming.
 
 ## EXT-034 — Acoustic perturbations of transonic accretion (Moncrief)
@@ -509,13 +509,13 @@ Append a dated receipt whenever online research informs this project. Before usi
 - **Data actually read:** [GW150914 H1 O1 archive file](https://gwosc.org/archive/data/O1/1126170624/H-H1_LOSC_4_V1-1126256640-4096.hdf5), selecting GPS `[1126259446,1126259478)` at 4096 Hz. The original HDF5 file, quality groups, source URL and SHA-256 are preserved under `.ligo-data/`. The numerical checks verify installation and data access only. Setup instructions and verification scope are in [LIGO-SETUP.md](LIGO-SETUP.md).
 
 ## EXT-036 — Ampère / induction: the swirl as vector potential (MAT-2)
-- **Source:** standard magnetostatics and the steady induction equation (resistive MHD); GEM as comparison literature only (Mashhoon; Thorne–Price–Macdonald membrane paradigm: horizon surface resistivity 377 Ω = Z₀).
+- **Source:** standard magnetostatics and the steady induction equation (resistive MHD); GEM as comparison literature only (Mashhoon; Thorne–Price–Macdonald membrane paradigm: horizon surface dissipation coefficient the characteristic ratio = Z₀).
 - **Use (EDGE-3C):** the l = 1 harmonic DYN-3 found is read as a magnetic dipole's A_φ = m sinθ/r², not a viscous velocity. Same field, same curl (2 × the gyroscope field), no bulk dissipation, no torque on the source, O(J²) energy ∝ 1/r⁶. The river advects it by an induction equation with the SAME operator as the azimuthal Navier–Stokes equation (diffusivity ↔ kinematic viscosity), so NS-1a's tail and the GP-B bound carry over.
-- **Status:** RETAINED STANDARD. MAT-1 (viscous swirl) → MAT-2 (inductive swirl). Dissipation is confined to the electrode's resistivity; the tidal torque becomes an eddy-current problem (EDGE-4).
+- **Status:** RETAINED STANDARD. MAT-1 (viscous swirl) → MAT-2 (inductive swirl). Dissipation is confined to the sonic surface r = r_s's resistivity; the tidal torque becomes an eddy-current problem (EDGE-4).
 
 ## EXT-037 — Tidal torque and heating of a Kerr black hole (COMPARISON ONLY)
 - **Source:** Poisson 2004, PRD 70, 084044 (absorption of mass and angular momentum by a black hole: time-domain formalisms; dJ/dt ∝ −χ(1+3χ²)M⁶E² for a static tide); Le Tiec & Casals 2021; Chia 2021 (Kerr static Love numbers vanish; dissipative response ∝ spin).
-- **Use:** EDGE-3B contrasts the viscous medium (spin-down without tide, no tidal torque) with Kerr (no spin-down, tidal torque). EDGE-4's target: reproduce the coefficient with the electrode's resistivity, and compare the required resistivity with Damour's Z₀.
+- **Use:** EDGE-3B contrasts the viscous medium (spin-down without tide, no tidal torque) with Kerr (no spin-down, tidal torque). EDGE-4's target: reproduce the coefficient with the sonic surface r = r_s's resistivity, and compare the required resistivity with Damour's Z₀.
 - **Status:** COMPARISON. Not an input.
 
 ## EXT-037 (amended 09-07 late) — Poisson 2004 Eq. (9.39), fetched, not remembered
@@ -531,6 +531,6 @@ Append a dated receipt whenever online research informs this project. Before usi
 
 ## EXT-039 — Raychaudhuri equation for null geodesic congruences
 - **Source:** Raychaudhuri 1955; standard (Hawking & Ellis; Poisson, *A Relativist's Toolkit*). dθ/dv = κθ − θ²/2 − σ_abσ^ab − R_ab k^a k^b for an affinely-related non-affine parametrisation with inaffinity κ.
-- **Use (EDGE-6):** applied to the stalled sound rays at the electrode. The R_kk term is not assumed zero: the divider's output metric was shown Ricci-flat by explicit computation (a1). The teleological (future-fixed) solution θ = σ²/κ uses the same future boundary condition as DYN-2's regularity.
+- **Use (EDGE-6):** applied to the stalled sound rays at the sonic surface r = r_s. The R_kk term is not assumed zero: the potential ratio's output metric was shown Ricci-flat by explicit computation (a1). The teleological (future-fixed) solution θ = σ²/κ uses the same future boundary condition as DYN-2's regularity.
 - **Result:** with T = κ/2π (KMS) and S = A/4 (itself OUTPUT of the first law with r_s = 2M), T Ṡ = (1/8π)∫σ²dA ⇒ η_s = 1/(16π), ζ = −1/(16π), p = κ/8π — Damour 1978/82's three membrane coefficients as OUTPUT, with no Einstein equations and no Bekenstein input. Comparison: Damour; Thorne–Price–Macdonald 1986 (EXT-036).
 - **Status:** RETAINED STANDARD (the identity); the derivation is the model's, DERIVED-given-KMS.

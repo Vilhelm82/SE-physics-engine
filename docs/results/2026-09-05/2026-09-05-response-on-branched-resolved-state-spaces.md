@@ -461,7 +461,7 @@ For example, on state `(f,z)` take a two-sided passive mobility and finite input
 M=\operatorname{diag}(1,f^2),\qquad e=(1,1).
 \]
 
-Then `f(t)=t`, `z(t)=t^3/3` crosses the interface regularly while the `z` output vanishes there for every effort. If the universally vanishing output were instead the normal rate `dot f`, smooth unique dynamics would preserve the face. This distinction determines which constitutive channel an open-circuit interpretation constrains.
+Then `f(t)=t`, `z(t)=t^3/3` crosses the interface regularly while the `z` output vanishes there for every effort. If the universally vanishing output were instead the normal rate `dot f`, smooth unique dynamics would preserve the face. This distinction determines which constitutive channel an open-network interpretation constrains.
 
 ## 9. Native application and closure of the construction
 

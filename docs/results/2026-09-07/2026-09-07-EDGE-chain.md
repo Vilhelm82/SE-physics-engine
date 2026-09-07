@@ -1,6 +1,6 @@
-# 2026-09-07 — The EDGE chain: the electrode's response, and the fingerprint
+# 2026-09-07 — The EDGE chain: the sonic surface r = r_s's response, and the fingerprint
 
-Runners: `suites/prim_edge1_electrode_absorption.py` (7/7), `prim_edge2_tensor_love.py` (7/7),
+Runners: `suites/prim_edge1_horizon_absorption.py` (7/7), `prim_edge2_tensor_love.py` (7/7),
 `prim_edge3_rotating_dissipation.py` (12/12), `prim_edge4_tidal_friction.py` (8/8), `prim_edge5_spin_ratio.py` (7/7).
 All run on Will's workstation; logs committed beside each runner. Ledger: EXT-034 … EXT-038.
 
@@ -15,7 +15,7 @@ The medium's actual tidal response is EDGE-3A's: a tide enters through Bernoulli
 identically zero at every order, and the sonic surface deforms. k₂ = 0 becomes *trivially exact* rather than computed.
 
 **R-2 (EDGE-3B retires MAT-1's constitutive word).** DYN-3 derived the swirl *viscously* (Stokes + no-slip). A viscous
-medium torques the rotating electrode at −8πμa³Ω — it spins holes down with no tide, on t = M/(8πμr_s) — and, creeping
+medium torques the rotating sonic surface at −8πμa³Ω — it spins holes down with no tide, on t = M/(8πμr_s) — and, creeping
 flow being linear in its boundary data, admits **no tidal torque at all** (ε_ijk E_jk = 0 for symmetric E). Kerr is the
 opposite on both counts. The viscous reading fails the rotating dissipative sector.
 
@@ -24,7 +24,7 @@ DYN-3's field exactly, with m = Ωa³. ½∇×A is the gyroscope field (Faxén's
 the field energy ∝ 1/r⁶ so NS-1's κ = 0 survives; and the river advects it by a steady induction equation whose
 φ-component is *the same operator* as NS-1a's azimuthal momentum equation with diffusivity for kinematic viscosity —
 so the 1/r⁴ tail and the GP-B/LAGEOS bound survive. Nothing earned is lost. Dissipation moves out of the bulk and into
-the electrode's resistivity, which is where the membrane paradigm always had it.
+the sonic surface r = r_s's resistivity, which is where the membrane paradigm always had it.
 
 **R-4 (EDGE-5 explains EDGE-4's coefficient).** EDGE-4 needed a membrane viscosity of 1/(512π) = Damour's 1/(16π) ÷ 32.
 That was a spin conflation: the medium's tide is spin-0, Poisson's formula is for a spin-2 tide, and on the same horizon
@@ -33,16 +33,15 @@ inside EDGE-4's two declared O(1)s. **1/(512π) is not a model number; Page 1976
 
 ---
 
-## 2. The electrode's response, derived
+## 2. The sonic surface r = r_s's response, derived
 
-**EDGE-1 — absorption.** The medium's sound in the divider metric (NS-0), with the ingoing condition derived from the
-cone stalling at the sonic point (SHEET-1 d1). Circuit readings of that one boundary: **short** in the DC divider
-(Z_L → 0), **matched** in AC, **open** from inside. Results:
+**EDGE-1 — absorption.** The medium's sound in the potential ratio metric (NS-0), with the ingoing condition derived from the
+cone stalling at the sonic point (SHEET-1 d1). Three equivalent statements of that one boundary: **N → 0** there, **no reflected wave**, and **no outward-directed characteristic** from inside. Results:
 - σ_abs(ω → 0)/A_H = **0.9993** (extrapolated); |T₀|² = 4(ωr_s)². Das–Gibbons–Mathur / Page as *output*.
 - Flux |R|² + |T|² = 1 to 10⁻⁸ at every frequency.
 - The approach is linear in ω and from **above**: 1.48 → 1.20 → 1.09 → 1.04 as ωr_s halves from 0.1.
 - **The AC absorption area equals the DC capture area** πb_mb² = 4πr_s² (GUD-1). Long waves and slow particles read the
-  electrode as the same matched load of the same area.
+  sonic surface as the same reflectionless boundary of the same area.
 
 **EDGE-1c / EDGE-2 / EDGE-3A — the Love number.** k₂ = 0, three ways: the acoustic regular branch is a polynomial
 (P₂(2r−1), no r⁻³ tail); GR's tensor branch is a polynomial too (3(r²−2Mr)/M², Hinderer's formula → 0 at R → 2M),
@@ -50,7 +49,7 @@ verified to be the associated Legendre equation (2,2) rather than assumed; and a
 Newtonian tide is identically zero by Bernoulli. Same zero, same mechanism: a polynomial regular branch, a log-singular
 tail-carrying branch, regularity at the boundary killing the tail.
 
-**EDGE-4 — tidal friction.** The rotating electrode as a membrane: the tidal deformation of the sonic surface rotates
+**EDGE-4 — tidal friction.** The rotating sonic surface as a membrane: the tidal deformation of the sonic surface rotates
 under it, area preservation at first order forces a tangential flow, the flow shears, the shear dissipates, J̇ = −P/Ω.
 - Structure: J̇ ∝ −Ω E² r_s⁶, weighted by Σ_m m²|A_m|² = (8π/15)[E₁ − (3/2)E₂].
 - **That invariant combination is exactly Poisson 2004 Eq. (9.39)'s small-spin structure** — from the angular integral of
@@ -95,7 +94,7 @@ combination nothing in that literature produces.**
 
 ## 5. Open, named
 
-- ~~η_s from the medium itself.~~ **Closed by EDGE-6** (`prim_edge6_membrane_viscosity.py`, 10/10): the divider's output metric is
+- ~~η_s from the medium itself.~~ **Closed by EDGE-6** (`prim_edge6_membrane_viscosity.py`, 10/10): the potential ratio's output metric is
   Ricci-flat (computed), so the stalled sound rays obey the vacuum Raychaudhuri equation; with κ (DYN-2), T = κ/2π (KMS), the
   first law with r_s = 2M giving S = A/4 as OUTPUT, and the teleological steady state θ = σ²/κ, the dissipated power is
   (1/8π)∫σ²dA ⇒ **η_s = 1/(16π), ζ = −1/(16π), p = κ/8π** — Damour's three membrane coefficients, no Einstein equations, no
@@ -103,8 +102,8 @@ combination nothing in that literature produces.**
   R_s = Z_medium follows by matching (EDGE-1); its VALUE is THM-K's scalar half, still open.
 - **Spin-2 in the medium.** Does the AC sector's frame twist give the medium a spin-2 tidal channel? If yes, prediction 2
   moves; if no, it stands.
-- **Finite-Re meridional flow at O(J²)** (NS-1), and the **electrode's shape as a derived boundary condition** — an oblate
-  electrode is the only way the medium recovers Kerr's Q, and the model does not currently produce one.
+- **Finite-Re meridional flow at O(J²)** (NS-1), and the **sonic surface's shape as a derived boundary condition** — an oblate
+  sonic surface is the only way the medium recovers Kerr's Q, and the model does not currently produce one.
 - **AREA** (first-order area preservation) and the shape→flow map are DECLARED in EDGE-4; they are the residual O(1).
 
 ---

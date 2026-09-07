@@ -1,24 +1,24 @@
 === GUD-1a: the three circular orbits of the output metric, forward ===
   photon sphere r_ph = 3*r_s/2   ISCO r_isco = 3*r_s   marginally bound r_mb = 2*r_s
-  [PASS][   0.2s] a1 r_ph = 3r_s/2, r_isco = 3 r_s, r_mb = 2 r_s: all three OUT of the divider's metric, none put in
+  [PASS][   0.2s] a1 r_ph = 3r_s/2, r_isco = 3 r_s, r_mb = 2 r_s: all three OUT of the potential ratio's metric, none put in
 === GUD-1b: the same three orbits as tilts and as Gudermannian angles ===
   eta: photon sphere 2  ISCO 1/2  marginally bound 1
-  [PASS][   0.2s] b1 eta_ph * eta_isco = 1 and eta_mb = 1: the ISCO is the DUAL of the photon sphere under the load/source swap, and the marginally bound orbit is the self-dual point (K2 passes)
+  [PASS][   0.2s] b1 eta_ph * eta_isco = 1 and eta_mb = 1: the ISCO is the DUAL of the photon sphere under the involution sigma: eta -> 1/eta, and the marginally bound orbit is the self-dual point (K2 passes)
   theta: photon sphere atan(sqrt(2)) = 54.736 deg;  ISCO atan(sqrt(2)/2) = 35.264 deg;  marginally bound pi/4 = 45.00 deg
   [PASS][   0.2s] b2 theta_ISCO + theta_ph = pi/2 EXACTLY: the ISCO is the complement of the magic angle (K1 passes)
   [PASS][   0.2s] b3 the marginally bound orbit is theta = pi/4: the eighth-turn. W (T4) is a radius: r = 2 r_s
   [PASS][   0.2s] b4 cos^2(theta_ph) = 1/3 (body diagonal) and sin^2(theta_isco) = 1/3: the two orbits look at the balanced direction from the two rulers
 === GUD-1c: the swap IS the complement, as a map ===
-  [PASS][   0.2s] c1 eta -> 1/eta is theta -> pi/2 - theta: the load/source swap is the Gudermannian COMPLEMENT
+  [PASS][   0.2s] c1 eta -> 1/eta is theta -> pi/2 - theta: the involution sigma: eta -> 1/eta is the Gudermannian COMPLEMENT
   [PASS][   0.3s] c2 in rapidity: tanh(lambda') = sech(lambda), cosh(lambda') = coth(lambda). Not a boost (rapidities do not add); it is a rotation by a real right angle in the Gudermannian picture
   [PASS][   0.3s] c3 the complement exchanges N^2 = cos^2(theta) with v_esc^2 = sin^2(theta): lapse and river speed are the two legs of one right triangle
 === GUD-1d: consequences, stated ===
   the seat's Gudermannian angle theta is the angle of a right triangle with legs N (lapse) and v (river): N^2 + v^2 = 1.
   the three named orbits are three angles: 35.26 deg (ISCO), 45 deg (marginally bound = the eighth-turn), 54.74 deg (photon sphere = magic).
-  PREDICTION-SHAPED: any pinning the model produces later (rotating electrode at O(J^3), the AC sector) must keep the ISCO and the
-  photon sphere complementary under the load/source swap, or the duality is broken there -- that is a check with teeth for DYN-3+.
+  PREDICTION-SHAPED: any pinning the model produces later (rotating sonic surface at O(J^3), the AC sector) must keep the ISCO and the
+  photon sphere complementary under the involution sigma: eta -> 1/eta, or the duality is broken there -- that is a check with teeth for DYN-3+.
   GROUND: photon sphere ~10 % (EHT); ISCO weak (Kerr-assumed X-ray fits); marginally bound none. The identity is exact; the ground is not.
 
 === GUD-1: 8/8 checks passed in 0.3s ===
-TIER: DERIVED from the divider output. The three radii were not inputs. The complement identity is exact.
-      The reciprocity flagged as a possible trap this afternoon is a symmetry of the divider with an orbit on its fixed point.
+TIER: DERIVED from the potential ratio output. The three radii were not inputs. The complement identity is exact.
+      The reciprocity flagged as a possible trap this afternoon is a symmetry of the potential ratio with an orbit on its fixed point.

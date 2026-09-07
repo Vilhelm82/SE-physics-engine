@@ -1,4 +1,4 @@
-# prim_gud2_inversion_map.py  --  GUD-2: does the divider's swap map the orbit CONDITIONS, or only the roots?
+# prim_gud2_inversion_map.py  --  GUD-2: does the potential ratio's swap map the orbit CONDITIONS, or only the roots?
 #
 # GUD-1 proved eta_ph * eta_isco = 1, i.e. the horizon inversion sigma: r -> r_s + r_s^2/(r - r_s) sends the photon-sphere radius to the
 #   ISCO radius. Two points coinciding under a bijection proves nothing about the conditions. This runner applies sigma to the
@@ -22,7 +22,7 @@ sigma = rs + rs**2/(r - rs)
 
 print("=== GUD-2a: the inversion ===")
 check("a1", sp.simplify(sigma.subs(r, sigma) - r)==0, "sigma is an involution")
-check("a2", sp.simplify(eta.subs(r, sigma)*eta - 1)==0, "sigma is exactly eta -> 1/eta (the load/source swap)")
+check("a2", sp.simplify(eta.subs(r, sigma)*eta - 1)==0, "sigma is exactly eta -> 1/eta (the involution sigma: eta -> 1/eta)")
 check("a3", sp.solve(sp.Eq(sigma, r), r) == [2*rs], "fixed point r = 2 r_s")
 
 print("=== GUD-2b: Q1 -- the full flow ===")
@@ -84,5 +84,5 @@ print("RESULT: Q1 no (sigma is not a symmetry of the geodesic flow). Q2 YES: (L/
 print("        Q3 YES: the ISCO condition is the image of the photon-sphere condition under sigma, by the chain rule on that identity.")
 print("        The duality is a symmetry of the two circular-orbit FAMILIES (not of the spacetime), with the fixed point at the marginally")
 print("        bound orbit r = 2 r_s (theta = pi/4). In the seat's angle the two families are one function with sin <-> cos.")
-print("TIER: DERIVED (exact symbolic) from the divider's output metric. Lineage: Couch-Torrence inversion is a symmetry of extremal RN's")
+print("TIER: DERIVED (exact symbolic) from the potential ratio's output metric. Lineage: Couch-Torrence inversion is a symmetry of extremal RN's")
 print("      METRIC; this is weaker and different -- an orbit-family symmetry of Schwarzschild. Not known to Claire from the literature; verify.")

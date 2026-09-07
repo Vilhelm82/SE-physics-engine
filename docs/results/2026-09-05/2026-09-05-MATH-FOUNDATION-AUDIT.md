@@ -63,7 +63,7 @@ invented: Will's impedance is a Hermitian structure on the seat's state space, a
 | 14 | Cl(3) paravector boosts; PG river; Gauss–Codazzi on a flat slice; geodesics | `thm_h*`, `thm_i*`, `thm_l`, `thm_m`, `thm_n`, `thm_o`, `curv1_*`, `sect1` | the gravitational sector | Lorentz boosts of a 4-vector; ADM constraints in Painlevé–Gullstrand gauge; Schwarzschild/Lense–Thirring |
 | 15 | thermodynamic declarations | `thm_k_clausius` | the pinning from temperature | Jacobson/Verlinde equipartition with the Bekenstein–Hawking entropy declared |
 | 16 | independent-oscillator elimination, FDT | `debt2`, `debt2b` | the seat's dissipator | Ford–Kac–Mazur / Caldeira–Leggett |
-| 17 | impedance / circuit reading | PRIMITIVES "IMPEDANCE", `hunch_z0` | the shape of the dynamics tier | linear response with a complex (dissipative + reactive) coefficient |
+| 17 | impedance / network reading | PRIMITIVES "IMPEDANCE", `hunch_z0` | the shape of the dynamics tier | linear response with a complex (dissipative + reactive) coefficient |
 
 Rows 1–7 are the primitives layer (post-09-04). Rows 8–13 are the paper's bare and readout tiers (08-28 to 09-04), all built on
 the Euclidean state space. Rows 14–16 are the gravitational and thermal sectors, all built on Cl(3). Row 17 is a hunch.

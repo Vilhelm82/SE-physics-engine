@@ -1,10 +1,10 @@
-# The five-loop gate in distance-dependent circuit QEC
+# The five-loop gate in distance-dependent network QEC
 
 6 September 2026
 
-**The five-loop gate supports decreasing logical failure rates as the surface-code distance increases in this declared circuit model.** At the main operating point, logical X-memory failure falls from **0.107% at distance 3** to **0.023% at distance 5**, **0.003% at distance 7** and **0.001% at distance 9**. The last value represents two failures in 200,000 trials and has correspondingly wide uncertainty. The qLDPC code also completes syndrome extraction and recovery on all twelve logical observables.
+**The five-loop gate supports decreasing logical failure rates as the surface-code distance increases in this declared network model.** At the main operating point, logical X-memory failure falls from **0.107% at distance 3** to **0.023% at distance 5**, **0.003% at distance 7** and **0.001% at distance 9**. The last value represents two failures in 200,000 trials and has correspondingly wide uncertainty. The qLDPC code also completes syndrome extraction and recovery on all twelve logical observables.
 
-The experiment inserts the finite-dump gate on every data qubit before each noisy syndrome-extraction round, measures the actual syndrome circuit, decodes the complete record, and checks the final logical observables. Every trial is decoded, including trials with heralded erasures.
+The experiment inserts the finite-dump gate on every data qubit before each noisy syndrome-extraction round, measures the actual syndrome network, decodes the complete record, and checks the final logical observables. Every trial is decoded, including trials with heralded erasures.
 
 The two working code families are rotated surface codes at distances **3, 5, 7 and 9**, and a **`[[72,12,6]]` bivariate bicycle qLDPC code**. Separate X- and Z-memory experiments test the two error sectors. Each block contains `d` noisy rounds. The qLDPC failure event is an error in **any of its twelve measured logical observables**; the surface-code event concerns its single logical observable.
 
@@ -32,7 +32,7 @@ For the qLDPC code, **10,000 trials per basis**, each containing six noisy round
 | X, twelve logical observables | 0.10% — 10 failures | 0.12% — 12 failures |
 | Z, twelve logical observables | 0.08% — 8 failures | 0.11% — 11 failures |
 
-The corresponding ideal-native baselines have 7 and 4 failures. These qLDPC counts establish a working circuit/decoder example; they do not yet resolve the small difference between the two decoder configurations. The receipt retains per-logical counts and confidence intervals. Comparing its any-of-twelve failure probability directly with a single surface-code logical would use different success criteria.
+The corresponding ideal-native baselines have 7 and 4 failures. These qLDPC counts establish a working network/decoder example; they do not yet resolve the small difference between the two decoder configurations. The receipt retains per-logical counts and confidence intervals. Comparing its any-of-twelve failure probability directly with a single surface-code logical would use different success criteria.
 
 ### Increased background loss
 
@@ -42,7 +42,7 @@ The qLDPC counts become **32/10,000 for X memory and 20/10,000 for Z memory**, v
 
 ![Rotated surface-code logical failure rates, with binomial intervals and erasure flags used or hidden](/home/williaml/seated-root/docs/figures/qec-distance-stack.png)
 
-In the figure, `five` is the main `γ/a=10⁻⁶` point, `background` is `γ/a=10⁻³`, and `baseline` is the ideal native gate in the noisy stack. Solid and dashed curves compare flags used and hidden. The final [receipt](/home/williaml/seated-root/docs/receipts/qec-distance-stack-checks.json) contains **30 cases and 4,860,000 Monte Carlo trials**. The [30 sampled circuit definitions](/home/williaml/seated-root/docs/receipts/qec-distance-circuits) are saved separately by scenario and memory basis.
+In the figure, `five` is the main `γ/a=10⁻⁶` point, `background` is `γ/a=10⁻³`, and `baseline` is the ideal native gate in the noisy stack. Solid and dashed curves compare flags used and hidden. The final [receipt](/home/williaml/seated-root/docs/receipts/qec-distance-stack-checks.json) contains **30 cases and 4,860,000 Monte Carlo trials**. The [30 sampled network definitions](/home/williaml/seated-root/docs/receipts/qec-distance-circuits) are saved separately by scenario and memory basis.
 
 ## The physical interface being tested
 
@@ -99,7 +99,7 @@ The total conditional nonidentity Pauli probability is `4.45092208 × 10⁻⁶`.
 
 ## Syndrome circuits and decoders
 
-The non-native circuit noise is fixed at **`p_stack=10⁻³`**. Preparation and measurement suffer the specified flip probability; Clifford operations and idle locations use their listed depolarizing channels. The native gate has its own matrix-derived channel above. The baseline uses an ideal native-gate location with the same noisy extraction stack, so it measures the stack's existing contribution.
+The non-native network noise is fixed at **`p_stack=10⁻³`**. Preparation and measurement suffer the specified flip probability; Clifford operations and idle locations use their listed depolarizing channels. The native gate has its own matrix-derived channel above. The baseline uses an ideal native-gate location with the same noisy extraction stack, so it measures the stack's existing contribution.
 
 **Surface codes:** Stim's rotated-memory circuits contain ancilla preparation, Hadamards, four layers of syndrome CNOTs, measurement and reset. Native gate layers are inserted at round starts with all measurement-record references preserved. Data noise before each round is also included. The logical X and Z sectors are decoded separately using PyMatching's minimum-weight matching. [Maintainer documentation](https://github.com/oscarhiggott/PyMatching).
 
@@ -110,17 +110,17 @@ A=x^3+y+y^2,\quad B=y^3+x+x^2,\quad x^6=y^6=I,
 \qquad H_X=[A\ B],\quad H_Z=[B^T\ A^T].
 \]
 
-The runner independently computes ranks and logical quotient bases. An exhaustive pair/triple meet-in-the-middle calculation excludes every nontrivial logical of weight at most five and exhibits weight-six logicals in both sectors. The circuit uses the source's seven CNOT-layer ordering. Both ancilla families are reset at cycle start and read at its end; added waits receive idle noise. The initial syndrome cycle and final data readout are ideal boundary conditions. [Code construction and source schedule](https://arxiv.org/pdf/2308.07915), [authors' parameters](https://github.com/sbravyi/BivariateBicycleCodes/blob/main/decoder_setup.py).
+The runner independently computes ranks and logical quotient bases. An exhaustive pair/triple meet-in-the-middle calculation excludes every nontrivial logical of weight at most five and exhibits weight-six logicals in both sectors. The network uses the source's seven CNOT-layer ordering. Both ancilla families are reset at cycle start and read at its end; added waits receive idle noise. The initial syndrome cycle and final data readout are ideal boundary conditions. [Code construction and source schedule](https://arxiv.org/pdf/2308.07915), [authors' parameters](https://github.com/sbravyi/BivariateBicycleCodes/blob/main/decoder_setup.py).
 
-The qLDPC decoder is BP+OSD: minimum-sum belief propagation, 30 iterations, scaling factor `0.625`, and combination-sweep order 2. It decodes the circuit's fault-signature matrix, including propagated CNOT errors. Its returned correction is checked against the syndrome equation. [Decoder documentation](https://software.roffe.eu/ldpc/quantum_decoder.html).
+The qLDPC decoder is BP+OSD: minimum-sum belief propagation, 30 iterations, scaling factor `0.625`, and combination-sweep order 2. It decodes the network's fault-signature matrix, including propagated CNOT errors. Its returned correction is checked against the syndrome equation. [Decoder documentation](https://software.roffe.eu/ldpc/quantum_decoder.html).
 
-For both families, heralds set the corresponding error-column probabilities to `1/2` for that shot. Hidden-flag decoding uses the unconditional channel priors on **the same sampled trials**. Other priors use the stated independent-mechanism and separate-sector decoder approximations; the sampled circuit retains its Pauli correlations. The `HERALDED_ERASE` circuit channel itself is sampled directly, preserving its flag/error correlation. Its approximate detector-model expansion is not used to generate shots. [Stim's channel specification](https://github.com/quantumlib/Stim/blob/main/doc/gates.md#the-heralded_erase-instruction).
+For both families, heralds set the corresponding error-column probabilities to `1/2` for that shot. Hidden-flag decoding uses the unconditional channel priors on **the same sampled trials**. Other priors use the stated independent-mechanism and separate-sector decoder approximations; the sampled network retains its Pauli correlations. The `HERALDED_ERASE` network channel itself is sampled directly, preserving its flag/error correlation. Its approximate detector-model expansion is not used to generate shots. [Stim's channel specification](https://github.com/quantumlib/Stim/blob/main/doc/gates.md#the-heralded_erase-instruction).
 
 ## Verification and replay
 
-The [runner](/home/williaml/seated-root/qec_distance_stack.py) checks the native channel conversion at `n=1,2,3`, noiseless encoded evolution and complete-erasure randomization. It corrects every individual circuit-fault signature in both test families: **55 per surface-code sector at distance 3 and 2,232 per qLDPC sector**. Erasure-aware recovery is checked separately: **1,392 patterns per surface sector** cover all pairs of native erasure locations, and **4,096 patterns per qLDPC sector** cover all error assignments on 128 sampled sets of five erased data qubits. The qLDPC distance proof checks all **59,640 triples per sector**, not a random subset.
+The [runner](/home/williaml/seated-root/qec_distance_stack.py) checks the native channel conversion at `n=1,2,3`, noiseless encoded evolution and complete-erasure randomization. It corrects every individual network-fault signature in both test families: **55 per surface-code sector at distance 3 and 2,232 per qLDPC sector**. Erasure-aware recovery is checked separately: **1,392 patterns per surface sector** cover all pairs of native erasure locations, and **4,096 patterns per qLDPC sector** cover all error assignments on 128 sampled sets of five erased data qubits. The qLDPC distance proof checks all **59,640 triples per sector**, not a random subset.
 
-An [independent forced-event test](/home/williaml/seated-root/test_qec_distance_stack.py) then activates one actual heralded erasure at a time. All **918 locations and 14,688 circuit shots** pass: the recorded flag identifies the intended location, and its observed syndrome/logical effect belongs to that location's decoder columns. This checks the flag-to-decoder connection independently of decoding the model's own columns.
+An [independent forced-event test](/home/williaml/seated-root/test_qec_distance_stack.py) then activates one actual heralded erasure at a time. All **918 locations and 14,688 network shots** pass: the recorded flag identifies the intended location, and its observed syndrome/logical effect belongs to that location's decoder columns. This checks the flag-to-decoder connection independently of decoding the model's own columns.
 
 The same test file verifies exact Clifford-tableau equality between the qLDPC seven-layer extraction unitary and sequential measurement of its stated check operators. This establishes the extraction action on all input states, beyond the two prepared memory states.
 

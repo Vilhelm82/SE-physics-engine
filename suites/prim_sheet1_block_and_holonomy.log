@@ -15,7 +15,7 @@
      (This is Gamma_C -> -Gamma_C being time reversal, T8a; the point of a5 is that there is no OTHER sheet swap that keeps the clock.)
 === SHEET-1c: the fluid path from the river, and its holonomy ===
   tau(r0 -> r) = 2*(-r**(3/2) + r_0**(3/2))/(3*c*sqrt(r_s)) ;  from r_s to 0: 2*r_s/(3*c)
-  [PASS][   0.2s] c1 the fluid reaches the centre a proper time (2/3) r_s/c after crossing the electrode: finite (derived from the river)
+  [PASS][   0.2s] c1 the fluid reaches the centre a proper time (2/3) r_s/c after crossing the sonic surface r = r_s: finite (derived from the river)
   velocity-gradient eigenvalues: radial c*sqrt(r_s)/(2*r**(3/2))   transverse -c*sqrt(r_s)/r**(3/2)
   material ruler lengths ~ radial 1/sqrt(r)   transverse r
   [PASS][   0.2s] c2 radial ruler ~ r^(-1/2) (stretches), transverse ~ r (compresses): tidal strain from the river, not imported
@@ -23,13 +23,13 @@
   [PASS][   0.2s] c3 cosh l = (r0/r)^(3/2): one real depth, growing; the transverse pair is the unit and carries no depth (l2 = 0)
   D along the fluid path = r_0**(3/2)/r**(3/2)
   [PASS][   0.2s] c4 D > 0 for every r > 0 and D -> oo at r -> 0: the fluid NEVER reaches the branch locus (K2 passes); its end is a strain divergence, not a rank loss
-  [PASS][   0.2s] c5 => chi[Gamma_fluid] = sgn D = the exterior's sign at every point of the fall, through the electrode, to the centre: the sheet is INHERITED by continuity
+  [PASS][   0.2s] c5 => chi[Gamma_fluid] = sgn D = the exterior's sign at every point of the fall, through the sonic surface r = r_s, to the centre: the sheet is INHERITED by continuity
   the rank-loss centre (D = 0, f4) belongs to the STATIC presentation from outside -- the seat artefact. The fluid meets D -> oo instead.
 === SHEET-1d: the two blocks are the two trapped conditions in the river ===
   outgoing light dr/dt = c - c*sqrt(r_s)/sqrt(r)  ; ingoing = -c - c*sqrt(r_s)/sqrt(r)
   [PASS][   0.2s] d1 theta_+ = 0 (outgoing light stalls) exactly where the river runs at c: r = r_s, i.e. 2Gm/(c^2 R) = 1 -- LABEL-3b's owed identity
   [PASS][   0.3s] d2 on the I = -1 block outgoing light never stalls and INGOING light stalls at r_s: theta_- = 0. The black sheet is theta_+ = 0, the white sheet is theta_- = 0: two blocks, two trapped conditions
-  [PASS][   0.3s] d3 chi[Gamma_fluid] = chi_BH: the fluid rides the river inward on its own block, and there theta_+ = 0 at the electrode. LABEL-3b's test passes
+  [PASS][   0.3s] d3 chi[Gamma_fluid] = chi_BH: the fluid rides the river inward on its own block, and there theta_+ = 0 at the sonic surface r = r_s. LABEL-3b's test passes
 
 === SHEET-1: 17/17 checks passed in 0.3s ===
 RESULT for CONJECTURE-COSMOLOGY:

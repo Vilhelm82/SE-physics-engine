@@ -34,7 +34,7 @@ Three things, all proved, none of which were proved with this in mind:
 The standing objection to any black-hole cosmology is that a Schwarzschild interior *contracts*. Every
 version since Pathria (1972) needs something bolted on — torsion, a bounce — to turn the fall into an
 expansion. The model does not need the bolt-on: the *other sheet* is the plain time-reverse, and its
-interior leaves. The Big Bang is the past singularity; the open circuit before the load closed; the
+interior leaves. The Big Bang is the past singularity; the open network before the load closed; the
 expansion is the discharge. Dark energy is the far pole of $G$ doing what its name says, on the sheet
 where escape is the default.
 
@@ -49,7 +49,7 @@ formed in the parent. Every black hole has one.
 
 You cannot leave by travelling. Real boosts compose additively and $\tanh\lambda \to 1$ is an asymptote
 [T1]; the twist to the horizon is logarithmic and $\lambda \to \infty$ [T4c]. The horizon is at **infinite
-rapidity** — finite proper distance, unreachable boost. Your open circuit: infinite source impedance, no
+rapidity** — finite proper distance, unreachable boost. Your open network: infinite source impedance, no
 current, no arrival.
 
 The only operation that crosses a cone is a rotation by an imaginary angle [T1]. So:
@@ -84,7 +84,7 @@ those are the frame's invariants and not any page's; the rest is hair because so
 | $\Omega = 1$ to sub-percent | critical density in a Hubble radius **is** $2Gm/c^2R = 1$, the trapped-surface condition. Flatness is not fine-tuning; it is where we are. | **strongest.** Not an anomaly — the best-measured number in cosmology, and the arithmetic is exact. |
 | No-hair tested in LIGO ringdowns | only the invariants survive, measured | supporting; precision not yet decisive |
 | CMB uniformity across causally disconnected patches | Hawking radiation is thermal *by construction*; no contact needed | conceptual, not quantitative |
-| Low initial entropy | the open circuit before the load closed; the arrow is the discharge | conceptual |
+| Low initial entropy | the open network before the load closed; the arrow is the discharge | conceptual |
 | Structure seeds "freezing" at horizon crossing | that is the $H$ flip — Wave → Particle — happening once, at the boundary | conceptual |
 | Information paradox | what falls in is on the other sheet; the full trace is sheet-blind [T5c]. Way out: the radiation carries the sign in its one-sided reading [PREDICTION-1] | a theorem shaped like the puzzle |
 | Baryon asymmetry | two inequivalent chiralities exchanged by time reversal; Sakharov's out-of-equilibrium condition is the Escaping pole | weak as evidence, good as a place to earn a number |

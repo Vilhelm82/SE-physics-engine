@@ -216,7 +216,7 @@ The probe includes `X_1 -> X_1 X_2` under CNOT: a previously commuting local pro
 
 ### Connection to the orientation-reversing gates
 
-A June 2026 preprint already finds different spreading behaviour for certain random-circuit ensembles drawn from the two components of the orthogonal group. That abstract distinction is therefore prior work. The native opportunity is a physical gate family obtained from (5)–(6), with its actual pulse cost, correlations and noise, and a prediction for the resulting structured circuit. Its gate distribution must be checked against the preprint's invariance hypotheses before using its velocity result. [Tan–Brouwer, 2026](https://arxiv.org/abs/2606.03956).
+A June 2026 preprint already finds different spreading behaviour for certain random-network ensembles drawn from the two components of the orthogonal group. That abstract distinction is therefore prior work. The native opportunity is a physical gate family obtained from (5)–(6), with its actual pulse cost, correlations and noise, and a prediction for the resulting structured network. Its gate distribution must be checked against the preprint's invariance hypotheses before using its velocity result. [Tan–Brouwer, 2026](https://arxiv.org/abs/2606.03956).
 
 ## 5. Priority and success criteria
 

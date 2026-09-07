@@ -5,7 +5,7 @@
 #   sits ON the fold: the particle reading (the subring ladder) and the wave reading (the ringdown), and the greybody edge.
 #
 # INPUTS:
-#   DYN-1  A(r) = 1 - r_s/r, B = 1/A, as OUTPUT of the divider (recomputed here).                                   [DERIVED 09-07]
+#   DYN-1  A(r) = 1 - r_s/r, B = 1/A, as OUTPUT of the potential ratio (recomputed here).                                   [DERIVED 09-07]
 #   RAYS   light = null rays of the output metric (geometric optics), and light = the scalar wave equation of the
 #          output metric (wave optics) -- the two readings of the H flip (T4b': vector = Sym^2 of the spinor reading). [T4b' + the two readings]
 #   PB     transmission through a parabolic barrier: T = 1/(1 + exp(2 pi (V0 - w^2)/sqrt(-2 V0''))).  Exact for an inverted
@@ -24,7 +24,7 @@ def check(tag, ok, msg):
     CH.append(bool(ok)); print(f"  [{'PASS' if ok else 'FAIL'}][{time.time()-t0:6.1f}s] {tag} {msg}")
 
 r, rs, b, w, dr = sp.symbols('r r_s b omega delta', positive=True)
-print("=== FOLD-1a: the fold from the divider ===")
+print("=== FOLD-1a: the fold from the potential ratio ===")
 RL = sp.integrate(1/r**2, (r, rs, r)); RS = sp.integrate(1/r**2, (r, r, sp.oo))
 A = sp.simplify(RL/(RL+RS))                                  # 1 - r_s/r (units c = 1)
 U = A/r**2                                                   # the ray potential: (dr/dlambda)^2 = E^2 - L^2 U
@@ -95,13 +95,13 @@ expo_lin = sp.simplify(sp.series(expo.subs(w, w_c + dr), dr, 0, 2).removeO())
 width = sp.simplify(-2*sp.pi/ sp.diff(expo_lin, dr))        # T = 1/(1 + exp(-2 pi (w - w_c)/width))
 print("  transmission T(omega) = 1/(1 + exp(-2 pi (omega - omega_c)/width)) with width =", width)
 check("e2", sp.simplify(width - lam_P1)==0, "the edge width IS the ray exponent lambda_L: the wave's barrier and the ray's fold are one object (K2 passes; the H-flip identification holds)")
-kappa = 1/(2*rs)                                            # DYN-2's electrode slope
-print("  two 'temperatures' on the far column: the electrode's kappa/2pi =", sp.simplify(kappa/(2*sp.pi)), " and the fold's lambda_L/2pi =", sp.simplify(lam_P1/(2*sp.pi)), "; ratio lambda_L/kappa =", sp.simplify(lam_P1/kappa), "=", sp.N(lam_P1/kappa, 5))
-check("e3", sp.simplify(lam_P1/kappa - 4/(3*sp.sqrt(3)))==0, "lambda_L/kappa = 4/(3 sqrt3): the fold's edge is 0.77 of the electrode's slope -- the greybody's edge is NOT the Hawking temperature, and the model keeps them apart")
-print("  => in the eikonal limit the CHG face's spectrum is Planck(kappa) x Fermi-edge(lambda_L): the electrode supplies the thermal factor")
-print("     (DYN-2, given KMS), the fold supplies the filter (this runner, given PB). Face H is derived AT THE FOLD. The electrode part of the")
+kappa = 1/(2*rs)                                            # DYN-2's sonic surface slope
+print("  two 'temperatures' on the far column: the sonic surface r = r_s's kappa/2pi =", sp.simplify(kappa/(2*sp.pi)), " and the fold's lambda_L/2pi =", sp.simplify(lam_P1/(2*sp.pi)), "; ratio lambda_L/kappa =", sp.simplify(lam_P1/kappa), "=", sp.N(lam_P1/kappa, 5))
+check("e3", sp.simplify(lam_P1/kappa - 4/(3*sp.sqrt(3)))==0, "lambda_L/kappa = 4/(3 sqrt3): the fold's edge is 0.77 of the sonic surface r = r_s's slope -- the greybody's edge is NOT the Hawking temperature, and the model keeps them apart")
+print("  => in the eikonal limit the CHG face's spectrum is Planck(kappa) x Fermi-edge(lambda_L): the sonic surface r = r_s supplies the thermal factor")
+print("     (DYN-2, given KMS), the fold supplies the filter (this runner, given PB). Face H is derived AT THE FOLD. The sonic surface r = r_s part of the")
 print("     tunnelling (l = 0, below the barrier) is the remaining owed piece of the H edge.")
 
 nn=sum(CH); print(f"\n=== FOLD-1: {nn}/{len(CH)} checks passed in {time.time()-t0:.1f}s ===")
-print("TIER: a1, b1-b3, c1, e1-e3 DERIVED from the divider output (+ PB, exact math). d1 is a ballpark against tens-of-percent ground.")
+print("TIER: a1, b1-b3, c1, e1-e3 DERIVED from the potential ratio output (+ PB, exact math). d1 is a ballpark against tens-of-percent ground.")
 print("PREDICTIONS cast: subring ladder e^-pi per half-orbit (EHT n=1); lambda_L = Omega_c; greybody edge width = lambda_L, not kappa.")

@@ -41,9 +41,9 @@ light-ring fold. Seven runners, 93/93 checks, sandbox only.
 
 | runner | checks | result | tier |
 |---|---|---|---|
-| prim_dyn1_ohmic_divider.py | 16/16 | A(r) = 1 − r_s/r as OUTPUT of Ohm + T8c(d=3) + THM-I(B=1/A); β = γ = 1 read off; Mercury 42.9807″ (two paths, 2e-7); deflection 1.7512″; d=2 control fails; U³ coeff −3/2 | DERIVED given Ohm + two T7f declarations |
-| prim_eq1_tolman_from_divider.py | 12/12 | T·N = T_∞ by mode balance and Nyquist balance; no static equilibrium inside (theorem); horizon T→∞; dual sheet swaps the hot end (flagged) | DERIVED given DYN-1 + SI + definition of equilibrium |
-| prim_dyn2_electrode_period.py | 12/12 | κ = 1/(2r_s), Rindler form N = κρ − ρ³/(16r_s³), polar Euclidean loop, β = 4πr_s/c derived; T_H recovered GIVEN KMS; LOCK-3 = LOCK-2; dual sheet cold (flagged) | DERIVED-given-KMS |
+| prim_dyn1_lapse_from_potential.py | 16/16 | A(r) = 1 − r_s/r as OUTPUT of Ohm + T8c(d=3) + THM-I(B=1/A); β = γ = 1 read off; Mercury 42.9807″ (two paths, 2e-7); deflection 1.7512″; d=2 control fails; U³ coeff −3/2 | DERIVED given Ohm + two T7f declarations |
+| prim_eq1_tolman_from_lapse.py | 12/12 | T·N = T_∞ by mode balance and Nyquist balance; no static equilibrium inside (theorem); horizon T→∞; dual sheet swaps the hot end (flagged) | DERIVED given DYN-1 + SI + definition of equilibrium |
+| prim_dyn2_horizon_period.py | 12/12 | κ = 1/(2r_s), Rindler form N = κρ − ρ³/(16r_s³), polar Euclidean loop, β = 4πr_s/c derived; T_H recovered GIVEN KMS; LOCK-3 = LOCK-2; dual sheet cold (flagged) | DERIVED-given-KMS |
 | prim_dyn3_stokes_swirl.py | 10/10 | swirl Ωa³sinθ/r² from Laplace + no-slip; dipole gyro pattern via Faxén; node/gyro = 4 structural; K pinned to LAGEOS predicts GP-B 39.1 vs 37.2±7.2; ωr³ = const at all orders (Kerr has O(J³)); **wording corrected late: swirl parity is odd in J; the O(J²) mass quadrupole (THM-N) is separate and open** | DERIVED given G1+NS+FAX+RIDE; strength pinned to ground |
 | prim_sheet1_block_and_holonomy.py | 17/17 | sheet swap Γ_C→−Γ_C unique (reflection alternative breaks anticommutation); I=−1 reverses the interior clock → **kill 2 does not fire**; fluid path from the river has D = (r₀/r)^{3/2}, never 0, → ∞ at the centre: sheet inherited, white sheet is a READING not a destination; θ₊=0 at river=c, θ₋=0 on I=−1 | DERIVED; fluid→state map given RIDE-2 + P11 ratio convention |
 | prim_fold1_lightring_dressing.py | 10/10 | λ_L = Ω_c (two paths, 2.6e-6); subring ladder e^{−π} per half-orbit (PREDICTION); eikonal QNM = the H flip; greybody edge = parabolic-barrier Fermi function, width λ_L ≠ κ, λ_L/κ = 4/(3√3); M87* shadow 39.7 μas vs 42±3 | DERIVED from the divider output + one exact formula; ringdown ballpark only |
@@ -128,7 +128,7 @@ one constitutive reading**. The retractions are the most important part of this 
 | runner | checks | commit | result |
 |---|---|---|---|
 | `prim_ns1_swirl_inertia.py` | 10/10 | `300eb99` | finite-Re swirl = K′/r³ + εK/(4r⁴); GP-B/LAGEOS bound ε < ~1.3×10⁴ km ⇒ the measured 1/r³ drag forces the creeping regime; in it the O(J²) exterior has **no P₂/r³ term: κ = 0** (Kerr 1); electrode spherical, ergosurface oblate; δκ_s = −1 inside GWTC-4.0's hierarchical 90 % interval |
-| `prim_edge1_electrode_absorption.py` | 7/7 | `fcf183b` | σ_abs(ω→0)/A_H = 0.9993 (DGM/Page as OUTPUT); \|T₀\|² = 4(ωr_s)²; equals the DC capture area πb_mb² (GUD-1); static l=2 regular branch polynomial ⇒ scalar k₂ = 0. **Face H closed at both ends** |
+| `prim_edge1_horizon_absorption.py` | 7/7 | `fcf183b` | σ_abs(ω→0)/A_H = 0.9993 (DGM/Page as OUTPUT); \|T₀\|² = 4(ωr_s)²; equals the DC capture area πb_mb² (GUD-1); static l=2 regular branch polynomial ⇒ scalar k₂ = 0. **Face H closed at both ends** |
 | `prim_edge2_tensor_love.py` | 7/7 | `f8e054a` | GR's tensor Love number computed as labelled COMPARISON: static even-parity l=2 verified to be associated Legendre (2,2), regular branch polynomial, Hinderer → 0. Same zero, same mechanism |
 | `prim_edge3_rotating_dissipation.py` | 12/12 | `796ed88` | **R-1** retraction of EDGE-2 C1; **R-2** the viscous swirl fails the dissipative sector; **R-3** MAT-1 → MAT-2 (swirl as vector potential), every earned result preserved |
 | `prim_edge4_tidal_friction.py` | 8/8 | `eac22cc` | membrane tidal friction: Σ_m m²\|A_m\|² = (8π/15)[E₁ − (3/2)E₂] = **exactly Poisson 2004 Eq. 9.39's small-spin structure**; both zeros; first law closes; coefficient off by 32 |
@@ -173,3 +173,18 @@ EXT-037 + amendment (Poisson Eq. 9.39, **fetched not remembered**), EXT-038 (Reg
 Ricci-flat divider metric (computed) → vacuum Raychaudhuri on the stalled sound rays; κ (DYN-2); T = κ/2π (KMS); first law with r_s = 2M
 → S = A/4 as output; teleological θ = σ²/κ. No Einstein equations, no Bekenstein. The η_s pin is gone; prediction 2 (tidal friction
 ~1/32–1/36 of Kerr's) is unconditional. ζ < 0 is Will's "active element" with its coefficient. Next item 1 in the order becomes item 2.
+
+### Addendum, 09-07 late — vocabulary pass (Will's analogy-containment ruling)
+
+All circuit vocabulary removed from runners, results pages, the ledger and LABELLED-MODEL.md; exact physics labels substituted
+(192 substitutions across 16 runners, plus the docs). Four runners renamed: prim_dyn1_lapse_from_potential,
+prim_dyn2_horizon_period, prim_edge1_horizon_absorption, prim_eq1_tolman_from_lapse. **Every runner re-run: all 16 check counts
+identical, 0 FAIL — 16/16, 12/12, 12/12, 10/10, 17/17, 10/10, 8/8, 11/11, 6/6, 10/10, 7/7, 7/7, 12/12, 8/8, 7/7, 10/10.** No
+mathematics depended on the naming.
+
+Note, as a framing tool and explicitly conjectural (permitted in handoffs only, per AGENTS.md): the electrical reading — the
+lapse as a potential ratio, r_s as a reflectionless boundary, the seat as the point where the reading is taken, the negative
+bulk viscosity as an active element — was the heuristic that FOUND every result in the DYN/EDGE chain before the mathematics
+did. It has an excellent track record as a nose and no axiomatic weight. Its real content, stated without the analogy:
+**the exact lapse is linear in the Newtonian potential to all orders**, N² = 1 − φ(r)/φ(r_s), normalised where escape velocity
+= c. That is the claim β = 1 and Mercury's 42.9807″ tested.

@@ -262,7 +262,7 @@ The alternative \(\Pi=0\) includes the term \(\dot m\,\dot\alpha\) in the angle 
 \ell h^{-1}\ell^T>0.
 \]
 
-Thus finite positive cost at the horizon is compatible with Theorem 1: the load response must supply its required divisor factors through the response or observable map. For any chosen smooth positive cost, \(Qh^{-1}Q\) is one admissible reciprocal response family, with the remaining rate scale and material selection explicit. This construction does not select among KIN-1's costs. The divisor theorem determines the boundary orders independently of that choice. Comparing the specific KIN-1 fixtures is a separate open-circuit test.
+Thus finite positive cost at the horizon is compatible with Theorem 1: the load response must supply its required divisor factors through the response or observable map. For any chosen smooth positive cost, \(Qh^{-1}Q\) is one admissible reciprocal response family, with the remaining rate scale and material selection explicit. This construction does not select among KIN-1's costs. The divisor theorem determines the boundary orders independently of that choice. Comparing the specific KIN-1 fixtures is a separate open-network test.
 
 ## 5. Smooth response across a weighted resolution
 

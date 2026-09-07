@@ -5,28 +5,28 @@
   omega r_s =  0.050:  |T_2|^2 = 9.254229e-12   |R|^2+|T|^2 = 1.000000000   |T_2|^2/(omega r_s)^6 = 5.922707e-04
   omega r_s =  0.025:  |T_2|^2 = 1.312173e-13   |R|^2+|T|^2 = 1.000000000   |T_2|^2/(omega r_s)^6 = 5.374661e-04
   extrapolated coefficient (omega -> 0): 4.958825e-04
-  [PASS][   7.8s] a1 flux conserved at every frequency (K1 passes)
-  [PASS][   7.8s] a2 low-frequency coefficient = Page's 1/2025 to better than 3 % (as OUTPUT of the medium's equation)
+  [PASS][   7.9s] a1 flux conserved at every frequency (K1 passes)
+  [PASS][   7.9s] a2 low-frequency coefficient = Page's 1/2025 to better than 3 % (as OUTPUT of the medium's equation)
 === EDGE-5b: l = 2, spin 2 (Regge-Wheeler, GR comparison) ===
   omega r_s =  0.200:  |T_2|^2 = 3.055067e-06   |R|^2+|T|^2 = 1.000000000   |T_2|^2/(omega r_s)^6 = 4.773542e-02
   omega r_s =  0.100:  |T_2|^2 = 2.686419e-08   |R|^2+|T|^2 = 1.000000000   |T_2|^2/(omega r_s)^6 = 2.686419e-02
   omega r_s =  0.050:  |T_2|^2 = 3.338233e-10   |R|^2+|T|^2 = 1.000000000   |T_2|^2/(omega r_s)^6 = 2.136469e-02
   omega r_s =  0.025:  |T_2|^2 = 4.726818e-12   |R|^2+|T|^2 = 1.000000000   |T_2|^2/(omega r_s)^6 = 1.936105e-02
   extrapolated coefficient (omega -> 0): 1.785480e-02
-  [PASS][  15.6s] b1 flux conserved at every frequency (K1 passes)
-  [PASS][  15.6s] b2 low-frequency coefficient = Page's 4/225 to better than 3 % (as OUTPUT of the Regge-Wheeler equation)
+  [PASS][  15.7s] b1 flux conserved at every frequency (K1 passes)
+  [PASS][  15.7s] b2 low-frequency coefficient = Page's 4/225 to better than 3 % (as OUTPUT of the Regge-Wheeler equation)
 === EDGE-5c: the ratio, and what it does to EDGE-4 ===
   spin-2 / spin-0 low-frequency l=2 absorption on the same background: 36.006   (Page: 36)
-  [PASS][  15.6s] c1 ratio = 36 to 5 %: a spin-2 l=2 field is absorbed 36x more strongly than a spin-0 one by the same horizon (K3 passes: the hypothesis survives)
+  [PASS][  15.7s] c1 ratio = 36 to 5 %: a spin-2 l=2 field is absorbed 36x more strongly than a spin-0 one by the same horizon (K3 passes: the hypothesis survives)
   EDGE-4 needed eta_s = Damour/32. Correcting the spin-0 coupling by 36: eta_s x 36 = Damour x 1.125.
-  [PASS][  15.6s] c2 after the spin correction the membrane needs 1.125 x Damour's 1/(16 pi): inside the declared O(1) slop of EDGE-4's membrane model (area preservation, shape-to-flow map). The number 1/(512 pi) is 1/(16 pi) seen through a spin-0 coupling. Page's factorial owns it
+  [PASS][  15.7s] c2 after the spin correction the membrane needs 1.125 x Damour's 1/(16 pi): inside the declared O(1) slop of EDGE-4's membrane model (area preservation, shape-to-flow map). The number 1/(512 pi) is 1/(16 pi) seen through a spin-0 coupling. Page's factorial owns it
 === EDGE-5d: what this makes EDGE-4 say ===
   The medium's tide is spin-0: a companion's field in the medium is its river, a Bernoulli scalar. The medium has no spin-2 field.
-  Therefore, IF the electrode's membrane viscosity is Damour's 1/(16 pi G), the medium's tidal torque and heating are weaker than
+  Therefore, IF the sonic surface r = r_s's membrane viscosity is Damour's 1/(16 pi G), the medium's tidal torque and heating are weaker than
   Kerr's by the spin ratio: ~1/36 (EDGE-4's membrane model says 1/32). PREDICTION: horizon absorption (tidal heating/torquing) in
   the medium is ~30x smaller than GR's. Instrument: LISA EMRIs (horizon-flux phase shifts of tens of radians in GR would shrink to
   ~1 radian); LVK horizon-absorption tests on high-spin BBH (currently unconstraining). Alternatively the medium acquires a spin-2
   tide through the AC sector's frame twist (T8) -- open. Either way the 32 is no longer a mystery coefficient.
-  [PASS][  15.6s] d1 EDGE-4 re-tiered: membrane law DERIVED (structure), coefficient EXPLAINED (spin), prediction STATED (tidal friction / 36)
+  [PASS][  15.7s] d1 EDGE-4 re-tiered: membrane law DERIVED (structure), coefficient EXPLAINED (spin), prediction STATED (tidal friction / 36)
 
-=== EDGE-5: 7/7 checks passed in 15.6s ===
+=== EDGE-5: 7/7 checks passed in 15.7s ===

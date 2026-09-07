@@ -1,15 +1,15 @@
-=== DYN-1a: the divider, d = 3 (T8c) ===
-  R_load  = 1/r_s - 1/r    R_source = 1/r
-  N^2 = A(r) = (r - r_s)/r      eta = Z_s/Z_L = r_s/(r - r_s)
+=== DYN-1a: the potential ratio, d = 3 (T8c) ===
+  W_in  = 1/r_s - 1/r    W_out = 1/r
+  N^2 = A(r) = (r - r_s)/r      eta = W_out/W_in = r_s/(r - r_s)
   [PASS][   0.1s] a1 A(r) = 1 - r_s/r  (all orders; the OUTPUT, not an input)
   [PASS][   0.1s] a2 eta = r_s/(r - r_s): the old pinning is REPRODUCED as output (LOCK-1 removable)
   [PASS][   0.1s] a3 A = 1 - 2*U: exactly 1 - 2U in areal coords, no higher terms
 === DYN-1b: control -- the other shell assignment (NOT a candidate; T7f fixes the load) ===
   swapped: N^2 = r_s/r = r_s/r = v_esc^2 ;  eta_dual = (r - r_s)/r_s = 1/eta
-  [PASS][   0.1s] b1 load/source swap is exactly eta -> 1/eta and N^2 <-> v_esc^2 (the reciprocity is STRUCTURAL)
-  [PASS][   0.1s] b2 max power transfer Z_L = Z_s  <=>  eta = 1  <=>  r = 2 r_s (marginally bound radius; FLAGGED, not claimed)
+  [PASS][   0.1s] b1 involution sigma: eta -> 1/eta is exactly eta -> 1/eta and N^2 <-> v_esc^2 (the reciprocity is STRUCTURAL)
+  [PASS][   0.1s] b2 W_in = W_out point W_in = W_out  <=>  eta = 1  <=>  r = 2 r_s (marginally bound radius; FLAGGED, not claimed)
 === DYN-1c: K1 control -- d = 2 must fail ===
-  d=2: R_load = log(r) - log(r_s)   R_source = oo
+  d=2: W_in = log(r) - log(r_s)   W_out = oo
   [PASS][   0.1s] c1 in two spatial dimensions the source shell has infinite resistance: N^2 = 0 everywhere. FAILS. d = 3 is load-bearing and is T8c's.
 === DYN-1d: the output metric and its PPN parameters (read OFF, not fed in) ===
   rbar(r) = (sqrt(r) + sqrt(-2*m + r))**2/4
@@ -37,4 +37,4 @@
 === DYN-1: 16/16 checks passed in 0.6s ===
 TIER: A(r) = 1 - r_s/r is DERIVED given [G1, G2, T8c, THM-I] and the two T7f DECLARATIONS.
       beta = gamma = 1 are read off the output and match ground at 1e-4 / 1e-5. LOCK-1 removable.
-      The T7f divider identification has now passed a test that could have failed; it is no longer 'trust me'.
+      The T7f potential-ratio identification has now passed a test that could have failed; it is no longer 'trust me'.

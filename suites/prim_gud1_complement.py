@@ -1,6 +1,6 @@
-# prim_gud1_complement.py  --  GUD-1: the divider's duality as an angle, run FORWARD.
+# prim_gud1_complement.py  --  GUD-1: the potential ratio's duality as an angle, run FORWARD.
 #
-# CLAIM UNDER TEST (Claire, 09-07, hunch): the load/source swap eta -> 1/eta of the divider is the COMPLEMENT theta -> pi/2 - theta
+# CLAIM UNDER TEST (Claire, 09-07, hunch): the involution sigma: eta -> 1/eta eta -> 1/eta of the potential ratio is the COMPLEMENT theta -> pi/2 - theta
 #   of the seat's Gudermannian angle theta = gd(lambda), sinh(lambda) = tan(theta), eta = sinh^2(lambda) = tan^2(theta).
 #   If so: the photon sphere (tan^2 = 2, the magic angle) and the ISCO must be complementary angles, and the self-dual point eta = 1
 #   is theta = pi/4 -- the eighth-turn W of T4 -- at r = 2 r_s.
@@ -30,12 +30,12 @@ r_isco = [s for s in sp.solve(Vpp_on_circ, r) if s.is_positive and s != rs][0]
 E2_on_circ = sp.simplify(V.subs(L**2, circ))
 r_mb = [s for s in sp.solve(sp.Eq(E2_on_circ, 1), r) if s.is_positive and s != rs][0]
 print("  photon sphere r_ph =", r_ph, "  ISCO r_isco =", r_isco, "  marginally bound r_mb =", r_mb)
-check("a1", r_ph == 3*rs/2 and r_isco == 3*rs and r_mb == 2*rs, "r_ph = 3r_s/2, r_isco = 3 r_s, r_mb = 2 r_s: all three OUT of the divider's metric, none put in")
+check("a1", r_ph == 3*rs/2 and r_isco == 3*rs and r_mb == 2*rs, "r_ph = 3r_s/2, r_isco = 3 r_s, r_mb = 2 r_s: all three OUT of the potential ratio's metric, none put in")
 
 print("=== GUD-1b: the same three orbits as tilts and as Gudermannian angles ===")
 eta_ph, eta_isco, eta_mb = [sp.simplify(eta.subs(r, x)) for x in (r_ph, r_isco, r_mb)]
 print("  eta: photon sphere", eta_ph, " ISCO", eta_isco, " marginally bound", eta_mb)
-check("b1", eta_ph*eta_isco == 1 and eta_mb == 1, "eta_ph * eta_isco = 1 and eta_mb = 1: the ISCO is the DUAL of the photon sphere under the load/source swap, and the marginally bound orbit is the self-dual point (K2 passes)")
+check("b1", eta_ph*eta_isco == 1 and eta_mb == 1, "eta_ph * eta_isco = 1 and eta_mb = 1: the ISCO is the DUAL of the photon sphere under the involution sigma: eta -> 1/eta, and the marginally bound orbit is the self-dual point (K2 passes)")
 # Gudermannian: sinh(lambda) = tan(theta)  <=>  eta = tan^2(theta)
 th_of = lambda e: sp.atan(sp.sqrt(e))
 th_ph, th_isco, th_mb = th_of(eta_ph), th_of(eta_isco), th_of(eta_mb)
@@ -50,7 +50,7 @@ print("=== GUD-1c: the swap IS the complement, as a map ===")
 swap_th = sp.simplify(sp.atan(sp.sqrt(1/sp.tan(th)**2)))
 _tpos = sp.symbols('t_pos', positive=True)            # tan(theta) > 0 on (0, pi/2): the seat's angle is in the first quadrant
 _c1 = sp.simplify(sp.expand_trig(sp.cos(sp.atan(1/_tpos) + sp.atan(_tpos))))==0 and all(abs(sp.N((swap_th - (sp.pi/2 - th)).subs(th, v), 40)) < 1e-35 for v in (sp.Rational(1,7), sp.Rational(3,5), sp.Rational(11,10), sp.Rational(3,2)))
-check("c1", _c1, "eta -> 1/eta is theta -> pi/2 - theta: the load/source swap is the Gudermannian COMPLEMENT")
+check("c1", _c1, "eta -> 1/eta is theta -> pi/2 - theta: the involution sigma: eta -> 1/eta is the Gudermannian COMPLEMENT")
 # and in the rapidity: sinh(lambda) -> 1/sinh(lambda) is tanh(lambda') = sech(lambda): NOT a Lorentz boost composition
 lam2 = sp.asinh(1/sp.sinh(lam))
 check("c2", sp.simplify(sp.tanh(lam2) - 1/sp.cosh(lam))==0 and sp.simplify(sp.cosh(lam2) - 1/sp.tanh(lam))==0, "in rapidity: tanh(lambda') = sech(lambda), cosh(lambda') = coth(lambda). Not a boost (rapidities do not add); it is a rotation by a real right angle in the Gudermannian picture")
@@ -61,10 +61,10 @@ check("c3", sp.simplify(N2.subs(r, sp.Symbol('rr')) - v2.subs(r, sp.Symbol('rr')
 print("=== GUD-1d: consequences, stated ===")
 print("  the seat's Gudermannian angle theta is the angle of a right triangle with legs N (lapse) and v (river): N^2 + v^2 = 1.")
 print("  the three named orbits are three angles: 35.26 deg (ISCO), 45 deg (marginally bound = the eighth-turn), 54.74 deg (photon sphere = magic).")
-print("  PREDICTION-SHAPED: any pinning the model produces later (rotating electrode at O(J^3), the AC sector) must keep the ISCO and the")
-print("  photon sphere complementary under the load/source swap, or the duality is broken there -- that is a check with teeth for DYN-3+.")
+print("  PREDICTION-SHAPED: any pinning the model produces later (rotating sonic surface at O(J^3), the AC sector) must keep the ISCO and the")
+print("  photon sphere complementary under the involution sigma: eta -> 1/eta, or the duality is broken there -- that is a check with teeth for DYN-3+.")
 print("  GROUND: photon sphere ~10 % (EHT); ISCO weak (Kerr-assumed X-ray fits); marginally bound none. The identity is exact; the ground is not.")
 
 n=sum(CH); print(f"\n=== GUD-1: {n}/{len(CH)} checks passed in {time.time()-t0:.1f}s ===")
-print("TIER: DERIVED from the divider output. The three radii were not inputs. The complement identity is exact.")
-print("      The reciprocity flagged as a possible trap this afternoon is a symmetry of the divider with an orbit on its fixed point.")
+print("TIER: DERIVED from the potential ratio output. The three radii were not inputs. The complement identity is exact.")
+print("      The reciprocity flagged as a possible trap this afternoon is a symmetry of the potential ratio with an orbit on its fixed point.")

@@ -1,7 +1,7 @@
 # prim_edge2_tensor_love.py  --  EDGE-2: the tensor Love number -- what the medium HAS, and GR's object as COMPARISON.
 #
 # (A) THE MEDIUM'S LOVE NUMBER IS EDGE-1c. NS-0 b1/b2: linearised Euler + continuity on the river give ONE perturbation field, the
-#     velocity potential delta phi, obeying the acoustic wave equation of the divider metric (Unruh 1981; for transonic accretion this
+#     velocity potential delta phi, obeying the acoustic wave equation of the potential ratio metric (Unruh 1981; for transonic accretion this
 #     is Moncrief 1980, EXT-034). A fluid carries no spin-2 field. So the medium's static l = 2 tidal response is the scalar problem
 #     solved in EDGE-1c: regular branch P2(2r-1), no r^-3 tail, k_2 = 0. Not a proxy -- the object itself.                 [DERIVED]
 #
@@ -26,14 +26,14 @@ r, M, x = sp.symbols('r M x', positive=True)
 
 print("=== EDGE-2A: the medium's object, restated from EDGE-1c ===")
 A = 1 - 2*M/r
-def acoustic_static(ph):      # scalar static l=2 in the divider metric (EDGE-1c, now with r_s = 2M)
+def acoustic_static(ph):      # scalar static l=2 in the potential ratio metric (EDGE-1c, now with r_s = 2M)
     return sp.simplify(sp.diff(r**2*A*sp.diff(ph, r), r)/r**2 - 6*ph/r**2)
 xa = r/M - 1                  # = 2r/r_s - 1
 P2a = (3*xa**2 - 1)/2
 Q2a = P2a*sp.log((xa+1)/(xa-1))/2 - sp.Rational(3,2)*xa
 check("A1", acoustic_static(P2a)==0 and acoustic_static(Q2a)==0, "medium: static l=2 acoustic equation solved by P2(x), Q2(x), x = r/M - 1 (EDGE-1c re-verified with r_s = 2M)")
 check("A2", sp.Poly(sp.expand(P2a), r).degree()==2 and sp.expand(P2a).coeff(r,-3)==0 and sp.limit(Q2a, r, 2*M, '+') in (sp.oo,-sp.oo),
-      "medium: regular branch polynomial (no tail), excluded branch log-singular at the electrode: k_2(medium) = 0")
+      "medium: regular branch polynomial (no tail), excluded branch log-singular at the sonic surface r = r_s: k_2(medium) = 0")
 
 print("=== EDGE-2B: GR's tensor object, as comparison ===")
 def gr_static(H):

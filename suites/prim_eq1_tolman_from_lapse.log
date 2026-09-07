@@ -1,4 +1,4 @@
-=== EQ-1a: the lapse from the divider (DYN-1, recomputed) ===
+=== EQ-1a: the lapse from the potential ratio (DYN-1, recomputed) ===
   N^2 = (r - r_s)/r    N = sqrt(r - r_s)/sqrt(r)
   [PASS][   0.1s] a1 N^2 = 1 - r_s/r as output
 === EQ-1b: R1 -- mode-by-mode balance ===
@@ -14,10 +14,10 @@
   [PASS][   0.1s] d1 T(r) sqrt(g_00) = const  -- this IS the Tolman-Ehrenfest condition, DERIVED, not input
   two seats: T(r1)/T(r2) = sqrt(r_1)*sqrt(r_2 - r_s)/(sqrt(r_2)*sqrt(r_1 - r_s))
   [PASS][   0.2s] d2 T1/T2 = N2/N1 (numeric at 4 seat pairs to 1e-25): the deeper seat is hotter, by exactly the clock ratio
-  [PASS][   0.2s] d3 at the open circuit N -> 0 and T -> oo: a static thermometer at the horizon reads infinite temperature (no time to count the rate against)
+  [PASS][   0.2s] d3 at the lapse zero (N = 0) N -> 0 and T -> oo: a static thermometer at the horizon reads infinite temperature (no time to count the rate against)
   [PASS][   0.2s] d4 at the light ring T = sqrt(3) T_inf
-  [PASS][   0.2s] d5 inside (r = r_s/2): N^2 = -1 < 0, no real N: NO static equilibrium exists in the interior. The interior is non-static as a THEOREM of the divider.
-  dual sheet (load/source swapped): N^2 = r_s/r   T_dual(r) = T_inf*sqrt(r)/sqrt(r_s)
+  [PASS][   0.2s] d5 inside (r = r_s/2): N^2 = -1 < 0, no real N: NO static equilibrium exists in the interior. The interior is non-static as a THEOREM of the potential ratio.
+  dual sheet (involution sigma: eta -> 1/etaped): N^2 = r_s/r   T_dual(r) = T_inf*sqrt(r)/sqrt(r_s)
   [PASS][   0.2s] d6 on the dual sheet the divergence moves to infinity and the horizon is at T_inf: the swap exchanges which end is hot (FLAGGED, not claimed)
 === EQ-1e: size of the effect on Earth (for the record; unmeasurable today) ===
   d(lnT)/dh = -g/c^2 = -1.093e-16 per metre: a bath 1 m higher is colder by 1 part in 9.15e+15
@@ -25,6 +25,6 @@
 
 === EQ-1: 12/12 checks passed in 0.2s ===
 TIER: T*N = T_inf is DERIVED given DYN-1 + SI (hbar, k_B exact) + the definition of equilibrium. Two routes.
-RULING: EQ-1 is neither Will's principle nor Mercury's fact. It is a theorem of the divider: temperature is a rate,
+RULING: EQ-1 is neither Will's principle nor Mercury's fact. It is a theorem of the potential ratio: temperature is a rate,
         and a rate divides by the lapse. 'Time comes as a pair': (T, N) multiply to the reference node.
 GROUND STATUS: the clock-redshift gradient is measured (optical clocks); the thermal statement is one definitional step from it.

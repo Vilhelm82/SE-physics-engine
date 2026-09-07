@@ -67,10 +67,10 @@ print("     (This is Gamma_C -> -Gamma_C being time reversal, T8a; the point of 
 print("=== SHEET-1c: the fluid path from the river, and its holonomy ===")
 r, rs, c, r0, tau = sp.symbols('r r_s c r_0 tau', positive=True)
 v_r = -c*sp.sqrt(rs/r)                                                         # the river (DYN-1): free fall from rest at infinity
-# proper time from r0 to r along the river, and the time from the electrode to the centre
+# proper time from r0 to r along the river, and the time from the sonic surface r = r_s to the centre
 tau_of = sp.integrate(-1/v_r, (r, r, r0))
 print("  tau(r0 -> r) =", sp.simplify(tau_of), ";  from r_s to 0:", sp.simplify(tau_of.subs({r0: rs, r: 0})))
-check("c1", z(sp.simplify(tau_of.subs({r0: rs, r: 0}) - sp.Rational(2,3)*rs/c)), "the fluid reaches the centre a proper time (2/3) r_s/c after crossing the electrode: finite (derived from the river)")
+check("c1", z(sp.simplify(tau_of.subs({r0: rs, r: 0}) - sp.Rational(2,3)*rs/c)), "the fluid reaches the centre a proper time (2/3) r_s/c after crossing the sonic surface r = r_s: finite (derived from the river)")
 # RIDE-2: material rulers strain by the velocity gradient: radial d/dr v_r, transverse v_r/r
 lam_rad = sp.simplify(sp.diff(v_r, r)); lam_tr = sp.simplify(v_r/r)
 print("  velocity-gradient eigenvalues: radial", lam_rad, "  transverse", lam_tr)
@@ -90,7 +90,7 @@ D_path = sp.simplify(cosh_l*sp.cosh(0)*sp.sin(t_path))
 print("  D along the fluid path =", D_path)
 check("c4", all(D_path.subs({r: rv, r0: 1}) > 0 for rv in (sp.Rational(9,10), sp.Rational(1,2), sp.Rational(1,100), sp.Rational(1,10**6))) and sp.limit(D_path, r, 0, '+') == sp.oo,
       "D > 0 for every r > 0 and D -> oo at r -> 0: the fluid NEVER reaches the branch locus (K2 passes); its end is a strain divergence, not a rank loss")
-check("c5", True, "=> chi[Gamma_fluid] = sgn D = the exterior's sign at every point of the fall, through the electrode, to the centre: the sheet is INHERITED by continuity")
+check("c5", True, "=> chi[Gamma_fluid] = sgn D = the exterior's sign at every point of the fall, through the sonic surface r = r_s, to the centre: the sheet is INHERITED by continuity")
 print("  the rank-loss centre (D = 0, f4) belongs to the STATIC presentation from outside -- the seat artefact. The fluid meets D -> oo instead.")
 
 print("=== SHEET-1d: the two blocks are the two trapped conditions in the river ===")
@@ -100,7 +100,7 @@ check("d1", sp.solve(sp.Eq(out_light, 0), r) == [rs], "theta_+ = 0 (outgoing lig
 # on the I = -1 block tau -> -tau, so the river reverses, v_r -> -v_r
 out_m = sp.simplify(c - v_r); in_m = sp.simplify(-c - v_r)
 check("d2", sp.solve(sp.Eq(out_m, 0), r) == [] and sp.solve(sp.Eq(in_m, 0), r) == [rs], "on the I = -1 block outgoing light never stalls and INGOING light stalls at r_s: theta_- = 0. The black sheet is theta_+ = 0, the white sheet is theta_- = 0: two blocks, two trapped conditions")
-check("d3", True, "chi[Gamma_fluid] = chi_BH: the fluid rides the river inward on its own block, and there theta_+ = 0 at the electrode. LABEL-3b's test passes")
+check("d3", True, "chi[Gamma_fluid] = chi_BH: the fluid rides the river inward on its own block, and there theta_+ = 0 at the sonic surface r = r_s. LABEL-3b's test passes")
 
 n=sum(CH); print(f"\n=== SHEET-1: {n}/{len(CH)} checks passed in {time.time()-t0:.1f}s ===")
 print("RESULT for CONJECTURE-COSMOLOGY:")

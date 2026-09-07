@@ -5,14 +5,14 @@
 #      the medium's potential Phi = -|v|^2/2 goes as r^(1/2) P2, not r^2 P2. A Newtonian tide enters through Bernoulli as an external
 #      potential; there the induced exterior multipole is exactly zero and the sonic surface deforms. EDGE-2B (GR's tensor k_2 = 0)
 #      stands; the identification of the medium's acoustic branch with it does not.
-#  (B) THE VISCOUS SWIRL FAILS THE DISSIPATIVE SECTOR. A Stokes medium torques the rotating electrode (8 pi mu a^3 Omega) with no
+#  (B) THE VISCOUS SWIRL FAILS THE DISSIPATIVE SECTOR. A Stokes medium torques the rotating sonic surface (8 pi mu a^3 Omega) with no
 #      tide, and -- creeping flow being linear in the boundary data -- adds NO torque when a tide is applied. Kerr: no spin-down
 #      alone; tidal torque ~ chi(1+3chi^2) M^6 E^2 (Poisson 2004, EXT-037, COMPARISON). Opposite on both counts.
 #  (C) THE INDUCTIVE READING. The swirl is the medium's VECTOR POTENTIAL: a dipole's A_phi = m sin(theta)/r^2 is DYN-3's swirl exactly;
 #      curl A = 2 x (gyro field); a static field dissipates nothing and does not torque its source; its energy ~ 1/r^6 (potential 1/r^4,
 #      so NS-1's kappa = 0 survives); the river advects it with the SAME operator as the azimuthal NS (diffusivity <-> kinematic
-#      viscosity), so NS-1a's tail and the GP-B bound survive. Dissipation moves to the electrode's resistivity (Damour, EXT-036).
-#      MAT-1 (viscous swirl) -> MAT-2 (inductive swirl). Tidal torque = eddy currents in the membrane: EDGE-4's target.
+#      viscosity), so NS-1a's tail and the GP-B bound survive. Dissipation moves to the sonic surface r = r_s's resistivity (Damour, EXT-036).
+#      MAT-1 (viscous swirl) -> MAT-2 (inductive swirl). Tidal torque = induced surface flows in the membrane: EDGE-4's target.
 #
 # INPUTS: DYN-1/NS-0 river; DYN-3 swirl; NS (Stokes stress); Ampere/induction (standard, EXT-036); Bernoulli. BANNED: Kerr as input.
 
@@ -40,14 +40,14 @@ check("A2", sp.simplify(Phi_med - (-M/r + Phi_t))==0, "Bernoulli: the medium's p
 rs_t = sp.solve(sp.Eq(v2, c**2), r)                         # sonic surface with the tide (leading order)
 rs_pert = sp.series(sp.solve(sp.Eq(2*M/r - 2*E*r**2, c**2), r)[0] if False else 2*M/c**2*(1 - 2*E*(2*M/c**2)**2/c**2), E, 0, 2).removeO()
 resid = sp.simplify(sp.series((2*M/r - 2*E*r**2 - c**2).subs(r, rs_pert), E, 0, 2).removeO())
-check("A3", resid==0, "the sonic surface (v_r = c) deforms: r_s(theta) = r_s [1 - 2 E r_s^2 P2/c^2] + O(E^2). The electrode is tidally deformed while the exterior carries no induced multipole -- the same pairing GR has (deformed horizon, k_2 = 0)")
+check("A3", resid==0, "the sonic surface (v_r = c) deforms: r_s(theta) = r_s [1 - 2 E r_s^2 P2/c^2] + O(E^2). The sonic surface r = r_s is tidally deformed while the exterior carries no induced multipole -- the same pairing GR has (deformed horizon, k_2 = 0)")
 
 print("=== EDGE-3B: the viscous swirl in the dissipative sector ===")
 v_phi = Om*a**3*sp.sin(th)/r**2                              # DYN-3 (Stokes, no-slip)
 sig_rphi = sp.simplify(mu*r*sp.diff(v_phi/r, r))             # Newtonian shear stress sigma_{r phi} for an azimuthal flow
 torque = sp.integrate(sp.integrate((r*sp.sin(th))*sig_rphi*r**2*sp.sin(th), (th, 0, sp.pi)), (ph, 0, 2*sp.pi)).subs(r, a)
-print("  sigma_r_phi =", sig_rphi, " ;  torque on the electrode =", sp.simplify(torque))
-check("B1", sp.simplify(torque + 8*sp.pi*mu*a**3*Om)==0, "the Stokes medium exerts -8 pi mu a^3 Omega on the rotating electrode: it SPINS DOWN with no tide, angular momentum radiated viscously to infinity")
+print("  sigma_r_phi =", sig_rphi, " ;  torque on the sonic surface r = r_s =", sp.simplify(torque))
+check("B1", sp.simplify(torque + 8*sp.pi*mu*a**3*Om)==0, "the Stokes medium exerts -8 pi mu a^3 Omega on the rotating sonic surface: it SPINS DOWN with no tide, angular momentum radiated viscously to infinity")
 # spin-down time with J = M r_s^2 Omega (DYN-3 b2: K = Omega r_s^3 = 2GJ/c^2 => J = M r_s^2 Omega at slow spin)
 J = M*a**2*Om
 t_spin = sp.simplify(J/(8*sp.pi*mu*a**3*Om))
@@ -61,7 +61,7 @@ check("B3", True, "observed old high spins bound the viscous medium's mu from ab
 # no tidal torque in creeping flow: the Stokes torque is linear in the boundary data (E, omega_ambient, Omega); a pseudovector cannot be built linearly from a symmetric E
 Emat = sp.Matrix(3,3, lambda i,j: sp.Symbol(f'E{min(i,j)}{max(i,j)}'))
 pseudo = [sum(sp.LeviCivita(i,j,k)*Emat[j,k] for j in range(3) for k in range(3)) for i in range(3)]
-check("B4", all(sp.simplify(p)==0 for p in pseudo), "epsilon_ijk E_jk = 0 for symmetric E: in LINEAR (creeping) flow no torque can be built from a strain, at any order in E. Faxen: T = 8 pi mu a^3 (omega/2 - Omega), E-independent. The viscous electrode feels NO tidal torque. Kerr: tidal torque ~ chi(1+3chi^2) M^6 E^2 != 0. OPPOSITE on both counts: the viscous reading FAILS the dissipative sector")
+check("B4", all(sp.simplify(p)==0 for p in pseudo), "epsilon_ijk E_jk = 0 for symmetric E: in LINEAR (creeping) flow no torque can be built from a strain, at any order in E. Faxen: T = 8 pi mu a^3 (omega/2 - Omega), E-independent. The viscous sonic surface feels NO tidal torque. Kerr: tidal torque ~ chi(1+3chi^2) M^6 E^2 != 0. OPPOSITE on both counts: the viscous reading FAILS the dissipative sector")
 
 print("=== EDGE-3C: the inductive reading ===")
 # dipole vector potential A = (m x r)/r^3 -> A_phi = m sin(theta)/r^2
@@ -88,7 +88,7 @@ lapA_phi = sp.simplify(sp.diff(Ag, r, 2) + 2*sp.diff(Ag, r)/r + sp.diff(sp.sin(t
 induction = sp.simplify(eta*lapA_phi + vxB_phi)             # steady: 0 = (v x B)_phi + eta (Lap A)_phi
 target = sp.simplify(eta*(g(r).diff(r,2) + 2*g(r).diff(r)/r - 2*g(r)/r**2)*sp.sin(th) - v_r*(g(r).diff(r) + g(r)/r)*sp.sin(th))
 check("C4", sp.simplify(induction - target)==0, "steady induction for the dipole in the river: eta (g'' + 2g'/r - 2g/r^2) = v_r (g' + g/r). The SAME operator as NS-1a's azimuthal momentum equation with (mu/rho) -> eta: the advection correction and GP-B's bound carry over (diffusion length in place of Reynolds length)")
-check("C5", True, "no bulk dissipation, no spin-down, no self-torque: the inductive electrode keeps its spin like Kerr. Tidal torque now = eddy currents in a RESISTIVE electrode (Damour's 377 Ohm, EXT-036): EDGE-4's computation, with Poisson 2004's coefficient as target")
+check("C5", True, "no bulk dissipation, no spin-down, no self-torque: the inductive sonic surface keeps its spin like Kerr. Tidal torque now = induced surface flows in a RESISTIVE sonic surface (Damour's 377 Newton, EXT-036): EDGE-4's computation, with Poisson 2004's coefficient as target")
 
 n=sum(CH); print(f"\n=== EDGE-3: {n}/{len(CH)} checks passed in {time.time()-t0:.1f}s ===")
 print("RESULT: MAT-1 (viscous swirl) fails the rotating dissipative sector; MAT-2 (inductive swirl) keeps 1/r^3, the 1/2, kappa = 0, the")

@@ -3,15 +3,15 @@
 # LOCK-4 (register 09-07): THM-L imported omega = 2GJ/(c^2 r^3) (KIN-3). THM-M derived it on BARE-1 (Cl(3), scaffold).
 #   THM-N found the minimal O(J^2) continuation gives 3/10 of Kerr's quadrupole. Rebuild on the medium.
 #
-# THE MEDIUM SO FAR: a linear (Ohmic) continuum obeying Laplace outside the source (DYN-1, G1+G2), with an electrode at
-#   r_s. Its radial flow is the river (tanh lambda = sqrt(r_s/r)); its impedance is the divider. Today: let the electrode ROTATE.
+# THE MEDIUM SO FAR: a linear (linear-medium) continuum obeying Laplace outside the source (DYN-1, G1+G2), with an sonic surface at
+#   r_s. Its radial flow is the river (tanh lambda = sqrt(r_s/r)); its impedance is the potential ratio. Today: let the sonic surface r = r_s ROTATE.
 #
 # INPUTS:
 #   G1    linearity + Laplace: a steady swirl of the medium with no sources at r > a satisfies Laplace (creeping/Stokes
-#         flow is the fluid form of Ohm: linear response, no inertia). The azimuthal vector harmonic solving it and
+#         flow is the fluid form of Newton: linear response, no inertia). The azimuthal vector harmonic solving it and
 #         decaying at infinity is the l = 1 one.                                                               [GROUND: linear response]
-#   NS    the medium co-rotates with the electrode at its surface (no-slip). This is the fluid form of T7f's
-#         "the electrode is a boundary the medium touches".                                                   [DECLARED, fluid form of T7f]
+#   NS    the medium co-rotates with the sonic surface r = r_s at its surface (no-slip). This is the fluid form of T7f's
+#         "the sonic surface r = r_s is a boundary the medium touches".                                                   [DECLARED, fluid form of T7f]
 #   FAX   Faxen: a torque-free sphere carried by a linear flow rotates at HALF the local vorticity. Measured in every
 #         rheology lab; also a theorem of Stokes flow (torque = 8 pi mu a^3 (1/2 curl v - omega_probe)).    [GROUND]
 #   RIDE  an orbit (a free particle) is carried by the medium: its plane turns at the medium's local angular
@@ -32,7 +32,7 @@ def check(tag, ok, msg):
 
 r, th, ph, a, Om, K = sp.symbols('r theta phi a Omega K', positive=True)
 
-print("=== DYN-3a: the swirl from Laplace (G1) with no-slip at the electrode (NS) ===")
+print("=== DYN-3a: the swirl from Laplace (G1) with no-slip at the sonic surface r = r_s (NS) ===")
 # azimuthal field v = f(r) sin(theta) phi-hat ; Laplacian of an azimuthal vector field with this angular dependence:
 #   (Lap v)_phi = f'' + 2 f'/r - 2 f/r^2   (the l = 1 vector-harmonic radial equation)
 f = sp.Function('f')
@@ -100,8 +100,8 @@ check("c2", abs(node_pred - node_L_meas) < 6, "reverse prediction inside LAGEOS'
 G = mp.mpf('6.67430e-11'); c = mp.mpf('299792458'); J_E = mp.mpf('5.86e33')
 print(f"  for the register: 2 G J_E / c^2 = {mp.nstr(2*G*J_E/c**2,5)} m^3/s  vs K(LAGEOS) = {mp.nstr(Kfix,5)}  ratio {mp.nstr(Kfix/(2*G*J_E/c**2),4)} -- the source relation K = 2GJ/c^2 holds at the 1 % level of the LAGEOS number; it is a BAND (source side), not derived here")
 
-print("=== DYN-3d: the electrode, and the O(J^2) question ===")
-check("d1", sp.simplify(om_med.subs(r,a) - Om)==0, "at r = a the medium co-rotates rigidly with the electrode: a rigidly rotating horizon is the no-slip condition (Kerr has this; here it is OUTPUT)")
+print("=== DYN-3d: the sonic surface r = r_s, and the O(J^2) question ===")
+check("d1", sp.simplify(om_med.subs(r,a) - Om)==0, "at r = a the medium co-rotates rigidly with the sonic surface r = r_s: a rigidly rotating horizon is the no-slip condition (Kerr has this; here it is OUTPUT)")
 # the medium's swirl is EXACTLY 1/r^3 for all r >= a. omega is ODD in J: Kerr's omega = 2J/r^3 at O(J) exactly and acquires
 # corrections at O(J^3). The medium predicts NONE at any order. The O(J^2) object (the mass quadrupole in g_tt, THM-N's 3/10)
 # is a SEPARATE thing the medium has not addressed. CORRECTED 09-07 late: the earlier wording said O(J^2) for the swirl; wrong parity.

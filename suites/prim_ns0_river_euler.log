@@ -8,8 +8,8 @@
   acoustic null slopes dr/dt = [-c*sqrt(r_s)/sqrt(r) - c_s, -c*sqrt(r_s)/sqrt(r) + c_s]
   [PASS][   0.1s] b1 sound moves at +-c_s relative to the river: the cone is carried by the flow (SHEET-1's theta_+ = 0 at v = -c_s is this cone stalling)
   after the time shift: g_TT = c**2*(-r + r_s)/r   g_Tr = 0   g_rr = r/(r - r_s)
-  [PASS][   0.2s] b2 with c_s = c the acoustic metric of the river IS the divider's metric: g_TT = -c^2(1 - r_s/r), g_rr = 1/(1 - r_s/r). The AC sector is linearised Euler on the river
-  the wave impedance of this sector is rho c_s (acoustic impedance) -- the medium's Z_0. That is the 377 ohm chase in fluid form.
+  [PASS][   0.2s] b2 with c_s = c the acoustic metric of the river IS the potential ratio's metric: g_TT = -c^2(1 - r_s/r), g_rr = 1/(1 - r_s/r). The AC sector is linearised Euler on the river
+  the characteristic ratio sqrt(L/C) of this sector is rho c_s: the medium's acoustic characteristic ratio. THM-K's scalar half is its VALUE.
 === NS-0c: where the O(J^2) lives ===
   centrifugal term of the swirl v_phi^2/r = K**2*sin(theta)**2/r**5  ~ K^2 sin^2(theta)/r^5 : the O(J^2) radial force the DC medium ignored
   [PASS][   0.2s] c1 the swirl's inertia enters at 1/r^5 in force (1/r^4 in potential): a DIFFERENT radial law from Kerr's mass quadrupole (1/r^3). Kerr's Q = -J^2/M is not produced by the swirl's inertia alone

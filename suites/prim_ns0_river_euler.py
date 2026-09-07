@@ -36,8 +36,8 @@ ds2 = sp.expand(ds2)
 gTT = sp.simplify(ds2.coeff(dT, 2)); gTr = sp.simplify(ds2.coeff(dT, 1).coeff(dr_, 1)); grr = sp.simplify(ds2.coeff(dr_, 2))
 print("  after the time shift: g_TT =", gTT, "  g_Tr =", gTr, "  g_rr =", grr)
 check("b2", sp.simplify(gTT + c**2*(1 - rs/r))==0 and gTr==0 and sp.simplify(grr - 1/(1 - rs/r))==0,
-      "with c_s = c the acoustic metric of the river IS the divider's metric: g_TT = -c^2(1 - r_s/r), g_rr = 1/(1 - r_s/r). The AC sector is linearised Euler on the river")
-print("  the wave impedance of this sector is rho c_s (acoustic impedance) -- the medium's Z_0. That is the 377 ohm chase in fluid form.")
+      "with c_s = c the acoustic metric of the river IS the potential ratio's metric: g_TT = -c^2(1 - r_s/r), g_rr = 1/(1 - r_s/r). The AC sector is linearised Euler on the river")
+print("  the characteristic ratio sqrt(L/C) of this sector is rho c_s: the medium's acoustic characteristic ratio. THM-K's scalar half is its VALUE.")
 print("=== NS-0c: where the O(J^2) lives ===")
 th, K = sp.symbols('theta K', positive=True)
 vphi = K*sp.sin(th)/r**2                                       # DYN-3's swirl

@@ -27,5 +27,5 @@ three lines, three planes, one seated observer — without importing algebras th
 ## Where the work stands
 
 Residue: one declared line (KMS) and two quantities pinned to measurement (d = 3; K from LAGEOS). Everything else in
-Part II is derived from the Newtonian potential, Laplace, Euler, induction and the primitives. Next construction: the
-AC sector. See `MODEL.md` §13 and `HANDOFF.md`.
+Part II is derived from the Newtonian potential, Laplace, Euler, induction and the primitives. Next open construction: whether a second propagating channel exists, and whether it is spin-2. See `MODEL.md` §13
+and `HANDOFF.md`.

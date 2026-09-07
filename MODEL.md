@@ -350,9 +350,9 @@ sound moves at ±c_s **relative to the flow**, so the cone is carried by the med
 coordinate takes that acoustic metric to **exactly the lapse metric of §7**: g_TT = −c²(1 − r_s/r), g_rr = 1/(1 − r_s/r).
 [DERIVED, NS-0 b1, b2]
 
-**This is the AC sector's construction principle, and it has a consequence the model must own: the medium carries a
-spin-0 field and no spin-2 field.** Everything read at the boundary in §11 is sound. The characteristic ratio √(L/C) of
-this sector is ρc_s; its *value* is open (THM-K's scalar half, §6).
+**This is the acoustic sector's construction principle, and it has a consequence the model must own: the medium carries
+one scalar propagating channel and no spin-2 channel.** Everything read at the boundary in §11 is sound. This sector's
+characteristic ratio is ρc_s; its *value* is open (THM-K's scalar half, §6).
 
 **O(J²).** The measured 1/r³ frame dragging bounds the medium's advection length (GP-B against LAGEOS: ≲ 1.3×10⁴ km),
 which puts the transverse dynamics in the creeping regime. There the flow is linear, river and swirl superpose, and the
@@ -459,8 +459,8 @@ Euclidean section only.
 Two entries BH-like, two not, none ECO-like. The combination κ = 0 with black-hole tidal properties is not produced by
 anything in the ECO literature.
 
-**Conditional on:** the medium's tide remaining spin-0 (§9). If the AC sector's construction gives the medium a spin-2
-channel, the tidal-friction entry moves.
+**Conditional on:** the medium's tide remaining spin-0 (§9). If a second propagating channel exists and is spin-2
+(§13 item 1), the tidal-friction entry moves.
 
 ---
 
@@ -474,9 +474,13 @@ Everything else in Part II is derived from the Newtonian potential, Laplace, Eul
 
 **Open constructions**, in order:
 
-1. **The AC sector — L and C.** One construction carrying: the value of the characteristic ratio (THM-K's scalar half,
-   ζ = e²Z₀/ħ = 4πα); whether the medium has a spin-2 tidal channel (§12's condition); and kill 1 of
-   `docs/CONJECTURE-COSMOLOGY.md`.
+1. **A second propagating channel.** The acoustic sector (§9, NS-0) gives the medium one scalar wave at c_s = c.
+   Open: whether a second channel exists; and if so, whether it is **spin-2**, which is §12's condition and routes
+   through T8's frame twist, not through Euler — the acoustic construction cannot reach it.
+
+   *Separately* — these are not one task, and were bundled only by an analogy that has since been struck: the **value**
+   of a characteristic ratio. EDGE-6 e2 identifies it with Ξ_s by matching at the boundary; the value is open and is
+   THM-K's scalar half (§6). Kill 1 of `docs/CONJECTURE-COSMOLOGY.md` is a third, separate item.
 2. **What the infalling chart reads at r = 0.** The c-block is rebuilt (§7.1,
    `suites/prim_sheet1c_two_charts.py`, 11/11) and neither chart diverges at the centre; what the frame itself has
    there is a separate question and is not answered.

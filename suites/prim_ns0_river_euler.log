@@ -1,0 +1,17 @@
+=== NS-0a: the river's own inertia ===
+  (v.grad)v = -c**2*r_s/(2*r**2)   with r_s = 2GM/c^2: -G*M/r**2
+  [PASS][   0.1s] a1 the river's convective acceleration IS Newton's -GM/r^2: Euler with p = 0 and no body force. Gravity is the flow's own inertia
+  [PASS][   0.1s] a2 the river is potential flow, v = grad(phi), phi = -2*c*sqrt(r)*sqrt(r_s): irrotational, so viscosity only renormalises pressure (grad of div v)
+  [PASS][   0.1s] a3 Bernoulli: v^2/2 = GM/r exactly -- the river is the energy integral of free fall
+  div v = -3*c*sqrt(r_s)/(2*r**(3/2))  (compressive: the medium is not incompressible; continuity fixes rho(r) ~ 1/(r^2 v))
+=== NS-0b: the wave sector -- linearised Euler + continuity on the river ===
+  acoustic null slopes dr/dt = [-c*sqrt(r_s)/sqrt(r) - c_s, -c*sqrt(r_s)/sqrt(r) + c_s]
+  [PASS][   0.1s] b1 sound moves at +-c_s relative to the river: the cone is carried by the flow (SHEET-1's theta_+ = 0 at v = -c_s is this cone stalling)
+  after the time shift: g_TT = c**2*(-r + r_s)/r   g_Tr = 0   g_rr = r/(r - r_s)
+  [PASS][   0.2s] b2 with c_s = c the acoustic metric of the river IS the divider's metric: g_TT = -c^2(1 - r_s/r), g_rr = 1/(1 - r_s/r). The AC sector is linearised Euler on the river
+  the wave impedance of this sector is rho c_s (acoustic impedance) -- the medium's Z_0. That is the 377 ohm chase in fluid form.
+=== NS-0c: where the O(J^2) lives ===
+  centrifugal term of the swirl v_phi^2/r = K**2*sin(theta)**2/r**5  ~ K^2 sin^2(theta)/r^5 : the O(J^2) radial force the DC medium ignored
+  [PASS][   0.2s] c1 the swirl's inertia enters at 1/r^5 in force (1/r^4 in potential): a DIFFERENT radial law from Kerr's mass quadrupole (1/r^3). Kerr's Q = -J^2/M is not produced by the swirl's inertia alone
+
+=== NS-0: 6/6 checks passed in 0.2s ===

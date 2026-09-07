@@ -136,9 +136,9 @@ antipode $-f_0$. [PROVED, `suites/label3_lattice.py`, `suites/label3b_correction
 |---|---|---|---|---|
 | $\varnothing$ | Light, Action, Mass | GR + Wave + Bound | light waves in bound orbits around mass, in curved spacetime — **our face** | established |
 | $G$ | Light, Action, Energy | GR + Wave + Escaping | light with phase leaving a well: gravitational redshift, Shapiro delay, escaping GW | named 09-04 |
-| $H$ | Light, Evanescence, Mass | GR + Particle + Bound | light tunnelling in a bound system: near-horizon greybody filter (G-2) | named 09-04 |
+| $H$ | Light, Evanescence, Mass | GR + Particle + Bound | light tunnelling in a bound system: near-horizon greybody filter (G-2) | **DERIVED 09-08, both ends**: fold's Fermi edge width $\lambda_L$ (FOLD-1) and electrode's $|T_0|^2 = 4(\omega r_s)^2$ (EDGE-1) |
 | $C$ | Temperature, Action, Mass | Quantum + Wave + Bound | thermal waves around bound mass: Tolman–Ehrenfest (EQ-1) | named 09-04 |
-| $HG$ | Light, Evanescence, Energy | GR + Particle + Escaping | light tunnelling out carrying energy: Parikh–Wilczek emission, pre-thermal | named 09-04 |
+| $HG$ | Light, Evanescence, Energy | GR + Particle + Escaping | light tunnelling out carrying energy: Parikh–Wilczek emission, pre-thermal | **THEORY** (09-08): no emission channel derived; H's closure does not cover it |
 | $CG$ | Temperature, Action, Energy | Quantum + Wave + Escaping | thermal waves carrying energy, no mass: **blackbody, Planck's face** | named 09-04 |
 | $CH$ | Temperature, Evanescence, Mass | Quantum + Particle + Bound | thermal tunnelling in a bound system: finite-$T$ instantons, stellar fusion | named 09-04 |
 | $CHG$ | Temperature, Evanescence, Energy | Quantum + Particle + Escaping | thermal tunnelling carrying energy away — **Hawking radiation** | established |
@@ -228,3 +228,28 @@ constitutive channels.
 (19/19) · `suites/prim_t5c_corrections.py` (19/19) · `suites/prim_t7b_labelling.py` (18/18) ·
 `suites/hunch_z0_impedance.py` (8/8) · `suites/thm_k_response_map.py` (7/7). The table in §1 is Will's,
 2026-09-04.
+
+
+---
+
+## 9. Status update, 2026-09-08 (EDGE chain)
+
+Full results and the four retractions: `docs/results/2026-09-08/2026-09-08-EDGE-chain.md`.
+Register update: `docs/results/2026-09-07/AUDIT-2026-09-07-LOCKS.md` (appended section).
+
+**The octahedron's scaffold edge is closed.** Face $H$ has both ends derived: the fold's Fermi edge of width
+$\lambda_L$ (FOLD-1, 09-07) and the electrode's power law $|T_0|^2 = 4(\omega r_s)^2$ (EDGE-1, 09-08), with DYN-2's
+electrode temperature as the thermal factor between them. The CHG spectrum is therefore
+Planck($\kappa$) $\times$ [Fermi-edge($\lambda_L$) at high $l$, $4(\omega r_s)^2$ at $l = 0$], every piece with a runner.
+Face $HG$ (emission) stays THEORY and is now stated separately rather than covered by $H$.
+
+**Residue and pins, consolidated.** One declared line — KMS (EXT-029) — and three quantities pinned to ground:
+$d = 3$ (T8c, reciprocity ground-adjacent), $K = 2GJ/c^2$ (LAGEOS, 1 %), and the membrane surface viscosity
+$\eta_s$ (Damour's $1/16\pi G$, EDGE-4). Everything else in the DYN/EDGE/GUD/NS chain is derived from Ohm, Laplace,
+Euler, induction and the primitives.
+
+**Constitutive change (R-3).** The swirl is the medium's *vector potential*, not a viscous velocity: MAT-1 → MAT-2.
+Every DYN-3/NS-1 result survives — the equation was right, the constitutive word was wrong.
+
+**Fingerprint** ($\kappa$, $k_2$, $\sigma_0/A_H$, tidal friction) = (0, 0, 1, ~1/36 of Kerr): two BH-like entries,
+two not, none ECO-like.

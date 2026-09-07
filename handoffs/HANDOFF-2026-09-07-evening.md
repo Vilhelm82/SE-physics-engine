@@ -107,3 +107,63 @@ runner header records this. Everything after DYN-1 was run forward.
   strong prior; verify; expect to lose.
 - "The singularity is a seat artefact" was corroborated by SHEET-1: the fluid meets D → ∞, the outside seat draws D = 0.
 - Will's caution ("no contradiction found" ≠ "no test that could find one") was the right call; the register came from it.
+
+---
+
+# AMENDMENT — 2026-09-08 (afternoon/evening, Will at the workstation)
+
+This section is appended to `HANDOFF-2026-09-07-evening.md` and makes it the live state through 09-08.
+All runners below were executed on the workstation and committed with their logs; nothing is sandbox-only.
+
+## What happened
+
+The 09-07 register left three things owed on the physics side: the O(J²) discriminator, the l = 0 edge of the
+octahedron, and the tensor Love number. All three ran. The chain produced one prediction with an instrument, closed
+the last edge of the octahedron, and — in the course of the rotating case — **retracted one identification and replaced
+one constitutive reading**. The retractions are the most important part of this amendment; they are at the front of
+`docs/results/2026-09-08/2026-09-08-EDGE-chain.md`.
+
+## Runners added (all on the workstation, all committed with logs)
+
+| runner | checks | commit | result |
+|---|---|---|---|
+| `prim_ns1_swirl_inertia.py` | 10/10 | `300eb99` | finite-Re swirl = K′/r³ + εK/(4r⁴); GP-B/LAGEOS bound ε < ~1.3×10⁴ km ⇒ the measured 1/r³ drag forces the creeping regime; in it the O(J²) exterior has **no P₂/r³ term: κ = 0** (Kerr 1); electrode spherical, ergosurface oblate; δκ_s = −1 inside GWTC-4.0's hierarchical 90 % interval |
+| `prim_edge1_electrode_absorption.py` | 7/7 | `fcf183b` | σ_abs(ω→0)/A_H = 0.9993 (DGM/Page as OUTPUT); \|T₀\|² = 4(ωr_s)²; equals the DC capture area πb_mb² (GUD-1); static l=2 regular branch polynomial ⇒ scalar k₂ = 0. **Face H closed at both ends** |
+| `prim_edge2_tensor_love.py` | 7/7 | `f8e054a` | GR's tensor Love number computed as labelled COMPARISON: static even-parity l=2 verified to be associated Legendre (2,2), regular branch polynomial, Hinderer → 0. Same zero, same mechanism |
+| `prim_edge3_rotating_dissipation.py` | 12/12 | `796ed88` | **R-1** retraction of EDGE-2 C1; **R-2** the viscous swirl fails the dissipative sector; **R-3** MAT-1 → MAT-2 (swirl as vector potential), every earned result preserved |
+| `prim_edge4_tidal_friction.py` | 8/8 | `eac22cc` | membrane tidal friction: Σ_m m²\|A_m\|² = (8π/15)[E₁ − (3/2)E₂] = **exactly Poisson 2004 Eq. 9.39's small-spin structure**; both zeros; first law closes; coefficient off by 32 |
+| `prim_edge5_spin_ratio.py` | 7/7 | `cc60d99` | spin-0 and spin-2 l=2 absorption on the same background: 1/2025 and 4/225 as OUTPUT; **ratio 36.006** = Page's factorial. **R-4**: EDGE-4's 1/(512π) is Damour's 1/(16π) seen through a spin-0 coupling |
+
+Ledger: EXT-034 (Moncrief), EXT-035 (Hinderer/Binnington–Poisson, comparison), EXT-036 (induction/MAT-2),
+EXT-037 + amendment (Poisson Eq. 9.39, **fetched not remembered**), EXT-038 (Regge–Wheeler + Page, comparison).
+
+## State changes
+
+- **MAT-1 → MAT-2.** The medium's constitutive reading changed: the swirl is inductive, not viscous. The bulk is
+  inviscid (river: potential flow, Euler with p = 0); dissipation lives at the electrode. Every DYN-3/NS-1 result
+  survives because the *equation* was right and only the constitutive word was wrong. Record this as the second
+  cautionary case after Cl(3), with the opposite moral: an equation reached from the primitives survived a change of
+  interpretation that a result reached *for* would not have.
+- **The octahedron is closed.** Face H has both ends: the electrode's power law \|T₀\|² = 4(ωr_s)² (EDGE-1) and the
+  fold's Fermi edge of width λ_L (FOLD-1), with DYN-2's electrode temperature as the thermal factor between them.
+- **The fingerprint** (κ, k₂, σ₀/A_H, tidal friction) = (0, 0, 1, ~1/36 of Kerr). Two BH-like, two not, none ECO-like.
+
+## Method notes worth keeping
+
+- **Fetch, don't remember.** EDGE-4's first draft quoted Poisson's coefficient from memory. Fetching it changed the
+  comparison from "an O(1)" to "a factor 32", which is what made EDGE-5 findable. The ledger records which numbers were
+  fetched.
+- **Structure matching with a coefficient mismatch is a signature, not a failure.** Exact tensor structure + exact zeros
+  + wrong amplitude ⇒ correct kinematics, wrong coupling. That reading found the spin conflation in one runner.
+- **Same integrator, two fields.** EDGE-5's design — compute both coefficients with one code so normalisation cancels —
+  is the pattern to reuse whenever a ratio is the claim.
+
+## Next, in order
+
+1. **η_s from the medium itself** (makes prediction 2 unconditional). Two routes, both named in the results page; the
+   resistivity route *is* the 377 Ω chase / THM-K's scalar half.
+2. **Does the AC sector's frame twist (T8) give the medium a spin-2 tidal channel?** Decides whether prediction 2 stands.
+3. Kill 3 of CONJECTURE-COSMOLOGY (signalling) — still owed, still cheap, still ahead of any further cosmology.
+4. NS-1's open items: finite-Re meridional flow at O(J²); the electrode's shape as a derived boundary condition.
+5. The 09-07 structural runners, still unrun: ħ- and G-seat readings of the ground; lit face on the octahedron
+   vertices; the η → 1/η involution as an object on the Gram.

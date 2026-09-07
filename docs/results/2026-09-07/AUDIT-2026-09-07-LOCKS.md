@@ -144,3 +144,45 @@ factors; ISCO (Kerr-assumed X-ray fits); marginally bound orbit.
 - HANDOFF: replace "pinning" with "scaffold pinning (measured to O(U²))" wherever it is load-bearing.
 - CONJECTURE-COSMOLOGY.md: header note that all r-language is LOCK-1.
 - PRIMITIVES-v0: still DRAFT. Freeze first; none of the above is the model's until P1–P13 are.
+
+---
+
+# LOCK REGISTER / STATION STATUS — UPDATE 2026-09-08
+
+Appended to `AUDIT-2026-09-07-LOCKS.md` and `LOCK5-STATIONS-2026-09-07.md`. See
+`2026-09-08-EDGE-chain.md` for the full results and the four retractions (R-1 … R-4).
+
+## Register changes
+
+- **LOCK-4 (frame dragging).** Re-tiered: DERIVED given **MAT-2** (inductive swirl) + Ampère/induction (EXT-036),
+  strength K still pinned to LAGEOS at 1 %. The earlier "DERIVED given G1/NS/FAX" wording is superseded: Faxén's ½ is
+  retained as GEM's ½, and the Stokes constitutive reading is retired (R-2). NS-1's finite-Re correction carries over
+  under the induction operator with diffusivity for kinematic viscosity.
+- **LOCK-5 (station labels).** The scaffold edge is **closed**. Face H was the last: its geometric-optics fold (09-07)
+  now has the wave dressing at both ends — the electrode's power law |T₀|² = 4(ωr_s)² (EDGE-1) and the fold's Fermi edge
+  of width λ_L (FOLD-1). Face HG (Parikh–Wilczek) remains THEORY: the model has not derived a tunnelling *emission*
+  channel, only the transmission edges. Retier HG explicitly rather than letting H's closure cover it.
+- **New pin, named:** the membrane surface viscosity η_s (EDGE-4) is a **free transport coefficient**. The tidal-friction
+  prediction is conditional on Damour's 1/(16πG) until the medium derives it. Same status as K's pinning to LAGEOS:
+  honest because it is pinned to something outside, dishonest if quoted as derived.
+
+## Station status changes (`docs/LABELLED-MODEL.md` §4)
+
+| flips | was (09-07) | now (09-08) | receipt |
+|---|---|---|---|
+| H | THEORY, with a DERIVED geometric-optics limit | **DERIVED** (both ends) | FOLD-1 (fold, Fermi edge λ_L) + EDGE-1 (electrode, 4(ωr_s)²); DYN-2 supplies the thermal factor between them |
+| HG | THEORY | **THEORY** (unchanged, and now stated separately) | no emission channel derived; H's closure does not cover it |
+| CHG | DERIVED-given-KMS · PREDICTION | unchanged, **plus** the greybody factor is now derived at both ends | the spectrum is Planck(κ) × [Fermi-edge(λ_L) at high l, 4(ωr_s)² at l = 0] |
+
+## Residue and pins, consolidated
+
+One declared line (KMS, EXT-029) and three pinned-to-ground quantities: d = 3 (T8c, reciprocity ground-adjacent),
+K = 2GJ/c² (LAGEOS, 1 %), η_s (Damour, EDGE-4). Everything else in the DYN/EDGE/GUD/NS chain is derived from Ohm,
+Laplace, Euler, induction, and the primitives.
+
+## Predictions register (new section; four live, all with instruments)
+
+1. κ = 0 → δκ_s = −1 (GWTC-4.0 cannot distinguish from Kerr's 0; needs σ ≲ 0.3, factor 30–100).
+2. Tidal friction ~1/36 of Kerr's, conditional on η_s = Damour (LISA EMRI horizon flux; LVK horizon absorption).
+3. Subring ladder e^{−π} per half-orbit; λ_L = Ω_c; greybody edge width λ_L ≠ κ (next-gen space VLBI).
+4. No swirl correction at any order (Kerr has O(J³)); isotropic g₀₀ at O(U³) = −3/2 (unmeasured).

@@ -1,0 +1,29 @@
+=== DYN-3a: the swirl from Laplace (G1) with no-slip at the electrode (NS) ===
+  general l=1 solution f(r) = C1/r**2 + C2*r
+  decaying + no-slip:  v_phi(r,theta) = Omega*a**3/r**2 * sin(theta)
+  [PASS][   0.1s] a1 v_phi = Omega a^3 sin(theta)/r^2 : Stokes swirl of a rotating sphere, DERIVED from Laplace + no-slip
+  [PASS][   0.1s] a2 the medium's angular velocity omega(r) = Omega a^3/r^3 : the 1/r^3 is OUTPUT
+  [PASS][   0.1s] a3 the two radial solutions are r and 1/r^2; the rigid-rotation boundary selects l = 1 uniquely (K1 passes)
+=== DYN-3b: what a gyroscope reads (FAX) and what an orbit reads (RIDE) ===
+  1/2 curl v = [Omega*a**3*cos(theta)/r**3, Omega*a**3*sin(theta)/(2*r**3), 0]
+  [PASS][   0.1s] b1 gyro precession field = (K/2r^3)(2 cos theta r-hat + sin theta theta-hat) = (K/2r^3)(3(z.r)r - z): the DIPOLE pattern, derived
+  polar-orbit average of the gyro rate (z-component) = Omega*a**3/(4*R**3)
+  [PASS][   0.2s] b2 <gyro> = K/(4 R^3): Faxen's 1/2 times the pattern's 1/2
+  [PASS][   0.2s] b3 orbit nodal rate / gyro rate = 4 at the same radius: a STRUCTURAL ratio, independent of K
+=== DYN-3c: one ground number fixes K (LAGEOS), then PREDICT GP-B ===
+  K from LAGEOS = 8.7125e+6 m^3/s
+  GP-B frame-dragging PREDICTED from the medium: 39.1 mas/yr   measured 37.2 +- 7.2   (GR's number: 39.2)
+  [PASS][   0.2s] c1 GP-B inside its 1-sigma error bar with K fixed by LAGEOS (K2 passes)
+  reverse: K from GP-B predicts LAGEOS nodal drag 29.21 mas/yr (measured ~30.7 +- 3)
+  [PASS][   0.2s] c2 reverse prediction inside LAGEOS's error bar
+  for the register: 2 G J_E / c^2 = 8.7035e+6 m^3/s  vs K(LAGEOS) = 8.7125e+6  ratio 1.001 -- the source relation K = 2GJ/c^2 holds at the 1 % level of the LAGEOS number; it is a BAND (source side), not derived here
+=== DYN-3d: the electrode, and the O(J^2) question ===
+  [PASS][   0.2s] d1 at r = a the medium co-rotates rigidly with the electrode: a rigidly rotating horizon is the no-slip condition (Kerr has this; here it is OUTPUT)
+  [PASS][   0.2s] d2 omega r^3 = const exactly: no correction to the swirl profile at ANY order in the medium. Kerr's omega has O(J^3) terms (unmeasured). PREDICTION. The O(J^2) mass quadrupole (THM-N) is a separate, still-open object
+
+=== DYN-3: 10/10 checks passed in 0.2s ===
+TIER: swirl profile Omega a^3 sin(theta)/r^2, the 1/r^3, the dipole gyro pattern, and the orbit/gyro ratio 4 are DERIVED
+      given G1 + NS + FAX (+ RIDE for the orbit). The swirl STRENGTH K is pinned to ONE ground number (LAGEOS); GP-B is
+      then a PREDICTION and lands at 39 mas/yr vs 37.2 +- 7.2 measured. LOCK-4: KIN-3 no longer imported; BARE-1 not used.
+      OPEN: K = 2GJ/c^2 (the source relation) is a band at 1 %, not derived. The medium's angular-momentum content is the next target.
+      OPEN: the O(J^2) mass quadrupole is not addressed by the swirl; compare against a rotating FLUID body's exterior (Hartle-Thorne), not Kerr.

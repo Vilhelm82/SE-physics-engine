@@ -1,4 +1,3 @@
-# SCAFFOLD (Cl(3)-era, pre-pivot to Cl(2,1)). Retained as provenance. Do NOT cite as a live input.
 #!/usr/bin/env python3
 # =============================================================================
 # THM-TARGET G, part 1 - the hbar-seat readout theorem
@@ -13,7 +12,7 @@
 #
 # ALLOWED INPUTS
 #   BARE-1   pivot = hyperbolic rotor exp(lambda*K/2), K^2 = +1 [D1 discharged]
-#   SEAT-hb  (from handoff, T-tier): the pivot READ FROM the hbar seat is a SQUEEZE (the frame rotates; the seat does not move); the
+#   SEAT-hb  (from handoff, T-tier): the hbar-seat pivot is a SQUEEZE; the
 #            seat state is a positive area element (quadratic form) on the
 #            seat plane; pivot acts symplectically.  Status: quoted from the
 #            freeze-dated handoff; primary sec-doc absent - NAMED conditionality.

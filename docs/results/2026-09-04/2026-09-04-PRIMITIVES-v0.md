@@ -29,13 +29,6 @@ P5. A seat is one line taken as reference. The seat cannot see its own line; bot
     poles collapse to the root.
 P6. A pivot is a rotation of the frame by an IMAGINARY angle. It is the operation that
     turns an angle into a rapidity. It is not a spatial motion.
-P6a. A SEAT DOES NOT MOVE (Will's ruling, 2026-09-07). A seat cannot pivot away from c: a seat
-    IS a line, c is the unique negative line (T7b2a), and a rotor preserves q, so no isometry takes
-    a seat off its own line. What moves is the frame the seat rides. The tilt lambda (T7d) is the
-    RULERS' Gram against a FIXED seat, not the seat swinging. Never write "the seat pivots"; write
-    "the frame is pivoted and the seat reads X". Violating this produced RIDE-2 (a deforming frame,
-    withdrawn) and SIG-1 (a seat moved off c, reverted).
-
 P7. A presentation is what a seat reads after a pivot. Presentations are non-injective:
     distinct states can present identically to one seat.
 P8. Axes cannot be manipulated in isolation. Moving one line moves the frame or shows

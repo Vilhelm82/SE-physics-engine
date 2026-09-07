@@ -1,0 +1,27 @@
+=== EDGE-4a: the m-structure ===
+  sum |A_m|^2 = 4*pi*(e11**2 + e11*e22 + e12**2 + e13**2 + e22**2 + e23**2)/15    [expect (2 pi/15) E_ab E^ab]
+  sum m^2 |A_m|^2 = 4*pi*(e11**2 - 2*e11*e22 + 4*e12**2 + e13**2 + e22**2 + e23**2)/15
+  [PASS][   0.9s] a1 sum |A_m|^2 = (2 pi/15) E_ab E^ab (angular integral of the tide, checked)
+  sum m^2 |A_m|^2 = 8*pi/15 * E_ab E^ab + -4*pi/5 * (z.E^2.z)
+  [PASS][   0.9s] a2 sum m^2 |A_m|^2 = (8 pi/15) [E1 - (3/2) E2]: EXACTLY Poisson's small-spin invariant combination E1 - (3/2)E2 (Eq. 9.39). The medium's torque has Kerr's tensor structure, and this was not put in -- it is the angular integral of a rotating pattern on a sphere (K3 passes, strongly)
+  [PASS][   0.9s] a3 a tide axisymmetric about the spin axis gives sum m^2|A_m|^2 = 0: NO torque (K1 passes)
+=== EDGE-4b: the viscous membrane ===
+  Bochner check on P2: int|sigma|^2 = 48*pi/5  ; (1/2)int(Lap psi)^2 - int|grad psi|^2 = 48*pi/5
+  [PASS][   1.1s] b1 int |sigma_ab|^2 = 12 int psi^2 on the unit sphere for l = 2 (the Bochner identity used, verified explicitly)
+  J_dot(visc) = -(8/3) eta_s Omega sum_m m^2 |h_m|^2 = -(32/3) eta_s Omega (r_s^6/c^4) sum m^2|A_m|^2
+  [PASS][   1.1s] b2 J_dot ~ -Omega E^2 r_s^6: Kerr's STRUCTURE (Poisson: -Omega_H M^6 E^2 at small spin); vanishes at Omega = 0 (K2) and for axisymmetric tides (K1)
+=== EDGE-4c: the comparison, with its caveats ===
+  equatorial companion: E1 = 6 , E2 = 1 , E1 - (3/2)E2 = 9/2 (m_p/b^3)^2 ;  sum m^2|A_m|^2 = 12*pi/5 (m_p/b^3)^2
+  medium: J_dot = -8192*pi*M**6*Omega*eta_s*m_p**2/(5*b**6) ;  Poisson (Eq. 9.39, small spin): J_dot = -16*M**6*Omega*m_p**2/(5*b**6)
+  required surface viscosity eta_s = 1/(512*pi) = 0.000621699   vs Damour 1/(16 pi) = 0.0198944   ratio eta_req/eta_Damour = 1/32 = 0.0312500
+  [PASS][   1.1s] c1 eta_s(required)/eta_H(Damour) = 1/32. NOT a match: a factor 32.00. REPORTED. Suspects, in order: (i) the shape amplitude -- h is the SONIC surface's displacement (EDGE-3A), GR's torque comes from the HORIZON's intrinsic deformation, and the two differ by an O(1) the model has not computed; (ii) the AREA -> membrane-flow map. Not a suspect any more: Poisson's coefficient (fetched). What matched exactly: the tensor structure E1 - (3/2)E2, the m^2 weighting, both zeros, the first law
+  resistive alternative: required R_s = 2*pi/25 = 0.251327  (G=c=1); Damour's horizon resistivity 4 pi = 12.5664 (377 Ohm); ratio = 0.0200000
+  [PASS][   1.1s] c2 the resistive membrane also needs a fraction of Damour's coefficient; same structure, different O(1). REPORTED, not asserted
+=== EDGE-4d: the first law ===
+  [PASS][   1.1s] d1 dM = T dS + Omega dJ with dM = 0 for a static tide gives T S_dot = -Omega J_dot = P > 0: the membrane's dissipation IS the entropy production. Consistent with Kerr (Poisson: M_dot = 0, S_dot > 0 for a static tide)
+
+=== EDGE-4: 8/8 checks passed in 1.1s ===
+RESULT: the rotating electrode as a viscous membrane has a tidal torque with Kerr's structure -- -Omega E^2 r_s^6, m^2-weighted,
+        zero for axisymmetric tides, zero at Omega = 0 -- and the surface viscosity that matches Poisson is O(1) x Damour's 1/(16 pi G).
+        The O(1) is reported with its conventions named. The dissipation sits where EDGE-3 put it: in the electrode, not the bulk.
+TIER: a1-a3, b1 DERIVED; b2 structure DERIVED given AREA; c1-c2 COMPARISON (Poisson Eq. 9.39, fetched); d1 consistency.

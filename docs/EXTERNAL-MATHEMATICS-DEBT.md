@@ -497,3 +497,13 @@ Append a dated receipt whenever online research informs this project. Before usi
 - **Use:** EDGE-2B computes GR's tensor Love number as the object LIGO bounds at 5PN and compares its branch structure to the medium's. Einstein's equations enter here as labelled THEORY input for the comparison; they are NOT an input to the model. The runner verifies the equation by checking P_2^2, Q_2^2 solve it.
 - **Result:** regular branch 3(r² − 2Mr)/M², polynomial, no r^-3 tail; Hinderer's formula → 0 along the regular family as R → 2M. Same zero as the medium's, same mechanism.
 - **Status:** COMPARISON. Lineage for the rotating case: Le Tiec & Casals 2021, Chia 2021 (Kerr static Love numbers vanish; dissipative response ∝ spin) — owed as EDGE-3.
+
+## EXT-036 — Ampère / induction: the swirl as vector potential (MAT-2)
+- **Source:** standard magnetostatics and the steady induction equation (resistive MHD); GEM as comparison literature only (Mashhoon; Thorne–Price–Macdonald membrane paradigm: horizon surface resistivity 377 Ω = Z₀).
+- **Use (EDGE-3C):** the l = 1 harmonic DYN-3 found is read as a magnetic dipole's A_φ = m sinθ/r², not a viscous velocity. Same field, same curl (2 × the gyroscope field), no bulk dissipation, no torque on the source, O(J²) energy ∝ 1/r⁶. The river advects it by an induction equation with the SAME operator as the azimuthal Navier–Stokes equation (diffusivity ↔ kinematic viscosity), so NS-1a's tail and the GP-B bound carry over.
+- **Status:** RETAINED STANDARD. MAT-1 (viscous swirl) → MAT-2 (inductive swirl). Dissipation is confined to the electrode's resistivity; the tidal torque becomes an eddy-current problem (EDGE-4).
+
+## EXT-037 — Tidal torque and heating of a Kerr black hole (COMPARISON ONLY)
+- **Source:** Poisson 2004, PRD 70, 084044 (absorption of mass and angular momentum by a black hole: time-domain formalisms; dJ/dt ∝ −χ(1+3χ²)M⁶E² for a static tide); Le Tiec & Casals 2021; Chia 2021 (Kerr static Love numbers vanish; dissipative response ∝ spin).
+- **Use:** EDGE-3B contrasts the viscous medium (spin-down without tide, no tidal torque) with Kerr (no spin-down, tidal torque). EDGE-4's target: reproduce the coefficient with the electrode's resistivity, and compare the required resistivity with Damour's Z₀.
+- **Status:** COMPARISON. Not an input.

@@ -1,0 +1,24 @@
+=== EDGE-3A: what the acoustic static branch is, and what a Newtonian tide is ===
+  acoustic growing branch: delta Phi = -v_r d(delta phi)/dr = 6*c*(2*r - 1)/sqrt(r)  -> ~ 12*c * r^(1/2) at large r
+  [PASS][   0.1s] A1 the acoustic l=2 growing branch changes the medium's potential as r^(1/2) P2, NOT r^2 P2: it is a strain FLOW at infinity, not a Newtonian tide. EDGE-2 C1's 'same object' is RETRACTED; EDGE-2B (GR k_2 = 0) stands
+  [PASS][   0.1s] A2 Bernoulli: the medium's potential -v^2/2 = -M/r + Phi_tide EXACTLY. Induced exterior multipole = 0: the medium's response to a Newtonian tide is identically zero (k_2 = 0, trivially, at every order)
+  [PASS][   0.3s] A3 the sonic surface (v_r = c) deforms: r_s(theta) = r_s [1 - 2 E r_s^2 P2/c^2] + O(E^2). The electrode is tidally deformed while the exterior carries no induced multipole -- the same pairing GR has (deformed horizon, k_2 = 0)
+=== EDGE-3B: the viscous swirl in the dissipative sector ===
+  sigma_r_phi = -3*Omega*a**3*mu*sin(theta)/r**3  ;  torque on the electrode = -8*pi*Omega*a**3*mu
+  [PASS][   0.3s] B1 the Stokes medium exerts -8 pi mu a^3 Omega on the rotating electrode: it SPINS DOWN with no tide, angular momentum radiated viscously to infinity
+  [PASS][   0.3s] B2 spin-down time t = M/(8 pi mu r_s): a PREDICTION Kerr does not make (Kerr: isolated holes keep their spin)
+  M87* (6.5e9 Msun, ~1e10 yr, spin ~0.9): observed spin survives => mu < 8.49e+7 (medium units ~ Pa s)
+  Cyg X-1 (21 Msun, ~5e6 yr, spin >0.9): observed spin survives => mu < 1.7e+11 (medium units ~ Pa s)
+  [PASS][   0.3s] B3 observed old high spins bound the viscous medium's mu from above (M87*: ~1e8; Cyg X-1: ~1e11). Pitch-like or lower, in whatever units the medium's rho carries
+  [PASS][   0.3s] B4 epsilon_ijk E_jk = 0 for symmetric E: in LINEAR (creeping) flow no torque can be built from a strain, at any order in E. Faxen: T = 8 pi mu a^3 (omega/2 - Omega), E-independent. The viscous electrode feels NO tidal torque. Kerr: tidal torque ~ chi(1+3chi^2) M^6 E^2 != 0. OPPOSITE on both counts: the viscous reading FAILS the dissipative sector
+=== EDGE-3C: the inductive reading ===
+  [PASS][   0.3s] C1 a magnetic dipole's vector potential A_phi = m sin(theta)/r^2 IS DYN-3's swirl with m = Omega a^3: same field, different name
+  [PASS][   0.3s] C2 curl A / 2 = (m/r^3)(cos theta r-hat + sin theta/2 theta-hat): DYN-3's gyroscope field to the letter. Faxen's 1/2 is GEM's 1/2; the dipole pattern is Ampere's
+  [PASS][   0.3s] C3 field energy density ~ B^2 ~ 1/r^6: any O(J^2) potential from it is 1/r^4 -- NS-1's kappa = 0 SURVIVES the change of reading
+  [PASS][   0.5s] C4 steady induction for the dipole in the river: eta (g'' + 2g'/r - 2g/r^2) = v_r (g' + g/r). The SAME operator as NS-1a's azimuthal momentum equation with (mu/rho) -> eta: the advection correction and GP-B's bound carry over (diffusion length in place of Reynolds length)
+  [PASS][   0.5s] C5 no bulk dissipation, no spin-down, no self-torque: the inductive electrode keeps its spin like Kerr. Tidal torque now = eddy currents in a RESISTIVE electrode (Damour's 377 Ohm, EXT-036): EDGE-4's computation, with Poisson 2004's coefficient as target
+
+=== EDGE-3: 12/12 checks passed in 0.5s ===
+RESULT: MAT-1 (viscous swirl) fails the rotating dissipative sector; MAT-2 (inductive swirl) keeps 1/r^3, the 1/2, kappa = 0, the
+        1/r^4 tail and GP-B, and removes the dissipation. EDGE-2 C1 retracted; EDGE-2B stands. Fingerprint (0, 0, 1) stands.
+TIER: A1-A3, B1, B2, B4, C1-C4 DERIVED. B3 numeric bound. C5 is the directive for EDGE-4. Poisson 2004 is COMPARISON only.
